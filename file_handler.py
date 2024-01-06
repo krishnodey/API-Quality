@@ -24,7 +24,7 @@ class FileReadWrite:
         except Exception as e:
             print(f"Error writing to file: {e}")
 
-    def write_data(self, ap_count, result_AP, p_count, result_P, selected, pattern_type):
+    def write_data(self, result_AP, result_P, p_count, ap_count, selected, pattern_type):
         try:
             data_to_write = f"***Anti-Pattern*** \nCount: {ap_count}\n"
             for item in result_AP:

@@ -27,10 +27,33 @@ print("Detection of AmorphousURI:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_amorphous_uri()
 # Create the data string to write in the file]
 pattern_type = "Amorphous"
-uri_obj.write_data(ap_count, result_AP, p_count, result_P, selected, pattern_type)
-print(f"Finished Detection of AmorphousURI.")
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+print("Finished Detection of AmorphousURI.\n")
 
 
+'''''''''''''''''''''''''Non Standard URIs'''''''''''''''''''''''''''''''
+print("Detection of NonStandardURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_standard_uri()
+pattern_type = "Non Standard URI"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+print("Finished Detection of NonStandardURI:\n")
+
+
+'''''''''''''''''''''''''''CRUDyURI'''''''''''''''''''''''''''''''''''''''
+print("Detection of CRUDyURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_crudy_uri()
+pattern_type = "CRUDyURI"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+print("Finished Detection of CRUDyURI:")
+
+
+
+'''''''''''''''''''''''''''UnversionedURIs'''''''''''''''''''''''''''''''''''''''
+print("Detection of UnversionedURIs:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_unversioned_uris()
+pattern_type = "UnversionedURIs"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+print("Finished Detection of UnversionedURIs:")
 
 
 

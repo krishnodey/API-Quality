@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+/auth/login	Standard End-point	
+/auth/token	Standard End-point	
+/auth/revoke	Standard End-point	
+/settings	Standard End-point	
+/flows	Standard End-point	
+/flows	Standard End-point	
+/flow	Standard End-point	
+/flow/:id	Standard End-point	
+/flow/:id	Standard End-point	
+/flow/:id	Standard End-point	
+/nodes	Standard End-point	
+/nodes	Standard End-point	
+/nodes/:module	Standard End-point	
+/nodes/:module	Standard End-point	
+/nodes/:module	Standard End-point	
