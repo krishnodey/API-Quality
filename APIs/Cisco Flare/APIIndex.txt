@@ -1,0 +1,16 @@
+/environments
+/environments/{environment_id}
+/environments/{environment_id}/devices
+/environments/{environment_id}/zones
+/environments/{environment_id}/zones/{zone_id}
+/environments/{environment_id}/zones/{zone_id}/things
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position
+/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}
+/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}
+/environments/{environment_id}/zones?key={key}&value={value}
+/environments/{environment_id}/zones?x={x}&y={y}
+/environments?key={key}&value={value}
+/environments?latitude={latitude}&longitude={longitude}

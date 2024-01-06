@@ -1,0 +1,21 @@
+Adobe Audience Manager
+Apple App Store Connect
+BroadCom
+Cisco Flare
+ClearBlade
+Dropbox
+Google Nest
+GroupWise
+IBM Cloud Pak System
+IBM Watson IoT
+Instagram
+Linkedin
+Microsoft Power BI
+Node-RED
+Oracle Cloud Marketplace Publisher
+QuickBooks Online
+Samsung ARTIK Cloud
+Shopify
+SurveyJS
+Uber
+WM3 Multishop

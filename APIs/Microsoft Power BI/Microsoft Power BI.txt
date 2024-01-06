@@ -1,0 +1,34 @@
+POST >> /admin/tenantKeys >> Adds an encryption key for Power BI workspaces assigned to a capacity.
+GET >> /admin/apps?$top={$top} >> Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
+GET >> /admin/apps/{appId}/users >> Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
+POST >> /admin/capacities/AssignWorkspaces >> Assigns the provided workspaces to the specified premium capacity.
+POST >> /admin/capacities/UnassignWorkspaces >> Unassigns the provided workspaces from capacity.
+GET >> /admin/dashboards >> Returns a list of dashboards for the organization.
+GET >> /admin/groups/{groupId}/dashboards >> Returns a list of dashboards from the specified workspace.
+GET >> /admin/dataflows/{dataflowId}/export >> Exports the specified dataflow definition to a .json file.
+GET >> /admin/dataflows/{dataflowId}/datasources >> Returns a list of datasources for the specified dataflow.
+GET >> /admin/groups/{groupId}/dataflows >> Returns a list of dataflows from the specified workspace.
+GET >> /admin/dataflows/{dataflowId}/users >> Returns a list of users that have access to the specified dataflow (Preview).
+GET >> /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows >> Returns a list of upstream dataflows for the specified dataflow.
+GET >> /admin/groups/{groupId}/datasets >> Returns a list of datasets from the specified workspace.
+GET >> /admin/groups/{groupId}/datasets/upstreamDataflows >> Returns a list of upstream dataflows for datasets from the specified workspace.
+GET >> /admin/datasets/{datasetId}/datasources >> Returns a list of datasources for the specified dataset.
+GET >> /admin/capacities >> Returns a list of capacities for the organization.
+POST >> /admin/groups/{groupId}/users >> Grants user permissions to the specified workspace.
+DELETE >> /admin/pipelines/{pipelineId}/users/{identifier} >> Remove user permissions from a specified deployment pipeline.
+POST >> /admin/tenantKeys/{tenantKeyId}/Default.Rotate >> Rotate the encryption key for Power BI workspaces assigned to a capacity.
+GET >> /admin/workspaces/modified >> Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
+POST >> /admin/workspaces/getInfo >> Initiate a call to receive metadata for the requested list of workspaces. (Preview)
+GET >> /apps/{appId} >> Returns the specified installed app.
+GET >> /apps/{appId}/dashboards/{dashboardId} >> Returns the specified dashboard from the specified app.
+GET >> /apps/{appId}/reports/{reportId} >> Returns the specified report from the specified app.
+GET >> /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} >> Returns the specified tile within the specified dashboard from the specified app.
+GET >> /apps/{appId}/dashboards/{dashboardId}/tiles >> Returns a list of tiles within the specified dashboard from the specified app.
+GET >> /availableFeatures >> Returns a list of available features for the user
+GET >> /capacities >> Returns a list of capacities the user has access to.
+GET >> /capacities/{capacityId}/refreshables/{refreshableId} >> Returns the specified refreshable for the specified capacity the user has access to.
+GET >> /capacities/{capacityId}/Workloads/{workloadName} >> Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+GET >> /capacities/{capacityId}/Workloads >> Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
+POST >> /AssignToCapacity >> Assigns "My Workspace" to the specified capacity.
+POST >> /groups/{groupId}/AssignToCapacity >> Assigns the specified workspace to the specified capacity.
+POST >> /groups/{groupId}/dashboards >> Creates a new empty dashboard on the specified workspace.

@@ -1,0 +1,15 @@
+GET >> /auth/login >> Get the active authentication scheme
+POST >> /auth/token >> Exchange credentials for access token
+POST >> /auth/revoke >> Revoke an access token
+GET >> /settings >> Get the runtime settings
+GET >> /flows >> Get the active flow configuration
+POST >> /flows >> Set the active flow configuration
+POST >> /flow >> Add a flow to the active configuration
+GET >> /flow/:id >> Get an individual flow configuration
+PUT >> /flow/:id >> Update an individual flow configuration
+DELETE >> /flow/:id >> Delete an individual flow configuration
+GET >> /nodes >> Get a list of the installed nodes
+POST >> /nodes >> Install a new node module
+GET >> /nodes/:module >> Get a node module’s information
+PUT >> /nodes/:module >> Enable/Disable a node module
+DELETE >> /nodes/:module >> Remove a node module

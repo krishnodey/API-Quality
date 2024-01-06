@@ -1,0 +1,45 @@
+POST >> /api/user/reg >> Register user
+POST >> /api/user/auth >> Authenticates a user into the system
+POST >> /api/user/anon >> Authenticates anonymous users into the system
+POST >> /api/user/checkauth >> Checks if user is authenticated
+POST >> /api/user/logout >> Logs out a user
+GET >> /api/user/info >> Returns information about a logged in user
+PUT >> /api/user/info >> Updates a logged in users information
+PUT >> /api/user/pass >> Changes a logged in users password
+GET >> /api/user >> Gets list of users
+PUT >> /api/v/2/devices/{systemKey}/{name} >> Update a device's state or custom attributes only
+POST >> /api/v/2/devices/{SystemKey}/auth >> Authenticates a device into the system
+GET >> /api/collection/{systemKey}/{collectionName} >> fetch collection
+PUT >> /api/collection/{systemKey}/{collectionName} >> Item update
+POST >> /api/collection/{systemKey}/{collectionName} >> Item create
+DELETE >> /api/collection/{systemKey}/{collectionName} >> Item delete
+GET >> /api/data/{collectionID} >> fetch collection
+PUT >> /api/data/{collectionID} >> Item update
+POST >> /api/data/{collectionID} >> Item create
+DELETE >> /api/data/{collectionID} >> Item delete
+GET >> /api/data/{collectionid}/columns >> get column key names
+POST >> /api/code/{systemKey}/{serviceName} >> Calls/executes ClearCode service
+GET >> /codeadmin/v/2/library/{systemKey} >> Gets the libraries for a system
+GET >> /codeadmin/v/2/library/{systemKey}/{name} >> Gets the libraries for a system
+PUT >> /codeadmin/v/2/library/{systemKey}/{name} >> Updates the libraries for a system
+POST >> /codeadmin/v/2/library/{systemKey}/{name} >> Creates libraries for a system
+DELETE >> /codeadmin/v/2/library/{systemKey}/{name} >> Deletes a librarie for a system
+GET >> /codeadmin/v/2/history/library/{systemKey}/{name} >> Gets all versions of a library for a system
+GET >> /codeadmin/v/2/history/library/{systemKey}/{name}/{version} >> Gets a specific version of a library for a system
+GET >> /codeadmin/failed >> Lists failed code service runs for all systems that a developer can access
+GET >> /codeadmin/failed/{systemKey} >> Lists failed code service runs for specified system
+POST >> /codeadmin/failed/{systemKey} >> Retry failed code services
+DELETE >> /codeadmin/failed/{systemKey} >> Delete failed code service run from list
+GET >> /api/message/{systemKey} >> Retrieve message history
+POST >> /api/message/{systemKey}/publish >> Publishes a message to a topic
+DELETE >> /api/message/{systemKey} >> Delete message history
+POST >> /admin/reg >> Registers a new developer account with the CB platform
+POST >> /admin/auth >> Authorizes a CB Developer account
+POST >> /admin/logout >> Logs a CB developer out of their session
+POST >> /admin/systemmanagement >> Creates a new system in a developers account
+GET >> /admin/systemmanagement >> Gets a systems info
+PUT >> /admin/systemmanagement >> Updates a systems info
+DELETE >> /admin/systemmanagement >> Deletes a system
+POST >> /admin/collectionmanagement >> Creates a new collection or connection in a system
+PUT >> /admin/collectionmanagement >> Updates an existing connection in a system
+PUT >> /admin/collectionmanagement >> Creates a column within an existing collection
