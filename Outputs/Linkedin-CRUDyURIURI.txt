@@ -1,0 +1,18 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 13
+/me	Verbless End-point	
+/crmDataValidationExportJobs/{jobId}?crmInstanceId={crmInstanceId}	Verbless End-point	
+/crmDataValidationExportJobs?crmInstanceId={crmInstanceId}	Verbless End-point	
+/people/(id:{person ID})	Verbless End-point	
+/people/(id:{profile ID})?projection=(id,firstName,lastName)	Verbless End-point	
+/salesAccessTokens?q=viewerAndDeveloperApp	Verbless End-point	
+/salesAnalyticsExportJobs/{jobId}?contract={contractUrn}	Verbless End-point	
+/salesAnalyticsExportJobs?action=exportActivityData	Verbless End-point	
+/salesAnalyticsExportJobs?action=exportActivityOutcomeData	Verbless End-point	
+/salesAnalyticsExportJobs?action=exportSeatData	Verbless End-point	
+/salesContracts?q=contractsByMember	Verbless End-point	
+/salesNavigatorProfileAssociations/(instanceId:foo,partner:bar,recordId:baz)	Verbless End-point	
+/salesNavigatorProfileAssociations?ids=List((instanceId:foo,partner:bar,recordId:foo),(instanceId:foo,partner:bar,recordId:bar))	Verbless End-point	

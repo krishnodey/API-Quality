@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 2
+POST 	/oauth/token	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/requests/estimate	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 13
+GET 	/oauth/authorize	 regular methods.
+GET 	/history	 regular methods.
+GET 	/payment-methods	 regular methods.
+GET 	/products	 regular methods.
+GET 	/products/{product_id}	 regular methods.
+GET 	/estimates/price	 regular methods.
+GET 	/estimates/time	 regular methods.
+GET 	/requests/current	 regular methods.
+PATCH 	/requests/current	 regular methods.
+DELETE 	/requests/current	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/requests/{request_id}/receipt	 regular methods.
+GET 	/requests/{request_id}/map	 regular methods.
+GET 	/requests/{request_id}/receipt	 regular methods.

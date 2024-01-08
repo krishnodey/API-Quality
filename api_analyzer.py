@@ -1,10 +1,18 @@
 import re
+import nltk
+from nltk.stem import WordNetLemmatizer #for pluralized nodes
+from nltk.corpus import wordnet as wn #for nondescritive URI
+nltk.download('wordnet')  # Download WordNet data if not downloaded
+
+
+    
 
 class ApiAnalyzer:
     def __init__(self, URI):
         self.URI = URI
 
-    def detect_amorphous_uri(self):
+    def detect_amorphous_uri(self, URI=None):
+        URI = URI if URI else self.URI
         P = "Tidy End-point"
         AP = "Amorphous End-point"
         found_AP = 0
@@ -14,7 +22,7 @@ class ApiAnalyzer:
         amorphus_result_P = []
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
 
-        for line in self.URI:
+        for line in URI:
             comment = ""
             found_AP = 0
 
@@ -41,7 +49,8 @@ class ApiAnalyzer:
 
         return amorphus_result_AP, amorphus_result_P, p_count, ap_count
     
-    def detect_non_standard_uri(self):
+    def detect_non_standard_uri(self, URI=None):
+        URI = URI if URI else self.URI
         P = "Standard End-point"
         AP = "Non-standard End-point"
         standard_uri_result_AP = []
@@ -49,7 +58,7 @@ class ApiAnalyzer:
         p_count = 0
         ap_count = 0
 
-        for line in self.URI:
+        for line in URI:
             comment = ""
             found_AP = 0
 
@@ -84,7 +93,8 @@ class ApiAnalyzer:
     
     
 
-    def detect_crudy_uri(self):
+    def detect_crudy_uri(self, URI=None):
+        URI = URI if URI else self.URI
         P = "Verbless End-point"
         AP = "CRUDy End-point"
         crudyWords = ["create", "make", "write", "read", "search", "show", "take", "delete", "destroy", "cancel", "remove", "update", "copy", "move", "upgrade", "notify"]
@@ -134,7 +144,8 @@ class ApiAnalyzer:
     
     
 
-    def detect_unversioned_uris(self):
+    def detect_unversioned_uris(self, URI=None):
+        URI = URI if URI else self.URI
         versioned_result_P = []
         unversioned_result_AP = []
         p_count = 0
@@ -156,5 +167,97 @@ class ApiAnalyzer:
                 ap_count += 1
 
         return unversioned_result_AP, versioned_result_P , p_count, ap_count
+
+
+    def detect_pluralized_node(self, URI=None):
+        URI = URI if URI else self.URI
+        pluralised_result_AP = []
+        pluralised_result_P = []
+        P = "Singularized Nodes"
+        AP = "Pluralized Nodes"
+        p_count = 0
+        ap_count = 0
+
+        def is_plural(word):
+            lemmatizer = WordNetLemmatizer()
+            lemma = lemmatizer.lemmatize(word, pos='n')
+            return word != lemma
+
+        for line in URI:
+            tmp = line.split(">>")
+            http_method = tmp[0].strip()
+            nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in tmp[1].split("/")]
+            splitted_nodes = []
+            for node in nodes:
+                tmp1 = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', node)
+                splitted_nodes.extend(tmp1)
+            last_node = splitted_nodes[-1]
+
+            comment1 = " [Singular last node with POST method.] "
+            comment2 = " [Pluralized last node with POST method.] "
+            comment3 = " [Pluralized last node with PUT|DELETE method.] "
+            comment4 = " [Singular last node with PUT|DELETE method.] "
+
+            if http_method == "POST":
+                if is_plural(last_node):
+                    p_count += 1
+                    pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t{comment2}")
+                else:
+                    ap_count += 1
+                    pluralised_result_AP.append(f"{tmp[0]}\t{tmp[1].strip()}\t{AP}\t{comment1}")
+
+            elif http_method == "DELETE" or http_method == "PUT":
+                if is_plural(last_node):
+                    ap_count += 1
+                    pluralised_result_AP.append(f"{tmp[0]}\t{tmp[1].strip()}\t{AP}\t{comment3}")
+                else:
+                    p_count += 1
+                    pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t{comment4}")
+            else:
+                p_count += 1
+                pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t regular methods.")
+
+        return pluralised_result_AP, pluralised_result_P, p_count, ap_count
+    
+
+    def detect_non_descriptive_uri(self, URI=None):
+        URI = URI if URI else self.URI
+        non_descriptive_AP = []
+        self_descriptive_P = []
+        P = "Self-descriptive End-point"
+        AP = "Non-descriptive End-point"
+        p_count = 0
+        ap_count = 0
+
+        for line in URI:
+            #uri_nodes = uri.split("/")
+            #print(uri_nodes)
+            nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in line.split("/")]
+            #print(nodes)
+            splitted_nodes = []
+            for node in nodes:
+                tmp1 = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', node)
+                splitted_nodes.extend(tmp1)
+            print(splitted_nodes)
+        
+            pattern = True
+
+            for word in splitted_nodes:
+                # Perform word lookup operation equivalent to Java's Dictionary.getInstance().lookupAllIndexWords(word)
+                synsets = wn.synsets(word.strip())
+
+                if synsets:
+                    pattern = pattern | True
+                else:
+                    pattern = pattern & False
+
+            if not pattern:
+                ap_count = ap_count + 1
+                non_descriptive_AP.append(f"{line.strip()}\t {AP}")
+            elif pattern:
+                p_count = p_count + 1
+                self_descriptive_P.append(f"{line.strip()}\t {P}")
+
+        return non_descriptive_AP, self_descriptive_P, p_count, ap_count
 
 

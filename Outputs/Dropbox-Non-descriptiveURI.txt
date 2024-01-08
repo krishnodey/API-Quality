@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 2
+/auth/token/from_oauth1	 Non-descriptive End-point
+/check/app	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 30
+/account/set_profile_photo	 Self-descriptive End-point
+/auth/token/revoke	 Self-descriptive End-point
+/check/user	 Self-descriptive End-point
+/contacts/delete_manual_contacts	 Self-descriptive End-point
+/contacts/delete_manual_contacts_batch	 Self-descriptive End-point
+/file_properties/properties/add	 Self-descriptive End-point
+/file_properties/properties/overwrite	 Self-descriptive End-point
+/file_properties/properties/search/continue	 Self-descriptive End-point
+/file_properties/properties/update	 Self-descriptive End-point
+/file_properties/templates/remove_for_user	 Self-descriptive End-point
+/file_properties/templates/update_for_user	 Self-descriptive End-point
+/file_requests/count	 Self-descriptive End-point
+/file_requests/create	 Self-descriptive End-point
+/file_requests/delete	 Self-descriptive End-point
+/file_requests/delete_all_closed	 Self-descriptive End-point
+/file_requests/list/continue	 Self-descriptive End-point
+/files/copy_batch/check_v2	 Self-descriptive End-point
+/files/copy_batch_v2	 Self-descriptive End-point
+/files/copy_reference/get	 Self-descriptive End-point
+/files/copy_reference/save	 Self-descriptive End-point
+/files/create_folder_batch	 Self-descriptive End-point
+/files/create_folder_batch/check	 Self-descriptive End-point
+/files/delete_batch/check	 Self-descriptive End-point
+/files/download_zip	 Self-descriptive End-point
+/files/get_file_lock_batch	 Self-descriptive End-point
+/files/get_temporary_upload_link	 Self-descriptive End-point
+/files/list_folder/get_latest_cursor	 Self-descriptive End-point
+/files/move_batch/check_v2	 Self-descriptive End-point
+/files/save_url/check_job_status	 Self-descriptive End-point
+/files/upload_session/append_v2	 Self-descriptive End-point

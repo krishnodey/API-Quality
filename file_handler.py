@@ -15,6 +15,7 @@ class FileReadWrite:
             print(f"Error reading file: {e}")
             return None
 
+
     def write_file(self, data, file_path=None):
         file_path = file_path if file_path else self.file_path
         try:

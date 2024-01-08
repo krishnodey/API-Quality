@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 15
+/oauth/authorize [No version found.]
+/oauth/token [No version found.]
+/history [No version found.]
+/payment-methods [No version found.]
+/products [No version found.]
+/products/{product_id} [No version found.]
+/estimates/price [No version found.]
+/estimates/time [No version found.]
+/requests/estimate [No version found.]
+/requests/current [No version found.]
+/requests/current [No version found.]
+/requests/current [No version found.]
+/requests/{request_id}/receipt [No version found.]
+/requests/{request_id}/map [No version found.]
+/requests/{request_id}/receipt [No version found.]
+
+***Patterns*** 
+Count: 0
