@@ -1,9 +1,9 @@
+from uri_cleaning import UriCleaning
 import re
 import nltk
 from nltk.stem import WordNetLemmatizer #for pluralized nodes
 from nltk.corpus import wordnet as wn #for nondescritive URI
 nltk.download('wordnet')  # Download WordNet data if not downloaded
-
 
     
 
@@ -232,20 +232,23 @@ class ApiAnalyzer:
         for line in URI:
             #uri_nodes = uri.split("/")
             #print(uri_nodes)
-            nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in line.split("/")]
+            #nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in line.split("/")]
             #print(nodes)
-            splitted_nodes = []
+            clean = UriCleaning()
+            splitted_nodes = clean.get_uri_nodes(line)
+            print(splitted_nodes)
+            '''splitted_nodes = []
             for node in nodes:
                 tmp1 = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', node)
                 splitted_nodes.extend(tmp1)
-            print(splitted_nodes)
+            print(splitted_nodes)'''
         
             pattern = True
 
             for word in splitted_nodes:
                 # Perform word lookup operation equivalent to Java's Dictionary.getInstance().lookupAllIndexWords(word)
                 synsets = wn.synsets(word.strip())
-
+                
                 if synsets:
                     pattern = pattern | True
                 else:

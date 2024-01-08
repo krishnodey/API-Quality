@@ -1,7 +1,8 @@
 ***Anti-Pattern*** 
-Count: 63
+Count: 71
 /admin/oauth/access_scopes.json	 Non-descriptive End-point
 /application_charges.json	 Non-descriptive End-point
+/application_charges.json?since_id=556467234	 Non-descriptive End-point
 /application_charges/{application_charge_id}.json	 Non-descriptive End-point
 /application_credits.json	 Non-descriptive End-point
 /application_credits.json	 Non-descriptive End-point
@@ -18,15 +19,21 @@ Count: 63
 /customers/{customer_id}/addresses/{address_id}.json	 Non-descriptive End-point
 /customers/{customer_id}/addresses/{address_id}.json	 Non-descriptive End-point
 /customers/{customer_id}/addresses/{address_id}/default.json	 Non-descriptive End-point
+/customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy	 Non-descriptive End-point
 /customers/{customer_id}/orders.json	 Non-descriptive End-point
 /customers/{customer_id}/send_invite.json	 Non-descriptive End-point
 /customers/count.json	 Non-descriptive End-point
+/customers/search.json?query=Bob country:United States	 Non-descriptive End-point
 /discount_codes/count.json	 Non-descriptive End-point
+/discount_codes/lookup.json?code=SUMMERSALE10OFF	 Non-descriptive End-point
 /events.json	 Non-descriptive End-point
 /events/{event_id}.json	 Non-descriptive End-point
+/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	 Non-descriptive End-point
+/inventory_items.json?ids=808950810,39072856,457924702	 Non-descriptive End-point
 /inventory_items/{inventory_item_id}.json	 Non-descriptive End-point
 /inventory_items/{inventory_item_id}.json	 Non-descriptive End-point
 /inventory_levels.json	 Non-descriptive End-point
+/inventory_levels.json?inventory_item_id=808950810&location_id=905684977	 Non-descriptive End-point
 /inventory_levels/adjust.json	 Non-descriptive End-point
 /inventory_levels/connect.json	 Non-descriptive End-point
 /inventory_levels/set.json	 Non-descriptive End-point
@@ -49,6 +56,7 @@ Count: 63
 /recurring_application_charges.json	 Non-descriptive End-point
 /recurring_application_charges/{recurring_application_charge_id}.json	 Non-descriptive End-point
 /recurring_application_charges/{recurring_application_charge_id}.json	 Non-descriptive End-point
+/recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	 Non-descriptive End-point
 /reports.json	 Non-descriptive End-point
 /reports.json	 Non-descriptive End-point
 /reports/{report_id}.json	 Non-descriptive End-point
@@ -65,12 +73,4 @@ Count: 63
 /webhooks/count.json	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 49
-/application_charges.json?since_id=556467234	 Self-descriptive End-point
-/customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy	 Self-descriptive End-point
-/customers/search.json?query=Bob country:United States	 Self-descriptive End-point
-/discount_codes/lookup.json?code=SUMMERSALE10OFF	 Self-descriptive End-point
-/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	 Self-descriptive End-point
-/inventory_items.json?ids=808950810,39072856,457924702	 Self-descriptive End-point
-/inventory_levels.json?inventory_item_id=808950810&location_id=905684977	 Self-descriptive End-point
-/recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	 Self-descriptive End-point
+Count: 0
