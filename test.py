@@ -71,6 +71,7 @@ with open(f'APIs\\{selected}\\{selected}.txt', 'r') as file:
         #parts = line.strip().split(' >> ')
         api_endpoints.append((line))
 
+
 # Displaying the parsed data
 #print(api_endpoints)
 '''''''''''''''''''''''''''PluralisedNodes'''''''''''''''''''''''''''''''''''''''
@@ -89,6 +90,15 @@ result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_descriptive_uri
 pattern_type = "Non-descriptive"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
 print("Finished Detection of Non-descriptiveURI:")
+
+
+#print(api_endpoints)
+'''''''''''''''''''''''''ContextlessURI'''''''''''''''''''''''''''''''''''''''
+print("Detection of ContextlessURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_contextless(api_endpoints)
+pattern_type = "Contextless"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+print("Finished Detection of ContextlessURI:")
 
 
 
