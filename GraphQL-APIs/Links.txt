@@ -1,0 +1,3 @@
+https://docs.github.com/en/graphql/reference/queries
+https://developers.facebook.com/docs/graph-api/reference/application/
+https://shopify.dev/docs/api/admin-graphql/2024-01/objects/TableResponse

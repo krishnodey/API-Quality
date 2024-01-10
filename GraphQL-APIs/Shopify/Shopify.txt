@@ -1,0 +1,19 @@
+POST>>/mutations/delegateAccessTokenCreate>>creating a delegate access token.>>n/a
+POST>>/mutations/storefrontAccessTokenCreate>>Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.>>n/a
+POST>>/mutations/storefrontAccessTokenDelete>> Deletes a storefront access token. >> n/a
+POST>>/objects/AccessScope>>The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.>>n/a
+POST >>/objects/DelegateAccessToken>>A token that delegates a set of scopes from the original permission.>>n/a
+POST>>/objects/StorefrontAccessToken>>A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.>>n/a
+POST >>queries/shopifyqlQuery>> Returns the results of a ShopifyQL query >> n/a
+POST >> /objects/ErrorPosition >> Error position information in a ShopifyQL parsing error. >>n/a
+POST >> /objects/ParseError >>A ShopifyQL parsing error.>>n/a
+POST >> /objects/ParseErrorRange>>A range of ShopifyQL parsing errors.>>n/a
+POST >> /objects/PolarisVizDataPoint>>A PolarisViz data point structure for ShopifyQL query.>>n/a
+POST >>/objects/PolarisVizDataSeries>>The data series used for PolarisViz visualization.>>n/a
+POST >> /objects/PolarisVizResponse >> A PolarisViz response to a ShopifyQL query.>>n/a
+POST >> /objects/TableData >> The result in a tabular format with schema information and formatted and unformatted row data.>>n/a
+POST >> /objects/TableDataColumn >> A nested array representation of the data. An index in an array represents a row number.>>n/a
+POST >> /objects/TableResponse >>The default table response structure for a ShopifyQL query. >> n/a
+
+
+
