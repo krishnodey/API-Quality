@@ -1,3 +1,14 @@
 https://docs.github.com/en/graphql/reference/queries
 https://developers.facebook.com/docs/graph-api/reference/application/
 https://shopify.dev/docs/api/admin-graphql/2024-01/objects/TableResponse
+https://pokeapi.co/docs/v2#natures
+https://anilist.github.io/ApiV2-GraphQL-Docs/
+https://developer.apple.com/documentation/applemusicapi/
+https://developers.facebook.com/docs/instagram-api/reference
+https://developer.twitter.com/en/docs/api-reference-index
+https://graphql.braintreepayments.com/reference/#Mutation--captureTransaction
+https://developers.artsy.net/v2/
+
+
+https://api-docs.pipefy.com/reference/mutations/deleteTableRelation/
+https://docs.gitlab.com/ee/api/graphql/reference/#queryaimessages

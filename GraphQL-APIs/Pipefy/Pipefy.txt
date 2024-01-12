@@ -1,0 +1,3 @@
+GET >> /allCards >> Fetches all pipe cards based on arguments >> n/a
+GET >> /autoFillFields >> Lookup the values that will automatically fill the child-card's start form fields>> n/a
+GET >> /card >>Lookup a card by its ID >> n/a

@@ -1,0 +1,5 @@
+GET >> /abuseReport/{id} >>Find an abuse report. >>id	AbuseReportID!	ID of the abuse report.
+GET >> /abuseReportLabels >> Abuse report labels. >> searchTerm	String	Search term to find labels with.
+GET >> /addOnPurchase/{id} >> Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
+GET >> /aiMessages >> Find GitLab Duo Chat messages. >> requestIds	[ID!]	Array of request IDs to fetch. roles	[AiMessageRole!]	Array of roles to fetch.
+GET >> /auditEventDefinitions >>Definitions for all audit events available on the instance. >> n/a

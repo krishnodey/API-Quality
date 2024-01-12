@@ -1,3 +1,15 @@
 GitHoub
 Facebook
 Shopify
+Pokeapi
+AniList
+AppleMusic
+Instagram
+Twitter
+Braintree
+Artsy
+
+
+
+
+

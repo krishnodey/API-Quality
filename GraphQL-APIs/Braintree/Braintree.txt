@@ -1,0 +1,15 @@
+POST >> /ping >> Returns the literal string 'pong'. >> n/a
+POST >> /pingInStoreReader >> Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
+POST >> /viewer >> The currently authenticated viewer. >> n/a
+POST >> /clientConfiguration >> The client-side environment and payment method configuration.>> n/a
+POST >> /node >> Fetch any object that extends the Node interface using its ID.>> n/a
+POST >> /idFromLegacyId >> Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods. >> n/a
+POST >> /report >> A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters.>>n/a
+POST >> /search >> A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters.>>n/a
+POST >> /paypalFinancingOptions >> Retrieve PayPal financing options that include payment installment plans.>>n/a
+POST >> /inStoreLocations >> Retrieve a paginated list of all in-store locations. >> n/a
+POST >> /authorizePaymentMethod >> Authorize an eligible payment method and return a payload that includes details of the resulting transaction.>>n/a
+POST >> /authorizePayPalAccount >> Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction.>>n/a
+POST >> /authorizeVenmoAccount >> Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction. >> n/a
+POST >> /authorizeCreditCard >> Authorize a credit card of any origin and return a payload that includes details of the resulting transaction. >> n/a
+POST >> /captureTransaction >> Capture an authorized transaction and return a payload that includes details of the transaction. >> n/a
