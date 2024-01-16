@@ -18,7 +18,7 @@ uri_path = base_path+selected+"/APITest.txt"
 uri_obj = FileReadWrite(uri_path)
 uri_content = uri_obj.read_file()
 uri_content = uri_content.split("\n")
-#print(uri_content)
+print(uri_content)
 
 analyzer_obj = ApiAnalyzer(uri_content)
 #analyzer_obj.detect_amorphous_uri()
@@ -94,11 +94,19 @@ print("Finished Detection of Non-descriptiveURI:")
 
 #print(api_endpoints)
 '''''''''''''''''''''''''ContextlessURI'''''''''''''''''''''''''''''''''''''''
-print("Detection of ContextlessURI:")
-result_AP, result_P, p_count, ap_count = analyzer_obj.detect_contextless(api_endpoints)
-pattern_type = "Contextless"
-uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
-print("Finished Detection of ContextlessURI:")
+#print("Detection of ContextlessURI:")
+#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_contextless(api_endpoints)
+#pattern_type = "Contextless"
+#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+#print("Finished Detection of ContextlessURI:")
 
+
+
+'''''''''''''''''''''''''NonHierarchicalNodes'''''''''''''''''''''''''''''''''''''''
+print("Detection of NonHierarchicalNodes:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
+pattern_type = "NonHierarchicalNodes"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type)
+print("Finished Detection of NonHierarchicalNodes:")
 
 

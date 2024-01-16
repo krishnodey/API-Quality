@@ -3,9 +3,9 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import re
 
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
+#nltk.download('punkt')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 
 
 class UriCleaning:

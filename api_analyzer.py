@@ -1,11 +1,12 @@
 from uri_cleaning import UriCleaning
+from hierarchical_metrics import HierarchicalMetrics
 import re
 import nltk
 from nltk.stem import WordNetLemmatizer #for pluralized nodes
 from nltk.corpus import wordnet as wn #for nondescritive URI
-nltk.download('wordnet')  # Download WordNet data if not downloaded
-nltk.download('stopwords')
-nltk.download('punkt')
+#nltk.download('wordnet')  # Download WordNet data if not downloaded
+#nltk.download('stopwords')
+#nltk.download('punkt')
 import gensim
 from gensim import corpora
 from gensim.models import LdaModel
@@ -398,5 +399,73 @@ class ApiAnalyzer:
                 contextless_AP.append(f"{origianl_node}\t {AP}")
 
         return contextless_AP, contextual_P, p_count, ap_count
+    
+
+
+
+
+    def detect_non_hierarchical_nodes(self, URI=None):
+        URI = URI if URI else self.URI
+        P = "Hierarchical Nodes"
+        AP = "Non-hierarchical Nodes"
+        non_hierarchy_result_AP = []
+        non_hierarchy_result_P = []
+        p_count = 0
+        ap_count = 0
+
+        for uri in URI:
+            #print(uri)
+            clean = UriCleaning()
+            nodes = clean.get_uri_nodes(uri)
+            #print(nodes)
+
+            #reliability = LexicalResult.Reliability()
+            result_information = ""
+            hierarchies = 0
+            good_type = True
+            P_detection = False
+            AP_detection = False
+
+            hier_matric = HierarchicalMetrics()
+
+            if len(nodes) >= 2:
+                for j in range(len(nodes) - 1):
+                    nodeA = nodes[j]
+                    nodeB = nodes[j + 1]
+
+                    if nodeA and nodeB:
+                        #print(f"{nodeA} ---- {nodeB}")
+                        relation_type = hier_matric.reversed_hierarchy(nodeA, nodeB)
+
+                        if relation_type:
+                            AP_detection = True
+                            result_information += f"Reversed hierarchy of type {relation_type} detected between {nodeA} and {nodeB}. "
+                            break
+
+                        elif hier_matric.specialization_hierarchy(nodeA, nodeB):
+                            P_detection = True
+                            result_information += f"Specialization hierarchy detected between {nodeA} and {nodeB}. "
+                            hierarchies += 1
+                            #reliability.multiply_detection_reliability(LexicalResult.Reliability.AMBIGUOUS_DETECTION)
+
+                if P_detection or AP_detection:
+                    max_chain_length = len(nodes) - 1
+                    if AP_detection:
+                        if hierarchies == 0:
+                            good_type = False
+                            result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
+                    elif P_detection:
+                        if hierarchies >= 1:
+                            good_type = True
+                            result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
+
+            if not good_type:
+                ap_count = ap_count + 1
+                non_hierarchy_result_AP.append(f"{uri}\t{AP}\t{result_information}")
+            else:
+                p_count = p_count + 1
+                non_hierarchy_result_P.append(f"{uri}\t{P}\t{result_information}")
+        return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
+
     
 
