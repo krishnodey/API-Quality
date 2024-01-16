@@ -466,6 +466,188 @@ class ApiAnalyzer:
                 p_count = p_count + 1
                 non_hierarchy_result_P.append(f"{uri}\t{P}\t{result_information}")
         return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
+    
+
+    
+
+    '''def detect_less_cohesive_documentation(Self, URI):
+
+        description = []
+        nodes = []
+        for ln in URI:
+            tmp = ln.split(">>")
+            description.append(tmp[2])
+            nodes.append(tmp[1])
+        #print(description)
+        #print(nodes)
+            
+        P="Pertinent vs. Documentation"
+        AP="Non-pertinent Documentation"
+        less_cohesive_AP = []
+        less_cohesive_P = []
+        p_count = 0
+        ap_count = 0
+        obj = LessCohesive()
+
+        for uri, documentation in zip(nodes, description):
+            
+            result = obj.less_cohesive_documentation_analysis(uri, documentation)
+            
+            if result == 1:
+                ap_count = ap_count + 1
+                less_cohesive_AP.append(f"{nodes}\t{AP}\t{documentation}")
+            elif result == 0:
+                p_count = p_count + 1
+                less_cohesive_P.append(f"{nodes}\t{P}\t{documentation}")
+
+        return less_cohesive_AP, less_cohesive_P, p_count, ap_count'''
+    
+
+
+    def detect_less_cohesive_documentation(self, URI):    
+        description = []
+        nodes = []
+        for ln in URI:
+            tmp = ln.split(">>")
+            description.append(tmp[2])
+            nodes.append(tmp[1])
+        #print(description)
+        #print(nodes)
+            
+        P="Pertinent Documentation"
+        AP="Non-pertinent Documentation"
+        less_cohesive_AP = []
+        less_cohesive_P = []
+        p_count = 0
+        ap_count = 0
+
+        # Tokenize, remove stopwords, and lemmatize the descriptions
+        nlp = spacy.load("en_core_web_lg")
+        stop_words = set(stopwords.words('english'))
+
+        def preprocess_data(text):
+            tokens = word_tokenize(text.lower())
+            tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
+            doc = nlp(" ".join(tokens))
+            lemmatized_tokens = [token.lemma_ for token in doc]
+            return lemmatized_tokens
+
+
+        def preprocess_word(text):
+            doc = nlp(text)
+            tokens = [token.lemma_ for token in doc if not token.is_stop and token.is_alpha]
+            return ' '.join(tokens)
+
+        def similarity_calculator(word1, word2):
+            word1 = nlp(preprocess_word(word1))
+            word2 = nlp(preprocess_word(word2))
+            simi = word1.similarity(word2)
+            return simi
+
+        def simi_average(data):
+            if isinstance(data, dict):
+                values = list(data.values())  
+                average = sum(values) / len(values) if len(values) > 0 else 0  # Calculate average
+                return average
+            else:
+                return data  # Return the input value as it is if not a dictionary
+        
+        clean = UriCleaning()
+        #splitted_nodes = clean.get_uri_nodes(line)
+        
+        processed_des =[]
+        for des in description:
+            processed_des.append(preprocess_data(des))
+        processed_nodes =[]
+        for nd in nodes:
+            processed_nodes.append(clean.get_uri_nodes(nd))
+        #print(processed_des)
+        #print(processed_nodes)
+
+        for new in processed_nodes:
+            for i in range(len(new)):
+                val = clean.set_Acronym(new[i])
+                if val is not None:
+                    for index in range(len(val)):
+                        if i + index < len(new):
+                            new[i + index] = val[index]
+                        else:
+                            new.append(val[index])
+        #print(processed_nodes)
+        
+        def calculate_similarity(uri_node, topic_words):
+            similarity_scores = {}
+            for idx, word_list in enumerate(topic_words, start=1):
+                word_similarity = {word: similarity_calculator(uri_node, word) for word in word_list}
+                similarity_scores[f"Topic {idx}"] = word_similarity
+            return similarity_scores
+
+        for combined_node, documentation, node_uri, des in zip(processed_nodes,processed_des, nodes, description):
+            # Calculate similarity for each individual node
+            topics = len(combined_node)
+            #print(topics)
+            #print(combined_node)
+            
+            #print(documentation)
+            '''if len(documentation)<1:
+                p_count = p_count + 1
+                less_cohesive_AP.append(f"-{node_uri}\t{AP}\t{des}")
+                continue'''
+                
+            # Create a dictionary and corpus for LDA modeling
+            dictionary = corpora.Dictionary([documentation])
+            corpus = [dictionary.doc2bow(text) for text in [documentation]]
+
+            # Train LDA model
+            lda_model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=topics, random_state=42)
+
+            # Get topic words from the model
+            topic_words = []
+            for topic_id in range(lda_model.num_topics):
+                topic_words.append([word for word, _ in lda_model.show_topic(topic_id)])
+            #print(topic_words)
+
+            # Display topic words horizontally
+            '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
+            print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
+
+
+            node_word_similarity = {}
+            topic_avg = []
+            for node in combined_node:
+                node_word_similarity[node] = calculate_similarity(node, topic_words)
+            
+            # Print the results with combined URI format and individual nodes
+            #print(f"Node: {combined_node}")
+            
+            # Iterate through topics and print scores vertically
+            for topic_idx in range(len(topic_words)):
+                topic_name = f"Topic {topic_idx + 1}"
+                #print(f"  {topic_name}:")
+                tmp = 0
+                for node, word_scores in node_word_similarity.items():
+                    score = word_scores.get(topic_name, {})
+                    #print(f"    {node}: {score}")  # Print scores for each node under the topic
+                    tmp1 = simi_average(score)
+                    #print(tmp1)
+                    tmp += tmp1
+                avg_tmp = tmp / len(node_word_similarity)
+                topic_avg.append(avg_tmp)
+                #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+            
+            #print(f"Total Average for All Topics: {topic_avg}\n")
+            #for avg in topic_avg:
+            #print(max(topic_avg))
+            if max(topic_avg) > 0:
+                #print("cohisive")
+                p_count = p_count + 1
+                less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des.strip()}")
+            else:
+                #print("less_cohisive")
+                ap_count = ap_count + 1
+                less_cohesive_AP.append(f"-{node_uri.strip()}\t{AP}\t{des.strip()}")
+        return less_cohesive_AP, less_cohesive_P, p_count, ap_count
+
 
     
 

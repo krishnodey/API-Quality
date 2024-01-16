@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 0
 
 ***Patterns*** 
-Count: 1
-/auth/login	Hierarchical Nodes	
-/auth/token	Hierarchical Nodes	
-/auth/revoke	Hierarchical Nodes	
-/settings	Hierarchical Nodes	
-/flows	Hierarchical Nodes	
-/flows	Hierarchical Nodes	
-/flow	Hierarchical Nodes	
-/flow/:id	Hierarchical Nodes	
-/flow/:id	Hierarchical Nodes	
-/flow/:id	Hierarchical Nodes	
-/nodes	Hierarchical Nodes	
-/nodes	Hierarchical Nodes	
-/nodes/:module	Hierarchical Nodes	
-/nodes/:module	Hierarchical Nodes	
-/nodes/:module	Hierarchical Nodes	
+Count: 15
+ /auth/login 	Hierarchical Nodes	
+ /auth/token 	Hierarchical Nodes	
+ /auth/revoke 	Hierarchical Nodes	
+ /settings 	Hierarchical Nodes	
+ /flows 	Hierarchical Nodes	
+ /flows 	Hierarchical Nodes	
+ /flow 	Hierarchical Nodes	
+ /flow/:id 	Hierarchical Nodes	
+ /flow/:id 	Hierarchical Nodes	
+ /flow/:id 	Hierarchical Nodes	
+ /nodes 	Hierarchical Nodes	
+ /nodes 	Hierarchical Nodes	
+ /nodes/:module 	Hierarchical Nodes	
+ /nodes/:module 	Hierarchical Nodes	
+ /nodes/:module 	Hierarchical Nodes	

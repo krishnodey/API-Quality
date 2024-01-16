@@ -32,6 +32,8 @@ class APIChoice:
 
     def get_selected_choice(self):
         return self.selected_choice
+    
+        
 
 '''
 # Usage example:

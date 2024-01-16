@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 15
+/auth/login	Non-standard End-point	 [black space/tab found] 
+/auth/token	Non-standard End-point	 [black space/tab found] 
+/auth/revoke	Non-standard End-point	 [black space/tab found] 
+/settings	Non-standard End-point	 [black space/tab found] 
+/flows	Non-standard End-point	 [black space/tab found] 
+/flows	Non-standard End-point	 [black space/tab found] 
+/flow	Non-standard End-point	 [black space/tab found] 
+/flow/:id	Non-standard End-point	 [black space/tab found] 
+/flow/:id	Non-standard End-point	 [black space/tab found] 
+/flow/:id	Non-standard End-point	 [black space/tab found] 
+/nodes	Non-standard End-point	 [black space/tab found] 
+/nodes	Non-standard End-point	 [black space/tab found] 
+/nodes/:module	Non-standard End-point	 [black space/tab found] 
+/nodes/:module	Non-standard End-point	 [black space/tab found] 
+/nodes/:module	Non-standard End-point	 [black space/tab found] 
 
 ***Patterns*** 
-Count: 15
-/auth/login	Standard End-point	
-/auth/token	Standard End-point	
-/auth/revoke	Standard End-point	
-/settings	Standard End-point	
-/flows	Standard End-point	
-/flows	Standard End-point	
-/flow	Standard End-point	
-/flow/:id	Standard End-point	
-/flow/:id	Standard End-point	
-/flow/:id	Standard End-point	
-/nodes	Standard End-point	
-/nodes	Standard End-point	
-/nodes/:module	Standard End-point	
-/nodes/:module	Standard End-point	
-/nodes/:module	Standard End-point	
+Count: 0

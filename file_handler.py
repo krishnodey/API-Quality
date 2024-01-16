@@ -14,6 +14,22 @@ class FileReadWrite:
         except Exception as e:
             print(f"Error reading file: {e}")
             return None
+        
+    def read_data(self, file_path=None):
+        file_path = file_path if file_path else self.file_path
+        try:
+            data = []
+            with open(file_path, 'r') as file:
+                for line in file:
+                    data.append(line)
+                return data
+        except FileNotFoundError:
+            print(f"File '{file_path}' not found.")
+            return None
+        except Exception as e:
+            print(f"Error reading file: {e}")
+            return None
+    
 
 
     def write_file(self, data, file_path=None):

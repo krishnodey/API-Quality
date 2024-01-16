@@ -2,6 +2,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import re
+from file_handler import FileReadWrite
 
 #nltk.download('punkt')
 #nltk.download('stopwords')
@@ -13,6 +14,13 @@ class UriCleaning:
         self.Uri =  None
 
     def get_uri_nodes(self, Uri):
+
+        extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
+
+        pattern = re.compile('|'.join([re.escape(ext) for ext in extensions]))
+        Uri = pattern.sub(' ', Uri)
+        #print(Uri)
+
         #Uri = Uri if Uri else self.Uri
         stop_words = set(stopwords.words('english'))
         #print(Uri)
@@ -52,4 +60,19 @@ class UriCleaning:
         tokenized_uri = word_tokenize(" ".join(uri_nodes))
         uri_nodes = [word for word in tokenized_uri if word not in stop_words and not word.isdigit()]
         return uri_nodes
+    
+    def set_Acronym(self, text):
+        path = "acronyms.txt"
+
+        read_data = FileReadWrite(path)
+        data = read_data.read_data()
+        #print(data)
+
+        for line in data:
+            line  = line.split(">>")
+            line[1].strip("\n")
+            if(text == line[0].strip()):
+                ret = line[1].strip()
+                ret = ret.split()
+                return ret
     

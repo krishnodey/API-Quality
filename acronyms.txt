@@ -1,0 +1,27 @@
+id >>identification
+ic >>integration Code
+sid >>segment	identification
+id >>identification
+ic >>integration Code
+sid >>segment	identification
+app >>application
+auth >>authentication
+Cam >>camera
+CO >>carbon monoxide
+eta >>estimated time of arrival
+async >>asynchronization
+mta >>message transfer agent
+acls >>access control lists
+vdcs >>virtual data centres
+IoT >>Internet of Things
+orgs >>organizations
+org >>organization
+auth >>authentication
+mqtt >>Message Queuing Telemetry Transport
+api >>application programming interface
+HTTP >>Hypertext Transfer Protocol
+mgmt >>management
+JSON >>JavaScript Object Notation
+hdmi>>high definition multimedia interface
+cec>>consumer electronics control
+app>>application

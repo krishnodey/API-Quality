@@ -1,0 +1,34 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+- /auth/login 	Pertinent Documentation	 Get the active authentication scheme
+
+- /auth/token 	Pertinent Documentation	 Exchange credentials for access token
+
+- /auth/revoke 	Pertinent Documentation	 Revoke an access token
+
+- /settings 	Pertinent Documentation	 Get the runtime settings
+
+- /flows 	Pertinent Documentation	 Get the active flow configuration
+
+- /flows 	Pertinent Documentation	 Set the active flow configuration
+
+- /flow 	Pertinent Documentation	 Add a flow to the active configuration
+
+- /flow/:id 	Pertinent Documentation	 Get an individual flow configuration
+
+- /flow/:id 	Pertinent Documentation	 Update an individual flow configuration
+
+- /flow/:id 	Pertinent Documentation	 Delete an individual flow configuration
+
+- /nodes 	Pertinent Documentation	 Get a list of the installed nodes
+
+- /nodes 	Pertinent Documentation	 Install a new node module
+
+- /nodes/:module 	Pertinent Documentation	 Get a node module’s information
+
+- /nodes/:module 	Pertinent Documentation	 Enable/Disable a node module
+
+- /nodes/:module 	Pertinent Documentation	 Remove a node module
