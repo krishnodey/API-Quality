@@ -104,7 +104,7 @@ print("Finished Detection of PluralisedNodes:")
 '''''''''''''''''''''''''Non-descriptiveURI'''''''''''''''''''''''''''''''''''''''
 print("Detection of Non-descriptiveURI:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_descriptive_uri()
-pattern_type = "Non-descriptive"
+pattern_type = "Non-descriptiveURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
 print("Finished Detection of Non-descriptiveURI:")
 
@@ -113,7 +113,7 @@ print("Finished Detection of Non-descriptiveURI:")
 '''''''''''''''''''''''''ContextlessURI'''''''''''''''''''''''''''''''''''''''
 print("Detection of ContextlessURI:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_contextless(data)
-pattern_type = "Contextless"
+pattern_type = "ContextlessURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
 print("Finished Detection of ContextlessURI:")
 
@@ -133,5 +133,13 @@ result_AP, result_P, p_count, ap_count = analyzer_obj.detect_less_cohesive_docum
 pattern_type = "LessCohisiveDoc"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
 print("Finished Detection of LessCohisiveDocumentation:")
+
+
+'''''''''''''''''''''''''InconsistantDocumentation'''''''''''''''''''''''''''''''''''''''
+print("Detection of InconsistantDocumentation:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations(data)
+pattern_type = "InconsistantDoc"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
+print("Finished Detection of InconsistantDocumentation:")
 
 

@@ -654,6 +654,100 @@ class ApiAnalyzer:
                 ap_count = ap_count + 1
                 less_cohesive_AP.append(f"-{node_uri.strip()}\t{AP}\t{des.strip()}")
         return less_cohesive_AP, less_cohesive_P, p_count, ap_count
+    
+
+
+    def detect_inconsistent_documentations(self, URI=None):
+        URI = URI if URI else self.URI
+
+        post = ["return", "returns", "delete", "deletes", "update", "modify", "query", "list", "lists", "check", "checks", "verify", "get", "gets"]
+        delete = ["get", "gets", "find", "finds", "search", "check", "list", "verify", "get", "gets"]
+        put = ["delete", "deletes", "creates", "finds", "create", "find", "search", "checks", "lists", "check", "list"]
+        get = ["delete", "deletes", "updates", "update", "creates", "create"]
+        
+        description = []
+        nodes = []
+        http_method = []
+        for ln in URI:
+            tmp = ln.split(">>")
+            if len(ln) == 4:
+                text = f"{tmp[2]} {tmp[3]}"
+                description.append(text)
+            description.append(tmp[2])
+            nodes.append(tmp[1])
+            http_method.append(tmp[0])
+            #print(description)
+            #print(nodes)
+            #print(http_method)
+
+        # Tokenize, remove stopwords, and lemmatize the descriptions
+        nlp = spacy.load("en_core_web_lg")
+        stop_words = set(stopwords.words('english'))
+
+        def preprocess_data(text):
+            tokens = word_tokenize(text.lower())
+            tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
+            doc = nlp(" ".join(tokens))
+            lemmatized_tokens = [token.lemma_ for token in doc]
+            return lemmatized_tokens
+
+        P = "Consistent Documentation"
+        AP = "Inconsistent Documentation"
+
+        inconsistent_documentation_AP = []
+        inconsistent_documentation_P = []
+        p_count = 0
+        ap_count = 0
+        
+        clean = UriCleaning()
+
+        for method, uri, documentation in zip(http_method, nodes, description):
+            #documentation = documentation.strip()
+            words = preprocess_data(documentation)
+            #uri = clean.get_uri_nodes(node)
+            #print(words)
+            #print(uri)
+            #keys = re.split('[-:]', key)
+            #keys = [k.strip().lower() for k in keys]
+
+            if method.lower in get:
+                if words[0].lower().strip() in get:
+                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
+                    ap_count += 1
+                else:
+                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
+                    p_count += 1
+
+            elif method.lower in delete:
+                if words[0].lower().strip() in delete:
+                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
+                    ap_count += 1
+                else:
+                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
+                    p_count += 1
+
+            elif method.lower in put:
+                if words[0].lower().strip() in put:
+                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                    ap_count += 1
+                else:
+                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                    p_count += 1
+
+            elif method.lower in post:
+                if words[0].lower().strip() in post:
+                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                    ap_count += 1
+                else:
+                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                    p_count += 1
+
+            else:
+                inconsistent_documentation_P.append(f"{method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
+                p_count += 1
+
+        return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
+
 
 
     
