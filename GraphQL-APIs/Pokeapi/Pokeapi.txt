@@ -21,9 +21,4 @@ GET >>/v2/berry-firmness/{id or name}/>>>> n/a
 GET >>/v2/berry-firmness/{name}/>>The name for this resource.>> n/a
 GET >>/v2/berry-firmness/{berries}/>>A list of the berries with this firmness.>> n/a
 GET >>/v2/berry-firmness/{names}/>>The name of this resource listed in different languages.>> n/a
-GET >>v2/berry-flavor/{id or name}/>>Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their nature.>>
-
-
-
-
-
+GET >>v2/berry-flavor/{id or name}/>>Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their nature.>>n/a

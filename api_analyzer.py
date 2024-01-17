@@ -290,6 +290,10 @@ class ApiAnalyzer:
         nodes = []
         for ln in URI:
             tmp = ln.split(">>")
+
+            if len(ln) == 4:
+                text = f"{tmp[2]} {tmp[3]}"
+                description.append(text)
             description.append(tmp[2])
             nodes.append(tmp[1])
         #print(description)
@@ -509,6 +513,9 @@ class ApiAnalyzer:
         nodes = []
         for ln in URI:
             tmp = ln.split(">>")
+            if len(ln) == 4:
+                text = f"{tmp[2]} {tmp[3]}"
+                description.append(text)
             description.append(tmp[2])
             nodes.append(tmp[1])
         #print(description)
@@ -589,10 +596,10 @@ class ApiAnalyzer:
             #print(combined_node)
             
             #print(documentation)
-            '''if len(documentation)<1:
+            if len(documentation)<1:
                 p_count = p_count + 1
                 less_cohesive_AP.append(f"-{node_uri}\t{AP}\t{des}")
-                continue'''
+                continue
                 
             # Create a dictionary and corpus for LDA modeling
             dictionary = corpora.Dictionary([documentation])

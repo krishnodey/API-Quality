@@ -18,13 +18,3 @@ GET >> /v18.0/{application-id}/adnetworkanalytics_results>>Obtain the results of
 GE>>/v18.0/{application-id}/aem_attribution>>aem_attribution>>n/a
 GET>>/v18.0/{application-id}/aem_conversion_configs>>The aggregated event measurement conversion value configs for this app>>n/a
 GET >>/v18.0/{application-id}/aem_conversion_filter>>Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]>>catalog_id string catalog_id. Check the product_ids are in this catalog. fb_content_ids string product_set_ids, or fb_content_ids. Check these are in catalog_id
-
-
-
-
-
-
-
-
-
-

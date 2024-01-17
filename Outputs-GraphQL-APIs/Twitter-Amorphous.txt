@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 14
+/v2/users/:id/bookmarks/:tweet_id	Tidy End-point	
+/v2/users/:id/bookmarks	Tidy End-point	
+/v2/users/:id/bookmarks	Tidy End-point	
+/v2/tweets/search/stream	Tidy End-point	
+/v2/tweets/search/stream/rules	Tidy End-point	
+/tweets/search/stream endpoint.	Tidy End-point	
+/v2/tweets/:id/hidden	Tidy End-point	
+/v2/users/:id/likes/:tweet_id	Tidy End-point	
+/v2/tweets/:id/liking_users	Tidy End-point	
+/v2/users/:id/liked_tweets	Tidy End-point	
+/v2/users/:id/likes	Tidy End-point	
+/v2/tweets/:id	Tidy End-point	
+/v2/tweets	Tidy End-point	
+/2/tweets/:id/quote_tweets	Tidy End-point	

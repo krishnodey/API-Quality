@@ -19,11 +19,3 @@ GET >> v2/status >> This API retrieves the system status.>> n/a
 GET >> v2/user_details/{id} >> Users can retrieve a specific user by following the "user_details" link from a user.>> n/a
 GET >> v2/users/{id}>>Users can retrieve a specific user by rendering the "user" link template from root.>>n/a
 GET >> v2/current_user >> Retrieve the currently authenticated user by following the current_user link from root. >> n/a
-
-
-
-
-
-
-
-

@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 3
+/v2/tweets/search/stream	CRUDy End-point	 [search found] 
+/v2/tweets/search/stream/rules	CRUDy End-point	 [search found] 
+/tweets/search/stream endpoint.	CRUDy End-point	 [search found] 
+
+***Patterns*** 
+Count: 11
+/v2/users/:id/bookmarks/:tweet_id	Verbless End-point	
+/v2/users/:id/bookmarks	Verbless End-point	
+/v2/users/:id/bookmarks	Verbless End-point	
+/v2/tweets/:id/hidden	Verbless End-point	
+/v2/users/:id/likes/:tweet_id	Verbless End-point	
+/v2/tweets/:id/liking_users	Verbless End-point	
+/v2/users/:id/liked_tweets	Verbless End-point	
+/v2/users/:id/likes	Verbless End-point	
+/v2/tweets/:id	Verbless End-point	
+/v2/tweets	Verbless End-point	
+/2/tweets/:id/quote_tweets	Verbless End-point	

@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 2
+/tweets/search/stream endpoint. [No version found.]
+/2/tweets/:id/quote_tweets [No version found.]
+
+***Patterns*** 
+Count: 12
+/v2/users/:id/bookmarks/:tweet_id [Version found.]
+/v2/users/:id/bookmarks [Version found.]
+/v2/users/:id/bookmarks [Version found.]
+/v2/tweets/search/stream [Version found.]
+/v2/tweets/search/stream/rules [Version found.]
+/v2/tweets/:id/hidden [Version found.]
+/v2/users/:id/likes/:tweet_id [Version found.]
+/v2/tweets/:id/liking_users [Version found.]
+/v2/users/:id/liked_tweets [Version found.]
+/v2/users/:id/likes [Version found.]
+/v2/tweets/:id [Version found.]
+/v2/tweets [Version found.]

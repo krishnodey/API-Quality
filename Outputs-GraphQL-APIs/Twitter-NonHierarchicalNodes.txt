@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 14
+ /v2/users/:id/bookmarks/:tweet_id 	Hierarchical Nodes	
+ /v2/users/:id/bookmarks	Hierarchical Nodes	
+ /v2/users/:id/bookmarks	Hierarchical Nodes	
+ /v2/tweets/search/stream	Hierarchical Nodes	
+/v2/tweets/search/stream/rules 	Hierarchical Nodes	
+ /tweets/search/stream endpoint.	Hierarchical Nodes	
+ /v2/tweets/:id/hidden 	Hierarchical Nodes	
+ /v2/users/:id/likes/:tweet_id 	Hierarchical Nodes	
+ /v2/tweets/:id/liking_users 	Hierarchical Nodes	
+ /v2/users/:id/liked_tweets 	Hierarchical Nodes	
+ /v2/users/:id/likes 	Hierarchical Nodes	
+ /v2/tweets/:id 	Hierarchical Nodes	
+ /v2/tweets 	Hierarchical Nodes	
+ /2/tweets/:id/quote_tweets 	Hierarchical Nodes	

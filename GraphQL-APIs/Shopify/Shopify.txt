@@ -14,6 +14,3 @@ POST >> /objects/PolarisVizResponse >> A PolarisViz response to a ShopifyQL quer
 POST >> /objects/TableData >> The result in a tabular format with schema information and formatted and unformatted row data.>>n/a
 POST >> /objects/TableDataColumn >> A nested array representation of the data. An index in an array represents a row number.>>n/a
 POST >> /objects/TableResponse >>The default table response structure for a ShopifyQL query. >> n/a
-
-
-

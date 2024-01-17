@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 14
+DELETE 	/v2/users/:id/bookmarks/:tweet_id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/v2/users/:id/bookmarks	 regular methods.
+POST 	/v2/users/:id/bookmarks	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v2/tweets/search/stream	 regular methods.
+POST 	/v2/tweets/search/stream/rules	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/tweets/search/stream endpoint.	 regular methods.
+PUT 	/v2/tweets/:id/hidden	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE	/v2/users/:id/likes/:tweet_id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/v2/tweets/:id/liking_users	 regular methods.
+GET 	/v2/users/:id/liked_tweets	 regular methods.
+POST 	/v2/users/:id/likes	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE	/v2/tweets/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/v2/tweets	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/2/tweets/:id/quote_tweets	 regular methods.

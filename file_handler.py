@@ -41,7 +41,7 @@ class FileReadWrite:
         except Exception as e:
             print(f"Error writing to file: {e}")
 
-    def write_data(self, result_AP, result_P, p_count, ap_count, selected, pattern_type):
+    def write_data(self, result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path):
         try:
             data_to_write = f"***Anti-Pattern*** \nCount: {ap_count}\n"
             for item in result_AP:
@@ -50,7 +50,7 @@ class FileReadWrite:
             for item in result_P:
                 data_to_write += item + "\n"
 
-            out_path = "Outputs/" + selected + "-" + pattern_type + "URI.txt"
+            out_path = f"Outputs-{base_path}/{selected}-{pattern_type}.txt"
             self.write_file(data_to_write, out_path)
         except Exception as e:
             print(f"Error writing AmorphousURI data to file: {e}")

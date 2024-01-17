@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 14
+/v2/users/:id/bookmarks/:tweet_id	Non-standard End-point	 [black space/tab found] 
+/v2/users/:id/bookmarks	Non-standard End-point	 [black space/tab found] 
+/v2/users/:id/bookmarks	Non-standard End-point	 [black space/tab found] 
+/v2/tweets/search/stream	Non-standard End-point	 [black space/tab found] 
+/v2/tweets/search/stream/rules	Non-standard End-point	 [black space/tab found] 
+/tweets/search/stream endpoint.	Non-standard End-point	 [black space/tab found] 
+/v2/tweets/:id/hidden	Non-standard End-point	 [black space/tab found] 
+/v2/users/:id/likes/:tweet_id	Non-standard End-point	 [black space/tab found] 
+/v2/tweets/:id/liking_users	Non-standard End-point	 [black space/tab found] 
+/v2/users/:id/liked_tweets	Non-standard End-point	 [black space/tab found] 
+/v2/users/:id/likes	Non-standard End-point	 [black space/tab found] 
+/v2/tweets/:id	Non-standard End-point	 [black space/tab found] 
+/v2/tweets	Non-standard End-point	 [black space/tab found] 
+/2/tweets/:id/quote_tweets	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

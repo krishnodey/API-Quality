@@ -13,12 +13,3 @@ GET >> /v1/catalog/{storefront}/artists/{id} >> Fetch an artist by using the art
 GET >> /v1/catalog/{storefront}/artists/{id}/{relationship} >> Fetch an artist’s relationship by using its identifier.>>id string (Required) A unique identifier for the artist. relationship string (Required) The name of the relationship you want to fetch for this resource. Possible Values: albums, genres, music-videos, playlists, station storefront string (Required) An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the id attributes of Storefront objects.
 GET >> /v1/catalog/{storefront}/artists/{id}/view/{view} >> Fetch related resources for a single artist’s relationship view.>> id string (Required) A unique identifier for the artist. storefront string (Required) An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the id attributes of Storefront objects. view string (Required) The name of the resource view to fetch.
 GET >> /v1/catalog/{storefront}/artists >> Fetch one or more artists by using their identifiers.>> storefront string (Required) An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the id attributes of Storefront objects.
-
-
-
- 
-
-
-
-
-
