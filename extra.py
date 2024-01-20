@@ -22,7 +22,7 @@ for line in data:
     line[1].strip("\n")
     print(line[0] +"  -------  "+line[1])'''
 
-#patterns and anti-patterns
+'''#patterns and anti-patterns
 base_path = "GraphQL-APIs"
 selected = "Instagram"
 uri_path = base_path+"/"+selected+"/"+selected+".txt"
@@ -41,4 +41,16 @@ for line in data:
         des.append(text)
         
 
-print(des)
+print(des)'''
+
+from api_analyzer import ApiAnalyzer
+
+data = ['/bulk/devices/remove']
+obj = ApiAnalyzer(data)
+#data = ['POST >> /bulk/devices/remove >> Delete multiple devices. Deletemultiple devices, each request can contain a maximum of 512 kB']
+
+data = ['POST >> /bulk/devices/remove >> Remove multiple devices. Remove multiple devices, each request can contain a maximum of 512 kB']
+
+ap, p, pc, apc = obj.detect_inconsistent_documentations(data)
+print(f"anti-pattern: {ap}")
+print(f"Pattern: {p}")

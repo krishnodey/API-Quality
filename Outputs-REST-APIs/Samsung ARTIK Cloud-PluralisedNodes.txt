@@ -1,0 +1,85 @@
+***Anti-Pattern*** 
+Count: 10
+PUT 	/users/<userID>/properties	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+DELETE 	/users/<userID>/properties	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+PUT 	/devices/<deviceID>/tokens	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+DELETE 	/devices/<deviceID>/tokens	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+POST 	/devices/<deviceID>/providerauth	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/devicetypes/<deviceTypeId>/whitelist	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/messages/export	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/subscriptions/<subscriptionID>/validate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/scenes/<sceneID>	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/ml/models/<modelID>/predict	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 70
+GET 	/users/self	 regular methods.
+GET 	/users/<userID>/properties	 regular methods.
+POST 	/users/<userID>/properties	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/users/<userID>/devices	 regular methods.
+GET 	/users/<userID>/devicetypes	 regular methods.
+GET 	/users/<userID>/rules	 regular methods.
+GET 	/users/<userID>/scenes	 regular methods.
+GET 	/users/<userID>/trials	 regular methods.
+GET 	/devices/<deviceID>	 regular methods.
+POST 	/devices	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/devices/<deviceID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/devices/<deviceID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/devices/<deviceID>/tokens	 regular methods.
+DELETE 	/devices/<deviceID>/providerauth	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/devices/<deviceID>/status	 regular methods.
+GET 	/devices/status	 regular methods.
+PUT 	/devices/<deviceID>/status	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/devices/<deviceID>/certificate	 regular methods.
+GET 	/devices/<deviceID>/shares	 regular methods.
+GET 	/devices/<deviceID>/shares/<shareID>	 regular methods.
+POST 	/devices/<deviceID>/shares	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/users/<userID>/shares	 regular methods.
+GET 	/devicetypes/<deviceTypeID>	 regular methods.
+GET 	/devicetypes/<deviceTypeID>	 regular methods.
+GET 	/devicetypes/<deviceTypeID>/manifests/latest/properties	 regular methods.
+GET 	/devicetypes/<deviceTypeID>/manifests/<version>/properties	 regular methods.
+GET 	/devicetypes/<deviceTypeID>/availablemanifestversions	 regular methods.
+GET 	/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	 regular methods.
+GET 	/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	 regular methods.
+GET 	/devicetypes/<deviceTypeId>/whitelist	 regular methods.
+DELETE 	/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/devicetypes/<deviceTypeID>/whitelist/enable	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/devicetypes/<deviceTypeID>/whitelist/certificates	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/devicetypes/<deviceTypeID>/whitelist/status	 regular methods.
+GET 	/devicetypes/<deviceTypeID>/whitelist/certificates	 regular methods.
+GET 	/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	 regular methods.
+POST 	/messages	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/messages	 regular methods.
+POST 	/actions	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/actions	 regular methods.
+GET 	/messages/last	 regular methods.
+GET 	/messages/analytics/aggregates	 regular methods.
+GET 	/messages/analytics/histogram	 regular methods.
+GET 	/messages/presence	 regular methods.
+GET 	/messages/snapshots	 regular methods.
+GET 	/pricing/devices/<deviceID>/revenueshare/upgradepath	 regular methods.
+GET 	/pricing/devicetypes/<deviceTypeID>/pricingtiers	 regular methods.
+GET 	/pricing/devices/<deviceID>/pricingtiers	 regular methods.
+GET 	/messages/export/<exportID>/status	 regular methods.
+GET 	/messages/export/<exportID>/result	 regular methods.
+GET 	/messages/export/history	 regular methods.
+POST 	/subscriptions	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/subscriptions	 regular methods.
+GET 	/subscriptions/<subscriptionID>	 regular methods.
+GET 	/notifications/<notificationID>/messages	 regular methods.
+GET 	/rules/<ruleID>	 regular methods.
+POST 	/rules	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/rules/<ruleID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/rules/<ruleID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/rules/<ruleID>/executions	 regular methods.
+POST 	/rules/<ruleID>/actions	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/rules/<ruleID>/actions	 regular methods.
+POST 	/scenes	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/scenes/<sceneID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/scenes/<sceneID>	 regular methods.
+GET 	/scenes	 regular methods.
+DELETE 	/scenes/<sceneID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/ml/models	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/ml/models/<modelID>	 regular methods.

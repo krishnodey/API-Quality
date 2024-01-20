@@ -1,0 +1,85 @@
+***Anti-Pattern*** 
+Count: 9
+get	/users/<userID>/rules	Inconsistent Documentation	Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+get	/users/<userID>/scenes	Inconsistent Documentation	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+put	 /devices/<deviceID>/tokens 	Inconsistent Documentation	Creates a new access token for a device.
+post	 /devicetypes/<deviceTypeId>/whitelist 	Inconsistent Documentation	Uploads an Approved List as a CSV file.
+delete	/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Inconsistent Documentation	Deletes a specified device from a device type's Approved List.
+put	 /devicetypes/<deviceTypeID>/whitelist/enable 	Inconsistent Documentation	Enables or disables a device type's Approved List.
+delete	/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Inconsistent Documentation	Deletes an Approved List certificate for a device type.
+get	/scenes	Inconsistent Documentation	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+post	 /ml/models/<modelID>/predict 	Inconsistent Documentation	Returns the predicted output for a machine learning model.
+
+***Patterns*** 
+Count: 71
+get	 /users/self 	Consistent Documentation	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
+get	 /users/<userID>/properties 	Consistent Documentation	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
+post	 /users/<userID>/properties 	Consistent Documentation	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+put	 /users/<userID>/properties 	Consistent Documentation	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+delete	/users/<userID>/properties	Consistent Documentation	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
+get	 /users/<userID>/devices 	Consistent Documentation	Returns all devices owned by a user and/or shared devices on the user's account.
+get	 /users/<userID>/devicetypes 	Consistent Documentation	Returns the device types owned by a user.
+get	 /users/<userID>/trials 	Consistent Documentation	Returns the trials of a participant or administrator.
+get	 /devices/<deviceID> 	Consistent Documentation	Returns a specific shared or owned device. Required permissions: READ on the device.
+post	 /devices 	Consistent Documentation	Adds a device.
+put	 /devices/<deviceID> 	Consistent Documentation	Modifies a device's parameters.
+delete	/devices/<deviceID>	Consistent Documentation	Deletes a device.
+get	 /devices/<deviceID>/tokens 	Consistent Documentation	Returns the access token of a device.
+delete	/devices/<deviceID>/tokens	Consistent Documentation	Deletes the access token of a device.
+post	 /devices/<deviceID>/providerauth 	Consistent Documentation	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
+delete	/devices/<deviceID>/providerauth	Consistent Documentation	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
+get	 /devices/<deviceID>/status 	Consistent Documentation	Returns current status of a device.
+get	 /devices/status 	Consistent Documentation	Returns a list of device statuses.
+put	 /devices/<deviceID>/status 	Consistent Documentation	Modifies current status of a device.
+get	 /devices/<deviceID>/certificate 	Consistent Documentation	Returns fields for a device's certificates.
+get	 /devices/<deviceID>/shares 	Consistent Documentation	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
+get	 /devices/<deviceID>/shares/<shareID> 	Consistent Documentation	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+post	 /devices/<deviceID>/shares 	Consistent Documentation	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
+get	 /users/<userID>/shares 	Consistent Documentation	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
+get	 /devicetypes/<deviceTypeID> 	Consistent Documentation	Returns the device type of a device.
+get	 /devicetypes/<deviceTypeID> 	Consistent Documentation	Returns a list of device types.
+get	 /devicetypes/<deviceTypeID>/manifests/latest/properties 	Consistent Documentation	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+get	 /devicetypes/<deviceTypeID>/manifests/<version>/properties 	Consistent Documentation	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+get	 /devicetypes/<deviceTypeID>/availablemanifestversions 	Consistent Documentation	Returns the available Manifest versions for a device type.
+get	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Consistent Documentation	Returns the status of an uploaded CSV.
+get	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Consistent Documentation	Returns the rows that were rejected in an uploaded CSV.
+get	 /devicetypes/<deviceTypeId>/whitelist 	Consistent Documentation	Returns the Approved List for a device type.
+post	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Consistent Documentation	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
+get	 /devicetypes/<deviceTypeID>/whitelist/status 	Consistent Documentation	Returns the enabled/disabled status of an Approved List.
+get	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Consistent Documentation	Returns details of an Approved List certificate.
+get	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Consistent Documentation	Returns a specified vendor device ID.
+post	 /messages 	Consistent Documentation	Sends a message.
+get	 /messages 	Consistent Documentation	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
+post	 /actions 	Consistent Documentation	Sends an Action to the specified device.
+get	 /actions 	Consistent Documentation	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
+get	 /messages/last 	Consistent Documentation	Returns the most recent normalized messages from a device or devices.
+get	 /messages/analytics/aggregates 	Consistent Documentation	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
+get	 /messages/analytics/histogram 	Consistent Documentation	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
+get	 /messages/presence 	Consistent Documentation	Returns presence of normalized messages.
+get	 /messages/snapshots 	Consistent Documentation	Returns last received value for all Manifest fields (aka device state) of a device or devices.
+get	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Consistent Documentation	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
+get	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Consistent Documentation	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
+get	 /pricing/devices/<deviceID>/pricingtiers 	Consistent Documentation	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
+post	 /messages/export 	Consistent Documentation	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
+get	 /messages/export/<exportID>/status 	Consistent Documentation	Returns the status of the messages export.
+get	 /messages/export/<exportID>/result 	Consistent Documentation	Returns the result of the export query. The result call returns the response in tgz format.
+get	 /messages/export/history 	Consistent Documentation	Returns a list of export queries that have been performed.
+post	 /subscriptions 	Consistent Documentation	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
+get	 /subscriptions 	Consistent Documentation	Returns all subscriptions for the current application. This call accepts application tokens as the access token.
+get	 /subscriptions/<subscriptionID> 	Consistent Documentation	Returns a subscription. This call accepts application and user tokens as the access token.
+post	 /subscriptions/<subscriptionID>/validate 	Consistent Documentation	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
+get	 /notifications/<notificationID>/messages 	Consistent Documentation	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
+get	 /rules/<ruleID> 	Consistent Documentation	Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+post	 /rules 	Consistent Documentation	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+put	 /rules/<ruleID> 	Consistent Documentation	Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+delete	/rules/<ruleID>	Consistent Documentation	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+get	 /rules/<ruleID>/executions 	Consistent Documentation	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+post	 /rules/<ruleID>/actions 	Consistent Documentation	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
+get	 /rules/<ruleID>/actions 	Consistent Documentation	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
+post	 /scenes 	Consistent Documentation	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
+put	 /scenes/<sceneID> 	Consistent Documentation	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
+get	 /scenes/<sceneID> 	Consistent Documentation	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+delete	/scenes/<sceneID>	Consistent Documentation	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+post	 /scenes/<sceneID> 	Consistent Documentation	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+post	 /ml/models 	Consistent Documentation	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
+get	 /ml/models/<modelID> 	Consistent Documentation	Returns a model.

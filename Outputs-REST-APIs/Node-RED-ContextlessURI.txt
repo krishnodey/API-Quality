@@ -1,18 +1,18 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+ /auth/revoke 	 Contextless Resource Names
+ /flow/:id 	 Contextless Resource Names
+ /flow/:id 	 Contextless Resource Names
+ /flow/:id 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 15
+Count: 11
  /auth/login 	 Contextual Resource Names
  /auth/token 	 Contextual Resource Names
- /auth/revoke 	 Contextual Resource Names
  /settings 	 Contextual Resource Names
  /flows 	 Contextual Resource Names
  /flows 	 Contextual Resource Names
  /flow 	 Contextual Resource Names
- /flow/:id 	 Contextual Resource Names
- /flow/:id 	 Contextual Resource Names
- /flow/:id 	 Contextual Resource Names
  /nodes 	 Contextual Resource Names
  /nodes 	 Contextual Resource Names
  /nodes/:module 	 Contextual Resource Names

@@ -703,37 +703,42 @@ class ApiAnalyzer:
 
         for method, uri, documentation in zip(http_method, nodes, description):
             #documentation = documentation.strip()
+            method = method.lower().strip()
+            print(method)
             words = preprocess_data(documentation)
+            print(words)
             #uri = clean.get_uri_nodes(node)
             #print(words)
             #print(uri)
             
-            if method.lower in get:
-                if words[0].lower().strip() in get:
+            if method in "get":
+                #if any(item in get for item in words):
+
+                if any(item in get for item in words):
                     inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
                     inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
                     p_count += 1
 
-            elif method.lower in delete:
-                if words[0].lower().strip() in delete:
+            elif method in "delete":
+                if any(item in delete for item in words):
                     inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
                     inconsistent_documentation_P.append(f"{method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
                     p_count += 1
 
-            elif method.lower in put:
-                if words[0].lower().strip() in put:
+            elif method in "put":
+                if any(item in put for item in words):
                     inconsistent_documentation_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
                     inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
 
-            elif method.lower in post:
-                if words[0].lower().strip() in post:
+            elif method in "post":
+                if any(item in post for item in words):
                     inconsistent_documentation_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
