@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 20
+/v18.0/{album-id}	Verbless End-point	
+/{group_id}/albums	Verbless End-point	
+/v18.0/{album-id}/comments	Verbless End-point	
+/v18.0/{album-id}/likes	Verbless End-point	
+/v18.0/{album-id}/photos	Verbless End-point	
+/{album_id}/photos	Verbless End-point	
+/v18.0/{album-id}/picture	Verbless End-point	
+/v18.0/{app-link-host-id}	Verbless End-point	
+/app/app_link_hosts	Verbless End-point	
+/v18.0/{app-link-host-id}	Verbless End-point	
+/v18.0/{app-link-host-id}	Verbless End-point	
+/v18.0/{application-id}	Verbless End-point	
+/{business_id}/owned_apps	Verbless End-point	
+/v18.0/{application-id}/accounts	Verbless End-point	
+/{application_id}/accounts	Verbless End-point	
+/v18.0/{application-id}/ad_placement_groups	Verbless End-point	
+/v18.0/{application-id}/adnetworkanalytics_results	Verbless End-point	
+/v18.0/{application-id}/aem_attribution	Verbless End-point	
+/v18.0/{application-id}/aem_conversion_configs	Verbless End-point	
+/v18.0/{application-id}/aem_conversion_filter	Verbless End-point	

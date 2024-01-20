@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 2
+/{business_id}/owned_apps	 Non-descriptive End-point
+/v18.0/{application-id}/aem_conversion_configs	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 18
+/v18.0/{album-id}	 Self-descriptive End-point
+/{group_id}/albums	 Self-descriptive End-point
+/v18.0/{album-id}/comments	 Self-descriptive End-point
+/v18.0/{album-id}/likes	 Self-descriptive End-point
+/v18.0/{album-id}/photos	 Self-descriptive End-point
+/{album_id}/photos	 Self-descriptive End-point
+/v18.0/{album-id}/picture	 Self-descriptive End-point
+/v18.0/{app-link-host-id}	 Self-descriptive End-point
+/app/app_link_hosts	 Self-descriptive End-point
+/v18.0/{app-link-host-id}	 Self-descriptive End-point
+/v18.0/{app-link-host-id}	 Self-descriptive End-point
+/v18.0/{application-id}	 Self-descriptive End-point
+/v18.0/{application-id}/accounts	 Self-descriptive End-point
+/{application_id}/accounts	 Self-descriptive End-point
+/v18.0/{application-id}/ad_placement_groups	 Self-descriptive End-point
+/v18.0/{application-id}/adnetworkanalytics_results	 Self-descriptive End-point
+/v18.0/{application-id}/aem_attribution	 Self-descriptive End-point
+/v18.0/{application-id}/aem_conversion_filter	 Self-descriptive End-point

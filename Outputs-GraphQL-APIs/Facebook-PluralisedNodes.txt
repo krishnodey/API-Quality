@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 2
+POST 	/v18.0/{app-link-host-id}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/{business_id}/owned_apps	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 18
+GET 	/v18.0/{album-id}	 regular methods.
+POST 	/{group_id}/albums	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v18.0/{album-id}/comments	 regular methods.
+GET 	/v18.0/{album-id}/likes	 regular methods.
+GET 	/v18.0/{album-id}/photos	 regular methods.
+POST	/{album_id}/photos	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v18.0/{album-id}/picture	 regular methods.
+GET 	/v18.0/{app-link-host-id}	 regular methods.
+POST 	/app/app_link_hosts	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELET	/v18.0/{app-link-host-id}	 regular methods.
+GET	/v18.0/{application-id}	 regular methods.
+GET 	/v18.0/{application-id}/accounts	 regular methods.
+POST 	/{application_id}/accounts	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v18.0/{application-id}/ad_placement_groups	 regular methods.
+GET 	/v18.0/{application-id}/adnetworkanalytics_results	 regular methods.
+GE	/v18.0/{application-id}/aem_attribution	 regular methods.
+GET	/v18.0/{application-id}/aem_conversion_configs	 regular methods.
+GET 	/v18.0/{application-id}/aem_conversion_filter	 regular methods.

@@ -393,7 +393,7 @@ class ApiAnalyzer:
             #print(f"Total Average for All Topics: {topic_avg}\n")
             #for avg in topic_avg:
             #print(max(topic_avg))
-            if max(topic_avg) > 0:
+            if max(topic_avg) > 0.3:
                 #print("contextual")
                 p_count = p_count + 1
                 contextual_P.append(f"{origianl_node}\t {P}")
@@ -645,7 +645,7 @@ class ApiAnalyzer:
             #print(f"Total Average for All Topics: {topic_avg}\n")
             #for avg in topic_avg:
             #print(max(topic_avg))
-            if max(topic_avg) > 0:
+            if max(topic_avg) > 0.3:
                 #print("cohisive")
                 p_count = p_count + 1
                 less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des.strip()}")
@@ -707,9 +707,7 @@ class ApiAnalyzer:
             #uri = clean.get_uri_nodes(node)
             #print(words)
             #print(uri)
-            #keys = re.split('[-:]', key)
-            #keys = [k.strip().lower() for k in keys]
-
+            
             if method.lower in get:
                 if words[0].lower().strip() in get:
                     inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")

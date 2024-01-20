@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+/account/set_profile_photo	Tidy End-point	
+/auth/token/from_oauth1	Tidy End-point	
+/auth/token/revoke	Tidy End-point	
+/check/app	Tidy End-point	
+/check/user	Tidy End-point	
+/contacts/delete_manual_contacts	Tidy End-point	
+/contacts/delete_manual_contacts_batch	Tidy End-point	
+/file_properties/properties/add	Tidy End-point	
+/file_properties/properties/overwrite	Tidy End-point	
+/file_properties/properties/search/continue	Tidy End-point	
+/file_properties/templates/remove_for_user	Tidy End-point	
+/file_properties/templates/update_for_user	Tidy End-point	
+/file_properties/properties/update	Tidy End-point	
+/file_requests/count	Tidy End-point	
+/file_requests/create	Tidy End-point	
+/file_requests/delete	Tidy End-point	
+/file_requests/delete_all_closed	Tidy End-point	
+/file_requests/list/continue	Tidy End-point	
+/files/copy_batch_v2	Tidy End-point	
+/files/copy_batch/check_v2	Tidy End-point	
+/files/copy_reference/get	Tidy End-point	
+/files/copy_reference/save	Tidy End-point	
+/files/create_folder_batch	Tidy End-point	
+/files/create_folder_batch/check	Tidy End-point	
+/files/delete_batch/check	Tidy End-point	
+/files/download_zip	Tidy End-point	
+/files/get_file_lock_batch	Tidy End-point	
+/files/get_temporary_upload_link	Tidy End-point	
+/files/list_folder/get_latest_cursor	Tidy End-point	
+/files/move_batch/check_v2	Tidy End-point	
+/files/save_url/check_job_status	Tidy End-point	
+/files/upload_session/append_v2	Tidy End-point	

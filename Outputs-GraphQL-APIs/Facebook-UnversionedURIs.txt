@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 5
+/{group_id}/albums [No version found.]
+/{album_id}/photos [No version found.]
+/app/app_link_hosts [No version found.]
+/{business_id}/owned_apps [No version found.]
+/{application_id}/accounts [No version found.]
+
+***Patterns*** 
+Count: 15
+/v18.0/{album-id} [Version found.]
+/v18.0/{album-id}/comments [Version found.]
+/v18.0/{album-id}/likes [Version found.]
+/v18.0/{album-id}/photos [Version found.]
+/v18.0/{album-id}/picture [Version found.]
+/v18.0/{app-link-host-id} [Version found.]
+/v18.0/{app-link-host-id} [Version found.]
+/v18.0/{app-link-host-id} [Version found.]
+/v18.0/{application-id} [Version found.]
+/v18.0/{application-id}/accounts [Version found.]
+/v18.0/{application-id}/ad_placement_groups [Version found.]
+/v18.0/{application-id}/adnetworkanalytics_results [Version found.]
+/v18.0/{application-id}/aem_attribution [Version found.]
+/v18.0/{application-id}/aem_conversion_configs [Version found.]
+/v18.0/{application-id}/aem_conversion_filter [Version found.]

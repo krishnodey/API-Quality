@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 13
+/v18.0/{album-id}	Non-standard End-point	 [black space/tab found] 
+/{group_id}/albums	Non-standard End-point	 [black space/tab found] 
+/v18.0/{album-id}/likes	Non-standard End-point	 [black space/tab found] 
+/v18.0/{album-id}/photos	Non-standard End-point	 [black space/tab found] 
+/{album_id}/photos	Non-standard End-point	 [black space/tab found] 
+/v18.0/{album-id}/picture	Non-standard End-point	 [black space/tab found] 
+/v18.0/{app-link-host-id}	Non-standard End-point	 [black space/tab found] 
+/v18.0/{application-id}	Non-standard End-point	 [black space/tab found] 
+/{business_id}/owned_apps	Non-standard End-point	 [black space/tab found] 
+/v18.0/{application-id}/accounts	Non-standard End-point	 [black space/tab found] 
+/{application_id}/accounts	Non-standard End-point	 [black space/tab found] 
+/v18.0/{application-id}/ad_placement_groups	Non-standard End-point	 [black space/tab found] 
+/v18.0/{application-id}/adnetworkanalytics_results	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 7
+/v18.0/{album-id}/comments	Standard End-point	
+/app/app_link_hosts	Standard End-point	
+/v18.0/{app-link-host-id}	Standard End-point	
+/v18.0/{app-link-host-id}	Standard End-point	
+/v18.0/{application-id}/aem_attribution	Standard End-point	
+/v18.0/{application-id}/aem_conversion_configs	Standard End-point	
+/v18.0/{application-id}/aem_conversion_filter	Standard End-point	
