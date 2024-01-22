@@ -1,14 +1,11 @@
 ***Anti-Pattern*** 
-Count: 6
--/admin/oauth/access_scopes.json	Non-pertinent Documentation	Retrieves a list of access scopes associated to the access token.
+Count: 2
 -/storefront_access_tokens.json	Non-pertinent Documentation	Creates a new StorefrontAccessToken
--/recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	Non-pertinent Documentation	Updates the capped amount of a recurring application charge
--/price_rules/{price_rule_id}/batch.json	Non-pertinent Documentation	Creates a discount code creation job
--/price_rules/{price_rule_id}/batch/{batch_id}.json	Non-pertinent Documentation	Retrieves a discount code creation job
 -/price_rules/{price_rule_id}.json	Non-pertinent Documentation	Remove an existing PriceRule
 
 ***Patterns*** 
-Count: 65
+Count: 69
+-/admin/oauth/access_scopes.json	Pertinent Documentation	Retrieves a list of access scopes associated to the access token.
 -/storefront_access_tokens/{storefront_access_token_id}.json	Pertinent Documentation	Deletes an existing storefront access token
 -/storefront_access_tokens.json	Pertinent Documentation	Retrieves a list of storefront access tokens that have been issued
 -/reports.json	Pertinent Documentation	Retrieves a list of reports
@@ -26,6 +23,7 @@ Count: 65
 -/recurring_application_charges/{recurring_application_charge_id}.json	Pertinent Documentation	Retrieves a single charge
 -/recurring_application_charges.json	Pertinent Documentation	Retrieves a list of recurring application charges
 -/recurring_application_charges/{recurring_application_charge_id}.json	Pertinent Documentation	Cancels a recurring application charge
+-/recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	Pertinent Documentation	Updates the capped amount of a recurring application charge
 -/customers.json	Pertinent Documentation	Retrieves a list of customers
 -/customers/search.json?query=Bob country:United States	Pertinent Documentation	Searches for customers that match a supplied query
 -/customers/{customer_id}.json	Pertinent Documentation	Retrieves a single customer
@@ -50,6 +48,8 @@ Count: 65
 -/discount_codes/lookup.json?code=SUMMERSALE10OFF	Pertinent Documentation	Retrieves the location of a discount code
 -/discount_codes/count.json	Pertinent Documentation	Retrieves a count of discount codes for a shop
 -/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	Pertinent Documentation	Deletes a discount code
+-/price_rules/{price_rule_id}/batch.json	Pertinent Documentation	Creates a discount code creation job
+-/price_rules/{price_rule_id}/batch/{batch_id}.json	Pertinent Documentation	Retrieves a discount code creation job
 -/price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json	Pertinent Documentation	Retrieves a list of discount codes for a discount code creation job
 -/price_rules.json	Pertinent Documentation	Creates a price rule
 -/price_rules/{price_rule_id}.json	Pertinent Documentation	Updates an existing a price rule

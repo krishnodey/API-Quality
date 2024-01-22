@@ -1,55 +1,18 @@
 ***Anti-Pattern*** 
-Count: 47
+Count: 10
  /queries/rateLimit 	 Contextless Resource Names
+ /queries/relay 	 Contextless Resource Names
  /queries/sponsorables 	 Contextless Resource Names
- /mutations/abortQueuedMigrations 	 Contextless Resource Names
- /mutations/addDiscussionPollVote 	 Contextless Resource Names
  /mutations/addLabelsToLabelable 	 Contextless Resource Names
- /mutations/addProjectV2ItemById 	 Contextless Resource Names
- /mutations/addStar 	 Contextless Resource Names
- /mutations/addUpvote 	 Contextless Resource Names
- /mutations/cancelSponsorship 	 Contextless Resource Names
  /mutations/clearLabelsFromLabelable 	 Contextless Resource Names
- /mutations/closeIssue 	 Contextless Resource Names
- /mutations/closePullRequest 	 Contextless Resource Names
- /mutations/convertPullRequestToDraft 	 Contextless Resource Names
- /mutations/createRef 	 Contextless Resource Names
- /mutations/createSponsorsTier 	 Contextless Resource Names
- /mutations/deleteRef 	 Contextless Resource Names
- /mutations/dequeuePullRequest 	 Contextless Resource Names
- /mutations/dismissPullRequestReview 	 Contextless Resource Names
- /mutations/enqueuePullRequest 	 Contextless Resource Names
- /mutations/grantEnterpriseOrganizationsMigratorRole 	 Contextless Resource Names
  /mutations/grantMigratorRole 	 Contextless Resource Names
- /mutations/markPullRequestReadyForReview 	 Contextless Resource Names
- /mutations/moveProjectCard 	 Contextless Resource Names
- /mutations/moveProjectColumn 	 Contextless Resource Names
- /mutations/pinIssue 	 Contextless Resource Names
- /mutations/publishSponsorsTier 	 Contextless Resource Names
  /mutations/removeLabelsFromLabelable 	 Contextless Resource Names
- /mutations/removeStar 	 Contextless Resource Names
- /mutations/reopenDiscussion 	 Contextless Resource Names
- /mutations/reopenIssue 	 Contextless Resource Names
- /mutations/reopenPullRequest 	 Contextless Resource Names
  /mutations/rerequestCheckSuite 	 Contextless Resource Names
- /mutations/retireSponsorsTier 	 Contextless Resource Names
- /mutations/revokeEnterpriseOrganizationsMigratorRole 	 Contextless Resource Names
  /mutations/revokeMigratorRole 	 Contextless Resource Names
- /mutations/unarchiveProjectV2Item 	 Contextless Resource Names
- /mutations/unarchiveRepository 	 Contextless Resource Names
- /mutations/unmarkDiscussionCommentAsAnswer 	 Contextless Resource Names
  /mutations/unmarkFileAsViewed 	 Contextless Resource Names
- /mutations/unmarkIssueAsDuplicate 	 Contextless Resource Names
- /mutations/unminimizeComment 	 Contextless Resource Names
- /mutations/unpinIssue 	 Contextless Resource Names
- /mutations/unresolveReviewThread 	 Contextless Resource Names
- /mutations/updateEnterpriseMembersCanMakePurchasesSetting 	 Contextless Resource Names
- /mutations/updatePatreonSponsorability 	 Contextless Resource Names
- /mutations/updateRef 	 Contextless Resource Names
- /mutations/updateRefs 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 209
+Count: 246
  /queries/codeOfConduct 	 Contextual Resource Names
  /queries/codesOfConduct 	 Contextual Resource Names
  /queries/enterprise 	 Contextual Resource Names
@@ -65,7 +28,6 @@ Count: 209
  /queries/node 	 Contextual Resource Names
  /queries/nodes 	 Contextual Resource Names
  /queries/organization 	 Contextual Resource Names
- /queries/relay 	 Contextual Resource Names
  /queries/repository 	 Contextual Resource Names
  /queries/repositoryOwner 	 Contextual Resource Names
  /queries/resource 	 Contextual Resource Names
@@ -76,34 +38,43 @@ Count: 209
  /queries/topic 	 Contextual Resource Names
  /queries/user 	 Contextual Resource Names
  /queries/viewer 	 Contextual Resource Names
+ /mutations/abortQueuedMigrations 	 Contextual Resource Names
  /mutations/abortRepositoryMigration 	 Contextual Resource Names
  /mutations/acceptEnterpriseAdministratorInvitation 	 Contextual Resource Names
  /mutations/acceptTopicSuggestion 	 Contextual Resource Names
  /mutations/addAssigneesToAssignable 	 Contextual Resource Names
  /mutations/addComment 	 Contextual Resource Names
  /mutations/addDiscussionComment 	 Contextual Resource Names
+ /mutations/addDiscussionPollVote 	 Contextual Resource Names
  /mutations/addEnterpriseOrganizationMember 	 Contextual Resource Names
  /mutations/addEnterpriseSupportEntitlement 	 Contextual Resource Names
  /mutations/addProjectCard 	 Contextual Resource Names
  /mutations/addProjectColumn 	 Contextual Resource Names
  /mutations/addProjectV2DraftIssue 	 Contextual Resource Names
+ /mutations/addProjectV2ItemById 	 Contextual Resource Names
  /mutations/addPullRequestReview 	 Contextual Resource Names
  /mutations/addPullRequestReviewComment 	 Contextual Resource Names
  /mutations/addPullRequestReviewThread 	 Contextual Resource Names
  /mutations/addPullRequestReviewThreadReply 	 Contextual Resource Names
  /mutations/addReaction 	 Contextual Resource Names
+ /mutations/addStar 	 Contextual Resource Names
+ /mutations/addUpvote 	 Contextual Resource Names
  /mutations/addVerifiableDomain 	 Contextual Resource Names
  /mutations/approveDeployments 	 Contextual Resource Names
  /mutations/approveVerifiableDomain 	 Contextual Resource Names
  /mutations/archiveProjectV2Item 	 Contextual Resource Names
  /mutations/archiveRepository 	 Contextual Resource Names
  /mutations/cancelEnterpriseAdminInvitation 	 Contextual Resource Names
+ /mutations/cancelSponsorship 	 Contextual Resource Names
  /mutations/changeUserStatus 	 Contextual Resource Names
  /mutations/clearProjectV2ItemFieldValue 	 Contextual Resource Names
  /mutations/cloneProject 	 Contextual Resource Names
  /mutations/cloneTemplateRepository 	 Contextual Resource Names
  /mutations/closeDiscussion 	 Contextual Resource Names
+ /mutations/closeIssue 	 Contextual Resource Names
+ /mutations/closePullRequest 	 Contextual Resource Names
  /mutations/convertProjectCardNoteToIssue 	 Contextual Resource Names
+ /mutations/convertPullRequestToDraft 	 Contextual Resource Names
  /mutations/copyProjectV2 	 Contextual Resource Names
  /mutations/createAttributionInvitation 	 Contextual Resource Names
  /mutations/createBranchProtectionRule 	 Contextual Resource Names
@@ -124,9 +95,11 @@ Count: 209
  /mutations/createProjectV2 	 Contextual Resource Names
  /mutations/createProjectV2Field 	 Contextual Resource Names
  /mutations/createPullRequest 	 Contextual Resource Names
+ /mutations/createRef 	 Contextual Resource Names
  /mutations/createRepository 	 Contextual Resource Names
  /mutations/createRepositoryRuleset 	 Contextual Resource Names
  /mutations/createSponsorsListing 	 Contextual Resource Names
+ /mutations/createSponsorsTier 	 Contextual Resource Names
  /mutations/createSponsorship 	 Contextual Resource Names
  /mutations/createSponsorships 	 Contextual Resource Names
  /mutations/createTeamDiscussion 	 Contextual Resource Names
@@ -152,15 +125,20 @@ Count: 209
  /mutations/deleteProjectV2Workflow 	 Contextual Resource Names
  /mutations/deletePullRequestReview 	 Contextual Resource Names
  /mutations/deletePullRequestReviewComment 	 Contextual Resource Names
+ /mutations/deleteRef 	 Contextual Resource Names
  /mutations/deleteRepositoryRuleset 	 Contextual Resource Names
  /mutations/deleteTeamDiscussion 	 Contextual Resource Names
  /mutations/deleteTeamDiscussionComment 	 Contextual Resource Names
  /mutations/deleteVerifiableDomain 	 Contextual Resource Names
+ /mutations/dequeuePullRequest 	 Contextual Resource Names
  /mutations/disablePullRequestAutoMerge 	 Contextual Resource Names
+ /mutations/dismissPullRequestReview 	 Contextual Resource Names
  /mutations/dismissRepositoryVulnerabilityAlert 	 Contextual Resource Names
  /mutations/enablePullRequestAutoMerge 	 Contextual Resource Names
+ /mutations/enqueuePullRequest 	 Contextual Resource Names
  /mutations/followOrganization 	 Contextual Resource Names
  /mutations/followUser 	 Contextual Resource Names
+ /mutations/grantEnterpriseOrganizationsMigratorRole 	 Contextual Resource Names
  /mutations/importProject 	 Contextual Resource Names
  /mutations/inviteEnterpriseAdmin 	 Contextual Resource Names
  /mutations/linkProjectV2ToRepository 	 Contextual Resource Names
@@ -170,9 +148,14 @@ Count: 209
  /mutations/markDiscussionCommentAsAnswer 	 Contextual Resource Names
  /mutations/markFileAsViewed 	 Contextual Resource Names
  /mutations/markProjectV2AsTemplate 	 Contextual Resource Names
+ /mutations/markPullRequestReadyForReview 	 Contextual Resource Names
  /mutations/mergeBranch 	 Contextual Resource Names
  /mutations/mergePullRequest 	 Contextual Resource Names
  /mutations/minimizeComment 	 Contextual Resource Names
+ /mutations/moveProjectCard 	 Contextual Resource Names
+ /mutations/moveProjectColumn 	 Contextual Resource Names
+ /mutations/pinIssue 	 Contextual Resource Names
+ /mutations/publishSponsorsTier 	 Contextual Resource Names
  /mutations/regenerateEnterpriseIdentityProviderRecoveryCodes 	 Contextual Resource Names
  /mutations/regenerateVerifiableDomainToken 	 Contextual Resource Names
  /mutations/rejectDeployments 	 Contextual Resource Names
@@ -184,10 +167,16 @@ Count: 209
  /mutations/removeEnterpriseSupportEntitlement 	 Contextual Resource Names
  /mutations/removeOutsideCollaborator 	 Contextual Resource Names
  /mutations/removeReaction 	 Contextual Resource Names
+ /mutations/removeStar 	 Contextual Resource Names
  /mutations/removeUpvote 	 Contextual Resource Names
+ /mutations/reopenDiscussion 	 Contextual Resource Names
+ /mutations/reopenIssue 	 Contextual Resource Names
+ /mutations/reopenPullRequest 	 Contextual Resource Names
  /mutations/requestReviews 	 Contextual Resource Names
  /mutations/resolveReviewThread 	 Contextual Resource Names
+ /mutations/retireSponsorsTier 	 Contextual Resource Names
  /mutations/revertPullRequest 	 Contextual Resource Names
+ /mutations/revokeEnterpriseOrganizationsMigratorRole 	 Contextual Resource Names
  /mutations/setEnterpriseIdentityProvider 	 Contextual Resource Names
  /mutations/setOrganizationInteractionLimit 	 Contextual Resource Names
  /mutations/setRepositoryInteractionLimit 	 Contextual Resource Names
@@ -197,13 +186,20 @@ Count: 209
  /mutations/submitPullRequestReview 	 Contextual Resource Names
  /mutations/transferEnterpriseOrganization 	 Contextual Resource Names
  /mutations/transferIssue 	 Contextual Resource Names
+ /mutations/unarchiveProjectV2Item 	 Contextual Resource Names
+ /mutations/unarchiveRepository 	 Contextual Resource Names
  /mutations/unfollowOrganization 	 Contextual Resource Names
  /mutations/unfollowUser 	 Contextual Resource Names
  /mutations/unlinkProjectV2FromRepository 	 Contextual Resource Names
  /mutations/unlinkProjectV2FromTeam 	 Contextual Resource Names
  /mutations/unlinkRepositoryFromProject 	 Contextual Resource Names
  /mutations/unlockLockable 	 Contextual Resource Names
+ /mutations/unmarkDiscussionCommentAsAnswer 	 Contextual Resource Names
+ /mutations/unmarkIssueAsDuplicate 	 Contextual Resource Names
  /mutations/unmarkProjectV2AsTemplate 	 Contextual Resource Names
+ /mutations/unminimizeComment 	 Contextual Resource Names
+ /mutations/unpinIssue 	 Contextual Resource Names
+ /mutations/unresolveReviewThread 	 Contextual Resource Names
  /mutations/unsubscribeFromNotifications 	 Contextual Resource Names
  /mutations/updateBranchProtectionRule 	 Contextual Resource Names
  /mutations/updateCheckRun 	 Contextual Resource Names
@@ -218,6 +214,7 @@ Count: 209
  /mutations/updateEnterpriseMembersCanDeleteIssuesSetting 	 Contextual Resource Names
  /mutations/updateEnterpriseMembersCanDeleteRepositoriesSetting 	 Contextual Resource Names
  /mutations/updateEnterpriseMembersCanInviteCollaboratorsSetting 	 Contextual Resource Names
+ /mutations/updateEnterpriseMembersCanMakePurchasesSetting 	 Contextual Resource Names
  /mutations/updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	 Contextual Resource Names
  /mutations/updateEnterpriseMembersCanViewDependencyInsightsSetting 	 Contextual Resource Names
  /mutations/updateEnterpriseOrganizationProjectsSetting 	 Contextual Resource Names
@@ -236,6 +233,7 @@ Count: 209
  /mutations/updateNotificationRestrictionSetting 	 Contextual Resource Names
  /mutations/updateOrganizationAllowPrivateRepositoryForkingSetting 	 Contextual Resource Names
  /mutations/updateOrganizationWebCommitSignoffSetting 	 Contextual Resource Names
+ /mutations/updatePatreonSponsorability 	 Contextual Resource Names
  /mutations/updateProject 	 Contextual Resource Names
  /mutations/updateProjectCard 	 Contextual Resource Names
  /mutations/updateProjectColumn 	 Contextual Resource Names
@@ -248,6 +246,8 @@ Count: 209
  /mutations/updatePullRequestBranch 	 Contextual Resource Names
  /mutations/updatePullRequestReview 	 Contextual Resource Names
  /mutations/updatePullRequestReviewComment 	 Contextual Resource Names
+ /mutations/updateRef 	 Contextual Resource Names
+ /mutations/updateRefs 	 Contextual Resource Names
  /mutations/updateRepository 	 Contextual Resource Names
  /mutations/updateRepositoryRuleset 	 Contextual Resource Names
  /mutations/updateRepositoryWebCommitSignoffSetting 	 Contextual Resource Names

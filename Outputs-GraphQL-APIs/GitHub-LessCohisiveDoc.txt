@@ -1,14 +1,12 @@
 ***Anti-Pattern*** 
-Count: 6
+Count: 4
 -/queries/meta	Non-pertinent Documentation	Return information about the GitHub instance.
 -/queries/sponsorables	Non-pertinent Documentation	Users and organizations who can be sponsored via GitHub Sponsors.
--/mutations/archiveProjectV2Item	Non-pertinent Documentation	Archives a ProjectV2Item.
 -/mutations/createAttributionInvitation	Non-pertinent Documentation	Invites a user to claim reattributable data.
 -/mutations/unarchiveProjectV2Item	Non-pertinent Documentation	Unarchives a ProjectV2Item.
--/mutations/updatePatreonSponsorability	Non-pertinent Documentation	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
 
 ***Patterns*** 
-Count: 250
+Count: 252
 -/queries/codeOfConduct	Pertinent Documentation	Look up a code of conduct by its key.
 -/queries/codesOfConduct	Pertinent Documentation	Look up a code of conduct by its key.
 -/queries/enterprise	Pertinent Documentation	Look up an enterprise by URL slug.
@@ -60,6 +58,7 @@ Count: 250
 -/mutations/addVerifiableDomain	Pertinent Documentation	Adds a verifiable domain to an owning account.
 -/mutations/approveDeployments	Pertinent Documentation	Approve all pending deployments under one or more environments.
 -/mutations/approveVerifiableDomain	Pertinent Documentation	Approve a verifiable domain for notification delivery.
+-/mutations/archiveProjectV2Item	Pertinent Documentation	Archives a ProjectV2Item.
 -/mutations/archiveRepository	Pertinent Documentation	Marks a repository as archived.
 -/mutations/cancelEnterpriseAdminInvitation	Pertinent Documentation	Cancels a pending invitation for an administrator to join an enterprise.
 -/mutations/cancelSponsorship	Pertinent Documentation	Cancel an active sponsorship.
@@ -234,6 +233,7 @@ Count: 250
 -/mutations/updateNotificationRestrictionSetting	Pertinent Documentation	Update the setting to restrict notifications to only verified or approved domains available to an owner.
 -/mutations/updateOrganizationAllowPrivateRepositoryForkingSetting	Pertinent Documentation	Sets whether private repository forks are enabled for an organization.
 -/mutations/updateOrganizationWebCommitSignoffSetting	Pertinent Documentation	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+-/mutations/updatePatreonSponsorability	Pertinent Documentation	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
 -/mutations/updateProject	Pertinent Documentation	Updates an existing project.
 -/mutations/updateProjectCard	Pertinent Documentation	Updates an existing project card.
 -/mutations/updateProjectColumn	Pertinent Documentation	Updates an existing project column.

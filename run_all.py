@@ -95,8 +95,9 @@ def run(selected, uri_path, base_path):
 
 
 
-time = 0
-base_path = ["REST-APIs", "GraphQL-APIs"]
+total_time = 0
+#base_path = ["REST-APIs", "GraphQL-APIs"]
+base_path = ["GraphQL-APIs"]
 for api in base_path:
     print(f"Detecting (Anti)Pattern for {api}")
     api_path = f"{api.strip()}/APIList.txt"
@@ -110,7 +111,7 @@ for api in base_path:
         run(api_name, path, api)
         elapsed_time = time.time() - start_time
         print(f"\nDetecting Done ----> {api_name}. Time taken: {elapsed_time:.2f} seconds\n")
-        time += elapsed_time
+        total_time += elapsed_time
         #break
-    print("Total Detection Time------->",time)
+    print("Total Detection Time------->",total_time/60,"Minutes")
 

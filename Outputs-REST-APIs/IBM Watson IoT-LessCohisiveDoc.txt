@@ -1,19 +1,11 @@
 ***Anti-Pattern*** 
-Count: 11
--/bulk/devices	Non-pertinent Documentation	List devices. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'.
--/device/types/{typeId}/devices/{deviceId}/devices	Non-pertinent Documentation	Get devices that are connected through the gateway specified by id {deviceId}. Gets information on devices that are connected through the specified gateway (typeId, deviceId) to Watson IoT Platform.
+Count: 2
 -/device/types/{typeId}/devices/{deviceId}/edgestatus	Non-pertinent Documentation	Return the status of containers from an edge node. Return the status of containers from an edge node.
 -/usage/data-traffic	Non-pertinent Documentation	Retrieve the amount of data used. Retrieve the amount of data used.
--/config/lec	Non-pertinent Documentation	Retrieve the Last Event Cache configuration for your organization. Retrieves the current configuration for the Last Event Cache (LEC) feature for your organization. You can use this endpoint to determine whether or not the LEC feature is currently enabled, along with how many days cached device events will persist for before being removed from the cache.
--/config/lec	Non-pertinent Documentation	Update the Last Event Cache configuration for your organization. Updates the current configuration for the Last Event Cache (LEC) feature for your organization. You can use this endpoint to control whether or not the LEC feature is currently enabled, along with how many days cached device events will persist for before being removed from the cache.
--/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Non-pertinent Documentation	Get last event for a specific event id for a specific device.
--/device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	Non-pertinent Documentation	Retrieve current meteorological observations for the location associated with your device.
--/s2s/services/{serviceUuid}	Non-pertinent Documentation	Get the details of a service. Retrieve the service with the specified uuid.
--/s2s/services/{serviceUuid}	Non-pertinent Documentation	Update an external service. Updates the external service with the specified id. The following properties can be updated: name description credentials. Note that if the description field is omitted from the body of the update, then any existing description will be removed from the service.
--/s2s/services/{serviceUuid}	Non-pertinent Documentation	Delete an external service. Deletes the external service with the specified id from the organization in the Watson IoT Platform. Please note the the delete will fail if the service is being referenced by another object in the organization, for example, a Historian Connector resource.
 
 ***Patterns*** 
-Count: 46
+Count: 55
+-/bulk/devices	Pertinent Documentation	List devices. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'.
 -/bulk/devices/add	Pertinent Documentation	Register multiple new devices. Register multiple new devices, each request can contain a maximum of 512 kB. The response body will contain the generated authentication tokens for all devices. You must make sure to record these tokens when processing the response. We are not able to retrieve lost authentication tokens.
 -/bulk/devices/remove	Pertinent Documentation	Delete multiple devices. Delete multiple devices, each request can contain a maximum of 512 kB.
 -/device/types	Pertinent Documentation	List device types. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'):
@@ -26,6 +18,7 @@ Count: 46
 -/device/types/{typeId}/devices/{deviceId}	Pertinent Documentation	Get device. Gets device details.
 -/device/types/{typeId}/devices/{deviceId}	Pertinent Documentation	Update device. Updates a device.
 -/device/types/{typeId}/devices/{deviceId}	Pertinent Documentation	Remove device. Removes a device.
+-/device/types/{typeId}/devices/{deviceId}/devices	Pertinent Documentation	Get devices that are connected through the gateway specified by id {deviceId}. Gets information on devices that are connected through the specified gateway (typeId, deviceId) to Watson IoT Platform.
 -/device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	Pertinent Documentation	Return the status of containers from an edge node filtering by service. Return the status of containers from an edge node filtering by service.
 -/logs/connection	Pertinent Documentation	List device connection log events. List connection log events for a device to aid in diagnosing connectivity problems. The entries record successful connection, unsuccessful connection attempts, intentional disconnection and server-initiated disconnection.
 -/service-status	Pertinent Documentation	Retrieve the status of services for an organization. Retrieve the organization-specific status of each of the services offered by Watson IoT Platform.
@@ -50,13 +43,20 @@ Count: 46
 -/mgmt/custom/bundle/{bundleId}	Pertinent Documentation	Get a specific registered device management extension
 -/mgmt/custom/bundle/{bundleId}	Pertinent Documentation	Update an existing device management extension
 -/mgmt/custom/bundle/{bundleId}	Pertinent Documentation	Delete a device management extension
+-/config/lec	Pertinent Documentation	Retrieve the Last Event Cache configuration for your organization. Retrieves the current configuration for the Last Event Cache (LEC) feature for your organization. You can use this endpoint to determine whether or not the LEC feature is currently enabled, along with how many days cached device events will persist for before being removed from the cache.
+-/config/lec	Pertinent Documentation	Update the Last Event Cache configuration for your organization. Updates the current configuration for the Last Event Cache (LEC) feature for your organization. You can use this endpoint to control whether or not the LEC feature is currently enabled, along with how many days cached device events will persist for before being removed from the cache.
+-/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Pertinent Documentation	Get last event for a specific event id for a specific device.
 -/device/types/{deviceType}/devices/{deviceId}/events	Pertinent Documentation	Get all last events for a specific device.
 -/device/types/{typeId}/devices/{deviceId}/location	Pertinent Documentation	Get device location information. Gets location information for a device.
 -/device/types/{typeId}/devices/{deviceId}/location	Pertinent Documentation	Update device location information. Updates the location information for a device. If no date is supplied, the entry is added with the current date and time.
+-/device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	Pertinent Documentation	Retrieve current meteorological observations for the location associated with your device.
 -/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Pertinent Documentation	Send device event. Send an event from an application simulating a device.
 -/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Pertinent Documentation	Publish Command. Send a command from an application
 -/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Pertinent Documentation	Send device event. Send an event from a device.
 -/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Pertinent Documentation	Receive command. Receive command for a device
 -/s2s/services	Pertinent Documentation	Get all services. The services endpoint returns the list of all of the services that the Watson IoT Platform can connect to. The list can include a mixture of services that are either bound or unbound where: Bound services are services that the Watson IoT Platform has been configured to connect to. This can include other services in the same Bluemix space as the Watson IoT Platform or external services. Unbound services are other services in the same Bluemix space as the Watson IoT Platform service that the platform has not yet been configured to connect to. The Watson IoT Platform Dashboard UI must be used to bind to these services.
 -/s2s/services	Pertinent Documentation	Create a new service. Create a new external service. The service must include all of the details required to connect and authenticate to the external service in the credentials property. The structure of the credentials property will depend on the type of the target service.
+-/s2s/services/{serviceUuid}	Pertinent Documentation	Get the details of a service. Retrieve the service with the specified uuid.
+-/s2s/services/{serviceUuid}	Pertinent Documentation	Update an external service. Updates the external service with the specified id. The following properties can be updated: name description credentials. Note that if the description field is omitted from the body of the update, then any existing description will be removed from the service.
+-/s2s/services/{serviceUuid}	Pertinent Documentation	Delete an external service. Deletes the external service with the specified id from the organization in the Watson IoT Platform. Please note the the delete will fail if the service is being referenced by another object in the organization, for example, a Historian Connector resource.
 -/event/types	Pertinent Documentation	Query active event types. Event types are used to model the events that are published to the Watson IoT Platform. An event type must be created in an organization before more complex processing can be performed on the native event. The /event/types endpoint returns the list of all of the active event types that have been defined for the organization in the Watson IoT Platform. Various query parameters can be used to filter, sort and page through the list of active event types that are returned.

@@ -1,19 +1,11 @@
 ***Anti-Pattern*** 
-Count: 9
--/environments?key={key}&value={value}	Non-pertinent Documentation	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
--/environments/{environment_id}/zones/{zone_id}	Non-pertinent Documentation	Get zone. Gets a zone.
--/environments/{environment_id}/zones/{zone_id}/things	Non-pertinent Documentation	List things. Gets a list of all things in a zone.
--/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Non-pertinent Documentation	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
--/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Non-pertinent Documentation	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
--/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-pertinent Documentation	Get thing. Gets a thing.
--/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Non-pertinent Documentation	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
--/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Non-pertinent Documentation	Get thing data value. Gets a single data value for a thing.
--/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Non-pertinent Documentation	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
+Count: 0
 
 ***Patterns*** 
-Count: 16
+Count: 25
 -/environments	Pertinent Documentation	List environments. Gets a list of all environments.
 -/environments?latitude={latitude}&longitude={longitude}	Pertinent Documentation	Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
+-/environments?key={key}&value={value}	Pertinent Documentation	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
 -/environments	Pertinent Documentation	New environment Creates a new environment from the template.
 -/environments/{environment_id}	Pertinent Documentation	Get environment. Gets an environment.
 -/environments/{environment_id}	Pertinent Documentation	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
@@ -22,9 +14,17 @@ Count: 16
 -/environments/{environment_id}/zones?x={x}&y={y}	Pertinent Documentation	Gets a list of all zones in the environment. Params can include the following: If x and y coordinates are specified, returns a list of all zones in the environment containing the given point.
 -/environments/{environment_id}/zones?key={key}&value={value}	Pertinent Documentation	Gets a list of all zones in the environment. Params can include the following: If key and value are specified, returns zones whose data objects contain the given key/value pair.
 -/environments/{environment_id}/zones	Pertinent Documentation	New zone. Creates a new zone from the template.
+-/environments/{environment_id}/zones/{zone_id}	Pertinent Documentation	Get zone. Gets a zone.
 -/environments/{environment_id}/zones/{zone_id}	Pertinent Documentation	Updates a zone. The message can contain just the properties of the object to be updated.
 -/environments/{environment_id}/zones/{zone_id}	Pertinent Documentation	Delete zone. Deletes a zone.
+-/environments/{environment_id}/zones/{zone_id}/things	Pertinent Documentation	List things. Gets a list of all things in a zone.
+-/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Pertinent Documentation	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
+-/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Pertinent Documentation	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
 -/environments/{environment_id}/zones/{zone_id}/things	Pertinent Documentation	New thing. Creates a new thing from the template.
+-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Pertinent Documentation	Get thing. Gets a thing.
+-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Pertinent Documentation	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
+-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Pertinent Documentation	Get thing data value. Gets a single data value for a thing.
+-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Pertinent Documentation	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
 -/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Pertinent Documentation	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
 -/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Pertinent Documentation	Delete thing. Deletes a thing.
 -/environments/{environment_id}/devices	Pertinent Documentation	List devices. Gets a list of all devices in the environment.

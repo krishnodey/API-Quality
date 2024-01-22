@@ -1,11 +1,12 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 2
+-/shop/admin/customers/:customer_id/prices/:variant_id	Non-pertinent Documentation	DELETE
+-/shop/admin/prices/:price_id/staggered_prices/:id	Non-pertinent Documentation	DELETE
 
 ***Patterns*** 
-Count: 54
+Count: 52
 -/shop/admin/prices?customer_id=:customer_id	Pertinent Documentation	Retrieve Customer Prices
 -/shop/admin/customers/:customer_id/prices	Pertinent Documentation	Create Customer Price
--/shop/admin/customers/:customer_id/prices/:variant_id	Pertinent Documentation	DELETE
 -/shop/admin/price_lists	Pertinent Documentation	Retrieve Price lists
 -/shop/admin/price_lists/:id	Pertinent Documentation	Retrieve Price list
 -/shop/admin/price_lists	Pertinent Documentation	Create Price list
@@ -33,7 +34,6 @@ Count: 54
 -/shop/admin/prices/:price_id/staggered_prices/:id	Pertinent Documentation	Retrieve Staggered Price
 -/shop/admin/prices/:price_id/staggered_prices	Pertinent Documentation	Create Staggered Price
 -/shop/admin/prices/:price_id/staggered_prices/:id	Pertinent Documentation	Update Staggered Price
--/shop/admin/prices/:price_id/staggered_prices/:id	Pertinent Documentation	DELETE
 -/shop/admin/stock_items	Pertinent Documentation	Retrieve Stock items
 -/shop/admin/stock_items/:id	Pertinent Documentation	Retrieve Stock Item
 -/shop/admin/variants/:variant_id/stock_item	Pertinent Documentation	Retrieve Stock Item

@@ -1,40 +1,40 @@
 ***Anti-Pattern*** 
-Count: 23
- /devices/thermostats/device_id/name 	 Contextless Resource Names
- /devices/thermostats/device_id/name_long 	 Contextless Resource Names
- /devices/thermostats/device_id/last_connection 	 Contextless Resource Names
- /devices/thermostats/device_id/can_cool 	 Contextless Resource Names
- /devices/thermostats/device_id/is_using_emergency_heat 	 Contextless Resource Names
- /devices/thermostats/device_id/has_fan 	 Contextless Resource Names
- /devices/thermostats/device_id/fan_timer_active 	 Contextless Resource Names
- /devices/thermostats/device_id/fan_timer_timeout 	 Contextless Resource Names
- /devices/thermostats/device_id/eco_temperature_high_f 	 Contextless Resource Names
- /devices/thermostats/device_id/eco_temperature_high_c 	 Contextless Resource Names
- /devices/thermostats/device_id/hvac_state 	 Contextless Resource Names
- /devices/thermostats/device_id/where_name 	 Contextless Resource Names
- /devices/smoke_co_alarms/device_id/name 	 Contextless Resource Names
- /devices/smoke_co_alarms/device_id/ui_color_state 	 Contextless Resource Names
- /devices/smoke_co_alarms/device_id/where_name 	 Contextless Resource Names
- /devices/cameras/device_id/where_id 	 Contextless Resource Names
- /devices/cameras/device_id/where_name 	 Contextless Resource Names
- /devices/cameras/device_id/is_public_share_enabled 	 Contextless Resource Names
- /devices/cameras/device_id/activity_zones 	 Contextless Resource Names
- /devices/cameras/device_id/snapshot_url 	 Contextless Resource Names
- devices/cameras/device_id/last_event 	 Contextless Resource Names
- /devices/cameras/device_id/last_event/has_sound 	 Contextless Resource Names
- /devices/cameras/device_id/last_event/web_url 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 12
+Count: 35
  /devices/thermostats/device_id/device_id 	 Contextual Resource Names
  /devices/thermostats/device_id/locale 	 Contextual Resource Names
  /devices/thermostats/device_id/software_version 	 Contextual Resource Names
  /devices/thermostats/device_id/structure_id 	 Contextual Resource Names
+ /devices/thermostats/device_id/name 	 Contextual Resource Names
+ /devices/thermostats/device_id/name_long 	 Contextual Resource Names
+ /devices/thermostats/device_id/last_connection 	 Contextual Resource Names
  /devices/thermostats/device_id/is_online 	 Contextual Resource Names
+ /devices/thermostats/device_id/can_cool 	 Contextual Resource Names
  /devices/thermostats/device_id/can_heat 	 Contextual Resource Names
+ /devices/thermostats/device_id/is_using_emergency_heat 	 Contextual Resource Names
+ /devices/thermostats/device_id/has_fan 	 Contextual Resource Names
+ /devices/thermostats/device_id/fan_timer_active 	 Contextual Resource Names
+ /devices/thermostats/device_id/fan_timer_timeout 	 Contextual Resource Names
  /devices/thermostats/device_id/has_leaf 	 Contextual Resource Names
  /devices/thermostats/device_id/temperature_scale 	 Contextual Resource Names
  /devices/thermostats/device_id/target_temperature_f 	 Contextual Resource Names
+ /devices/thermostats/device_id/eco_temperature_high_f 	 Contextual Resource Names
+ /devices/thermostats/device_id/eco_temperature_high_c 	 Contextual Resource Names
+ /devices/thermostats/device_id/hvac_state 	 Contextual Resource Names
  /devices/thermostats/device_id/is_locked 	 Contextual Resource Names
  /devices/thermostats/device_id/sunlight_correction_enabled 	 Contextual Resource Names
+ /devices/thermostats/device_id/where_name 	 Contextual Resource Names
  /devices/thermostats/device_id/time_to_target_training 	 Contextual Resource Names
+ /devices/smoke_co_alarms/device_id/name 	 Contextual Resource Names
+ /devices/smoke_co_alarms/device_id/ui_color_state 	 Contextual Resource Names
+ /devices/smoke_co_alarms/device_id/where_name 	 Contextual Resource Names
+ /devices/cameras/device_id/where_id 	 Contextual Resource Names
+ /devices/cameras/device_id/where_name 	 Contextual Resource Names
+ /devices/cameras/device_id/is_public_share_enabled 	 Contextual Resource Names
+ /devices/cameras/device_id/activity_zones 	 Contextual Resource Names
+ /devices/cameras/device_id/snapshot_url 	 Contextual Resource Names
+ devices/cameras/device_id/last_event 	 Contextual Resource Names
+ /devices/cameras/device_id/last_event/has_sound 	 Contextual Resource Names
+ /devices/cameras/device_id/last_event/web_url 	 Contextual Resource Names

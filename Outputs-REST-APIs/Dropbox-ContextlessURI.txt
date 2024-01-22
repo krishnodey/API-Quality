@@ -1,20 +1,11 @@
 ***Anti-Pattern*** 
-Count: 12
+Count: 1
  /account/set_profile_photo 	 Contextless Resource Names
- /auth/token/from_oauth1 	 Contextless Resource Names
- /auth/token/revoke 	 Contextless Resource Names
- /files/copy_batch_v2 	 Contextless Resource Names
- /files/copy_batch/check_v2 	 Contextless Resource Names
- /files/copy_reference/get 	 Contextless Resource Names
- /files/get_file_lock_batch 	 Contextless Resource Names
- /files/get_temporary_upload_link 	 Contextless Resource Names
- /files/list_folder/get_latest_cursor 	 Contextless Resource Names
- /files/move_batch/check_v2 	 Contextless Resource Names
- /files/save_url/check_job_status 	 Contextless Resource Names
- /files/upload_session/append_v2 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 20
+Count: 31
+ /auth/token/from_oauth1 	 Contextual Resource Names
+ /auth/token/revoke 	 Contextual Resource Names
  /check/app 	 Contextual Resource Names
  /check/user 	 Contextual Resource Names
  /contacts/delete_manual_contacts 	 Contextual Resource Names
@@ -30,8 +21,17 @@ Count: 20
  /file_requests/delete 	 Contextual Resource Names
  /file_requests/delete_all_closed 	 Contextual Resource Names
  /file_requests/list/continue 	 Contextual Resource Names
+ /files/copy_batch_v2 	 Contextual Resource Names
+ /files/copy_batch/check_v2 	 Contextual Resource Names
+ /files/copy_reference/get 	 Contextual Resource Names
  /files/copy_reference/save 	 Contextual Resource Names
  /files/create_folder_batch 	 Contextual Resource Names
  /files/create_folder_batch/check 	 Contextual Resource Names
  /files/delete_batch/check 	 Contextual Resource Names
  /files/download_zip 	 Contextual Resource Names
+ /files/get_file_lock_batch 	 Contextual Resource Names
+ /files/get_temporary_upload_link 	 Contextual Resource Names
+ /files/list_folder/get_latest_cursor 	 Contextual Resource Names
+ /files/move_batch/check_v2 	 Contextual Resource Names
+ /files/save_url/check_job_status 	 Contextual Resource Names
+ /files/upload_session/append_v2 	 Contextual Resource Names

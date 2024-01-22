@@ -671,7 +671,7 @@ class ApiAnalyzer:
                     #print(tmp1)
                     max_value_key = max(score, key=score.get)
                     max_value = score[max_value_key]
-                    print(max_value)
+                    #print(max_value)
                     tmp += max_value
                 avg_tmp = tmp / len(node_word_similarity)
                 topic_avg.append(avg_tmp)

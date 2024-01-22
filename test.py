@@ -67,11 +67,11 @@ analyzer_obj = ApiAnalyzer(uri)
 
 
 '''''''''''''''''''''''''''UnversionedURIs'''''''''''''''''''''''''''''''''''''''
-print("Detection of UnversionedURIs:")
-result_AP, result_P, p_count, ap_count = analyzer_obj.detect_unversioned_uris()
-pattern_type = "UnversionedURIs"
-uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-print("Finished Detection of UnversionedURIs:")
+#print("Detection of UnversionedURIs:")
+#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_unversioned_uris()
+#pattern_type = "UnversionedURIs"
+#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+#print("Finished Detection of UnversionedURIs:")
 
 '''
 #semaintic Analysis
@@ -128,11 +128,11 @@ with open(f'APIs\\{selected}\\{selected}.txt', 'r') as file:
 
 
 '''''''''''''''''''''''''LessCohisiveDocumentation'''''''''''''''''''''''''''''''''''''''
-#print("Detection of LessCohisiveDocumentation:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_less_cohesive_documentation(data)
-#pattern_type = "LessCohisiveDoc"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
-#print("Finished Detection of LessCohisiveDocumentation:")
+print("Detection of LessCohisiveDocumentation:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_less_cohesive_documentation(data)
+pattern_type = "LessCohisiveDoc"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
+print("Finished Detection of LessCohisiveDocumentation:")
 
 
 '''''''''''''''''''''''''InconsistantDocumentation'''''''''''''''''''''''''''''''''''''''

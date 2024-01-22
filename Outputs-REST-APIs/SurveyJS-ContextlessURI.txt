@@ -1,29 +1,29 @@
 ***Anti-Pattern*** 
-Count: 20
- /getResultSummaryState/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /getPublicResultSummaryState/{id} 	 Contextless Resource Names
- /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	 Contextless Resource Names
- /getSurveyPublicResults/{id}?from={from}&till={till} 	 Contextless Resource Names
- /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	 Contextless Resource Names
- /getActive?accessKey={accessKey}&ownerId={ownerId} 	 Contextless Resource Names
- /getArchive?accessKey={accessKey}&ownerId={ownerId} 	 Contextless Resource Names
- /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	 Contextless Resource Names
- /archive/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /restore/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /delete/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /changeName/{id}?accessKey={accessKey}&name={name} 	 Contextless Resource Names
- /publish/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /unPublish/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Contextless Resource Names
- /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Contextless Resource Names
- /getIsResultPublic/{id}?accessKey={accessKey} 	 Contextless Resource Names
- /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	 Contextless Resource Names
- /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	 Contextless Resource Names
- /deleteAllResults/{id}?accessKey={accessKey} 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 4
+Count: 24
  /setResultSummaryState?accessKey={accessKey} 	 Contextual Resource Names
+ /getResultSummaryState/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /getPublicResultSummaryState/{id} 	 Contextual Resource Names
+ /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	 Contextual Resource Names
+ /getSurveyPublicResults/{id}?from={from}&till={till} 	 Contextual Resource Names
  /generateAccessKey?accessKey={accessKey} 	 Contextual Resource Names
+ /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	 Contextual Resource Names
+ /getActive?accessKey={accessKey}&ownerId={ownerId} 	 Contextual Resource Names
+ /getArchive?accessKey={accessKey}&ownerId={ownerId} 	 Contextual Resource Names
+ /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	 Contextual Resource Names
+ /archive/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /restore/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /delete/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /changeName/{id}?accessKey={accessKey}&name={name} 	 Contextual Resource Names
  /changeJson?accessKey={accessKey} 	 Contextual Resource Names
+ /publish/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /unPublish/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Contextual Resource Names
+ /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Contextual Resource Names
+ /getIsResultPublic/{id}?accessKey={accessKey} 	 Contextual Resource Names
+ /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	 Contextual Resource Names
+ /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	 Contextual Resource Names
  /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	 Contextual Resource Names
+ /deleteAllResults/{id}?accessKey={accessKey} 	 Contextual Resource Names

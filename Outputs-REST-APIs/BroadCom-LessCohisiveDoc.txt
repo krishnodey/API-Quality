@@ -1,25 +1,15 @@
 ***Anti-Pattern*** 
-Count: 38
+Count: 22
 -/bui/getBUIAllConfig	Non-pertinent Documentation	Returns all the configuration properties for Service Point App.
--/bui/getAllowedStatus	Non-pertinent Documentation	Returns the list of available Statuses based on allowed Status transition.
--/bui/getMyTicketDetails({persid})	Non-pertinent Documentation	Returns ticket details along with extra attributes provided in the $attrList parameter.
 -/bui/getTicketsCustomData({persid})	Non-pertinent Documentation	Returns tickets summary attributes configured at SDM.
--/bui/getDefaultCategories	Non-pertinent Documentation	Returns the default list of categories for cr factory defined in Service Desk which is configurable.
 -/bui/attrInfo	Non-pertinent Documentation	Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page.
 -/bui/attrCtrl	Non-pertinent Documentation	Returns all dependent attributes for the provided ticket attribute ($attrname parameter)
--/bui/addLogComment	Non-pertinent Documentation	Add log comment to the ticket
 -/bui/changeStatus/{factory}({persid})	Non-pertinent Documentation	Returns updated status value of the provided ticket persistent id.
 -/bui/allFeeds({persid})	Non-pertinent Documentation	Returns Activity Log Information for the provided ticket
 -/bui/attmnt	Non-pertinent Documentation	Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.
 -/bui/getBopSID	Non-pertinent Documentation	Returns BOP session ID, which can be used to download file.
 -/bui/attmnt({persid})/$value	Non-pertinent Documentation	Returns an attachment as binary data.
--/bui/updateStatusForNotification	Non-pertinent Documentation	Marks the notification status as READ for the given notification persistent id
--/bui/updateStatusForAllNotification	Non-pertinent Documentation	Marks all the notifications based on the $filter value provided as READ.
 -/bui/getMyResources	Non-pertinent Documentation	Returns all the resources(Assets) the user is having access to
--/bui/getMyActiveChatSession	Non-pertinent Documentation	Gets the active chat session details for the logged-in Service Point user.
--/bui/checkActiveSessions	Non-pertinent Documentation	Checks if the logged-in Service Point user has an active chat session.
--/bui/createChatThread	Non-pertinent Documentation	Creates an activity log entry for initiating a chat session
--/bui/getChatHistory/{roomName}	Non-pertinent Documentation	Gets the chat history for the logged-in ServicePoint user for the passed-in ticket id (here roomName is the ticket persistent id).
 -/bui/getDocument({id})	Non-pertinent Documentation	Returns a Knowledge Document and updates the documents hits count if $updateHits parameter is true
 -/bui/getKDAttachments({id})	Non-pertinent Documentation	Returns all Knowledge Document attachments for the provided document id.
 -/bui/getKDComments({id})	Non-pertinent Documentation	Returns Knowledge Document comments for the provided document id.
@@ -27,19 +17,29 @@ Count: 38
 -/bui/rateDocument({id})	Non-pertinent Documentation	Rate an Existing Knowledge Document
 -/bui/kdLinkInfo({id})	Non-pertinent Documentation	It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket.
 -/bui/unLinkSolution({id})	Non-pertinent Documentation	Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket
--/bui/helpAbout	Non-pertinent Documentation	Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned
 -/bui/getEEMAuth	Non-pertinent Documentation	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests)
 -/bui/{factory}({persid})	Non-pertinent Documentation	Returns the object details specified by the persistent id of the mentioned factory
 -/bui/{factory}({persid})	Non-pertinent Documentation	Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory.
--/bui/{factory}	Non-pertinent Documentation	Returns the objects based on the parameters for the mentioned factory
--/bui/{factory}	Non-pertinent Documentation	Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.)
--/gs/mytkt_active	Non-pertinent Documentation	Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
--/gs/mytkt_inactive	Non-pertinent Documentation	Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
--/getServiceRequest	Non-pertinent Documentation	Returns service requests of logged in user, if Service Catalog is integrated.
 -/pcatSearch	Non-pertinent Documentation	Returns relevant categories(and offerings if Service Catalog is integrated) based on configured parameters in Service Point configuration.
 -/getOfferings	Non-pertinent Documentation	Returns featured offerings for the loggedin users domain, if Service Catalog is integrated.
 
 ***Patterns*** 
-Count: 2
+Count: 18
 -/api/getAccess	Pertinent Documentation	Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct.
+-/bui/getAllowedStatus	Pertinent Documentation	Returns the list of available Statuses based on allowed Status transition.
+-/bui/getMyTicketDetails({persid})	Pertinent Documentation	Returns ticket details along with extra attributes provided in the $attrList parameter.
+-/bui/getDefaultCategories	Pertinent Documentation	Returns the default list of categories for cr factory defined in Service Desk which is configurable.
+-/bui/addLogComment	Pertinent Documentation	Add log comment to the ticket
+-/bui/updateStatusForNotification	Pertinent Documentation	Marks the notification status as READ for the given notification persistent id
+-/bui/updateStatusForAllNotification	Pertinent Documentation	Marks all the notifications based on the $filter value provided as READ.
+-/bui/getMyActiveChatSession	Pertinent Documentation	Gets the active chat session details for the logged-in Service Point user.
+-/bui/checkActiveSessions	Pertinent Documentation	Checks if the logged-in Service Point user has an active chat session.
+-/bui/createChatThread	Pertinent Documentation	Creates an activity log entry for initiating a chat session
+-/bui/getChatHistory/{roomName}	Pertinent Documentation	Gets the chat history for the logged-in ServicePoint user for the passed-in ticket id (here roomName is the ticket persistent id).
+-/bui/helpAbout	Pertinent Documentation	Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned
+-/bui/{factory}	Pertinent Documentation	Returns the objects based on the parameters for the mentioned factory
+-/bui/{factory}	Pertinent Documentation	Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.)
+-/gs/mytkt_active	Pertinent Documentation	Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
+-/gs/mytkt_inactive	Pertinent Documentation	Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
+-/getServiceRequest	Pertinent Documentation	Returns service requests of logged in user, if Service Catalog is integrated.
 -/suggestedSolutions	Pertinent Documentation	Returns all probable solutions for the provided search string.

@@ -1,6 +1,5 @@
 ***Anti-Pattern*** 
-Count: 39
- /api/getAccess 	 Contextless Resource Names
+Count: 29
  /bui/getBUIAllConfig 	 Contextless Resource Names
  /bui/getAllowedStatus 	 Contextless Resource Names
  /bui/getMyTicketDetails({persid}) 	 Contextless Resource Names
@@ -14,12 +13,7 @@ Count: 39
  /bui/attmnt 	 Contextless Resource Names
  /bui/getBopSID 	 Contextless Resource Names
  /bui/attmnt({persid})/$value 	 Contextless Resource Names
- /bui/updateStatusForNotification 	 Contextless Resource Names
- /bui/updateStatusForAllNotification 	 Contextless Resource Names
  /bui/getMyResources 	 Contextless Resource Names
- /bui/getMyActiveChatSession 	 Contextless Resource Names
- /bui/checkActiveSessions 	 Contextless Resource Names
- /bui/createChatThread 	 Contextless Resource Names
  /bui/getChatHistory/{roomName} 	 Contextless Resource Names
  /bui/getDocument({id}) 	 Contextless Resource Names
  /bui/getKDAttachments({id}) 	 Contextless Resource Names
@@ -32,14 +26,20 @@ Count: 39
  /bui/getEEMAuth 	 Contextless Resource Names
  /bui/{factory}({persid}) 	 Contextless Resource Names
  /bui/{factory}({persid}) 	 Contextless Resource Names
- /bui/{factory} 	 Contextless Resource Names
- /bui/{factory} 	 Contextless Resource Names
  /gs/mytkt_active 	 Contextless Resource Names
  /gs/mytkt_inactive 	 Contextless Resource Names
- /getServiceRequest 	 Contextless Resource Names
- /pcatSearch 	 Contextless Resource Names
  /getOfferings 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 1
+Count: 11
+ /api/getAccess 	 Contextual Resource Names
+ /bui/updateStatusForNotification 	 Contextual Resource Names
+ /bui/updateStatusForAllNotification 	 Contextual Resource Names
+ /bui/getMyActiveChatSession 	 Contextual Resource Names
+ /bui/checkActiveSessions 	 Contextual Resource Names
+ /bui/createChatThread 	 Contextual Resource Names
+ /bui/{factory} 	 Contextual Resource Names
+ /bui/{factory} 	 Contextual Resource Names
+ /getServiceRequest 	 Contextual Resource Names
+ /pcatSearch 	 Contextual Resource Names
  /suggestedSolutions 	 Contextual Resource Names

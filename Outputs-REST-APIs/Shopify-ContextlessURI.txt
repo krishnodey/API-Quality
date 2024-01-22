@@ -1,54 +1,36 @@
 ***Anti-Pattern*** 
-Count: 30
- /admin/oauth/access_scopes.json 	 Contextless Resource Names
- /storefront_access_tokens/{storefront_access_token_id}.json 	 Contextless Resource Names
- /reports/{report_id}.json 	 Contextless Resource Names
- /reports/{report_id}.json 	 Contextless Resource Names
- /reports/{report_id}.json 	 Contextless Resource Names
- /application_charges/{application_charge_id}.json 	 Contextless Resource Names
- /application_credits/{application_credit_id}.json 	 Contextless Resource Names
- /recurring_application_charges/{recurring_application_charge_id}.json 	 Contextless Resource Names
- /recurring_application_charges/{recurring_application_charge_id}.json 	 Contextless Resource Names
- /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	 Contextless Resource Names
- /customers/{customer_id}/send_invite.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/discount_codes.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/discount_codes.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/batch.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/batch/{batch_id}.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	 Contextless Resource Names
- /price_rules.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}.json 	 Contextless Resource Names
- /price_rules.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}.json 	 Contextless Resource Names
- /price_rules/count.json 	 Contextless Resource Names
- /price_rules/{price_rule_id}.json 	 Contextless Resource Names
+Count: 1
  /events.json 	 Contextless Resource Names
- /events/{event_id}.json 	 Contextless Resource Names
- /webhooks/{webhook_id}.json 	 Contextless Resource Names
- /webhooks/{webhook_id}.json 	 Contextless Resource Names
- /webhooks/{webhook_id}.json 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 41
+Count: 70
+ /admin/oauth/access_scopes.json 	 Contextual Resource Names
  /storefront_access_tokens.json 	 Contextual Resource Names
+ /storefront_access_tokens/{storefront_access_token_id}.json 	 Contextual Resource Names
  /storefront_access_tokens.json 	 Contextual Resource Names
  /reports.json 	 Contextual Resource Names
+ /reports/{report_id}.json 	 Contextual Resource Names
  /reports.json 	 Contextual Resource Names
+ /reports/{report_id}.json 	 Contextual Resource Names
+ /reports/{report_id}.json 	 Contextual Resource Names
  /application_charges.json 	 Contextual Resource Names
+ /application_charges/{application_charge_id}.json 	 Contextual Resource Names
  /application_charges.json?since_id=556467234 	 Contextual Resource Names
  /application_credits.json 	 Contextual Resource Names
+ /application_credits/{application_credit_id}.json 	 Contextual Resource Names
  /application_credits.json 	 Contextual Resource Names
  /recurring_application_charges.json 	 Contextual Resource Names
+ /recurring_application_charges/{recurring_application_charge_id}.json 	 Contextual Resource Names
  /recurring_application_charges.json 	 Contextual Resource Names
+ /recurring_application_charges/{recurring_application_charge_id}.json 	 Contextual Resource Names
+ /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	 Contextual Resource Names
  /customers.json 	 Contextual Resource Names
  /customers/search.json?query=Bob country:United States 	 Contextual Resource Names
  /customers/{customer_id}.json 	 Contextual Resource Names
  /customers.json 	 Contextual Resource Names
  /customers/{customer_id}.json 	 Contextual Resource Names
  /customers/{customer_id}/account_activation_url.json 	 Contextual Resource Names
+ /customers/{customer_id}/send_invite.json 	 Contextual Resource Names
  /customers/{customer_id}.json 	 Contextual Resource Names
  /customers/count.json 	 Contextual Resource Names
  /customers/{customer_id}/orders.json 	 Contextual Resource Names
@@ -59,12 +41,30 @@ Count: 41
  /customers/{customer_id}/addresses/{address_id}.json 	 Contextual Resource Names
  /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	 Contextual Resource Names
  /customers/{customer_id}/addresses/{address_id}/default.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/discount_codes.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/discount_codes.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Contextual Resource Names
  /discount_codes/lookup.json?code=SUMMERSALE10OFF 	 Contextual Resource Names
  /discount_codes/count.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/batch.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/batch/{batch_id}.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	 Contextual Resource Names
+ /price_rules.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}.json 	 Contextual Resource Names
+ /price_rules.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}.json 	 Contextual Resource Names
+ /price_rules/count.json 	 Contextual Resource Names
+ /price_rules/{price_rule_id}.json 	 Contextual Resource Names
+ /events/{event_id}.json 	 Contextual Resource Names
  /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	 Contextual Resource Names
  /webhooks.json 	 Contextual Resource Names
  /webhooks/count.json 	 Contextual Resource Names
+ /webhooks/{webhook_id}.json 	 Contextual Resource Names
  /webhooks.json 	 Contextual Resource Names
+ /webhooks/{webhook_id}.json 	 Contextual Resource Names
+ /webhooks/{webhook_id}.json 	 Contextual Resource Names
  /inventory_items.json?ids=808950810,39072856,457924702 	 Contextual Resource Names
  /inventory_items/{inventory_item_id}.json 	 Contextual Resource Names
  /inventory_items/{inventory_item_id}.json 	 Contextual Resource Names

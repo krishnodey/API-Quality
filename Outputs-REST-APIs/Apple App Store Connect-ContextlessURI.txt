@@ -1,37 +1,37 @@
 ***Anti-Pattern*** 
-Count: 31
- /appCategories 	 Contextless Resource Names
- /appCategories/{id} 	 Contextless Resource Names
- /appEncryptionDeclarations/{id} 	 Contextless Resource Names
- /appInfoLocalizations/{id} 	 Contextless Resource Names
- /appInfos/{id} 	 Contextless Resource Names
- /appPreOrders/{id} 	 Contextless Resource Names
- /appPreviewSets/{id} 	 Contextless Resource Names
- /appPreviews/{id} 	 Contextless Resource Names
- /appPricePoints 	 Contextless Resource Names
- /appPricePoints/{id} 	 Contextless Resource Names
- /appPriceTiers 	 Contextless Resource Names
- /appPriceTiers/{id} 	 Contextless Resource Names
- /appPrices/{id} 	 Contextless Resource Names
- /appScreenshotSets/{id} 	 Contextless Resource Names
- /appScreenshots/{id} 	 Contextless Resource Names
- /appStoreReviewAttachments/{id} 	 Contextless Resource Names
- /appStoreReviewDetails/{id} 	 Contextless Resource Names
- /appStoreVersionLocalizations/{id} 	 Contextless Resource Names
- /appStoreVersions/{id} 	 Contextless Resource Names
- /apps 	 Contextless Resource Names
- /betaAppLocalizations 	 Contextless Resource Names
- /endUserLicenseAgreements/{id} 	 Contextless Resource Names
- /financeReports 	 Contextless Resource Names
+Count: 2
  /preReleaseVersions 	 Contextless Resource Names
- /routingAppCoverages/{id} 	 Contextless Resource Names
  /salesReports 	 Contextless Resource Names
- /appCategories/{id}/subcategories 	 Contextless Resource Names
- /appEncryptionDeclarations/{id}/app 	 Contextless Resource Names
- /appInfos/{id}/ageRatingDeclaration 	 Contextless Resource Names
- /appInfos/{id}/appInfoLocalizations 	 Contextless Resource Names
- /appInfos/{id}/primaryCategory 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 1
+Count: 30
+ /appCategories 	 Contextual Resource Names
+ /appCategories/{id} 	 Contextual Resource Names
  /appEncryptionDeclarations 	 Contextual Resource Names
+ /appEncryptionDeclarations/{id} 	 Contextual Resource Names
+ /appInfoLocalizations/{id} 	 Contextual Resource Names
+ /appInfos/{id} 	 Contextual Resource Names
+ /appPreOrders/{id} 	 Contextual Resource Names
+ /appPreviewSets/{id} 	 Contextual Resource Names
+ /appPreviews/{id} 	 Contextual Resource Names
+ /appPricePoints 	 Contextual Resource Names
+ /appPricePoints/{id} 	 Contextual Resource Names
+ /appPriceTiers 	 Contextual Resource Names
+ /appPriceTiers/{id} 	 Contextual Resource Names
+ /appPrices/{id} 	 Contextual Resource Names
+ /appScreenshotSets/{id} 	 Contextual Resource Names
+ /appScreenshots/{id} 	 Contextual Resource Names
+ /appStoreReviewAttachments/{id} 	 Contextual Resource Names
+ /appStoreReviewDetails/{id} 	 Contextual Resource Names
+ /appStoreVersionLocalizations/{id} 	 Contextual Resource Names
+ /appStoreVersions/{id} 	 Contextual Resource Names
+ /apps 	 Contextual Resource Names
+ /betaAppLocalizations 	 Contextual Resource Names
+ /endUserLicenseAgreements/{id} 	 Contextual Resource Names
+ /financeReports 	 Contextual Resource Names
+ /routingAppCoverages/{id} 	 Contextual Resource Names
+ /appCategories/{id}/subcategories 	 Contextual Resource Names
+ /appEncryptionDeclarations/{id}/app 	 Contextual Resource Names
+ /appInfos/{id}/ageRatingDeclaration 	 Contextual Resource Names
+ /appInfos/{id}/appInfoLocalizations 	 Contextual Resource Names
+ /appInfos/{id}/primaryCategory 	 Contextual Resource Names

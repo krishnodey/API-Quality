@@ -1,3 +1,27 @@
 GET >> /allCards >> Fetches all pipe cards based on arguments >> n/a
 GET >> /autoFillFields >> Lookup the values that will automatically fill the child-card's start form fields>> n/a
 GET >> /card >>Lookup a card by its ID >> n/a
+GET >> /cards>>Fetches a group of cards based on arguments>>n/a
+GET>> /cardsImportations/{pipeId}>>Lookup the cards importer history by the pipe ID>>pipeId: ID!	Required. The pipe ID
+GET >> /findCards/{pipeId} >> Fetch cards based on fields' inputs >> pipeId: ID!	Required. The pipe ID
+GET >> /findCards/{tableId}>> Fetch records based on fields' inputs>>tableId: String!	Required. The table ID
+GET >> /inbox_emails/card_id >> Lookup the card's emails by its ID>>card_id: ID!	Required. The card ID
+GET >> /me >>Returns informations of the current authenticated user>>n/a
+GET >> /organization/{id} >> Lookup an organization by its ID>>id: ID!	Required. The organization ID
+GET >> /organizations/{ids} >> Lookup organizations by their ID>> ids: [ID]	The organizations IDs
+GET >> /phase/{id} >> Lookup a phase by its ID >> id: ID!	Required. The phase ID
+GET >> /pipe/{id} >> Lookup a pipe by its ID>> id: ID!	Required. The pipe ID
+GET>> /pipeReportExport/{id}>>Lookup a pipe report export by its ID>>id: ID!	Required. The export ID
+GET >> /pipe/{ids} >> Lookup a pipe by their ID>> ids: ID!	Required. The pipes ID
+GET >> /pipe_relations/{id} >>Lookup pipe relations by their ID>>ids: [ID]!	Required. The pipe relation ID
+GET >> /pipe_templates >> Lookup all pipe templates available on Pipefy>>n/a
+GET >> /recordsImportations/{tableID} >> Lookup the records importer history by the table ID>>tableId: ID!	Required. The table ID
+GET >> /table/{id}>>Lookup a database table by its ID >> id: ID!	Required. The table ID
+GET >> /table/{ids}>>Lookup a database tables by their ID >> ids: ID!	Required. The table ID
+GET >> /table_record/{id} >> Lookup a record by its ID >> id: ID!	Required. The record ID
+GET >> /table_records/{table_id} >> Fetches a group of records based on arguments>>table_id: ID!	Required. The table ID
+GET >> /table_relations/{ids} >>Lookup table relations by their ID>>ids: [ID]!	Required. The table relation ID
+
+
+
+

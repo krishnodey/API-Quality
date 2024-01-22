@@ -1,20 +1,16 @@
 ***Anti-Pattern*** 
-Count: 7
- /deployment/resources/vdcs/{uuid}/vm_configurations 	 Contextless Resource Names
- /deployment/resources/vdcs/{uuid}/volume_configurations 	 Contextless Resource Names
- /deployment/resources/subnets/<subnetUUID> 	 Contextless Resource Names
- /deployment/resources/groups/<groupUUID> 	 Contextless Resource Names
- /deployment/resources/groups/group<UUID>?showNested=true 	 Contextless Resource Names
- /deployment/resources/volumes/<volumeUUID> 	 Contextless Resource Names
- /deployment/resources/acls 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 27
+Count: 34
  /deployment/resources/instances 	 Contextual Resource Names
  /deployment/resources/virtual data center./<virtual data center.UID> 	 Contextual Resource Names
  /deployment/resources/vm_configurations 	 Contextual Resource Names
+ /deployment/resources/vdcs/{uuid}/vm_configurations 	 Contextual Resource Names
  /deployment/resources/volume_configurations 	 Contextual Resource Names
+ /deployment/resources/vdcs/{uuid}/volume_configurations 	 Contextual Resource Names
  /deployment/resources/subnets 	 Contextual Resource Names
+ /deployment/resources/subnets/<subnetUUID> 	 Contextual Resource Names
  /deployment/resources/addresses 	 Contextual Resource Names
  /deployment/resources/subnet/<subnetUUID>/addresses 	 Contextual Resource Names
  /deployment/resources/subnet/<subnetUUID>/addresses 	 Contextual Resource Names
@@ -24,15 +20,19 @@ Count: 27
  /deployment/resources/credentials/<credentialUUID> 	 Contextual Resource Names
  /deployment/resources/images/<imageID> 	 Contextual Resource Names
  /deployment/resources/groups 	 Contextual Resource Names
+ /deployment/resources/groups/<groupUUID> 	 Contextual Resource Names
  /deployment/resources/groups?isMaster=true 	 Contextual Resource Names
+ /deployment/resources/groups/group<UUID>?showNested=true 	 Contextual Resource Names
  /deployment/resources/instances/<instanceUUID> 	 Contextual Resource Names
  /deployment/resources/instances 	 Contextual Resource Names
  /deployment/resources/instances/<instanceUUID> 	 Contextual Resource Names
  /deployment/resources/addresses 	 Contextual Resource Names
  /deployment/resources/volumes 	 Contextual Resource Names
+ /deployment/resources/volumes/<volumeUUID> 	 Contextual Resource Names
  /deployment/resources/volumes 	 Contextual Resource Names
  /deployment/resources/instances/<instanceUUID> 	 Contextual Resource Names
  /deployment/resources/instance_snapshots 	 Contextual Resource Names
+ /deployment/resources/acls 	 Contextual Resource Names
  /audit/resources/audit_config 	 Contextual Resource Names
  /admin/resources/backup 	 Contextual Resource Names
  /admin/resources/backup_subcomponents/{id} 	 Contextual Resource Names

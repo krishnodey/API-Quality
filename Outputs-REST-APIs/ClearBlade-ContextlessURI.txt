@@ -1,29 +1,5 @@
 ***Anti-Pattern*** 
-Count: 31
- /api/user/reg 	 Contextless Resource Names
- /api/user/checkauth 	 Contextless Resource Names
- /api/v/2/devices/{systemKey}/{name} 	 Contextless Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
- /api/data/{collectionid}/columns 	 Contextless Resource Names
- /api/code/{systemKey}/{serviceName} 	 Contextless Resource Names
- /codeadmin/v/2/library/{systemKey} 	 Contextless Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
- /codeadmin/v/2/history/library/{systemKey}/{name} 	 Contextless Resource Names
- /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Contextless Resource Names
- /codeadmin/failed 	 Contextless Resource Names
- /codeadmin/failed/{systemKey} 	 Contextless Resource Names
- /codeadmin/failed/{systemKey} 	 Contextless Resource Names
- /codeadmin/failed/{systemKey} 	 Contextless Resource Names
- /api/message/{systemKey} 	 Contextless Resource Names
- /api/message/{systemKey}/publish 	 Contextless Resource Names
- /api/message/{systemKey} 	 Contextless Resource Names
- /admin/reg 	 Contextless Resource Names
+Count: 7
  /admin/systemmanagement 	 Contextless Resource Names
  /admin/systemmanagement 	 Contextless Resource Names
  /admin/systemmanagement 	 Contextless Resource Names
@@ -33,18 +9,42 @@ Count: 31
  /admin/collectionmanagement 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 14
+Count: 38
+ /api/user/reg 	 Contextual Resource Names
  /api/user/auth 	 Contextual Resource Names
  /api/user/anon 	 Contextual Resource Names
+ /api/user/checkauth 	 Contextual Resource Names
  /api/user/logout 	 Contextual Resource Names
  /api/user/info 	 Contextual Resource Names
  /api/user/info 	 Contextual Resource Names
  /api/user/pass 	 Contextual Resource Names
  /api/user 	 Contextual Resource Names
+ /api/v/2/devices/{systemKey}/{name} 	 Contextual Resource Names
  /api/v/2/devices/{SystemKey}/auth 	 Contextual Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
  /api/data/{collectionID} 	 Contextual Resource Names
  /api/data/{collectionID} 	 Contextual Resource Names
  /api/data/{collectionID} 	 Contextual Resource Names
  /api/data/{collectionID} 	 Contextual Resource Names
+ /api/data/{collectionid}/columns 	 Contextual Resource Names
+ /api/code/{systemKey}/{serviceName} 	 Contextual Resource Names
+ /codeadmin/v/2/library/{systemKey} 	 Contextual Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
+ /codeadmin/v/2/history/library/{systemKey}/{name} 	 Contextual Resource Names
+ /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Contextual Resource Names
+ /codeadmin/failed 	 Contextual Resource Names
+ /codeadmin/failed/{systemKey} 	 Contextual Resource Names
+ /codeadmin/failed/{systemKey} 	 Contextual Resource Names
+ /codeadmin/failed/{systemKey} 	 Contextual Resource Names
+ /api/message/{systemKey} 	 Contextual Resource Names
+ /api/message/{systemKey}/publish 	 Contextual Resource Names
+ /api/message/{systemKey} 	 Contextual Resource Names
+ /admin/reg 	 Contextual Resource Names
  /admin/auth 	 Contextual Resource Names
  /admin/logout 	 Contextual Resource Names

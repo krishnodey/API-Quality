@@ -1,25 +1,25 @@
 ***Anti-Pattern*** 
-Count: 19
-/v18.0/{album-id} 	 Contextless Resource Names
- /{group_id}/albums	 Contextless Resource Names
-/v18.0/{album-id}/comments	 Contextless Resource Names
-/v18.0/{album-id}/likes 	 Contextless Resource Names
- /v18.0/{album-id}/photos 	 Contextless Resource Names
- /{album_id}/photos 	 Contextless Resource Names
-/v18.0/{album-id}/picture 	 Contextless Resource Names
-/v18.0/{app-link-host-id} 	 Contextless Resource Names
-/app/app_link_hosts	 Contextless Resource Names
-/v18.0/{app-link-host-id}	 Contextless Resource Names
-/v18.0/{app-link-host-id}	 Contextless Resource Names
-/v18.0/{application-id} 	 Contextless Resource Names
- /{business_id}/owned_apps 	 Contextless Resource Names
- /v18.0/{application-id}/accounts 	 Contextless Resource Names
-/v18.0/{application-id}/ad_placement_groups 	 Contextless Resource Names
- /v18.0/{application-id}/adnetworkanalytics_results	 Contextless Resource Names
-/v18.0/{application-id}/aem_attribution	 Contextless Resource Names
-/v18.0/{application-id}/aem_conversion_configs	 Contextless Resource Names
-/v18.0/{application-id}/aem_conversion_filter	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 1
+Count: 20
+/v18.0/{album-id} 	 Contextual Resource Names
+ /{group_id}/albums	 Contextual Resource Names
+/v18.0/{album-id}/comments	 Contextual Resource Names
+/v18.0/{album-id}/likes 	 Contextual Resource Names
+ /v18.0/{album-id}/photos 	 Contextual Resource Names
+ /{album_id}/photos 	 Contextual Resource Names
+/v18.0/{album-id}/picture 	 Contextual Resource Names
+/v18.0/{app-link-host-id} 	 Contextual Resource Names
+/app/app_link_hosts	 Contextual Resource Names
+/v18.0/{app-link-host-id}	 Contextual Resource Names
+/v18.0/{app-link-host-id}	 Contextual Resource Names
+/v18.0/{application-id} 	 Contextual Resource Names
+ /{business_id}/owned_apps 	 Contextual Resource Names
+ /v18.0/{application-id}/accounts 	 Contextual Resource Names
  /{application_id}/accounts 	 Contextual Resource Names
+/v18.0/{application-id}/ad_placement_groups 	 Contextual Resource Names
+ /v18.0/{application-id}/adnetworkanalytics_results	 Contextual Resource Names
+/v18.0/{application-id}/aem_attribution	 Contextual Resource Names
+/v18.0/{application-id}/aem_conversion_configs	 Contextual Resource Names
+/v18.0/{application-id}/aem_conversion_filter	 Contextual Resource Names

@@ -1,42 +1,18 @@
 ***Anti-Pattern*** 
-Count: 29
--/users/self	Non-pertinent Documentation	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
--/users/<userID>/devicetypes	Non-pertinent Documentation	Returns the device types owned by a user.
--/devices/<deviceID>/providerauth	Non-pertinent Documentation	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
--/devices/<deviceID>/providerauth	Non-pertinent Documentation	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
--/devices/<deviceID>/shares	Non-pertinent Documentation	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
--/devicetypes/<deviceTypeID>/manifests/latest/properties	Non-pertinent Documentation	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
--/devicetypes/<deviceTypeID>/availablemanifestversions	Non-pertinent Documentation	Returns the available Manifest versions for a device type.
+Count: 3
 -/devicetypes/<deviceTypeId>/whitelist	Non-pertinent Documentation	Uploads an Approved List as a CSV file.
--/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Non-pertinent Documentation	Returns the status of an uploaded CSV.
--/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Non-pertinent Documentation	Returns the rows that were rejected in an uploaded CSV.
 -/devicetypes/<deviceTypeID>/whitelist/status	Non-pertinent Documentation	Returns the enabled/disabled status of an Approved List.
--/devicetypes/<deviceTypeID>/whitelist/certificates	Non-pertinent Documentation	Returns details of an Approved List certificate.
--/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Non-pertinent Documentation	Returns a specified vendor device ID.
--/messages	Non-pertinent Documentation	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
--/actions	Non-pertinent Documentation	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
--/messages/last	Non-pertinent Documentation	Returns the most recent normalized messages from a device or devices.
--/messages/analytics/aggregates	Non-pertinent Documentation	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
 -/messages/snapshots	Non-pertinent Documentation	Returns last received value for all Manifest fields (aka device state) of a device or devices.
--/pricing/devices/<deviceID>/revenueshare/upgradepath	Non-pertinent Documentation	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
--/pricing/devicetypes/<deviceTypeID>/pricingtiers	Non-pertinent Documentation	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
--/pricing/devices/<deviceID>/pricingtiers	Non-pertinent Documentation	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
--/messages/export	Non-pertinent Documentation	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
--/rules/<ruleID>/actions	Non-pertinent Documentation	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
--/scenes	Non-pertinent Documentation	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
--/scenes/<sceneID>	Non-pertinent Documentation	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
--/scenes/<sceneID>	Non-pertinent Documentation	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
--/scenes	Non-pertinent Documentation	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
--/scenes/<sceneID>	Non-pertinent Documentation	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
--/scenes/<sceneID>	Non-pertinent Documentation	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
 
 ***Patterns*** 
-Count: 51
+Count: 77
+-/users/self	Pertinent Documentation	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
 -/users/<userID>/properties	Pertinent Documentation	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
 -/users/<userID>/properties	Pertinent Documentation	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
 -/users/<userID>/properties	Pertinent Documentation	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
 -/users/<userID>/properties	Pertinent Documentation	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
 -/users/<userID>/devices	Pertinent Documentation	Returns all devices owned by a user and/or shared devices on the user's account.
+-/users/<userID>/devicetypes	Pertinent Documentation	Returns the device types owned by a user.
 -/users/<userID>/rules	Pertinent Documentation	Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 -/users/<userID>/scenes	Pertinent Documentation	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
 -/users/<userID>/trials	Pertinent Documentation	Returns the trials of a participant or administrator.
@@ -47,25 +23,42 @@ Count: 51
 -/devices/<deviceID>/tokens	Pertinent Documentation	Returns the access token of a device.
 -/devices/<deviceID>/tokens	Pertinent Documentation	Creates a new access token for a device.
 -/devices/<deviceID>/tokens	Pertinent Documentation	Deletes the access token of a device.
+-/devices/<deviceID>/providerauth	Pertinent Documentation	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
+-/devices/<deviceID>/providerauth	Pertinent Documentation	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
 -/devices/<deviceID>/status	Pertinent Documentation	Returns current status of a device.
 -/devices/status	Pertinent Documentation	Returns a list of device statuses.
 -/devices/<deviceID>/status	Pertinent Documentation	Modifies current status of a device.
 -/devices/<deviceID>/certificate	Pertinent Documentation	Returns fields for a device's certificates.
+-/devices/<deviceID>/shares	Pertinent Documentation	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
 -/devices/<deviceID>/shares/<shareID>	Pertinent Documentation	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
 -/devices/<deviceID>/shares	Pertinent Documentation	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
 -/users/<userID>/shares	Pertinent Documentation	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
 -/devicetypes/<deviceTypeID>	Pertinent Documentation	Returns the device type of a device.
 -/devicetypes/<deviceTypeID>	Pertinent Documentation	Returns a list of device types.
+-/devicetypes/<deviceTypeID>/manifests/latest/properties	Pertinent Documentation	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
 -/devicetypes/<deviceTypeID>/manifests/<version>/properties	Pertinent Documentation	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+-/devicetypes/<deviceTypeID>/availablemanifestversions	Pertinent Documentation	Returns the available Manifest versions for a device type.
+-/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Pertinent Documentation	Returns the status of an uploaded CSV.
+-/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Pertinent Documentation	Returns the rows that were rejected in an uploaded CSV.
 -/devicetypes/<deviceTypeId>/whitelist	Pertinent Documentation	Returns the Approved List for a device type.
 -/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Pertinent Documentation	Deletes a specified device from a device type's Approved List.
 -/devicetypes/<deviceTypeID>/whitelist/enable	Pertinent Documentation	Enables or disables a device type's Approved List.
 -/devicetypes/<deviceTypeID>/whitelist/certificates	Pertinent Documentation	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
 -/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Pertinent Documentation	Deletes an Approved List certificate for a device type.
+-/devicetypes/<deviceTypeID>/whitelist/certificates	Pertinent Documentation	Returns details of an Approved List certificate.
+-/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Pertinent Documentation	Returns a specified vendor device ID.
 -/messages	Pertinent Documentation	Sends a message.
+-/messages	Pertinent Documentation	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
 -/actions	Pertinent Documentation	Sends an Action to the specified device.
+-/actions	Pertinent Documentation	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
+-/messages/last	Pertinent Documentation	Returns the most recent normalized messages from a device or devices.
+-/messages/analytics/aggregates	Pertinent Documentation	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
 -/messages/analytics/histogram	Pertinent Documentation	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
 -/messages/presence	Pertinent Documentation	Returns presence of normalized messages.
+-/pricing/devices/<deviceID>/revenueshare/upgradepath	Pertinent Documentation	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
+-/pricing/devicetypes/<deviceTypeID>/pricingtiers	Pertinent Documentation	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
+-/pricing/devices/<deviceID>/pricingtiers	Pertinent Documentation	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
+-/messages/export	Pertinent Documentation	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
 -/messages/export/<exportID>/status	Pertinent Documentation	Returns the status of the messages export.
 -/messages/export/<exportID>/result	Pertinent Documentation	Returns the result of the export query. The result call returns the response in tgz format.
 -/messages/export/history	Pertinent Documentation	Returns a list of export queries that have been performed.
@@ -80,6 +73,13 @@ Count: 51
 -/rules/<ruleID>	Pertinent Documentation	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 -/rules/<ruleID>/executions	Pertinent Documentation	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 -/rules/<ruleID>/actions	Pertinent Documentation	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
+-/rules/<ruleID>/actions	Pertinent Documentation	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
+-/scenes	Pertinent Documentation	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
+-/scenes/<sceneID>	Pertinent Documentation	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
+-/scenes/<sceneID>	Pertinent Documentation	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+-/scenes	Pertinent Documentation	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+-/scenes/<sceneID>	Pertinent Documentation	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+-/scenes/<sceneID>	Pertinent Documentation	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
 -/ml/models	Pertinent Documentation	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
 -/ml/models/<modelID>/predict	Pertinent Documentation	Returns the predicted output for a machine learning model.
 -/ml/models/<modelID>	Pertinent Documentation	Returns a model.

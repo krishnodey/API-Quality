@@ -1,25 +1,25 @@
 ***Anti-Pattern*** 
-Count: 15
--/v18.0/{album-id}	Non-pertinent Documentation	Get Fields and Edges on an Album.
--/{group_id}/albums	Non-pertinent Documentation	When posting to this edge, an Album will be created.
+Count: 4
 -/v18.0/{album-id}/comments	Non-pertinent Documentation	GET /v18.0/{album-id}/comments
--/v18.0/{album-id}/likes	Non-pertinent Documentation	A collection of Profiles who like the Album.
--/v18.0/{album-id}/photos	Non-pertinent Documentation	A collection of Photos in the Album
--/{album_id}/photos	Non-pertinent Documentation	When posting to this edge, a Photo will be created.
--/v18.0/{album-id}/picture	Non-pertinent Documentation	A link to the Album cover photo.
--/v18.0/{app-link-host-id}	Non-pertinent Documentation	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links.
--/v18.0/{app-link-host-id}	Non-pertinent Documentation	delete app links using this edge
--/v18.0/{app-link-host-id}	Non-pertinent Documentation	update app links using this edge
--/v18.0/{application-id}	Non-pertinent Documentation	Get information about a Facebook app.
--/{business_id}/owned_apps	Non-pertinent Documentation	When posting to this edge, an Application will be created.
 -/{application_id}/accounts	Non-pertinent Documentation	When posting to this edge, a TestAccount will be created.
 -/v18.0/{application-id}/adnetworkanalytics_results	Non-pertinent Documentation	Obtain the results of an async Audience Network query for this publisher entity
--/v18.0/{application-id}/aem_attribution	Non-pertinent Documentation	aem_attribution
 -/v18.0/{application-id}/aem_conversion_filter	Non-pertinent Documentation	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
 
 ***Patterns*** 
-Count: 5
+Count: 16
+-/v18.0/{album-id}	Pertinent Documentation	Get Fields and Edges on an Album.
+-/{group_id}/albums	Pertinent Documentation	When posting to this edge, an Album will be created.
+-/v18.0/{album-id}/likes	Pertinent Documentation	A collection of Profiles who like the Album.
+-/v18.0/{album-id}/photos	Pertinent Documentation	A collection of Photos in the Album
+-/{album_id}/photos	Pertinent Documentation	When posting to this edge, a Photo will be created.
+-/v18.0/{album-id}/picture	Pertinent Documentation	A link to the Album cover photo.
+-/v18.0/{app-link-host-id}	Pertinent Documentation	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links.
 -/app/app_link_hosts	Pertinent Documentation	create app link hosts using the
+-/v18.0/{app-link-host-id}	Pertinent Documentation	delete app links using this edge
+-/v18.0/{app-link-host-id}	Pertinent Documentation	update app links using this edge
+-/v18.0/{application-id}	Pertinent Documentation	Get information about a Facebook app.
+-/{business_id}/owned_apps	Pertinent Documentation	When posting to this edge, an Application will be created.
 -/v18.0/{application-id}/accounts	Pertinent Documentation	Represents a collection of test users on an app.
 -/v18.0/{application-id}/ad_placement_groups	Pertinent Documentation	Ad placement groups for publishing ads on this app
+-/v18.0/{application-id}/aem_attribution	Pertinent Documentation	aem_attribution
 -/v18.0/{application-id}/aem_conversion_configs	Pertinent Documentation	The aggregated event measurement conversion value configs for this app

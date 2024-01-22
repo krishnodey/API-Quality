@@ -1,26 +1,14 @@
 ***Anti-Pattern*** 
-Count: 29
--/api/user	Non-pertinent Documentation	Gets list of users
--/api/collection/{systemKey}/{collectionName}	Non-pertinent Documentation	fetch collection
+Count: 17
+-/api/v/2/devices/{systemKey}/{name}	Non-pertinent Documentation	Update a device's state or custom attributes only
 -/api/collection/{systemKey}/{collectionName}	Non-pertinent Documentation	Item update
 -/api/collection/{systemKey}/{collectionName}	Non-pertinent Documentation	Item create
 -/api/collection/{systemKey}/{collectionName}	Non-pertinent Documentation	Item delete
--/api/data/{collectionID}	Non-pertinent Documentation	fetch collection
+-/api/data/{collectionID}	Non-pertinent Documentation	Item update
 -/api/data/{collectionID}	Non-pertinent Documentation	Item delete
--/api/data/{collectionid}/columns	Non-pertinent Documentation	get column key names
--/api/code/{systemKey}/{serviceName}	Non-pertinent Documentation	Calls/executes ClearCode service
--/codeadmin/v/2/library/{systemKey}	Non-pertinent Documentation	Gets the libraries for a system
--/codeadmin/v/2/library/{systemKey}/{name}	Non-pertinent Documentation	Gets the libraries for a system
--/codeadmin/v/2/library/{systemKey}/{name}	Non-pertinent Documentation	Updates the libraries for a system
--/codeadmin/v/2/library/{systemKey}/{name}	Non-pertinent Documentation	Creates libraries for a system
 -/codeadmin/v/2/library/{systemKey}/{name}	Non-pertinent Documentation	Deletes a librarie for a system
--/codeadmin/v/2/history/library/{systemKey}/{name}	Non-pertinent Documentation	Gets all versions of a library for a system
--/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	Non-pertinent Documentation	Gets a specific version of a library for a system
--/codeadmin/failed	Non-pertinent Documentation	Lists failed code service runs for all systems that a developer can access
--/codeadmin/failed/{systemKey}	Non-pertinent Documentation	Lists failed code service runs for specified system
--/codeadmin/failed/{systemKey}	Non-pertinent Documentation	Retry failed code services
--/codeadmin/failed/{systemKey}	Non-pertinent Documentation	Delete failed code service run from list
--/admin/reg	Non-pertinent Documentation	Registers a new developer account with the CB platform
+-/api/message/{systemKey}	Non-pertinent Documentation	Retrieve message history
+-/api/message/{systemKey}	Non-pertinent Documentation	Delete message history
 -/admin/logout	Non-pertinent Documentation	Logs a CB developer out of their session
 -/admin/systemmanagement	Non-pertinent Documentation	Creates a new system in a developers account
 -/admin/systemmanagement	Non-pertinent Documentation	Gets a systems info
@@ -31,7 +19,7 @@ Count: 29
 -/admin/collectionmanagement	Non-pertinent Documentation	Creates a column within an existing collection
 
 ***Patterns*** 
-Count: 16
+Count: 28
 -/api/user/reg	Pertinent Documentation	Register user
 -/api/user/auth	Pertinent Documentation	Authenticates a user into the system
 -/api/user/anon	Pertinent Documentation	Authenticates anonymous users into the system
@@ -40,11 +28,23 @@ Count: 16
 -/api/user/info	Pertinent Documentation	Returns information about a logged in user
 -/api/user/info	Pertinent Documentation	Updates a logged in users information
 -/api/user/pass	Pertinent Documentation	Changes a logged in users password
--/api/v/2/devices/{systemKey}/{name}	Pertinent Documentation	Update a device's state or custom attributes only
+-/api/user	Pertinent Documentation	Gets list of users
 -/api/v/2/devices/{SystemKey}/auth	Pertinent Documentation	Authenticates a device into the system
--/api/data/{collectionID}	Pertinent Documentation	Item update
+-/api/collection/{systemKey}/{collectionName}	Pertinent Documentation	fetch collection
+-/api/data/{collectionID}	Pertinent Documentation	fetch collection
 -/api/data/{collectionID}	Pertinent Documentation	Item create
--/api/message/{systemKey}	Pertinent Documentation	Retrieve message history
+-/api/data/{collectionid}/columns	Pertinent Documentation	get column key names
+-/api/code/{systemKey}/{serviceName}	Pertinent Documentation	Calls/executes ClearCode service
+-/codeadmin/v/2/library/{systemKey}	Pertinent Documentation	Gets the libraries for a system
+-/codeadmin/v/2/library/{systemKey}/{name}	Pertinent Documentation	Gets the libraries for a system
+-/codeadmin/v/2/library/{systemKey}/{name}	Pertinent Documentation	Updates the libraries for a system
+-/codeadmin/v/2/library/{systemKey}/{name}	Pertinent Documentation	Creates libraries for a system
+-/codeadmin/v/2/history/library/{systemKey}/{name}	Pertinent Documentation	Gets all versions of a library for a system
+-/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	Pertinent Documentation	Gets a specific version of a library for a system
+-/codeadmin/failed	Pertinent Documentation	Lists failed code service runs for all systems that a developer can access
+-/codeadmin/failed/{systemKey}	Pertinent Documentation	Lists failed code service runs for specified system
+-/codeadmin/failed/{systemKey}	Pertinent Documentation	Retry failed code services
+-/codeadmin/failed/{systemKey}	Pertinent Documentation	Delete failed code service run from list
 -/api/message/{systemKey}/publish	Pertinent Documentation	Publishes a message to a topic
--/api/message/{systemKey}	Pertinent Documentation	Delete message history
+-/admin/reg	Pertinent Documentation	Registers a new developer account with the CB platform
 -/admin/auth	Pertinent Documentation	Authorizes a CB Developer account

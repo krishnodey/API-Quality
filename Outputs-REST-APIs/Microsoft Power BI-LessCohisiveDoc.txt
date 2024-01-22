@@ -1,12 +1,10 @@
 ***Anti-Pattern*** 
-Count: 4
--/admin/tenantKeys	Non-pertinent Documentation	Adds an encryption key for Power BI workspaces assigned to a capacity.
+Count: 1
 -/admin/apps?$top={$top}	Non-pertinent Documentation	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
--/admin/workspaces/getInfo	Non-pertinent Documentation	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
--/groups/{groupId}/dashboards	Non-pertinent Documentation	Creates a new empty dashboard on the specified workspace.
 
 ***Patterns*** 
-Count: 30
+Count: 33
+-/admin/tenantKeys	Pertinent Documentation	Adds an encryption key for Power BI workspaces assigned to a capacity.
 -/admin/apps/{appId}/users	Pertinent Documentation	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
 -/admin/capacities/AssignWorkspaces	Pertinent Documentation	Assigns the provided workspaces to the specified premium capacity.
 -/admin/capacities/UnassignWorkspaces	Pertinent Documentation	Unassigns the provided workspaces from capacity.
@@ -25,6 +23,7 @@ Count: 30
 -/admin/pipelines/{pipelineId}/users/{identifier}	Pertinent Documentation	Remove user permissions from a specified deployment pipeline.
 -/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Pertinent Documentation	Rotate the encryption key for Power BI workspaces assigned to a capacity.
 -/admin/workspaces/modified	Pertinent Documentation	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
+-/admin/workspaces/getInfo	Pertinent Documentation	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
 -/apps/{appId}	Pertinent Documentation	Returns the specified installed app.
 -/apps/{appId}/dashboards/{dashboardId}	Pertinent Documentation	Returns the specified dashboard from the specified app.
 -/apps/{appId}/reports/{reportId}	Pertinent Documentation	Returns the specified report from the specified app.
@@ -37,3 +36,4 @@ Count: 30
 -/capacities/{capacityId}/Workloads	Pertinent Documentation	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
 -/AssignToCapacity	Pertinent Documentation	Assigns "My Workspace" to the specified capacity.
 -/groups/{groupId}/AssignToCapacity	Pertinent Documentation	Assigns the specified workspace to the specified capacity.
+-/groups/{groupId}/dashboards	Pertinent Documentation	Creates a new empty dashboard on the specified workspace.

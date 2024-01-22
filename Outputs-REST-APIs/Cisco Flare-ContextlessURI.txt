@@ -1,25 +1,8 @@
 ***Anti-Pattern*** 
-Count: 17
- /environments/{environment_id}/zones 	 Contextless Resource Names
- /environments/{environment_id}/zones?x={x}&y={y} 	 Contextless Resource Names
- /environments/{environment_id}/zones?key={key}&value={value} 	 Contextless Resource Names
- /environments/{environment_id}/zones 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	 Contextless Resource Names
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 8
+Count: 25
  /environments 	 Contextual Resource Names
  /environments?latitude={latitude}&longitude={longitude} 	 Contextual Resource Names
  /environments?key={key}&value={value} 	 Contextual Resource Names
@@ -27,4 +10,21 @@ Count: 8
  /environments/{environment_id} 	 Contextual Resource Names
  /environments/{environment_id} 	 Contextual Resource Names
  /environments/{environment_id} 	 Contextual Resource Names
+ /environments/{environment_id}/zones 	 Contextual Resource Names
+ /environments/{environment_id}/zones?x={x}&y={y} 	 Contextual Resource Names
+ /environments/{environment_id}/zones?key={key}&value={value} 	 Contextual Resource Names
+ /environments/{environment_id}/zones 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	 Contextual Resource Names
+ /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	 Contextual Resource Names
  /environments/{environment_id}/devices 	 Contextual Resource Names

@@ -1,29 +1,29 @@
 ***Anti-Pattern*** 
-Count: 24
-/v2/count/	 Contextless Resource Names
-/v2/next/	 Contextless Resource Names
-/v2/previous/	 Contextless Resource Names
-/v2/results/	 Contextless Resource Names
- /v2/berry/{id or name}/	 Contextless Resource Names
- /v2/berry/{id}/	 Contextless Resource Names
- /v2/berry/{name}/	 Contextless Resource Names
- /v2/berry/{growth_time}/	 Contextless Resource Names
- /v2/berry/{max_harvest}/	 Contextless Resource Names
- /v2/berry/{natural_gift_power}/	 Contextless Resource Names
- /v2/berry/{size}/	 Contextless Resource Names
- /v2/berry/{smoothness}/	 Contextless Resource Names
- /v2/berry/{soil_dryness}/	 Contextless Resource Names
- /v2/berry/{firmness}/	 Contextless Resource Names
- /v2/berry/{flavors}/	 Contextless Resource Names
- /v2/berry/{items}/	 Contextless Resource Names
- /v2/berry/{natural_gift_type}/	 Contextless Resource Names
- /v2/berry/{potency}/	 Contextless Resource Names
-/v2/berry-firmness/{id}/	 Contextless Resource Names
-/v2/berry-firmness/{id or name}/	 Contextless Resource Names
-/v2/berry-firmness/{name}/	 Contextless Resource Names
-/v2/berry-firmness/{berries}/	 Contextless Resource Names
-/v2/berry-firmness/{names}/	 Contextless Resource Names
-v2/berry-flavor/{id or name}/	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 24
+/v2/count/	 Contextual Resource Names
+/v2/next/	 Contextual Resource Names
+/v2/previous/	 Contextual Resource Names
+/v2/results/	 Contextual Resource Names
+ /v2/berry/{id or name}/	 Contextual Resource Names
+ /v2/berry/{id}/	 Contextual Resource Names
+ /v2/berry/{name}/	 Contextual Resource Names
+ /v2/berry/{growth_time}/	 Contextual Resource Names
+ /v2/berry/{max_harvest}/	 Contextual Resource Names
+ /v2/berry/{natural_gift_power}/	 Contextual Resource Names
+ /v2/berry/{size}/	 Contextual Resource Names
+ /v2/berry/{smoothness}/	 Contextual Resource Names
+ /v2/berry/{soil_dryness}/	 Contextual Resource Names
+ /v2/berry/{firmness}/	 Contextual Resource Names
+ /v2/berry/{flavors}/	 Contextual Resource Names
+ /v2/berry/{items}/	 Contextual Resource Names
+ /v2/berry/{natural_gift_type}/	 Contextual Resource Names
+ /v2/berry/{potency}/	 Contextual Resource Names
+/v2/berry-firmness/{id}/	 Contextual Resource Names
+/v2/berry-firmness/{id or name}/	 Contextual Resource Names
+/v2/berry-firmness/{name}/	 Contextual Resource Names
+/v2/berry-firmness/{berries}/	 Contextual Resource Names
+/v2/berry-firmness/{names}/	 Contextual Resource Names
+v2/berry-flavor/{id or name}/	 Contextual Resource Names
