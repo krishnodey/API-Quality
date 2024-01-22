@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 2
+get	/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Inconsistent Documentation	Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json).
+put	 /archive/{id}?accessKey={accessKey} 	Inconsistent Documentation	Archive the survey by it's id. All survey results will be still accessible. You have to delete a survey to remove the access to it's results.
+
+***Patterns*** 
+Count: 22
+put	 /setResultSummaryState?accessKey={accessKey} 	Consistent Documentation	Change the result summary state.
+get	 /getResultSummaryState/{id}?accessKey={accessKey} 	Consistent Documentation	Returns the result summary state.
+get	 /getPublicResultSummaryState/{id} 	Consistent Documentation	Returns public result summary state.
+get	 /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	Consistent Documentation	Returns survey results.
+get	 /getSurveyPublicResults/{id}?from={from}&till={till} 	Consistent Documentation	Returns survey public results.
+get	 /generateAccessKey?accessKey={accessKey} 	Consistent Documentation	Generates a new access key. The old access key becomes invalid.
+get	 /getActive?accessKey={accessKey}&ownerId={ownerId} 	Consistent Documentation	Returns the list of active surveys.
+get	 /getArchive?accessKey={accessKey}&ownerId={ownerId} 	Consistent Documentation	Returns the list of archive surveys.
+post	 /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	Consistent Documentation	Create a new survey.
+put	 /restore/{id}?accessKey={accessKey} 	Consistent Documentation	Restore an archive survey by it's id.
+delete	/delete/{id}?accessKey={accessKey}	Consistent Documentation	Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible.
+put	 /changeName/{id}?accessKey={accessKey}&name={name} 	Consistent Documentation	Change the survey name.
+put	 /changeJson?accessKey={accessKey} 	Consistent Documentation	Change the survey json.
+put	 /publish/{id}?accessKey={accessKey} 	Consistent Documentation	Publishing the survey.
+put	 /unPublish/{id}?accessKey={accessKey} 	Consistent Documentation	Disable publishing the survey.
+put	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Consistent Documentation	Enable or disable using cookies of the publishing survey.
+post	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Consistent Documentation	Enable or disable using cookies of the publishing survey.
+get	 /getIsResultPublic/{id}?accessKey={accessKey} 	Consistent Documentation	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
+put	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Consistent Documentation	Enable or disable the ability to view survey results by non autorized user via direct link.
+put	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	Consistent Documentation	Enable or disable the ability to view survey results by non autorized user via direct link.
+delete	/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Consistent Documentation	Delete the survey result. Use it to delete spam or test results.
+delete	/deleteAllResults/{id}?accessKey={accessKey}	Consistent Documentation	Delete all survey results. Use it to delete all tested results before running survey.

@@ -25,3 +25,6 @@ JSON >>JavaScript Object Notation
 hdmi>>high definition multimedia interface
 cec>>consumer electronics control
 app>>application
+ig >> instagram
+oauth>>authentication
+datasource>>data source

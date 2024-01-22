@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 39
+ /api/getAccess 	 Contextless Resource Names
+ /bui/getBUIAllConfig 	 Contextless Resource Names
+ /bui/getAllowedStatus 	 Contextless Resource Names
+ /bui/getMyTicketDetails({persid}) 	 Contextless Resource Names
+ /bui/getTicketsCustomData({persid}) 	 Contextless Resource Names
+ /bui/getDefaultCategories 	 Contextless Resource Names
+ /bui/attrInfo 	 Contextless Resource Names
+ /bui/attrCtrl 	 Contextless Resource Names
+ /bui/addLogComment 	 Contextless Resource Names
+ /bui/changeStatus/{factory}({persid}) 	 Contextless Resource Names
+ /bui/allFeeds({persid}) 	 Contextless Resource Names
+ /bui/attmnt 	 Contextless Resource Names
+ /bui/getBopSID 	 Contextless Resource Names
+ /bui/attmnt({persid})/$value 	 Contextless Resource Names
+ /bui/updateStatusForNotification 	 Contextless Resource Names
+ /bui/updateStatusForAllNotification 	 Contextless Resource Names
+ /bui/getMyResources 	 Contextless Resource Names
+ /bui/getMyActiveChatSession 	 Contextless Resource Names
+ /bui/checkActiveSessions 	 Contextless Resource Names
+ /bui/createChatThread 	 Contextless Resource Names
+ /bui/getChatHistory/{roomName} 	 Contextless Resource Names
+ /bui/getDocument({id}) 	 Contextless Resource Names
+ /bui/getKDAttachments({id}) 	 Contextless Resource Names
+ /bui/getKDComments({id}) 	 Contextless Resource Names
+ /bui/addKDComment({id}) 	 Contextless Resource Names
+ /bui/rateDocument({id}) 	 Contextless Resource Names
+ /bui/kdLinkInfo({id}) 	 Contextless Resource Names
+ /bui/unLinkSolution({id}) 	 Contextless Resource Names
+ /bui/helpAbout 	 Contextless Resource Names
+ /bui/getEEMAuth 	 Contextless Resource Names
+ /bui/{factory}({persid}) 	 Contextless Resource Names
+ /bui/{factory}({persid}) 	 Contextless Resource Names
+ /bui/{factory} 	 Contextless Resource Names
+ /bui/{factory} 	 Contextless Resource Names
+ /gs/mytkt_active 	 Contextless Resource Names
+ /gs/mytkt_inactive 	 Contextless Resource Names
+ /getServiceRequest 	 Contextless Resource Names
+ /pcatSearch 	 Contextless Resource Names
+ /getOfferings 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 1
+ /suggestedSolutions 	 Contextual Resource Names

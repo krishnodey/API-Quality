@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 21
+/{ig-comment-id}?fields={fields}	Non-standard End-point	 [black space/tab found] 
+/{ig-comment-id}?hide={hide}	Non-standard End-point	 [black space/tab found] 
+/{ig-comment-id}	Non-standard End-point	 [black space/tab found] 
+/oauth/authorize	Non-standard End-point	 [black space/tab found] 
+/oauth/access_token	Non-standard End-point	 [black space/tab found] 
+/access_token	Non-standard End-point	 [black space/tab found] 
+/refresh_access_token	Non-standard End-point	 [black space/tab found] 
+/oauth/authorize	Non-standard End-point	 [black space/tab found] 
+/{media-id}	Non-standard End-point	 [black space/tab found] 
+/{media-id}/children	Non-standard End-point	 [black space/tab found] 
+/{user-id}/media	Non-standard End-point	 [black space/tab found] 
+/me	Non-standard End-point	 [black space/tab found] 
+/{user-id}	Non-standard End-point	 [black space/tab found] 
+/{user-id}/media	Non-standard End-point	 [black space/tab found] 
+/{ig-hashtag-id}	Non-standard End-point	 [black space/tab found] 
+/{ig-media-id}?fields={fields}	Non-standard End-point	 [black space/tab found] 
+/{ig-media-id}?comment_enabled={comment_enabled}	Non-standard End-point	 [black space/tab found] 
+/{ig-media-id}/comments?message={message}	Non-standard End-point	 [black space/tab found] 
+/{ig-media-id}/comments	Non-standard End-point	 [black space/tab found] 
+/{ig-user-id}?fields={fields}	Non-standard End-point	 [black space/tab found] 
+/{page-id}?fields=instagram_business_account	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

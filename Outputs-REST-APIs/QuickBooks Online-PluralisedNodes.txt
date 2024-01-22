@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 12
+POST 	/company/<realmID>/account	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/account	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/bill	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/bill?operation=delete	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/bill	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/companyinfo	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/companyinfo	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/invoice	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/invoice?operation=delete	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/invoice?operation=void	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/invoice	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/company/<realmID>/purchase	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 9
+GET 	/company/<realmID>/query?query=<selectStatement>	 regular methods.
+GET 	/company/<realmID>/account/<accountId>	 regular methods.
+GET 	/company/<realmID>/query?query=<selectStatement>	 regular methods.
+GET 	/company/<realmID>/bill/<billId>	 regular methods.
+GET 	/company/<realmID>/query?query=<selectStatement>	 regular methods.
+GET 	/company/<realmID>/companyinfo/<realmID>	 regular methods.
+GET 	/company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	 regular methods.
+GET 	/company/<realmID>/invoice/<invoiceId>/pdf	 regular methods.
+GET 	/company/<realmID>/query?query=<selectStatement>	 regular methods.

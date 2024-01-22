@@ -1,4 +1,4 @@
-GitHoub
+GitHub
 Facebook
 Shopify
 Pokeapi

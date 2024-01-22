@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+/ping	 Self-descriptive End-point
+/pingInStoreReader	 Self-descriptive End-point
+/viewer	 Self-descriptive End-point
+/clientConfiguration	 Self-descriptive End-point
+/node	 Self-descriptive End-point
+/idFromLegacyId	 Self-descriptive End-point
+/report	 Self-descriptive End-point
+/search	 Self-descriptive End-point
+/paypalFinancingOptions	 Self-descriptive End-point
+/inStoreLocations	 Self-descriptive End-point
+/authorizePaymentMethod	 Self-descriptive End-point
+/authorizePayPalAccount	 Self-descriptive End-point
+/authorizeVenmoAccount	 Self-descriptive End-point
+/authorizeCreditCard	 Self-descriptive End-point
+/captureTransaction	 Self-descriptive End-point

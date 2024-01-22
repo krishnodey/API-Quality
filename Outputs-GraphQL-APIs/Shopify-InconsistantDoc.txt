@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 5
+post	/mutations/storefrontAccessTokenDelete	Inconsistent Documentation	Deletes a storefront access token.
+post	queries/shopifyqlQuery	Inconsistent Documentation	Returns the results of a ShopifyQL query
+post	 /objects/PolarisVizDataPoint	Inconsistent Documentation	A PolarisViz data point structure for ShopifyQL query.
+post	 /objects/PolarisVizResponse 	Inconsistent Documentation	A PolarisViz response to a ShopifyQL query.
+post	 /objects/TableResponse 	Inconsistent Documentation	The default table response structure for a ShopifyQL query.
+
+***Patterns*** 
+Count: 11
+post	/mutations/delegateAccessTokenCreate	Consistent Documentation	creating a delegate access token.
+post	/mutations/storefrontAccessTokenCreate	Consistent Documentation	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
+post	/objects/AccessScope	Consistent Documentation	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
+post	/objects/DelegateAccessToken	Consistent Documentation	A token that delegates a set of scopes from the original permission.
+post	/objects/StorefrontAccessToken	Consistent Documentation	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
+post	 /objects/ErrorPosition 	Consistent Documentation	Error position information in a ShopifyQL parsing error.
+post	 /objects/ParseError 	Consistent Documentation	A ShopifyQL parsing error.
+post	 /objects/ParseErrorRange	Consistent Documentation	A range of ShopifyQL parsing errors.
+post	/objects/PolarisVizDataSeries	Consistent Documentation	The data series used for PolarisViz visualization.
+post	 /objects/TableData 	Consistent Documentation	The result in a tabular format with schema information and formatted and unformatted row data.
+post	 /objects/TableDataColumn 	Consistent Documentation	A nested array representation of the data. An index in an array represents a row number.

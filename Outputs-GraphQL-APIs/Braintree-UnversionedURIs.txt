@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 15
+/ping [No version found.]
+/pingInStoreReader [No version found.]
+/viewer [No version found.]
+/clientConfiguration [No version found.]
+/node [No version found.]
+/idFromLegacyId [No version found.]
+/report [No version found.]
+/search [No version found.]
+/paypalFinancingOptions [No version found.]
+/inStoreLocations [No version found.]
+/authorizePaymentMethod [No version found.]
+/authorizePayPalAccount [No version found.]
+/authorizeVenmoAccount [No version found.]
+/authorizeCreditCard [No version found.]
+/captureTransaction [No version found.]
+
+***Patterns*** 
+Count: 0

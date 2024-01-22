@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 3
+-/objects/PolarisVizDataPoint	Non-pertinent Documentation	A PolarisViz data point structure for ShopifyQL query.
+-/objects/PolarisVizDataSeries	Non-pertinent Documentation	The data series used for PolarisViz visualization.
+-/objects/PolarisVizResponse	Non-pertinent Documentation	A PolarisViz response to a ShopifyQL query.
+
+***Patterns*** 
+Count: 13
+-/mutations/delegateAccessTokenCreate	Pertinent Documentation	creating a delegate access token.
+-/mutations/storefrontAccessTokenCreate	Pertinent Documentation	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
+-/mutations/storefrontAccessTokenDelete	Pertinent Documentation	Deletes a storefront access token.
+-/objects/AccessScope	Pertinent Documentation	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
+-/objects/DelegateAccessToken	Pertinent Documentation	A token that delegates a set of scopes from the original permission.
+-/objects/StorefrontAccessToken	Pertinent Documentation	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
+-queries/shopifyqlQuery	Pertinent Documentation	Returns the results of a ShopifyQL query
+-/objects/ErrorPosition	Pertinent Documentation	Error position information in a ShopifyQL parsing error.
+-/objects/ParseError	Pertinent Documentation	A ShopifyQL parsing error.
+-/objects/ParseErrorRange	Pertinent Documentation	A range of ShopifyQL parsing errors.
+-/objects/TableData	Pertinent Documentation	The result in a tabular format with schema information and formatted and unformatted row data.
+-/objects/TableDataColumn	Pertinent Documentation	A nested array representation of the data. An index in an array represents a row number.
+-/objects/TableResponse	Pertinent Documentation	The default table response structure for a ShopifyQL query.

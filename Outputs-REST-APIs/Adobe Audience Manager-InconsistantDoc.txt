@@ -1,0 +1,70 @@
+***Anti-Pattern*** 
+Count: 8
+post	 /models/bulk-delete 	Inconsistent Documentation	Delete multiple algorithmic models with a single operation.
+get	/models/limits	Inconsistent Documentation	Returns a count of the maximum number of algorithmic models you can create.
+post	 /data-feeds/billing-report 	Inconsistent Documentation	Gets the billing report for last month in CSV format
+put	 /data-feeds/{dataSourceId}/subscriptions 	Inconsistent Documentation	Updates the list of 'Subscriptions' under a 'Data Feed'.
+post	 /datasources/bulk-delete 	Inconsistent Documentation	Bulk delete multiple data sources.
+get	/signals/derived/limits	Inconsistent Documentation	Returns a count of the maximum number of derived signals you can create.
+get	/destinations/limits	Inconsistent Documentation	Returns a count of the maximum number of destinations you can create.
+post	 /destinations/{destinationId}/bulk-delete 	Inconsistent Documentation	Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.
+
+***Patterns*** 
+Count: 57
+put	 /models/{modelId} 	Consistent Documentation	Updates an algorithmic model.
+delete	/models/{modelId}	Consistent Documentation	Deletes an algorithmic model.
+get	 /models 	Consistent Documentation	Returns an array of algorithmic models and their summary.
+post	 /models 	Consistent Documentation	Creates an algorithmic model.
+get	 /models/{modelId}/processing-history 	Consistent Documentation	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
+get	 /models/{modelId}/runs/latest/traits 	Consistent Documentation	Returns a list of your most influential (accurate) traits for your algorithmic model.
+get	 /models/{modelId}/runs/latest/stats 	Consistent Documentation	Returns accuracy and reach values for your algorithmic model.
+get	 /algorithms/{algoTypeId} 	Consistent Documentation	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
+get	 /algorithms 	Consistent Documentation	Returns ID, name, and description for the available algorithms.
+get	 /available-data-feeds/ 	Consistent Documentation	Gets the 'Available Data Feed' resources for a buyer.
+get	 /available-data-feeds/{dataSourceId} 	Consistent Documentation	Gets the data feed from the perspective of the buyer.
+get	 /available-data-feeds/{dataSourceId}/plans 	Consistent Documentation	Gets the plans which belong to the data feed, from the perspective of the buyer.
+post	 /available-data-feeds/{dataSourceId}/subscribe 	Consistent Documentation	Creates/Updates subscription to an available data feed.
+post	 /available-data-feeds/{dataSourceId}/requests 	Consistent Documentation	Creates a request for an available data feed.
+get	 /data-feeds/billing-report 	Consistent Documentation	Gets the billing report for last month
+post	 /data-feeds/usage 	Consistent Documentation	Inserts impression data for the plan subscription for last month.
+post	 /data-feeds/bulk-usage 	Consistent Documentation	Inserts bulk impression data for multiple plan subscriptions for last month.
+get	 /destinations/segment-impressions/ 	Consistent Documentation	Returns all the segments and corresponding impression counts for all destinations
+patch	/destinations/segment-impressions/	Consistent Documentation	Updates the segments and corresponding impression counts for destinations
+get	 /data-feeds/ 	Consistent Documentation	Gets the `Data Feed` resources.
+post	 /data-feeds/ 	Consistent Documentation	Creates a new `Data Feed`.
+get	 /data-feeds/{dataSourceId} 	Consistent Documentation	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+put	 /data-feeds/{dataSourceId} 	Consistent Documentation	Updates the 'Data Feed'.
+delete	/data-feeds/{dataSourceId}	Consistent Documentation	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+get	 /data-feeds/{dataSourceId}/plans/ 	Consistent Documentation	Gets the list of plans under a 'Data Feed'.
+post	 /data-feeds/{dataSourceId}/plans/ 	Consistent Documentation	Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.
+get	 /data-feeds/{dataSourceId}/subscriptions 	Consistent Documentation	Gets the list of 'Subscriptions' under a 'Data Feed'.
+get	 /data-feeds/{dataSourceId}/requests/ 	Consistent Documentation	Gets the list of 'Subscriptions Request' under a 'Data Feed'.
+post	 /data-feeds/{dataSourceId}/requests/ 	Consistent Documentation	Creates a 'Subscription' under a 'Data Feed'.
+get	 /data-feeds/{dataSourceId}/requests/{requestId} 	Consistent Documentation	Gets a 'Data Feed Request' with 'requestId'.
+put	 /data-feeds/{dataSourceId}/requests/{requestId} 	Consistent Documentation	Updates an existing 'Data Feed Request'.
+get	 /data-feeds/{dataSourceId}/potential-subscribers/ 	Consistent Documentation	Returns the list of potential subscribers for a 'Data Feed'.
+get	 /data-feeds/{dataSourceId}/plans/{planId} 	Consistent Documentation	Gets a 'Data Feed Plan' under a 'Data Feed'.
+put	 /data-feeds/{dataSourceId}/plans/{planId} 	Consistent Documentation	Updates a 'Data Feed Plan' under a 'Data Feed'.
+delete	/data-feeds/{dataSourceId}/plans/{planId}	Consistent Documentation	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+get	 /datasources/ 	Consistent Documentation	Returns details about all GENERAL data sources.
+post	 /datasources/ 	Consistent Documentation	Creates a Data Source of the type GENERAL or MERGE RULE.
+get	 /datasources/{dataSourceId} 	Consistent Documentation	Returns details about a specific data source.
+put	 /datasources/{dataSourceId} 	Consistent Documentation	Update a specific GENERAL or MERGE_RULE data source.
+delete	/datasources/{dataSourceId}	Consistent Documentation	Delete a specific data source.
+get	 /datasources/configurations/available-id-types 	Consistent Documentation	Returns all available data source ID types.
+get	 /datasources/configurations/marketing-cloud-visitorid-versions 	Consistent Documentation	Returns a list of all active Experience Cloud visitor ID versions.
+get	 /datasources/{dataSourceId}/history/inbound 	Consistent Documentation	Returns Onboarding Status Report with success and failure rates for inbound data source files.
+get	 /datasources/{dataSourceId}/history/inbound/sampling-data 	Consistent Documentation	Returns sampling data for a datasource for onboarding (inbound) files.
+get	 /signals/derived/{derivedSignalId} 	Consistent Documentation	Returns information about a single derived signal.
+put	 /signals/derived/{derivedSignalId} 	Consistent Documentation	Updates a single derived signal.
+delete	/signals/derived/{derivedSignalId}	Consistent Documentation	Deletes a single derived signal.
+get	 /signals/derived 	Consistent Documentation	Returns an array of derived signals and their information.
+post	 /signals/derived 	Consistent Documentation	Creates a new derived signal
+post	 /destinations/ 	Consistent Documentation	Creates a new destination.
+get	 /destinations/ 	Consistent Documentation	Returns data for all your destinations.
+get	 /destinations/{destinationId}/history/outbound/ 	Consistent Documentation	Returns outbound history for a specific destination by 'destinationId'.
+get	 /destinations/{destinationId} 	Consistent Documentation	Returns a specific destination by 'destinationId'.
+delete	/destinations/{destinationId}	Consistent Documentation	Deletes a specific destination by 'destinationId'.
+put	 /destinations/{destinationId} 	Consistent Documentation	Updates a specific destination by 'destinationId'.
+post	 /destinations/{destinationId}/bulk-create 	Consistent Documentation	Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.
+get	 /destinations/{destinationId}/mappings-by-priority/ 	Consistent Documentation	Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.

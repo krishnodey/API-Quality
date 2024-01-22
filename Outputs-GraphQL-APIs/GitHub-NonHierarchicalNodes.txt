@@ -1,0 +1,261 @@
+***Anti-Pattern*** 
+Count: 22
+ /mutations/addDiscussionPollVote 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between poll and vote. 0 hierarchical relations were detected out of 4
+ /mutations/addEnterpriseOrganizationMember 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 4
+ /mutations/archiveRepository 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between archive and repository. 0 hierarchical relations were detected out of 2
+ /mutations/changeUserStatus 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between mutations and change. 0 hierarchical relations were detected out of 3
+ /mutations/clearLabelsFromLabelable 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between clear and labels. 0 hierarchical relations were detected out of 3
+ /mutations/createCheckRun 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and check. 0 hierarchical relations were detected out of 3
+ /mutations/createCheckSuite 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and check. 0 hierarchical relations were detected out of 3
+ /mutations/createEnterpriseOrganization 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 3
+ /mutations/createProject 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 2
+ /mutations/createProjectV2 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 2
+ /mutations/createProjectV2Field 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 3
+ /mutations/grantEnterpriseOrganizationsMigratorRole 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organizations. 0 hierarchical relations were detected out of 5
+ /mutations/minimizeComment 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between minimize and comment. 0 hierarchical relations were detected out of 2
+ /mutations/moveProjectCard 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between move and project. 0 hierarchical relations were detected out of 3
+ /mutations/moveProjectColumn 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between move and project. 0 hierarchical relations were detected out of 3
+ /mutations/removeEnterpriseOrganization 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 3
+ /mutations/revokeEnterpriseOrganizationsMigratorRole 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organizations. 0 hierarchical relations were detected out of 5
+ /mutations/startOrganizationMigration 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between start and organization. 0 hierarchical relations were detected out of 3
+ /mutations/transferEnterpriseOrganization 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 3
+ /mutations/transferIssue 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between transfer and issue. 0 hierarchical relations were detected out of 2
+ /mutations/updateEnterpriseOrganizationProjectsSetting 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 5
+ /mutations/updateProjectV2ItemPosition 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between item and position. 0 hierarchical relations were detected out of 4
+
+***Patterns*** 
+Count: 234
+ /queries/codeOfConduct 	Hierarchical Nodes	
+ /queries/codesOfConduct 	Hierarchical Nodes	
+ /queries/enterprise 	Hierarchical Nodes	
+ /queries/enterpriseAdministratorInvitation 	Hierarchical Nodes	
+ /queries/enterpriseAdministratorInvitationByToken 	Hierarchical Nodes	
+ /queries/license 	Hierarchical Nodes	
+ /queries/licenses 	Hierarchical Nodes	
+ /queries/marketplaceCategories 	Hierarchical Nodes	
+ /queries/marketplaceCategory 	Hierarchical Nodes	
+ /queries/marketplaceListing 	Hierarchical Nodes	
+ /queries/marketplaceListings 	Hierarchical Nodes	
+ /queries/meta 	Hierarchical Nodes	
+ /queries/node 	Hierarchical Nodes	
+ /queries/nodes 	Hierarchical Nodes	
+ /queries/organization 	Hierarchical Nodes	
+ /queries/rateLimit 	Hierarchical Nodes	
+ /queries/relay 	Hierarchical Nodes	
+ /queries/repository 	Hierarchical Nodes	
+ /queries/repositoryOwner 	Hierarchical Nodes	
+ /queries/resource 	Hierarchical Nodes	
+ /queries/search 	Hierarchical Nodes	
+ /queries/securityAdvisories 	Hierarchical Nodes	
+ /queries/securityAdvisory 	Hierarchical Nodes	
+ /queries/securityVulnerabilities 	Hierarchical Nodes	
+ /queries/sponsorables 	Hierarchical Nodes	
+ /queries/topic 	Hierarchical Nodes	
+ /queries/user 	Hierarchical Nodes	
+ /queries/viewer 	Hierarchical Nodes	
+ /mutations/abortQueuedMigrations 	Hierarchical Nodes	
+ /mutations/abortRepositoryMigration 	Hierarchical Nodes	
+ /mutations/acceptEnterpriseAdministratorInvitation 	Hierarchical Nodes	
+ /mutations/acceptTopicSuggestion 	Hierarchical Nodes	
+ /mutations/addAssigneesToAssignable 	Hierarchical Nodes	
+ /mutations/addComment 	Hierarchical Nodes	
+ /mutations/addDiscussionComment 	Hierarchical Nodes	
+ /mutations/addEnterpriseSupportEntitlement 	Hierarchical Nodes	
+ /mutations/addLabelsToLabelable 	Hierarchical Nodes	
+ /mutations/addProjectCard 	Hierarchical Nodes	
+ /mutations/addProjectColumn 	Hierarchical Nodes	
+ /mutations/addProjectV2DraftIssue 	Hierarchical Nodes	
+ /mutations/addProjectV2ItemById 	Hierarchical Nodes	
+ /mutations/addPullRequestReview 	Hierarchical Nodes	
+ /mutations/addPullRequestReviewComment 	Hierarchical Nodes	
+ /mutations/addPullRequestReviewThread 	Hierarchical Nodes	
+ /mutations/addPullRequestReviewThreadReply 	Hierarchical Nodes	
+ /mutations/addReaction 	Hierarchical Nodes	
+ /mutations/addStar 	Hierarchical Nodes	
+ /mutations/addUpvote 	Hierarchical Nodes	
+ /mutations/addVerifiableDomain 	Hierarchical Nodes	
+ /mutations/approveDeployments 	Hierarchical Nodes	
+ /mutations/approveVerifiableDomain 	Hierarchical Nodes	
+ /mutations/archiveProjectV2Item 	Hierarchical Nodes	
+ /mutations/cancelEnterpriseAdminInvitation 	Hierarchical Nodes	
+ /mutations/cancelSponsorship 	Hierarchical Nodes	
+ /mutations/clearProjectV2ItemFieldValue 	Hierarchical Nodes	
+ /mutations/cloneProject 	Hierarchical Nodes	
+ /mutations/cloneTemplateRepository 	Hierarchical Nodes	
+ /mutations/closeDiscussion 	Hierarchical Nodes	
+ /mutations/closeIssue 	Hierarchical Nodes	
+ /mutations/closePullRequest 	Hierarchical Nodes	
+ /mutations/convertProjectCardNoteToIssue 	Hierarchical Nodes	
+ /mutations/convertPullRequestToDraft 	Hierarchical Nodes	
+ /mutations/copyProjectV2 	Hierarchical Nodes	
+ /mutations/createAttributionInvitation 	Hierarchical Nodes	
+ /mutations/createBranchProtectionRule 	Hierarchical Nodes	
+ /mutations/createCommitOnBranch 	Hierarchical Nodes	
+ /mutations/createDeployment 	Hierarchical Nodes	
+ /mutations/createDeploymentStatus 	Hierarchical Nodes	
+ /mutations/createDiscussion 	Hierarchical Nodes	
+ /mutations/createEnvironment 	Hierarchical Nodes	
+ /mutations/createIpAllowListEntry 	Hierarchical Nodes	
+ /mutations/createIssue 	Hierarchical Nodes	
+ /mutations/createLabel 	Hierarchical Nodes	
+ /mutations/createLinkedBranch 	Hierarchical Nodes	
+ /mutations/createMigrationSource 	Hierarchical Nodes	
+ /mutations/createPullRequest 	Hierarchical Nodes	
+ /mutations/createRef 	Hierarchical Nodes	
+ /mutations/createRepository 	Hierarchical Nodes	
+ /mutations/createRepositoryRuleset 	Hierarchical Nodes	
+ /mutations/createSponsorsListing 	Hierarchical Nodes	
+ /mutations/createSponsorsTier 	Hierarchical Nodes	
+ /mutations/createSponsorship 	Hierarchical Nodes	
+ /mutations/createSponsorships 	Hierarchical Nodes	
+ /mutations/createTeamDiscussion 	Hierarchical Nodes	
+ /mutations/createTeamDiscussionComment 	Hierarchical Nodes	
+ /mutations/declineTopicSuggestion 	Hierarchical Nodes	
+ /mutations/deleteBranchProtectionRule 	Hierarchical Nodes	
+ /mutations/deleteDeployment 	Hierarchical Nodes	
+ /mutations/deleteDiscussion 	Hierarchical Nodes	
+ /mutations/deleteDiscussionComment 	Hierarchical Nodes	
+ /mutations/deleteEnvironment 	Hierarchical Nodes	
+ /mutations/deleteIpAllowListEntry 	Hierarchical Nodes	
+ /mutations/deleteIssue 	Hierarchical Nodes	
+ /mutations/deleteIssueComment 	Hierarchical Nodes	
+ /mutations/deleteLabel 	Hierarchical Nodes	
+ /mutations/deleteLinkedBranch 	Hierarchical Nodes	
+ /mutations/deletePackageVersion 	Hierarchical Nodes	
+ /mutations/deleteProject 	Hierarchical Nodes	
+ /mutations/deleteProjectCard 	Hierarchical Nodes	
+ /mutations/deleteProjectColumn 	Hierarchical Nodes	
+ /mutations/deleteProjectV2 	Hierarchical Nodes	
+ /mutations/deleteProjectV2Field 	Hierarchical Nodes	
+ /mutations/deleteProjectV2Item 	Hierarchical Nodes	
+ /mutations/deleteProjectV2Workflow 	Hierarchical Nodes	
+ /mutations/deletePullRequestReview 	Hierarchical Nodes	
+ /mutations/deletePullRequestReviewComment 	Hierarchical Nodes	
+ /mutations/deleteRef 	Hierarchical Nodes	
+ /mutations/deleteRepositoryRuleset 	Hierarchical Nodes	
+ /mutations/deleteTeamDiscussion 	Hierarchical Nodes	
+ /mutations/deleteTeamDiscussionComment 	Hierarchical Nodes	
+ /mutations/deleteVerifiableDomain 	Hierarchical Nodes	
+ /mutations/dequeuePullRequest 	Hierarchical Nodes	
+ /mutations/disablePullRequestAutoMerge 	Hierarchical Nodes	
+ /mutations/dismissPullRequestReview 	Hierarchical Nodes	
+ /mutations/dismissRepositoryVulnerabilityAlert 	Hierarchical Nodes	
+ /mutations/enablePullRequestAutoMerge 	Hierarchical Nodes	
+ /mutations/enqueuePullRequest 	Hierarchical Nodes	
+ /mutations/followOrganization 	Hierarchical Nodes	
+ /mutations/followUser 	Hierarchical Nodes	
+ /mutations/grantMigratorRole 	Hierarchical Nodes	
+ /mutations/importProject 	Hierarchical Nodes	
+ /mutations/inviteEnterpriseAdmin 	Hierarchical Nodes	
+ /mutations/linkProjectV2ToRepository 	Hierarchical Nodes	
+ /mutations/linkProjectV2ToTeam 	Hierarchical Nodes	
+ /mutations/linkRepositoryToProject 	Hierarchical Nodes	
+ /mutations/lockLockable 	Hierarchical Nodes	
+ /mutations/markDiscussionCommentAsAnswer 	Hierarchical Nodes	
+ /mutations/markFileAsViewed 	Hierarchical Nodes	
+ /mutations/markProjectV2AsTemplate 	Hierarchical Nodes	
+ /mutations/markPullRequestReadyForReview 	Hierarchical Nodes	
+ /mutations/mergeBranch 	Hierarchical Nodes	
+ /mutations/mergePullRequest 	Hierarchical Nodes	
+ /mutations/pinIssue 	Hierarchical Nodes	
+ /mutations/publishSponsorsTier 	Hierarchical Nodes	
+ /mutations/regenerateEnterpriseIdentityProviderRecoveryCodes 	Hierarchical Nodes	
+ /mutations/regenerateVerifiableDomainToken 	Hierarchical Nodes	
+ /mutations/rejectDeployments 	Hierarchical Nodes	
+ /mutations/removeAssigneesFromAssignable 	Hierarchical Nodes	
+ /mutations/removeEnterpriseAdmin 	Hierarchical Nodes	
+ /mutations/removeEnterpriseIdentityProvider 	Hierarchical Nodes	
+ /mutations/removeEnterpriseMember 	Hierarchical Nodes	
+ /mutations/removeEnterpriseSupportEntitlement 	Hierarchical Nodes	
+ /mutations/removeLabelsFromLabelable 	Hierarchical Nodes	
+ /mutations/removeOutsideCollaborator 	Hierarchical Nodes	
+ /mutations/removeReaction 	Hierarchical Nodes	
+ /mutations/removeStar 	Hierarchical Nodes	
+ /mutations/removeUpvote 	Hierarchical Nodes	
+ /mutations/reopenDiscussion 	Hierarchical Nodes	
+ /mutations/reopenIssue 	Hierarchical Nodes	
+ /mutations/reopenPullRequest 	Hierarchical Nodes	
+ /mutations/requestReviews 	Hierarchical Nodes	
+ /mutations/rerequestCheckSuite 	Hierarchical Nodes	
+ /mutations/resolveReviewThread 	Hierarchical Nodes	
+ /mutations/retireSponsorsTier 	Hierarchical Nodes	
+ /mutations/revertPullRequest 	Hierarchical Nodes	
+ /mutations/revokeMigratorRole 	Hierarchical Nodes	
+ /mutations/setEnterpriseIdentityProvider 	Hierarchical Nodes	
+ /mutations/setOrganizationInteractionLimit 	Hierarchical Nodes	
+ /mutations/setRepositoryInteractionLimit 	Hierarchical Nodes	
+ /mutations/setUserInteractionLimit 	Hierarchical Nodes	
+ /mutations/startRepositoryMigration 	Hierarchical Nodes	
+ /mutations/submitPullRequestReview 	Hierarchical Nodes	
+ /mutations/unarchiveProjectV2Item 	Hierarchical Nodes	
+ /mutations/unarchiveRepository 	Hierarchical Nodes	
+ /mutations/unfollowOrganization 	Hierarchical Nodes	
+ /mutations/unfollowUser 	Hierarchical Nodes	
+ /mutations/unlinkProjectV2FromRepository 	Hierarchical Nodes	
+ /mutations/unlinkProjectV2FromTeam 	Hierarchical Nodes	
+ /mutations/unlinkRepositoryFromProject 	Hierarchical Nodes	
+ /mutations/unlockLockable 	Hierarchical Nodes	
+ /mutations/unmarkDiscussionCommentAsAnswer 	Hierarchical Nodes	
+ /mutations/unmarkFileAsViewed 	Hierarchical Nodes	
+ /mutations/unmarkIssueAsDuplicate 	Hierarchical Nodes	
+ /mutations/unmarkProjectV2AsTemplate 	Hierarchical Nodes	
+ /mutations/unminimizeComment 	Hierarchical Nodes	
+ /mutations/unpinIssue 	Hierarchical Nodes	
+ /mutations/unresolveReviewThread 	Hierarchical Nodes	
+ /mutations/unsubscribeFromNotifications 	Hierarchical Nodes	
+ /mutations/updateBranchProtectionRule 	Hierarchical Nodes	
+ /mutations/updateCheckRun 	Hierarchical Nodes	
+ /mutations/updateCheckSuitePreferences 	Hierarchical Nodes	
+ /mutations/updateDiscussion 	Hierarchical Nodes	
+ /mutations/updateDiscussionComment 	Hierarchical Nodes	
+ /mutations/updateEnterpriseAdministratorRole 	Hierarchical Nodes	
+ /mutations/updateEnterpriseAllowPrivateRepositoryForkingSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseDefaultRepositoryPermissionSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanCreateRepositoriesSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanDeleteIssuesSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanDeleteRepositoriesSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanInviteCollaboratorsSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanMakePurchasesSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseMembersCanViewDependencyInsightsSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseOwnerOrganizationRole 	Hierarchical Nodes	
+ /mutations/updateEnterpriseProfile 	Hierarchical Nodes	
+ /mutations/updateEnterpriseRepositoryProjectsSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseTeamDiscussionsSetting 	Hierarchical Nodes	
+ /mutations/updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Hierarchical Nodes	
+ /mutations/updateEnvironment 	Hierarchical Nodes	
+ /mutations/updateIpAllowListEnabledSetting 	Hierarchical Nodes	
+ /mutations/updateIpAllowListEntry 	Hierarchical Nodes	
+ /mutations/updateIpAllowListForInstalledAppsEnabledSetting 	Hierarchical Nodes	
+ /mutations/updateIssue 	Hierarchical Nodes	
+ /mutations/updateIssueComment 	Hierarchical Nodes	
+ /mutations/updateLabel 	Hierarchical Nodes	
+ /mutations/updateNotificationRestrictionSetting 	Hierarchical Nodes	
+ /mutations/updateOrganizationAllowPrivateRepositoryForkingSetting 	Hierarchical Nodes	
+ /mutations/updateOrganizationWebCommitSignoffSetting 	Hierarchical Nodes	
+ /mutations/updatePatreonSponsorability 	Hierarchical Nodes	
+ /mutations/updateProject 	Hierarchical Nodes	
+ /mutations/updateProjectCard 	Hierarchical Nodes	
+ /mutations/updateProjectColumn 	Hierarchical Nodes	
+ /mutations/updateProjectV2 	Hierarchical Nodes	
+ /mutations/updateProjectV2Collaborators 	Hierarchical Nodes	
+ /mutations/updateProjectV2DraftIssue 	Hierarchical Nodes	
+ /mutations/updateProjectV2ItemFieldValue 	Hierarchical Nodes	
+ /mutations/updatePullRequest 	Hierarchical Nodes	
+ /mutations/updatePullRequestBranch 	Hierarchical Nodes	
+ /mutations/updatePullRequestReview 	Hierarchical Nodes	
+ /mutations/updatePullRequestReviewComment 	Hierarchical Nodes	
+ /mutations/updateRef 	Hierarchical Nodes	
+ /mutations/updateRefs 	Hierarchical Nodes	
+ /mutations/updateRepository 	Hierarchical Nodes	
+ /mutations/updateRepositoryRuleset 	Hierarchical Nodes	
+ /mutations/updateRepositoryWebCommitSignoffSetting 	Hierarchical Nodes	
+ /mutations/updateSponsorshipPreferences 	Hierarchical Nodes	
+ /mutations/updateSubscription 	Hierarchical Nodes	
+ /mutations/updateTeamDiscussion 	Hierarchical Nodes	
+ /mutations/updateTeamDiscussionComment 	Hierarchical Nodes	
+ /mutations/updateTeamReviewAssignment 	Hierarchical Nodes	
+ /mutations/updateTeamsRepository 	Hierarchical Nodes	
+ /mutations/updateTopics 	Hierarchical Nodes	
+ /mutations/verifyVerifiableDomain 	Hierarchical Nodes	

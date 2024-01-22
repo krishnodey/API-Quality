@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+/v1/catalog/{storefront}/albums/{id}	 Self-descriptive End-point
+/v1/catalog/{storefront}/albums/{id}/{relationship}	 Self-descriptive End-point
+/v1/catalog/{storefront}/albums/{id}/view/{view}	 Self-descriptive End-point
+/v1/catalog/{storefront}/albums	 Self-descriptive End-point
+/v1/catalog/{storefront}/albums	 Self-descriptive End-point
+/v1/catalog/{storefront}/albums	 Self-descriptive End-point
+/v1/me/library/albums/{id}	 Self-descriptive End-point
+/v1/me/library/albums/{id}/{relationship}	 Self-descriptive End-point
+/v1/me/library/albums	 Self-descriptive End-point
+/v1/me/library/albums	 Self-descriptive End-point
+/v1/me/library	 Self-descriptive End-point
+/v1/catalog/{storefront}/artists/{id}	 Self-descriptive End-point
+/v1/catalog/{storefront}/artists/{id}/{relationship}	 Self-descriptive End-point
+/v1/catalog/{storefront}/artists/{id}/view/{view}	 Self-descriptive End-point
+/v1/catalog/{storefront}/artists	 Self-descriptive End-point

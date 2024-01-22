@@ -1,0 +1,62 @@
+***Anti-Pattern*** 
+Count: 11
+ /mgmt/requests/{requestId} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
+ /mgmt/requests/{requestId} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
+ /mgmt/requests/{requestId}/cancel 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 4
+ /mgmt/requests/{requestId}/deviceStatus 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 5
+ /mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 9
+ /mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 10
+ /device/types/{deviceType}/devices/{deviceId}/events/{eventName} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and name. 0 hierarchical relations were detected out of 9
+ /application/types/{typeId}/devices/{deviceId}/events/{eventName} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and name. 0 hierarchical relations were detected out of 9
+ /application/types/{typeId}/devices/{deviceId}/commands/{commandId} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between commands and command. 0 hierarchical relations were detected out of 9
+ /device/types/{typeId}/devices/{deviceId}/events/{eventName} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and name. 0 hierarchical relations were detected out of 9
+ /device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between commands and command. 0 hierarchical relations were detected out of 10
+
+***Patterns*** 
+Count: 46
+ /bulk/devices 	Hierarchical Nodes	
+ /bulk/devices/add 	Hierarchical Nodes	
+ /bulk/devices/remove 	Hierarchical Nodes	
+ /device/types 	Hierarchical Nodes	
+ /device/types 	Hierarchical Nodes	
+ /device/types/{typeId} 	Hierarchical Nodes	
+ /device/types/{typeId} 	Hierarchical Nodes	
+ /device/types/{typeId} 	Hierarchical Nodes	
+ /device/types/{typeId}/devices 	Hierarchical Nodes	
+ /device/types/{typeId}/devices 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId} 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId} 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId} 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/devices 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/edgestatus 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId} 	Hierarchical Nodes	
+ /logs/connection 	Hierarchical Nodes	
+ /usage/data-traffic 	Hierarchical Nodes	
+ /service-status 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/logs 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/logs 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/logs 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/logs/{logId} 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/logs/{logId} 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	Hierarchical Nodes	
+ /mgmt/requests 	Hierarchical Nodes	
+ /mgmt/requests 	Hierarchical Nodes	
+ /mgmt/custom/bundle 	Hierarchical Nodes	
+ /mgmt/custom/bundle 	Hierarchical Nodes	
+ /mgmt/custom/bundle/{bundleId} 	Hierarchical Nodes	
+ /mgmt/custom/bundle/{bundleId} 	Hierarchical Nodes	
+ /mgmt/custom/bundle/{bundleId} 	Hierarchical Nodes	
+ /config/lec 	Hierarchical Nodes	
+ /config/lec 	Hierarchical Nodes	
+ /device/types/{deviceType}/devices/{deviceId}/events 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/location 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/location 	Hierarchical Nodes	
+ /device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode 	Hierarchical Nodes	
+ /s2s/services 	Hierarchical Nodes	
+ /s2s/services 	Hierarchical Nodes	
+ /s2s/services/{serviceUuid} 	Hierarchical Nodes	
+ /s2s/services/{serviceUuid} 	Hierarchical Nodes	
+ /s2s/services/{serviceUuid} 	Hierarchical Nodes	
+ /event/types 	Hierarchical Nodes	

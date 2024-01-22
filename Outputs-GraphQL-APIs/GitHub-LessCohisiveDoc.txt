@@ -1,0 +1,261 @@
+***Anti-Pattern*** 
+Count: 6
+-/queries/meta	Non-pertinent Documentation	Return information about the GitHub instance.
+-/queries/sponsorables	Non-pertinent Documentation	Users and organizations who can be sponsored via GitHub Sponsors.
+-/mutations/archiveProjectV2Item	Non-pertinent Documentation	Archives a ProjectV2Item.
+-/mutations/createAttributionInvitation	Non-pertinent Documentation	Invites a user to claim reattributable data.
+-/mutations/unarchiveProjectV2Item	Non-pertinent Documentation	Unarchives a ProjectV2Item.
+-/mutations/updatePatreonSponsorability	Non-pertinent Documentation	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
+
+***Patterns*** 
+Count: 250
+-/queries/codeOfConduct	Pertinent Documentation	Look up a code of conduct by its key.
+-/queries/codesOfConduct	Pertinent Documentation	Look up a code of conduct by its key.
+-/queries/enterprise	Pertinent Documentation	Look up an enterprise by URL slug.
+-/queries/enterpriseAdministratorInvitation	Pertinent Documentation	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
+-/queries/enterpriseAdministratorInvitationByToken	Pertinent Documentation	Look up a pending enterprise administrator invitation by invitation token.
+-/queries/license	Pertinent Documentation	Look up an open source license by its key.
+-/queries/licenses	Pertinent Documentation	Return a list of known open source licenses.
+-/queries/marketplaceCategories	Pertinent Documentation	Get alphabetically sorted list of Marketplace categories.
+-/queries/marketplaceCategory	Pertinent Documentation	Look up a Marketplace category by its slug.
+-/queries/marketplaceListing	Pertinent Documentation	Look up a single Marketplace listing.
+-/queries/marketplaceListings	Pertinent Documentation	Look up Marketplace listings.
+-/queries/node	Pertinent Documentation	Fetches an object given its ID.
+-/queries/nodes	Pertinent Documentation	Lookup nodes by a list of IDs.
+-/queries/organization	Pertinent Documentation	Lookup a organization by login.
+-/queries/rateLimit	Pertinent Documentation	The client's rate limit information.
+-/queries/relay	Pertinent Documentation	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
+-/queries/repository	Pertinent Documentation	Lookup a given repository by the owner and repository name.
+-/queries/repositoryOwner	Pertinent Documentation	Lookup a repository owner (ie. either a User or an Organization) by login.
+-/queries/resource	Pertinent Documentation	Lookup resource by a URL.
+-/queries/search	Pertinent Documentation	Perform a search across resources, returning a maximum of 1,000 results.
+-/queries/securityAdvisories	Pertinent Documentation	GitHub Security Advisories.
+-/queries/securityAdvisory	Pertinent Documentation	Fetch a Security Advisory by its GHSA ID.
+-/queries/securityVulnerabilities	Pertinent Documentation	Software Vulnerabilities documented by GitHub Security Advisories.
+-/queries/topic	Pertinent Documentation	Look up a topic by name.
+-/queries/user	Pertinent Documentation	Lookup a user by login.
+-/queries/viewer	Pertinent Documentation	The currently authenticated user.
+-/mutations/abortQueuedMigrations	Pertinent Documentation	Clear all of a customer's queued migrations.
+-/mutations/abortRepositoryMigration	Pertinent Documentation	Abort a repository migration queued or in progress.
+-/mutations/acceptEnterpriseAdministratorInvitation	Pertinent Documentation	Accepts a pending invitation for a user to become an administrator of an enterprise.
+-/mutations/acceptTopicSuggestion	Pertinent Documentation	Applies a suggested topic to the repository.
+-/mutations/addAssigneesToAssignable	Pertinent Documentation	Adds assignees to an assignable object.
+-/mutations/addComment	Pertinent Documentation	Adds a comment to an Issue or Pull Request.
+-/mutations/addDiscussionComment	Pertinent Documentation	Adds a comment to a Discussion, possibly as a reply to another comment.
+-/mutations/addDiscussionPollVote	Pertinent Documentation	Vote for an option in a discussion poll.
+-/mutations/addEnterpriseOrganizationMember	Pertinent Documentation	Adds enterprise members to an organization within the enterprise.
+-/mutations/addEnterpriseSupportEntitlement	Pertinent Documentation	Adds a support entitlement to an enterprise member.
+-/mutations/addLabelsToLabelable	Pertinent Documentation	Adds labels to a labelable object.
+-/mutations/addProjectCard	Pertinent Documentation	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
+-/mutations/addProjectColumn	Pertinent Documentation	Adds a column to a Project.
+-/mutations/addProjectV2DraftIssue	Pertinent Documentation	Creates a new draft issue and add it to a Project.
+-/mutations/addProjectV2ItemById	Pertinent Documentation	Links an existing content instance to a Project.
+-/mutations/addPullRequestReview	Pertinent Documentation	Adds a review to a Pull Request.
+-/mutations/addPullRequestReviewComment	Pertinent Documentation	Adds a comment to a review.
+-/mutations/addPullRequestReviewThread	Pertinent Documentation	Adds a new thread to a pending Pull Request Review.
+-/mutations/addPullRequestReviewThreadReply	Pertinent Documentation	Adds a reply to an existing Pull Request Review Thread.
+-/mutations/addReaction	Pertinent Documentation	Adds a reaction to a subject.
+-/mutations/addStar	Pertinent Documentation	Adds a star to a Starrable.
+-/mutations/addUpvote	Pertinent Documentation	Add an upvote to a discussion or discussion comment.
+-/mutations/addVerifiableDomain	Pertinent Documentation	Adds a verifiable domain to an owning account.
+-/mutations/approveDeployments	Pertinent Documentation	Approve all pending deployments under one or more environments.
+-/mutations/approveVerifiableDomain	Pertinent Documentation	Approve a verifiable domain for notification delivery.
+-/mutations/archiveRepository	Pertinent Documentation	Marks a repository as archived.
+-/mutations/cancelEnterpriseAdminInvitation	Pertinent Documentation	Cancels a pending invitation for an administrator to join an enterprise.
+-/mutations/cancelSponsorship	Pertinent Documentation	Cancel an active sponsorship.
+-/mutations/changeUserStatus	Pertinent Documentation	Update your status on GitHub.
+-/mutations/clearLabelsFromLabelable	Pertinent Documentation	Clears all labels from a labelable object.
+-/mutations/clearProjectV2ItemFieldValue	Pertinent Documentation	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
+-/mutations/cloneProject	Pertinent Documentation	Creates a new project by cloning configuration from an existing project.
+-/mutations/cloneTemplateRepository	Pertinent Documentation	Create a new repository with the same files and directory structure as a template repository.
+-/mutations/closeDiscussion	Pertinent Documentation	Close a discussion.
+-/mutations/closeIssue	Pertinent Documentation	Close an issue.
+-/mutations/closePullRequest	Pertinent Documentation	Close a pull request.
+-/mutations/convertProjectCardNoteToIssue	Pertinent Documentation	Convert a project note card to one associated with a newly created issue.
+-/mutations/convertPullRequestToDraft	Pertinent Documentation	Converts a pull request to draft.
+-/mutations/copyProjectV2	Pertinent Documentation	Copy a project.
+-/mutations/createBranchProtectionRule	Pertinent Documentation	Create a new branch protection rule.
+-/mutations/createCheckRun	Pertinent Documentation	Create a check run.
+-/mutations/createCheckSuite	Pertinent Documentation	Create a check suite.
+-/mutations/createCommitOnBranch	Pertinent Documentation	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
+-/mutations/createDeployment	Pertinent Documentation	Creates a new deployment event.
+-/mutations/createDeploymentStatus	Pertinent Documentation	Create a deployment status.
+-/mutations/createDiscussion	Pertinent Documentation	Create a discussion.
+-/mutations/createEnterpriseOrganization	Pertinent Documentation	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
+-/mutations/createEnvironment	Pertinent Documentation	Creates an environment or simply returns it if already exists.
+-/mutations/createIpAllowListEntry	Pertinent Documentation	Creates a new IP allow list entry.
+-/mutations/createIssue	Pertinent Documentation	Creates a new issue.
+-/mutations/createLabel	Pertinent Documentation	Creates a new label.
+-/mutations/createLinkedBranch	Pertinent Documentation	Create a branch linked to an issue.
+-/mutations/createMigrationSource	Pertinent Documentation	Creates a GitHub Enterprise Importer (GEI) migration source.
+-/mutations/createProject	Pertinent Documentation	Creates a new project.
+-/mutations/createProjectV2	Pertinent Documentation	Creates a new project.
+-/mutations/createProjectV2Field	Pertinent Documentation	Create a new project field.
+-/mutations/createPullRequest	Pertinent Documentation	Create a new pull request.
+-/mutations/createRef	Pertinent Documentation	Create a new Git Ref.
+-/mutations/createRepository	Pertinent Documentation	Create a new repository.
+-/mutations/createRepositoryRuleset	Pertinent Documentation	Create a repository ruleset.
+-/mutations/createSponsorsListing	Pertinent Documentation	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
+-/mutations/createSponsorsTier	Pertinent Documentation	Create a new payment tier for your GitHub Sponsors profile.
+-/mutations/createSponsorship	Pertinent Documentation	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
+-/mutations/createSponsorships	Pertinent Documentation	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+-/mutations/createTeamDiscussion	Pertinent Documentation	Creates a new team discussion.
+-/mutations/createTeamDiscussionComment	Pertinent Documentation	Creates a new team discussion comment.
+-/mutations/declineTopicSuggestion	Pertinent Documentation	Rejects a suggested topic for the repository.
+-/mutations/deleteBranchProtectionRule	Pertinent Documentation	Delete a branch protection rule.
+-/mutations/deleteDeployment	Pertinent Documentation	Deletes a deployment.
+-/mutations/deleteDiscussion	Pertinent Documentation	Delete a discussion and all of its replies.
+-/mutations/deleteDiscussionComment	Pertinent Documentation	Delete a discussion comment. If it has replies, wipe it instead.
+-/mutations/deleteEnvironment	Pertinent Documentation	Deletes an environment.
+-/mutations/deleteIpAllowListEntry	Pertinent Documentation	Deletes an IP allow list entry.
+-/mutations/deleteIssue	Pertinent Documentation	Deletes an Issue object.
+-/mutations/deleteIssueComment	Pertinent Documentation	Deletes an IssueComment object.
+-/mutations/deleteLabel	Pertinent Documentation	Deletes a label.
+-/mutations/deleteLinkedBranch	Pertinent Documentation	Unlink a branch from an issue.
+-/mutations/deletePackageVersion	Pertinent Documentation	Delete a package version.
+-/mutations/deleteProject	Pertinent Documentation	Deletes a project.
+-/mutations/deleteProjectCard	Pertinent Documentation	Deletes a project card.
+-/mutations/deleteProjectColumn	Pertinent Documentation	Deletes a project column.
+-/mutations/deleteProjectV2	Pertinent Documentation	Delete a project.
+-/mutations/deleteProjectV2Field	Pertinent Documentation	Delete a project field.
+-/mutations/deleteProjectV2Item	Pertinent Documentation	Deletes an item from a Project.
+-/mutations/deleteProjectV2Workflow	Pertinent Documentation	Deletes a project workflow.
+-/mutations/deletePullRequestReview	Pertinent Documentation	Deletes a pull request review.
+-/mutations/deletePullRequestReviewComment	Pertinent Documentation	Deletes a pull request review comment.
+-/mutations/deleteRef	Pertinent Documentation	Delete a Git Ref.
+-/mutations/deleteRepositoryRuleset	Pertinent Documentation	Delete a repository ruleset.
+-/mutations/deleteTeamDiscussion	Pertinent Documentation	Deletes a team discussion.
+-/mutations/deleteTeamDiscussionComment	Pertinent Documentation	Deletes a team discussion comment.
+-/mutations/deleteVerifiableDomain	Pertinent Documentation	Deletes a verifiable domain.
+-/mutations/dequeuePullRequest	Pertinent Documentation	Remove a pull request from the merge queue.
+-/mutations/disablePullRequestAutoMerge	Pertinent Documentation	Disable auto merge on the given pull request.
+-/mutations/dismissPullRequestReview	Pertinent Documentation	Dismisses an approved or rejected pull request review.
+-/mutations/dismissRepositoryVulnerabilityAlert	Pertinent Documentation	Dismisses the Dependabot alert.
+-/mutations/enablePullRequestAutoMerge	Pertinent Documentation	Enable the default auto-merge on a pull request.
+-/mutations/enqueuePullRequest	Pertinent Documentation	Add a pull request to the merge queue.
+-/mutations/followOrganization	Pertinent Documentation	Follow an organization.
+-/mutations/followUser	Pertinent Documentation	Follow a user.
+-/mutations/grantEnterpriseOrganizationsMigratorRole	Pertinent Documentation	Grant the migrator role to a user for all organizations under an enterprise account.
+-/mutations/grantMigratorRole	Pertinent Documentation	Grant the migrator role to a user or a team.
+-/mutations/importProject	Pertinent Documentation	Creates a new project by importing columns and a list of issues/PRs.
+-/mutations/inviteEnterpriseAdmin	Pertinent Documentation	Invite someone to become an administrator of the enterprise.
+-/mutations/linkProjectV2ToRepository	Pertinent Documentation	Links a project to a repository.
+-/mutations/linkProjectV2ToTeam	Pertinent Documentation	Links a project to a team.
+-/mutations/linkRepositoryToProject	Pertinent Documentation	Creates a repository link for a project.
+-/mutations/lockLockable	Pertinent Documentation	Lock a lockable object.
+-/mutations/markDiscussionCommentAsAnswer	Pertinent Documentation	Mark a discussion comment as the chosen answer for discussions in an answerable category.
+-/mutations/markFileAsViewed	Pertinent Documentation	Mark a pull request file as viewed.
+-/mutations/markProjectV2AsTemplate	Pertinent Documentation	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
+-/mutations/markPullRequestReadyForReview	Pertinent Documentation	Marks a pull request ready for review.
+-/mutations/mergeBranch	Pertinent Documentation	Merge a head into a branch.
+-/mutations/mergePullRequest	Pertinent Documentation	Merge a pull request.
+-/mutations/minimizeComment	Pertinent Documentation	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+-/mutations/moveProjectCard	Pertinent Documentation	Moves a project card to another place.
+-/mutations/moveProjectColumn	Pertinent Documentation	Moves a project column to another place.
+-/mutations/pinIssue	Pertinent Documentation	Pin an issue to a repository.
+-/mutations/publishSponsorsTier	Pertinent Documentation	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
+-/mutations/regenerateEnterpriseIdentityProviderRecoveryCodes	Pertinent Documentation	Regenerates the identity provider recovery codes for an enterprise.
+-/mutations/regenerateVerifiableDomainToken	Pertinent Documentation	Regenerates a verifiable domain's verification token.
+-/mutations/rejectDeployments	Pertinent Documentation	Reject all pending deployments under one or more environments.
+-/mutations/removeAssigneesFromAssignable	Pertinent Documentation	Removes assignees from an assignable object.
+-/mutations/removeEnterpriseAdmin	Pertinent Documentation	Removes an administrator from the enterprise.
+-/mutations/removeEnterpriseIdentityProvider	Pertinent Documentation	Removes the identity provider from an enterprise.
+-/mutations/removeEnterpriseMember	Pertinent Documentation	Removes a user from all organizations within the enterprise.
+-/mutations/removeEnterpriseOrganization	Pertinent Documentation	Removes an organization from the enterprise.
+-/mutations/removeEnterpriseSupportEntitlement	Pertinent Documentation	Removes a support entitlement from an enterprise member.
+-/mutations/removeLabelsFromLabelable	Pertinent Documentation	Removes labels from a Labelable object.
+-/mutations/removeOutsideCollaborator	Pertinent Documentation	Removes outside collaborator from all repositories in an organization.
+-/mutations/removeReaction	Pertinent Documentation	Removes a reaction from a subject.
+-/mutations/removeStar	Pertinent Documentation	Removes a star from a Starrable.
+-/mutations/removeUpvote	Pertinent Documentation	Remove an upvote to a discussion or discussion comment.
+-/mutations/reopenDiscussion	Pertinent Documentation	Reopen a discussion.
+-/mutations/reopenIssue	Pertinent Documentation	Reopen a issue.
+-/mutations/reopenPullRequest	Pertinent Documentation	Reopen a pull request.
+-/mutations/requestReviews	Pertinent Documentation	Set review requests on a pull request.
+-/mutations/rerequestCheckSuite	Pertinent Documentation	Rerequests an existing check suite.
+-/mutations/resolveReviewThread	Pertinent Documentation	Marks a review thread as resolved.
+-/mutations/retireSponsorsTier	Pertinent Documentation	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+-/mutations/revertPullRequest	Pertinent Documentation	Create a pull request that reverts the changes from a merged pull request.
+-/mutations/revokeEnterpriseOrganizationsMigratorRole	Pertinent Documentation	Revoke the migrator role to a user for all organizations under an enterprise account.
+-/mutations/revokeMigratorRole	Pertinent Documentation	Revoke the migrator role from a user or a team.
+-/mutations/setEnterpriseIdentityProvider	Pertinent Documentation	Creates or updates the identity provider for an enterprise.
+-/mutations/setOrganizationInteractionLimit	Pertinent Documentation	Set an organization level interaction limit for an organization's public repositories.
+-/mutations/setRepositoryInteractionLimit	Pertinent Documentation	Sets an interaction limit setting for a repository.
+-/mutations/setUserInteractionLimit	Pertinent Documentation	Set a user level interaction limit for an user's public repositories.
+-/mutations/startOrganizationMigration	Pertinent Documentation	Starts a GitHub Enterprise Importer organization migration.
+-/mutations/startRepositoryMigration	Pertinent Documentation	Starts a GitHub Enterprise Importer (GEI) repository migration.
+-/mutations/submitPullRequestReview	Pertinent Documentation	Submits a pending pull request review.
+-/mutations/transferEnterpriseOrganization	Pertinent Documentation	Transfer an organization from one enterprise to another enterprise.
+-/mutations/transferIssue	Pertinent Documentation	Transfer an issue to a different repository.
+-/mutations/unarchiveRepository	Pertinent Documentation	Unarchives a repository.
+-/mutations/unfollowOrganization	Pertinent Documentation	Unfollow an organization.
+-/mutations/unfollowUser	Pertinent Documentation	Unfollow a user.
+-/mutations/unlinkProjectV2FromRepository	Pertinent Documentation	Unlinks a project from a repository.
+-/mutations/unlinkProjectV2FromTeam	Pertinent Documentation	Unlinks a project to a team.
+-/mutations/unlinkRepositoryFromProject	Pertinent Documentation	Deletes a repository link from a project.
+-/mutations/unlockLockable	Pertinent Documentation	Unlock a lockable object.
+-/mutations/unmarkDiscussionCommentAsAnswer	Pertinent Documentation	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
+-/mutations/unmarkFileAsViewed	Pertinent Documentation	Unmark a pull request file as viewed.
+-/mutations/unmarkIssueAsDuplicate	Pertinent Documentation	Unmark an issue as a duplicate of another issue.
+-/mutations/unmarkProjectV2AsTemplate	Pertinent Documentation	Unmark a project as a template.
+-/mutations/unminimizeComment	Pertinent Documentation	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+-/mutations/unpinIssue	Pertinent Documentation	Unpin a pinned issue from a repository.
+-/mutations/unresolveReviewThread	Pertinent Documentation	Marks a review thread as unresolved.
+-/mutations/unsubscribeFromNotifications	Pertinent Documentation	Unsubscribes from notifications.
+-/mutations/updateBranchProtectionRule	Pertinent Documentation	Update a branch protection rule.
+-/mutations/updateCheckRun	Pertinent Documentation	Update a check run.
+-/mutations/updateCheckSuitePreferences	Pertinent Documentation	Modifies the settings of an existing check suite.
+-/mutations/updateDiscussion	Pertinent Documentation	Update a discussion.
+-/mutations/updateDiscussionComment	Pertinent Documentation	Update the contents of a comment on a Discussion.
+-/mutations/updateEnterpriseAdministratorRole	Pertinent Documentation	Updates the role of an enterprise administrator.
+-/mutations/updateEnterpriseAllowPrivateRepositoryForkingSetting	Pertinent Documentation	Sets whether private repository forks are enabled for an enterprise.
+-/mutations/updateEnterpriseDefaultRepositoryPermissionSetting	Pertinent Documentation	Sets the base repository permission for organizations in an enterprise.
+-/mutations/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting	Pertinent Documentation	Sets whether organization members with admin permissions on a repository can change repository visibility.
+-/mutations/updateEnterpriseMembersCanCreateRepositoriesSetting	Pertinent Documentation	Sets the members can create repositories setting for an enterprise.
+-/mutations/updateEnterpriseMembersCanDeleteIssuesSetting	Pertinent Documentation	Sets the members can delete issues setting for an enterprise.
+-/mutations/updateEnterpriseMembersCanDeleteRepositoriesSetting	Pertinent Documentation	Sets the members can delete repositories setting for an enterprise.
+-/mutations/updateEnterpriseMembersCanInviteCollaboratorsSetting	Pertinent Documentation	Sets whether members can invite collaborators are enabled for an enterprise.
+-/mutations/updateEnterpriseMembersCanMakePurchasesSetting	Pertinent Documentation	Sets whether or not an organization owner can make purchases.
+-/mutations/updateEnterpriseMembersCanUpdateProtectedBranchesSetting	Pertinent Documentation	Sets the members can update protected branches setting for an enterprise.
+-/mutations/updateEnterpriseMembersCanViewDependencyInsightsSetting	Pertinent Documentation	Sets the members can view dependency insights for an enterprise.
+-/mutations/updateEnterpriseOrganizationProjectsSetting	Pertinent Documentation	Sets whether organization projects are enabled for an enterprise.
+-/mutations/updateEnterpriseOwnerOrganizationRole	Pertinent Documentation	Updates the role of an enterprise owner with an organization.
+-/mutations/updateEnterpriseProfile	Pertinent Documentation	Updates an enterprise's profile.
+-/mutations/updateEnterpriseRepositoryProjectsSetting	Pertinent Documentation	Sets whether repository projects are enabled for a enterprise.
+-/mutations/updateEnterpriseTeamDiscussionsSetting	Pertinent Documentation	Sets whether team discussions are enabled for an enterprise.
+-/mutations/updateEnterpriseTwoFactorAuthenticationRequiredSetting	Pertinent Documentation	Sets whether two factor authentication is required for all users in an enterprise.
+-/mutations/updateEnvironment	Pertinent Documentation	Updates an environment.
+-/mutations/updateIpAllowListEnabledSetting	Pertinent Documentation	Sets whether an IP allow list is enabled on an owner.
+-/mutations/updateIpAllowListEntry	Pertinent Documentation	Updates an IP allow list entry.
+-/mutations/updateIpAllowListForInstalledAppsEnabledSetting	Pertinent Documentation	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
+-/mutations/updateIssue	Pertinent Documentation	Updates an Issue.
+-/mutations/updateIssueComment	Pertinent Documentation	Updates an IssueComment object.
+-/mutations/updateLabel	Pertinent Documentation	Updates an existing label.
+-/mutations/updateNotificationRestrictionSetting	Pertinent Documentation	Update the setting to restrict notifications to only verified or approved domains available to an owner.
+-/mutations/updateOrganizationAllowPrivateRepositoryForkingSetting	Pertinent Documentation	Sets whether private repository forks are enabled for an organization.
+-/mutations/updateOrganizationWebCommitSignoffSetting	Pertinent Documentation	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+-/mutations/updateProject	Pertinent Documentation	Updates an existing project.
+-/mutations/updateProjectCard	Pertinent Documentation	Updates an existing project card.
+-/mutations/updateProjectColumn	Pertinent Documentation	Updates an existing project column.
+-/mutations/updateProjectV2	Pertinent Documentation	Updates an existing project (beta).
+-/mutations/updateProjectV2Collaborators	Pertinent Documentation	Update the collaborators on a team or a project.
+-/mutations/updateProjectV2DraftIssue	Pertinent Documentation	Updates a draft issue within a Project.
+-/mutations/updateProjectV2ItemFieldValue	Pertinent Documentation	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
+-/mutations/updateProjectV2ItemPosition	Pertinent Documentation	This mutation updates the position of the item in the project, where the position represents the priority of an item.
+-/mutations/updatePullRequest	Pertinent Documentation	Update a pull request.
+-/mutations/updatePullRequestBranch	Pertinent Documentation	Merge or Rebase HEAD from upstream branch into pull request branch.
+-/mutations/updatePullRequestReview	Pertinent Documentation	Updates the body of a pull request review.
+-/mutations/updatePullRequestReviewComment	Pertinent Documentation	Updates a pull request review comment.
+-/mutations/updateRef	Pertinent Documentation	Update a Git Ref.
+-/mutations/updateRefs	Pertinent Documentation	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
+-/mutations/updateRepository	Pertinent Documentation	Update information about a repository.
+-/mutations/updateRepositoryRuleset	Pertinent Documentation	Update a repository ruleset.
+-/mutations/updateRepositoryWebCommitSignoffSetting	Pertinent Documentation	Sets whether contributors are required to sign off on web-based commits for a repository.
+-/mutations/updateSponsorshipPreferences	Pertinent Documentation	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
+-/mutations/updateSubscription	Pertinent Documentation	Updates the state for subscribable subjects.
+-/mutations/updateTeamDiscussion	Pertinent Documentation	Updates a team discussion.
+-/mutations/updateTeamDiscussionComment	Pertinent Documentation	Updates a discussion comment.
+-/mutations/updateTeamReviewAssignment	Pertinent Documentation	Updates team review assignment.
+-/mutations/updateTeamsRepository	Pertinent Documentation	Update team repository.
+-/mutations/updateTopics	Pertinent Documentation	Replaces the repository's topics with the given topics.
+-/mutations/verifyVerifiableDomain	Pertinent Documentation	Verify that a verifiable domain has the expected DNS record.

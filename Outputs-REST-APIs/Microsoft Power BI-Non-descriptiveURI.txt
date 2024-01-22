@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 7
+/admin/apps?$top={$top}	 Non-descriptive End-point
+/admin/dataflows/{dataflowId}/datasources	 Non-descriptive End-point
+/admin/groups/{groupId}/dataflows	 Non-descriptive End-point
+/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	 Non-descriptive End-point
+/admin/groups/{groupId}/datasets	 Non-descriptive End-point
+/admin/groups/{groupId}/datasets/upstreamDataflows	 Non-descriptive End-point
+/admin/datasets/{datasetId}/datasources	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 27
+/admin/tenantKeys	 Self-descriptive End-point
+/admin/apps/{appId}/users	 Self-descriptive End-point
+/admin/capacities/AssignWorkspaces	 Self-descriptive End-point
+/admin/capacities/UnassignWorkspaces	 Self-descriptive End-point
+/admin/dashboards	 Self-descriptive End-point
+/admin/groups/{groupId}/dashboards	 Self-descriptive End-point
+/admin/dataflows/{dataflowId}/export	 Self-descriptive End-point
+/admin/dataflows/{dataflowId}/users	 Self-descriptive End-point
+/admin/capacities	 Self-descriptive End-point
+/admin/groups/{groupId}/users	 Self-descriptive End-point
+/admin/pipelines/{pipelineId}/users/{identifier}	 Self-descriptive End-point
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	 Self-descriptive End-point
+/admin/workspaces/modified	 Self-descriptive End-point
+/admin/workspaces/getInfo	 Self-descriptive End-point
+/apps/{appId}	 Self-descriptive End-point
+/apps/{appId}/dashboards/{dashboardId}	 Self-descriptive End-point
+/apps/{appId}/reports/{reportId}	 Self-descriptive End-point
+/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	 Self-descriptive End-point
+/apps/{appId}/dashboards/{dashboardId}/tiles	 Self-descriptive End-point
+/availableFeatures	 Self-descriptive End-point
+/capacities	 Self-descriptive End-point
+/capacities/{capacityId}/refreshables/{refreshableId}	 Self-descriptive End-point
+/capacities/{capacityId}/Workloads/{workloadName}	 Self-descriptive End-point
+/capacities/{capacityId}/Workloads	 Self-descriptive End-point
+/AssignToCapacity	 Self-descriptive End-point
+/groups/{groupId}/AssignToCapacity	 Self-descriptive End-point
+/groups/{groupId}/dashboards	 Self-descriptive End-point

@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+/company/<realmID>/account	Tidy End-point	
+/company/<realmID>/query?query=<selectStatement>	Tidy End-point	
+/company/<realmID>/account/<accountId>	Tidy End-point	
+/company/<realmID>/account	Tidy End-point	
+/company/<realmID>/bill	Tidy End-point	
+/company/<realmID>/bill?operation=delete	Tidy End-point	
+/company/<realmID>/query?query=<selectStatement>	Tidy End-point	
+/company/<realmID>/bill/<billId>	Tidy End-point	
+/company/<realmID>/bill	Tidy End-point	
+/company/<realmID>/query?query=<selectStatement>	Tidy End-point	
+/company/<realmID>/companyinfo/<realmID>	Tidy End-point	
+/company/<realmID>/companyinfo	Tidy End-point	
+/company/<realmID>/companyinfo	Tidy End-point	
+/company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	Tidy End-point	
+/company/<realmID>/invoice	Tidy End-point	
+/company/<realmID>/invoice?operation=delete	Tidy End-point	
+/company/<realmID>/invoice?operation=void	Tidy End-point	
+/company/<realmID>/invoice/<invoiceId>/pdf	Tidy End-point	
+/company/<realmID>/query?query=<selectStatement>	Tidy End-point	
+/company/<realmID>/invoice	Tidy End-point	
+/company/<realmID>/purchase	Tidy End-point	

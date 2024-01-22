@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 25
+/environments [No version found.]
+/environments?latitude={latitude}&longitude={longitude} [No version found.]
+/environments?key={key}&value={value} [No version found.]
+/environments [No version found.]
+/environments/{environment_id} [No version found.]
+/environments/{environment_id} [No version found.]
+/environments/{environment_id} [No version found.]
+/environments/{environment_id}/zones [No version found.]
+/environments/{environment_id}/zones?x={x}&y={y} [No version found.]
+/environments/{environment_id}/zones?key={key}&value={value} [No version found.]
+/environments/{environment_id}/zones [No version found.]
+/environments/{environment_id}/zones/{zone_id} [No version found.]
+/environments/{environment_id}/zones/{zone_id} [No version found.]
+/environments/{environment_id}/zones/{zone_id} [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id} [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id} [No version found.]
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id} [No version found.]
+/environments/{environment_id}/devices [No version found.]
+
+***Patterns*** 
+Count: 0

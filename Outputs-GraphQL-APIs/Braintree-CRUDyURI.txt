@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 1
+/search	CRUDy End-point	 [search found] 
+
+***Patterns*** 
+Count: 14
+/ping	Verbless End-point	
+/pingInStoreReader	Verbless End-point	
+/viewer	Verbless End-point	
+/clientConfiguration	Verbless End-point	
+/node	Verbless End-point	
+/idFromLegacyId	Verbless End-point	
+/report	Verbless End-point	
+/paypalFinancingOptions	Verbless End-point	
+/inStoreLocations	Verbless End-point	
+/authorizePaymentMethod	Verbless End-point	
+/authorizePayPalAccount	Verbless End-point	
+/authorizeVenmoAccount	Verbless End-point	
+/authorizeCreditCard	Verbless End-point	
+/captureTransaction	Verbless End-point	

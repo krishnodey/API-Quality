@@ -1,0 +1,62 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 57
+/bulk/devices	Tidy End-point	
+/bulk/devices/add	Tidy End-point	
+/bulk/devices/remove	Tidy End-point	
+/device/types	Tidy End-point	
+/device/types	Tidy End-point	
+/device/types/{typeId}	Tidy End-point	
+/device/types/{typeId}	Tidy End-point	
+/device/types/{typeId}	Tidy End-point	
+/device/types/{typeId}/devices	Tidy End-point	
+/device/types/{typeId}/devices	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/devices	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/edgestatus	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	Tidy End-point	
+/logs/connection	Tidy End-point	
+/usage/data-traffic	Tidy End-point	
+/service-status	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Tidy End-point	
+/mgmt/requests	Tidy End-point	
+/mgmt/requests	Tidy End-point	
+/mgmt/requests/{requestId}	Tidy End-point	
+/mgmt/requests/{requestId}	Tidy End-point	
+/mgmt/requests/{requestId}/cancel	Tidy End-point	
+/mgmt/requests/{requestId}/deviceStatus	Tidy End-point	
+/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}	Tidy End-point	
+/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Tidy End-point	
+/mgmt/custom/bundle	Tidy End-point	
+/mgmt/custom/bundle	Tidy End-point	
+/mgmt/custom/bundle/{bundleId}	Tidy End-point	
+/mgmt/custom/bundle/{bundleId}	Tidy End-point	
+/mgmt/custom/bundle/{bundleId}	Tidy End-point	
+/config/lec	Tidy End-point	
+/config/lec	Tidy End-point	
+/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Tidy End-point	
+/device/types/{deviceType}/devices/{deviceId}/events	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/location	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/location	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	Tidy End-point	
+/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Tidy End-point	
+/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Tidy End-point	
+/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Tidy End-point	
+/s2s/services	Tidy End-point	
+/s2s/services	Tidy End-point	
+/s2s/services/{serviceUuid}	Tidy End-point	
+/s2s/services/{serviceUuid}	Tidy End-point	
+/s2s/services/{serviceUuid}	Tidy End-point	
+/event/types	Tidy End-point	

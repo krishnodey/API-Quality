@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 15
+POST 	/ping	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/pingInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/viewer	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/clientConfiguration	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/node	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/idFromLegacyId	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/report	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/search	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/paypalFinancingOptions	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/inStoreLocations	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/authorizePaymentMethod	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/authorizePayPalAccount	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/authorizeVenmoAccount	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/authorizeCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/captureTransaction	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 0

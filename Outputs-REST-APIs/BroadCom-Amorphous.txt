@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 40
+/api/getAccess	Tidy End-point	
+/bui/getBUIAllConfig	Tidy End-point	
+/bui/getAllowedStatus	Tidy End-point	
+/bui/getMyTicketDetails({persid})	Tidy End-point	
+/bui/getTicketsCustomData({persid})	Tidy End-point	
+/bui/getDefaultCategories	Tidy End-point	
+/bui/attrInfo	Tidy End-point	
+/bui/attrCtrl	Tidy End-point	
+/bui/addLogComment	Tidy End-point	
+/bui/changeStatus/{factory}({persid})	Tidy End-point	
+/bui/allFeeds({persid})	Tidy End-point	
+/bui/attmnt	Tidy End-point	
+/bui/getBopSID	Tidy End-point	
+/bui/attmnt({persid})/$value	Tidy End-point	
+/bui/updateStatusForNotification	Tidy End-point	
+/bui/updateStatusForAllNotification	Tidy End-point	
+/bui/getMyResources	Tidy End-point	
+/bui/getMyActiveChatSession	Tidy End-point	
+/bui/checkActiveSessions	Tidy End-point	
+/bui/createChatThread	Tidy End-point	
+/bui/getChatHistory/{roomName}	Tidy End-point	
+/bui/getDocument({id})	Tidy End-point	
+/bui/getKDAttachments({id})	Tidy End-point	
+/bui/getKDComments({id})	Tidy End-point	
+/bui/addKDComment({id})	Tidy End-point	
+/bui/rateDocument({id})	Tidy End-point	
+/bui/kdLinkInfo({id})	Tidy End-point	
+/bui/unLinkSolution({id})	Tidy End-point	
+/bui/helpAbout	Tidy End-point	
+/bui/getEEMAuth	Tidy End-point	
+/bui/{factory}({persid})	Tidy End-point	
+/bui/{factory}({persid})	Tidy End-point	
+/bui/{factory}	Tidy End-point	
+/bui/{factory}	Tidy End-point	
+/gs/mytkt_active	Tidy End-point	
+/gs/mytkt_inactive	Tidy End-point	
+/getServiceRequest	Tidy End-point	
+/pcatSearch	Tidy End-point	
+/getOfferings	Tidy End-point	
+/suggestedSolutions	Tidy End-point	

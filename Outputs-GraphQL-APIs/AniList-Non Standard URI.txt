@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 27
+/v2/oauth/token	Non-standard End-point	 [black space/tab found] 
+/v2/oauth/pin	Non-standard End-point	 [black space/tab found] 
+v2/SaveMediaListEntry	Non-standard End-point	 [black space/tab found] 
+v2/UpdateMediaListEntries	Non-standard End-point	 [black space/tab found] 
+v2/DeleteMediaListEntry	Non-standard End-point	 [black space/tab found] 
+v2/DeleteCustomList	Non-standard End-point	 [black space/tab found] 
+v2/SaveTextActivity	Non-standard End-point	 [black space/tab found] 
+v2/SaveListActivity	Non-standard End-point	 [black space/tab found] 
+v2/DeleteActivity	Non-standard End-point	 [black space/tab found] 
+v2/ToggleActivityPin	Non-standard End-point	 [black space/tab found] 
+v2/ToggleActivitySubscription	Non-standard End-point	 [black space/tab found] 
+v2/SaveActivityReply	Non-standard End-point	 [black space/tab found] 
+v2/DeleteActivityReply	Non-standard End-point	 [black space/tab found] 
+v2/ToggleLike	Non-standard End-point	 [black space/tab found] 
+v2/ToggleLikeV2	Non-standard End-point	 [black space/tab found] 
+v2/ToggleFollow	Non-standard End-point	 [black space/tab found] 
+v2/ToggleFavourite	Non-standard End-point	 [black space/tab found] 
+v2/UpdateFavouriteOrder	Non-standard End-point	 [black space/tab found] 
+v2/SaveReview	Non-standard End-point	 [black space/tab found] 
+v2/DeleteReview	Non-standard End-point	 [black space/tab found] 
+v2/RateReview	Non-standard End-point	 [black space/tab found] 
+v2/SaveRecommendation	Non-standard End-point	 [black space/tab found] 
+v2/SaveThread	Non-standard End-point	 [black space/tab found] 
+v2/DeleteThread	Non-standard End-point	 [black space/tab found] 
+v2/ToggleThreadSubscription	Non-standard End-point	 [black space/tab found] 
+v2/SaveThreadComment	Non-standard End-point	 [black space/tab found] 
+v2/DeleteThreadComment	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

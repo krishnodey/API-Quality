@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 8
+/objects/ErrorPosition	Non-standard End-point	 [black space/tab found] 
+/objects/ParseError	Non-standard End-point	 [black space/tab found] 
+/objects/ParseErrorRange	Non-standard End-point	 [black space/tab found] 
+/objects/PolarisVizDataPoint	Non-standard End-point	 [black space/tab found] 
+/objects/PolarisVizResponse	Non-standard End-point	 [black space/tab found] 
+/objects/TableData	Non-standard End-point	 [black space/tab found] 
+/objects/TableDataColumn	Non-standard End-point	 [black space/tab found] 
+/objects/TableResponse	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 8
+/mutations/delegateAccessTokenCreate	Standard End-point	
+/mutations/storefrontAccessTokenCreate	Standard End-point	
+/mutations/storefrontAccessTokenDelete	Standard End-point	
+/objects/AccessScope	Standard End-point	
+/objects/DelegateAccessToken	Standard End-point	
+/objects/StorefrontAccessToken	Standard End-point	
+queries/shopifyqlQuery	Standard End-point	
+/objects/PolarisVizDataSeries	Standard End-point	

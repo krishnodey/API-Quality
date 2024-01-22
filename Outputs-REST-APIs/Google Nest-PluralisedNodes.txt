@@ -1,0 +1,40 @@
+***Anti-Pattern*** 
+Count: 2
+POST 	/devices/thermostats/device_id/temperature_scale	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/devices/thermostats/device_id/target_temperature_f	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 33
+GET 	/devices/thermostats/device_id/device_id	 regular methods.
+GET 	/devices/thermostats/device_id/locale	 regular methods.
+GET 	/devices/thermostats/device_id/software_version	 regular methods.
+GET 	/devices/thermostats/device_id/structure_id	 regular methods.
+GET 	/devices/thermostats/device_id/name	 regular methods.
+GET 	/devices/thermostats/device_id/name_long	 regular methods.
+GET 	/devices/thermostats/device_id/last_connection	 regular methods.
+GET 	/devices/thermostats/device_id/is_online	 regular methods.
+GET 	/devices/thermostats/device_id/can_cool	 regular methods.
+GET 	/devices/thermostats/device_id/can_heat	 regular methods.
+GET 	/devices/thermostats/device_id/is_using_emergency_heat	 regular methods.
+GET 	/devices/thermostats/device_id/has_fan	 regular methods.
+GET 	/devices/thermostats/device_id/fan_timer_active	 regular methods.
+GET 	/devices/thermostats/device_id/fan_timer_timeout	 regular methods.
+GET 	/devices/thermostats/device_id/has_leaf	 regular methods.
+GET 	/devices/thermostats/device_id/eco_temperature_high_f	 regular methods.
+GET 	/devices/thermostats/device_id/eco_temperature_high_c	 regular methods.
+GET 	/devices/thermostats/device_id/hvac_state	 regular methods.
+GET 	/devices/thermostats/device_id/is_locked	 regular methods.
+GET 	/devices/thermostats/device_id/sunlight_correction_enabled	 regular methods.
+GET 	/devices/thermostats/device_id/where_name	 regular methods.
+GET 	/devices/thermostats/device_id/time_to_target_training	 regular methods.
+GET 	/devices/smoke_co_alarms/device_id/name	 regular methods.
+GET 	/devices/smoke_co_alarms/device_id/ui_color_state	 regular methods.
+GET 	/devices/smoke_co_alarms/device_id/where_name	 regular methods.
+GET 	/devices/cameras/device_id/where_id	 regular methods.
+GET 	/devices/cameras/device_id/where_name	 regular methods.
+GET 	/devices/cameras/device_id/is_public_share_enabled	 regular methods.
+GET 	/devices/cameras/device_id/activity_zones	 regular methods.
+GET 	/devices/cameras/device_id/snapshot_url	 regular methods.
+GET 	devices/cameras/device_id/last_event	 regular methods.
+GET 	/devices/cameras/device_id/last_event/has_sound	 regular methods.
+GET 	/devices/cameras/device_id/last_event/web_url	 regular methods.

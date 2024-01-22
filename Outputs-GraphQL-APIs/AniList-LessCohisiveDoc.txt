@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 13
+-/v2/oauth/token	Non-pertinent Documentation	Converting Authorization Codes To Access Tokens
+-/v2/oauth/pin	Non-pertinent Documentation	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
+-v2/SaveMediaListEntry	Non-pertinent Documentation	Create or update a media list entry
+-v2/SaveTextActivity	Non-pertinent Documentation	Create or update text activity for the currently authenticated user
+-v2/SaveListActivity	Non-pertinent Documentation	Update list activity
+-v2/ToggleActivityPin	Non-pertinent Documentation	Toggle activity to be pinned to the top of the user's activity feed
+-v2/SaveActivityReply	Non-pertinent Documentation	Create or update an activity reply
+-v2/ToggleLike	Non-pertinent Documentation	Add or remove a like from a likeable type. Returns all the users who liked the same model
+-v2/ToggleLikeV2	Non-pertinent Documentation	Add or remove a like from a likeable type.
+-v2/ToggleFavourite	Non-pertinent Documentation	Favourite or unfavourite an anime, manga, character, staff member, or studio
+-v2/SaveReview	Non-pertinent Documentation	Create or update a review
+-v2/SaveRecommendation	Non-pertinent Documentation	Recommendation a media
+-v2/SaveThread	Non-pertinent Documentation	Create or update a forum thread
+
+***Patterns*** 
+Count: 14
+-v2/UpdateMediaListEntries	Pertinent Documentation	Update multiple media list entries to the same values
+-v2/DeleteMediaListEntry	Pertinent Documentation	Delete a media list entry
+-v2/DeleteCustomList	Pertinent Documentation	Delete a custom list and remove the list entries from it
+-v2/DeleteActivity	Pertinent Documentation	Delete an activity item of the authenticated users
+-v2/ToggleActivitySubscription	Pertinent Documentation	Toggle the subscription of an activity item
+-v2/DeleteActivityReply	Pertinent Documentation	Delete an activity reply of the authenticated users
+-v2/ToggleFollow	Pertinent Documentation	Toggle the un/following of a user
+-v2/UpdateFavouriteOrder	Pertinent Documentation	Update the order favourites are displayed in
+-v2/DeleteReview	Pertinent Documentation	Delete a review
+-v2/RateReview	Pertinent Documentation	Rate a review
+-v2/DeleteThread	Pertinent Documentation	Delete a thread
+-v2/ToggleThreadSubscription	Pertinent Documentation	Toggle the subscription of a forum thread
+-v2/SaveThreadComment	Pertinent Documentation	Create or update a thread comment
+-v2/DeleteThreadComment	Pertinent Documentation	Delete a thread comment

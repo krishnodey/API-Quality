@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 6
+/objects/AccessScope	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and access. 0 hierarchical relations were detected out of 2
+/objects/DelegateAccessToken	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and delegate. 0 hierarchical relations were detected out of 3
+/objects/StorefrontAccessToken	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and storefront. 0 hierarchical relations were detected out of 3
+ /objects/TableData 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and table. 0 hierarchical relations were detected out of 2
+ /objects/TableDataColumn 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and table. 0 hierarchical relations were detected out of 3
+ /objects/TableResponse 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and table. 0 hierarchical relations were detected out of 2
+
+***Patterns*** 
+Count: 10
+/mutations/delegateAccessTokenCreate	Hierarchical Nodes	
+/mutations/storefrontAccessTokenCreate	Hierarchical Nodes	
+/mutations/storefrontAccessTokenDelete	Hierarchical Nodes	
+queries/shopifyqlQuery	Hierarchical Nodes	
+ /objects/ErrorPosition 	Hierarchical Nodes	
+ /objects/ParseError 	Hierarchical Nodes	
+ /objects/ParseErrorRange	Hierarchical Nodes	
+ /objects/PolarisVizDataPoint	Hierarchical Nodes	
+/objects/PolarisVizDataSeries	Hierarchical Nodes	
+ /objects/PolarisVizResponse 	Hierarchical Nodes	

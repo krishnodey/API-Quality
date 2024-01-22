@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 4
+queries/shopifyqlQuery	 Contextless Resource Names
+ /objects/PolarisVizDataPoint	 Contextless Resource Names
+/objects/PolarisVizDataSeries	 Contextless Resource Names
+ /objects/PolarisVizResponse 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 12
+/mutations/delegateAccessTokenCreate	 Contextual Resource Names
+/mutations/storefrontAccessTokenCreate	 Contextual Resource Names
+/mutations/storefrontAccessTokenDelete	 Contextual Resource Names
+/objects/AccessScope	 Contextual Resource Names
+/objects/DelegateAccessToken	 Contextual Resource Names
+/objects/StorefrontAccessToken	 Contextual Resource Names
+ /objects/ErrorPosition 	 Contextual Resource Names
+ /objects/ParseError 	 Contextual Resource Names
+ /objects/ParseErrorRange	 Contextual Resource Names
+ /objects/TableData 	 Contextual Resource Names
+ /objects/TableDataColumn 	 Contextual Resource Names
+ /objects/TableResponse 	 Contextual Resource Names

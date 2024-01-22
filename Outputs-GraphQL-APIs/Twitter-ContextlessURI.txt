@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 14
+ /v2/users/:id/bookmarks/:tweet_id 	 Contextless Resource Names
+ /v2/users/:id/bookmarks	 Contextless Resource Names
+ /v2/users/:id/bookmarks	 Contextless Resource Names
+ /v2/tweets/search/stream	 Contextless Resource Names
+/v2/tweets/search/stream/rules 	 Contextless Resource Names
+ /tweets/search/stream endpoint.	 Contextless Resource Names
+ /v2/tweets/:id/hidden 	 Contextless Resource Names
+ /v2/users/:id/likes/:tweet_id 	 Contextless Resource Names
+ /v2/tweets/:id/liking_users 	 Contextless Resource Names
+ /v2/users/:id/liked_tweets 	 Contextless Resource Names
+ /v2/users/:id/likes 	 Contextless Resource Names
+ /v2/tweets/:id 	 Contextless Resource Names
+ /v2/tweets 	 Contextless Resource Names
+ /2/tweets/:id/quote_tweets 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 0

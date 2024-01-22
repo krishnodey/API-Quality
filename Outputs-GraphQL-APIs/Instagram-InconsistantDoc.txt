@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 1
+get	/{api-version}/{ig-comment-id}/replies	Inconsistent Documentation	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
+
+***Patterns*** 
+Count: 17
+get	 /{ig-comment-id}?fields={fields} 	Consistent Documentation	Get fields and edges on an IG Comment.
+get	 /oauth/access_token 	Consistent Documentation	To generate an app access token, you need
+get	 /{user-id}/accounts?access_token={user-access-token} 	Consistent Documentation	Page access tokens are used in Graph API calls to manage Pages. To generate a page access token, an admin of the page must grant your app the Page permission or permissions needed. Once granted, you can retrieve the Page access token using a user access token with the required permissions.
+get	 /{app-id}|{client-token} 	Consistent Documentation	Client tokens make Graph API requests on behalf of apps instead of users.
+get	 /{api-version}/{ig-comment-id} 	Consistent Documentation	Get Instagram comments
+post	 /{ig-comment-id}/replies?message={message} 	Consistent Documentation	Replying to a Comment
+post	 /{ig-media-id}/comments 	Consistent Documentation	Create an IG Comment on an IG Media object
+get	 /{ig-comment-id}/replies 	Consistent Documentation	Returns a list of IG Comments on an IG Comment.
+delete	/{ig-comment-id}	Consistent Documentation	Deleting a Comment
+get	 /{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	Consistent Documentation	Get fields and edges on an IG Container.
+get	 /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	Consistent Documentation	Returns Fields and Edges on an IG Hashtag.
+get	 /{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Consistent Documentation	Gets fields and edges on IG media.
+post	 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	Consistent Documentation	Enable or disable comments on an IG Media.
+get	 /{api-version}/{ig-user-id} 	Consistent Documentation	Get fields and edges on an Instagram Business or Creator Account.
+get	 /{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	Consistent Documentation	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
+get	 v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Consistent Documentation	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
+get	 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Consistent Documentation	Returns insights on an IG User.

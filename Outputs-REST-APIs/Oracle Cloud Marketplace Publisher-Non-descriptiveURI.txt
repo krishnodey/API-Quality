@@ -1,0 +1,48 @@
+***Anti-Pattern*** 
+Count: 10
+/installrequests	 Non-descriptive End-point
+/applications/{listingVersionId}/availableservices	 Non-descriptive End-point
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	 Non-descriptive End-point
+/applications/{listingVersionId}/recommendedservices	 Non-descriptive End-point
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	 Non-descriptive End-point
+/applications/{listingVersionId}/screenshots	 Non-descriptive End-point
+/applications/{listingVersionId}/relateddocs	 Non-descriptive End-point
+/applications/{listingVersionId}/screenshots	 Non-descriptive End-point
+/applications/{listingVersionId}/supportingdocs	 Non-descriptive End-point
+/applications/{listingVersionId}/recommendedservices	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 33
+/applications/{listingVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}/banner	 Self-descriptive End-point
+/applications/{listingVersionId}/comments/{id}	 Self-descriptive End-point
+/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}/relateddocs/{id}	 Self-descriptive End-point
+/applications/{listingVersionId}/screenshots/{id}	 Self-descriptive End-point
+/applications/{listingVersionId}/supportingdocs/{id}	 Self-descriptive End-point
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	 Self-descriptive End-point
+/applications	 Self-descriptive End-point
+/applications/{listingVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}/comments	 Self-descriptive End-point
+/applications/{listingVersionId}/packages	 Self-descriptive End-point
+/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point
+/appstore/publisher/v2/applications/{listingVersionId}/packages	 Self-descriptive End-point
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}/banner	 Self-descriptive End-point
+/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}/relateddocs/{id}	 Self-descriptive End-point
+/applications/{listingVersionId}/supportingdocs/{id}	 Self-descriptive End-point
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point
+/applications	 Self-descriptive End-point
+/applications/{listingVersionId}/banner	 Self-descriptive End-point
+/applications/{listingVersionId}/comments	 Self-descriptive End-point
+/applications/{listingVersionId}/icon	 Self-descriptive End-point
+/applications/{listingVersionId}/packages	 Self-descriptive End-point
+/applications/{listingVersionId}/version	 Self-descriptive End-point
+/applications/{listingVersionId}	 Self-descriptive End-point
+/applications/{listingVersionId}/banner	 Self-descriptive End-point
+/applications/{listingVersionId}/comments/{id}	 Self-descriptive End-point
+/applications/{listingVersionId}/icon	 Self-descriptive End-point
+/applications/{listingVersionId}/packages/{packageVersionId}	 Self-descriptive End-point

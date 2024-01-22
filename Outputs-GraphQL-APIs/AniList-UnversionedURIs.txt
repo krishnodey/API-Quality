@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 27
+/v2/oauth/token [Version found.]
+/v2/oauth/pin [Version found.]
+v2/SaveMediaListEntry [Version found.]
+v2/UpdateMediaListEntries [Version found.]
+v2/DeleteMediaListEntry [Version found.]
+v2/DeleteCustomList [Version found.]
+v2/SaveTextActivity [Version found.]
+v2/SaveListActivity [Version found.]
+v2/DeleteActivity [Version found.]
+v2/ToggleActivityPin [Version found.]
+v2/ToggleActivitySubscription [Version found.]
+v2/SaveActivityReply [Version found.]
+v2/DeleteActivityReply [Version found.]
+v2/ToggleLike [Version found.]
+v2/ToggleLikeV2 [Version found.]
+v2/ToggleFollow [Version found.]
+v2/ToggleFavourite [Version found.]
+v2/UpdateFavouriteOrder [Version found.]
+v2/SaveReview [Version found.]
+v2/DeleteReview [Version found.]
+v2/RateReview [Version found.]
+v2/SaveRecommendation [Version found.]
+v2/SaveThread [Version found.]
+v2/DeleteThread [Version found.]
+v2/ToggleThreadSubscription [Version found.]
+v2/SaveThreadComment [Version found.]
+v2/DeleteThreadComment [Version found.]

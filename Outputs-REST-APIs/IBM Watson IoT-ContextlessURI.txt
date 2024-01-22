@@ -1,0 +1,62 @@
+***Anti-Pattern*** 
+Count: 18
+ /bulk/devices/add 	 Contextless Resource Names
+ /device/types/{typeId}/devices/{deviceId}/edgestatus 	 Contextless Resource Names
+ /mgmt/requests 	 Contextless Resource Names
+ /mgmt/requests 	 Contextless Resource Names
+ /mgmt/requests/{requestId} 	 Contextless Resource Names
+ /mgmt/requests/{requestId} 	 Contextless Resource Names
+ /mgmt/requests/{requestId}/cancel 	 Contextless Resource Names
+ /mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel 	 Contextless Resource Names
+ /mgmt/custom/bundle 	 Contextless Resource Names
+ /mgmt/custom/bundle 	 Contextless Resource Names
+ /mgmt/custom/bundle/{bundleId} 	 Contextless Resource Names
+ /mgmt/custom/bundle/{bundleId} 	 Contextless Resource Names
+ /mgmt/custom/bundle/{bundleId} 	 Contextless Resource Names
+ /config/lec 	 Contextless Resource Names
+ /config/lec 	 Contextless Resource Names
+ /device/types/{deviceType}/devices/{deviceId}/events/{eventName} 	 Contextless Resource Names
+ /device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode 	 Contextless Resource Names
+ /device/types/{typeId}/devices/{deviceId}/events/{eventName} 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 39
+ /bulk/devices 	 Contextual Resource Names
+ /bulk/devices/remove 	 Contextual Resource Names
+ /device/types 	 Contextual Resource Names
+ /device/types 	 Contextual Resource Names
+ /device/types/{typeId} 	 Contextual Resource Names
+ /device/types/{typeId} 	 Contextual Resource Names
+ /device/types/{typeId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices 	 Contextual Resource Names
+ /device/types/{typeId}/devices 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/devices 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId} 	 Contextual Resource Names
+ /logs/connection 	 Contextual Resource Names
+ /usage/data-traffic 	 Contextual Resource Names
+ /service-status 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/logs 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/logs 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/logs 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/logs/{logId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/logs/{logId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	 Contextual Resource Names
+ /mgmt/requests/{requestId}/deviceStatus 	 Contextual Resource Names
+ /mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId} 	 Contextual Resource Names
+ /device/types/{deviceType}/devices/{deviceId}/events 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/location 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/location 	 Contextual Resource Names
+ /application/types/{typeId}/devices/{deviceId}/events/{eventName} 	 Contextual Resource Names
+ /application/types/{typeId}/devices/{deviceId}/commands/{commandId} 	 Contextual Resource Names
+ /device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request 	 Contextual Resource Names
+ /s2s/services 	 Contextual Resource Names
+ /s2s/services 	 Contextual Resource Names
+ /s2s/services/{serviceUuid} 	 Contextual Resource Names
+ /s2s/services/{serviceUuid} 	 Contextual Resource Names
+ /s2s/services/{serviceUuid} 	 Contextual Resource Names
+ /event/types 	 Contextual Resource Names

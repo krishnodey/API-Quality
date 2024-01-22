@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+ /{ig-comment-id}?fields={fields} 	 Contextual Resource Names
+ /{ig-comment-id}?hide={hide} 	 Contextual Resource Names
+ /{ig-comment-id} 	 Contextual Resource Names
+ /oauth/authorize 	 Contextual Resource Names
+ /oauth/access_token 	 Contextual Resource Names
+ /access_token 	 Contextual Resource Names
+ /refresh_access_token 	 Contextual Resource Names
+ /oauth/authorize 	 Contextual Resource Names
+ /{media-id} 	 Contextual Resource Names
+ /{media-id}/children 	 Contextual Resource Names
+ /{user-id}/media 	 Contextual Resource Names
+- /me 	Contextual Resource Names
+ /{user-id} 	 Contextual Resource Names
+ /{user-id}/media 	 Contextual Resource Names
+ /{ig-hashtag-id} 	 Contextual Resource Names
+ /{ig-media-id}?fields={fields} 	 Contextual Resource Names
+ /{ig-media-id}?comment_enabled={comment_enabled} 	 Contextual Resource Names
+ /{ig-media-id}/comments?message={message} 	 Contextual Resource Names
+ /{ig-media-id}/comments 	 Contextual Resource Names
+ /{ig-user-id}?fields={fields} 	 Contextual Resource Names
+ /{page-id}?fields=instagram_business_account 	 Contextual Resource Names

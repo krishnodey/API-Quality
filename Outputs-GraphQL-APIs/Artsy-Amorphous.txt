@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+v2/applications/{id}	Tidy End-point	
+v2/artists/{id}	Tidy End-point	
+v2/artworks/{id}	Tidy End-point	
+v2/bidders/{id}	Tidy End-point	
+v2/bidder_positions/{id}	Tidy End-point	
+v2/bids/{id}	Tidy End-point	
+v2/collection_items/{id}	Tidy End-point	
+v2/collections?user_id=USER_ID&private=true	Tidy End-point	
+v2/edition/{id}	Tidy End-point	
+v2/fairs/{id}	Tidy End-point	
+v2/genes/{id}	Tidy End-point	
+v2/images/{id}	Tidy End-point	
+v2/partners/{id}	Tidy End-point	
+v2/profiles/{id}	Tidy End-point	
+v2/sales	Tidy End-point	
+v2/search?q=Andy+Warhol	Tidy End-point	
+v2/shows/{id}	Tidy End-point	
+v2/status	Tidy End-point	
+v2/user_details/{id}	Tidy End-point	
+v2/users/{id}	Tidy End-point	
+v2/current_user	Tidy End-point	

@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 4
+-/ping	Non-pertinent Documentation	Returns the literal string 'pong'.
+-/pingInStoreReader	Non-pertinent Documentation	Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
+-/idFromLegacyId	Non-pertinent Documentation	Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods.
+-/authorizePayPalAccount	Non-pertinent Documentation	Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction.
+
+***Patterns*** 
+Count: 11
+-/viewer	Pertinent Documentation	The currently authenticated viewer.
+-/clientConfiguration	Pertinent Documentation	The client-side environment and payment method configuration.
+-/node	Pertinent Documentation	Fetch any object that extends the Node interface using its ID.
+-/report	Pertinent Documentation	A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters.
+-/search	Pertinent Documentation	A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters.
+-/paypalFinancingOptions	Pertinent Documentation	Retrieve PayPal financing options that include payment installment plans.
+-/inStoreLocations	Pertinent Documentation	Retrieve a paginated list of all in-store locations.
+-/authorizePaymentMethod	Pertinent Documentation	Authorize an eligible payment method and return a payload that includes details of the resulting transaction.
+-/authorizeVenmoAccount	Pertinent Documentation	Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.
+-/authorizeCreditCard	Pertinent Documentation	Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.
+-/captureTransaction	Pertinent Documentation	Capture an authorized transaction and return a payload that includes details of the transaction.

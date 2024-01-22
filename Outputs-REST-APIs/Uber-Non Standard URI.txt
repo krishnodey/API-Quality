@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 15
+/oauth/authorize	Non-standard End-point	 [black space/tab found] 
+/oauth/token	Non-standard End-point	 [black space/tab found] 
+/history	Non-standard End-point	 [black space/tab found] 
+/payment-methods	Non-standard End-point	 [black space/tab found] 
+/products	Non-standard End-point	 [black space/tab found] 
+/products/{product_id}	Non-standard End-point	 [black space/tab found] 
+/estimates/price	Non-standard End-point	 [black space/tab found] 
+/estimates/time	Non-standard End-point	 [black space/tab found] 
+/requests/estimate	Non-standard End-point	 [black space/tab found] 
+/requests/current	Non-standard End-point	 [black space/tab found] 
+/requests/current	Non-standard End-point	 [black space/tab found] 
+/requests/current	Non-standard End-point	 [black space/tab found] 
+/requests/{request_id}/receipt	Non-standard End-point	 [black space/tab found] 
+/requests/{request_id}/map	Non-standard End-point	 [black space/tab found] 
+/requests/{request_id}/receipt	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

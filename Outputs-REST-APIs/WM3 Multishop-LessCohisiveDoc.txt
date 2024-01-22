@@ -1,7 +1,5 @@
 ***Anti-Pattern*** 
 Count: 0
-- /shop/admin/products/:idUpdate Product 	Non-pertinent Documentation	 
-
 
 ***Patterns*** 
 Count: 54
@@ -16,6 +14,8 @@ Count: 54
 -/shop/admin/products/:id	Pertinent Documentation	Retrieve Product
 -/shop/admin/products	Pertinent Documentation	Create Product
 -/shop/admin/products	Pertinent Documentation	Create multiple Products
+- /shop/admin/products/:idUpdate Product 	Pertinent Documentation	 
+
 -/shop/admin/properties	Pertinent Documentation	Retrieve Properties
 -/shop/admin/properties/:id	Pertinent Documentation	Retrieve Property
 -/shop/admin/properties/:id	Pertinent Documentation	Update Property

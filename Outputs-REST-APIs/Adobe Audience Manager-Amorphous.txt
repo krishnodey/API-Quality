@@ -1,0 +1,70 @@
+***Anti-Pattern*** 
+Count: 16
+/available-data-feeds/	Amorphous End-point	 [trailing slash found] 
+/destinations/segment-impressions/	Amorphous End-point	 [trailing slash found] 
+/destinations/segment-impressions/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/{dataSourceId}/plans/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/{dataSourceId}/plans/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/{dataSourceId}/requests/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/{dataSourceId}/requests/	Amorphous End-point	 [trailing slash found] 
+/data-feeds/{dataSourceId}/potential-subscribers/	Amorphous End-point	 [trailing slash found] 
+/datasources/	Amorphous End-point	 [trailing slash found] 
+/datasources/	Amorphous End-point	 [trailing slash found] 
+/destinations/	Amorphous End-point	 [trailing slash found] 
+/destinations/	Amorphous End-point	 [trailing slash found] 
+/destinations/{destinationId}/history/outbound/	Amorphous End-point	 [trailing slash found] 
+/destinations/{destinationId}/mappings-by-priority/	Amorphous End-point	 [trailing slash found] 
+
+***Patterns*** 
+Count: 49
+/models/{modelId}	Tidy End-point	
+/models/{modelId}	Tidy End-point	
+/models	Tidy End-point	
+/models	Tidy End-point	
+/models/{modelId}/processing-history	Tidy End-point	
+/models/{modelId}/runs/latest/traits	Tidy End-point	
+/models/{modelId}/runs/latest/stats	Tidy End-point	
+/models/bulk-delete	Tidy End-point	
+/models/limits	Tidy End-point	
+/algorithms/{algoTypeId}	Tidy End-point	
+/algorithms	Tidy End-point	
+/available-data-feeds/{dataSourceId}	Tidy End-point	
+/available-data-feeds/{dataSourceId}/plans	Tidy End-point	
+/available-data-feeds/{dataSourceId}/subscribe	Tidy End-point	
+/available-data-feeds/{dataSourceId}/requests	Tidy End-point	
+/data-feeds/billing-report	Tidy End-point	
+/data-feeds/billing-report	Tidy End-point	
+/data-feeds/usage	Tidy End-point	
+/data-feeds/bulk-usage	Tidy End-point	
+/data-feeds/{dataSourceId}	Tidy End-point	
+/data-feeds/{dataSourceId}	Tidy End-point	
+/data-feeds/{dataSourceId}	Tidy End-point	
+/data-feeds/{dataSourceId}/subscriptions	Tidy End-point	
+/data-feeds/{dataSourceId}/subscriptions	Tidy End-point	
+/data-feeds/{dataSourceId}/requests/{requestId}	Tidy End-point	
+/data-feeds/{dataSourceId}/requests/{requestId}	Tidy End-point	
+/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	
+/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	
+/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	
+/datasources/{dataSourceId}	Tidy End-point	
+/datasources/{dataSourceId}	Tidy End-point	
+/datasources/{dataSourceId}	Tidy End-point	
+/datasources/bulk-delete	Tidy End-point	
+/datasources/configurations/available-id-types	Tidy End-point	
+/datasources/configurations/marketing-cloud-visitorid-versions	Tidy End-point	
+/datasources/{dataSourceId}/history/inbound	Tidy End-point	
+/datasources/{dataSourceId}/history/inbound/sampling-data	Tidy End-point	
+/signals/derived/{derivedSignalId}	Tidy End-point	
+/signals/derived/{derivedSignalId}	Tidy End-point	
+/signals/derived/{derivedSignalId}	Tidy End-point	
+/signals/derived	Tidy End-point	
+/signals/derived	Tidy End-point	
+/signals/derived/limits	Tidy End-point	
+/destinations/limits	Tidy End-point	
+/destinations/{destinationId}	Tidy End-point	
+/destinations/{destinationId}	Tidy End-point	
+/destinations/{destinationId}	Tidy End-point	
+/destinations/{destinationId}/bulk-create	Tidy End-point	
+/destinations/{destinationId}/bulk-delete	Tidy End-point	

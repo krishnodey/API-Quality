@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+GET 	/appCategories	 regular methods.
+GET 	/appCategories/{id}	 regular methods.
+GET 	/appEncryptionDeclarations	 regular methods.
+GET 	/appEncryptionDeclarations/{id}	 regular methods.
+GET 	/appInfoLocalizations/{id}	 regular methods.
+GET 	/appInfos/{id}	 regular methods.
+GET 	/appPreOrders/{id}	 regular methods.
+GET 	/appPreviewSets/{id}	 regular methods.
+GET 	/appPreviews/{id}	 regular methods.
+GET 	/appPricePoints	 regular methods.
+GET 	/appPricePoints/{id}	 regular methods.
+GET 	/appPriceTiers	 regular methods.
+GET 	/appPriceTiers/{id}	 regular methods.
+GET 	/appPrices/{id}	 regular methods.
+GET 	/appScreenshotSets/{id}	 regular methods.
+GET 	/appScreenshots/{id}	 regular methods.
+GET 	/appStoreReviewAttachments/{id}	 regular methods.
+GET 	/appStoreReviewDetails/{id}	 regular methods.
+GET 	/appStoreVersionLocalizations/{id}	 regular methods.
+GET 	/appStoreVersions/{id}	 regular methods.
+GET 	/apps	 regular methods.
+GET 	/betaAppLocalizations	 regular methods.
+GET 	/endUserLicenseAgreements/{id}	 regular methods.
+GET 	/financeReports	 regular methods.
+GET 	/preReleaseVersions	 regular methods.
+GET 	/routingAppCoverages/{id}	 regular methods.
+GET 	/salesReports	 regular methods.
+GET 	/appCategories/{id}/subcategories	 regular methods.
+GET 	/appEncryptionDeclarations/{id}/app	 regular methods.
+GET 	/appInfos/{id}/ageRatingDeclaration	 regular methods.
+GET 	/appInfos/{id}/appInfoLocalizations	 regular methods.
+GET 	/appInfos/{id}/primaryCategory	 regular methods.

@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 17
+/bui/getBUIAllConfig	 Non-descriptive End-point
+/bui/getMyTicketDetails({persid})	 Non-descriptive End-point
+/bui/getTicketsCustomData({persid})	 Non-descriptive End-point
+/bui/attrCtrl	 Non-descriptive End-point
+/bui/changeStatus/{factory}({persid})	 Non-descriptive End-point
+/bui/allFeeds({persid})	 Non-descriptive End-point
+/bui/attmnt	 Non-descriptive End-point
+/bui/getDocument({id})	 Non-descriptive End-point
+/bui/getKDAttachments({id})	 Non-descriptive End-point
+/bui/getKDComments({id})	 Non-descriptive End-point
+/bui/addKDComment({id})	 Non-descriptive End-point
+/bui/rateDocument({id})	 Non-descriptive End-point
+/bui/kdLinkInfo({id})	 Non-descriptive End-point
+/bui/unLinkSolution({id})	 Non-descriptive End-point
+/bui/getEEMAuth	 Non-descriptive End-point
+/bui/{factory}({persid})	 Non-descriptive End-point
+/bui/{factory}({persid})	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 23
+/api/getAccess	 Self-descriptive End-point
+/bui/getAllowedStatus	 Self-descriptive End-point
+/bui/getDefaultCategories	 Self-descriptive End-point
+/bui/attrInfo	 Self-descriptive End-point
+/bui/addLogComment	 Self-descriptive End-point
+/bui/getBopSID	 Self-descriptive End-point
+/bui/attmnt({persid})/$value	 Self-descriptive End-point
+/bui/updateStatusForNotification	 Self-descriptive End-point
+/bui/updateStatusForAllNotification	 Self-descriptive End-point
+/bui/getMyResources	 Self-descriptive End-point
+/bui/getMyActiveChatSession	 Self-descriptive End-point
+/bui/checkActiveSessions	 Self-descriptive End-point
+/bui/createChatThread	 Self-descriptive End-point
+/bui/getChatHistory/{roomName}	 Self-descriptive End-point
+/bui/helpAbout	 Self-descriptive End-point
+/bui/{factory}	 Self-descriptive End-point
+/bui/{factory}	 Self-descriptive End-point
+/gs/mytkt_active	 Self-descriptive End-point
+/gs/mytkt_inactive	 Self-descriptive End-point
+/getServiceRequest	 Self-descriptive End-point
+/pcatSearch	 Self-descriptive End-point
+/getOfferings	 Self-descriptive End-point
+/suggestedSolutions	 Self-descriptive End-point

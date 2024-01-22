@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 16
+/mutations/delegateAccessTokenCreate	Verbless End-point	
+/mutations/storefrontAccessTokenCreate	Verbless End-point	
+/mutations/storefrontAccessTokenDelete	Verbless End-point	
+/objects/AccessScope	Verbless End-point	
+/objects/DelegateAccessToken	Verbless End-point	
+/objects/StorefrontAccessToken	Verbless End-point	
+queries/shopifyqlQuery	Verbless End-point	
+/objects/ErrorPosition	Verbless End-point	
+/objects/ParseError	Verbless End-point	
+/objects/ParseErrorRange	Verbless End-point	
+/objects/PolarisVizDataPoint	Verbless End-point	
+/objects/PolarisVizDataSeries	Verbless End-point	
+/objects/PolarisVizResponse	Verbless End-point	
+/objects/TableData	Verbless End-point	
+/objects/TableDataColumn	Verbless End-point	
+/objects/TableResponse	Verbless End-point	

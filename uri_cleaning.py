@@ -71,7 +71,7 @@ class UriCleaning:
         for line in data:
             line  = line.split(">>")
             line[1].strip("\n")
-            if(text == line[0].strip()):
+            if(text.lower() == line[0].strip().lower()):
                 ret = line[1].strip()
                 ret = ret.split()
                 return ret

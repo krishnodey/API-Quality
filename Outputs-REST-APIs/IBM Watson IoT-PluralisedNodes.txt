@@ -1,0 +1,62 @@
+***Anti-Pattern*** 
+Count: 11
+POST 	/bulk/devices/add	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/bulk/devices/remove	Pluralized Nodes	 [Singular last node with POST method.] 
+DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/logs	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+POST 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/mgmt/requests/{requestId}/cancel	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/mgmt/custom/bundle	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 46
+GET 	/bulk/devices	 regular methods.
+GET 	/device/types	 regular methods.
+POST 	/device/types	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/device/types/{typeId}	 regular methods.
+PUT 	/device/types/{typeId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/device/types/{typeId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/device/types/{typeId}/devices	 regular methods.
+POST 	/device/types/{typeId}/devices	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/device/types/{typeId}/devices/{deviceId}	 regular methods.
+PUT 	/device/types/{typeId}/devices/{deviceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/device/types/{typeId}/devices/{deviceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/device/types/{typeId}/devices/{deviceId}/devices	 regular methods.
+GET 	/device/types/{typeId}/devices/{deviceId}/edgestatus	 regular methods.
+GET 	/device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	 regular methods.
+GET 	/logs/connection	 regular methods.
+GET 	/usage/data-traffic	 regular methods.
+GET 	/service-status	 regular methods.
+GET 	/device/types/{typeId}/devices/{deviceId}/diag/logs	 regular methods.
+POST 	/device/types/{typeId}/devices/{deviceId}/diag/logs	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	 regular methods.
+DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	 regular methods.
+DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/mgmt/requests	 regular methods.
+POST 	/mgmt/requests	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/mgmt/requests/{requestId}	 regular methods.
+DELETE 	/mgmt/requests/{requestId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/mgmt/requests/{requestId}/deviceStatus	 regular methods.
+GET 	/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}	 regular methods.
+GET 	/mgmt/custom/bundle	 regular methods.
+GET 	/mgmt/custom/bundle/{bundleId}	 regular methods.
+PUT 	/mgmt/custom/bundle/{bundleId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/mgmt/custom/bundle/{bundleId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/config/lec	 regular methods.
+PUT 	/config/lec	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	 regular methods.
+GET 	/device/types/{deviceType}/devices/{deviceId}/events	 regular methods.
+GET 	/device/types/{typeId}/devices/{deviceId}/location	 regular methods.
+PUT 	/device/types/{typeId}/devices/{deviceId}/location	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	 regular methods.
+GET 	/s2s/services	 regular methods.
+POST 	/s2s/services	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/s2s/services/{serviceUuid}	 regular methods.
+PUT 	/s2s/services/{serviceUuid}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/s2s/services/{serviceUuid}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/event/types	 regular methods.

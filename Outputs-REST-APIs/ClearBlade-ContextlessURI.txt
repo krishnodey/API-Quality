@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 31
+ /api/user/reg 	 Contextless Resource Names
+ /api/user/checkauth 	 Contextless Resource Names
+ /api/v/2/devices/{systemKey}/{name} 	 Contextless Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
+ /api/collection/{systemKey}/{collectionName} 	 Contextless Resource Names
+ /api/data/{collectionid}/columns 	 Contextless Resource Names
+ /api/code/{systemKey}/{serviceName} 	 Contextless Resource Names
+ /codeadmin/v/2/library/{systemKey} 	 Contextless Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
+ /codeadmin/v/2/library/{systemKey}/{name} 	 Contextless Resource Names
+ /codeadmin/v/2/history/library/{systemKey}/{name} 	 Contextless Resource Names
+ /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Contextless Resource Names
+ /codeadmin/failed 	 Contextless Resource Names
+ /codeadmin/failed/{systemKey} 	 Contextless Resource Names
+ /codeadmin/failed/{systemKey} 	 Contextless Resource Names
+ /codeadmin/failed/{systemKey} 	 Contextless Resource Names
+ /api/message/{systemKey} 	 Contextless Resource Names
+ /api/message/{systemKey}/publish 	 Contextless Resource Names
+ /api/message/{systemKey} 	 Contextless Resource Names
+ /admin/reg 	 Contextless Resource Names
+ /admin/systemmanagement 	 Contextless Resource Names
+ /admin/systemmanagement 	 Contextless Resource Names
+ /admin/systemmanagement 	 Contextless Resource Names
+ /admin/systemmanagement 	 Contextless Resource Names
+ /admin/collectionmanagement 	 Contextless Resource Names
+ /admin/collectionmanagement 	 Contextless Resource Names
+ /admin/collectionmanagement 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 14
+ /api/user/auth 	 Contextual Resource Names
+ /api/user/anon 	 Contextual Resource Names
+ /api/user/logout 	 Contextual Resource Names
+ /api/user/info 	 Contextual Resource Names
+ /api/user/info 	 Contextual Resource Names
+ /api/user/pass 	 Contextual Resource Names
+ /api/user 	 Contextual Resource Names
+ /api/v/2/devices/{SystemKey}/auth 	 Contextual Resource Names
+ /api/data/{collectionID} 	 Contextual Resource Names
+ /api/data/{collectionID} 	 Contextual Resource Names
+ /api/data/{collectionID} 	 Contextual Resource Names
+ /api/data/{collectionID} 	 Contextual Resource Names
+ /admin/auth 	 Contextual Resource Names
+ /admin/logout 	 Contextual Resource Names

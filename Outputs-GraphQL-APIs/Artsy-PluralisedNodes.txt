@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+GET 	v2/applications/{id}	 regular methods.
+GET 	v2/artists/{id}	 regular methods.
+GET 	v2/artworks/{id}	 regular methods.
+GET 	v2/bidders/{id}	 regular methods.
+GET 	v2/bidder_positions/{id}	 regular methods.
+GET 	v2/bids/{id}	 regular methods.
+GET 	v2/collection_items/{id}	 regular methods.
+GET 	v2/collections?user_id=USER_ID&private=true	 regular methods.
+GET 	v2/edition/{id}	 regular methods.
+GET 	v2/fairs/{id}	 regular methods.
+GET 	v2/genes/{id}	 regular methods.
+GET 	v2/images/{id}	 regular methods.
+GET 	v2/partners/{id}	 regular methods.
+GET 	v2/profiles/{id}	 regular methods.
+GET 	v2/sales	 regular methods.
+GET 	v2/search?q=Andy+Warhol	 regular methods.
+GET 	v2/shows/{id}	 regular methods.
+GET 	v2/status	 regular methods.
+GET 	v2/user_details/{id}	 regular methods.
+GET 	v2/users/{id}	 regular methods.
+GET 	v2/current_user	 regular methods.

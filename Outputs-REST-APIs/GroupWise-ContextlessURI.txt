@@ -1,0 +1,61 @@
+***Anti-Pattern*** 
+Count: 25
+ /list/{type} 	 Contextless Resource Names
+ /list/{type}/{base} 	 Contextless Resource Names
+ /async?state 	 Contextless Resource Names
+ /async/{id} 	 Contextless Resource Names
+ /async/{id} 	 Contextless Resource Names
+ /diagnostics/index 	 Contextless Resource Names
+ /diagnostics/index/{index}?attrs 	 Contextless Resource Names
+ /diagnostics/object/{id} 	 Contextless Resource Names
+ /domains/{domain}/addressbook/fields 	 Contextless Resource Names
+ /domains/{domain}/addressbook/labels 	 Contextless Resource Names
+ /domains/{domain}/addressbook/labels/{field} 	 Contextless Resource Names
+ /domains/{domain}/addressbook/labels/{field} 	 Contextless Resource Names
+ /domains/{domain}/clientoptions?attrs 	 Contextless Resource Names
+ /domains/{domain}/clientoptions?attrs 	 Contextless Resource Names
+ /domains/{domain}/customaddresses 	 Contextless Resource Names
+ /domains/{domain}/customaddresses/test?testAddress 	 Contextless Resource Names
+ /domains/{domain}/gatewaysubdirs 	 Contextless Resource Names
+ /domains/{domain}/refaccesscontrols 	 Contextless Resource Names
+ /domains/{domain}/refaccesscontrols 	 Contextless Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Contextless Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Contextless Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Contextless Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 Contextless Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 Contextless Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 31
+ /application 	 Contextual Resource Names
+ /diagnostics/attributes?locale 	 Contextual Resource Names
+ /domains 	 Contextual Resource Names
+ /domains 	 Contextual Resource Names
+ /domains/{domain} 	 Contextual Resource Names
+ /domains/{domain} 	 Contextual Resource Names
+ /domains/{domain} 	 Contextual Resource Names
+ /domains/{domain}/addressbook/view 	 Contextual Resource Names
+ /domains/{domain}/addressbook/view 	 Contextual Resource Names
+ /domains/{domain}/administrator 	 Contextual Resource Names
+ /domains/{domain}/administrator 	 Contextual Resource Names
+ /domains/{domain}/administrator 	 Contextual Resource Names
+ /domains/{domain}/info 	 Contextual Resource Names
+ /domains/{domain}/links?direction 	 Contextual Resource Names
+ /domains/{domain}/links/{link} 	 Contextual Resource Names
+ /domains/{domain}/links/{link} 	 Contextual Resource Names
+ /domains/{domain}/rebuild 	 Contextual Resource Names
+ /domains/attributes 	 Contextual Resource Names
+ /domains/{domain}/gateways 	 Contextual Resource Names
+ /domains/{domain}/gateways 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway} 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway} 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway} 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/administrators 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/administrators 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/administrators/{id} 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/administrators/{id} 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/aliases 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/classofservice 	 Contextual Resource Names
+ /domains/{domain}/gateways/{gateway}/recoverDb 	 Contextual Resource Names

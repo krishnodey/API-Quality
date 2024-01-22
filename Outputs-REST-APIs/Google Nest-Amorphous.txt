@@ -1,0 +1,40 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 35
+/devices/thermostats/device_id/device_id	Tidy End-point	
+/devices/thermostats/device_id/locale	Tidy End-point	
+/devices/thermostats/device_id/software_version	Tidy End-point	
+/devices/thermostats/device_id/structure_id	Tidy End-point	
+/devices/thermostats/device_id/name	Tidy End-point	
+/devices/thermostats/device_id/name_long	Tidy End-point	
+/devices/thermostats/device_id/last_connection	Tidy End-point	
+/devices/thermostats/device_id/is_online	Tidy End-point	
+/devices/thermostats/device_id/can_cool	Tidy End-point	
+/devices/thermostats/device_id/can_heat	Tidy End-point	
+/devices/thermostats/device_id/is_using_emergency_heat	Tidy End-point	
+/devices/thermostats/device_id/has_fan	Tidy End-point	
+/devices/thermostats/device_id/fan_timer_active	Tidy End-point	
+/devices/thermostats/device_id/fan_timer_timeout	Tidy End-point	
+/devices/thermostats/device_id/has_leaf	Tidy End-point	
+/devices/thermostats/device_id/temperature_scale	Tidy End-point	
+/devices/thermostats/device_id/target_temperature_f	Tidy End-point	
+/devices/thermostats/device_id/eco_temperature_high_f	Tidy End-point	
+/devices/thermostats/device_id/eco_temperature_high_c	Tidy End-point	
+/devices/thermostats/device_id/hvac_state	Tidy End-point	
+/devices/thermostats/device_id/is_locked	Tidy End-point	
+/devices/thermostats/device_id/sunlight_correction_enabled	Tidy End-point	
+/devices/thermostats/device_id/where_name	Tidy End-point	
+/devices/thermostats/device_id/time_to_target_training	Tidy End-point	
+/devices/smoke_co_alarms/device_id/name	Tidy End-point	
+/devices/smoke_co_alarms/device_id/ui_color_state	Tidy End-point	
+/devices/smoke_co_alarms/device_id/where_name	Tidy End-point	
+/devices/cameras/device_id/where_id	Tidy End-point	
+/devices/cameras/device_id/where_name	Tidy End-point	
+/devices/cameras/device_id/is_public_share_enabled	Tidy End-point	
+/devices/cameras/device_id/activity_zones	Tidy End-point	
+/devices/cameras/device_id/snapshot_url	Tidy End-point	
+devices/cameras/device_id/last_event	Tidy End-point	
+/devices/cameras/device_id/last_event/has_sound	Tidy End-point	
+/devices/cameras/device_id/last_event/web_url	Tidy End-point	

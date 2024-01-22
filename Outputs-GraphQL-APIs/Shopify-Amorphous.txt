@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 16
+/mutations/delegateAccessTokenCreate	Tidy End-point	
+/mutations/storefrontAccessTokenCreate	Tidy End-point	
+/mutations/storefrontAccessTokenDelete	Tidy End-point	
+/objects/AccessScope	Tidy End-point	
+/objects/DelegateAccessToken	Tidy End-point	
+/objects/StorefrontAccessToken	Tidy End-point	
+queries/shopifyqlQuery	Tidy End-point	
+/objects/ErrorPosition	Tidy End-point	
+/objects/ParseError	Tidy End-point	
+/objects/ParseErrorRange	Tidy End-point	
+/objects/PolarisVizDataPoint	Tidy End-point	
+/objects/PolarisVizDataSeries	Tidy End-point	
+/objects/PolarisVizResponse	Tidy End-point	
+/objects/TableData	Tidy End-point	
+/objects/TableDataColumn	Tidy End-point	
+/objects/TableResponse	Tidy End-point	

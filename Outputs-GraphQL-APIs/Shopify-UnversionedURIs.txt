@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 16
+/mutations/delegateAccessTokenCreate [No version found.]
+/mutations/storefrontAccessTokenCreate [No version found.]
+/mutations/storefrontAccessTokenDelete [No version found.]
+/objects/AccessScope [No version found.]
+/objects/DelegateAccessToken [No version found.]
+/objects/StorefrontAccessToken [No version found.]
+queries/shopifyqlQuery [No version found.]
+/objects/ErrorPosition [No version found.]
+/objects/ParseError [No version found.]
+/objects/ParseErrorRange [No version found.]
+/objects/PolarisVizDataPoint [No version found.]
+/objects/PolarisVizDataSeries [No version found.]
+/objects/PolarisVizResponse [No version found.]
+/objects/TableData [No version found.]
+/objects/TableDataColumn [No version found.]
+/objects/TableResponse [No version found.]
+
+***Patterns*** 
+Count: 0

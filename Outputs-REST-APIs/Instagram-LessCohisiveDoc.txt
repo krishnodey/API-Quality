@@ -1,0 +1,27 @@
+***Anti-Pattern*** 
+Count: 2
+-/{media-id}	Non-pertinent Documentation	Get fields and edges on an image, video, or album.
+-/{media-id}/children	Non-pertinent Documentation	Get a list of images and videos on an album.
+
+***Patterns*** 
+Count: 19
+-/{ig-comment-id}?fields={fields}	Pertinent Documentation	Reading a Comment
+-/{ig-comment-id}?hide={hide}	Pertinent Documentation	Hiding/Unhiding a Comment
+-/{ig-comment-id}	Pertinent Documentation	Deleting a Comment
+-/oauth/authorize	Pertinent Documentation	Get the Authorization Window.
+-/oauth/access_token	Pertinent Documentation	Exchange an Authorization Code for a short-lived Instagram User Access Token.
+-/access_token	Pertinent Documentation	Exchange a short-lived Instagram User Access Token for a long-lived Instagram User Access Token.
+-/refresh_access_token	Pertinent Documentation	Refresh a long-lived Instagram User Access Token.
+-/oauth/authorize	Pertinent Documentation	Get the Authorization Window.
+-/{user-id}/media	Pertinent Documentation	Get a list of images, videos, or albums on a User.
+- /me 	Pertinent Documentation	 Get fields and edges on a User.
+
+-/{user-id}	Pertinent Documentation	Get fields and edges on a User.
+-/{user-id}/media	Pertinent Documentation	Get a list of images, videos, or albums on a User.
+-/{ig-hashtag-id}	Pertinent Documentation	Returns Fields and Edges on an IG Hashtag.
+-/{ig-media-id}?fields={fields}	Pertinent Documentation	Gets Fields and Edges on an IG Media.
+-/{ig-media-id}?comment_enabled={comment_enabled}	Pertinent Documentation	Enables or disables comments on a media object.
+-/{ig-media-id}/comments?message={message}	Pertinent Documentation	Creates an IG Comment on an IG Media object.
+-/{ig-media-id}/comments	Pertinent Documentation	Returns a list of IG Comments on an IG Media object.
+-/{ig-user-id}?fields={fields}	Pertinent Documentation	Get fields and edges on an Instagram Business or Creator Account.
+-/{page-id}?fields=instagram_business_account	Pertinent Documentation	Returns the IG User connected to the Facebook Page.

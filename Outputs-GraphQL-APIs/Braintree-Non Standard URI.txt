@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 15
+/ping	Non-standard End-point	 [black space/tab found] 
+/pingInStoreReader	Non-standard End-point	 [black space/tab found] 
+/viewer	Non-standard End-point	 [black space/tab found] 
+/clientConfiguration	Non-standard End-point	 [black space/tab found] 
+/node	Non-standard End-point	 [black space/tab found] 
+/idFromLegacyId	Non-standard End-point	 [black space/tab found] 
+/report	Non-standard End-point	 [black space/tab found] 
+/search	Non-standard End-point	 [black space/tab found] 
+/paypalFinancingOptions	Non-standard End-point	 [black space/tab found] 
+/inStoreLocations	Non-standard End-point	 [black space/tab found] 
+/authorizePaymentMethod	Non-standard End-point	 [black space/tab found] 
+/authorizePayPalAccount	Non-standard End-point	 [black space/tab found] 
+/authorizeVenmoAccount	Non-standard End-point	 [black space/tab found] 
+/authorizeCreditCard	Non-standard End-point	 [black space/tab found] 
+/captureTransaction	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

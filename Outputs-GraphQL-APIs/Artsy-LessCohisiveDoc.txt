@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 20
+-v2/applications/{id}	Non-pertinent Documentation	Users can retrieve a specific application by ID by rendering the "application" link template from root.
+-v2/artists/{id}	Non-pertinent Documentation	Users can retrieve a specific artist by ID by rendering the "artist" link template from root.
+-v2/artworks/{id}	Non-pertinent Documentation	Users can retrieve a specific artwork by ID by rendering the "artwork" link template from root.
+-v2/bidders/{id}	Non-pertinent Documentation	Authorized users and applications can retrieve a specific bidder by ID by rendering the "bidder" link template from root.
+-v2/bidder_positions/{id}	Non-pertinent Documentation	Users can retrieve a specific bidder position by ID by rendering the "bidder_position" link template from root.
+-v2/bids/{id}	Non-pertinent Documentation	Users can retrieve a specific bid by ID by rendering the "bid" link template from root.
+-v2/collection_items/{id}	Non-pertinent Documentation	Users can retrieve a specific collection item by ID by rendering the "collection_item" link template from root.
+-v2/collections?user_id=USER_ID&private=true	Non-pertinent Documentation	You can retrieve a user's public collections by following the "public_collections" link from a user. Users can retrieve their own public and private collections by following the collections link from user details.
+-v2/edition/{id}	Non-pertinent Documentation	Editions are embedded within an artwork, but can also be retrieved individually by ID by rendering the "edition" link template from root.
+-v2/fairs/{id}	Non-pertinent Documentation	Users can retrieve a specific fair by ID by rendering the "fair" link template from root.
+-v2/genes/{id}	Non-pertinent Documentation	Retrieve genes by following the genes link from root, or the "genes" links within an artwork or artist.
+-v2/images/{id}	Non-pertinent Documentation	show_id	Retrieve images for a given show, often called "installation shots".
+-v2/partners/{id}	Non-pertinent Documentation	Users can retrieve a specific partner by ID by rendering the "partner" link template from root.
+-v2/profiles/{id}	Non-pertinent Documentation	Users can retrieve a specific profile by ID by rendering the "profile" link template from root.
+-v2/sales	Non-pertinent Documentation	Users can retrieve sales by following the sales link from root.live	Boolean- filter live auctions only is_auction	Boolean- filter auctions only published	Boolean- limit to published sales
+-v2/search?q=Andy+Warhol	Non-pertinent Documentation	Search for anything by following the search link from root with a query parameter.
+-v2/shows/{id}	Non-pertinent Documentation	Retrieve shows by following the shows link from root, or the "shows" links within a partner.
+-v2/status	Non-pertinent Documentation	This API retrieves the system status.
+-v2/users/{id}	Non-pertinent Documentation	Users can retrieve a specific user by rendering the "user" link template from root.
+-v2/current_user	Non-pertinent Documentation	Retrieve the currently authenticated user by following the current_user link from root.
+
+***Patterns*** 
+Count: 1
+-v2/user_details/{id}	Pertinent Documentation	Users can retrieve a specific user by following the "user_details" link from a user.

@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 25
+/environments	Non-standard End-point	 [black space/tab found] 
+/environments?latitude={latitude}&longitude={longitude}	Non-standard End-point	 [black space/tab found] 
+/environments?key={key}&value={value}	Non-standard End-point	 [black space/tab found] 
+/environments	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones?x={x}&y={y}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones?key={key}&value={value}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-standard End-point	 [black space/tab found] 
+/environments/{environment_id}/devices	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 8
+-/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Non-pertinent Documentation	Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json).
+-/getActive?accessKey={accessKey}&ownerId={ownerId}	Non-pertinent Documentation	Returns the list of active surveys.
+-/getArchive?accessKey={accessKey}&ownerId={ownerId}	Non-pertinent Documentation	Returns the list of archive surveys.
+-/restore/{id}?accessKey={accessKey}	Non-pertinent Documentation	Restore an archive survey by it's id.
+-/delete/{id}?accessKey={accessKey}	Non-pertinent Documentation	Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible.
+-/getIsResultPublic/{id}?accessKey={accessKey}	Non-pertinent Documentation	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
+-/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Non-pertinent Documentation	Enable or disable the ability to view survey results by non autorized user via direct link.
+-/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Non-pertinent Documentation	Enable or disable the ability to view survey results by non autorized user via direct link.
+
+***Patterns*** 
+Count: 16
+-/setResultSummaryState?accessKey={accessKey}	Pertinent Documentation	Change the result summary state.
+-/getResultSummaryState/{id}?accessKey={accessKey}	Pertinent Documentation	Returns the result summary state.
+-/getPublicResultSummaryState/{id}	Pertinent Documentation	Returns public result summary state.
+-/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	Pertinent Documentation	Returns survey results.
+-/getSurveyPublicResults/{id}?from={from}&till={till}	Pertinent Documentation	Returns survey public results.
+-/generateAccessKey?accessKey={accessKey}	Pertinent Documentation	Generates a new access key. The old access key becomes invalid.
+-/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Pertinent Documentation	Create a new survey.
+-/archive/{id}?accessKey={accessKey}	Pertinent Documentation	Archive the survey by it's id. All survey results will be still accessible. You have to delete a survey to remove the access to it's results.
+-/changeName/{id}?accessKey={accessKey}&name={name}	Pertinent Documentation	Change the survey name.
+-/changeJson?accessKey={accessKey}	Pertinent Documentation	Change the survey json.
+-/publish/{id}?accessKey={accessKey}	Pertinent Documentation	Publishing the survey.
+-/unPublish/{id}?accessKey={accessKey}	Pertinent Documentation	Disable publishing the survey.
+-/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Pertinent Documentation	Enable or disable using cookies of the publishing survey.
+-/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Pertinent Documentation	Enable or disable using cookies of the publishing survey.
+-/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Pertinent Documentation	Delete the survey result. Use it to delete spam or test results.
+-/deleteAllResults/{id}?accessKey={accessKey}	Pertinent Documentation	Delete all survey results. Use it to delete all tested results before running survey.

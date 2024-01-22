@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 18
+/{ig-comment-id}?fields={fields}	Non-standard End-point	 [black space/tab found] 
+/oauth/access_token	Non-standard End-point	 [black space/tab found] 
+/{user-id}/accounts?access_token={user-access-token}	Non-standard End-point	 [black space/tab found] 
+/{app-id}|{client-token}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{ig-comment-id}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{ig-comment-id}/replies	Non-standard End-point	 [black space/tab found] 
+/{ig-comment-id}/replies?message={message}	Non-standard End-point	 [black space/tab found] 
+/{ig-media-id}/comments	Non-standard End-point	 [black space/tab found] 
+/{ig-comment-id}/replies	Non-standard End-point	 [black space/tab found] 
+/{ig-comment-id}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{ig-user-id}	Non-standard End-point	 [black space/tab found] 
+/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	Non-standard End-point	 [black space/tab found] 
+v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

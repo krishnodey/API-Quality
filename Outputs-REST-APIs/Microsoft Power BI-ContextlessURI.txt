@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 10
+ /admin/groups/{groupId}/dashboards 	 Contextless Resource Names
+ /admin/groups/{groupId}/datasets 	 Contextless Resource Names
+ /admin/datasets/{datasetId}/datasources 	 Contextless Resource Names
+ /admin/groups/{groupId}/users 	 Contextless Resource Names
+ /admin/workspaces/getInfo 	 Contextless Resource Names
+ /apps/{appId} 	 Contextless Resource Names
+ /apps/{appId}/reports/{reportId} 	 Contextless Resource Names
+ /capacities/{capacityId}/refreshables/{refreshableId} 	 Contextless Resource Names
+ /groups/{groupId}/AssignToCapacity 	 Contextless Resource Names
+ /groups/{groupId}/dashboards 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 24
+ /admin/tenantKeys 	 Contextual Resource Names
+ /admin/apps?$top={$top} 	 Contextual Resource Names
+ /admin/apps/{appId}/users 	 Contextual Resource Names
+ /admin/capacities/AssignWorkspaces 	 Contextual Resource Names
+ /admin/capacities/UnassignWorkspaces 	 Contextual Resource Names
+ /admin/dashboards 	 Contextual Resource Names
+ /admin/dataflows/{dataflowId}/export 	 Contextual Resource Names
+ /admin/dataflows/{dataflowId}/datasources 	 Contextual Resource Names
+ /admin/groups/{groupId}/dataflows 	 Contextual Resource Names
+ /admin/dataflows/{dataflowId}/users 	 Contextual Resource Names
+ /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	 Contextual Resource Names
+ /admin/groups/{groupId}/datasets/upstreamDataflows 	 Contextual Resource Names
+ /admin/capacities 	 Contextual Resource Names
+ /admin/pipelines/{pipelineId}/users/{identifier} 	 Contextual Resource Names
+ /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	 Contextual Resource Names
+ /admin/workspaces/modified 	 Contextual Resource Names
+ /apps/{appId}/dashboards/{dashboardId} 	 Contextual Resource Names
+ /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	 Contextual Resource Names
+ /apps/{appId}/dashboards/{dashboardId}/tiles 	 Contextual Resource Names
+ /availableFeatures 	 Contextual Resource Names
+ /capacities 	 Contextual Resource Names
+ /capacities/{capacityId}/Workloads/{workloadName} 	 Contextual Resource Names
+ /capacities/{capacityId}/Workloads 	 Contextual Resource Names
+ /AssignToCapacity 	 Contextual Resource Names

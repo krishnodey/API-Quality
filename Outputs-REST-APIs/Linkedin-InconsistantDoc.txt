@@ -1,0 +1,18 @@
+***Anti-Pattern*** 
+Count: 4
+post	 /salesAnalyticsExportJobs?action=exportSeatData 	Inconsistent Documentation	Export data about seat holders. For example, seat holder name, seat status, Social Selling Index scores, total connections. A new SalesAnalyticsExportJob with jobId and status as ENQUEUED will be returned.
+post	 /salesAnalyticsExportJobs?action=exportActivityOutcomeData 	Inconsistent Documentation	Export results of performed activities. For example InMails accepted and rejected. A new SalesAnalyticsExportJob with jobId and status as ENQUEUED will be returned.
+post	 /salesAnalyticsExportJobs?action=exportActivityData 	Inconsistent Documentation	Export activities performed by seat holders. For example, saving leads, performing searches, and sending InMail. A new SalesAnalyticsExportJob with jobId and status as ENQUEUED will be returned.
+get	/salesAccessTokens?q=viewerAndDeveloperApp	Inconsistent Documentation	This resource returns a Sales Access Token to be used in Sales Navigator Display Services iframe for creating authenticated iframe session.
+
+***Patterns*** 
+Count: 9
+get	 /me 	Consistent Documentation	To identify and retrieve the current member's profile based on the access token
+get	 /people/(id:{person ID}) 	Consistent Documentation	To retrieve another member's profile, you will need access to the Person ID, available only via certain limited access APIs and subject to member privacy settings.
+get	 /people/(id:{profile ID})?projection=(id,firstName,lastName) 	Consistent Documentation	By default, only the Lite Profile Fields are returned for a profile request. See the Profile Fields document for a full list of supported fields. To request more or less fields, you must have additional permissions that are only granted to select partners. Please refer to the field projections on proper syntax.
+get	 /salesContracts?q=contractsByMember 	Consistent Documentation	Find all contracts where user has an active seat.
+get	 /salesAnalyticsExportJobs/{jobId}?contract={contractUrn} 	Consistent Documentation	Fetches the SalesAnalyticsExportJob object corresponding to the job id with the latest status
+get	 /salesNavigatorProfileAssociations/(instanceId:foo,partner:bar,recordId:baz) 	Consistent Documentation	Fetches the corresponding match when provided with a SalesNavigatorProfileAssociationKey.
+get	 /salesNavigatorProfileAssociations?ids=List((instanceId:foo,partner:bar,recordId:foo),(instanceId:foo,partner:bar,recordId:bar)) 	Consistent Documentation	Batch fetches the corresponding match when provided with multiple SalesNavigatorProfileAssociationKeys.
+post	 /crmDataValidationExportJobs?crmInstanceId={crmInstanceId} 	Consistent Documentation	Allows creation of CRM data validation export jobs.
+get	 /crmDataValidationExportJobs/{jobId}?crmInstanceId={crmInstanceId} 	Consistent Documentation	Get the CRM data validation export based on the export job id.

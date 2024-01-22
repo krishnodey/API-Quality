@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 18
+POST 	/api/user/reg	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/user/auth	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/user/anon	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/user/checkauth	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/user/logout	Pluralized Nodes	 [Singular last node with POST method.] 
+PUT 	/api/user/pass	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+POST 	/api/v/2/devices/{SystemKey}/auth	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/collection/{systemKey}/{collectionName}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/data/{collectionID}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/code/{systemKey}/{serviceName}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/codeadmin/v/2/library/{systemKey}/{name}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/codeadmin/failed/{systemKey}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/api/message/{systemKey}/publish	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/reg	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/auth	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/logout	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/systemmanagement	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/collectionmanagement	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 27
+GET 	/api/user/info	 regular methods.
+PUT 	/api/user/info	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/api/user	 regular methods.
+PUT 	/api/v/2/devices/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/api/collection/{systemKey}/{collectionName}	 regular methods.
+PUT 	/api/collection/{systemKey}/{collectionName}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/api/collection/{systemKey}/{collectionName}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/api/data/{collectionID}	 regular methods.
+PUT 	/api/data/{collectionID}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/api/data/{collectionID}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/api/data/{collectionid}/columns	 regular methods.
+GET 	/codeadmin/v/2/library/{systemKey}	 regular methods.
+GET 	/codeadmin/v/2/library/{systemKey}/{name}	 regular methods.
+PUT 	/codeadmin/v/2/library/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/codeadmin/v/2/library/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/codeadmin/v/2/history/library/{systemKey}/{name}	 regular methods.
+GET 	/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	 regular methods.
+GET 	/codeadmin/failed	 regular methods.
+GET 	/codeadmin/failed/{systemKey}	 regular methods.
+DELETE 	/codeadmin/failed/{systemKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/api/message/{systemKey}	 regular methods.
+DELETE 	/api/message/{systemKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/admin/systemmanagement	 regular methods.
+PUT 	/admin/systemmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/admin/systemmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/admin/collectionmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/admin/collectionmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

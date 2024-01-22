@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 34
+/admin/tenantKeys	Verbless End-point	
+/admin/apps?$top={$top}	Verbless End-point	
+/admin/apps/{appId}/users	Verbless End-point	
+/admin/capacities/AssignWorkspaces	Verbless End-point	
+/admin/capacities/UnassignWorkspaces	Verbless End-point	
+/admin/dashboards	Verbless End-point	
+/admin/groups/{groupId}/dashboards	Verbless End-point	
+/admin/dataflows/{dataflowId}/export	Verbless End-point	
+/admin/dataflows/{dataflowId}/datasources	Verbless End-point	
+/admin/groups/{groupId}/dataflows	Verbless End-point	
+/admin/dataflows/{dataflowId}/users	Verbless End-point	
+/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	Verbless End-point	
+/admin/groups/{groupId}/datasets	Verbless End-point	
+/admin/groups/{groupId}/datasets/upstreamDataflows	Verbless End-point	
+/admin/datasets/{datasetId}/datasources	Verbless End-point	
+/admin/capacities	Verbless End-point	
+/admin/groups/{groupId}/users	Verbless End-point	
+/admin/pipelines/{pipelineId}/users/{identifier}	Verbless End-point	
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Verbless End-point	
+/admin/workspaces/modified	Verbless End-point	
+/admin/workspaces/getInfo	Verbless End-point	
+/apps/{appId}	Verbless End-point	
+/apps/{appId}/dashboards/{dashboardId}	Verbless End-point	
+/apps/{appId}/reports/{reportId}	Verbless End-point	
+/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	Verbless End-point	
+/apps/{appId}/dashboards/{dashboardId}/tiles	Verbless End-point	
+/availableFeatures	Verbless End-point	
+/capacities	Verbless End-point	
+/capacities/{capacityId}/refreshables/{refreshableId}	Verbless End-point	
+/capacities/{capacityId}/Workloads/{workloadName}	Verbless End-point	
+/capacities/{capacityId}/Workloads	Verbless End-point	
+/AssignToCapacity	Verbless End-point	
+/groups/{groupId}/AssignToCapacity	Verbless End-point	
+/groups/{groupId}/dashboards	Verbless End-point	

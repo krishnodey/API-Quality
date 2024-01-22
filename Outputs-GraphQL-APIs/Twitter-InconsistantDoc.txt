@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 1
+post	/v2/tweets/search/stream/rules 	Inconsistent Documentation	Add or delete rules to your stream. Once you've added a rule or rules to your stream, you can retrieve all of the Tweets that match these rules by using the
+
+***Patterns*** 
+Count: 13
+delete	/v2/users/:id/bookmarks/:tweet_id	Consistent Documentation	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
+get	 /v2/users/:id/bookmarks	Consistent Documentation	Allows you to get an authenticated user's 800 most recent bookmarked Tweets.
+post	 /v2/users/:id/bookmarks	Consistent Documentation	Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
+get	 /v2/tweets/search/stream	Consistent Documentation	Streams Tweets in real-time that match the rules that you added to the stream using the POST /tweets/search/stream/rules endpoint. If you haven't added any rules to your stream, you will not receive any Tweets.
+get	 /tweets/search/stream endpoint.	Consistent Documentation	Return either a single rule, or a list of rules that have been added to the stream.
+put	 /v2/tweets/:id/hidden 	Consistent Documentation	Hides or unhides a reply to a Tweet.
+delete	/v2/users/:id/likes/:tweet_id	Consistent Documentation	Allows a user or authenticated user ID to unlike a Tweet.
+get	 /v2/tweets/:id/liking_users 	Consistent Documentation	Allows you to get information about a Tweetâ€™s liking users.
+get	 /v2/users/:id/liked_tweets 	Consistent Documentation	Allows you to get information about a userâ€™s liked Tweets
+post	 /v2/users/:id/likes 	Consistent Documentation	Causes the user ID identified in the path parameter to Like the target Tweet.
+delete	/v2/tweets/:id	Consistent Documentation	Allows a user or authenticated user ID to delete a Tweet.
+post	 /v2/tweets 	Consistent Documentation	Creates a Tweet on behalf of an authenticated user.
+get	 /2/tweets/:id/quote_tweets 	Consistent Documentation	Returns Quote Tweets for a Tweet specified by the requested Tweet ID.

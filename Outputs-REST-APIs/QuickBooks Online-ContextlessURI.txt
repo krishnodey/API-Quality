@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 21
+ /company/<realmID>/account 	 Contextless Resource Names
+ /company/<realmID>/query?query=<selectStatement> 	 Contextless Resource Names
+ /company/<realmID>/account/<accountId> 	 Contextless Resource Names
+ /company/<realmID>/account 	 Contextless Resource Names
+ /company/<realmID>/bill 	 Contextless Resource Names
+ /company/<realmID>/bill?operation=delete 	 Contextless Resource Names
+ /company/<realmID>/query?query=<selectStatement> 	 Contextless Resource Names
+ /company/<realmID>/bill/<billId> 	 Contextless Resource Names
+ /company/<realmID>/bill 	 Contextless Resource Names
+ /company/<realmID>/query?query=<selectStatement> 	 Contextless Resource Names
+ /company/<realmID>/companyinfo/<realmID> 	 Contextless Resource Names
+ /company/<realmID>/companyinfo 	 Contextless Resource Names
+ /company/<realmID>/companyinfo 	 Contextless Resource Names
+ /company/<realmID>/reports/InventoryValuationSummary?<name>=<value> 	 Contextless Resource Names
+ /company/<realmID>/invoice 	 Contextless Resource Names
+ /company/<realmID>/invoice?operation=delete 	 Contextless Resource Names
+ /company/<realmID>/invoice?operation=void 	 Contextless Resource Names
+ /company/<realmID>/invoice/<invoiceId>/pdf 	 Contextless Resource Names
+ /company/<realmID>/query?query=<selectStatement> 	 Contextless Resource Names
+ /company/<realmID>/invoice 	 Contextless Resource Names
+ /company/<realmID>/purchase 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 0

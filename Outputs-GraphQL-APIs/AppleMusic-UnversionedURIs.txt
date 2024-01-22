@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+/v1/catalog/{storefront}/albums/{id} [Version found.]
+/v1/catalog/{storefront}/albums/{id}/{relationship} [Version found.]
+/v1/catalog/{storefront}/albums/{id}/view/{view} [Version found.]
+/v1/catalog/{storefront}/albums [Version found.]
+/v1/catalog/{storefront}/albums [Version found.]
+/v1/catalog/{storefront}/albums [Version found.]
+/v1/me/library/albums/{id} [Version found.]
+/v1/me/library/albums/{id}/{relationship} [Version found.]
+/v1/me/library/albums [Version found.]
+/v1/me/library/albums [Version found.]
+/v1/me/library [Version found.]
+/v1/catalog/{storefront}/artists/{id} [Version found.]
+/v1/catalog/{storefront}/artists/{id}/{relationship} [Version found.]
+/v1/catalog/{storefront}/artists/{id}/view/{view} [Version found.]
+/v1/catalog/{storefront}/artists [Version found.]

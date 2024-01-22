@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 4
+POST 	/deployment/resources/subnets	Pluralized Nodes	 [Singular last node with POST method.] 
+PUT 	/deployment/resources/subnet/<subnetUUID>/addresses	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+POST 	/audit/resources/audit_config	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/resources/backup	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 30
+POST 	/deployment/resources/instances	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/deployment/resources/virtual data center./<virtual data center.UID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/deployment/resources/vm_configurations	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/deployment/resources/vdcs/{uuid}/vm_configurations	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/deployment/resources/volume_configurations	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/deployment/resources/vdcs/{uuid}/volume_configurations	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/deployment/resources/subnets/<subnetUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/deployment/resources/addresses	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/deployment/resources/subnet/<subnetUUID>/addresses	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/deployment/resources/addresses/<addressUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/deployment/resources/addresses/<addressUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/deployment/resources/credentials	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/deployment/resources/credentials/<credentialUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/deployment/resources/images/<imageID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/deployment/resources/groups	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/deployment/resources/groups/<groupUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/deployment/resources/groups?isMaster=true	 regular methods.
+GET 	/deployment/resources/groups/group<UUID>?showNested=true	 regular methods.
+PUT 	/deployment/resources/instances/<instanceUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/deployment/resources/instances	 regular methods.
+DELETE 	/deployment/resources/instances/<instanceUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/deployment/resources/addresses	 regular methods.
+POST 	/deployment/resources/volumes	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/deployment/resources/volumes/<volumeUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/deployment/resources/volumes	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/deployment/resources/instances/<instanceUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/deployment/resources/instance_snapshots	 regular methods.
+GET 	/deployment/resources/acls	 regular methods.
+GET 	/admin/resources/backup_subcomponents/{id}	 regular methods.
+GET 	/admin/resources/chassis_management_modules	 regular methods.

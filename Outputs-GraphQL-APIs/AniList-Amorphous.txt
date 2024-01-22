@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 27
+/v2/oauth/token	Tidy End-point	
+/v2/oauth/pin	Tidy End-point	
+v2/SaveMediaListEntry	Tidy End-point	
+v2/UpdateMediaListEntries	Tidy End-point	
+v2/DeleteMediaListEntry	Tidy End-point	
+v2/DeleteCustomList	Tidy End-point	
+v2/SaveTextActivity	Tidy End-point	
+v2/SaveListActivity	Tidy End-point	
+v2/DeleteActivity	Tidy End-point	
+v2/ToggleActivityPin	Tidy End-point	
+v2/ToggleActivitySubscription	Tidy End-point	
+v2/SaveActivityReply	Tidy End-point	
+v2/DeleteActivityReply	Tidy End-point	
+v2/ToggleLike	Tidy End-point	
+v2/ToggleLikeV2	Tidy End-point	
+v2/ToggleFollow	Tidy End-point	
+v2/ToggleFavourite	Tidy End-point	
+v2/UpdateFavouriteOrder	Tidy End-point	
+v2/SaveReview	Tidy End-point	
+v2/DeleteReview	Tidy End-point	
+v2/RateReview	Tidy End-point	
+v2/SaveRecommendation	Tidy End-point	
+v2/SaveThread	Tidy End-point	
+v2/DeleteThread	Tidy End-point	
+v2/ToggleThreadSubscription	Tidy End-point	
+v2/SaveThreadComment	Tidy End-point	
+v2/DeleteThreadComment	Tidy End-point	

@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+ /ping 	Hierarchical Nodes	
+ /pingInStoreReader 	Hierarchical Nodes	
+ /viewer 	Hierarchical Nodes	
+ /clientConfiguration 	Hierarchical Nodes	
+ /node 	Hierarchical Nodes	
+ /idFromLegacyId 	Hierarchical Nodes	
+ /report 	Hierarchical Nodes	
+ /search 	Hierarchical Nodes	
+ /paypalFinancingOptions 	Hierarchical Nodes	
+ /inStoreLocations 	Hierarchical Nodes	
+ /authorizePaymentMethod 	Hierarchical Nodes	
+ /authorizePayPalAccount 	Hierarchical Nodes	
+ /authorizeVenmoAccount 	Hierarchical Nodes	
+ /authorizeCreditCard 	Hierarchical Nodes	
+ /captureTransaction 	Hierarchical Nodes	

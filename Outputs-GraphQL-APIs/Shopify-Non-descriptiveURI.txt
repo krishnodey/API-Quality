@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 16
+/mutations/delegateAccessTokenCreate	 Self-descriptive End-point
+/mutations/storefrontAccessTokenCreate	 Self-descriptive End-point
+/mutations/storefrontAccessTokenDelete	 Self-descriptive End-point
+/objects/AccessScope	 Self-descriptive End-point
+/objects/DelegateAccessToken	 Self-descriptive End-point
+/objects/StorefrontAccessToken	 Self-descriptive End-point
+queries/shopifyqlQuery	 Self-descriptive End-point
+/objects/ErrorPosition	 Self-descriptive End-point
+/objects/ParseError	 Self-descriptive End-point
+/objects/ParseErrorRange	 Self-descriptive End-point
+/objects/PolarisVizDataPoint	 Self-descriptive End-point
+/objects/PolarisVizDataSeries	 Self-descriptive End-point
+/objects/PolarisVizResponse	 Self-descriptive End-point
+/objects/TableData	 Self-descriptive End-point
+/objects/TableDataColumn	 Self-descriptive End-point
+/objects/TableResponse	 Self-descriptive End-point

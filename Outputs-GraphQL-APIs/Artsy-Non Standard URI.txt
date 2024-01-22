@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 21
+v2/applications/{id}	Non-standard End-point	 [black space/tab found] 
+v2/artists/{id}	Non-standard End-point	 [black space/tab found] 
+v2/artworks/{id}	Non-standard End-point	 [black space/tab found] 
+v2/bidders/{id}	Non-standard End-point	 [black space/tab found] 
+v2/bidder_positions/{id}	Non-standard End-point	 [black space/tab found] 
+v2/bids/{id}	Non-standard End-point	 [black space/tab found] 
+v2/collection_items/{id}	Non-standard End-point	 [black space/tab found] 
+v2/collections?user_id=USER_ID&private=true	Non-standard End-point	 [black space/tab found] 
+v2/edition/{id}	Non-standard End-point	 [black space/tab found] 
+v2/fairs/{id}	Non-standard End-point	 [black space/tab found] 
+v2/genes/{id}	Non-standard End-point	 [black space/tab found] 
+v2/images/{id}	Non-standard End-point	 [black space/tab found] 
+v2/partners/{id}	Non-standard End-point	 [black space/tab found] 
+v2/profiles/{id}	Non-standard End-point	 [black space/tab found] 
+v2/sales	Non-standard End-point	 [black space/tab found] 
+v2/search?q=Andy+Warhol	Non-standard End-point	 [black space/tab found] 
+v2/shows/{id}	Non-standard End-point	 [black space/tab found] 
+v2/status	Non-standard End-point	 [black space/tab found] 
+v2/user_details/{id}	Non-standard End-point	 [black space/tab found] 
+v2/users/{id}	Non-standard End-point	 [black space/tab found] 
+v2/current_user	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 18
+/{ig-comment-id}?fields={fields}	 Self-descriptive End-point
+/oauth/access_token	 Self-descriptive End-point
+/{user-id}/accounts?access_token={user-access-token}	 Self-descriptive End-point
+/{app-id}|{client-token}	 Self-descriptive End-point
+/{api-version}/{ig-comment-id}	 Self-descriptive End-point
+/{api-version}/{ig-comment-id}/replies	 Self-descriptive End-point
+/{ig-comment-id}/replies?message={message}	 Self-descriptive End-point
+/{ig-media-id}/comments	 Self-descriptive End-point
+/{ig-comment-id}/replies	 Self-descriptive End-point
+/{ig-comment-id}	 Self-descriptive End-point
+/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	 Self-descriptive End-point
+/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	 Self-descriptive End-point
+/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	 Self-descriptive End-point
+{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	 Self-descriptive End-point
+/{api-version}/{ig-user-id}	 Self-descriptive End-point
+/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	 Self-descriptive End-point
+v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 Self-descriptive End-point
+{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	 Self-descriptive End-point

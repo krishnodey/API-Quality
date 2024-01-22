@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+/setResultSummaryState?accessKey={accessKey}	Tidy End-point	
+/getResultSummaryState/{id}?accessKey={accessKey}	Tidy End-point	
+/getPublicResultSummaryState/{id}	Tidy End-point	
+/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	Tidy End-point	
+/getSurveyPublicResults/{id}?from={from}&till={till}	Tidy End-point	
+/generateAccessKey?accessKey={accessKey}	Tidy End-point	
+/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Tidy End-point	
+/getActive?accessKey={accessKey}&ownerId={ownerId}	Tidy End-point	
+/getArchive?accessKey={accessKey}&ownerId={ownerId}	Tidy End-point	
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Tidy End-point	
+/archive/{id}?accessKey={accessKey}	Tidy End-point	
+/restore/{id}?accessKey={accessKey}	Tidy End-point	
+/delete/{id}?accessKey={accessKey}	Tidy End-point	
+/changeName/{id}?accessKey={accessKey}&name={name}	Tidy End-point	
+/changeJson?accessKey={accessKey}	Tidy End-point	
+/publish/{id}?accessKey={accessKey}	Tidy End-point	
+/unPublish/{id}?accessKey={accessKey}	Tidy End-point	
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Tidy End-point	
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Tidy End-point	
+/getIsResultPublic/{id}?accessKey={accessKey}	Tidy End-point	
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Tidy End-point	
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Tidy End-point	
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Tidy End-point	
+/deleteAllResults/{id}?accessKey={accessKey}	Tidy End-point	

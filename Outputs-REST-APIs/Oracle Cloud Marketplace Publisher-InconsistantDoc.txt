@@ -1,0 +1,48 @@
+***Anti-Pattern*** 
+Count: 5
+post	 /applications/{listingVersionId}/icon 	Inconsistent Documentation	Upload an icon for the application listing. The icon dimensions must be 130 X 130 px. The following extensions are allowed: png, jpg.
+post	 /applications/{listingVersionId}/version 	Inconsistent Documentation	Create a new version for an already published application listing. A new version is necessary to make edits to an already published listing.The new version has to go though the same life cycle and approval workflow to get published to the Marketplace. Publishing the new version automatically archives the older version from the Marketplace. At any given point only one version of the application is active on the Marketplace.
+put	 /applications/{listingVersionId} 	Inconsistent Documentation	Update the Application listing. Only applications in a NEW or REJECTED state can be updated. To update a listing that is published, a new version of the listing must be created.
+put	 /applications/{listingVersionId}/packages/{packageVersionId} 	Inconsistent Documentation	Update the specified package. If the package was validated it will need to be validated again after the update.Packages of an already published listing cannot be updated.
+put	 /applications/{listingVersionId}/recommendedservices 	Inconsistent Documentation	Creates a list of recommended service integrators for an application with specified id. If the call is made with an empty list, it clears the entire existing list of recommended services associated with this application, if any.
+
+***Patterns*** 
+Count: 38
+get	 /installrequests 	Consistent Documentation	Get the list of application install requests for all your published apps.
+delete	/applications/{listingVersionId}	Consistent Documentation	Delete an application. Only applications that are in a NEW state can be deleted.
+delete	/applications/{listingVersionId}/banner	Consistent Documentation	Delete the banner for the application.
+delete	/applications/{listingVersionId}/comments/{id}	Consistent Documentation	Delete a status comment.
+delete	/applications/{listingVersionId}/packages/{packageVersionId}	Consistent Documentation	Delete the package of an application.
+delete	/applications/{listingVersionId}/relateddocs/{id}	Consistent Documentation	Delete a related document for an existing application.
+delete	/applications/{listingVersionId}/screenshots/{id}	Consistent Documentation	Delete a screenshot for an existing application.
+delete	/applications/{listingVersionId}/supportingdocs/{id}	Consistent Documentation	Delete a supporting document for an existing application.
+delete	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Consistent Documentation	Delete the package of an application.
+delete	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Consistent Documentation	Delete a specific resource of the application's package.
+get	 /applications 	Consistent Documentation	Get the list of all applications for the publisher.
+get	 /applications/{listingVersionId} 	Consistent Documentation	Get the details of the application with the specified listing ID.
+get	 /applications/{listingVersionId}/availableservices 	Consistent Documentation	Get a list of service integrators. Publishers can recommend particular service integrators for their application listings by adding them to each application listing as recommended services.
+get	 /applications/{listingVersionId}/comments 	Consistent Documentation	Get the status comments for the application.
+get	 /applications/{listingVersionId}/packages 	Consistent Documentation	Get the package configured for the application. A package describes the install/uninstall steps and the resources required for the application.
+get	 /applications/{listingVersionId}/packages/{packageVersionId} 	Consistent Documentation	Get the details of the specified package.
+get	 /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Consistent Documentation	Get the details of the specified package logs( validation / test install).
+get	 /applications/{listingVersionId}/recommendedservices 	Consistent Documentation	Get the list of all the recommended services configured for a listing.
+get	 /appstore/publisher/v2/applications/{listingVersionId}/packages 	Consistent Documentation	Get the package configured for the application. A package describes the resources and its properties required for the application.
+get	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Consistent Documentation	Get the details of the specified package.
+get	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Consistent Documentation	Fetches the packagelogs of an applications's package version id.
+patch	/applications/{listingVersionId}	Consistent Documentation	This method can be used to perform a partial update operation on application attributes or perform a state change operation in the application life-cycle. In order to perform a partial update, provide any root-level attribute in the payload. The content of that specified attribute will be completely replaced, while keeping the values of the other attributes same as before.
+patch	/applications/{listingVersionId}/banner	Consistent Documentation	Partially Update the banner for the application.
+patch	/applications/{listingVersionId}/packages/{packageVersionId}	Consistent Documentation	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
+patch	/applications/{listingVersionId}/relateddocs/{id}	Consistent Documentation	Partially Update a related document for the application.
+patch	/applications/{listingVersionId}/screenshots	Consistent Documentation	Partially Update the Screenshot for an application.
+patch	/applications/{listingVersionId}/supportingdocs/{id}	Consistent Documentation	Partially Update a supporting document for the application.
+patch	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Consistent Documentation	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
+post	 /applications 	Consistent Documentation	Create a new application listing. The application goes through a state lifecycle. A newly created application starts off in the "New" state. Application edits are allowed in this state. To publish the listing to the Marketplace, the application listing needs to be submitted for approval.
+post	 /applications/{listingVersionId}/banner 	Consistent Documentation	Create a banner for the application.
+post	 /applications/{listingVersionId}/comments 	Consistent Documentation	Create a status comment for the application.
+post	 /applications/{listingVersionId}/packages 	Consistent Documentation	Create a package for the given application. A package is an orchestration template that describes the application install/uninstall/upgrade steps.
+post	 /applications/{listingVersionId}/relateddocs 	Consistent Documentation	Creates related documents for the an application with the specified ID.
+post	 /applications/{listingVersionId}/screenshots 	Consistent Documentation	Create screenshots for an application.
+post	 /applications/{listingVersionId}/supportingdocs 	Consistent Documentation	Creates supporting documents for the an application with the specified ID.
+put	 /applications/{listingVersionId}/banner 	Consistent Documentation	Update the banner for the application.
+put	 /applications/{listingVersionId}/comments/{id} 	Consistent Documentation	Update status comment.
+put	 /applications/{listingVersionId}/icon 	Consistent Documentation	Update the icon for the application.

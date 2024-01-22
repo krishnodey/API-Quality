@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 34
+/deployment/resources/instances	Tidy End-point	
+/deployment/resources/virtual data center./<virtual data center.UID>	Tidy End-point	
+/deployment/resources/vm_configurations	Tidy End-point	
+/deployment/resources/vdcs/{uuid}/vm_configurations	Tidy End-point	
+/deployment/resources/volume_configurations	Tidy End-point	
+/deployment/resources/vdcs/{uuid}/volume_configurations	Tidy End-point	
+/deployment/resources/subnets	Tidy End-point	
+/deployment/resources/subnets/<subnetUUID>	Tidy End-point	
+/deployment/resources/addresses	Tidy End-point	
+/deployment/resources/subnet/<subnetUUID>/addresses	Tidy End-point	
+/deployment/resources/subnet/<subnetUUID>/addresses	Tidy End-point	
+/deployment/resources/addresses/<addressUUID>	Tidy End-point	
+/deployment/resources/addresses/<addressUUID>	Tidy End-point	
+/deployment/resources/credentials	Tidy End-point	
+/deployment/resources/credentials/<credentialUUID>	Tidy End-point	
+/deployment/resources/images/<imageID>	Tidy End-point	
+/deployment/resources/groups	Tidy End-point	
+/deployment/resources/groups/<groupUUID>	Tidy End-point	
+/deployment/resources/groups?isMaster=true	Tidy End-point	
+/deployment/resources/groups/group<UUID>?showNested=true	Tidy End-point	
+/deployment/resources/instances/<instanceUUID>	Tidy End-point	
+/deployment/resources/instances	Tidy End-point	
+/deployment/resources/instances/<instanceUUID>	Tidy End-point	
+/deployment/resources/addresses	Tidy End-point	
+/deployment/resources/volumes	Tidy End-point	
+/deployment/resources/volumes/<volumeUUID>	Tidy End-point	
+/deployment/resources/volumes	Tidy End-point	
+/deployment/resources/instances/<instanceUUID>	Tidy End-point	
+/deployment/resources/instance_snapshots	Tidy End-point	
+/deployment/resources/acls	Tidy End-point	
+/audit/resources/audit_config	Tidy End-point	
+/admin/resources/backup	Tidy End-point	
+/admin/resources/backup_subcomponents/{id}	Tidy End-point	
+/admin/resources/chassis_management_modules	Tidy End-point	

@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 15
+/v1/catalog/{storefront}/albums/{id}	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/albums/{id}/{relationship}	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/albums/{id}/view/{view}	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/albums	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/albums	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/albums	Non-standard End-point	 [black space/tab found] 
+/v1/me/library/albums/{id}	Non-standard End-point	 [black space/tab found] 
+/v1/me/library/albums/{id}/{relationship}	Non-standard End-point	 [black space/tab found] 
+/v1/me/library/albums	Non-standard End-point	 [black space/tab found] 
+/v1/me/library/albums	Non-standard End-point	 [black space/tab found] 
+/v1/me/library	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/artists/{id}	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/artists/{id}/{relationship}	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/artists/{id}/view/{view}	Non-standard End-point	 [black space/tab found] 
+/v1/catalog/{storefront}/artists	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 0

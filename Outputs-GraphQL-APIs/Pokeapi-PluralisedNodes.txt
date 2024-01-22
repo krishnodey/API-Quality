@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+GET 	/v2/count/	 regular methods.
+GET 	/v2/next/	 regular methods.
+GET 	/v2/previous/	 regular methods.
+GET 	/v2/results/	 regular methods.
+GET 	/v2/berry/{id or name}/	 regular methods.
+GET 	/v2/berry/{id}/	 regular methods.
+GET 	/v2/berry/{name}/	 regular methods.
+GET 	/v2/berry/{growth_time}/	 regular methods.
+GET 	/v2/berry/{max_harvest}/	 regular methods.
+GET 	/v2/berry/{natural_gift_power}/	 regular methods.
+GET 	/v2/berry/{size}/	 regular methods.
+GET 	/v2/berry/{smoothness}/	 regular methods.
+GET 	/v2/berry/{soil_dryness}/	 regular methods.
+GET 	/v2/berry/{firmness}/	 regular methods.
+GET 	/v2/berry/{flavors}/	 regular methods.
+GET 	/v2/berry/{items}/	 regular methods.
+GET 	/v2/berry/{natural_gift_type}/	 regular methods.
+GET 	/v2/berry/{potency}/	 regular methods.
+GET 	/v2/berry-firmness/{id}/	 regular methods.
+GET 	/v2/berry-firmness/{id or name}/	 regular methods.
+GET 	/v2/berry-firmness/{name}/	 regular methods.
+GET 	/v2/berry-firmness/{berries}/	 regular methods.
+GET 	/v2/berry-firmness/{names}/	 regular methods.
+GET 	v2/berry-flavor/{id or name}/	 regular methods.

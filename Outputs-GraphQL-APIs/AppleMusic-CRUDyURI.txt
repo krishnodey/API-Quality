@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+/v1/catalog/{storefront}/albums/{id}	Verbless End-point	
+/v1/catalog/{storefront}/albums/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/albums/{id}/view/{view}	Verbless End-point	
+/v1/catalog/{storefront}/albums	Verbless End-point	
+/v1/catalog/{storefront}/albums	Verbless End-point	
+/v1/catalog/{storefront}/albums	Verbless End-point	
+/v1/me/library/albums/{id}	Verbless End-point	
+/v1/me/library/albums/{id}/{relationship}	Verbless End-point	
+/v1/me/library/albums	Verbless End-point	
+/v1/me/library/albums	Verbless End-point	
+/v1/me/library	Verbless End-point	
+/v1/catalog/{storefront}/artists/{id}	Verbless End-point	
+/v1/catalog/{storefront}/artists/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/artists/{id}/view/{view}	Verbless End-point	
+/v1/catalog/{storefront}/artists	Verbless End-point	

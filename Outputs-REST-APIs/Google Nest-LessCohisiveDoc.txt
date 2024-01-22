@@ -1,0 +1,40 @@
+***Anti-Pattern*** 
+Count: 12
+-/devices/thermostats/device_id/name_long	Non-pertinent Documentation	Long display name of the device. Includes a custom (label), created by the user, or via wheres.
+-/devices/thermostats/device_id/last_connection	Non-pertinent Documentation	Timestamp of the last successful interaction with the Nest service, in ISO 8601 format.
+-/devices/thermostats/device_id/fan_timer_timeout	Non-pertinent Documentation	Timestamp showing when the fan timer reaches 0 (stop time), in ISO 8601 format.
+-/devices/thermostats/device_id/target_temperature_f	Non-pertinent Documentation	Desired temperature, in full degrees Fahrenheit (1°F). Used when hvac_mode = heat or cool.
+-/devices/thermostats/device_id/eco_temperature_high_f	Non-pertinent Documentation	Maximum Eco Temperature, displayed in whole degrees Fahrenheit (1°F). Used when hvac_mode = eco.
+-/devices/thermostats/device_id/eco_temperature_high_c	Non-pertinent Documentation	Maximum Eco Temperature, displayed in half degrees Celsius (0.5°C). Used when hvac_mode = eco.
+-/devices/smoke_co_alarms/device_id/name	Non-pertinent Documentation	Display name of the device; can be any room name from a list we provide, or a custom name.
+-/devices/smoke_co_alarms/device_id/ui_color_state	Non-pertinent Documentation	Indicates device status by color in the Nest app UI. It is an aggregate condition for battery+smoke+CO states, and reflects the actual color indicators displayed in the Nest app.
+-/devices/smoke_co_alarms/device_id/where_name	Non-pertinent Documentation	The display name of the device. Associated with the Nest Protect where_id. Can be any room name from a list we provide, or a custom name.
+-/devices/cameras/device_id/where_name	Non-pertinent Documentation	The display name of the device. Associated with the Nest Cam where_id. Can be any room name from a list we provide, or a custom name.
+-/devices/cameras/device_id/is_public_share_enabled	Non-pertinent Documentation	Users can choose to share their video and make it viewable by anyone. When public share is enabled, you can read public_share_url.
+-/devices/cameras/device_id/last_event/web_url	Non-pertinent Documentation	Web URL (deep link) to the last sound or motion event at home.nest.com. Used to display the last recorded event, and requires user to be signed in to the account. Requires Nest Aware. If the event URL has expired or the device does not have an active subscription, then this value is not included in the payload.
+
+***Patterns*** 
+Count: 23
+-/devices/thermostats/device_id/device_id	Pertinent Documentation	Nest Thermostat unique identifier.
+-/devices/thermostats/device_id/locale	Pertinent Documentation	Specifies language and region (or country) preference.
+-/devices/thermostats/device_id/software_version	Pertinent Documentation	Software version.
+-/devices/thermostats/device_id/structure_id	Pertinent Documentation	Structure unique identifier.
+-/devices/thermostats/device_id/name	Pertinent Documentation	Display name of the device. Can be any room name from a list we provide, or a custom name.
+-/devices/thermostats/device_id/is_online	Pertinent Documentation	Device connection status with the Nest service.
+-/devices/thermostats/device_id/can_cool	Pertinent Documentation	System ability to cool (has AC).
+-/devices/thermostats/device_id/can_heat	Pertinent Documentation	System ability to heat.
+-/devices/thermostats/device_id/is_using_emergency_heat	Pertinent Documentation	Emergency Heat status in systems with heat pumps for cooling. When Emergency Heat is on: The user can adjust the target temperature on the device, but cannot change the mode until Emergency Heat is turned off The hvac_mode can still be changed via the API
+-/devices/thermostats/device_id/has_fan	Pertinent Documentation	System ability to control the fan independently from heating or cooling.
+-/devices/thermostats/device_id/fan_timer_active	Pertinent Documentation	Indicates if the fan timer is engaged; used with fan_timer_duration to turn on the fan for a (user-specified) preset duration.
+-/devices/thermostats/device_id/has_leaf	Pertinent Documentation	Displayed when the thermostat is set to an energy-saving temperature.
+-/devices/thermostats/device_id/temperature_scale	Pertinent Documentation	Fahrenheit or Celsius; used with temperature display.
+-/devices/thermostats/device_id/hvac_state	Pertinent Documentation	Indicates whether HVAC system is actively heating, cooling or is off. Use this value to indicate HVAC activity state. When off, the HVAC system is not actively heating or cooling. hvac_state is independent of fan operation.
+-/devices/thermostats/device_id/is_locked	Pertinent Documentation	Thermostat Lock status. When true, the Thermostat Lock feature is enabled, and restricts the temperature range to these min/max values: locked_temp_min_f, locked_temp_max_f, locked_temp_min_c, and locked_temp_max_c.
+-/devices/thermostats/device_id/sunlight_correction_enabled	Pertinent Documentation	Sunblock enabled status. Used with sunlight_correction_active. When true, Sunblock technology is enabled, and the Thermostat is automatically adjusting to direct sunlight, reading and setting the correct temperature.
+-/devices/thermostats/device_id/where_name	Pertinent Documentation	The display name of the device. Associated with the Thermostat where_id. Can be any room name from a list we provide, or a custom name.
+-/devices/thermostats/device_id/time_to_target_training	Pertinent Documentation	When in training mode, the Nest Thermostat learns about the HVAC system and discovers how much time it takes to reach the target temperature. When the Thermostat has enough information to make a reasonable estimate of the time to reach the target temperature, this value will change from training to ready.
+-/devices/cameras/device_id/where_id	Pertinent Documentation	A unique, Nest-generated identifier that represents name, the display name of the device.
+-/devices/cameras/device_id/activity_zones	Pertinent Documentation	Returns an array of all defined Activity Zones. Activity Zones are used to monitor motion events within user-defined areas of the video stream. Requires Nest Aware.
+-/devices/cameras/device_id/snapshot_url	Pertinent Documentation	Capture an image on demand. Returns the URL of an image captured from the live video stream. Requires that the camera is on and actively streaming. Use this field to get a snapshot from the live video stream. snapshot_url - returns the URL of an image captured from the live video stream Requires that the camera is on and actively streaming. The snapshot quality from the API is only 1080p throughput if you are: actively viewing the camera stream in the application (web_url). actively viewing the public stream (app_url). subscribed to Nest Aware. If you are not actively viewing the stream or do not have a Nest Aware subscription, the API has no 1080p source from which to retrieve a snapshot at that resolution and generates a lower-quality image. Also, low local network bandwidth may cause the API snapshot resolution to dip below 1080p with Nest Aware present.
+-devices/cameras/device_id/last_event	Pertinent Documentation	This object captures information about the last event that triggered a notification. Some fields and some permission combinations require a Nest Aware subscription to access last event information.
+-/devices/cameras/device_id/last_event/has_sound	Pertinent Documentation	Sound event - sound was detected.

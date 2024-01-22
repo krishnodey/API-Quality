@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 11
+post	 /ping 	Inconsistent Documentation	Returns the literal string 'pong'.
+post	 /pingInStoreReader 	Inconsistent Documentation	Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
+post	 /idFromLegacyId 	Inconsistent Documentation	Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods.
+post	 /report 	Inconsistent Documentation	A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters.
+post	 /search 	Inconsistent Documentation	A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters.
+post	 /inStoreLocations 	Inconsistent Documentation	Retrieve a paginated list of all in-store locations.
+post	 /authorizePaymentMethod 	Inconsistent Documentation	Authorize an eligible payment method and return a payload that includes details of the resulting transaction.
+post	 /authorizePayPalAccount 	Inconsistent Documentation	Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction.
+post	 /authorizeVenmoAccount 	Inconsistent Documentation	Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.
+post	 /authorizeCreditCard 	Inconsistent Documentation	Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.
+post	 /captureTransaction 	Inconsistent Documentation	Capture an authorized transaction and return a payload that includes details of the transaction.
+
+***Patterns*** 
+Count: 4
+post	 /viewer 	Consistent Documentation	The currently authenticated viewer.
+post	 /clientConfiguration 	Consistent Documentation	The client-side environment and payment method configuration.
+post	 /node 	Consistent Documentation	Fetch any object that extends the Node interface using its ID.
+post	 /paypalFinancingOptions 	Consistent Documentation	Retrieve PayPal financing options that include payment installment plans.

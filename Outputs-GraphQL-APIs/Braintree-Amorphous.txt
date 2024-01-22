@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+/ping	Tidy End-point	
+/pingInStoreReader	Tidy End-point	
+/viewer	Tidy End-point	
+/clientConfiguration	Tidy End-point	
+/node	Tidy End-point	
+/idFromLegacyId	Tidy End-point	
+/report	Tidy End-point	
+/search	Tidy End-point	
+/paypalFinancingOptions	Tidy End-point	
+/inStoreLocations	Tidy End-point	
+/authorizePaymentMethod	Tidy End-point	
+/authorizePayPalAccount	Tidy End-point	
+/authorizeVenmoAccount	Tidy End-point	
+/authorizeCreditCard	Tidy End-point	
+/captureTransaction	Tidy End-point	

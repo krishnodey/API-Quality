@@ -43,8 +43,10 @@ class Test_TestAntiPatterns(unittest.TestCase):
     
     #This test is designed for pattern
     def test_versionedURI(self):
-        data = ['/v18.0/{album-id}']
+        data = ['/v18.10/{album-id}']
         ap, p, p_count, ap_count = analyzer.detect_unversioned_uris(data)
+        #print(ap)
+        #print(p)
         self.assertEqual(p_count, 1)
     
     #This test is designedfor anti-pattern
@@ -112,7 +114,7 @@ class Test_TestAntiPatterns(unittest.TestCase):
     def test_LessCohisiveDocumentation(self):
         data = ['POST >> /auth/person >> count number of images']
         ap, p, p_count, ap_count = analyzer.detect_less_cohesive_documentation(data)
-        self.assertEqual(ap_count,1)
+        self.assertEqual(ap_count, 1)
     
 
     #This test is designed for anti pattern

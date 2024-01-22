@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 25
+ /v2/oauth/token 	 Contextless Resource Names
+ /v2/oauth/pin 	 Contextless Resource Names
+ v2/SaveMediaListEntry	 Contextless Resource Names
+ v2/UpdateMediaListEntries	 Contextless Resource Names
+ v2/DeleteMediaListEntry	 Contextless Resource Names
+ v2/DeleteCustomList	 Contextless Resource Names
+ v2/SaveTextActivity	 Contextless Resource Names
+ v2/SaveListActivity	 Contextless Resource Names
+ v2/DeleteActivity	 Contextless Resource Names
+ v2/ToggleActivityPin	 Contextless Resource Names
+ v2/ToggleActivitySubscription	 Contextless Resource Names
+ v2/SaveActivityReply	 Contextless Resource Names
+ v2/DeleteActivityReply	 Contextless Resource Names
+ v2/ToggleLike	 Contextless Resource Names
+ v2/ToggleLikeV2	 Contextless Resource Names
+ v2/ToggleFollow	 Contextless Resource Names
+ v2/ToggleFavourite	 Contextless Resource Names
+ v2/UpdateFavouriteOrder	 Contextless Resource Names
+ v2/SaveReview	 Contextless Resource Names
+ v2/DeleteReview	 Contextless Resource Names
+ v2/RateReview	 Contextless Resource Names
+ v2/SaveRecommendation	 Contextless Resource Names
+ v2/SaveThread	 Contextless Resource Names
+ v2/DeleteThread	 Contextless Resource Names
+ v2/SaveThreadComment	 Contextless Resource Names
+
+***Patterns*** 
+Count: 2
+ v2/ToggleThreadSubscription	 Contextual Resource Names
+ v2/DeleteThreadComment	 Contextual Resource Names

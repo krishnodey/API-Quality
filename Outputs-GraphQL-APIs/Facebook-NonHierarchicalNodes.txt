@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 20
+/v18.0/{album-id} 	Hierarchical Nodes	
+ /{group_id}/albums	Hierarchical Nodes	
+/v18.0/{album-id}/comments	Hierarchical Nodes	
+/v18.0/{album-id}/likes 	Hierarchical Nodes	
+ /v18.0/{album-id}/photos 	Hierarchical Nodes	
+ /{album_id}/photos 	Hierarchical Nodes	
+/v18.0/{album-id}/picture 	Hierarchical Nodes	
+/v18.0/{app-link-host-id} 	Hierarchical Nodes	
+/app/app_link_hosts	Hierarchical Nodes	
+/v18.0/{app-link-host-id}	Hierarchical Nodes	
+/v18.0/{app-link-host-id}	Hierarchical Nodes	
+/v18.0/{application-id} 	Hierarchical Nodes	
+ /{business_id}/owned_apps 	Hierarchical Nodes	
+ /v18.0/{application-id}/accounts 	Hierarchical Nodes	
+ /{application_id}/accounts 	Hierarchical Nodes	
+/v18.0/{application-id}/ad_placement_groups 	Hierarchical Nodes	
+ /v18.0/{application-id}/adnetworkanalytics_results	Hierarchical Nodes	
+/v18.0/{application-id}/aem_attribution	Hierarchical Nodes	
+/v18.0/{application-id}/aem_conversion_configs	Hierarchical Nodes	
+/v18.0/{application-id}/aem_conversion_filter	Hierarchical Nodes	

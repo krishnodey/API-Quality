@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+/{ig-comment-id}?fields={fields}	 Self-descriptive End-point
+/{ig-comment-id}?hide={hide}	 Self-descriptive End-point
+/{ig-comment-id}	 Self-descriptive End-point
+/oauth/authorize	 Self-descriptive End-point
+/oauth/access_token	 Self-descriptive End-point
+/access_token	 Self-descriptive End-point
+/refresh_access_token	 Self-descriptive End-point
+/oauth/authorize	 Self-descriptive End-point
+/{media-id}	 Self-descriptive End-point
+/{media-id}/children	 Self-descriptive End-point
+/{user-id}/media	 Self-descriptive End-point
+/me	 Self-descriptive End-point
+/{user-id}	 Self-descriptive End-point
+/{user-id}/media	 Self-descriptive End-point
+/{ig-hashtag-id}	 Self-descriptive End-point
+/{ig-media-id}?fields={fields}	 Self-descriptive End-point
+/{ig-media-id}?comment_enabled={comment_enabled}	 Self-descriptive End-point
+/{ig-media-id}/comments?message={message}	 Self-descriptive End-point
+/{ig-media-id}/comments	 Self-descriptive End-point
+/{ig-user-id}?fields={fields}	 Self-descriptive End-point
+/{page-id}?fields=instagram_business_account	 Self-descriptive End-point

@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 16
+/v2/berry/{id or name}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{id}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{name}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{growth_time}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{max_harvest}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{natural_gift_power}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{size}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{smoothness}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{soil_dryness}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{firmness}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{flavors}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{items}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{natural_gift_type}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry/{potency}/	Non-standard End-point	 [black space/tab found] 
+/v2/berry-firmness/{id or name}/	Non-standard End-point	 [black space/tab found] 
+v2/berry-flavor/{id or name}/	Non-standard End-point	 [black space/tab found] 
+
+***Patterns*** 
+Count: 8
+/v2/count/	Standard End-point	
+/v2/next/	Standard End-point	
+/v2/previous/	Standard End-point	
+/v2/results/	Standard End-point	
+/v2/berry-firmness/{id}/	Standard End-point	
+/v2/berry-firmness/{name}/	Standard End-point	
+/v2/berry-firmness/{berries}/	Standard End-point	
+/v2/berry-firmness/{names}/	Standard End-point	

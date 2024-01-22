@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 15
+ /v1/catalog/{storefront}/albums/{id} 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/albums/{id}/{relationship} 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/albums/{id}/view/{view}	Hierarchical Nodes	
+ /v1/catalog/{storefront}/albums 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/albums 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/albums  	Hierarchical Nodes	
+ /v1/me/library/albums/{id} 	Hierarchical Nodes	
+ /v1/me/library/albums/{id}/{relationship} 	Hierarchical Nodes	
+ /v1/me/library/albums 	Hierarchical Nodes	
+ /v1/me/library/albums 	Hierarchical Nodes	
+ /v1/me/library 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/artists/{id} 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/artists/{id}/{relationship} 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/artists/{id}/view/{view} 	Hierarchical Nodes	
+ /v1/catalog/{storefront}/artists 	Hierarchical Nodes	

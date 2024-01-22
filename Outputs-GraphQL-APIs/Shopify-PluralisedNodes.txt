@@ -1,0 +1,21 @@
+***Anti-Pattern*** 
+Count: 16
+POST	/mutations/delegateAccessTokenCreate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST	/mutations/storefrontAccessTokenCreate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST	/mutations/storefrontAccessTokenDelete	Pluralized Nodes	 [Singular last node with POST method.] 
+POST	/objects/AccessScope	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/DelegateAccessToken	Pluralized Nodes	 [Singular last node with POST method.] 
+POST	/objects/StorefrontAccessToken	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	queries/shopifyqlQuery	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/ErrorPosition	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/ParseError	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/ParseErrorRange	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/PolarisVizDataPoint	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/PolarisVizDataSeries	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/PolarisVizResponse	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/TableData	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/TableDataColumn	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/objects/TableResponse	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 0
