@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 13
- /v1/catalog/{storefront}/albums/{id} 	 Contextless Resource Names
- /v1/catalog/{storefront}/albums/{id}/{relationship} 	 Contextless Resource Names
- /v1/catalog/{storefront}/albums/{id}/view/{view}	 Contextless Resource Names
- /v1/catalog/{storefront}/albums 	 Contextless Resource Names
- /v1/catalog/{storefront}/albums 	 Contextless Resource Names
- /v1/catalog/{storefront}/albums  	 Contextless Resource Names
- /v1/me/library/albums/{id} 	 Contextless Resource Names
- /v1/me/library/albums/{id}/{relationship} 	 Contextless Resource Names
- /v1/me/library/albums 	 Contextless Resource Names
- /v1/me/library/albums 	 Contextless Resource Names
- /v1/catalog/{storefront}/artists/{id} 	 Contextless Resource Names
- /v1/catalog/{storefront}/artists/{id}/{relationship} 	 Contextless Resource Names
- /v1/catalog/{storefront}/artists/{id}/view/{view} 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 2
+Count: 15
+ /v1/catalog/{storefront}/albums/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/albums/{id}/{relationship} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/albums/{id}/view/{view}	 Contextual Resource Names
+ /v1/catalog/{storefront}/albums 	 Contextual Resource Names
+ /v1/catalog/{storefront}/albums 	 Contextual Resource Names
+ /v1/catalog/{storefront}/albums  	 Contextual Resource Names
+ /v1/me/library/albums/{id} 	 Contextual Resource Names
+ /v1/me/library/albums/{id}/{relationship} 	 Contextual Resource Names
+ /v1/me/library/albums 	 Contextual Resource Names
+ /v1/me/library/albums 	 Contextual Resource Names
  /v1/me/library 	 Contextual Resource Names
+ /v1/catalog/{storefront}/artists/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/artists/{id}/{relationship} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/artists/{id}/view/{view} 	 Contextual Resource Names
  /v1/catalog/{storefront}/artists 	 Contextual Resource Names

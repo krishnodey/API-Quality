@@ -1,0 +1,11 @@
+api_name,AmorphousURI,TidyURI,NonStandardURI,StandarURI,CRUDyURI,Verbless,UnversionedURI,VersionedURI,PluralisedNodes,SingularNodes,Non-descriptiveURI,DescriptiveURI,ContextlessURI,Contextual,NonHierarchicalNodes,HierarchicalNodes,LessCohisiveDoc,CohisiveDoc,InconsistantDoc,Consistant
+GitHub,0,256,256,0,1,255,256,0,254,2,15,241,10,246,22,234,4,252,83,173
+Facebook,0,20,13,7,0,20,5,15,2,18,2,18,0,20,0,20,4,16,2,18
+Shopify,0,16,8,8,0,16,16,0,16,0,0,16,0,16,6,10,1,15,5,11
+Pokeapi,24,0,16,8,0,24,0,24,0,24,0,24,0,24,1,23,3,21,0,24
+AniList,0,27,27,0,0,27,0,27,27,0,0,27,1,26,2,25,3,24,17,10
+AppleMusic,0,15,15,0,0,15,0,15,1,14,0,15,0,15,0,15,0,15,0,15
+Instagram,0,18,18,0,0,18,17,1,2,16,0,18,0,18,0,18,0,18,1,17
+Twitter,0,14,14,0,3,11,2,12,0,14,0,14,0,14,0,14,0,14,1,13
+Braintree,0,15,15,0,1,14,15,0,15,0,0,15,0,15,0,15,1,14,11,4
+Artsy,0,21,21,0,0,21,0,21,0,21,0,21,2,19,0,21,1,20,0,21

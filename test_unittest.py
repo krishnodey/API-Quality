@@ -7,18 +7,19 @@ analyzer = ApiAnalyzer(data)
 class Test_TestAntiPatterns(unittest.TestCase):
     # This test is designed for patterns
     def test_Amorphous(self):
-        ap, p, p_count, ap_count = analyzer.detect_amorphous_uri()
-        self.assertEqual(p_count, 1)
-
-    # This test is designed for anti-pattern
-    def test_nonAmorphous(self):
-        data = ['Auth/token.jpg']
+        data = ['/user_Auth/token']
         ap, p, p_count, ap_count = analyzer.detect_amorphous_uri(data)
         self.assertEqual(ap_count, 1)
 
+    # This test is designed for anti-pattern
+    def test_nonAmorphous(self):
+        data = ['aUth/tokenjpg']
+        ap, p, p_count, ap_count = analyzer.detect_amorphous_uri(data)
+        self.assertEqual(p_count, 1)
+
     #This test is designed for pattern
     def test_StandardURIs(self):
-        data = ['/account/set_profile_photo']
+        data = ['/devices/thermostats/device_id/device_id']
         ap, p, p_count, ap_count = analyzer.detect_non_standard_uri(data)
         self.assertEqual(p_count, 1)
 

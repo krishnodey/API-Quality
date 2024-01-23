@@ -50,11 +50,11 @@ analyzer_obj = ApiAnalyzer(uri)
 
 
 '''''''''''''''''''''''''Non Standard URIs'''''''''''''''''''''''''''''''
-#print("Detection of NonStandardURI:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_standard_uri()
-#pattern_type = "Non Standard URI"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#print("Finished Detection of NonStandardURI:\n")
+'''print("Detection of NonStandardURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_standard_uri()
+pattern_type = "Non Standard URI"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("Finished Detection of NonStandardURI:\n")'''
 
 
 '''''''''''''''''''''''''''CRUDyURI'''''''''''''''''''''''''''''''''''''''
@@ -128,18 +128,18 @@ with open(f'APIs\\{selected}\\{selected}.txt', 'r') as file:
 
 
 '''''''''''''''''''''''''LessCohisiveDocumentation'''''''''''''''''''''''''''''''''''''''
-print("Detection of LessCohisiveDocumentation:")
-result_AP, result_P, p_count, ap_count = analyzer_obj.detect_less_cohesive_documentation(data)
-pattern_type = "LessCohisiveDoc"
-uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
-print("Finished Detection of LessCohisiveDocumentation:")
+#print("Detection of LessCohisiveDocumentation:")
+#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_less_cohesive_documentation(data)
+#pattern_type = "LessCohisiveDoc"
+#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
+#print("Finished Detection of LessCohisiveDocumentation:")
 
 
 '''''''''''''''''''''''''InconsistantDocumentation'''''''''''''''''''''''''''''''''''''''
-#print("Detection of InconsistantDocumentation:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations(data)
-#pattern_type = "InconsistantDoc"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
-#print("Finished Detection of InconsistantDocumentation:")
+print("Detection of InconsistantDocumentation:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations(data)
+pattern_type = "InconsistantDoc"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
+print("Finished Detection of InconsistantDocumentation:")
 
 

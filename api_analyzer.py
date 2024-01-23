@@ -40,12 +40,19 @@ class ApiAnalyzer:
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
 
         for line in URI:
+            #print(line)
             comment = ""
             found_AP = 0
 
-            if "%5F".lower() in line.lower() or "%5F" in line:
+            if "%5F".lower() in line.lower() or "%5F" in line or "_" in line:
                 found_AP = 1
                 comment += " [underscore found] "
+            
+            for i in range(1, len(line) - 1):
+                if 'A' <= line[i] <= 'Z' and not ('a' <= line[i-1] <= 'z' and 'a' <= line[i+1] <= 'z'):
+                    found_AP = 1
+                    comment += " [uppercase found] "
+
 
             c = line.strip()[-1]
             if c == '/' or c == '\\':
@@ -74,28 +81,93 @@ class ApiAnalyzer:
         standard_uri_result_P = []
         p_count = 0
         ap_count = 0
+        # Common European languages
+        european_languages = [
+            # French
+            'À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Æ', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ð', 'Ñ', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'Ø', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'à', 'á', 'â', 'ã', 'ä', 'å', 'æ', 'ç', 'è', 'é', 'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ð', 'ñ', 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ù', 'ú', 'û', 'ü', 'ý', 'ÿ', 'Œ', 'œ',
+
+            # Italian
+            'Ā', 'Ă', 'Ą', 'Ć', 'Ĉ', 'Ċ', 'Č', 'Ď', 'Đ', 'Ē', 'Ĕ', 'Ė', 'Ę', 'Ě', 'Ĝ', 'Ğ', 'Ġ', 'Ģ', 'Ĥ', 'Ħ', 'Ĩ', 'Ī', 'Ĭ', 'Į', 'İ', 'Ĳ', 'Ĵ', 'Ķ', 'Ĺ', 'Ļ', 'Ľ', 'Ŀ', 'Ł', 'Ń', 'Ņ', 'Ň', 'Ŋ', 'Ō', 'Ŏ', 'Ő', 'Œ', 'Ŕ', 'Ŗ', 'Ř', 'Ś', 'Ŝ', 'Ş', 'Š', 'Ţ', 'Ť', 'Ŧ', 'Ũ', 'Ū', 'Ŭ', 'Ů', 'Ű', 'Ų', 'Ŵ', 'Ŷ', 'Ÿ', 'Ź', 'Ż', 'Ž',
+
+            # Spanish
+            'Á', 'É', 'Í', 'Ñ', 'Ó', 'Ú', 'Ü', 'á', 'é', 'í', 'ñ', 'ó', 'ú', 'ü',
+
+            # German
+            'Ä', 'Ö', 'Ü', 'ä', 'ö', 'ü', 'ß',
+
+            # Portuguese
+            'Á', 'Â', 'Ã', 'À', 'Ç', 'É', 'Ê', 'Í', 'Õ', 'Ó', 'Ô', 'Ú', 'á', 'â', 'ã', 'à', 'ç', 'é', 'ê', 'í', 'õ', 'ó', 'ô', 'ú',
+
+            # Dutch
+            'Ĳ', 'ĳ',
+
+            # Czech
+            'Č', 'č', 'Ď', 'ď', 'Ě', 'ě', 'Ň', 'ň', 'Ř', 'ř', 'Š', 'š', 'Ť', 'ť', 'Ů', 'ů', 'Ž', 'ž'
+        ]
+
+        # Cyrillic languages
+        cyrillic_languages = [
+            # Russian
+            'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я',
+
+            # Bulgarian
+            'Й', 'Ъ', 'Ь', 'ё', 'й', 'ъ', 'ь'
+        ]
+
+        # Greek
+        greek_language = [
+            'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι', 'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ', 'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω',
+            'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
+        ]
+
+        # Arabic
+        arabic_language = [
+            'ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ي'
+        ]
+
+        # Japanese
+        japanese_language = [
+            'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'を', 'ん'
+        ]
+
+        unknown_characters = ['!', '@', '#', '$', '~', '^', '*', '>', '<', '|', '%', '&', '+', '=', '`', '?', ',', ';', ':', '.']
+
+
 
         for line in URI:
             comment = ""
             found_AP = 0
 
-            if any(c in line.lower() for c in ['�', '�', '�']):
+            '''if any(c in line.lower() for c in ['�', '�', '�']):
                 found_AP = 1
-                comment += " [sw spec char found] "
+                comment += " [sw spec char found] "'''
 
-            if any(c in line.lower() for c in ['�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�']):
+            '''if any(c in line.lower() for c in ['�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�']):
                 found_AP = 1
-                comment += " [fr spec char found] "
-
-            if ' ' in line or '\t' in line:
+                comment += " [fr spec char found] "'''
+            
+            if any(c in line.lower() for c in european_languages):
                 found_AP = 1
-                comment += " [black space/tab found] "
-
-            if '--' in line:
+                comment += " [european char found] "
+            elif any(c in line.lower() for c in cyrillic_languages):
+                found_AP = 1
+                comment += " [ cyrillic char found] "
+            elif any(c in line.lower() for c in greek_language):
+                found_AP = 1
+                comment += " [ greek char found] "
+            elif any(c in line.lower() for c in arabic_language):
+                found_AP = 1
+                comment += " [ arabic char found] "
+            elif any(c in line.lower() for c in japanese_language):
+                found_AP = 1
+                comment += " [ japanese char found] "
+            elif ' ' in line.strip() or '\t' in line.strip():
+                found_AP = 1
+                comment += " [blanck space/tab found] "
+            elif '--' in line:
                 found_AP = 1
                 comment += " [double hyphens found] "
-
-            if any(c in line.lower() for c in ['!', '@', '#', '$', '~', '^', '*', '>', '<']):
+            elif any(c in line.lower() for c in unknown_characters): #['!', '@', '#', '$', '~', '^', '*', '>', '<']):
                 found_AP = 1
                 comment += " [unknown char found] "
 
@@ -723,7 +795,7 @@ class ApiAnalyzer:
             tokens = word_tokenize(text.lower())
             tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
             doc = nlp(" ".join(tokens))
-            lemmatized_tokens = [token.lemma_ for token in doc]
+            lemmatized_tokens = [f'{token}' for token in doc]
             return lemmatized_tokens
 
         P = "Consistent Documentation"
@@ -736,52 +808,48 @@ class ApiAnalyzer:
         
         clean = UriCleaning()
 
-        for method, uri, documentation in zip(http_method, nodes, description):
+        for h_method, uri, documentation in zip(http_method, nodes, description):
             #documentation = documentation.strip()
-            method = method.lower().strip()
+            method = h_method.lower().strip()
             #print(method)
             words = preprocess_data(documentation)
             #print(words)
             #uri = clean.get_uri_nodes(node)
             #print(words)
             #print(uri)
+            #print("\n\n")
             
-            if method in "get":
+            if method == "get":
                 #if any(item in get for item in words):
-
                 if any(item in get for item in words):
-                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
+                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
-                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
+                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
                     p_count += 1
-
-            elif method in "delete":
+            elif method == "delete":
                 if any(item in delete for item in words):
-                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
+                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
-                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
+                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
                     p_count += 1
-
-            elif method in "put":
+            elif method == "put":
                 if any(item in put for item in words):
-                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
-                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
-
-            elif method in "post":
+            elif method == "post":
                 if any(item in post for item in words):
-                    inconsistent_documentation_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
-                    inconsistent_documentation_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
-
             else:
-                inconsistent_documentation_P.append(f"{method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
+                inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
                 p_count += 1
 
         return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count

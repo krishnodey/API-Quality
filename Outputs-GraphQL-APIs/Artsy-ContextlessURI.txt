@@ -1,26 +1,26 @@
 ***Anti-Pattern*** 
-Count: 21
- v2/applications/{id} 	 Contextless Resource Names
- v2/artists/{id} 	 Contextless Resource Names
- v2/artworks/{id} 	 Contextless Resource Names
- v2/bidders/{id} 	 Contextless Resource Names
- v2/bidder_positions/{id} 	 Contextless Resource Names
- v2/bids/{id} 	 Contextless Resource Names
- v2/collection_items/{id} 	 Contextless Resource Names
- v2/collections?user_id=USER_ID&private=true 	 Contextless Resource Names
- v2/edition/{id} 	 Contextless Resource Names
- v2/fairs/{id} 	 Contextless Resource Names
- v2/genes/{id} 	 Contextless Resource Names
- v2/images/{id} 	 Contextless Resource Names
- v2/partners/{id} 	 Contextless Resource Names
- v2/profiles/{id} 	 Contextless Resource Names
- v2/sales 	 Contextless Resource Names
- v2/search?q=Andy+Warhol 	 Contextless Resource Names
+Count: 2
  v2/shows/{id} 	 Contextless Resource Names
  v2/status 	 Contextless Resource Names
- v2/user_details/{id} 	 Contextless Resource Names
- v2/users/{id}	 Contextless Resource Names
- v2/current_user 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 0
+Count: 19
+ v2/applications/{id} 	 Contextual Resource Names
+ v2/artists/{id} 	 Contextual Resource Names
+ v2/artworks/{id} 	 Contextual Resource Names
+ v2/bidders/{id} 	 Contextual Resource Names
+ v2/bidder_positions/{id} 	 Contextual Resource Names
+ v2/bids/{id} 	 Contextual Resource Names
+ v2/collection_items/{id} 	 Contextual Resource Names
+ v2/collections?user_id=USER_ID&private=true 	 Contextual Resource Names
+ v2/edition/{id} 	 Contextual Resource Names
+ v2/fairs/{id} 	 Contextual Resource Names
+ v2/genes/{id} 	 Contextual Resource Names
+ v2/images/{id} 	 Contextual Resource Names
+ v2/partners/{id} 	 Contextual Resource Names
+ v2/profiles/{id} 	 Contextual Resource Names
+ v2/sales 	 Contextual Resource Names
+ v2/search?q=Andy+Warhol 	 Contextual Resource Names
+ v2/user_details/{id} 	 Contextual Resource Names
+ v2/users/{id}	 Contextual Resource Names
+ v2/current_user 	 Contextual Resource Names

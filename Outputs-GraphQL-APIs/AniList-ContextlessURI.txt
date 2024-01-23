@@ -1,32 +1,32 @@
 ***Anti-Pattern*** 
-Count: 25
- /v2/oauth/token 	 Contextless Resource Names
- /v2/oauth/pin 	 Contextless Resource Names
- v2/SaveMediaListEntry	 Contextless Resource Names
- v2/UpdateMediaListEntries	 Contextless Resource Names
- v2/DeleteMediaListEntry	 Contextless Resource Names
- v2/DeleteCustomList	 Contextless Resource Names
- v2/SaveTextActivity	 Contextless Resource Names
- v2/SaveListActivity	 Contextless Resource Names
- v2/DeleteActivity	 Contextless Resource Names
- v2/ToggleActivityPin	 Contextless Resource Names
- v2/ToggleActivitySubscription	 Contextless Resource Names
- v2/SaveActivityReply	 Contextless Resource Names
- v2/DeleteActivityReply	 Contextless Resource Names
- v2/ToggleLike	 Contextless Resource Names
- v2/ToggleLikeV2	 Contextless Resource Names
- v2/ToggleFollow	 Contextless Resource Names
- v2/ToggleFavourite	 Contextless Resource Names
- v2/UpdateFavouriteOrder	 Contextless Resource Names
- v2/SaveReview	 Contextless Resource Names
- v2/DeleteReview	 Contextless Resource Names
- v2/RateReview	 Contextless Resource Names
+Count: 1
  v2/SaveRecommendation	 Contextless Resource Names
- v2/SaveThread	 Contextless Resource Names
- v2/DeleteThread	 Contextless Resource Names
- v2/SaveThreadComment	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 2
+Count: 26
+ /v2/oauth/token 	 Contextual Resource Names
+ /v2/oauth/pin 	 Contextual Resource Names
+ v2/SaveMediaListEntry	 Contextual Resource Names
+ v2/UpdateMediaListEntries	 Contextual Resource Names
+ v2/DeleteMediaListEntry	 Contextual Resource Names
+ v2/DeleteCustomList	 Contextual Resource Names
+ v2/SaveTextActivity	 Contextual Resource Names
+ v2/SaveListActivity	 Contextual Resource Names
+ v2/DeleteActivity	 Contextual Resource Names
+ v2/ToggleActivityPin	 Contextual Resource Names
+ v2/ToggleActivitySubscription	 Contextual Resource Names
+ v2/SaveActivityReply	 Contextual Resource Names
+ v2/DeleteActivityReply	 Contextual Resource Names
+ v2/ToggleLike	 Contextual Resource Names
+ v2/ToggleLikeV2	 Contextual Resource Names
+ v2/ToggleFollow	 Contextual Resource Names
+ v2/ToggleFavourite	 Contextual Resource Names
+ v2/UpdateFavouriteOrder	 Contextual Resource Names
+ v2/SaveReview	 Contextual Resource Names
+ v2/DeleteReview	 Contextual Resource Names
+ v2/RateReview	 Contextual Resource Names
+ v2/SaveThread	 Contextual Resource Names
+ v2/DeleteThread	 Contextual Resource Names
  v2/ToggleThreadSubscription	 Contextual Resource Names
+ v2/SaveThreadComment	 Contextual Resource Names
  v2/DeleteThreadComment	 Contextual Resource Names

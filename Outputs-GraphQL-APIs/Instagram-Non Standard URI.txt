@@ -16,7 +16,7 @@ Count: 18
 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Non-standard End-point	 [black space/tab found] 
 /{api-version}/{ig-user-id}	Non-standard End-point	 [black space/tab found] 
 /{api-version}/{ig-user-id}?fields=business_discovery.username({username})	Non-standard End-point	 [black space/tab found] 
-v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Non-standard End-point	 [black space/tab found] 
+/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Non-standard End-point	 [black space/tab found] 
 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Non-standard End-point	 [black space/tab found] 
 
 ***Patterns*** 

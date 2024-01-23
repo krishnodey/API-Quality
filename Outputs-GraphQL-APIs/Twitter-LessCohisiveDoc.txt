@@ -1,19 +1,19 @@
 ***Anti-Pattern*** 
-Count: 13
--/v2/users/:id/bookmarks/:tweet_id	Non-pertinent Documentation	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
--/v2/users/:id/bookmarks	Non-pertinent Documentation	Allows you to get an authenticated user's 800 most recent bookmarked Tweets.
--/v2/tweets/search/stream	Non-pertinent Documentation	Streams Tweets in real-time that match the rules that you added to the stream using the POST /tweets/search/stream/rules endpoint. If you haven't added any rules to your stream, you will not receive any Tweets.
--/v2/tweets/search/stream/rules	Non-pertinent Documentation	Add or delete rules to your stream. Once you've added a rule or rules to your stream, you can retrieve all of the Tweets that match these rules by using the
--/tweets/search/stream endpoint.	Non-pertinent Documentation	Return either a single rule, or a list of rules that have been added to the stream.
--/v2/tweets/:id/hidden	Non-pertinent Documentation	Hides or unhides a reply to a Tweet.
--/v2/users/:id/likes/:tweet_id	Non-pertinent Documentation	Allows a user or authenticated user ID to unlike a Tweet.
--/v2/tweets/:id/liking_users	Non-pertinent Documentation	Allows you to get information about a Tweetâ€™s liking users.
--/v2/users/:id/liked_tweets	Non-pertinent Documentation	Allows you to get information about a userâ€™s liked Tweets
--/v2/users/:id/likes	Non-pertinent Documentation	Causes the user ID identified in the path parameter to Like the target Tweet.
--/v2/tweets/:id	Non-pertinent Documentation	Allows a user or authenticated user ID to delete a Tweet.
--/v2/tweets	Non-pertinent Documentation	Creates a Tweet on behalf of an authenticated user.
--/2/tweets/:id/quote_tweets	Non-pertinent Documentation	Returns Quote Tweets for a Tweet specified by the requested Tweet ID.
+Count: 0
 
 ***Patterns*** 
-Count: 1
+Count: 14
+-/v2/users/:id/bookmarks/:tweet_id	Pertinent Documentation	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
+-/v2/users/:id/bookmarks	Pertinent Documentation	Allows you to get an authenticated user's 800 most recent bookmarked Tweets.
 -/v2/users/:id/bookmarks	Pertinent Documentation	Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
+-/v2/tweets/search/stream	Pertinent Documentation	Streams Tweets in real-time that match the rules that you added to the stream using the POST /tweets/search/stream/rules endpoint. If you haven't added any rules to your stream, you will not receive any Tweets.
+-/v2/tweets/search/stream/rules	Pertinent Documentation	Add or delete rules to your stream. Once you've added a rule or rules to your stream, you can retrieve all of the Tweets that match these rules by using the
+-/tweets/search/stream endpoint.	Pertinent Documentation	Return either a single rule, or a list of rules that have been added to the stream.
+-/v2/tweets/:id/hidden	Pertinent Documentation	Hides or unhides a reply to a Tweet.
+-/v2/users/:id/likes/:tweet_id	Pertinent Documentation	Allows a user or authenticated user ID to unlike a Tweet.
+-/v2/tweets/:id/liking_users	Pertinent Documentation	Allows you to get information about a Tweetâ€™s liking users.
+-/v2/users/:id/liked_tweets	Pertinent Documentation	Allows you to get information about a userâ€™s liked Tweets
+-/v2/users/:id/likes	Pertinent Documentation	Causes the user ID identified in the path parameter to Like the target Tweet.
+-/v2/tweets/:id	Pertinent Documentation	Allows a user or authenticated user ID to delete a Tweet.
+-/v2/tweets	Pertinent Documentation	Creates a Tweet on behalf of an authenticated user.
+-/2/tweets/:id/quote_tweets	Pertinent Documentation	Returns Quote Tweets for a Tweet specified by the requested Tweet ID.

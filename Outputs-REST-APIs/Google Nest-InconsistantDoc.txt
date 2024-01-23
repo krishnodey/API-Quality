@@ -1,14 +1,14 @@
 ***Anti-Pattern*** 
-Count: 1
-get	/devices/thermostats/device_id/name_long	Inconsistent Documentation	Long display name of the device. Includes a custom (label), created by the user, or via wheres.
+Count: 0
 
 ***Patterns*** 
-Count: 34
+Count: 35
 get	 /devices/thermostats/device_id/device_id 	Consistent Documentation	Nest Thermostat unique identifier.
 get	 /devices/thermostats/device_id/locale 	Consistent Documentation	Specifies language and region (or country) preference.
 get	 /devices/thermostats/device_id/software_version 	Consistent Documentation	Software version.
 get	 /devices/thermostats/device_id/structure_id 	Consistent Documentation	Structure unique identifier.
 get	 /devices/thermostats/device_id/name 	Consistent Documentation	Display name of the device. Can be any room name from a list we provide, or a custom name.
+get	 /devices/thermostats/device_id/name_long 	Consistent Documentation	Long display name of the device. Includes a custom (label), created by the user, or via wheres.
 get	 /devices/thermostats/device_id/last_connection 	Consistent Documentation	Timestamp of the last successful interaction with the Nest service, in ISO 8601 format.
 get	 /devices/thermostats/device_id/is_online 	Consistent Documentation	Device connection status with the Nest service.
 get	 /devices/thermostats/device_id/can_cool 	Consistent Documentation	System ability to cool (has AC).

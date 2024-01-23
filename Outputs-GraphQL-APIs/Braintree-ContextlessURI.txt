@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 6
- /ping 	 Contextless Resource Names
- /pingInStoreReader 	 Contextless Resource Names
- /viewer 	 Contextless Resource Names
- /node 	 Contextless Resource Names
- /idFromLegacyId 	 Contextless Resource Names
- /authorizePayPalAccount 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 9
+Count: 15
+ /ping 	 Contextual Resource Names
+ /pingInStoreReader 	 Contextual Resource Names
+ /viewer 	 Contextual Resource Names
  /clientConfiguration 	 Contextual Resource Names
+ /node 	 Contextual Resource Names
+ /idFromLegacyId 	 Contextual Resource Names
  /report 	 Contextual Resource Names
  /search 	 Contextual Resource Names
  /paypalFinancingOptions 	 Contextual Resource Names
  /inStoreLocations 	 Contextual Resource Names
  /authorizePaymentMethod 	 Contextual Resource Names
+ /authorizePayPalAccount 	 Contextual Resource Names
  /authorizeVenmoAccount 	 Contextual Resource Names
  /authorizeCreditCard 	 Contextual Resource Names
  /captureTransaction 	 Contextual Resource Names

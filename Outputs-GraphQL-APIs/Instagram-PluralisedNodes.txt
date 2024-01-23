@@ -19,5 +19,5 @@ GET 	/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	
 GET 	/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	 regular methods.
 GET 	/{api-version}/{ig-user-id}	 regular methods.
 GET 	/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	 regular methods.
-GET 	v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 regular methods.
+GET 	/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 regular methods.
 GET 	{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	 regular methods.

@@ -19,5 +19,5 @@ Count: 18
 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	 Self-descriptive End-point
 /{api-version}/{ig-user-id}	 Self-descriptive End-point
 /{api-version}/{ig-user-id}?fields=business_discovery.username({username})	 Self-descriptive End-point
-v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 Self-descriptive End-point
+/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 Self-descriptive End-point
 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	 Self-descriptive End-point
