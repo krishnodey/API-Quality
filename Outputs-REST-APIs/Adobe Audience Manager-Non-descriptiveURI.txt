@@ -1,11 +1,9 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 1
 /models/{modelId}/runs/latest/stats	 Non-descriptive End-point
-/datasources/	 Non-descriptive End-point
-/datasources/	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 62
+Count: 64
 /models/{modelId}	 Self-descriptive End-point
 /models/{modelId}	 Self-descriptive End-point
 /models	 Self-descriptive End-point
@@ -44,6 +42,8 @@ Count: 62
 /data-feeds/{dataSourceId}/plans/{planId}	 Self-descriptive End-point
 /data-feeds/{dataSourceId}/plans/{planId}	 Self-descriptive End-point
 /data-feeds/{dataSourceId}/plans/{planId}	 Self-descriptive End-point
+/datasources/	 Self-descriptive End-point
+/datasources/	 Self-descriptive End-point
 /datasources/{dataSourceId}	 Self-descriptive End-point
 /datasources/{dataSourceId}	 Self-descriptive End-point
 /datasources/{dataSourceId}	 Self-descriptive End-point

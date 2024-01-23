@@ -1,8 +1,12 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+ /devices/<deviceID>/status 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 3
+ /devices/<deviceID>/status 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 3
+ /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 7
+ /messages/export/<exportID>/status 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 4
 
 ***Patterns*** 
-Count: 80
+Count: 76
  /users/self 	Hierarchical Nodes	
  /users/<userID>/properties 	Hierarchical Nodes	
  /users/<userID>/properties 	Hierarchical Nodes	
@@ -22,9 +26,7 @@ Count: 80
  /devices/<deviceID>/tokens 	Hierarchical Nodes	
  /devices/<deviceID>/providerauth 	Hierarchical Nodes	
  /devices/<deviceID>/providerauth 	Hierarchical Nodes	
- /devices/<deviceID>/status 	Hierarchical Nodes	
  /devices/status 	Hierarchical Nodes	
- /devices/<deviceID>/status 	Hierarchical Nodes	
  /devices/<deviceID>/certificate 	Hierarchical Nodes	
  /devices/<deviceID>/shares 	Hierarchical Nodes	
  /devices/<deviceID>/shares/<shareID> 	Hierarchical Nodes	
@@ -36,7 +38,6 @@ Count: 80
  /devicetypes/<deviceTypeID>/manifests/<version>/properties 	Hierarchical Nodes	
  /devicetypes/<deviceTypeID>/availablemanifestversions 	Hierarchical Nodes	
  /devicetypes/<deviceTypeId>/whitelist 	Hierarchical Nodes	
- /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Hierarchical Nodes	
  /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Hierarchical Nodes	
  /devicetypes/<deviceTypeId>/whitelist 	Hierarchical Nodes	
  /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Hierarchical Nodes	
@@ -59,7 +60,6 @@ Count: 80
  /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Hierarchical Nodes	
  /pricing/devices/<deviceID>/pricingtiers 	Hierarchical Nodes	
  /messages/export 	Hierarchical Nodes	
- /messages/export/<exportID>/status 	Hierarchical Nodes	
  /messages/export/<exportID>/result 	Hierarchical Nodes	
  /messages/export/history 	Hierarchical Nodes	
  /subscriptions 	Hierarchical Nodes	

@@ -193,20 +193,39 @@ class ApiAnalyzer:
         ap_count = 0
 
         for line in URI:
+            #print(line)
             good_type = False
             comment = ""
             ap_found = False
 
             # Preprocessing: Splitting and cleaning the nodes
-            nodes = re.split(r'/', line.strip())
+            '''nodes = re.split(r'/', line.strip())
             nodes = [re.sub(r'[^a-zA-Z0-9]', '', node) for node in nodes]
-
+            print(nodes)
             splitted_nodes = []
             for node in nodes:
                 #tmp = re.split(r'(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])', node)
                 words = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', node)
 
                 splitted_nodes.extend(words)
+            print(splitted_nodes)'''
+            
+            clean = UriCleaning()
+            nodes = clean.get_uri_nodes(line)
+            #print(nodes)
+            #for new in nodes:
+            for i in range(len(nodes)):
+                val = clean.set_Acronym(nodes[i])
+                if val is not None:
+                    for index in range(len(val)):
+                        if i + index < len(nodes):
+                            nodes[i + index] = val[index]
+                        else:
+                            nodes.append(val[index])
+            #print(processed_nodes)
+                            
+            #print(nodes)
+
 
             # Check if any CRUDy word is found in the URI
             for node_word in nodes:
@@ -285,16 +304,40 @@ class ApiAnalyzer:
             lemmatizer = WordNetLemmatizer()
             lemma = lemmatizer.lemmatize(word, pos='n')
             return word != lemma
+        #print(is_plural("sources"))
 
         for line in URI:
             tmp = line.split(">>")
+            #print(tmp[1])
             http_method = tmp[0].strip()
-            nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in tmp[1].split("/")]
+            '''nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in tmp[1].split("/")]
             splitted_nodes = []
             for node in nodes:
                 tmp1 = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', node)
                 splitted_nodes.extend(tmp1)
+            print(splitted_nodes)
             last_node = splitted_nodes[-1]
+            print(last_node)'''
+
+            clean = UriCleaning()
+            nodes = clean.get_uri_nodes(tmp[1].strip())
+
+            
+            #for new in nodes:
+            for i in range(len(nodes)):
+                val = clean.set_Acronym(nodes[i])
+                if val is not None:
+                    for index in range(len(val)):
+                        if i + index < len(nodes):
+                            nodes[i + index] = val[index]
+                        else:
+                            nodes.append(val[index])
+            #print(processed_nodes)
+
+
+            last_node = nodes[-1]
+            #print(nodes)
+            #print(last_node)
 
             comment1 = " [Singular last node with POST method.] "
             comment2 = " [Pluralized last node with POST method.] "
@@ -333,12 +376,24 @@ class ApiAnalyzer:
         ap_count = 0
 
         for line in URI:
+            #print(line)
             #uri_nodes = uri.split("/")
             #print(uri_nodes)
             #nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in line.split("/")]
             #print(nodes)
             clean = UriCleaning()
-            splitted_nodes = clean.get_uri_nodes(line)
+            nodes = clean.get_uri_nodes(line)
+            #print(nodes)
+            #for new in nodes:
+            for i in range(len(nodes)):
+                val = clean.set_Acronym(nodes[i])
+                if val is not None:
+                    for index in range(len(val)):
+                        if i + index < len(nodes):
+                            nodes[i + index] = val[index]
+                        else:
+                            nodes.append(val[index])
+            #print(nodes)
             #print(splitted_nodes)
             '''splitted_nodes = []
             for node in nodes:
@@ -348,8 +403,8 @@ class ApiAnalyzer:
         
             pattern = True
 
-            for word in splitted_nodes:
-                # Perform word lookup operation equivalent to Java's Dictionary.getInstance().lookupAllIndexWords(word)
+            for word in nodes:
+                # Perform word lookup operation
                 synsets = wn.synsets(word.strip())
                 
                 if synsets:
@@ -542,6 +597,19 @@ class ApiAnalyzer:
             #print(uri)
             clean = UriCleaning()
             nodes = clean.get_uri_nodes(uri)
+
+            #for new in nodes:
+            for i in range(len(nodes)):
+                val = clean.set_Acronym(nodes[i])
+                if val is not None:
+                    for index in range(len(val)):
+                        if i + index < len(nodes):
+                            nodes[i + index] = val[index]
+                        else:
+                            nodes.append(val[index])
+            #print(processed_nodes)
+                            
+
             #print(nodes)
 
             #reliability = LexicalResult.Reliability()

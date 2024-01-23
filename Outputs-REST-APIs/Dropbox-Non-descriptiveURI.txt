@@ -1,12 +1,12 @@
 ***Anti-Pattern*** 
-Count: 2
-/auth/token/from_oauth1	 Non-descriptive End-point
-/check/app	 Non-descriptive End-point
+Count: 0
 
 ***Patterns*** 
-Count: 30
+Count: 32
 /account/set_profile_photo	 Self-descriptive End-point
+/auth/token/from_oauth1	 Self-descriptive End-point
 /auth/token/revoke	 Self-descriptive End-point
+/check/app	 Self-descriptive End-point
 /check/user	 Self-descriptive End-point
 /contacts/delete_manual_contacts	 Self-descriptive End-point
 /contacts/delete_manual_contacts_batch	 Self-descriptive End-point

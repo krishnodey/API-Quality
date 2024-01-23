@@ -59,8 +59,9 @@ class UriCleaning:
         # Tokenize the words and filter out stop words and numeric values
         tokenized_uri = word_tokenize(" ".join(uri_nodes))
         uri_nodes = [word for word in tokenized_uri if word not in stop_words and not word.isdigit()]
-        return uri_nodes
-    
+        tokens = [token for token in uri_nodes if len(token) > 1] #get rid of single characters
+        return tokens
+        
     def set_Acronym(self, text):
         path = "acronyms.txt"
 

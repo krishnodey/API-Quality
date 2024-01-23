@@ -28,4 +28,6 @@ app>>application
 ig >> instagram
 oauth>>authentication
 datasource>>data source
-ids>>identification
+ids>>identifications
+breakdown>> break down
+datasources>>data sources

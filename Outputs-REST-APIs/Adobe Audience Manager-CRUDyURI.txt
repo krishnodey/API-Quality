@@ -1,8 +1,12 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+/models/bulk-delete	CRUDy End-point	 [delete found] 
+/datasources/bulk-delete	CRUDy End-point	 [delete found] 
+/destinations/{destinationId}/bulk-create	CRUDy End-point	 [create found] 
+/destinations/{destinationId}/bulk-delete	CRUDy End-point	 [delete found] 
 
 ***Patterns*** 
-Count: 65
+Count: 61
 /models/{modelId}	Verbless End-point	
 /models/{modelId}	Verbless End-point	
 /models	Verbless End-point	
@@ -10,7 +14,6 @@ Count: 65
 /models/{modelId}/processing-history	Verbless End-point	
 /models/{modelId}/runs/latest/traits	Verbless End-point	
 /models/{modelId}/runs/latest/stats	Verbless End-point	
-/models/bulk-delete	Verbless End-point	
 /models/limits	Verbless End-point	
 /algorithms/{algoTypeId}	Verbless End-point	
 /algorithms	Verbless End-point	
@@ -47,7 +50,6 @@ Count: 65
 /datasources/{dataSourceId}	Verbless End-point	
 /datasources/{dataSourceId}	Verbless End-point	
 /datasources/{dataSourceId}	Verbless End-point	
-/datasources/bulk-delete	Verbless End-point	
 /datasources/configurations/available-id-types	Verbless End-point	
 /datasources/configurations/marketing-cloud-visitorid-versions	Verbless End-point	
 /datasources/{dataSourceId}/history/inbound	Verbless End-point	
@@ -65,6 +67,4 @@ Count: 65
 /destinations/{destinationId}	Verbless End-point	
 /destinations/{destinationId}	Verbless End-point	
 /destinations/{destinationId}	Verbless End-point	
-/destinations/{destinationId}/bulk-create	Verbless End-point	
-/destinations/{destinationId}/bulk-delete	Verbless End-point	
 /destinations/{destinationId}/mappings-by-priority/	Verbless End-point	

@@ -58,11 +58,11 @@ print("Finished Detection of NonStandardURI:\n")'''
 
 
 '''''''''''''''''''''''''''CRUDyURI'''''''''''''''''''''''''''''''''''''''
-#print("Detection of CRUDyURI:")
-##result_AP, result_P, p_count, ap_count = analyzer_obj.detect_crudy_uri()
-#pattern_type = "CRUDyURI"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#print("Finished Detection of CRUDyURI:")
+'''print("Detection of CRUDyURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_crudy_uri()
+pattern_type = "CRUDyURI"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("Finished Detection of CRUDyURI:")'''
 
 
 
@@ -73,40 +73,25 @@ print("Finished Detection of NonStandardURI:\n")'''
 #uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
 #print("Finished Detection of UnversionedURIs:")
 
-'''
-#semaintic Analysis
-uri_path = base_path+selected+"/"+selected+".txt"
-print(uri_path)
-uri_obj = FileReadWrite(uri_path)
-uri_content = uri_obj.read_file()
-uri_content = uri_content.split("\n")
-print(uri_content)'''
-
-''''api_endpoints = []
-with open(f'APIs\\{selected}\\{selected}.txt', 'r') as file:
-    for line in file:
-        #parts = line.strip().split(' >> ')
-        api_endpoints.append((line))'''
-
 
 # Displaying the parsed data
 #print(api_endpoints)
 '''''''''''''''''''''''''''PluralisedNodes'''''''''''''''''''''''''''''''''''''''
-##print("Detection of PluralisedNodes:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_pluralized_node(data)
-#pattern_type = "PluralisedNodes"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+'''print("Detection of PluralisedNodes:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_pluralized_node(data)
+pattern_type = "PluralisedNodes"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
 #print(result_AP)
 #print(result_P)
-#print("Finished Detection of PluralisedNodes:")
+print("Finished Detection of PluralisedNodes:")'''
 
 
 '''''''''''''''''''''''''Non-descriptiveURI'''''''''''''''''''''''''''''''''''''''
-#print("Detection of Non-descriptiveURI:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_descriptive_uri()
-#pattern_type = "Non-descriptiveURI"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#print("Finished Detection of Non-descriptiveURI:")
+'''print("Detection of Non-descriptiveURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_descriptive_uri()
+pattern_type = "Non-descriptiveURI"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("Finished Detection of Non-descriptiveURI:")'''
 
 
 #print(api_endpoints)
@@ -120,11 +105,11 @@ with open(f'APIs\\{selected}\\{selected}.txt', 'r') as file:
 
 
 '''''''''''''''''''''''''NonHierarchicalNodes'''''''''''''''''''''''''''''''''''''''
-#print("Detection of NonHierarchicalNodes:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
-#pattern_type = "NonHierarchicalNodes"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#print("Finished Detection of NonHierarchicalNodes:")
+print("Detection of NonHierarchicalNodes:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
+pattern_type = "NonHierarchicalNodes"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("Finished Detection of NonHierarchicalNodes:")
 
 
 '''''''''''''''''''''''''LessCohisiveDocumentation'''''''''''''''''''''''''''''''''''''''
@@ -136,10 +121,10 @@ with open(f'APIs\\{selected}\\{selected}.txt', 'r') as file:
 
 
 '''''''''''''''''''''''''InconsistantDocumentation'''''''''''''''''''''''''''''''''''''''
-print("Detection of InconsistantDocumentation:")
+'''print("Detection of InconsistantDocumentation:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations(data)
 pattern_type = "InconsistantDoc"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
-print("Finished Detection of InconsistantDocumentation:")
+print("Finished Detection of InconsistantDocumentation:")'''
 
 
