@@ -1,70 +1,70 @@
 ***Anti-Pattern*** 
-Count: 65
-/models/{modelId}	Non-standard End-point	 [black space/tab found] 
-/models/{modelId}	Non-standard End-point	 [black space/tab found] 
-/models	Non-standard End-point	 [black space/tab found] 
-/models	Non-standard End-point	 [black space/tab found] 
-/models/{modelId}/processing-history	Non-standard End-point	 [black space/tab found] 
-/models/{modelId}/runs/latest/traits	Non-standard End-point	 [black space/tab found] 
-/models/{modelId}/runs/latest/stats	Non-standard End-point	 [black space/tab found] 
-/models/bulk-delete	Non-standard End-point	 [black space/tab found] 
-/models/limits	Non-standard End-point	 [black space/tab found] 
-/algorithms/{algoTypeId}	Non-standard End-point	 [black space/tab found] 
-/algorithms	Non-standard End-point	 [black space/tab found] 
-/available-data-feeds/	Non-standard End-point	 [black space/tab found] 
-/available-data-feeds/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/available-data-feeds/{dataSourceId}/plans	Non-standard End-point	 [black space/tab found] 
-/available-data-feeds/{dataSourceId}/subscribe	Non-standard End-point	 [black space/tab found] 
-/available-data-feeds/{dataSourceId}/requests	Non-standard End-point	 [black space/tab found] 
-/data-feeds/billing-report	Non-standard End-point	 [black space/tab found] 
-/data-feeds/billing-report	Non-standard End-point	 [black space/tab found] 
-/data-feeds/usage	Non-standard End-point	 [black space/tab found] 
-/data-feeds/bulk-usage	Non-standard End-point	 [black space/tab found] 
-/destinations/segment-impressions/	Non-standard End-point	 [black space/tab found] 
-/destinations/segment-impressions/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/plans/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/plans/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/subscriptions	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/subscriptions	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/requests/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/requests/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/requests/{requestId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/requests/{requestId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/potential-subscribers/	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/plans/{planId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/plans/{planId}	Non-standard End-point	 [black space/tab found] 
-/data-feeds/{dataSourceId}/plans/{planId}	Non-standard End-point	 [black space/tab found] 
-/datasources/	Non-standard End-point	 [black space/tab found] 
-/datasources/	Non-standard End-point	 [black space/tab found] 
-/datasources/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/datasources/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/datasources/{dataSourceId}	Non-standard End-point	 [black space/tab found] 
-/datasources/bulk-delete	Non-standard End-point	 [black space/tab found] 
-/datasources/configurations/available-id-types	Non-standard End-point	 [black space/tab found] 
-/datasources/configurations/marketing-cloud-visitorid-versions	Non-standard End-point	 [black space/tab found] 
-/datasources/{dataSourceId}/history/inbound	Non-standard End-point	 [black space/tab found] 
-/datasources/{dataSourceId}/history/inbound/sampling-data	Non-standard End-point	 [black space/tab found] 
-/signals/derived/{derivedSignalId}	Non-standard End-point	 [black space/tab found] 
-/signals/derived/{derivedSignalId}	Non-standard End-point	 [black space/tab found] 
-/signals/derived/{derivedSignalId}	Non-standard End-point	 [black space/tab found] 
-/signals/derived	Non-standard End-point	 [black space/tab found] 
-/signals/derived	Non-standard End-point	 [black space/tab found] 
-/signals/derived/limits	Non-standard End-point	 [black space/tab found] 
-/destinations/	Non-standard End-point	 [black space/tab found] 
-/destinations/	Non-standard End-point	 [black space/tab found] 
-/destinations/limits	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}/history/outbound/	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}/bulk-create	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}/bulk-delete	Non-standard End-point	 [black space/tab found] 
-/destinations/{destinationId}/mappings-by-priority/	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 65
+/models/{modelId}	Standard End-point	
+/models/{modelId}	Standard End-point	
+/models	Standard End-point	
+/models	Standard End-point	
+/models/{modelId}/processing-history	Standard End-point	
+/models/{modelId}/runs/latest/traits	Standard End-point	
+/models/{modelId}/runs/latest/stats	Standard End-point	
+/models/bulk-delete	Standard End-point	
+/models/limits	Standard End-point	
+/algorithms/{algoTypeId}	Standard End-point	
+/algorithms	Standard End-point	
+/available-data-feeds/	Standard End-point	
+/available-data-feeds/{dataSourceId}	Standard End-point	
+/available-data-feeds/{dataSourceId}/plans	Standard End-point	
+/available-data-feeds/{dataSourceId}/subscribe	Standard End-point	
+/available-data-feeds/{dataSourceId}/requests	Standard End-point	
+/data-feeds/billing-report	Standard End-point	
+/data-feeds/billing-report	Standard End-point	
+/data-feeds/usage	Standard End-point	
+/data-feeds/bulk-usage	Standard End-point	
+/destinations/segment-impressions/	Standard End-point	
+/destinations/segment-impressions/	Standard End-point	
+/data-feeds/	Standard End-point	
+/data-feeds/	Standard End-point	
+/data-feeds/{dataSourceId}	Standard End-point	
+/data-feeds/{dataSourceId}	Standard End-point	
+/data-feeds/{dataSourceId}	Standard End-point	
+/data-feeds/{dataSourceId}/plans/	Standard End-point	
+/data-feeds/{dataSourceId}/plans/	Standard End-point	
+/data-feeds/{dataSourceId}/subscriptions	Standard End-point	
+/data-feeds/{dataSourceId}/subscriptions	Standard End-point	
+/data-feeds/{dataSourceId}/requests/	Standard End-point	
+/data-feeds/{dataSourceId}/requests/	Standard End-point	
+/data-feeds/{dataSourceId}/requests/{requestId}	Standard End-point	
+/data-feeds/{dataSourceId}/requests/{requestId}	Standard End-point	
+/data-feeds/{dataSourceId}/potential-subscribers/	Standard End-point	
+/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	
+/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	
+/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	
+/datasources/	Standard End-point	
+/datasources/	Standard End-point	
+/datasources/{dataSourceId}	Standard End-point	
+/datasources/{dataSourceId}	Standard End-point	
+/datasources/{dataSourceId}	Standard End-point	
+/datasources/bulk-delete	Standard End-point	
+/datasources/configurations/available-id-types	Standard End-point	
+/datasources/configurations/marketing-cloud-visitorid-versions	Standard End-point	
+/datasources/{dataSourceId}/history/inbound	Standard End-point	
+/datasources/{dataSourceId}/history/inbound/sampling-data	Standard End-point	
+/signals/derived/{derivedSignalId}	Standard End-point	
+/signals/derived/{derivedSignalId}	Standard End-point	
+/signals/derived/{derivedSignalId}	Standard End-point	
+/signals/derived	Standard End-point	
+/signals/derived	Standard End-point	
+/signals/derived/limits	Standard End-point	
+/destinations/	Standard End-point	
+/destinations/	Standard End-point	
+/destinations/limits	Standard End-point	
+/destinations/{destinationId}/history/outbound/	Standard End-point	
+/destinations/{destinationId}	Standard End-point	
+/destinations/{destinationId}	Standard End-point	
+/destinations/{destinationId}	Standard End-point	
+/destinations/{destinationId}/bulk-create	Standard End-point	
+/destinations/{destinationId}/bulk-delete	Standard End-point	
+/destinations/{destinationId}/mappings-by-priority/	Standard End-point	

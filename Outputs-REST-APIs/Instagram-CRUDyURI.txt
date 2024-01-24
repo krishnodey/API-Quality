@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+/me	CRUDy End-point	
 
 ***Patterns*** 
-Count: 21
+Count: 20
 /{ig-comment-id}?fields={fields}	Verbless End-point	
 /{ig-comment-id}?hide={hide}	Verbless End-point	
 /{ig-comment-id}	Verbless End-point	
@@ -14,7 +15,6 @@ Count: 21
 /{media-id}	Verbless End-point	
 /{media-id}/children	Verbless End-point	
 /{user-id}/media	Verbless End-point	
-/me	Verbless End-point	
 /{user-id}	Verbless End-point	
 /{user-id}/media	Verbless End-point	
 /{ig-hashtag-id}	Verbless End-point	

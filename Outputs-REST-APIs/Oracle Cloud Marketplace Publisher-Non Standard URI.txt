@@ -1,48 +1,48 @@
 ***Anti-Pattern*** 
-Count: 43
-/installrequests	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/banner	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/comments/{id}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/relateddocs/{id}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/screenshots/{id}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/supportingdocs/{id}	Non-standard End-point	 [black space/tab found] 
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Non-standard End-point	 [black space/tab found] 
-/applications	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/availableservices	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/comments	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/recommendedservices	Non-standard End-point	 [black space/tab found] 
-/appstore/publisher/v2/applications/{listingVersionId}/packages	Non-standard End-point	 [black space/tab found] 
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/banner	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/relateddocs/{id}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/screenshots	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/supportingdocs/{id}	Non-standard End-point	 [black space/tab found] 
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/banner	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/comments	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/icon	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/relateddocs	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/screenshots	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/supportingdocs	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/version	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/banner	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/comments/{id}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/icon	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/packages/{packageVersionId}	Non-standard End-point	 [black space/tab found] 
-/applications/{listingVersionId}/recommendedservices	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 43
+/installrequests	Standard End-point	
+/applications/{listingVersionId}	Standard End-point	
+/applications/{listingVersionId}/banner	Standard End-point	
+/applications/{listingVersionId}/comments/{id}	Standard End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/applications/{listingVersionId}/relateddocs/{id}	Standard End-point	
+/applications/{listingVersionId}/screenshots/{id}	Standard End-point	
+/applications/{listingVersionId}/supportingdocs/{id}	Standard End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Standard End-point	
+/applications	Standard End-point	
+/applications/{listingVersionId}	Standard End-point	
+/applications/{listingVersionId}/availableservices	Standard End-point	
+/applications/{listingVersionId}/comments	Standard End-point	
+/applications/{listingVersionId}/packages	Standard End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Standard End-point	
+/applications/{listingVersionId}/recommendedservices	Standard End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages	Standard End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Standard End-point	
+/applications/{listingVersionId}	Standard End-point	
+/applications/{listingVersionId}/banner	Standard End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/applications/{listingVersionId}/relateddocs/{id}	Standard End-point	
+/applications/{listingVersionId}/screenshots	Standard End-point	
+/applications/{listingVersionId}/supportingdocs/{id}	Standard End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/applications	Standard End-point	
+/applications/{listingVersionId}/banner	Standard End-point	
+/applications/{listingVersionId}/comments	Standard End-point	
+/applications/{listingVersionId}/icon	Standard End-point	
+/applications/{listingVersionId}/packages	Standard End-point	
+/applications/{listingVersionId}/relateddocs	Standard End-point	
+/applications/{listingVersionId}/screenshots	Standard End-point	
+/applications/{listingVersionId}/supportingdocs	Standard End-point	
+/applications/{listingVersionId}/version	Standard End-point	
+/applications/{listingVersionId}	Standard End-point	
+/applications/{listingVersionId}/banner	Standard End-point	
+/applications/{listingVersionId}/comments/{id}	Standard End-point	
+/applications/{listingVersionId}/icon	Standard End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Standard End-point	
+/applications/{listingVersionId}/recommendedservices	Standard End-point	

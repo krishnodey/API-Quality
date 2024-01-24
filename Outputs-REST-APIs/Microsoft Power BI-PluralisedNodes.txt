@@ -1,17 +1,17 @@
 ***Anti-Pattern*** 
-Count: 7
-POST 	/admin/tenantKeys	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/admin/capacities/AssignWorkspaces	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/admin/capacities/UnassignWorkspaces	Pluralized Nodes	 [Singular last node with POST method.] 
+Count: 4
 POST 	/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/admin/workspaces/getInfo	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/AssignToCapacity	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/groups/{groupId}/AssignToCapacity	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 27
+Count: 30
+POST 	/admin/tenantKeys	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/admin/apps?$top={$top}	 regular methods.
 GET 	/admin/apps/{appId}/users	 regular methods.
+POST 	/admin/capacities/AssignWorkspaces	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/admin/capacities/UnassignWorkspaces	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/admin/dashboards	 regular methods.
 GET 	/admin/groups/{groupId}/dashboards	 regular methods.
 GET 	/admin/dataflows/{dataflowId}/export	 regular methods.

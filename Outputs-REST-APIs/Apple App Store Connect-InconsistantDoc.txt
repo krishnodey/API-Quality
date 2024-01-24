@@ -3,35 +3,35 @@ Count: 0
 
 ***Patterns*** 
 Count: 32
-get	 /appCategories 	Consistent Documentation	filter by attribute platforms
-get	 /appCategories/{id} 	Consistent Documentation	the fields to include for returned resources of type appCategories
-get	 /appEncryptionDeclarations 	Consistent Documentation	filter by attribute platform
-get	 /appEncryptionDeclarations/{id} 	Consistent Documentation	the fields to include for returned resources of type appEncryptionDeclarations
-get	 /appInfoLocalizations/{id} 	Consistent Documentation	the fields to include for returned resources of type appInfoLocalizations
-get	 /appInfos/{id} 	Consistent Documentation	the fields to include for returned resources of type appInfos
-get	 /appPreOrders/{id} 	Consistent Documentation	the fields to include for returned resources of type appPreOrders
-get	 /appPreviewSets/{id} 	Consistent Documentation	the fields to include for returned resources of type appPreviews
-get	 /appPreviews/{id} 	Consistent Documentation	the fields to include for returned resources of type appPreviews
-get	 /appPricePoints 	Consistent Documentation	filter by id(s) of related priceTier
-get	 /appPricePoints/{id} 	Consistent Documentation	the fields to include for returned resources of type appPricePoints
-get	 /appPriceTiers 	Consistent Documentation	filter by id(s)
-get	 /appPriceTiers/{id} 	Consistent Documentation	the fields to include for returned resources of type appPriceTiers
-get	 /appPrices/{id} 	Consistent Documentation	the fields to include for returned resources of type appPrices
-get	 /appScreenshotSets/{id} 	Consistent Documentation	the fields to include for returned resources of type appScreenshotSets
-get	 /appScreenshots/{id} 	Consistent Documentation	the fields to include for returned resources of type appScreenshots
-get	 /appStoreReviewAttachments/{id} 	Consistent Documentation	the fields to include for returned resources of type appStoreReviewAttachments
-get	 /appStoreReviewDetails/{id} 	Consistent Documentation	he fields to include for returned resources of type appStoreReviewDetails
-get	 /appStoreVersionLocalizations/{id} 	Consistent Documentation	the fields to include for returned resources of type appStoreVersionLocalizations
-get	 /appStoreVersions/{id} 	Consistent Documentation	the fields to include for returned resources of type appStoreVersions
-get	 /apps 	Consistent Documentation	filter by attribute 'appStoreVersions.appStoreState
-get	 /betaAppLocalizations 	Consistent Documentation	filter by attribute locale
-get	 /endUserLicenseAgreements/{id} 	Consistent Documentation	the fields to include for returned resources of type endUserLicenseAgreements
-get	 /financeReports 	Consistent Documentation	filter by attribute regionCode
-get	 /preReleaseVersions 	Consistent Documentation	filter by attribute builds.expired
-get	 /routingAppCoverages/{id} 	Consistent Documentation	the fields to include for returned resources of type routingAppCoverages
-get	 /salesReports 	Consistent Documentation	filter by attribute frequency
-get	 /appCategories/{id}/subcategories 	Consistent Documentation	the fields to include for returned resources of type appCategories
-get	 /appEncryptionDeclarations/{id}/app 	Consistent Documentation	the fields to include for returned resources of type apps
-get	 /appInfos/{id}/ageRatingDeclaration 	Consistent Documentation	the fields to include for returned resources of type ageRatingDeclarations
-get	 /appInfos/{id}/appInfoLocalizations 	Consistent Documentation	filter by attribute locale
-get	 /appInfos/{id}/primaryCategory 	Consistent Documentation	the fields to include for returned resources of type appCategories
+GET	 /appCategories 	Consistent Documentation	filter by attribute platforms
+GET	 /appCategories/{id} 	Consistent Documentation	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations 	Consistent Documentation	filter by attribute platform
+GET	 /appEncryptionDeclarations/{id} 	Consistent Documentation	the fields to include for returned resources of type appEncryptionDeclarations
+GET	 /appInfoLocalizations/{id} 	Consistent Documentation	the fields to include for returned resources of type appInfoLocalizations
+GET	 /appInfos/{id} 	Consistent Documentation	the fields to include for returned resources of type appInfos
+GET	 /appPreOrders/{id} 	Consistent Documentation	the fields to include for returned resources of type appPreOrders
+GET	 /appPreviewSets/{id} 	Consistent Documentation	the fields to include for returned resources of type appPreviews
+GET	 /appPreviews/{id} 	Consistent Documentation	the fields to include for returned resources of type appPreviews
+GET	 /appPricePoints 	Consistent Documentation	filter by id(s) of related priceTier
+GET	 /appPricePoints/{id} 	Consistent Documentation	the fields to include for returned resources of type appPricePoints
+GET	 /appPriceTiers 	Consistent Documentation	filter by id(s)
+GET	 /appPriceTiers/{id} 	Consistent Documentation	the fields to include for returned resources of type appPriceTiers
+GET	 /appPrices/{id} 	Consistent Documentation	the fields to include for returned resources of type appPrices
+GET	 /appScreenshotSets/{id} 	Consistent Documentation	the fields to include for returned resources of type appScreenshotSets
+GET	 /appScreenshots/{id} 	Consistent Documentation	the fields to include for returned resources of type appScreenshots
+GET	 /appStoreReviewAttachments/{id} 	Consistent Documentation	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewDetails/{id} 	Consistent Documentation	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreVersionLocalizations/{id} 	Consistent Documentation	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersions/{id} 	Consistent Documentation	the fields to include for returned resources of type appStoreVersions
+GET	 /apps 	Consistent Documentation	filter by attribute 'appStoreVersions.appStoreState
+GET	 /betaAppLocalizations 	Consistent Documentation	filter by attribute locale
+GET	 /endUserLicenseAgreements/{id} 	Consistent Documentation	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /financeReports 	Consistent Documentation	filter by attribute regionCode
+GET	 /preReleaseVersions 	Consistent Documentation	filter by attribute builds.expired
+GET	 /routingAppCoverages/{id} 	Consistent Documentation	the fields to include for returned resources of type routingAppCoverages
+GET	 /salesReports 	Consistent Documentation	filter by attribute frequency
+GET	 /appCategories/{id}/subcategories 	Consistent Documentation	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations/{id}/app 	Consistent Documentation	the fields to include for returned resources of type apps
+GET	 /appInfos/{id}/ageRatingDeclaration 	Consistent Documentation	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/appInfoLocalizations 	Consistent Documentation	filter by attribute locale
+GET	 /appInfos/{id}/primaryCategory 	Consistent Documentation	the fields to include for returned resources of type appCategories

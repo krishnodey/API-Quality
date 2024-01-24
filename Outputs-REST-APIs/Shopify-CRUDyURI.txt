@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+/customers/search.json?query=Bob country:United States	CRUDy End-point	 [search found] 
 
 ***Patterns*** 
-Count: 71
+Count: 70
 /admin/oauth/access_scopes.json	Verbless End-point	
 /storefront_access_tokens.json	Verbless End-point	
 /storefront_access_tokens/{storefront_access_token_id}.json	Verbless End-point	
@@ -24,7 +25,6 @@ Count: 71
 /recurring_application_charges/{recurring_application_charge_id}.json	Verbless End-point	
 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	Verbless End-point	
 /customers.json	Verbless End-point	
-/customers/search.json?query=Bob country:United States	Verbless End-point	
 /customers/{customer_id}.json	Verbless End-point	
 /customers.json	Verbless End-point	
 /customers/{customer_id}.json	Verbless End-point	

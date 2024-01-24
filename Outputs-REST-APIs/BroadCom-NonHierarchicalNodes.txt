@@ -1,9 +1,9 @@
 ***Anti-Pattern*** 
-Count: 1
- /api/getAccess 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between get and access. 0 hierarchical relations were detected out of 2
+Count: 0
 
 ***Patterns*** 
-Count: 39
+Count: 40
+ /api/getAccess 	Hierarchical Nodes	
  /bui/getBUIAllConfig 	Hierarchical Nodes	
  /bui/getAllowedStatus 	Hierarchical Nodes	
  /bui/getMyTicketDetails({persid}) 	Hierarchical Nodes	

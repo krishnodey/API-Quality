@@ -1,9 +1,8 @@
 ***Anti-Pattern*** 
-Count: 1
-/changeJson?accessKey={accessKey}	 Non-descriptive End-point
+Count: 0
 
 ***Patterns*** 
-Count: 23
+Count: 24
 /setResultSummaryState?accessKey={accessKey}	 Self-descriptive End-point
 /getResultSummaryState/{id}?accessKey={accessKey}	 Self-descriptive End-point
 /getPublicResultSummaryState/{id}	 Self-descriptive End-point
@@ -18,6 +17,7 @@ Count: 23
 /restore/{id}?accessKey={accessKey}	 Self-descriptive End-point
 /delete/{id}?accessKey={accessKey}	 Self-descriptive End-point
 /changeName/{id}?accessKey={accessKey}&name={name}	 Self-descriptive End-point
+/changeJson?accessKey={accessKey}	 Self-descriptive End-point
 /publish/{id}?accessKey={accessKey}	 Self-descriptive End-point
 /unPublish/{id}?accessKey={accessKey}	 Self-descriptive End-point
 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	 Self-descriptive End-point

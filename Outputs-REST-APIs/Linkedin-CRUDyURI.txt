@@ -1,9 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+/me	CRUDy End-point	
 
 ***Patterns*** 
-Count: 13
-/me	Verbless End-point	
+Count: 12
 /people/(id:{person ID})	Verbless End-point	
 /people/(id:{profile ID})?projection=(id,firstName,lastName)	Verbless End-point	
 /salesContracts?q=contractsByMember	Verbless End-point	

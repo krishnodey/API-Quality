@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+ /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 7
 
 ***Patterns*** 
-Count: 34
+Count: 33
  /admin/tenantKeys 	Hierarchical Nodes	
  /admin/apps?$top={$top} 	Hierarchical Nodes	
  /admin/apps/{appId}/users 	Hierarchical Nodes	
@@ -21,7 +22,6 @@ Count: 34
  /admin/capacities 	Hierarchical Nodes	
  /admin/groups/{groupId}/users 	Hierarchical Nodes	
  /admin/pipelines/{pipelineId}/users/{identifier} 	Hierarchical Nodes	
- /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Hierarchical Nodes	
  /admin/workspaces/modified 	Hierarchical Nodes	
  /admin/workspaces/getInfo 	Hierarchical Nodes	
  /apps/{appId} 	Hierarchical Nodes	

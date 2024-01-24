@@ -1,12 +1,8 @@
 ***Anti-Pattern*** 
-Count: 4
- /api/data/{collectionID} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 2
- /api/data/{collectionID} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 2
- /api/data/{collectionID} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 2
- /api/data/{collectionID} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 2
+Count: 0
 
 ***Patterns*** 
-Count: 41
+Count: 45
  /api/user/reg 	Hierarchical Nodes	
  /api/user/auth 	Hierarchical Nodes	
  /api/user/anon 	Hierarchical Nodes	
@@ -22,6 +18,10 @@ Count: 41
  /api/collection/{systemKey}/{collectionName} 	Hierarchical Nodes	
  /api/collection/{systemKey}/{collectionName} 	Hierarchical Nodes	
  /api/collection/{systemKey}/{collectionName} 	Hierarchical Nodes	
+ /api/data/{collectionID} 	Hierarchical Nodes	
+ /api/data/{collectionID} 	Hierarchical Nodes	
+ /api/data/{collectionID} 	Hierarchical Nodes	
+ /api/data/{collectionID} 	Hierarchical Nodes	
  /api/data/{collectionid}/columns 	Hierarchical Nodes	
  /api/code/{systemKey}/{serviceName} 	Hierarchical Nodes	
  /codeadmin/v/2/library/{systemKey} 	Hierarchical Nodes	

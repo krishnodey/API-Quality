@@ -1,30 +1,30 @@
 ***Anti-Pattern*** 
-Count: 25
-/environments	Non-standard End-point	 [black space/tab found] 
-/environments?latitude={latitude}&longitude={longitude}	Non-standard End-point	 [black space/tab found] 
-/environments?key={key}&value={value}	Non-standard End-point	 [black space/tab found] 
-/environments	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones?x={x}&y={y}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones?key={key}&value={value}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Non-standard End-point	 [black space/tab found] 
-/environments/{environment_id}/devices	Non-standard End-point	 [black space/tab found] 
+Count: 6
+/environments?latitude={latitude}&longitude={longitude}	Non-standard End-point	 [unknown char found] 
+/environments?key={key}&value={value}	Non-standard End-point	 [unknown char found] 
+/environments/{environment_id}/zones?x={x}&y={y}	Non-standard End-point	 [unknown char found] 
+/environments/{environment_id}/zones?key={key}&value={value}	Non-standard End-point	 [unknown char found] 
+/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Non-standard End-point	 [unknown char found] 
+/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Non-standard End-point	 [unknown char found] 
 
 ***Patterns*** 
-Count: 0
+Count: 19
+/environments	Standard End-point	
+/environments	Standard End-point	
+/environments/{environment_id}	Standard End-point	
+/environments/{environment_id}	Standard End-point	
+/environments/{environment_id}	Standard End-point	
+/environments/{environment_id}/zones	Standard End-point	
+/environments/{environment_id}/zones	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Standard End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Standard End-point	
+/environments/{environment_id}/devices	Standard End-point	

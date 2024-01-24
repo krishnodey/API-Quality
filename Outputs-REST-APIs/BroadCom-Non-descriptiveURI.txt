@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 17
+Count: 16
 /bui/getBUIAllConfig	 Non-descriptive End-point
 /bui/getMyTicketDetails({persid})	 Non-descriptive End-point
 /bui/getTicketsCustomData({persid})	 Non-descriptive End-point
@@ -14,12 +14,11 @@ Count: 17
 /bui/rateDocument({id})	 Non-descriptive End-point
 /bui/kdLinkInfo({id})	 Non-descriptive End-point
 /bui/unLinkSolution({id})	 Non-descriptive End-point
-/bui/getEEMAuth	 Non-descriptive End-point
 /bui/{factory}({persid})	 Non-descriptive End-point
 /bui/{factory}({persid})	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 23
+Count: 24
 /api/getAccess	 Self-descriptive End-point
 /bui/getAllowedStatus	 Self-descriptive End-point
 /bui/getDefaultCategories	 Self-descriptive End-point
@@ -35,6 +34,7 @@ Count: 23
 /bui/createChatThread	 Self-descriptive End-point
 /bui/getChatHistory/{roomName}	 Self-descriptive End-point
 /bui/helpAbout	 Self-descriptive End-point
+/bui/getEEMAuth	 Self-descriptive End-point
 /bui/{factory}	 Self-descriptive End-point
 /bui/{factory}	 Self-descriptive End-point
 /gs/mytkt_active	 Self-descriptive End-point

@@ -1,61 +1,61 @@
 ***Anti-Pattern*** 
-Count: 56
-/list/{type}	Non-standard End-point	 [black space/tab found] 
-/list/{type}/{base}	Non-standard End-point	 [black space/tab found] 
-/application	Non-standard End-point	 [black space/tab found] 
-/async?state	Non-standard End-point	 [black space/tab found] 
-/async/{id}	Non-standard End-point	 [black space/tab found] 
-/async/{id}	Non-standard End-point	 [black space/tab found] 
-/diagnostics/attributes?locale	Non-standard End-point	 [black space/tab found] 
-/diagnostics/index	Non-standard End-point	 [black space/tab found] 
-/diagnostics/index/{index}?attrs	Non-standard End-point	 [black space/tab found] 
-/diagnostics/object/{id}	Non-standard End-point	 [black space/tab found] 
-/domains	Non-standard End-point	 [black space/tab found] 
-/domains	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/addressbook/fields	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/addressbook/labels	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/addressbook/labels/{field}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/addressbook/labels/{field}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/addressbook/view	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/addressbook/view	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/administrator	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/administrator	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/administrator	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/clientoptions?attrs	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/clientoptions?attrs	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/customaddresses	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/customaddresses/test?testAddress	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gatewaysubdirs	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/info	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/links?direction	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/links/{link}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/links/{link}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/rebuild	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/refaccesscontrols	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/refaccesscontrols	Non-standard End-point	 [black space/tab found] 
-/domains/attributes	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/administrators	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/administrators	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/administrators/{id}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/administrators/{id}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/aliases	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Non-standard End-point	 [black space/tab found] 
-/domains/{domain}/gateways/{gateway}/recoverDb	Non-standard End-point	 [black space/tab found] 
+Count: 7
+/async?state	Non-standard End-point	 [unknown char found] 
+/diagnostics/attributes?locale	Non-standard End-point	 [unknown char found] 
+/diagnostics/index/{index}?attrs	Non-standard End-point	 [unknown char found] 
+/domains/{domain}/clientoptions?attrs	Non-standard End-point	 [unknown char found] 
+/domains/{domain}/clientoptions?attrs	Non-standard End-point	 [unknown char found] 
+/domains/{domain}/customaddresses/test?testAddress	Non-standard End-point	 [unknown char found] 
+/domains/{domain}/links?direction	Non-standard End-point	 [unknown char found] 
 
 ***Patterns*** 
-Count: 0
+Count: 49
+/list/{type}	Standard End-point	
+/list/{type}/{base}	Standard End-point	
+/application	Standard End-point	
+/async/{id}	Standard End-point	
+/async/{id}	Standard End-point	
+/diagnostics/index	Standard End-point	
+/diagnostics/object/{id}	Standard End-point	
+/domains	Standard End-point	
+/domains	Standard End-point	
+/domains/{domain}	Standard End-point	
+/domains/{domain}	Standard End-point	
+/domains/{domain}	Standard End-point	
+/domains/{domain}/addressbook/fields	Standard End-point	
+/domains/{domain}/addressbook/labels	Standard End-point	
+/domains/{domain}/addressbook/labels/{field}	Standard End-point	
+/domains/{domain}/addressbook/labels/{field}	Standard End-point	
+/domains/{domain}/addressbook/view	Standard End-point	
+/domains/{domain}/addressbook/view	Standard End-point	
+/domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/customaddresses	Standard End-point	
+/domains/{domain}/gatewaysubdirs	Standard End-point	
+/domains/{domain}/info	Standard End-point	
+/domains/{domain}/links/{link}	Standard End-point	
+/domains/{domain}/links/{link}	Standard End-point	
+/domains/{domain}/rebuild	Standard End-point	
+/domains/{domain}/refaccesscontrols	Standard End-point	
+/domains/{domain}/refaccesscontrols	Standard End-point	
+/domains/attributes	Standard End-point	
+/domains/{domain}/gateways	Standard End-point	
+/domains/{domain}/gateways	Standard End-point	
+/domains/{domain}/gateways/{gateway}	Standard End-point	
+/domains/{domain}/gateways/{gateway}	Standard End-point	
+/domains/{domain}/gateways/{gateway}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators/{id}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators/{id}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/aliases	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/recoverDb	Standard End-point	

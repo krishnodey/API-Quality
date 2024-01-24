@@ -1,11 +1,10 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 2
 /apps	 Non-descriptive End-point
 /appCategories/{id}/subcategories	 Non-descriptive End-point
-/appEncryptionDeclarations/{id}/app	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 29
+Count: 30
 /appCategories	 Self-descriptive End-point
 /appCategories/{id}	 Self-descriptive End-point
 /appEncryptionDeclarations	 Self-descriptive End-point
@@ -32,6 +31,7 @@ Count: 29
 /preReleaseVersions	 Self-descriptive End-point
 /routingAppCoverages/{id}	 Self-descriptive End-point
 /salesReports	 Self-descriptive End-point
+/appEncryptionDeclarations/{id}/app	 Self-descriptive End-point
 /appInfos/{id}/ageRatingDeclaration	 Self-descriptive End-point
 /appInfos/{id}/appInfoLocalizations	 Self-descriptive End-point
 /appInfos/{id}/primaryCategory	 Self-descriptive End-point

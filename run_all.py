@@ -96,8 +96,8 @@ def run(selected, uri_path, base_path):
 
 
 total_time = 0
-#base_path = ["REST-APIs", "GraphQL-APIs"]
-base_path = ["GraphQL-APIs"]
+base_path = ["REST-APIs", "GraphQL-APIs"]
+#base_path = ["GraphQL-APIs"]
 for api in base_path:
     print(f"Detecting (Anti)Pattern for {api}")
     api_path = f"{api.strip()}/APIList.txt"
@@ -105,6 +105,8 @@ for api in base_path:
     content = file_obj.read_file()
     name_list = content.split('\n')
     for api_name in name_list:
+        if api_name in ["Adobe Audience Manager","Apple App Store Connect","BroadCom","Cisco Flare", "ClearBlade","Dropbox", "Google Nest", "GroupWise", "IBM Cloud Pak System", "IBM Watson IoT"]:
+            continue
         start_time = time.time()
         print(f"\nDetecting ----> {api_name}\n")
         path = api+"/"+api_name+"/"+api_name+".txt"

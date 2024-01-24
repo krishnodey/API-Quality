@@ -1,12 +1,6 @@
 ***Anti-Pattern*** 
-Count: 15
-/api/user/reg	 Non-descriptive End-point
-/api/user/auth	 Non-descriptive End-point
-/api/user/checkauth	 Non-descriptive End-point
-/api/user/logout	 Non-descriptive End-point
-/api/v/2/devices/{SystemKey}/auth	 Non-descriptive End-point
+Count: 9
 /admin/reg	 Non-descriptive End-point
-/admin/auth	 Non-descriptive End-point
 /admin/logout	 Non-descriptive End-point
 /admin/systemmanagement	 Non-descriptive End-point
 /admin/systemmanagement	 Non-descriptive End-point
@@ -17,13 +11,18 @@ Count: 15
 /admin/collectionmanagement	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 30
+Count: 36
+/api/user/reg	 Self-descriptive End-point
+/api/user/auth	 Self-descriptive End-point
 /api/user/anon	 Self-descriptive End-point
+/api/user/checkauth	 Self-descriptive End-point
+/api/user/logout	 Self-descriptive End-point
 /api/user/info	 Self-descriptive End-point
 /api/user/info	 Self-descriptive End-point
 /api/user/pass	 Self-descriptive End-point
 /api/user	 Self-descriptive End-point
 /api/v/2/devices/{systemKey}/{name}	 Self-descriptive End-point
+/api/v/2/devices/{SystemKey}/auth	 Self-descriptive End-point
 /api/collection/{systemKey}/{collectionName}	 Self-descriptive End-point
 /api/collection/{systemKey}/{collectionName}	 Self-descriptive End-point
 /api/collection/{systemKey}/{collectionName}	 Self-descriptive End-point
@@ -48,3 +47,4 @@ Count: 30
 /api/message/{systemKey}	 Self-descriptive End-point
 /api/message/{systemKey}/publish	 Self-descriptive End-point
 /api/message/{systemKey}	 Self-descriptive End-point
+/admin/auth	 Self-descriptive End-point

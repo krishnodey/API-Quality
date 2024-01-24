@@ -1,9 +1,13 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 5
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	CRUDy End-point	 [create found] 
 /delete/{id}?accessKey={accessKey}	CRUDy End-point	 [delete found] 
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	CRUDy End-point	 [make found] 
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	CRUDy End-point	 [delete found] 
+/deleteAllResults/{id}?accessKey={accessKey}	CRUDy End-point	 [delete found] 
 
 ***Patterns*** 
-Count: 23
+Count: 19
 /setResultSummaryState?accessKey={accessKey}	Verbless End-point	
 /getResultSummaryState/{id}?accessKey={accessKey}	Verbless End-point	
 /getPublicResultSummaryState/{id}	Verbless End-point	
@@ -13,7 +17,6 @@ Count: 23
 /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Verbless End-point	
 /getActive?accessKey={accessKey}&ownerId={ownerId}	Verbless End-point	
 /getArchive?accessKey={accessKey}&ownerId={ownerId}	Verbless End-point	
-/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Verbless End-point	
 /archive/{id}?accessKey={accessKey}	Verbless End-point	
 /restore/{id}?accessKey={accessKey}	Verbless End-point	
 /changeName/{id}?accessKey={accessKey}&name={name}	Verbless End-point	
@@ -23,7 +26,4 @@ Count: 23
 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Verbless End-point	
 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Verbless End-point	
 /getIsResultPublic/{id}?accessKey={accessKey}	Verbless End-point	
-/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Verbless End-point	
 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Verbless End-point	
-/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Verbless End-point	
-/deleteAllResults/{id}?accessKey={accessKey}	Verbless End-point	

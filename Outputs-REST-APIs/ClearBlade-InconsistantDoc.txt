@@ -1,50 +1,50 @@
 ***Anti-Pattern*** 
 Count: 3
-post	 /api/user/checkauth 	Inconsistent Documentation	Checks if user is authenticated
-delete	/codeadmin/failed/{systemKey}	Inconsistent Documentation	Delete failed code service run from list
-put	 /admin/collectionmanagement 	Inconsistent Documentation	Creates a column within an existing collection
+POST	 /api/user/checkauth 	Inconsistent Documentation	Checks if user is authenticated
+DELETE	/codeadmin/failed/{systemKey}	Inconsistent Documentation	Delete failed code service run from list
+PUT	 /admin/collectionmanagement 	Inconsistent Documentation	Creates a column within an existing collection
 
 ***Patterns*** 
 Count: 42
-post	 /api/user/reg 	Consistent Documentation	Register user
-post	 /api/user/auth 	Consistent Documentation	Authenticates a user into the system
-post	 /api/user/anon 	Consistent Documentation	Authenticates anonymous users into the system
-post	 /api/user/logout 	Consistent Documentation	Logs out a user
-get	 /api/user/info 	Consistent Documentation	Returns information about a logged in user
-put	 /api/user/info 	Consistent Documentation	Updates a logged in users information
-put	 /api/user/pass 	Consistent Documentation	Changes a logged in users password
-get	 /api/user 	Consistent Documentation	Gets list of users
-put	 /api/v/2/devices/{systemKey}/{name} 	Consistent Documentation	Update a device's state or custom attributes only
-post	 /api/v/2/devices/{SystemKey}/auth 	Consistent Documentation	Authenticates a device into the system
-get	 /api/collection/{systemKey}/{collectionName} 	Consistent Documentation	fetch collection
-put	 /api/collection/{systemKey}/{collectionName} 	Consistent Documentation	Item update
-post	 /api/collection/{systemKey}/{collectionName} 	Consistent Documentation	Item create
-delete	/api/collection/{systemKey}/{collectionName}	Consistent Documentation	Item delete
-get	 /api/data/{collectionID} 	Consistent Documentation	fetch collection
-put	 /api/data/{collectionID} 	Consistent Documentation	Item update
-post	 /api/data/{collectionID} 	Consistent Documentation	Item create
-delete	/api/data/{collectionID}	Consistent Documentation	Item delete
-get	 /api/data/{collectionid}/columns 	Consistent Documentation	get column key names
-post	 /api/code/{systemKey}/{serviceName} 	Consistent Documentation	Calls/executes ClearCode service
-get	 /codeadmin/v/2/library/{systemKey} 	Consistent Documentation	Gets the libraries for a system
-get	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Gets the libraries for a system
-put	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Updates the libraries for a system
-post	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Creates libraries for a system
-delete	/codeadmin/v/2/library/{systemKey}/{name}	Consistent Documentation	Deletes a librarie for a system
-get	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Consistent Documentation	Gets all versions of a library for a system
-get	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Consistent Documentation	Gets a specific version of a library for a system
-get	 /codeadmin/failed 	Consistent Documentation	Lists failed code service runs for all systems that a developer can access
-get	 /codeadmin/failed/{systemKey} 	Consistent Documentation	Lists failed code service runs for specified system
-post	 /codeadmin/failed/{systemKey} 	Consistent Documentation	Retry failed code services
-get	 /api/message/{systemKey} 	Consistent Documentation	Retrieve message history
-post	 /api/message/{systemKey}/publish 	Consistent Documentation	Publishes a message to a topic
-delete	/api/message/{systemKey}	Consistent Documentation	Delete message history
-post	 /admin/reg 	Consistent Documentation	Registers a new developer account with the CB platform
-post	 /admin/auth 	Consistent Documentation	Authorizes a CB Developer account
-post	 /admin/logout 	Consistent Documentation	Logs a CB developer out of their session
-post	 /admin/systemmanagement 	Consistent Documentation	Creates a new system in a developers account
-get	 /admin/systemmanagement 	Consistent Documentation	Gets a systems info
-put	 /admin/systemmanagement 	Consistent Documentation	Updates a systems info
-delete	/admin/systemmanagement	Consistent Documentation	Deletes a system
-post	 /admin/collectionmanagement 	Consistent Documentation	Creates a new collection or connection in a system
-put	 /admin/collectionmanagement 	Consistent Documentation	Updates an existing connection in a system
+POST	 /api/user/reg 	Consistent Documentation	Register user
+POST	 /api/user/auth 	Consistent Documentation	Authenticates a user into the system
+POST	 /api/user/anon 	Consistent Documentation	Authenticates anonymous users into the system
+POST	 /api/user/logout 	Consistent Documentation	Logs out a user
+GET	 /api/user/info 	Consistent Documentation	Returns information about a logged in user
+PUT	 /api/user/info 	Consistent Documentation	Updates a logged in users information
+PUT	 /api/user/pass 	Consistent Documentation	Changes a logged in users password
+GET	 /api/user 	Consistent Documentation	Gets list of users
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Consistent Documentation	Update a device's state or custom attributes only
+POST	 /api/v/2/devices/{SystemKey}/auth 	Consistent Documentation	Authenticates a device into the system
+GET	 /api/collection/{systemKey}/{collectionName} 	Consistent Documentation	fetch collection
+PUT	 /api/collection/{systemKey}/{collectionName} 	Consistent Documentation	Item update
+POST	 /api/collection/{systemKey}/{collectionName} 	Consistent Documentation	Item create
+DELETE	/api/collection/{systemKey}/{collectionName}	Consistent Documentation	Item delete
+GET	 /api/data/{collectionID} 	Consistent Documentation	fetch collection
+PUT	 /api/data/{collectionID} 	Consistent Documentation	Item update
+POST	 /api/data/{collectionID} 	Consistent Documentation	Item create
+DELETE	/api/data/{collectionID}	Consistent Documentation	Item delete
+GET	 /api/data/{collectionid}/columns 	Consistent Documentation	get column key names
+POST	 /api/code/{systemKey}/{serviceName} 	Consistent Documentation	Calls/executes ClearCode service
+GET	 /codeadmin/v/2/library/{systemKey} 	Consistent Documentation	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Gets the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Updates the libraries for a system
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Creates libraries for a system
+DELETE	/codeadmin/v/2/library/{systemKey}/{name}	Consistent Documentation	Deletes a librarie for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Consistent Documentation	Gets all versions of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Consistent Documentation	Gets a specific version of a library for a system
+GET	 /codeadmin/failed 	Consistent Documentation	Lists failed code service runs for all systems that a developer can access
+GET	 /codeadmin/failed/{systemKey} 	Consistent Documentation	Lists failed code service runs for specified system
+POST	 /codeadmin/failed/{systemKey} 	Consistent Documentation	Retry failed code services
+GET	 /api/message/{systemKey} 	Consistent Documentation	Retrieve message history
+POST	 /api/message/{systemKey}/publish 	Consistent Documentation	Publishes a message to a topic
+DELETE	/api/message/{systemKey}	Consistent Documentation	Delete message history
+POST	 /admin/reg 	Consistent Documentation	Registers a new developer account with the CB platform
+POST	 /admin/auth 	Consistent Documentation	Authorizes a CB Developer account
+POST	 /admin/logout 	Consistent Documentation	Logs a CB developer out of their session
+POST	 /admin/systemmanagement 	Consistent Documentation	Creates a new system in a developers account
+GET	 /admin/systemmanagement 	Consistent Documentation	Gets a systems info
+PUT	 /admin/systemmanagement 	Consistent Documentation	Updates a systems info
+DELETE	/admin/systemmanagement	Consistent Documentation	Deletes a system
+POST	 /admin/collectionmanagement 	Consistent Documentation	Creates a new collection or connection in a system
+PUT	 /admin/collectionmanagement 	Consistent Documentation	Updates an existing connection in a system

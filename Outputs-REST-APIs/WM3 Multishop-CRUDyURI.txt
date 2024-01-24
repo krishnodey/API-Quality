@@ -1,8 +1,10 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 2
+/shop/admin/products/:idUpdate Product	CRUDy End-point	 [update found] 
+/shop/admin/variants/update_stock	CRUDy End-point	 [update found] 
 
 ***Patterns*** 
-Count: 54
+Count: 52
 /shop/admin/prices?customer_id=:customer_id	Verbless End-point	
 /shop/admin/customers/:customer_id/prices	Verbless End-point	
 /shop/admin/customers/:customer_id/prices/:variant_id	Verbless End-point	
@@ -14,7 +16,6 @@ Count: 54
 /shop/admin/products/:id	Verbless End-point	
 /shop/admin/products	Verbless End-point	
 /shop/admin/products	Verbless End-point	
-/shop/admin/products/:idUpdate Product	Verbless End-point	
 /shop/admin/properties	Verbless End-point	
 /shop/admin/properties/:id	Verbless End-point	
 /shop/admin/properties/:id	Verbless End-point	
@@ -56,4 +57,3 @@ Count: 54
 /shop/admin/products/:product_id/variants	Verbless End-point	
 /shop/admin/variants/:id	Verbless End-point	
 /shop/admin/products/:product_id/variants/:id	Verbless End-point	
-/shop/admin/variants/update_stock	Verbless End-point	

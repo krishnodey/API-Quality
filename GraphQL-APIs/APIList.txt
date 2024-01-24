@@ -8,3 +8,5 @@ Instagram
 Twitter
 Braintree
 Artsy
+Pipefy
+GitLab

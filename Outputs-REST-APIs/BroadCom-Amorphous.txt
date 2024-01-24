@@ -1,10 +1,17 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 8
+/bui/getBUIAllConfig	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/bui/getBopSID	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
+/bui/getKDAttachments({id})	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
+/bui/getKDComments({id})	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
+/bui/addKDComment({id})	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
+/bui/getEEMAuth	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/gs/mytkt_active	Amorphous End-point	 [underscore found] 
+/gs/mytkt_inactive	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 40
+Count: 32
 /api/getAccess	Tidy End-point	
-/bui/getBUIAllConfig	Tidy End-point	
 /bui/getAllowedStatus	Tidy End-point	
 /bui/getMyTicketDetails({persid})	Tidy End-point	
 /bui/getTicketsCustomData({persid})	Tidy End-point	
@@ -15,7 +22,6 @@ Count: 40
 /bui/changeStatus/{factory}({persid})	Tidy End-point	
 /bui/allFeeds({persid})	Tidy End-point	
 /bui/attmnt	Tidy End-point	
-/bui/getBopSID	Tidy End-point	
 /bui/attmnt({persid})/$value	Tidy End-point	
 /bui/updateStatusForNotification	Tidy End-point	
 /bui/updateStatusForAllNotification	Tidy End-point	
@@ -25,20 +31,14 @@ Count: 40
 /bui/createChatThread	Tidy End-point	
 /bui/getChatHistory/{roomName}	Tidy End-point	
 /bui/getDocument({id})	Tidy End-point	
-/bui/getKDAttachments({id})	Tidy End-point	
-/bui/getKDComments({id})	Tidy End-point	
-/bui/addKDComment({id})	Tidy End-point	
 /bui/rateDocument({id})	Tidy End-point	
 /bui/kdLinkInfo({id})	Tidy End-point	
 /bui/unLinkSolution({id})	Tidy End-point	
 /bui/helpAbout	Tidy End-point	
-/bui/getEEMAuth	Tidy End-point	
 /bui/{factory}({persid})	Tidy End-point	
 /bui/{factory}({persid})	Tidy End-point	
 /bui/{factory}	Tidy End-point	
 /bui/{factory}	Tidy End-point	
-/gs/mytkt_active	Tidy End-point	
-/gs/mytkt_inactive	Tidy End-point	
 /getServiceRequest	Tidy End-point	
 /pcatSearch	Tidy End-point	
 /getOfferings	Tidy End-point	

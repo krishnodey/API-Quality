@@ -1,8 +1,12 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+/bui/updateStatusForNotification	CRUDy End-point	 [update found] 
+/bui/updateStatusForAllNotification	CRUDy End-point	 [update found] 
+/bui/createChatThread	CRUDy End-point	 [create found] 
+/pcatSearch	CRUDy End-point	 [search found] 
 
 ***Patterns*** 
-Count: 40
+Count: 36
 /api/getAccess	Verbless End-point	
 /bui/getBUIAllConfig	Verbless End-point	
 /bui/getAllowedStatus	Verbless End-point	
@@ -17,12 +21,9 @@ Count: 40
 /bui/attmnt	Verbless End-point	
 /bui/getBopSID	Verbless End-point	
 /bui/attmnt({persid})/$value	Verbless End-point	
-/bui/updateStatusForNotification	Verbless End-point	
-/bui/updateStatusForAllNotification	Verbless End-point	
 /bui/getMyResources	Verbless End-point	
 /bui/getMyActiveChatSession	Verbless End-point	
 /bui/checkActiveSessions	Verbless End-point	
-/bui/createChatThread	Verbless End-point	
 /bui/getChatHistory/{roomName}	Verbless End-point	
 /bui/getDocument({id})	Verbless End-point	
 /bui/getKDAttachments({id})	Verbless End-point	
@@ -40,6 +41,5 @@ Count: 40
 /gs/mytkt_active	Verbless End-point	
 /gs/mytkt_inactive	Verbless End-point	
 /getServiceRequest	Verbless End-point	
-/pcatSearch	Verbless End-point	
 /getOfferings	Verbless End-point	
 /suggestedSolutions	Verbless End-point	

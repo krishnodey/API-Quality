@@ -1,39 +1,39 @@
 ***Anti-Pattern*** 
 Count: 1
-post	 /admin/workspaces/getInfo 	Inconsistent Documentation	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
+POST	 /admin/workspaces/getInfo 	Inconsistent Documentation	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
 
 ***Patterns*** 
 Count: 33
-post	 /admin/tenantKeys 	Consistent Documentation	Adds an encryption key for Power BI workspaces assigned to a capacity.
-get	 /admin/apps?$top={$top} 	Consistent Documentation	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
-get	 /admin/apps/{appId}/users 	Consistent Documentation	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
-post	 /admin/capacities/AssignWorkspaces 	Consistent Documentation	Assigns the provided workspaces to the specified premium capacity.
-post	 /admin/capacities/UnassignWorkspaces 	Consistent Documentation	Unassigns the provided workspaces from capacity.
-get	 /admin/dashboards 	Consistent Documentation	Returns a list of dashboards for the organization.
-get	 /admin/groups/{groupId}/dashboards 	Consistent Documentation	Returns a list of dashboards from the specified workspace.
-get	 /admin/dataflows/{dataflowId}/export 	Consistent Documentation	Exports the specified dataflow definition to a .json file.
-get	 /admin/dataflows/{dataflowId}/datasources 	Consistent Documentation	Returns a list of datasources for the specified dataflow.
-get	 /admin/groups/{groupId}/dataflows 	Consistent Documentation	Returns a list of dataflows from the specified workspace.
-get	 /admin/dataflows/{dataflowId}/users 	Consistent Documentation	Returns a list of users that have access to the specified dataflow (Preview).
-get	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Consistent Documentation	Returns a list of upstream dataflows for the specified dataflow.
-get	 /admin/groups/{groupId}/datasets 	Consistent Documentation	Returns a list of datasets from the specified workspace.
-get	 /admin/groups/{groupId}/datasets/upstreamDataflows 	Consistent Documentation	Returns a list of upstream dataflows for datasets from the specified workspace.
-get	 /admin/datasets/{datasetId}/datasources 	Consistent Documentation	Returns a list of datasources for the specified dataset.
-get	 /admin/capacities 	Consistent Documentation	Returns a list of capacities for the organization.
-post	 /admin/groups/{groupId}/users 	Consistent Documentation	Grants user permissions to the specified workspace.
-delete	/admin/pipelines/{pipelineId}/users/{identifier}	Consistent Documentation	Remove user permissions from a specified deployment pipeline.
-post	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Consistent Documentation	Rotate the encryption key for Power BI workspaces assigned to a capacity.
-get	 /admin/workspaces/modified 	Consistent Documentation	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
-get	 /apps/{appId} 	Consistent Documentation	Returns the specified installed app.
-get	 /apps/{appId}/dashboards/{dashboardId} 	Consistent Documentation	Returns the specified dashboard from the specified app.
-get	 /apps/{appId}/reports/{reportId} 	Consistent Documentation	Returns the specified report from the specified app.
-get	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Consistent Documentation	Returns the specified tile within the specified dashboard from the specified app.
-get	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Consistent Documentation	Returns a list of tiles within the specified dashboard from the specified app.
-get	 /availableFeatures 	Consistent Documentation	Returns a list of available features for the user
-get	 /capacities 	Consistent Documentation	Returns a list of capacities the user has access to.
-get	 /capacities/{capacityId}/refreshables/{refreshableId} 	Consistent Documentation	Returns the specified refreshable for the specified capacity the user has access to.
-get	 /capacities/{capacityId}/Workloads/{workloadName} 	Consistent Documentation	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
-get	 /capacities/{capacityId}/Workloads 	Consistent Documentation	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
-post	 /AssignToCapacity 	Consistent Documentation	Assigns "My Workspace" to the specified capacity.
-post	 /groups/{groupId}/AssignToCapacity 	Consistent Documentation	Assigns the specified workspace to the specified capacity.
-post	 /groups/{groupId}/dashboards 	Consistent Documentation	Creates a new empty dashboard on the specified workspace.
+POST	 /admin/tenantKeys 	Consistent Documentation	Adds an encryption key for Power BI workspaces assigned to a capacity.
+GET	 /admin/apps?$top={$top} 	Consistent Documentation	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
+GET	 /admin/apps/{appId}/users 	Consistent Documentation	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
+POST	 /admin/capacities/AssignWorkspaces 	Consistent Documentation	Assigns the provided workspaces to the specified premium capacity.
+POST	 /admin/capacities/UnassignWorkspaces 	Consistent Documentation	Unassigns the provided workspaces from capacity.
+GET	 /admin/dashboards 	Consistent Documentation	Returns a list of dashboards for the organization.
+GET	 /admin/groups/{groupId}/dashboards 	Consistent Documentation	Returns a list of dashboards from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/export 	Consistent Documentation	Exports the specified dataflow definition to a .json file.
+GET	 /admin/dataflows/{dataflowId}/datasources 	Consistent Documentation	Returns a list of datasources for the specified dataflow.
+GET	 /admin/groups/{groupId}/dataflows 	Consistent Documentation	Returns a list of dataflows from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/users 	Consistent Documentation	Returns a list of users that have access to the specified dataflow (Preview).
+GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Consistent Documentation	Returns a list of upstream dataflows for the specified dataflow.
+GET	 /admin/groups/{groupId}/datasets 	Consistent Documentation	Returns a list of datasets from the specified workspace.
+GET	 /admin/groups/{groupId}/datasets/upstreamDataflows 	Consistent Documentation	Returns a list of upstream dataflows for datasets from the specified workspace.
+GET	 /admin/datasets/{datasetId}/datasources 	Consistent Documentation	Returns a list of datasources for the specified dataset.
+GET	 /admin/capacities 	Consistent Documentation	Returns a list of capacities for the organization.
+POST	 /admin/groups/{groupId}/users 	Consistent Documentation	Grants user permissions to the specified workspace.
+DELETE	/admin/pipelines/{pipelineId}/users/{identifier}	Consistent Documentation	Remove user permissions from a specified deployment pipeline.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Consistent Documentation	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+GET	 /admin/workspaces/modified 	Consistent Documentation	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
+GET	 /apps/{appId} 	Consistent Documentation	Returns the specified installed app.
+GET	 /apps/{appId}/dashboards/{dashboardId} 	Consistent Documentation	Returns the specified dashboard from the specified app.
+GET	 /apps/{appId}/reports/{reportId} 	Consistent Documentation	Returns the specified report from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Consistent Documentation	Returns the specified tile within the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Consistent Documentation	Returns a list of tiles within the specified dashboard from the specified app.
+GET	 /availableFeatures 	Consistent Documentation	Returns a list of available features for the user
+GET	 /capacities 	Consistent Documentation	Returns a list of capacities the user has access to.
+GET	 /capacities/{capacityId}/refreshables/{refreshableId} 	Consistent Documentation	Returns the specified refreshable for the specified capacity the user has access to.
+GET	 /capacities/{capacityId}/Workloads/{workloadName} 	Consistent Documentation	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+GET	 /capacities/{capacityId}/Workloads 	Consistent Documentation	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
+POST	 /AssignToCapacity 	Consistent Documentation	Assigns "My Workspace" to the specified capacity.
+POST	 /groups/{groupId}/AssignToCapacity 	Consistent Documentation	Assigns the specified workspace to the specified capacity.
+POST	 /groups/{groupId}/dashboards 	Consistent Documentation	Creates a new empty dashboard on the specified workspace.

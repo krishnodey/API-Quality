@@ -1,12 +1,8 @@
 ***Anti-Pattern*** 
-Count: 4
- /datasources/ 	 Contextless Resource Names
- /datasources/ 	 Contextless Resource Names
- /datasources/bulk-delete 	 Contextless Resource Names
- /datasources/configurations/marketing-cloud-visitorid-versions 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 61
+Count: 65
  /models/{modelId} 	 Contextual Resource Names
  /models/{modelId} 	 Contextual Resource Names
  /models 	 Contextual Resource Names
@@ -46,10 +42,14 @@ Count: 61
  /data-feeds/{dataSourceId}/plans/{planId} 	 Contextual Resource Names
  /data-feeds/{dataSourceId}/plans/{planId} 	 Contextual Resource Names
  /data-feeds/{dataSourceId}/plans/{planId} 	 Contextual Resource Names
+ /datasources/ 	 Contextual Resource Names
+ /datasources/ 	 Contextual Resource Names
  /datasources/{dataSourceId} 	 Contextual Resource Names
  /datasources/{dataSourceId} 	 Contextual Resource Names
  /datasources/{dataSourceId} 	 Contextual Resource Names
+ /datasources/bulk-delete 	 Contextual Resource Names
  /datasources/configurations/available-id-types 	 Contextual Resource Names
+ /datasources/configurations/marketing-cloud-visitorid-versions 	 Contextual Resource Names
  /datasources/{dataSourceId}/history/inbound 	 Contextual Resource Names
  /datasources/{dataSourceId}/history/inbound/sampling-data 	 Contextual Resource Names
  /signals/derived/{derivedSignalId} 	 Contextual Resource Names

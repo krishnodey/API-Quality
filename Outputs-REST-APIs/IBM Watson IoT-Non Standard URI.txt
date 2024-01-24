@@ -1,62 +1,62 @@
 ***Anti-Pattern*** 
-Count: 57
-/bulk/devices	Non-standard End-point	 [black space/tab found] 
-/bulk/devices/add	Non-standard End-point	 [black space/tab found] 
-/bulk/devices/remove	Non-standard End-point	 [black space/tab found] 
-/device/types	Non-standard End-point	 [black space/tab found] 
-/device/types	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/devices	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/edgestatus	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	Non-standard End-point	 [black space/tab found] 
-/logs/connection	Non-standard End-point	 [black space/tab found] 
-/usage/data-traffic	Non-standard End-point	 [black space/tab found] 
-/service-status	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/logs	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/logs	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/logs	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests/{requestId}	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests/{requestId}	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests/{requestId}/cancel	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests/{requestId}/deviceStatus	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}	Non-standard End-point	 [black space/tab found] 
-/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Non-standard End-point	 [black space/tab found] 
-/mgmt/custom/bundle	Non-standard End-point	 [black space/tab found] 
-/mgmt/custom/bundle	Non-standard End-point	 [black space/tab found] 
-/mgmt/custom/bundle/{bundleId}	Non-standard End-point	 [black space/tab found] 
-/mgmt/custom/bundle/{bundleId}	Non-standard End-point	 [black space/tab found] 
-/mgmt/custom/bundle/{bundleId}	Non-standard End-point	 [black space/tab found] 
-/config/lec	Non-standard End-point	 [black space/tab found] 
-/config/lec	Non-standard End-point	 [black space/tab found] 
-/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Non-standard End-point	 [black space/tab found] 
-/device/types/{deviceType}/devices/{deviceId}/events	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/location	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/location	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	Non-standard End-point	 [black space/tab found] 
-/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Non-standard End-point	 [black space/tab found] 
-/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Non-standard End-point	 [black space/tab found] 
-/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Non-standard End-point	 [black space/tab found] 
-/s2s/services	Non-standard End-point	 [black space/tab found] 
-/s2s/services	Non-standard End-point	 [black space/tab found] 
-/s2s/services/{serviceUuid}	Non-standard End-point	 [black space/tab found] 
-/s2s/services/{serviceUuid}	Non-standard End-point	 [black space/tab found] 
-/s2s/services/{serviceUuid}	Non-standard End-point	 [black space/tab found] 
-/event/types	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 57
+/bulk/devices	Standard End-point	
+/bulk/devices/add	Standard End-point	
+/bulk/devices/remove	Standard End-point	
+/device/types	Standard End-point	
+/device/types	Standard End-point	
+/device/types/{typeId}	Standard End-point	
+/device/types/{typeId}	Standard End-point	
+/device/types/{typeId}	Standard End-point	
+/device/types/{typeId}/devices	Standard End-point	
+/device/types/{typeId}/devices	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/devices	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/edgestatus	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	Standard End-point	
+/logs/connection	Standard End-point	
+/usage/data-traffic	Standard End-point	
+/service-status	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Standard End-point	
+/mgmt/requests	Standard End-point	
+/mgmt/requests	Standard End-point	
+/mgmt/requests/{requestId}	Standard End-point	
+/mgmt/requests/{requestId}	Standard End-point	
+/mgmt/requests/{requestId}/cancel	Standard End-point	
+/mgmt/requests/{requestId}/deviceStatus	Standard End-point	
+/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}	Standard End-point	
+/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Standard End-point	
+/mgmt/custom/bundle	Standard End-point	
+/mgmt/custom/bundle	Standard End-point	
+/mgmt/custom/bundle/{bundleId}	Standard End-point	
+/mgmt/custom/bundle/{bundleId}	Standard End-point	
+/mgmt/custom/bundle/{bundleId}	Standard End-point	
+/config/lec	Standard End-point	
+/config/lec	Standard End-point	
+/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Standard End-point	
+/device/types/{deviceType}/devices/{deviceId}/events	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/location	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/location	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	Standard End-point	
+/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Standard End-point	
+/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Standard End-point	
+/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Standard End-point	
+/s2s/services	Standard End-point	
+/s2s/services	Standard End-point	
+/s2s/services/{serviceUuid}	Standard End-point	
+/s2s/services/{serviceUuid}	Standard End-point	
+/s2s/services/{serviceUuid}	Standard End-point	
+/event/types	Standard End-point	

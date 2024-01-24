@@ -334,8 +334,6 @@ class ApiAnalyzer:
                             nodes.append(val[index])
             #print(processed_nodes)
 
-
-            last_node = nodes[-1]
             #print(nodes)
             #print(last_node)
 
@@ -343,6 +341,13 @@ class ApiAnalyzer:
             comment2 = " [Pluralized last node with POST method.] "
             comment3 = " [Pluralized last node with PUT|DELETE method.] "
             comment4 = " [Singular last node with PUT|DELETE method.] "
+
+            #if no nodes in uri
+            if len(nodes) < 1: 
+                p_count += 1
+                pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t regular methods.")
+                continue
+            last_node = nodes[-1]
 
             if http_method == "POST":
                 if is_plural(last_node):

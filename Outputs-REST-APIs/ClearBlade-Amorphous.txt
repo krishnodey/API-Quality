@@ -1,8 +1,13 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 5
+/api/v/2/devices/{SystemKey}/auth	Amorphous End-point	 [uppercase found] 
+/api/data/{collectionID}	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/api/data/{collectionID}	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/api/data/{collectionID}	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/api/data/{collectionID}	Amorphous End-point	 [uppercase found]  [uppercase found] 
 
 ***Patterns*** 
-Count: 45
+Count: 40
 /api/user/reg	Tidy End-point	
 /api/user/auth	Tidy End-point	
 /api/user/anon	Tidy End-point	
@@ -13,15 +18,10 @@ Count: 45
 /api/user/pass	Tidy End-point	
 /api/user	Tidy End-point	
 /api/v/2/devices/{systemKey}/{name}	Tidy End-point	
-/api/v/2/devices/{SystemKey}/auth	Tidy End-point	
 /api/collection/{systemKey}/{collectionName}	Tidy End-point	
 /api/collection/{systemKey}/{collectionName}	Tidy End-point	
 /api/collection/{systemKey}/{collectionName}	Tidy End-point	
 /api/collection/{systemKey}/{collectionName}	Tidy End-point	
-/api/data/{collectionID}	Tidy End-point	
-/api/data/{collectionID}	Tidy End-point	
-/api/data/{collectionID}	Tidy End-point	
-/api/data/{collectionID}	Tidy End-point	
 /api/data/{collectionid}/columns	Tidy End-point	
 /api/code/{systemKey}/{serviceName}	Tidy End-point	
 /codeadmin/v/2/library/{systemKey}	Tidy End-point	

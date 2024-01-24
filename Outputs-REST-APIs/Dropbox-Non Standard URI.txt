@@ -1,37 +1,37 @@
 ***Anti-Pattern*** 
-Count: 32
-/account/set_profile_photo	Non-standard End-point	 [black space/tab found] 
-/auth/token/from_oauth1	Non-standard End-point	 [black space/tab found] 
-/auth/token/revoke	Non-standard End-point	 [black space/tab found] 
-/check/app	Non-standard End-point	 [black space/tab found] 
-/check/user	Non-standard End-point	 [black space/tab found] 
-/contacts/delete_manual_contacts	Non-standard End-point	 [black space/tab found] 
-/contacts/delete_manual_contacts_batch	Non-standard End-point	 [black space/tab found] 
-/file_properties/properties/add	Non-standard End-point	 [black space/tab found] 
-/file_properties/properties/overwrite	Non-standard End-point	 [black space/tab found] 
-/file_properties/properties/search/continue	Non-standard End-point	 [black space/tab found] 
-/file_properties/templates/remove_for_user	Non-standard End-point	 [black space/tab found] 
-/file_properties/templates/update_for_user	Non-standard End-point	 [black space/tab found] 
-/file_properties/properties/update	Non-standard End-point	 [black space/tab found] 
-/file_requests/count	Non-standard End-point	 [black space/tab found] 
-/file_requests/create	Non-standard End-point	 [black space/tab found] 
-/file_requests/delete	Non-standard End-point	 [black space/tab found] 
-/file_requests/delete_all_closed	Non-standard End-point	 [black space/tab found] 
-/file_requests/list/continue	Non-standard End-point	 [black space/tab found] 
-/files/copy_batch_v2	Non-standard End-point	 [black space/tab found] 
-/files/copy_batch/check_v2	Non-standard End-point	 [black space/tab found] 
-/files/copy_reference/get	Non-standard End-point	 [black space/tab found] 
-/files/copy_reference/save	Non-standard End-point	 [black space/tab found] 
-/files/create_folder_batch	Non-standard End-point	 [black space/tab found] 
-/files/create_folder_batch/check	Non-standard End-point	 [black space/tab found] 
-/files/delete_batch/check	Non-standard End-point	 [black space/tab found] 
-/files/download_zip	Non-standard End-point	 [black space/tab found] 
-/files/get_file_lock_batch	Non-standard End-point	 [black space/tab found] 
-/files/get_temporary_upload_link	Non-standard End-point	 [black space/tab found] 
-/files/list_folder/get_latest_cursor	Non-standard End-point	 [black space/tab found] 
-/files/move_batch/check_v2	Non-standard End-point	 [black space/tab found] 
-/files/save_url/check_job_status	Non-standard End-point	 [black space/tab found] 
-/files/upload_session/append_v2	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 32
+/account/set_profile_photo	Standard End-point	
+/auth/token/from_oauth1	Standard End-point	
+/auth/token/revoke	Standard End-point	
+/check/app	Standard End-point	
+/check/user	Standard End-point	
+/contacts/delete_manual_contacts	Standard End-point	
+/contacts/delete_manual_contacts_batch	Standard End-point	
+/file_properties/properties/add	Standard End-point	
+/file_properties/properties/overwrite	Standard End-point	
+/file_properties/properties/search/continue	Standard End-point	
+/file_properties/templates/remove_for_user	Standard End-point	
+/file_properties/templates/update_for_user	Standard End-point	
+/file_properties/properties/update	Standard End-point	
+/file_requests/count	Standard End-point	
+/file_requests/create	Standard End-point	
+/file_requests/delete	Standard End-point	
+/file_requests/delete_all_closed	Standard End-point	
+/file_requests/list/continue	Standard End-point	
+/files/copy_batch_v2	Standard End-point	
+/files/copy_batch/check_v2	Standard End-point	
+/files/copy_reference/get	Standard End-point	
+/files/copy_reference/save	Standard End-point	
+/files/create_folder_batch	Standard End-point	
+/files/create_folder_batch/check	Standard End-point	
+/files/delete_batch/check	Standard End-point	
+/files/download_zip	Standard End-point	
+/files/get_file_lock_batch	Standard End-point	
+/files/get_temporary_upload_link	Standard End-point	
+/files/list_folder/get_latest_cursor	Standard End-point	
+/files/move_batch/check_v2	Standard End-point	
+/files/save_url/check_job_status	Standard End-point	
+/files/upload_session/append_v2	Standard End-point	

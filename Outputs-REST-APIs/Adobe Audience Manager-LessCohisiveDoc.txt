@@ -1,10 +1,8 @@
 ***Anti-Pattern*** 
-Count: 2
--/datasources/	Non-pertinent Documentation	Returns details about all GENERAL data sources.
--/datasources/	Non-pertinent Documentation	Creates a Data Source of the type GENERAL or MERGE RULE.
+Count: 0
 
 ***Patterns*** 
-Count: 63
+Count: 65
 -/models/{modelId}	Pertinent Documentation	Updates an algorithmic model.
 -/models/{modelId}	Pertinent Documentation	Deletes an algorithmic model.
 -/models	Pertinent Documentation	Returns an array of algorithmic models and their summary.
@@ -44,6 +42,8 @@ Count: 63
 -/data-feeds/{dataSourceId}/plans/{planId}	Pertinent Documentation	Gets a 'Data Feed Plan' under a 'Data Feed'.
 -/data-feeds/{dataSourceId}/plans/{planId}	Pertinent Documentation	Updates a 'Data Feed Plan' under a 'Data Feed'.
 -/data-feeds/{dataSourceId}/plans/{planId}	Pertinent Documentation	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+-/datasources/	Pertinent Documentation	Returns details about all GENERAL data sources.
+-/datasources/	Pertinent Documentation	Creates a Data Source of the type GENERAL or MERGE RULE.
 -/datasources/{dataSourceId}	Pertinent Documentation	Returns details about a specific data source.
 -/datasources/{dataSourceId}	Pertinent Documentation	Update a specific GENERAL or MERGE_RULE data source.
 -/datasources/{dataSourceId}	Pertinent Documentation	Delete a specific data source.

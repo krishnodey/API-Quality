@@ -1,261 +1,261 @@
 ***Anti-Pattern*** 
-Count: 256
-/queries/codeOfConduct	Non-standard End-point	 [black space/tab found] 
-/queries/codesOfConduct	Non-standard End-point	 [black space/tab found] 
-/queries/enterprise	Non-standard End-point	 [black space/tab found] 
-/queries/enterpriseAdministratorInvitation	Non-standard End-point	 [black space/tab found] 
-/queries/enterpriseAdministratorInvitationByToken	Non-standard End-point	 [black space/tab found] 
-/queries/license	Non-standard End-point	 [black space/tab found] 
-/queries/licenses	Non-standard End-point	 [black space/tab found] 
-/queries/marketplaceCategories	Non-standard End-point	 [black space/tab found] 
-/queries/marketplaceCategory	Non-standard End-point	 [black space/tab found] 
-/queries/marketplaceListing	Non-standard End-point	 [black space/tab found] 
-/queries/marketplaceListings	Non-standard End-point	 [black space/tab found] 
-/queries/meta	Non-standard End-point	 [black space/tab found] 
-/queries/node	Non-standard End-point	 [black space/tab found] 
-/queries/nodes	Non-standard End-point	 [black space/tab found] 
-/queries/organization	Non-standard End-point	 [black space/tab found] 
-/queries/rateLimit	Non-standard End-point	 [black space/tab found] 
-/queries/relay	Non-standard End-point	 [black space/tab found] 
-/queries/repository	Non-standard End-point	 [black space/tab found] 
-/queries/repositoryOwner	Non-standard End-point	 [black space/tab found] 
-/queries/resource	Non-standard End-point	 [black space/tab found] 
-/queries/search	Non-standard End-point	 [black space/tab found] 
-/queries/securityAdvisories	Non-standard End-point	 [black space/tab found] 
-/queries/securityAdvisory	Non-standard End-point	 [black space/tab found] 
-/queries/securityVulnerabilities	Non-standard End-point	 [black space/tab found] 
-/queries/sponsorables	Non-standard End-point	 [black space/tab found] 
-/queries/topic	Non-standard End-point	 [black space/tab found] 
-/queries/user	Non-standard End-point	 [black space/tab found] 
-/queries/viewer	Non-standard End-point	 [black space/tab found] 
-/mutations/abortQueuedMigrations	Non-standard End-point	 [black space/tab found] 
-/mutations/abortRepositoryMigration	Non-standard End-point	 [black space/tab found] 
-/mutations/acceptEnterpriseAdministratorInvitation	Non-standard End-point	 [black space/tab found] 
-/mutations/acceptTopicSuggestion	Non-standard End-point	 [black space/tab found] 
-/mutations/addAssigneesToAssignable	Non-standard End-point	 [black space/tab found] 
-/mutations/addComment	Non-standard End-point	 [black space/tab found] 
-/mutations/addDiscussionComment	Non-standard End-point	 [black space/tab found] 
-/mutations/addDiscussionPollVote	Non-standard End-point	 [black space/tab found] 
-/mutations/addEnterpriseOrganizationMember	Non-standard End-point	 [black space/tab found] 
-/mutations/addEnterpriseSupportEntitlement	Non-standard End-point	 [black space/tab found] 
-/mutations/addLabelsToLabelable	Non-standard End-point	 [black space/tab found] 
-/mutations/addProjectCard	Non-standard End-point	 [black space/tab found] 
-/mutations/addProjectColumn	Non-standard End-point	 [black space/tab found] 
-/mutations/addProjectV2DraftIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/addProjectV2ItemById	Non-standard End-point	 [black space/tab found] 
-/mutations/addPullRequestReview	Non-standard End-point	 [black space/tab found] 
-/mutations/addPullRequestReviewComment	Non-standard End-point	 [black space/tab found] 
-/mutations/addPullRequestReviewThread	Non-standard End-point	 [black space/tab found] 
-/mutations/addPullRequestReviewThreadReply	Non-standard End-point	 [black space/tab found] 
-/mutations/addReaction	Non-standard End-point	 [black space/tab found] 
-/mutations/addStar	Non-standard End-point	 [black space/tab found] 
-/mutations/addUpvote	Non-standard End-point	 [black space/tab found] 
-/mutations/addVerifiableDomain	Non-standard End-point	 [black space/tab found] 
-/mutations/approveDeployments	Non-standard End-point	 [black space/tab found] 
-/mutations/approveVerifiableDomain	Non-standard End-point	 [black space/tab found] 
-/mutations/archiveProjectV2Item	Non-standard End-point	 [black space/tab found] 
-/mutations/archiveRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/cancelEnterpriseAdminInvitation	Non-standard End-point	 [black space/tab found] 
-/mutations/cancelSponsorship	Non-standard End-point	 [black space/tab found] 
-/mutations/changeUserStatus	Non-standard End-point	 [black space/tab found] 
-/mutations/clearLabelsFromLabelable	Non-standard End-point	 [black space/tab found] 
-/mutations/clearProjectV2ItemFieldValue	Non-standard End-point	 [black space/tab found] 
-/mutations/cloneProject	Non-standard End-point	 [black space/tab found] 
-/mutations/cloneTemplateRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/closeDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/closeIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/closePullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/convertProjectCardNoteToIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/convertPullRequestToDraft	Non-standard End-point	 [black space/tab found] 
-/mutations/copyProjectV2	Non-standard End-point	 [black space/tab found] 
-/mutations/createAttributionInvitation	Non-standard End-point	 [black space/tab found] 
-/mutations/createBranchProtectionRule	Non-standard End-point	 [black space/tab found] 
-/mutations/createCheckRun	Non-standard End-point	 [black space/tab found] 
-/mutations/createCheckSuite	Non-standard End-point	 [black space/tab found] 
-/mutations/createCommitOnBranch	Non-standard End-point	 [black space/tab found] 
-/mutations/createDeployment	Non-standard End-point	 [black space/tab found] 
-/mutations/createDeploymentStatus	Non-standard End-point	 [black space/tab found] 
-/mutations/createDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/createEnterpriseOrganization	Non-standard End-point	 [black space/tab found] 
-/mutations/createEnvironment	Non-standard End-point	 [black space/tab found] 
-/mutations/createIpAllowListEntry	Non-standard End-point	 [black space/tab found] 
-/mutations/createIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/createLabel	Non-standard End-point	 [black space/tab found] 
-/mutations/createLinkedBranch	Non-standard End-point	 [black space/tab found] 
-/mutations/createMigrationSource	Non-standard End-point	 [black space/tab found] 
-/mutations/createProject	Non-standard End-point	 [black space/tab found] 
-/mutations/createProjectV2	Non-standard End-point	 [black space/tab found] 
-/mutations/createProjectV2Field	Non-standard End-point	 [black space/tab found] 
-/mutations/createPullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/createRef	Non-standard End-point	 [black space/tab found] 
-/mutations/createRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/createRepositoryRuleset	Non-standard End-point	 [black space/tab found] 
-/mutations/createSponsorsListing	Non-standard End-point	 [black space/tab found] 
-/mutations/createSponsorsTier	Non-standard End-point	 [black space/tab found] 
-/mutations/createSponsorship	Non-standard End-point	 [black space/tab found] 
-/mutations/createSponsorships	Non-standard End-point	 [black space/tab found] 
-/mutations/createTeamDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/createTeamDiscussionComment	Non-standard End-point	 [black space/tab found] 
-/mutations/declineTopicSuggestion	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteBranchProtectionRule	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteDeployment	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteDiscussionComment	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteEnvironment	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteIpAllowListEntry	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteIssueComment	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteLabel	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteLinkedBranch	Non-standard End-point	 [black space/tab found] 
-/mutations/deletePackageVersion	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProject	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProjectCard	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProjectColumn	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProjectV2	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProjectV2Field	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProjectV2Item	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteProjectV2Workflow	Non-standard End-point	 [black space/tab found] 
-/mutations/deletePullRequestReview	Non-standard End-point	 [black space/tab found] 
-/mutations/deletePullRequestReviewComment	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteRef	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteRepositoryRuleset	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteTeamDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteTeamDiscussionComment	Non-standard End-point	 [black space/tab found] 
-/mutations/deleteVerifiableDomain	Non-standard End-point	 [black space/tab found] 
-/mutations/dequeuePullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/disablePullRequestAutoMerge	Non-standard End-point	 [black space/tab found] 
-/mutations/dismissPullRequestReview	Non-standard End-point	 [black space/tab found] 
-/mutations/dismissRepositoryVulnerabilityAlert	Non-standard End-point	 [black space/tab found] 
-/mutations/enablePullRequestAutoMerge	Non-standard End-point	 [black space/tab found] 
-/mutations/enqueuePullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/followOrganization	Non-standard End-point	 [black space/tab found] 
-/mutations/followUser	Non-standard End-point	 [black space/tab found] 
-/mutations/grantEnterpriseOrganizationsMigratorRole	Non-standard End-point	 [black space/tab found] 
-/mutations/grantMigratorRole	Non-standard End-point	 [black space/tab found] 
-/mutations/importProject	Non-standard End-point	 [black space/tab found] 
-/mutations/inviteEnterpriseAdmin	Non-standard End-point	 [black space/tab found] 
-/mutations/linkProjectV2ToRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/linkProjectV2ToTeam	Non-standard End-point	 [black space/tab found] 
-/mutations/linkRepositoryToProject	Non-standard End-point	 [black space/tab found] 
-/mutations/lockLockable	Non-standard End-point	 [black space/tab found] 
-/mutations/markDiscussionCommentAsAnswer	Non-standard End-point	 [black space/tab found] 
-/mutations/markFileAsViewed	Non-standard End-point	 [black space/tab found] 
-/mutations/markProjectV2AsTemplate	Non-standard End-point	 [black space/tab found] 
-/mutations/markPullRequestReadyForReview	Non-standard End-point	 [black space/tab found] 
-/mutations/mergeBranch	Non-standard End-point	 [black space/tab found] 
-/mutations/mergePullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/minimizeComment	Non-standard End-point	 [black space/tab found] 
-/mutations/moveProjectCard	Non-standard End-point	 [black space/tab found] 
-/mutations/moveProjectColumn	Non-standard End-point	 [black space/tab found] 
-/mutations/pinIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/publishSponsorsTier	Non-standard End-point	 [black space/tab found] 
-/mutations/regenerateEnterpriseIdentityProviderRecoveryCodes	Non-standard End-point	 [black space/tab found] 
-/mutations/regenerateVerifiableDomainToken	Non-standard End-point	 [black space/tab found] 
-/mutations/rejectDeployments	Non-standard End-point	 [black space/tab found] 
-/mutations/removeAssigneesFromAssignable	Non-standard End-point	 [black space/tab found] 
-/mutations/removeEnterpriseAdmin	Non-standard End-point	 [black space/tab found] 
-/mutations/removeEnterpriseIdentityProvider	Non-standard End-point	 [black space/tab found] 
-/mutations/removeEnterpriseMember	Non-standard End-point	 [black space/tab found] 
-/mutations/removeEnterpriseOrganization	Non-standard End-point	 [black space/tab found] 
-/mutations/removeEnterpriseSupportEntitlement	Non-standard End-point	 [black space/tab found] 
-/mutations/removeLabelsFromLabelable	Non-standard End-point	 [black space/tab found] 
-/mutations/removeOutsideCollaborator	Non-standard End-point	 [black space/tab found] 
-/mutations/removeReaction	Non-standard End-point	 [black space/tab found] 
-/mutations/removeStar	Non-standard End-point	 [black space/tab found] 
-/mutations/removeUpvote	Non-standard End-point	 [black space/tab found] 
-/mutations/reopenDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/reopenIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/reopenPullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/requestReviews	Non-standard End-point	 [black space/tab found] 
-/mutations/rerequestCheckSuite	Non-standard End-point	 [black space/tab found] 
-/mutations/resolveReviewThread	Non-standard End-point	 [black space/tab found] 
-/mutations/retireSponsorsTier	Non-standard End-point	 [black space/tab found] 
-/mutations/revertPullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/revokeEnterpriseOrganizationsMigratorRole	Non-standard End-point	 [black space/tab found] 
-/mutations/revokeMigratorRole	Non-standard End-point	 [black space/tab found] 
-/mutations/setEnterpriseIdentityProvider	Non-standard End-point	 [black space/tab found] 
-/mutations/setOrganizationInteractionLimit	Non-standard End-point	 [black space/tab found] 
-/mutations/setRepositoryInteractionLimit	Non-standard End-point	 [black space/tab found] 
-/mutations/setUserInteractionLimit	Non-standard End-point	 [black space/tab found] 
-/mutations/startOrganizationMigration	Non-standard End-point	 [black space/tab found] 
-/mutations/startRepositoryMigration	Non-standard End-point	 [black space/tab found] 
-/mutations/submitPullRequestReview	Non-standard End-point	 [black space/tab found] 
-/mutations/transferEnterpriseOrganization	Non-standard End-point	 [black space/tab found] 
-/mutations/transferIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/unarchiveProjectV2Item	Non-standard End-point	 [black space/tab found] 
-/mutations/unarchiveRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/unfollowOrganization	Non-standard End-point	 [black space/tab found] 
-/mutations/unfollowUser	Non-standard End-point	 [black space/tab found] 
-/mutations/unlinkProjectV2FromRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/unlinkProjectV2FromTeam	Non-standard End-point	 [black space/tab found] 
-/mutations/unlinkRepositoryFromProject	Non-standard End-point	 [black space/tab found] 
-/mutations/unlockLockable	Non-standard End-point	 [black space/tab found] 
-/mutations/unmarkDiscussionCommentAsAnswer	Non-standard End-point	 [black space/tab found] 
-/mutations/unmarkFileAsViewed	Non-standard End-point	 [black space/tab found] 
-/mutations/unmarkIssueAsDuplicate	Non-standard End-point	 [black space/tab found] 
-/mutations/unmarkProjectV2AsTemplate	Non-standard End-point	 [black space/tab found] 
-/mutations/unminimizeComment	Non-standard End-point	 [black space/tab found] 
-/mutations/unpinIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/unresolveReviewThread	Non-standard End-point	 [black space/tab found] 
-/mutations/unsubscribeFromNotifications	Non-standard End-point	 [black space/tab found] 
-/mutations/updateBranchProtectionRule	Non-standard End-point	 [black space/tab found] 
-/mutations/updateCheckRun	Non-standard End-point	 [black space/tab found] 
-/mutations/updateCheckSuitePreferences	Non-standard End-point	 [black space/tab found] 
-/mutations/updateDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/updateDiscussionComment	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseAdministratorRole	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseAllowPrivateRepositoryForkingSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseDefaultRepositoryPermissionSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanCreateRepositoriesSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanDeleteIssuesSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanDeleteRepositoriesSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanInviteCollaboratorsSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanMakePurchasesSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanUpdateProtectedBranchesSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseMembersCanViewDependencyInsightsSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseOrganizationProjectsSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseOwnerOrganizationRole	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseProfile	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseRepositoryProjectsSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseTeamDiscussionsSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnterpriseTwoFactorAuthenticationRequiredSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateEnvironment	Non-standard End-point	 [black space/tab found] 
-/mutations/updateIpAllowListEnabledSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateIpAllowListEntry	Non-standard End-point	 [black space/tab found] 
-/mutations/updateIpAllowListForInstalledAppsEnabledSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/updateIssueComment	Non-standard End-point	 [black space/tab found] 
-/mutations/updateLabel	Non-standard End-point	 [black space/tab found] 
-/mutations/updateNotificationRestrictionSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateOrganizationAllowPrivateRepositoryForkingSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateOrganizationWebCommitSignoffSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updatePatreonSponsorability	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProject	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectCard	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectColumn	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectV2	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectV2Collaborators	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectV2DraftIssue	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectV2ItemFieldValue	Non-standard End-point	 [black space/tab found] 
-/mutations/updateProjectV2ItemPosition	Non-standard End-point	 [black space/tab found] 
-/mutations/updatePullRequest	Non-standard End-point	 [black space/tab found] 
-/mutations/updatePullRequestBranch	Non-standard End-point	 [black space/tab found] 
-/mutations/updatePullRequestReview	Non-standard End-point	 [black space/tab found] 
-/mutations/updatePullRequestReviewComment	Non-standard End-point	 [black space/tab found] 
-/mutations/updateRef	Non-standard End-point	 [black space/tab found] 
-/mutations/updateRefs	Non-standard End-point	 [black space/tab found] 
-/mutations/updateRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/updateRepositoryRuleset	Non-standard End-point	 [black space/tab found] 
-/mutations/updateRepositoryWebCommitSignoffSetting	Non-standard End-point	 [black space/tab found] 
-/mutations/updateSponsorshipPreferences	Non-standard End-point	 [black space/tab found] 
-/mutations/updateSubscription	Non-standard End-point	 [black space/tab found] 
-/mutations/updateTeamDiscussion	Non-standard End-point	 [black space/tab found] 
-/mutations/updateTeamDiscussionComment	Non-standard End-point	 [black space/tab found] 
-/mutations/updateTeamReviewAssignment	Non-standard End-point	 [black space/tab found] 
-/mutations/updateTeamsRepository	Non-standard End-point	 [black space/tab found] 
-/mutations/updateTopics	Non-standard End-point	 [black space/tab found] 
-/mutations/verifyVerifiableDomain	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 256
+/codeOfConduct	Standard End-point	
+/codesOfConduct	Standard End-point	
+/enterprise	Standard End-point	
+/enterpriseAdministratorInvitation	Standard End-point	
+/enterpriseAdministratorInvitationByToken	Standard End-point	
+/license	Standard End-point	
+/licenses	Standard End-point	
+/marketplaceCategories	Standard End-point	
+/marketplaceCategory	Standard End-point	
+/marketplaceListing	Standard End-point	
+/marketplaceListings	Standard End-point	
+/meta	Standard End-point	
+/node	Standard End-point	
+/nodes	Standard End-point	
+/organization	Standard End-point	
+/rateLimit	Standard End-point	
+/relay	Standard End-point	
+/repository	Standard End-point	
+/repositoryOwner	Standard End-point	
+/resource	Standard End-point	
+/search	Standard End-point	
+/securityAdvisories	Standard End-point	
+/securityAdvisory	Standard End-point	
+/securityVulnerabilities	Standard End-point	
+/sponsorables	Standard End-point	
+/topic	Standard End-point	
+/user	Standard End-point	
+/viewer	Standard End-point	
+/abortQueuedMigrations	Standard End-point	
+/abortRepositoryMigration	Standard End-point	
+/acceptEnterpriseAdministratorInvitation	Standard End-point	
+/acceptTopicSuggestion	Standard End-point	
+/addAssigneesToAssignable	Standard End-point	
+/addComment	Standard End-point	
+/addDiscussionComment	Standard End-point	
+/addDiscussionPollVote	Standard End-point	
+/addEnterpriseOrganizationMember	Standard End-point	
+/addEnterpriseSupportEntitlement	Standard End-point	
+/addLabelsToLabelable	Standard End-point	
+/addProjectCard	Standard End-point	
+/addProjectColumn	Standard End-point	
+/addProjectV2DraftIssue	Standard End-point	
+/addProjectV2ItemById	Standard End-point	
+/addPullRequestReview	Standard End-point	
+/addPullRequestReviewComment	Standard End-point	
+/addPullRequestReviewThread	Standard End-point	
+/addPullRequestReviewThreadReply	Standard End-point	
+/addReaction	Standard End-point	
+/addStar	Standard End-point	
+/addUpvote	Standard End-point	
+/addVerifiableDomain	Standard End-point	
+/approveDeployments	Standard End-point	
+/approveVerifiableDomain	Standard End-point	
+/archiveProjectV2Item	Standard End-point	
+/archiveRepository	Standard End-point	
+/cancelEnterpriseAdminInvitation	Standard End-point	
+/cancelSponsorship	Standard End-point	
+/changeUserStatus	Standard End-point	
+/clearLabelsFromLabelable	Standard End-point	
+/clearProjectV2ItemFieldValue	Standard End-point	
+/cloneProject	Standard End-point	
+/cloneTemplateRepository	Standard End-point	
+/closeDiscussion	Standard End-point	
+/closeIssue	Standard End-point	
+/closePullRequest	Standard End-point	
+/convertProjectCardNoteToIssue	Standard End-point	
+/convertPullRequestToDraft	Standard End-point	
+/copyProjectV2	Standard End-point	
+/createAttributionInvitation	Standard End-point	
+/createBranchProtectionRule	Standard End-point	
+/createCheckRun	Standard End-point	
+/createCheckSuite	Standard End-point	
+/createCommitOnBranch	Standard End-point	
+/createDeployment	Standard End-point	
+/createDeploymentStatus	Standard End-point	
+/createDiscussion	Standard End-point	
+/createEnterpriseOrganization	Standard End-point	
+/createEnvironment	Standard End-point	
+/createIpAllowListEntry	Standard End-point	
+/createIssue	Standard End-point	
+/createLabel	Standard End-point	
+/createLinkedBranch	Standard End-point	
+/createMigrationSource	Standard End-point	
+/createProject	Standard End-point	
+/createProjectV2	Standard End-point	
+/createProjectV2Field	Standard End-point	
+/createPullRequest	Standard End-point	
+/createRef	Standard End-point	
+/createRepository	Standard End-point	
+/createRepositoryRuleset	Standard End-point	
+/createSponsorsListing	Standard End-point	
+/createSponsorsTier	Standard End-point	
+/createSponsorship	Standard End-point	
+/createSponsorships	Standard End-point	
+/createTeamDiscussion	Standard End-point	
+/createTeamDiscussionComment	Standard End-point	
+/declineTopicSuggestion	Standard End-point	
+/deleteBranchProtectionRule	Standard End-point	
+/deleteDeployment	Standard End-point	
+/deleteDiscussion	Standard End-point	
+/deleteDiscussionComment	Standard End-point	
+/deleteEnvironment	Standard End-point	
+/deleteIpAllowListEntry	Standard End-point	
+/deleteIssue	Standard End-point	
+/deleteIssueComment	Standard End-point	
+/deleteLabel	Standard End-point	
+/deleteLinkedBranch	Standard End-point	
+/deletePackageVersion	Standard End-point	
+/deleteProject	Standard End-point	
+/deleteProjectCard	Standard End-point	
+/deleteProjectColumn	Standard End-point	
+/deleteProjectV2	Standard End-point	
+/deleteProjectV2Field	Standard End-point	
+/deleteProjectV2Item	Standard End-point	
+/deleteProjectV2Workflow	Standard End-point	
+/deletePullRequestReview	Standard End-point	
+/deletePullRequestReviewComment	Standard End-point	
+/deleteRef	Standard End-point	
+/deleteRepositoryRuleset	Standard End-point	
+/deleteTeamDiscussion	Standard End-point	
+/deleteTeamDiscussionComment	Standard End-point	
+/deleteVerifiableDomain	Standard End-point	
+/dequeuePullRequest	Standard End-point	
+/disablePullRequestAutoMerge	Standard End-point	
+/dismissPullRequestReview	Standard End-point	
+/dismissRepositoryVulnerabilityAlert	Standard End-point	
+/enablePullRequestAutoMerge	Standard End-point	
+/enqueuePullRequest	Standard End-point	
+/followOrganization	Standard End-point	
+/followUser	Standard End-point	
+/grantEnterpriseOrganizationsMigratorRole	Standard End-point	
+/grantMigratorRole	Standard End-point	
+/importProject	Standard End-point	
+/inviteEnterpriseAdmin	Standard End-point	
+/linkProjectV2ToRepository	Standard End-point	
+/linkProjectV2ToTeam	Standard End-point	
+/linkRepositoryToProject	Standard End-point	
+/lockLockable	Standard End-point	
+/markDiscussionCommentAsAnswer	Standard End-point	
+/markFileAsViewed	Standard End-point	
+/markProjectV2AsTemplate	Standard End-point	
+/markPullRequestReadyForReview	Standard End-point	
+/mergeBranch	Standard End-point	
+/mergePullRequest	Standard End-point	
+/minimizeComment	Standard End-point	
+/moveProjectCard	Standard End-point	
+/moveProjectColumn	Standard End-point	
+/pinIssue	Standard End-point	
+/publishSponsorsTier	Standard End-point	
+/regenerateEnterpriseIdentityProviderRecoveryCodes	Standard End-point	
+/regenerateVerifiableDomainToken	Standard End-point	
+/rejectDeployments	Standard End-point	
+/removeAssigneesFromAssignable	Standard End-point	
+/removeEnterpriseAdmin	Standard End-point	
+/removeEnterpriseIdentityProvider	Standard End-point	
+/removeEnterpriseMember	Standard End-point	
+/removeEnterpriseOrganization	Standard End-point	
+/removeEnterpriseSupportEntitlement	Standard End-point	
+/removeLabelsFromLabelable	Standard End-point	
+/removeOutsideCollaborator	Standard End-point	
+/removeReaction	Standard End-point	
+/removeStar	Standard End-point	
+/removeUpvote	Standard End-point	
+/reopenDiscussion	Standard End-point	
+/reopenIssue	Standard End-point	
+/reopenPullRequest	Standard End-point	
+/requestReviews	Standard End-point	
+/rerequestCheckSuite	Standard End-point	
+/resolveReviewThread	Standard End-point	
+/retireSponsorsTier	Standard End-point	
+/revertPullRequest	Standard End-point	
+/revokeEnterpriseOrganizationsMigratorRole	Standard End-point	
+/revokeMigratorRole	Standard End-point	
+/setEnterpriseIdentityProvider	Standard End-point	
+/setOrganizationInteractionLimit	Standard End-point	
+/setRepositoryInteractionLimit	Standard End-point	
+/setUserInteractionLimit	Standard End-point	
+/startOrganizationMigration	Standard End-point	
+/startRepositoryMigration	Standard End-point	
+/submitPullRequestReview	Standard End-point	
+/transferEnterpriseOrganization	Standard End-point	
+/transferIssue	Standard End-point	
+/unarchiveProjectV2Item	Standard End-point	
+/unarchiveRepository	Standard End-point	
+/unfollowOrganization	Standard End-point	
+/unfollowUser	Standard End-point	
+/unlinkProjectV2FromRepository	Standard End-point	
+/unlinkProjectV2FromTeam	Standard End-point	
+/unlinkRepositoryFromProject	Standard End-point	
+/unlockLockable	Standard End-point	
+/unmarkDiscussionCommentAsAnswer	Standard End-point	
+/unmarkFileAsViewed	Standard End-point	
+/unmarkIssueAsDuplicate	Standard End-point	
+/unmarkProjectV2AsTemplate	Standard End-point	
+/unminimizeComment	Standard End-point	
+/unpinIssue	Standard End-point	
+/unresolveReviewThread	Standard End-point	
+/unsubscribeFromNotifications	Standard End-point	
+/updateBranchProtectionRule	Standard End-point	
+/updateCheckRun	Standard End-point	
+/updateCheckSuitePreferences	Standard End-point	
+/updateDiscussion	Standard End-point	
+/updateDiscussionComment	Standard End-point	
+/updateEnterpriseAdministratorRole	Standard End-point	
+/updateEnterpriseAllowPrivateRepositoryForkingSetting	Standard End-point	
+/updateEnterpriseDefaultRepositoryPermissionSetting	Standard End-point	
+/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting	Standard End-point	
+/updateEnterpriseMembersCanCreateRepositoriesSetting	Standard End-point	
+/updateEnterpriseMembersCanDeleteIssuesSetting	Standard End-point	
+/updateEnterpriseMembersCanDeleteRepositoriesSetting	Standard End-point	
+/updateEnterpriseMembersCanInviteCollaboratorsSetting	Standard End-point	
+/updateEnterpriseMembersCanMakePurchasesSetting	Standard End-point	
+/updateEnterpriseMembersCanUpdateProtectedBranchesSetting	Standard End-point	
+/updateEnterpriseMembersCanViewDependencyInsightsSetting	Standard End-point	
+/updateEnterpriseOrganizationProjectsSetting	Standard End-point	
+/updateEnterpriseOwnerOrganizationRole	Standard End-point	
+/updateEnterpriseProfile	Standard End-point	
+/updateEnterpriseRepositoryProjectsSetting	Standard End-point	
+/updateEnterpriseTeamDiscussionsSetting	Standard End-point	
+/updateEnterpriseTwoFactorAuthenticationRequiredSetting	Standard End-point	
+/updateEnvironment	Standard End-point	
+/updateIpAllowListEnabledSetting	Standard End-point	
+/updateIpAllowListEntry	Standard End-point	
+/updateIpAllowListForInstalledAppsEnabledSetting	Standard End-point	
+/updateIssue	Standard End-point	
+/updateIssueComment	Standard End-point	
+/updateLabel	Standard End-point	
+/updateNotificationRestrictionSetting	Standard End-point	
+/updateOrganizationAllowPrivateRepositoryForkingSetting	Standard End-point	
+/updateOrganizationWebCommitSignoffSetting	Standard End-point	
+/updatePatreonSponsorability	Standard End-point	
+/updateProject	Standard End-point	
+/updateProjectCard	Standard End-point	
+/updateProjectColumn	Standard End-point	
+/updateProjectV2	Standard End-point	
+/updateProjectV2Collaborators	Standard End-point	
+/updateProjectV2DraftIssue	Standard End-point	
+/updateProjectV2ItemFieldValue	Standard End-point	
+/updateProjectV2ItemPosition	Standard End-point	
+/updatePullRequest	Standard End-point	
+/updatePullRequestBranch	Standard End-point	
+/updatePullRequestReview	Standard End-point	
+/updatePullRequestReviewComment	Standard End-point	
+/updateRef	Standard End-point	
+/updateRefs	Standard End-point	
+/updateRepository	Standard End-point	
+/updateRepositoryRuleset	Standard End-point	
+/updateRepositoryWebCommitSignoffSetting	Standard End-point	
+/updateSponsorshipPreferences	Standard End-point	
+/updateSubscription	Standard End-point	
+/updateTeamDiscussion	Standard End-point	
+/updateTeamDiscussionComment	Standard End-point	
+/updateTeamReviewAssignment	Standard End-point	
+/updateTeamsRepository	Standard End-point	
+/updateTopics	Standard End-point	
+/verifyVerifiableDomain	Standard End-point	

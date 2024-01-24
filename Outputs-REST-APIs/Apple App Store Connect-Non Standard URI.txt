@@ -1,37 +1,37 @@
 ***Anti-Pattern*** 
-Count: 32
-/appCategories	Non-standard End-point	 [black space/tab found] 
-/appCategories/{id}	Non-standard End-point	 [black space/tab found] 
-/appEncryptionDeclarations	Non-standard End-point	 [black space/tab found] 
-/appEncryptionDeclarations/{id}	Non-standard End-point	 [black space/tab found] 
-/appInfoLocalizations/{id}	Non-standard End-point	 [black space/tab found] 
-/appInfos/{id}	Non-standard End-point	 [black space/tab found] 
-/appPreOrders/{id}	Non-standard End-point	 [black space/tab found] 
-/appPreviewSets/{id}	Non-standard End-point	 [black space/tab found] 
-/appPreviews/{id}	Non-standard End-point	 [black space/tab found] 
-/appPricePoints	Non-standard End-point	 [black space/tab found] 
-/appPricePoints/{id}	Non-standard End-point	 [black space/tab found] 
-/appPriceTiers	Non-standard End-point	 [black space/tab found] 
-/appPriceTiers/{id}	Non-standard End-point	 [black space/tab found] 
-/appPrices/{id}	Non-standard End-point	 [black space/tab found] 
-/appScreenshotSets/{id}	Non-standard End-point	 [black space/tab found] 
-/appScreenshots/{id}	Non-standard End-point	 [black space/tab found] 
-/appStoreReviewAttachments/{id}	Non-standard End-point	 [black space/tab found] 
-/appStoreReviewDetails/{id}	Non-standard End-point	 [black space/tab found] 
-/appStoreVersionLocalizations/{id}	Non-standard End-point	 [black space/tab found] 
-/appStoreVersions/{id}	Non-standard End-point	 [black space/tab found] 
-/apps	Non-standard End-point	 [black space/tab found] 
-/betaAppLocalizations	Non-standard End-point	 [black space/tab found] 
-/endUserLicenseAgreements/{id}	Non-standard End-point	 [black space/tab found] 
-/financeReports	Non-standard End-point	 [black space/tab found] 
-/preReleaseVersions	Non-standard End-point	 [black space/tab found] 
-/routingAppCoverages/{id}	Non-standard End-point	 [black space/tab found] 
-/salesReports	Non-standard End-point	 [black space/tab found] 
-/appCategories/{id}/subcategories	Non-standard End-point	 [black space/tab found] 
-/appEncryptionDeclarations/{id}/app	Non-standard End-point	 [black space/tab found] 
-/appInfos/{id}/ageRatingDeclaration	Non-standard End-point	 [black space/tab found] 
-/appInfos/{id}/appInfoLocalizations	Non-standard End-point	 [black space/tab found] 
-/appInfos/{id}/primaryCategory	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 32
+/appCategories	Standard End-point	
+/appCategories/{id}	Standard End-point	
+/appEncryptionDeclarations	Standard End-point	
+/appEncryptionDeclarations/{id}	Standard End-point	
+/appInfoLocalizations/{id}	Standard End-point	
+/appInfos/{id}	Standard End-point	
+/appPreOrders/{id}	Standard End-point	
+/appPreviewSets/{id}	Standard End-point	
+/appPreviews/{id}	Standard End-point	
+/appPricePoints	Standard End-point	
+/appPricePoints/{id}	Standard End-point	
+/appPriceTiers	Standard End-point	
+/appPriceTiers/{id}	Standard End-point	
+/appPrices/{id}	Standard End-point	
+/appScreenshotSets/{id}	Standard End-point	
+/appScreenshots/{id}	Standard End-point	
+/appStoreReviewAttachments/{id}	Standard End-point	
+/appStoreReviewDetails/{id}	Standard End-point	
+/appStoreVersionLocalizations/{id}	Standard End-point	
+/appStoreVersions/{id}	Standard End-point	
+/apps	Standard End-point	
+/betaAppLocalizations	Standard End-point	
+/endUserLicenseAgreements/{id}	Standard End-point	
+/financeReports	Standard End-point	
+/preReleaseVersions	Standard End-point	
+/routingAppCoverages/{id}	Standard End-point	
+/salesReports	Standard End-point	
+/appCategories/{id}/subcategories	Standard End-point	
+/appEncryptionDeclarations/{id}/app	Standard End-point	
+/appInfos/{id}/ageRatingDeclaration	Standard End-point	
+/appInfos/{id}/appInfoLocalizations	Standard End-point	
+/appInfos/{id}/primaryCategory	Standard End-point	

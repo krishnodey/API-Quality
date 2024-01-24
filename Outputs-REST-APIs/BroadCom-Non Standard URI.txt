@@ -1,45 +1,45 @@
 ***Anti-Pattern*** 
-Count: 40
-/api/getAccess	Non-standard End-point	 [black space/tab found] 
-/bui/getBUIAllConfig	Non-standard End-point	 [black space/tab found] 
-/bui/getAllowedStatus	Non-standard End-point	 [black space/tab found] 
-/bui/getMyTicketDetails({persid})	Non-standard End-point	 [black space/tab found] 
-/bui/getTicketsCustomData({persid})	Non-standard End-point	 [black space/tab found] 
-/bui/getDefaultCategories	Non-standard End-point	 [black space/tab found] 
-/bui/attrInfo	Non-standard End-point	 [black space/tab found] 
-/bui/attrCtrl	Non-standard End-point	 [black space/tab found] 
-/bui/addLogComment	Non-standard End-point	 [black space/tab found] 
-/bui/changeStatus/{factory}({persid})	Non-standard End-point	 [black space/tab found] 
-/bui/allFeeds({persid})	Non-standard End-point	 [black space/tab found] 
-/bui/attmnt	Non-standard End-point	 [black space/tab found] 
-/bui/getBopSID	Non-standard End-point	 [black space/tab found] 
-/bui/attmnt({persid})/$value	Non-standard End-point	 [black space/tab found]  [unknown char found] 
-/bui/updateStatusForNotification	Non-standard End-point	 [black space/tab found] 
-/bui/updateStatusForAllNotification	Non-standard End-point	 [black space/tab found] 
-/bui/getMyResources	Non-standard End-point	 [black space/tab found] 
-/bui/getMyActiveChatSession	Non-standard End-point	 [black space/tab found] 
-/bui/checkActiveSessions	Non-standard End-point	 [black space/tab found] 
-/bui/createChatThread	Non-standard End-point	 [black space/tab found] 
-/bui/getChatHistory/{roomName}	Non-standard End-point	 [black space/tab found] 
-/bui/getDocument({id})	Non-standard End-point	 [black space/tab found] 
-/bui/getKDAttachments({id})	Non-standard End-point	 [black space/tab found] 
-/bui/getKDComments({id})	Non-standard End-point	 [black space/tab found] 
-/bui/addKDComment({id})	Non-standard End-point	 [black space/tab found] 
-/bui/rateDocument({id})	Non-standard End-point	 [black space/tab found] 
-/bui/kdLinkInfo({id})	Non-standard End-point	 [black space/tab found] 
-/bui/unLinkSolution({id})	Non-standard End-point	 [black space/tab found] 
-/bui/helpAbout	Non-standard End-point	 [black space/tab found] 
-/bui/getEEMAuth	Non-standard End-point	 [black space/tab found] 
-/bui/{factory}({persid})	Non-standard End-point	 [black space/tab found] 
-/bui/{factory}({persid})	Non-standard End-point	 [black space/tab found] 
-/bui/{factory}	Non-standard End-point	 [black space/tab found] 
-/bui/{factory}	Non-standard End-point	 [black space/tab found] 
-/gs/mytkt_active	Non-standard End-point	 [black space/tab found] 
-/gs/mytkt_inactive	Non-standard End-point	 [black space/tab found] 
-/getServiceRequest	Non-standard End-point	 [black space/tab found] 
-/pcatSearch	Non-standard End-point	 [black space/tab found] 
-/getOfferings	Non-standard End-point	 [black space/tab found] 
-/suggestedSolutions	Non-standard End-point	 [black space/tab found] 
+Count: 1
+/bui/attmnt({persid})/$value	Non-standard End-point	 [unknown char found] 
 
 ***Patterns*** 
-Count: 0
+Count: 39
+/api/getAccess	Standard End-point	
+/bui/getBUIAllConfig	Standard End-point	
+/bui/getAllowedStatus	Standard End-point	
+/bui/getMyTicketDetails({persid})	Standard End-point	
+/bui/getTicketsCustomData({persid})	Standard End-point	
+/bui/getDefaultCategories	Standard End-point	
+/bui/attrInfo	Standard End-point	
+/bui/attrCtrl	Standard End-point	
+/bui/addLogComment	Standard End-point	
+/bui/changeStatus/{factory}({persid})	Standard End-point	
+/bui/allFeeds({persid})	Standard End-point	
+/bui/attmnt	Standard End-point	
+/bui/getBopSID	Standard End-point	
+/bui/updateStatusForNotification	Standard End-point	
+/bui/updateStatusForAllNotification	Standard End-point	
+/bui/getMyResources	Standard End-point	
+/bui/getMyActiveChatSession	Standard End-point	
+/bui/checkActiveSessions	Standard End-point	
+/bui/createChatThread	Standard End-point	
+/bui/getChatHistory/{roomName}	Standard End-point	
+/bui/getDocument({id})	Standard End-point	
+/bui/getKDAttachments({id})	Standard End-point	
+/bui/getKDComments({id})	Standard End-point	
+/bui/addKDComment({id})	Standard End-point	
+/bui/rateDocument({id})	Standard End-point	
+/bui/kdLinkInfo({id})	Standard End-point	
+/bui/unLinkSolution({id})	Standard End-point	
+/bui/helpAbout	Standard End-point	
+/bui/getEEMAuth	Standard End-point	
+/bui/{factory}({persid})	Standard End-point	
+/bui/{factory}({persid})	Standard End-point	
+/bui/{factory}	Standard End-point	
+/bui/{factory}	Standard End-point	
+/gs/mytkt_active	Standard End-point	
+/gs/mytkt_inactive	Standard End-point	
+/getServiceRequest	Standard End-point	
+/pcatSearch	Standard End-point	
+/getOfferings	Standard End-point	
+/suggestedSolutions	Standard End-point	

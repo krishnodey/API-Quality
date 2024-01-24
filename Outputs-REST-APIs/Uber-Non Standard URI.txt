@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 15
-/oauth/authorize	Non-standard End-point	 [black space/tab found] 
-/oauth/token	Non-standard End-point	 [black space/tab found] 
-/history	Non-standard End-point	 [black space/tab found] 
-/payment-methods	Non-standard End-point	 [black space/tab found] 
-/products	Non-standard End-point	 [black space/tab found] 
-/products/{product_id}	Non-standard End-point	 [black space/tab found] 
-/estimates/price	Non-standard End-point	 [black space/tab found] 
-/estimates/time	Non-standard End-point	 [black space/tab found] 
-/requests/estimate	Non-standard End-point	 [black space/tab found] 
-/requests/current	Non-standard End-point	 [black space/tab found] 
-/requests/current	Non-standard End-point	 [black space/tab found] 
-/requests/current	Non-standard End-point	 [black space/tab found] 
-/requests/{request_id}/receipt	Non-standard End-point	 [black space/tab found] 
-/requests/{request_id}/map	Non-standard End-point	 [black space/tab found] 
-/requests/{request_id}/receipt	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 15
+/oauth/authorize	Standard End-point	
+/oauth/token	Standard End-point	
+/history	Standard End-point	
+/payment-methods	Standard End-point	
+/products	Standard End-point	
+/products/{product_id}	Standard End-point	
+/estimates/price	Standard End-point	
+/estimates/time	Standard End-point	
+/requests/estimate	Standard End-point	
+/requests/current	Standard End-point	
+/requests/current	Standard End-point	
+/requests/current	Standard End-point	
+/requests/{request_id}/receipt	Standard End-point	
+/requests/{request_id}/map	Standard End-point	
+/requests/{request_id}/receipt	Standard End-point	

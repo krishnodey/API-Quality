@@ -1,51 +1,71 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 56
+/users/<userID>/properties	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/properties	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/properties	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/properties	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/devices	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/devicetypes	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/rules	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/scenes	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/trials	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/tokens	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/tokens	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/tokens	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/providerauth	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/providerauth	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/status	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/status	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/certificate	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/shares	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devices/<deviceID>/shares/<shareID>	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/devices/<deviceID>/shares	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/users/<userID>/shares	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/manifests/latest/properties	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/manifests/<version>/properties	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/availablemanifestversions	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/enable	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/certificates	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/status	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/certificates	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/pricing/devices/<deviceID>/revenueshare/upgradepath	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/pricing/devicetypes/<deviceTypeID>/pricingtiers	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/pricing/devices/<deviceID>/pricingtiers	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/messages/export/<exportID>/status	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/messages/export/<exportID>/result	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/subscriptions/<subscriptionID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/subscriptions/<subscriptionID>/validate	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/notifications/<notificationID>/messages	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/rules/<ruleID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/rules/<ruleID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/rules/<ruleID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/rules/<ruleID>/executions	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/rules/<ruleID>/actions	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/rules/<ruleID>/actions	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/scenes/<sceneID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/scenes/<sceneID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/scenes/<sceneID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/scenes/<sceneID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/ml/models/<modelID>/predict	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/ml/models/<modelID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
 
 ***Patterns*** 
-Count: 80
+Count: 24
 /users/self	Tidy End-point	
-/users/<userID>/properties	Tidy End-point	
-/users/<userID>/properties	Tidy End-point	
-/users/<userID>/properties	Tidy End-point	
-/users/<userID>/properties	Tidy End-point	
-/users/<userID>/devices	Tidy End-point	
-/users/<userID>/devicetypes	Tidy End-point	
-/users/<userID>/rules	Tidy End-point	
-/users/<userID>/scenes	Tidy End-point	
-/users/<userID>/trials	Tidy End-point	
-/devices/<deviceID>	Tidy End-point	
 /devices	Tidy End-point	
-/devices/<deviceID>	Tidy End-point	
-/devices/<deviceID>	Tidy End-point	
-/devices/<deviceID>/tokens	Tidy End-point	
-/devices/<deviceID>/tokens	Tidy End-point	
-/devices/<deviceID>/tokens	Tidy End-point	
-/devices/<deviceID>/providerauth	Tidy End-point	
-/devices/<deviceID>/providerauth	Tidy End-point	
-/devices/<deviceID>/status	Tidy End-point	
 /devices/status	Tidy End-point	
-/devices/<deviceID>/status	Tidy End-point	
-/devices/<deviceID>/certificate	Tidy End-point	
-/devices/<deviceID>/shares	Tidy End-point	
-/devices/<deviceID>/shares/<shareID>	Tidy End-point	
-/devices/<deviceID>/shares	Tidy End-point	
-/users/<userID>/shares	Tidy End-point	
-/devicetypes/<deviceTypeID>	Tidy End-point	
-/devicetypes/<deviceTypeID>	Tidy End-point	
-/devicetypes/<deviceTypeID>/manifests/latest/properties	Tidy End-point	
-/devicetypes/<deviceTypeID>/manifests/<version>/properties	Tidy End-point	
-/devicetypes/<deviceTypeID>/availablemanifestversions	Tidy End-point	
 /devicetypes/<deviceTypeId>/whitelist	Tidy End-point	
 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Tidy End-point	
 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Tidy End-point	
 /devicetypes/<deviceTypeId>/whitelist	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/enable	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/certificates	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/status	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/certificates	Tidy End-point	
-/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Tidy End-point	
 /messages	Tidy End-point	
 /messages	Tidy End-point	
 /actions	Tidy End-point	
@@ -55,31 +75,11 @@ Count: 80
 /messages/analytics/histogram	Tidy End-point	
 /messages/presence	Tidy End-point	
 /messages/snapshots	Tidy End-point	
-/pricing/devices/<deviceID>/revenueshare/upgradepath	Tidy End-point	
-/pricing/devicetypes/<deviceTypeID>/pricingtiers	Tidy End-point	
-/pricing/devices/<deviceID>/pricingtiers	Tidy End-point	
 /messages/export	Tidy End-point	
-/messages/export/<exportID>/status	Tidy End-point	
-/messages/export/<exportID>/result	Tidy End-point	
 /messages/export/history	Tidy End-point	
 /subscriptions	Tidy End-point	
 /subscriptions	Tidy End-point	
-/subscriptions/<subscriptionID>	Tidy End-point	
-/subscriptions/<subscriptionID>/validate	Tidy End-point	
-/notifications/<notificationID>/messages	Tidy End-point	
-/rules/<ruleID>	Tidy End-point	
 /rules	Tidy End-point	
-/rules/<ruleID>	Tidy End-point	
-/rules/<ruleID>	Tidy End-point	
-/rules/<ruleID>/executions	Tidy End-point	
-/rules/<ruleID>/actions	Tidy End-point	
-/rules/<ruleID>/actions	Tidy End-point	
 /scenes	Tidy End-point	
-/scenes/<sceneID>	Tidy End-point	
-/scenes/<sceneID>	Tidy End-point	
 /scenes	Tidy End-point	
-/scenes/<sceneID>	Tidy End-point	
-/scenes/<sceneID>	Tidy End-point	
 /ml/models	Tidy End-point	
-/ml/models/<modelID>/predict	Tidy End-point	
-/ml/models/<modelID>	Tidy End-point	

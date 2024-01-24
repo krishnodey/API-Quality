@@ -21,7 +21,89 @@ GET >> /table/{ids}>>Lookup a database tables by their ID >> ids: ID!	Required. 
 GET >> /table_record/{id} >> Lookup a record by its ID >> id: ID!	Required. The record ID
 GET >> /table_records/{table_id} >> Fetches a group of records based on arguments>>table_id: ID!	Required. The table ID
 GET >> /table_relations/{ids} >>Lookup table relations by their ID>>ids: [ID]!	Required. The table relation ID
-
-
-
-
+POST >> /clonePipes >> Clones a pipe >> n/a
+POST >> /createCard  >>Creates a card>>n/a
+POST >> /createCardRelation >> Creates a card relation>>n/a
+POST >> /createComment>> Creates a comment >> n/a
+POST >> /createFieldCondition>>Creates a field condition>>n/a
+POST >> /createInboxEmail >> Creates an email>>n/a
+POST >> /createLabel >> Creates a label >>n/a
+POST >> /createOrganization>> Creates an organization>>n/a
+POST >> /createOrganizationWebhook >> Creates an organization-level webhook>>n/a
+POST >> /createPhase >>Creates a phase>>n/a
+POST >> /createPhaseField >>Creates a phase field>>n/a
+POST >>/createPipe >> Creates a pipe>>n/a
+POST >>/createPipeRelation >> Creates a pipe relation >>n/a
+POST >> /createPresignedUrl >> Returns a temporary S3 presigned url to upload a file>>n/a
+POST >> /createPresignedUrlForPipePdfTemplate >> Returns a temporary S3 presigned url to upload a pdf template image>>n/a
+POST >> /createTable >> Creates a table>>n/a
+POST >> /createTableField >> Creates a table field>>n/a
+POST >> /createTableRecord >> Creates a record >>n/a
+POST >> /createTableRecordInRestrictedTable >> Creates a record in a private table>>n/a
+POST >> /createTableRelation >> Creates a table relation>>n/a
+POST >> /createWebhook >> Creates a webhook at a pipe or table level >>n/a
+POST >> /deleteCard >> Deletes a card>>n/a
+POST >> /deleteComment >> Deletes a comment>>n/a
+POST >> /deleteFieldCondition >> Deletes a field condition>>n/a
+POST >> /deleteInboxEmail >> Deletes an email>>n/a
+POST >> /deleteLabel >> Deletes a label>>n/a
+POST >> /deleteOrganization >> Deletes an organization>>n/a
+POST >> /deleteOrganizationWebhook >> Deletes a webhook>>n/a
+POST >> /deletePhase >> Deletes a phase>>n/a
+POST >> /deletePhaseField >>Deletes a phase field>>n/a
+POST >> /deletePipe >>Deletes a pipe>>n/a
+POST >> /deletePipeRelation >> Deletes a pipe relation>>n/a
+POST >> /deleteTable >> Deletes a table >>n/a
+POST >> /deleteTableField >> Deletes a table field >>n/a
+POST >> /deleteTableRecord >> Deletes a record>>n/a
+POST >> /deleteTableRelation >> Deletes a table relation >>n/a
+POST >> /deleteWebhook >> Deletes a webhook (pipe or table level) >>n/a
+POST >> /exportPipeReport>> Exports a pipe report >>n/a
+POST >> /createTableRelation >> Creates a table relation >>n/a
+POST >> /createWebhook >> Creates a webhook at a pipe or table level >>n/a
+POST >> /deleteCard >> Deletes a card >>n/a
+POST >> /deleteComment >> Deletes a comment >>n/a
+POST >> /deleteFieldCondition >> Deletes a field condition >>n/a
+POST >> /deleteInboxEmail>> Deletes an email >>n/a
+POST >> /deleteInboxEmail >> Deletes an email >>n/a
+POST >> /deleteOrganization >> Deletes an organization >>n/a
+POST >> /deleteOrganizationWebhook >> Deletes a webhook>>n/a
+POST >> /deletePhase >>Deletes a phase>>n/a
+POST >> /deletePhaseField>>Deletes a phase field >>n/a
+POST >> /deletePipe>>Deletes a pipe >>n/a
+POST >> /deletePipeRelation>>Deletes a pipe relation >>n/a
+POST >> /deleteTable >> Deletes a table >>n/a
+POST >> /deleteTableField>>Deletes a table field >>n/a
+POST >> /deleteTableRecord >>Deletes a record >>n/a
+POST >> /deleteTableRelation>> Deletes a table relation >>n/a
+POST >> /deleteWebhook >> Deletes a webhook (pipe or table level) >>n/a
+POST >> /exportPipeReport >> Exports a pipe report >>n/a
+POST >> /interfaceEmbedCreat>> Create a new Interface >>n/a
+POST >> /inviteMembers >> Invites new members for the organization >>n/a
+POST >> /moveCardToPhase >> Moves a card to another phase >>n/a
+POST >> /recordsImporter >> Create new records from a xlsx file >>n/a
+POST >> /removeUserFromOrg >> Remove a user from an organization >>n/a
+POST >> /removeUserFromPipe >> Removes a user from pipe >>n/a
+POST >> /removeUserFromTable >> Removes a user from table >>n/a
+POST >> /sendInboxEmail >> Sends an email >>n/a
+POST >> /setFieldConditionOrder >> Sets field condition order >>n/a
+POST >> /setRole >> Sets the role of a user >>n/a
+POST >> /setRoles >> Sets role of multiple users >>n/a
+POST >> /setSummaryAttributes >> Sets summary attributes>>n/a
+POST >> /setTableFieldOrder>> Sets table field order >>n/a
+POST >> /setTableRecordFieldValue>>Sets record field value >>n/a
+POST >> /updateCard >> Updates an existing card >>n/a
+POST >> /updateCardField >> Updates an existing card field >>n/a
+POST >> /updateComment>>Updates an existing comment >>n/a
+POST >> /updateFieldsValues >> Update one or many values of fields inside a Card or Table record. >>n/a
+POST >> /updateLabel >> Updates an existing label >>n/a
+POST >> /updateOrganization >> Updates an existing organization >>n/a
+POST >> /updateOrganizationWebhook >> Updates an existing organization-level webhook>>n/a
+POST >> /updatePhase>>Updates an existing phase >>n/a
+POST >> /updatePhaseField >> Updates an existing phase field >> n/a
+POST >> /updatePipe >> Updates an existing pipe >> n/a
+POST >> /updatePipeRelation >> Updates an existing pipe relation >> n/a
+POST >> /updateTable >> Updates an existing table >> n/a
+POST >> /updateTableField >> Updates an existing table field >> n/a
+POST >> /updateTableRecord >> Updates an existing record >> n/a
+POST >> /updateWebhook>> Updates an existing webhook (pipe or table level) >> n/a

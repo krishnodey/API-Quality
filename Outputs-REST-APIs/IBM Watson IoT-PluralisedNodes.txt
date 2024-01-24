@@ -3,7 +3,7 @@ Count: 11
 POST 	/bulk/devices/add	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/bulk/devices/remove	Pluralized Nodes	 [Singular last node with POST method.] 
 DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/logs	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
-POST 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Pluralized Nodes	 [Singular last node with POST method.] 
+DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 POST 	/mgmt/requests/{requestId}/cancel	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/mgmt/custom/bundle	Pluralized Nodes	 [Singular last node with POST method.] 
@@ -36,7 +36,7 @@ POST 	/device/types/{typeId}/devices/{deviceId}/diag/logs	Singularized Nodes	 [P
 GET 	/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	 regular methods.
 DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/logs/{logId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	 regular methods.
-DELETE 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+POST 	/device/types/{typeId}/devices/{deviceId}/diag/errorCodes	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/mgmt/requests	 regular methods.
 POST 	/mgmt/requests	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/mgmt/requests/{requestId}	 regular methods.

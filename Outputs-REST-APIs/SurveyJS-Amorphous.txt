@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
 
 ***Patterns*** 
-Count: 24
+Count: 23
 /setResultSummaryState?accessKey={accessKey}	Tidy End-point	
 /getResultSummaryState/{id}?accessKey={accessKey}	Tidy End-point	
 /getPublicResultSummaryState/{id}	Tidy End-point	
@@ -24,6 +25,5 @@ Count: 24
 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Tidy End-point	
 /getIsResultPublic/{id}?accessKey={accessKey}	Tidy End-point	
 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Tidy End-point	
-/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Tidy End-point	
 /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Tidy End-point	
 /deleteAllResults/{id}?accessKey={accessKey}	Tidy End-point	

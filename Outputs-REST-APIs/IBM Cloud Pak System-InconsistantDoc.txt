@@ -1,39 +1,39 @@
 ***Anti-Pattern*** 
 Count: 2
-post	 /deployment/resources/subnet/<subnetUUID>/addresses 	Inconsistent Documentation	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
-put	 /deployment/resources/subnet/<subnetUUID>/addresses 	Inconsistent Documentation	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+POST	 /deployment/resources/subnet/<subnetUUID>/addresses 	Inconsistent Documentation	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/subnet/<subnetUUID>/addresses 	Inconsistent Documentation	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
 
 ***Patterns*** 
 Count: 32
-post	 /deployment/resources/instances 	Consistent Documentation	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
-delete	/deployment/resources/virtual data center./<virtual data center.UID>	Consistent Documentation	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
-post	 /deployment/resources/vm_configurations 	Consistent Documentation	Create a new configuration for the virtual machine.
-post	 /deployment/resources/vdcs/{uuid}/vm_configurations 	Consistent Documentation	Create a new configuration for the virtual machine.
-post	 /deployment/resources/volume_configurations 	Consistent Documentation	Create a new volume configuration.
-post	 /deployment/resources/vdcs/{uuid}/volume_configurations 	Consistent Documentation	Create a new volume configuration.
-post	 /deployment/resources/subnets 	Consistent Documentation	Create a new subnet.
-delete	/deployment/resources/subnets/<subnetUUID>	Consistent Documentation	Delete a subnet.
-post	 /deployment/resources/addresses 	Consistent Documentation	Create a new address.
-put	 /deployment/resources/addresses/<addressUUID> 	Consistent Documentation	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
-delete	/deployment/resources/addresses/<addressUUID>	Consistent Documentation	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
-post	 /deployment/resources/credentials 	Consistent Documentation	Creating a new credential
-delete	/deployment/resources/credentials/<credentialUUID>	Consistent Documentation	Deleting a credential
-delete	/deployment/resources/images/<imageID>	Consistent Documentation	Deleting images from the system
-post	 /deployment/resources/groups 	Consistent Documentation	Creating a group
-put	 /deployment/resources/groups/<groupUUID> 	Consistent Documentation	Updating a group
-get	 /deployment/resources/groups?isMaster=true 	Consistent Documentation	Retrieving master groups
-get	 /deployment/resources/groups/group<UUID>?showNested=true 	Consistent Documentation	Retrieving nested and parent groups
-put	 /deployment/resources/instances/<instanceUUID> 	Consistent Documentation	Stopping, starting, or and restarting virtual machines
-get	 /deployment/resources/instances 	Consistent Documentation	Viewing currently deployed virtual machines
-delete	/deployment/resources/instances/<instanceUUID>	Consistent Documentation	Deleting currently deployed virtual machines
-get	 /deployment/resources/addresses 	Consistent Documentation	Getting a new address
-post	 /deployment/resources/volumes 	Consistent Documentation	Creating a volume
-delete	/deployment/resources/volumes/<volumeUUID>	Consistent Documentation	Deleting a volume
-post	 /deployment/resources/volumes 	Consistent Documentation	Attaching or detaching volumes
-put	 /deployment/resources/instances/<instanceUUID> 	Consistent Documentation	Storing a previously deployed virtual machine
-get	 /deployment/resources/instance_snapshots 	Consistent Documentation	Retrieving a list of snapshots
-get	 /deployment/resources/acls 	Consistent Documentation	Get all acls
-post	 /audit/resources/audit_config 	Consistent Documentation	Create an audit configuration
-post	 /admin/resources/backup 	Consistent Documentation	Initiate a backup operation
-get	 /admin/resources/backup_subcomponents/{id} 	Consistent Documentation	Get information on a specified volume group
-get	 /admin/resources/chassis_management_modules 	Consistent Documentation	Get all chassis management modules
+POST	 /deployment/resources/instances 	Consistent Documentation	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
+DELETE	/deployment/resources/virtual data center./<virtual data center.UID>	Consistent Documentation	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
+POST	 /deployment/resources/vm_configurations 	Consistent Documentation	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/vdcs/{uuid}/vm_configurations 	Consistent Documentation	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/volume_configurations 	Consistent Documentation	Create a new volume configuration.
+POST	 /deployment/resources/vdcs/{uuid}/volume_configurations 	Consistent Documentation	Create a new volume configuration.
+POST	 /deployment/resources/subnets 	Consistent Documentation	Create a new subnet.
+DELETE	/deployment/resources/subnets/<subnetUUID>	Consistent Documentation	Delete a subnet.
+POST	 /deployment/resources/addresses 	Consistent Documentation	Create a new address.
+PUT	 /deployment/resources/addresses/<addressUUID> 	Consistent Documentation	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
+DELETE	/deployment/resources/addresses/<addressUUID>	Consistent Documentation	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
+POST	 /deployment/resources/credentials 	Consistent Documentation	Creating a new credential
+DELETE	/deployment/resources/credentials/<credentialUUID>	Consistent Documentation	Deleting a credential
+DELETE	/deployment/resources/images/<imageID>	Consistent Documentation	Deleting images from the system
+POST	 /deployment/resources/groups 	Consistent Documentation	Creating a group
+PUT	 /deployment/resources/groups/<groupUUID> 	Consistent Documentation	Updating a group
+GET	 /deployment/resources/groups?isMaster=true 	Consistent Documentation	Retrieving master groups
+GET	 /deployment/resources/groups/group<UUID>?showNested=true 	Consistent Documentation	Retrieving nested and parent groups
+PUT	 /deployment/resources/instances/<instanceUUID> 	Consistent Documentation	Stopping, starting, or and restarting virtual machines
+GET	 /deployment/resources/instances 	Consistent Documentation	Viewing currently deployed virtual machines
+DELETE	/deployment/resources/instances/<instanceUUID>	Consistent Documentation	Deleting currently deployed virtual machines
+GET	 /deployment/resources/addresses 	Consistent Documentation	Getting a new address
+POST	 /deployment/resources/volumes 	Consistent Documentation	Creating a volume
+DELETE	/deployment/resources/volumes/<volumeUUID>	Consistent Documentation	Deleting a volume
+POST	 /deployment/resources/volumes 	Consistent Documentation	Attaching or detaching volumes
+PUT	 /deployment/resources/instances/<instanceUUID> 	Consistent Documentation	Storing a previously deployed virtual machine
+GET	 /deployment/resources/instance_snapshots 	Consistent Documentation	Retrieving a list of snapshots
+GET	 /deployment/resources/acls 	Consistent Documentation	Get all acls
+POST	 /audit/resources/audit_config 	Consistent Documentation	Create an audit configuration
+POST	 /admin/resources/backup 	Consistent Documentation	Initiate a backup operation
+GET	 /admin/resources/backup_subcomponents/{id} 	Consistent Documentation	Get information on a specified volume group
+GET	 /admin/resources/chassis_management_modules 	Consistent Documentation	Get all chassis management modules

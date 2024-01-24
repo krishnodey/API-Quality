@@ -1,12 +1,12 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 3
+ /getResultSummaryState/{id}?accessKey={accessKey} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 4
+ /getPublicResultSummaryState/{id} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 5
  /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between make and result. 0 hierarchical relations were detected out of 3
 
 ***Patterns*** 
-Count: 23
+Count: 21
  /setResultSummaryState?accessKey={accessKey} 	Hierarchical Nodes	
- /getResultSummaryState/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /getPublicResultSummaryState/{id} 	Hierarchical Nodes	
  /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	Hierarchical Nodes	
  /getSurveyPublicResults/{id}?from={from}&till={till} 	Hierarchical Nodes	
  /generateAccessKey?accessKey={accessKey} 	Hierarchical Nodes	
