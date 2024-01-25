@@ -151,7 +151,7 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    pip install 
    ```
-2. Donwnlods
+2. Downloads
    ```sh
    npm install
    ```
@@ -175,9 +175,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@your_twitter](https://twitter.com/krishnodey_) -dey.krishno25@egmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/krishnodey/API-Quality/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
