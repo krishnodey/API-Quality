@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 3
+ /auditEventDefinitions 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 2
+ /auditEventsInstanceAmazonS3Configurations 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and events. 0 hierarchical relations were detected out of 4
+ /instanceExternalAuditEventDestinations 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 4
+
+***Patterns*** 
+Count: 52
+ /abuseReport/{id} 	Hierarchical Nodes	
+ /abuseReportLabels 	Hierarchical Nodes	
+ /addOnPurchase/{id} 	Hierarchical Nodes	
+ /aiMessages 	Hierarchical Nodes	
+ /boardList/{id} 	Hierarchical Nodes	
+ /ciCatalogResource/{id}	Hierarchical Nodes	
+ /ciCatalogResources/{projectPath}	Hierarchical Nodes	
+ /ciConfig/{projectPath} 	Hierarchical Nodes	
+ /ciMinutesUsage/{namespaceId} 	Hierarchical Nodes	
+ /ciPipelineStage/{id} 	Hierarchical Nodes	
+ /ciQueueingHistory 	Hierarchical Nodes	
+ /ciVariables 	Hierarchical Nodes	
+ /containerRepository/{id} 	Hierarchical Nodes	
+ /currentLicense 	Hierarchical Nodes	
+ /currentUser 	Hierarchical Nodes	
+ /designManagement 	Hierarchical Nodes	
+ /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Hierarchical Nodes	
+ /echo 	Hierarchical Nodes	
+ /epicBoardList/{id} 	Hierarchical Nodes	
+ /explainVulnerabilityPrompt/{vulnerabilityId} 	Hierarchical Nodes	
+ /frecentGroups 	Hierarchical Nodes	
+ /frecentProjects 	Hierarchical Nodes	
+ /geoNode 	Hierarchical Nodes	
+ /gitpodEnabled 	Hierarchical Nodes	
+ /group 	Hierarchical Nodes	
+ groups 	Hierarchical Nodes	
+ /instanceGoogleCloudLoggingConfigurations 	Hierarchical Nodes	
+ /instanceSecurityDashboard 	Hierarchical Nodes	
+ /issue/{id} 	Hierarchical Nodes	
+ /issues/{assigneeId} 	Hierarchical Nodes	
+ /iteration/{id} 	Hierarchical Nodes	
+ /jobs 	Hierarchical Nodes	
+ /licenseHistoryEntries 	Hierarchical Nodes	
+ /memberRole/{id} 	Hierarchical Nodes	
+ /memberRolePermissions 	Hierarchical Nodes	
+ /memberRoles/{id} 	Hierarchical Nodes	
+ /mergeRequest/{id} 	Hierarchical Nodes	
+ /metadata 	Hierarchical Nodes	
+ /milestone/{id} 	Hierarchical Nodes	
+ /mlModel/{id} 	Hierarchical Nodes	
+ /namespace 	Hierarchical Nodes	
+ /note/{id} 	Hierarchical Nodes	
+ /organization/{id} 	Hierarchical Nodes	
+ /organizations 	Hierarchical Nodes	
+ /package/{id} 	Hierarchical Nodes	
+ /project/{fullPath} 	Hierarchical Nodes	
+ /projects/{ids} 	Hierarchical Nodes	
+ /queryComplexity 	Hierarchical Nodes	
+ /runner/{id} 	Hierarchical Nodes	
+ /runnerSetup 	Hierarchical Nodes	
+ /runners/{creatorId}  	Hierarchical Nodes	
+ /selfManagedAddOnEligibleUsers 	Hierarchical Nodes	

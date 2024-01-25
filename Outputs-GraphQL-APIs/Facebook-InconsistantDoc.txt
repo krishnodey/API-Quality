@@ -1,25 +1,74 @@
 ***Anti-Pattern*** 
 Count: 2
-get	/v18.0/{app-link-host-id}	Inconsistent Documentation	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links.
-post	/v18.0/{app-link-host-id}	Inconsistent Documentation	update app links using this edge
+POST	/v18.0/{app-link-host-id}	Inconsistent Documentation	update app links using this edge
+POST	 /act_{ad_account_id}/subscribed_apps 	Inconsistent Documentation	You can update an Application by making a POST request to /act_{ad_account_id}/subscribed_apps.
 
 ***Patterns*** 
-Count: 18
-get	/v18.0/{album-id} 	Consistent Documentation	Get Fields and Edges on an Album.
-post	 /{group_id}/albums	Consistent Documentation	When posting to this edge, an Album will be created.
-get	/v18.0/{album-id}/comments	Consistent Documentation	GET /v18.0/{album-id}/comments
-get	/v18.0/{album-id}/likes 	Consistent Documentation	A collection of Profiles who like the Album.
-get	 /v18.0/{album-id}/photos 	Consistent Documentation	A collection of Photos in the Album
-post	 /{album_id}/photos 	Consistent Documentation	When posting to this edge, a Photo will be created.
-get	/v18.0/{album-id}/picture 	Consistent Documentation	A link to the Album cover photo.
-post	/app/app_link_hosts	Consistent Documentation	create app link hosts using the
-delet	/v18.0/{app-link-host-id}	Consistent Documentation	delete app links using this edge
-get	/v18.0/{application-id} 	Consistent Documentation	Get information about a Facebook app.
-post	 /{business_id}/owned_apps 	Consistent Documentation	When posting to this edge, an Application will be created.
-get	 /v18.0/{application-id}/accounts 	Consistent Documentation	Represents a collection of test users on an app.
-post	 /{application_id}/accounts 	Consistent Documentation	When posting to this edge, a TestAccount will be created.
-get	/v18.0/{application-id}/ad_placement_groups 	Consistent Documentation	Ad placement groups for publishing ads on this app
-get	 /v18.0/{application-id}/adnetworkanalytics_results	Consistent Documentation	Obtain the results of an async Audience Network query for this publisher entity
-ge	/v18.0/{application-id}/aem_attribution	Consistent Documentation	aem_attribution
-get	/v18.0/{application-id}/aem_conversion_configs	Consistent Documentation	The aggregated event measurement conversion value configs for this app
-get	/v18.0/{application-id}/aem_conversion_filter	Consistent Documentation	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
+Count: 67
+GET	/v18.0/{album-id} 	Consistent Documentation	Get Fields and Edges on an Album.
+POST	 /{group_id}/albums	Consistent Documentation	When posting to this edge, an Album will be created.
+GET	/v18.0/{album-id}/comments	Consistent Documentation	Represents a collection of Comments on the Album.
+GET	/v18.0/{album-id}/likes 	Consistent Documentation	A collection of Profiles who like the Album.
+GET	 /v18.0/{album-id}/photos 	Consistent Documentation	A collection of Photos in the Album
+POST	 /{album_id}/photos 	Consistent Documentation	When posting to this edge, a Photo will be created.
+GET	/v18.0/{album-id}/picture 	Consistent Documentation	A link to the Album cover photo.
+GET	/v18.0/{app-link-host-id} 	Consistent Documentation	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links.
+POST	/app/app_link_hosts	Consistent Documentation	create app link hosts using the
+DELET	/v18.0/{app-link-host-id}	Consistent Documentation	delete app links using this edge
+GET	/v18.0/{application-id} 	Consistent Documentation	Get information about a Facebook app.
+POST	 /{business_id}/owned_apps 	Consistent Documentation	When posting to this edge, an Application will be created.
+GET	 /v18.0/{application-id}/accounts 	Consistent Documentation	Represents a collection of test users on an app.
+POST	 /{application_id}/accounts 	Consistent Documentation	When posting to this edge, a TestAccount will be created.
+GET	/v18.0/{application-id}/ad_placement_groups 	Consistent Documentation	Ad placement groups for publishing ads on this app
+GET	 /v18.0/{application-id}/adnetworkanalytics_results	Consistent Documentation	Obtain the results of an async Audience Network query for this publisher entity
+GE	/v18.0/{application-id}/aem_attribution	Consistent Documentation	aem_attribution
+GET	/v18.0/{application-id}/aem_conversion_configs	Consistent Documentation	The aggregated event measurement conversion value configs for this app
+GET	/v18.0/{application-id}/aem_conversion_filter	Consistent Documentation	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
+GET	 /v19.0/{application-id}/agencies 	Consistent Documentation	The businesses which are not owner but can advertise for this app
+GET	 /v19.0/{application-id}/app_event_types	Consistent Documentation	Info about App Events logged for the app
+GET	 /v19.0/{application-id}/app_installed_groups	Consistent Documentation	List of facebook groups the app is installed in
+GET	 /v19.0/{application-id}/appassets 	Consistent Documentation	appassets
+GET	 /v19.0/{application-id}/button_auto_detection_device_selection	Consistent Documentation	to turn on auto device sampling.
+GET	/v19.0/{application-id}/cloudbridge_settings	Consistent Documentation	ApplicationCloudbridgeSettings
+GET	 /v19.0/{application-id}/da_checks	Consistent Documentation	A list of results after running Dynamic Ads checks on this app.
+GET	 /v19.0/{application-id}/events 	Consistent Documentation	Retrieves events created on your page on behalf of your app
+GET	/v19.0/{application-id}/ios_skadnetwork_conversion_config	Consistent Documentation	ApplicationiosSkadnetworkConversionConfig
+GET	 /v19.0/{application-id}/mobile_sdk_gk 	Consistent Documentation	Gatekeeper for Mobile SDK
+GET	 /v19.0/{application-id}/model_asset 	Consistent Documentation	ApplicationmodelAsset
+GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Consistent Documentation	List of digital store objects for this app monetized via Audience Network
+GET	 /v19.0/{application-id}/permissions 	Consistent Documentation	The status of permissions that are have been submitted for Login Review
+GET	 /v19.0/{application-id}/products 	Consistent Documentation	In-app-purchaseable products associated with this app
+GET	 /v19.0/{application-id}/purchases	Consistent Documentation	In-app-purchaseable products of this app owned by the user
+GET	 /v19.0/{app-id}/roles 	Consistent Documentation	The developer roles defined for this app
+GET	 /v19.0/{application-id}/subscribed_domains 	Consistent Documentation	GETGraphApplicationSubscribedDomainsEdge
+GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Consistent Documentation	GETGraphApplicationSubscribedDomainsPhishingEdge
+POST	 /{application_id}/app_indexing 	Consistent Documentation	When posting to this edge, an Application will be created.
+POST	 /{application_id}/codeless_event_mappings 	Consistent Documentation	When posting to this edge, an Application will be created.
+POST	 /{application_id}/page_activities 	Consistent Documentation	When posting to this edge, an Application will be created.
+POST	 /{business_id}/client_apps	Consistent Documentation	When posting to this edge, an Application will be created.
+POST	 /{application_id}/mmp_auditing	Consistent Documentation	When posting to this edge, an Application will be created.
+DELETE	/{page_id}/subscribed_apps.	Consistent Documentation	You can dissociate an Application from a Page by making a DELETE request to /{page_id}/subscribed_apps.
+DELETE	/act_{ad_account_id}/subscribed_apps	Consistent Documentation	You can dissociate an Application from an AdAccount by making a DELETE request to /act_{ad_account_id}/subscribed_apps.
+POST	 /{application_id}/activities 	Consistent Documentation	Application activities are events from your app.You can use a user access token or app access token to log events to this endpoint.
+GET	 /v19.0/{application-id}/ad_placement_groups 	Consistent Documentation	Application Ad Placement Groups
+GET	 /v19.0/{application-id}/adnetworkanalytics_results 	Consistent Documentation	Application Adnetworkanalytics Results
+GET	 /v19.0/{application-id}/mobile_sdk_gk 	Consistent Documentation	Application Mobile Sdk Gk
+GET	 /v19.0/{application-id}/model_asset 	Consistent Documentation	Application Model Asset
+GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Consistent Documentation	Application Monetized Digital Store Objects
+GET	 /v19.0/{application-id}/permissions 	Consistent Documentation	Application Permissions
+GET	 /v19.0/{app-id}/picture 	Consistent Documentation	An app's profile picture.
+GET	 /v19.0/{application-id}/products 	Consistent Documentation	product_ids list<string> List of product ids (e.g. 'golden_gem') to retrieve info about
+GET	 /v19.0/{application-id}/purchases 	Consistent Documentation	Application Purchases
+GET	 /v19.0/{app-id}/roles 	Consistent Documentation	The developer roles defined for a Facebook app.
+GET	 /v19.0/{app-id}/scores 	Consistent Documentation	Scores from this Facebook game for a user and their friends.
+DELETE	/v19.0/{app-id}/scores	Consistent Documentation	You can delete all scores from your app using this edge. To delete individual scores, use the /{user-id}/scores edge.
+GET	 /v19.0/{application-id}/subscribed_domains 	Consistent Documentation	Application Subscribed Domains
+GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Consistent Documentation	Application Subscribed Domains Phishing
+POST	 /v19.0/{app-id}/subscriptions 	Consistent Documentation	You can create new Webhooks subscriptions using this edge
+DELETE	/v19.0/{app-id}/subscriptions	Consistent Documentation	You can delete all or per-object subscriptions using this operation:
+POST	 /v19.0/{app-id}/translations 	Consistent Documentation	You can specify new strings to be translated for your app using this edge:
+GET	 /v19.0/branded_content_search 	Consistent Documentation	Returns branded content based on your search. By default we only return content that is currently available on Facebook or Instagram, and content that was created on or after August 17, 2023.
+GET	 /v19.0/{cpas-advertiser-partnership-recommendation-id} 	Consistent Documentation	Returns a recommendation of a single retailer for a specific brand. This endpoint returns a retailer-brand pair and an advertiser who can advertise on behalf of the producer.
+GET	/v19.0/{canvas-id} 	Consistent Documentation	A canvas document
+GET	 /v19.0/{canvas-id}/preview 	Consistent Documentation	Get preview HTML embed element
+GET	 /v19.0/{canvas-id}/previews 	Consistent Documentation	Get preview notifications for the canvas. Sends a Canvas preview notification to specified page admin ids.

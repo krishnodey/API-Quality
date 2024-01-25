@@ -1,20 +1,101 @@
 ***Anti-Pattern*** 
-Count: 11
-post	 /ping 	Inconsistent Documentation	Returns the literal string 'pong'.
-post	 /pingInStoreReader 	Inconsistent Documentation	Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
-post	 /idFromLegacyId 	Inconsistent Documentation	Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods.
-post	 /report 	Inconsistent Documentation	A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters.
-post	 /search 	Inconsistent Documentation	A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters.
-post	 /inStoreLocations 	Inconsistent Documentation	Retrieve a paginated list of all in-store locations.
-post	 /authorizePaymentMethod 	Inconsistent Documentation	Authorize an eligible payment method and return a payload that includes details of the resulting transaction.
-post	 /authorizePayPalAccount 	Inconsistent Documentation	Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction.
-post	 /authorizeVenmoAccount 	Inconsistent Documentation	Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.
-post	 /authorizeCreditCard 	Inconsistent Documentation	Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.
-post	 /captureTransaction 	Inconsistent Documentation	Capture an authorized transaction and return a payload that includes details of the transaction.
+Count: 40
+POST	 /authorizePaymentMethod 	Inconsistent Documentation	Authorize an eligible payment method and return a payload that includes details of the resulting transaction.
+POST	 /authorizePayPalAccount 	Inconsistent Documentation	Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction.
+POST	 /authorizeVenmoAccount 	Inconsistent Documentation	Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.
+POST	 /authorizeCreditCard 	Inconsistent Documentation	Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.
+POST	 /captureTransaction 	Inconsistent Documentation	Capture an authorized transaction and return a payload that includes details of the transaction.
+POST	 /chargeUsBankAccount 	Inconsistent Documentation	Charge a US bank account and return a payload that includes details of the resulting transaction. See https://developers.braintreepayments.com/guides/ach/configuration for information on eligibility and setup.
+POST	 /chargePayPalAccount 	Inconsistent Documentation	Charge a PayPal account and return a payload that includes details of the resulting transaction.
+POST	 /chargeVenmoAccount 	Inconsistent Documentation	Charge a Venmo account and return a payload that includes details of the resulting transaction. See https://articles.braintreepayments.com/guides/payment-methods/venmo for information on eligibility and setup.
+POST	 /chargeCreditCard 	Inconsistent Documentation	Charge a credit card of any origin and return a payload that includes details of the resulting transaction.
+POST	 /vaultPaymentMethod 	Inconsistent Documentation	Vault payment information from a single-use payment method and return a payload that includes a new multi-use payment method. When vaulting a credit card, by default, this mutation will also verify that card before vaulting.
+POST	 /vaultUsBankAccount 	Inconsistent Documentation	Vault payment information from a single-use US bank account payment method and return a payload that includes a new multi-use payment method.
+POST	 /vaultCreditCard 	Inconsistent Documentation	Vault payment information from a single-use credit card and return a payload that includes a new multi-use payment method. By default, this mutation will also verify the card before vaulting.
+POST	 /refundTransaction 	Inconsistent Documentation	Refund a settled transaction and return a payload that includes details of the refund.
+POST	 /reverseTransaction 	Inconsistent Documentation	Reverse a transaction and return a payload that includes either the voided transaction or a refund.
+POST	 /reverseRefund 	Inconsistent Documentation	Reverse a refund and return a payload that includes voided refund.
+POST	 /refundCreditCard	Inconsistent Documentation	Create a detached refund (unassociated with any previous Braintree payment) to a credit card and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration.
+POST	 /refundUsBankAccount	Inconsistent Documentation	Create a detached refund (unassociated with any previous Braintree payment) to a US Bank Account and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration.
+POST	 /updateCustomFields 	Inconsistent Documentation	Update custom fields on a transaction or refund. Custom fields are defined in the Control Panel.
+POST	 /deletePaymentMethodFromVault 	Inconsistent Documentation	Delete a multi-use payment method from the vault.
+POST	 /partialCaptureTransaction 	Inconsistent Documentation	Partially capture funds from a transaction that was successfully authorized and return a payload that includes a new transaction with information about the capture. This is available for Venmo and PayPal transactions.
+POST	 /tokenizeCustomActionsPaymentMethod 	Inconsistent Documentation	Tokenize Custom Actions fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeCreditCard 	Inconsistent Documentation	Tokenize credit card fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeCvv 	Inconsistent Documentation	Tokenize a credit card's CVV and return a payload that includes a single-use payment method.
+POST	 /tokenizeNetworkToken 	Inconsistent Documentation	Tokenize a network tokenized payment instrument and return a payload that includes a single-use payment method.
+POST	 /tokenizeSamsungPayCard 	Inconsistent Documentation	Tokenize Samsung Pay card fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeUsBankAccount 	Inconsistent Documentation	Tokenize US bank account fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeUsBankLogin 	Inconsistent Documentation	Tokenize US bank login fields and return a payload that includes a single-use payment method.
+POST	 /tokenizePayPalOneTimePayment 	Inconsistent Documentation	Tokenize PayPal One-Time Payment and return a payload that includes a single-use payment method.
+POST	 /tokenizePayPalBillingAgreement 	Inconsistent Documentation	Tokenize PayPal account and return a payload that includes a single-use payment method.
+POST	 /updateCustomer 	Inconsistent Documentation	Update a customer's information.
+POST	 /deleteCustomer 	Inconsistent Documentation	Delete a customer, breaking association between any of the customer's transactions. Will not delete if the customer has existing payment methods.
+POST	 /updateCreditCardBillingAddress 	Inconsistent Documentation	Set a new billing address for a multi-use credit card payment method. By default, this mutation will also verify the card with the new billing address before updating.
+POST	 /updateCreditCardCardholderName 	Inconsistent Documentation	Set a new cardholder name for a multi-use credit card payment method. By default, this mutation will also verify the card with the new cardholder name before updating.
+POST	 /updateCreditCardExpirationDate 	Inconsistent Documentation	Set a new expiration date for a multi-use credit card payment method. By default, this mutation will also verify the card with the new expiration date before updating.
+POST	 /performThreeDSecureLookup 	Inconsistent Documentation	Attempt to perform 3D Secure Authentication on credit card payment method. This may consume the payment method and return a new single-use payment method.
+POST	 /acceptDispute 	Inconsistent Documentation	Accepts a dispute and returns a payload that includes the dispute that was accepted. Only disputes with a status of OPEN can be accepted.
+POST	 /finalizeDispute 	Inconsistent Documentation	Finalizes a dispute and returns a payload that includes the dispute that was finalized. Only disputes with a status of OPEN can be finalized.
+POST	 /createDisputeTextEvidence 	Inconsistent Documentation	Creates text evidence to a dispute and returns a payload that includes the evidence that was created. Only disputes with a status of OPEN can have text evidence created for them.
+POST	 /deleteDisputeEvidence 	Inconsistent Documentation	Deletes evidence from a dispute.
+POST	 /requestFirmwareUpdateFromInStoreReader 	Inconsistent Documentation	Request an in-store reader to update to the latest version of software.
 
 ***Patterns*** 
-Count: 4
-post	 /viewer 	Consistent Documentation	The currently authenticated viewer.
-post	 /clientConfiguration 	Consistent Documentation	The client-side environment and payment method configuration.
-post	 /node 	Consistent Documentation	Fetch any object that extends the Node interface using its ID.
-post	 /paypalFinancingOptions 	Consistent Documentation	Retrieve PayPal financing options that include payment installment plans.
+Count: 56
+GET	 /ping 	Consistent Documentation	Returns the literal string 'pong'.
+GET	 /pingInStoreReader 	Consistent Documentation	Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
+GET	 /viewer 	Consistent Documentation	The currently authenticated viewer.
+GET	 /clientConfiguration 	Consistent Documentation	The client-side environment and payment method configuration.
+GET	 /node 	Consistent Documentation	Fetch any object that extends the Node interface using its ID.
+GET	 /idFromLegacyId 	Consistent Documentation	Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods.
+GET	 /report 	Consistent Documentation	A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters.
+GET	 /search 	Consistent Documentation	A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters.
+GET	 /paypalFinancingOptions 	Consistent Documentation	Retrieve PayPal financing options that include payment installment plans.
+GET	 /inStoreLocations 	Consistent Documentation	Retrieve a paginated list of all in-store locations.
+POST	 /verifyPaymentMethod	Consistent Documentation	Run a verification on a multi-use payment method.
+POST	 /verifyCreditCard 	Consistent Documentation	Run a verification on a multi-use credit card payment method.
+POST	 /verifyUsBankAccount 	Consistent Documentation	Run a verification on a multi-use US bank account payment method.
+POST	 /confirmMicroTransferAmounts	Consistent Documentation	Confirm micro-transfer amounts initiated by vaultUsBankAccount or verifyUsBankAccount, completing the verification process for a US Bank Account via micro-transfer.
+POST	 /createClientToken 	Consistent Documentation	Create a client token that can be used to initialize a client in order to tokenize payment information.
+POST	 /createUniversalAccessToken 	Consistent Documentation	Create a PayPal access token that can be used to make additional API calls or initialize a client.
+POST	 /createPayPalOneTimePayment 	Consistent Documentation	Set up a PayPal One-Time Payment for approval by a PayPal user. See documentation for more information. Your account must be enabled for this feature.
+POST	 /createPayPalBillingAgreement 	Consistent Documentation	Set up a PayPal Billing Agreement Token for approval by a PayPal user.
+POST	 /createCustomer 	Consistent Documentation	Create a customer for storing individual customer information and/or grouping transactions and multi-use payment methods.
+POST	 /createDisputeFileEvidence 	Consistent Documentation	Uploads an evidence file and associates it with a dispute. Note:: file upload requires a special request format. See the 'Uploading Files' integration guide for instructions on how to perform this mutation.
+POST	 /vaultPayPalBillingAgreement 	Consistent Documentation	Vault an existing PayPal Billing Agreement that was not created through Braintree. Only use this mutation if you need to import PayPal Billing Agreements from an existing PayPal integration into your Braintree account.
+POST	 /sandboxSettleTransaction 	Consistent Documentation	Force a transaction to settle in the sandbox environment. Generates an error elsewhere.
+POST	 /createInStoreLocation 	Consistent Documentation	Creates a new In-Store Location to associate Readers.
+POST	 /updateInStoreLocation 	Consistent Documentation	Updates an In-Store Location.
+POST	 /pairInStoreReader 	Consistent Documentation	Pairs a Reader to an account and In-Store Location.
+POST	 /updateInStoreReader 	Consistent Documentation	Updates an In-Store Reader.
+POST	 /requestChargeFromInStoreReader 	Consistent Documentation	Request an in-store reader to begin the charge flow.
+POST	 /requestAuthorizeFromInStoreReader 	Consistent Documentation	Request an in-store reader to begin the authorize flow. Only supported on payment application versions >= 5.1.0.
+POST	 /requestCancelFromInStoreReader 	Consistent Documentation	Request an in-store reader to cancel the charge flow.
+POST	 /requestRefundFromInStoreReader 	Consistent Documentation	Request an in-store reader to start an unreferenced refund flow.
+POST	 /requestVaultFromInStoreReader	Consistent Documentation	Request an in-store reader to vault a payment method.
+POST	 /requestTextDisplayFromInStoreReader 	Consistent Documentation	Request an in-store reader to display text.
+POST	 /requestItemDisplayFromInStoreReader 	Consistent Documentation	Request an in-store reader to display line items.
+POST	 /requestSignaturePromptFromInStoreReader 	Consistent Documentation	Request an in-store reader to display a signature prompt. Only supported on payment application versions >= 3.3.0.
+POST	 /requestConfirmationPromptFromInStoreReader	Consistent Documentation	Request an in-store reader to display a confirmation prompt. Only supported on payment application versions >= 3.3.0.
+POST	 /requestNonPciCardDataFromInStoreReader 	Consistent Documentation	Request an in-store reader to collect non PCI-scoped card data. Only supported on payment application versions >= 5.2.0.
+POST	 /requestAmountPromptFromInStoreReader 	Consistent Documentation	Request an in-store reader to display an amount prompt. Only supported on payment application versions >= 5.2.0.
+POST	 /requestTextPromptFromInStoreReader 	Consistent Documentation	Request an in-store reader to display a text prompt. Only supported on payment application versions >= 5.2.0.
+POST	 /createVenmoPaymentContext 	Consistent Documentation	Create a Venmo payment context.
+POST	 /updateTransactionAmount 	Consistent Documentation	Updates the authorization amount of the transaction.
+POST	 /generateExchangeRateQuote 	Consistent Documentation	Generate a customized currency exchange rate quote for items on a merchant's page. This allows merchants to advertise products in their customer's currency. Your account must be enabled to use this feature.
+POST	 /createNonInstantLocalPaymentContext 	Consistent Documentation	Creates a non-instant local payment context. Your account must be enabled to use this feature.
+POST	 /DisputeEvidence/{id} 	Consistent Documentation	Evidence provided by a merchant to respond to a dispute.
+POST	 /DisputeEvidence/{legacyId} 	Consistent Documentation	Evidence provided by a merchant to respond to a dispute.
+POST	 /InStoreContextResult/{id} 	Consistent Documentation	Reference object for an in-store request.
+POST	 /InStoreReaderOriginDetails 	Consistent Documentation	Additional information about the payment method supplied by an in-store payment reader.
+POST	 /Node/{id} 	Consistent Documentation	Relay compatible Node interface.
+POST	 /Payment/{id} 	Consistent Documentation	A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).
+POST	 /Payment/{legacyId} 	Consistent Documentation	A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).
+POST	 /PaymentContext 	Consistent Documentation	Context associated with a transaction.
+POST	 /PaymentStatusEvent 	Consistent Documentation	Status event in the lifecycle of a payment.
+POST	 /AccountCreationStatus 	Consistent Documentation	The status of the business account creation request.
+POST	 /ApplePayStatus 	Consistent Documentation	The environment being used for Apple Pay.
+POST	 /ApplicationBankAccountPurpose 	Consistent Documentation	The purpose of the merchant application bank account.
+POST	 /ApplicationStatus 	Consistent Documentation	The status of a merchant account application.
+POST	 /BinRecordValue 	Consistent Documentation	A boolean-like value that includes UNKNOWN in the case where the information isn't available.

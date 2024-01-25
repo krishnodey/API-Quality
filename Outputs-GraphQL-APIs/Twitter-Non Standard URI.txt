@@ -1,19 +1,56 @@
 ***Anti-Pattern*** 
-Count: 14
-/v2/users/:id/bookmarks/:tweet_id	Non-standard End-point	 [black space/tab found] 
-/v2/users/:id/bookmarks	Non-standard End-point	 [black space/tab found] 
-/v2/users/:id/bookmarks	Non-standard End-point	 [black space/tab found] 
-/v2/tweets/search/stream	Non-standard End-point	 [black space/tab found] 
-/v2/tweets/search/stream/rules	Non-standard End-point	 [black space/tab found] 
-/tweets/search/stream endpoint.	Non-standard End-point	 [black space/tab found] 
-/v2/tweets/:id/hidden	Non-standard End-point	 [black space/tab found] 
-/v2/users/:id/likes/:tweet_id	Non-standard End-point	 [black space/tab found] 
-/v2/tweets/:id/liking_users	Non-standard End-point	 [black space/tab found] 
-/v2/users/:id/liked_tweets	Non-standard End-point	 [black space/tab found] 
-/v2/users/:id/likes	Non-standard End-point	 [black space/tab found] 
-/v2/tweets/:id	Non-standard End-point	 [black space/tab found] 
-/v2/tweets	Non-standard End-point	 [black space/tab found] 
-/2/tweets/:id/quote_tweets	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 51
+/v2/users/:id/bookmarks/:tweet_id	Standard End-point	
+/v2/users/:id/bookmarks	Standard End-point	
+/v2/users/:id/bookmarks	Standard End-point	
+/v2/tweets/search/stream	Standard End-point	
+/v2/tweets/search/stream/rules	Standard End-point	
+/tweets/search/stream	Standard End-point	
+/v2/tweets/:id/hidden	Standard End-point	
+/v2/users/:id/likes/:tweet_id	Standard End-point	
+/v2/tweets/:id/liking_users	Standard End-point	
+/v2/users/:id/liked_tweets	Standard End-point	
+/v2/users/:id/likes	Standard End-point	
+/v2/tweets/:id	Standard End-point	
+/v2/tweets	Standard End-point	
+/v2/tweets/:id/quote_tweets	Standard End-point	
+/v2/users/:id/retweets/:source_tweet_id	Standard End-point	
+/v2/tweets/:id/retweeted_by	Standard End-point	
+/v2/tweets/:id/retweets	Standard End-point	
+/v2/users/:id/retweets	Standard End-point	
+/v2/tweets/search/all	Standard End-point	
+/v2/tweets/search/recent	Standard End-point	
+/v2/users/:id/mentions	Standard End-point	
+/v2/users/:id/timelines/reverse_chronological	Standard End-point	
+/v2/users/:id/tweets	Standard End-point	
+/v2/tweets/counts/all	Standard End-point	
+/v2/tweets/counts/recent	Standard End-point	
+/v2/users/:id/blocking	Standard End-point	
+/v2/users/:source_user_id/following/:target_user_id	Standard End-point	
+/v2/users/:id/followers	Standard End-point	
+/v2/users/:id/following	Standard End-point	
+/v2/users/:id/following	Standard End-point	
+/v2/users/:source_user_id/muting/:target_user_id	Standard End-point	
+/v2/users/:id/muting	Standard End-point	
+/v2/users/:id/muting	Standard End-point	
+/v2/users/search	Standard End-point	
+/v2/users	Standard End-point	
+/v2/users/:id	Standard End-point	
+/v2/users/by	Standard End-point	
+/v2/users/by/username/:username	Standard End-point	
+/v2/users/me	Standard End-point	
+/v2/spaces/search	Standard End-point	
+/v2/spaces/:id	Standard End-point	
+/v2/spaces/:id/buyers	Standard End-point	
+/v2/spaces/:id/tweets	Standard End-point	
+/v2/spaces/by/creator_ids	Standard End-point	
+/v2/lists/:id/tweets	Standard End-point	
+/v2/lists/:id	Standard End-point	
+/v2/users/:id/owned_lists	Standard End-point	
+/v2/lists/:id/members/:user_id	Standard End-point	
+/v2/lists/:id/members	Standard End-point	
+/v2/users/:id/list_memberships	Standard End-point	
+/v2/lists/:id/members	Standard End-point	

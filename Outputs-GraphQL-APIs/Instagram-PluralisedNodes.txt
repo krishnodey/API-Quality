@@ -1,16 +1,17 @@
 ***Anti-Pattern*** 
 Count: 2
-POST 	/{ig-comment-id}/replies?message={message}	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 16
+Count: 26
 GET	/{ig-comment-id}?fields={fields}	 regular methods.
 GET 	/oauth/access_token	 regular methods.
 GET 	/{user-id}/accounts?access_token={user-access-token}	 regular methods.
 GET 	/{app-id}|{client-token}	 regular methods.
 GET 	/{api-version}/{ig-comment-id}	 regular methods.
 GET 	/{api-version}/{ig-comment-id}/replies	 regular methods.
+POST 	/{ig-comment-id}/replies?message={message}	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/{ig-media-id}/comments	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/{ig-comment-id}/replies	 regular methods.
 DELETE 	/{ig-comment-id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
@@ -21,3 +22,12 @@ GET 	/{api-version}/{ig-user-id}	 regular methods.
 GET 	/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	 regular methods.
 GET 	/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 regular methods.
 GET 	{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	 regular methods.
+GET 	/{api-version}//{instagram-container-id}	 regular methods.
+GET 	/{api-version}//{ig-hashtag-id}	 regular methods.
+GET 	/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	 regular methods.
+GET 	/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields}	 regular methods.
+GET	/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	 regular methods.
+GET 	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	 regular methods.
+GET 	/{ig-user-id}?fields=business_discovery.username({username})	 regular methods.
+GET 	/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	 regular methods.
+GET 	/{api-version}/{ig-user-id}/insights	 regular methods.

@@ -1,11 +1,11 @@
 ***Anti-Pattern*** 
 Count: 8
-/bui/getBUIAllConfig	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
-/bui/getBopSID	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
-/bui/getKDAttachments({id})	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
-/bui/getKDComments({id})	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
-/bui/addKDComment({id})	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found] 
-/bui/getEEMAuth	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/bui/getBUIAllConfig	Amorphous End-point	 [uppercase found] 
+/bui/getBopSID	Amorphous End-point	 [uppercase found] 
+/bui/getKDAttachments({id})	Amorphous End-point	 [uppercase found] 
+/bui/getKDComments({id})	Amorphous End-point	 [uppercase found] 
+/bui/addKDComment({id})	Amorphous End-point	 [uppercase found] 
+/bui/getEEMAuth	Amorphous End-point	 [uppercase found] 
 /gs/mytkt_active	Amorphous End-point	 [underscore found] 
 /gs/mytkt_inactive	Amorphous End-point	 [underscore found] 
 

@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 1
+/namespace	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 54
+/abuseReport/{id}	 Self-descriptive End-point
+/abuseReportLabels	 Self-descriptive End-point
+/addOnPurchase/{id}	 Self-descriptive End-point
+/aiMessages	 Self-descriptive End-point
+/auditEventDefinitions	 Self-descriptive End-point
+/auditEventsInstanceAmazonS3Configurations	 Self-descriptive End-point
+/boardList/{id}	 Self-descriptive End-point
+/ciCatalogResource/{id}	 Self-descriptive End-point
+/ciCatalogResources/{projectPath}	 Self-descriptive End-point
+/ciConfig/{projectPath}	 Self-descriptive End-point
+/ciMinutesUsage/{namespaceId}	 Self-descriptive End-point
+/ciPipelineStage/{id}	 Self-descriptive End-point
+/ciQueueingHistory	 Self-descriptive End-point
+/ciVariables	 Self-descriptive End-point
+/containerRepository/{id}	 Self-descriptive End-point
+/currentLicense	 Self-descriptive End-point
+/currentUser	 Self-descriptive End-point
+/designManagement	 Self-descriptive End-point
+/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	 Self-descriptive End-point
+/echo	 Self-descriptive End-point
+/epicBoardList/{id}	 Self-descriptive End-point
+/explainVulnerabilityPrompt/{vulnerabilityId}	 Self-descriptive End-point
+/frecentGroups	 Self-descriptive End-point
+/frecentProjects	 Self-descriptive End-point
+/geoNode	 Self-descriptive End-point
+/gitpodEnabled	 Self-descriptive End-point
+/group	 Self-descriptive End-point
+groups	 Self-descriptive End-point
+/instanceExternalAuditEventDestinations	 Self-descriptive End-point
+/instanceGoogleCloudLoggingConfigurations	 Self-descriptive End-point
+/instanceSecurityDashboard	 Self-descriptive End-point
+/issue/{id}	 Self-descriptive End-point
+/issues/{assigneeId}	 Self-descriptive End-point
+/iteration/{id}	 Self-descriptive End-point
+/jobs	 Self-descriptive End-point
+/licenseHistoryEntries	 Self-descriptive End-point
+/memberRole/{id}	 Self-descriptive End-point
+/memberRolePermissions	 Self-descriptive End-point
+/memberRoles/{id}	 Self-descriptive End-point
+/mergeRequest/{id}	 Self-descriptive End-point
+/metadata	 Self-descriptive End-point
+/milestone/{id}	 Self-descriptive End-point
+/mlModel/{id}	 Self-descriptive End-point
+/note/{id}	 Self-descriptive End-point
+/organization/{id}	 Self-descriptive End-point
+/organizations	 Self-descriptive End-point
+/package/{id}	 Self-descriptive End-point
+/project/{fullPath}	 Self-descriptive End-point
+/projects/{ids}	 Self-descriptive End-point
+/queryComplexity	 Self-descriptive End-point
+/runner/{id}	 Self-descriptive End-point
+/runnerSetup	 Self-descriptive End-point
+/runners/{creatorId}	 Self-descriptive End-point
+/selfManagedAddOnEligibleUsers	 Self-descriptive End-point

@@ -1,261 +1,261 @@
 ***Anti-Pattern*** 
-Count: 83
-post	 /queries/licenses 	Inconsistent Documentation	Return a list of known open source licenses.
-post	 /queries/marketplaceCategories 	Inconsistent Documentation	Get alphabetically sorted list of Marketplace categories.
-post	 /queries/marketplaceListing 	Inconsistent Documentation	Look up a single Marketplace listing.
-post	 /queries/meta 	Inconsistent Documentation	Return information about the GitHub instance.
-post	 /queries/nodes 	Inconsistent Documentation	Lookup nodes by a list of IDs.
-post	 /queries/relay 	Inconsistent Documentation	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
-post	 /queries/search 	Inconsistent Documentation	Perform a search across resources, returning a maximum of 1,000 results.
-post	 /mutations/changeUserStatus 	Inconsistent Documentation	Update your status on GitHub.
-post	 /mutations/createCheckRun 	Inconsistent Documentation	Create a check run.
-post	 /mutations/createCheckSuite 	Inconsistent Documentation	Create a check suite.
-post	 /mutations/createCommitOnBranch 	Inconsistent Documentation	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
-post	 /mutations/createEnterpriseOrganization 	Inconsistent Documentation	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
-post	 /mutations/createEnvironment 	Inconsistent Documentation	Creates an environment or simply returns it if already exists.
-post	 /mutations/createIpAllowListEntry 	Inconsistent Documentation	Creates a new IP allow list entry.
-post	 /mutations/deleteBranchProtectionRule 	Inconsistent Documentation	Delete a branch protection rule.
-post	 /mutations/deleteDeployment 	Inconsistent Documentation	Deletes a deployment.
-post	 /mutations/deleteDiscussion 	Inconsistent Documentation	Delete a discussion and all of its replies.
-post	 /mutations/deleteDiscussionComment 	Inconsistent Documentation	Delete a discussion comment. If it has replies, wipe it instead.
-post	 /mutations/deleteEnvironment 	Inconsistent Documentation	Deletes an environment.
-post	 /mutations/deleteIpAllowListEntry 	Inconsistent Documentation	Deletes an IP allow list entry.
-post	 /mutations/deleteIssue 	Inconsistent Documentation	Deletes an Issue object.
-post	 /mutations/deleteIssueComment 	Inconsistent Documentation	Deletes an IssueComment object.
-post	 /mutations/deleteLabel 	Inconsistent Documentation	Deletes a label.
-post	 /mutations/deletePackageVersion 	Inconsistent Documentation	Delete a package version.
-post	 /mutations/deleteProject 	Inconsistent Documentation	Deletes a project.
-post	 /mutations/deleteProjectCard 	Inconsistent Documentation	Deletes a project card.
-post	 /mutations/deleteProjectColumn 	Inconsistent Documentation	Deletes a project column.
-post	 /mutations/deleteProjectV2 	Inconsistent Documentation	Delete a project.
-post	 /mutations/deleteProjectV2Field 	Inconsistent Documentation	Delete a project field.
-post	 /mutations/deleteProjectV2Item 	Inconsistent Documentation	Deletes an item from a Project.
-post	 /mutations/deleteProjectV2Workflow 	Inconsistent Documentation	Deletes a project workflow.
-post	 /mutations/deletePullRequestReview 	Inconsistent Documentation	Deletes a pull request review.
-post	 /mutations/deletePullRequestReviewComment 	Inconsistent Documentation	Deletes a pull request review comment.
-post	 /mutations/deleteRef 	Inconsistent Documentation	Delete a Git Ref.
-post	 /mutations/deleteRepositoryRuleset 	Inconsistent Documentation	Delete a repository ruleset.
-post	 /mutations/deleteTeamDiscussion 	Inconsistent Documentation	Deletes a team discussion.
-post	 /mutations/deleteTeamDiscussionComment 	Inconsistent Documentation	Deletes a team discussion comment.
-post	 /mutations/deleteVerifiableDomain 	Inconsistent Documentation	Deletes a verifiable domain.
-post	 /mutations/importProject 	Inconsistent Documentation	Creates a new project by importing columns and a list of issues/PRs.
-post	 /mutations/rerequestCheckSuite 	Inconsistent Documentation	Rerequests an existing check suite.
-post	 /mutations/setEnterpriseIdentityProvider 	Inconsistent Documentation	Creates or updates the identity provider for an enterprise.
-post	 /mutations/unlinkRepositoryFromProject 	Inconsistent Documentation	Deletes a repository link from a project.
-post	 /mutations/updateBranchProtectionRule 	Inconsistent Documentation	Update a branch protection rule.
-post	 /mutations/updateCheckRun 	Inconsistent Documentation	Update a check run.
-post	 /mutations/updateCheckSuitePreferences 	Inconsistent Documentation	Modifies the settings of an existing check suite.
-post	 /mutations/updateDiscussion 	Inconsistent Documentation	Update a discussion.
-post	 /mutations/updateDiscussionComment 	Inconsistent Documentation	Update the contents of a comment on a Discussion.
-post	 /mutations/updateEnterpriseAdministratorRole 	Inconsistent Documentation	Updates the role of an enterprise administrator.
-post	 /mutations/updateEnterpriseMembersCanDeleteIssuesSetting 	Inconsistent Documentation	Sets the members can delete issues setting for an enterprise.
-post	 /mutations/updateEnterpriseMembersCanDeleteRepositoriesSetting 	Inconsistent Documentation	Sets the members can delete repositories setting for an enterprise.
-post	 /mutations/updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Inconsistent Documentation	Sets the members can update protected branches setting for an enterprise.
-post	 /mutations/updateEnterpriseOwnerOrganizationRole 	Inconsistent Documentation	Updates the role of an enterprise owner with an organization.
-post	 /mutations/updateEnterpriseProfile 	Inconsistent Documentation	Updates an enterprise's profile.
-post	 /mutations/updateEnvironment 	Inconsistent Documentation	Updates an environment.
-post	 /mutations/updateIpAllowListEnabledSetting 	Inconsistent Documentation	Sets whether an IP allow list is enabled on an owner.
-post	 /mutations/updateIpAllowListEntry 	Inconsistent Documentation	Updates an IP allow list entry.
-post	 /mutations/updateIpAllowListForInstalledAppsEnabledSetting 	Inconsistent Documentation	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
-post	 /mutations/updateIssue 	Inconsistent Documentation	Updates an Issue.
-post	 /mutations/updateIssueComment 	Inconsistent Documentation	Updates an IssueComment object.
-post	 /mutations/updateLabel 	Inconsistent Documentation	Updates an existing label.
-post	 /mutations/updateNotificationRestrictionSetting 	Inconsistent Documentation	Update the setting to restrict notifications to only verified or approved domains available to an owner.
-post	 /mutations/updateProject 	Inconsistent Documentation	Updates an existing project.
-post	 /mutations/updateProjectCard 	Inconsistent Documentation	Updates an existing project card.
-post	 /mutations/updateProjectColumn 	Inconsistent Documentation	Updates an existing project column.
-post	 /mutations/updateProjectV2 	Inconsistent Documentation	Updates an existing project (beta).
-post	 /mutations/updateProjectV2Collaborators 	Inconsistent Documentation	Update the collaborators on a team or a project.
-post	 /mutations/updateProjectV2DraftIssue 	Inconsistent Documentation	Updates a draft issue within a Project.
-post	 /mutations/updateProjectV2ItemFieldValue 	Inconsistent Documentation	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
-post	 /mutations/updateProjectV2ItemPosition 	Inconsistent Documentation	This mutation updates the position of the item in the project, where the position represents the priority of an item.
-post	 /mutations/updatePullRequest 	Inconsistent Documentation	Update a pull request.
-post	 /mutations/updatePullRequestReview 	Inconsistent Documentation	Updates the body of a pull request review.
-post	 /mutations/updatePullRequestReviewComment 	Inconsistent Documentation	Updates a pull request review comment.
-post	 /mutations/updateRef 	Inconsistent Documentation	Update a Git Ref.
-post	 /mutations/updateRefs 	Inconsistent Documentation	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
-post	 /mutations/updateRepository 	Inconsistent Documentation	Update information about a repository.
-post	 /mutations/updateRepositoryRuleset 	Inconsistent Documentation	Update a repository ruleset.
-post	 /mutations/updateSponsorshipPreferences 	Inconsistent Documentation	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
-post	 /mutations/updateSubscription 	Inconsistent Documentation	Updates the state for subscribable subjects.
-post	 /mutations/updateTeamDiscussion 	Inconsistent Documentation	Updates a team discussion.
-post	 /mutations/updateTeamDiscussionComment 	Inconsistent Documentation	Updates a discussion comment.
-post	 /mutations/updateTeamReviewAssignment 	Inconsistent Documentation	Updates team review assignment.
-post	 /mutations/updateTeamsRepository 	Inconsistent Documentation	Update team repository.
-post	 /mutations/verifyVerifiableDomain 	Inconsistent Documentation	Verify that a verifiable domain has the expected DNS record.
+Count: 53
+POST	 /changeUserStatus 	Inconsistent Documentation	Update your status on GitHub.
+POST	 /createCheckRun 	Inconsistent Documentation	Create a check run.
+POST	 /createCheckSuite 	Inconsistent Documentation	Create a check suite.
+POST	 /createEnterpriseOrganization 	Inconsistent Documentation	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
+POST	 /createEnvironment 	Inconsistent Documentation	Creates an environment or simply returns it if already exists.
+POST	 /createIpAllowListEntry 	Inconsistent Documentation	Creates a new IP allow list entry.
+POST	 /deleteBranchProtectionRule 	Inconsistent Documentation	Delete a branch protection rule.
+POST	 /deleteDeployment 	Inconsistent Documentation	Deletes a deployment.
+POST	 /deleteDiscussion 	Inconsistent Documentation	Delete a discussion and all of its replies.
+POST	 /deleteDiscussionComment 	Inconsistent Documentation	Delete a discussion comment. If it has replies, wipe it instead.
+POST	 /deleteEnvironment 	Inconsistent Documentation	Deletes an environment.
+POST	 /deleteIpAllowListEntry 	Inconsistent Documentation	Deletes an IP allow list entry.
+POST	 /deleteIssue 	Inconsistent Documentation	Deletes an Issue object.
+POST	 /deleteIssueComment 	Inconsistent Documentation	Deletes an IssueComment object.
+POST	 /deleteLabel 	Inconsistent Documentation	Deletes a label.
+POST	 /deletePackageVersion 	Inconsistent Documentation	Delete a package version.
+POST	 /deleteProject 	Inconsistent Documentation	Deletes a project.
+POST	 /deleteProjectCard 	Inconsistent Documentation	Deletes a project card.
+POST	 /deleteProjectColumn 	Inconsistent Documentation	Deletes a project column.
+POST	 /deleteProjectV2 	Inconsistent Documentation	Delete a project.
+POST	 /deleteProjectV2Field 	Inconsistent Documentation	Delete a project field.
+POST	 /deleteProjectV2Item 	Inconsistent Documentation	Deletes an item from a Project.
+POST	 /deleteProjectV2Workflow 	Inconsistent Documentation	Deletes a project workflow.
+POST	 /deletePullRequestReview 	Inconsistent Documentation	Deletes a pull request review.
+POST	 /deletePullRequestReviewComment 	Inconsistent Documentation	Deletes a pull request review comment.
+POST	 /deleteRef 	Inconsistent Documentation	Delete a Git Ref.
+POST	 /deleteRepositoryRuleset 	Inconsistent Documentation	Delete a repository ruleset.
+POST	 /deleteTeamDiscussion 	Inconsistent Documentation	Deletes a team discussion.
+POST	 /deleteTeamDiscussionComment 	Inconsistent Documentation	Deletes a team discussion comment.
+POST	 /deleteVerifiableDomain 	Inconsistent Documentation	Deletes a verifiable domain.
+POST	 /importProject 	Inconsistent Documentation	Creates a new project by importing columns and a list of issues/PRs.
+POST	 /rerequestCheckSuite 	Inconsistent Documentation	Rerequests an existing check suite.
+POST	 /unlinkRepositoryFromProject 	Inconsistent Documentation	Deletes a repository link from a project.
+POST	 /updateBranchProtectionRule 	Inconsistent Documentation	Update a branch protection rule.
+POST	 /updateCheckRun 	Inconsistent Documentation	Update a check run.
+POST	 /updateCheckSuitePreferences 	Inconsistent Documentation	Modifies the settings of an existing check suite.
+POST	 /updateDiscussion 	Inconsistent Documentation	Update a discussion.
+POST	 /updateDiscussionComment 	Inconsistent Documentation	Update the contents of a comment on a Discussion.
+POST	 /updateEnterpriseMembersCanDeleteIssuesSetting 	Inconsistent Documentation	Sets the members can delete issues setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteRepositoriesSetting 	Inconsistent Documentation	Sets the members can delete repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Inconsistent Documentation	Sets the members can update protected branches setting for an enterprise.
+POST	 /updateIpAllowListEnabledSetting 	Inconsistent Documentation	Sets whether an IP allow list is enabled on an owner.
+POST	 /updateIpAllowListEntry 	Inconsistent Documentation	Updates an IP allow list entry.
+POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Inconsistent Documentation	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
+POST	 /updateNotificationRestrictionSetting 	Inconsistent Documentation	Update the setting to restrict notifications to only verified or approved domains available to an owner.
+POST	 /updateProjectV2Collaborators 	Inconsistent Documentation	Update the collaborators on a team or a project.
+POST	 /updatePullRequest 	Inconsistent Documentation	Update a pull request.
+POST	 /updateRef 	Inconsistent Documentation	Update a Git Ref.
+POST	 /updateRefs 	Inconsistent Documentation	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
+POST	 /updateRepository 	Inconsistent Documentation	Update information about a repository.
+POST	 /updateRepositoryRuleset 	Inconsistent Documentation	Update a repository ruleset.
+POST	 /updateTeamsRepository 	Inconsistent Documentation	Update team repository.
+POST	 /verifyVerifiableDomain 	Inconsistent Documentation	Verify that a verifiable domain has the expected DNS record.
 
 ***Patterns*** 
-Count: 173
-post	 /queries/codeOfConduct 	Consistent Documentation	Look up a code of conduct by its key.
-post	 /queries/codesOfConduct 	Consistent Documentation	Look up a code of conduct by its key.
-post	 /queries/enterprise 	Consistent Documentation	Look up an enterprise by URL slug.
-post	 /queries/enterpriseAdministratorInvitation 	Consistent Documentation	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
-post	 /queries/enterpriseAdministratorInvitationByToken 	Consistent Documentation	Look up a pending enterprise administrator invitation by invitation token.
-post	 /queries/license 	Consistent Documentation	Look up an open source license by its key.
-post	 /queries/marketplaceCategory 	Consistent Documentation	Look up a Marketplace category by its slug.
-post	 /queries/marketplaceListings 	Consistent Documentation	Look up Marketplace listings.
-post	 /queries/node 	Consistent Documentation	Fetches an object given its ID.
-post	 /queries/organization 	Consistent Documentation	Lookup a organization by login.
-post	 /queries/rateLimit 	Consistent Documentation	The client's rate limit information.
-post	 /queries/repository 	Consistent Documentation	Lookup a given repository by the owner and repository name.
-post	 /queries/repositoryOwner 	Consistent Documentation	Lookup a repository owner (ie. either a User or an Organization) by login.
-post	 /queries/resource 	Consistent Documentation	Lookup resource by a URL.
-post	 /queries/securityAdvisories 	Consistent Documentation	GitHub Security Advisories.
-post	 /queries/securityAdvisory 	Consistent Documentation	Fetch a Security Advisory by its GHSA ID.
-post	 /queries/securityVulnerabilities 	Consistent Documentation	Software Vulnerabilities documented by GitHub Security Advisories.
-post	 /queries/sponsorables 	Consistent Documentation	Users and organizations who can be sponsored via GitHub Sponsors.
-post	 /queries/topic 	Consistent Documentation	Look up a topic by name.
-post	 /queries/user 	Consistent Documentation	Lookup a user by login.
-post	 /queries/viewer 	Consistent Documentation	The currently authenticated user.
-post	 /mutations/abortQueuedMigrations 	Consistent Documentation	Clear all of a customer's queued migrations.
-post	 /mutations/abortRepositoryMigration 	Consistent Documentation	Abort a repository migration queued or in progress.
-post	 /mutations/acceptEnterpriseAdministratorInvitation 	Consistent Documentation	Accepts a pending invitation for a user to become an administrator of an enterprise.
-post	 /mutations/acceptTopicSuggestion 	Consistent Documentation	Applies a suggested topic to the repository.
-post	 /mutations/addAssigneesToAssignable 	Consistent Documentation	Adds assignees to an assignable object.
-post	 /mutations/addComment 	Consistent Documentation	Adds a comment to an Issue or Pull Request.
-post	 /mutations/addDiscussionComment 	Consistent Documentation	Adds a comment to a Discussion, possibly as a reply to another comment.
-post	 /mutations/addDiscussionPollVote 	Consistent Documentation	Vote for an option in a discussion poll.
-post	 /mutations/addEnterpriseOrganizationMember 	Consistent Documentation	Adds enterprise members to an organization within the enterprise.
-post	 /mutations/addEnterpriseSupportEntitlement 	Consistent Documentation	Adds a support entitlement to an enterprise member.
-post	 /mutations/addLabelsToLabelable 	Consistent Documentation	Adds labels to a labelable object.
-post	 /mutations/addProjectCard 	Consistent Documentation	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
-post	 /mutations/addProjectColumn 	Consistent Documentation	Adds a column to a Project.
-post	 /mutations/addProjectV2DraftIssue 	Consistent Documentation	Creates a new draft issue and add it to a Project.
-post	 /mutations/addProjectV2ItemById 	Consistent Documentation	Links an existing content instance to a Project.
-post	 /mutations/addPullRequestReview 	Consistent Documentation	Adds a review to a Pull Request.
-post	 /mutations/addPullRequestReviewComment 	Consistent Documentation	Adds a comment to a review.
-post	 /mutations/addPullRequestReviewThread 	Consistent Documentation	Adds a new thread to a pending Pull Request Review.
-post	 /mutations/addPullRequestReviewThreadReply 	Consistent Documentation	Adds a reply to an existing Pull Request Review Thread.
-post	 /mutations/addReaction 	Consistent Documentation	Adds a reaction to a subject.
-post	 /mutations/addStar 	Consistent Documentation	Adds a star to a Starrable.
-post	 /mutations/addUpvote 	Consistent Documentation	Add an upvote to a discussion or discussion comment.
-post	 /mutations/addVerifiableDomain 	Consistent Documentation	Adds a verifiable domain to an owning account.
-post	 /mutations/approveDeployments 	Consistent Documentation	Approve all pending deployments under one or more environments.
-post	 /mutations/approveVerifiableDomain 	Consistent Documentation	Approve a verifiable domain for notification delivery.
-post	 /mutations/archiveProjectV2Item 	Consistent Documentation	Archives a ProjectV2Item.
-post	 /mutations/archiveRepository 	Consistent Documentation	Marks a repository as archived.
-post	 /mutations/cancelEnterpriseAdminInvitation 	Consistent Documentation	Cancels a pending invitation for an administrator to join an enterprise.
-post	 /mutations/cancelSponsorship 	Consistent Documentation	Cancel an active sponsorship.
-post	 /mutations/clearLabelsFromLabelable 	Consistent Documentation	Clears all labels from a labelable object.
-post	 /mutations/clearProjectV2ItemFieldValue 	Consistent Documentation	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
-post	 /mutations/cloneProject 	Consistent Documentation	Creates a new project by cloning configuration from an existing project.
-post	 /mutations/cloneTemplateRepository 	Consistent Documentation	Create a new repository with the same files and directory structure as a template repository.
-post	 /mutations/closeDiscussion 	Consistent Documentation	Close a discussion.
-post	 /mutations/closeIssue 	Consistent Documentation	Close an issue.
-post	 /mutations/closePullRequest 	Consistent Documentation	Close a pull request.
-post	 /mutations/convertProjectCardNoteToIssue 	Consistent Documentation	Convert a project note card to one associated with a newly created issue.
-post	 /mutations/convertPullRequestToDraft 	Consistent Documentation	Converts a pull request to draft.
-post	 /mutations/copyProjectV2 	Consistent Documentation	Copy a project.
-post	 /mutations/createAttributionInvitation 	Consistent Documentation	Invites a user to claim reattributable data.
-post	 /mutations/createBranchProtectionRule 	Consistent Documentation	Create a new branch protection rule.
-post	 /mutations/createDeployment 	Consistent Documentation	Creates a new deployment event.
-post	 /mutations/createDeploymentStatus 	Consistent Documentation	Create a deployment status.
-post	 /mutations/createDiscussion 	Consistent Documentation	Create a discussion.
-post	 /mutations/createIssue 	Consistent Documentation	Creates a new issue.
-post	 /mutations/createLabel 	Consistent Documentation	Creates a new label.
-post	 /mutations/createLinkedBranch 	Consistent Documentation	Create a branch linked to an issue.
-post	 /mutations/createMigrationSource 	Consistent Documentation	Creates a GitHub Enterprise Importer (GEI) migration source.
-post	 /mutations/createProject 	Consistent Documentation	Creates a new project.
-post	 /mutations/createProjectV2 	Consistent Documentation	Creates a new project.
-post	 /mutations/createProjectV2Field 	Consistent Documentation	Create a new project field.
-post	 /mutations/createPullRequest 	Consistent Documentation	Create a new pull request.
-post	 /mutations/createRef 	Consistent Documentation	Create a new Git Ref.
-post	 /mutations/createRepository 	Consistent Documentation	Create a new repository.
-post	 /mutations/createRepositoryRuleset 	Consistent Documentation	Create a repository ruleset.
-post	 /mutations/createSponsorsListing 	Consistent Documentation	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
-post	 /mutations/createSponsorsTier 	Consistent Documentation	Create a new payment tier for your GitHub Sponsors profile.
-post	 /mutations/createSponsorship 	Consistent Documentation	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
-post	 /mutations/createSponsorships 	Consistent Documentation	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
-post	 /mutations/createTeamDiscussion 	Consistent Documentation	Creates a new team discussion.
-post	 /mutations/createTeamDiscussionComment 	Consistent Documentation	Creates a new team discussion comment.
-post	 /mutations/declineTopicSuggestion 	Consistent Documentation	Rejects a suggested topic for the repository.
-post	 /mutations/deleteLinkedBranch 	Consistent Documentation	Unlink a branch from an issue.
-post	 /mutations/dequeuePullRequest 	Consistent Documentation	Remove a pull request from the merge queue.
-post	 /mutations/disablePullRequestAutoMerge 	Consistent Documentation	Disable auto merge on the given pull request.
-post	 /mutations/dismissPullRequestReview 	Consistent Documentation	Dismisses an approved or rejected pull request review.
-post	 /mutations/dismissRepositoryVulnerabilityAlert 	Consistent Documentation	Dismisses the Dependabot alert.
-post	 /mutations/enablePullRequestAutoMerge 	Consistent Documentation	Enable the default auto-merge on a pull request.
-post	 /mutations/enqueuePullRequest 	Consistent Documentation	Add a pull request to the merge queue.
-post	 /mutations/followOrganization 	Consistent Documentation	Follow an organization.
-post	 /mutations/followUser 	Consistent Documentation	Follow a user.
-post	 /mutations/grantEnterpriseOrganizationsMigratorRole 	Consistent Documentation	Grant the migrator role to a user for all organizations under an enterprise account.
-post	 /mutations/grantMigratorRole 	Consistent Documentation	Grant the migrator role to a user or a team.
-post	 /mutations/inviteEnterpriseAdmin 	Consistent Documentation	Invite someone to become an administrator of the enterprise.
-post	 /mutations/linkProjectV2ToRepository 	Consistent Documentation	Links a project to a repository.
-post	 /mutations/linkProjectV2ToTeam 	Consistent Documentation	Links a project to a team.
-post	 /mutations/linkRepositoryToProject 	Consistent Documentation	Creates a repository link for a project.
-post	 /mutations/lockLockable 	Consistent Documentation	Lock a lockable object.
-post	 /mutations/markDiscussionCommentAsAnswer 	Consistent Documentation	Mark a discussion comment as the chosen answer for discussions in an answerable category.
-post	 /mutations/markFileAsViewed 	Consistent Documentation	Mark a pull request file as viewed.
-post	 /mutations/markProjectV2AsTemplate 	Consistent Documentation	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
-post	 /mutations/markPullRequestReadyForReview 	Consistent Documentation	Marks a pull request ready for review.
-post	 /mutations/mergeBranch 	Consistent Documentation	Merge a head into a branch.
-post	 /mutations/mergePullRequest 	Consistent Documentation	Merge a pull request.
-post	 /mutations/minimizeComment 	Consistent Documentation	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
-post	 /mutations/moveProjectCard 	Consistent Documentation	Moves a project card to another place.
-post	 /mutations/moveProjectColumn 	Consistent Documentation	Moves a project column to another place.
-post	 /mutations/pinIssue 	Consistent Documentation	Pin an issue to a repository.
-post	 /mutations/publishSponsorsTier 	Consistent Documentation	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
-post	 /mutations/regenerateEnterpriseIdentityProviderRecoveryCodes 	Consistent Documentation	Regenerates the identity provider recovery codes for an enterprise.
-post	 /mutations/regenerateVerifiableDomainToken 	Consistent Documentation	Regenerates a verifiable domain's verification token.
-post	 /mutations/rejectDeployments 	Consistent Documentation	Reject all pending deployments under one or more environments.
-post	 /mutations/removeAssigneesFromAssignable 	Consistent Documentation	Removes assignees from an assignable object.
-post	 /mutations/removeEnterpriseAdmin 	Consistent Documentation	Removes an administrator from the enterprise.
-post	 /mutations/removeEnterpriseIdentityProvider 	Consistent Documentation	Removes the identity provider from an enterprise.
-post	 /mutations/removeEnterpriseMember 	Consistent Documentation	Removes a user from all organizations within the enterprise.
-post	 /mutations/removeEnterpriseOrganization 	Consistent Documentation	Removes an organization from the enterprise.
-post	 /mutations/removeEnterpriseSupportEntitlement 	Consistent Documentation	Removes a support entitlement from an enterprise member.
-post	 /mutations/removeLabelsFromLabelable 	Consistent Documentation	Removes labels from a Labelable object.
-post	 /mutations/removeOutsideCollaborator 	Consistent Documentation	Removes outside collaborator from all repositories in an organization.
-post	 /mutations/removeReaction 	Consistent Documentation	Removes a reaction from a subject.
-post	 /mutations/removeStar 	Consistent Documentation	Removes a star from a Starrable.
-post	 /mutations/removeUpvote 	Consistent Documentation	Remove an upvote to a discussion or discussion comment.
-post	 /mutations/reopenDiscussion 	Consistent Documentation	Reopen a discussion.
-post	 /mutations/reopenIssue 	Consistent Documentation	Reopen a issue.
-post	 /mutations/reopenPullRequest 	Consistent Documentation	Reopen a pull request.
-post	 /mutations/requestReviews 	Consistent Documentation	Set review requests on a pull request.
-post	 /mutations/resolveReviewThread 	Consistent Documentation	Marks a review thread as resolved.
-post	 /mutations/retireSponsorsTier 	Consistent Documentation	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
-post	 /mutations/revertPullRequest 	Consistent Documentation	Create a pull request that reverts the changes from a merged pull request.
-post	 /mutations/revokeEnterpriseOrganizationsMigratorRole 	Consistent Documentation	Revoke the migrator role to a user for all organizations under an enterprise account.
-post	 /mutations/revokeMigratorRole 	Consistent Documentation	Revoke the migrator role from a user or a team.
-post	 /mutations/setOrganizationInteractionLimit 	Consistent Documentation	Set an organization level interaction limit for an organization's public repositories.
-post	 /mutations/setRepositoryInteractionLimit 	Consistent Documentation	Sets an interaction limit setting for a repository.
-post	 /mutations/setUserInteractionLimit 	Consistent Documentation	Set a user level interaction limit for an user's public repositories.
-post	 /mutations/startOrganizationMigration 	Consistent Documentation	Starts a GitHub Enterprise Importer organization migration.
-post	 /mutations/startRepositoryMigration 	Consistent Documentation	Starts a GitHub Enterprise Importer (GEI) repository migration.
-post	 /mutations/submitPullRequestReview 	Consistent Documentation	Submits a pending pull request review.
-post	 /mutations/transferEnterpriseOrganization 	Consistent Documentation	Transfer an organization from one enterprise to another enterprise.
-post	 /mutations/transferIssue 	Consistent Documentation	Transfer an issue to a different repository.
-post	 /mutations/unarchiveProjectV2Item 	Consistent Documentation	Unarchives a ProjectV2Item.
-post	 /mutations/unarchiveRepository 	Consistent Documentation	Unarchives a repository.
-post	 /mutations/unfollowOrganization 	Consistent Documentation	Unfollow an organization.
-post	 /mutations/unfollowUser 	Consistent Documentation	Unfollow a user.
-post	 /mutations/unlinkProjectV2FromRepository 	Consistent Documentation	Unlinks a project from a repository.
-post	 /mutations/unlinkProjectV2FromTeam 	Consistent Documentation	Unlinks a project to a team.
-post	 /mutations/unlockLockable 	Consistent Documentation	Unlock a lockable object.
-post	 /mutations/unmarkDiscussionCommentAsAnswer 	Consistent Documentation	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
-post	 /mutations/unmarkFileAsViewed 	Consistent Documentation	Unmark a pull request file as viewed.
-post	 /mutations/unmarkIssueAsDuplicate 	Consistent Documentation	Unmark an issue as a duplicate of another issue.
-post	 /mutations/unmarkProjectV2AsTemplate 	Consistent Documentation	Unmark a project as a template.
-post	 /mutations/unminimizeComment 	Consistent Documentation	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
-post	 /mutations/unpinIssue 	Consistent Documentation	Unpin a pinned issue from a repository.
-post	 /mutations/unresolveReviewThread 	Consistent Documentation	Marks a review thread as unresolved.
-post	 /mutations/unsubscribeFromNotifications 	Consistent Documentation	Unsubscribes from notifications.
-post	 /mutations/updateEnterpriseAllowPrivateRepositoryForkingSetting 	Consistent Documentation	Sets whether private repository forks are enabled for an enterprise.
-post	 /mutations/updateEnterpriseDefaultRepositoryPermissionSetting 	Consistent Documentation	Sets the base repository permission for organizations in an enterprise.
-post	 /mutations/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Consistent Documentation	Sets whether organization members with admin permissions on a repository can change repository visibility.
-post	 /mutations/updateEnterpriseMembersCanCreateRepositoriesSetting 	Consistent Documentation	Sets the members can create repositories setting for an enterprise.
-post	 /mutations/updateEnterpriseMembersCanInviteCollaboratorsSetting 	Consistent Documentation	Sets whether members can invite collaborators are enabled for an enterprise.
-post	 /mutations/updateEnterpriseMembersCanMakePurchasesSetting 	Consistent Documentation	Sets whether or not an organization owner can make purchases.
-post	 /mutations/updateEnterpriseMembersCanViewDependencyInsightsSetting 	Consistent Documentation	Sets the members can view dependency insights for an enterprise.
-post	 /mutations/updateEnterpriseOrganizationProjectsSetting 	Consistent Documentation	Sets whether organization projects are enabled for an enterprise.
-post	 /mutations/updateEnterpriseRepositoryProjectsSetting 	Consistent Documentation	Sets whether repository projects are enabled for a enterprise.
-post	 /mutations/updateEnterpriseTeamDiscussionsSetting 	Consistent Documentation	Sets whether team discussions are enabled for an enterprise.
-post	 /mutations/updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Consistent Documentation	Sets whether two factor authentication is required for all users in an enterprise.
-post	 /mutations/updateOrganizationAllowPrivateRepositoryForkingSetting 	Consistent Documentation	Sets whether private repository forks are enabled for an organization.
-post	 /mutations/updateOrganizationWebCommitSignoffSetting 	Consistent Documentation	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
-post	 /mutations/updatePatreonSponsorability 	Consistent Documentation	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
-post	 /mutations/updatePullRequestBranch 	Consistent Documentation	Merge or Rebase HEAD from upstream branch into pull request branch.
-post	 /mutations/updateRepositoryWebCommitSignoffSetting 	Consistent Documentation	Sets whether contributors are required to sign off on web-based commits for a repository.
-post	 /mutations/updateTopics 	Consistent Documentation	Replaces the repository's topics with the given topics.
+Count: 203
+GET	 /codeOfConduct 	Consistent Documentation	Look up a code of conduct by its key.
+GET	 /codesOfConduct 	Consistent Documentation	Look up a code of conduct by its key.
+GET	 /enterprise 	Consistent Documentation	Look up an enterprise by URL slug.
+GET	 /enterpriseAdministratorInvitation 	Consistent Documentation	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
+GET	 /enterpriseAdministratorInvitationByToken 	Consistent Documentation	Look up a pending enterprise administrator invitation by invitation token.
+GET	 /license 	Consistent Documentation	Look up an open source license by its key.
+GET	 /licenses 	Consistent Documentation	Return a list of known open source licenses.
+GET	 /marketplaceCategories 	Consistent Documentation	Get alphabetically sorted list of Marketplace categories.
+GET	 /marketplaceCategory 	Consistent Documentation	Look up a Marketplace category by its slug.
+GET	 /marketplaceListing 	Consistent Documentation	Look up a single Marketplace listing.
+GET	 /marketplaceListings 	Consistent Documentation	Look up Marketplace listings.
+GET	 /meta 	Consistent Documentation	Return information about the GitHub instance.
+GET	 /node 	Consistent Documentation	Fetches an object given its ID.
+GET	 /nodes 	Consistent Documentation	Lookup nodes by a list of IDs.
+GET	 /organization 	Consistent Documentation	Lookup a organization by login.
+GET	 /rateLimit 	Consistent Documentation	The client's rate limit information.
+GET	 /relay 	Consistent Documentation	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
+GET	 /repository 	Consistent Documentation	Lookup a given repository by the owner and repository name.
+GET	 /repositoryOwner 	Consistent Documentation	Lookup a repository owner (ie. either a User or an Organization) by login.
+GET	 /resource 	Consistent Documentation	Lookup resource by a URL.
+GET	 /search 	Consistent Documentation	Perform a search across resources, returning a maximum of 1,000 results.
+GET	 /securityAdvisories 	Consistent Documentation	GitHub Security Advisories.
+GET	 /securityAdvisory 	Consistent Documentation	Fetch a Security Advisory by its GHSA ID.
+GET	 /securityVulnerabilities 	Consistent Documentation	Software Vulnerabilities documented by GitHub Security Advisories.
+GET	 /sponsorables 	Consistent Documentation	Users and organizations who can be sponsored via GitHub Sponsors.
+GET	 /topic 	Consistent Documentation	Look up a topic by name.
+GET	 /user 	Consistent Documentation	Lookup a user by login.
+GET	 /viewer 	Consistent Documentation	The currently authenticated user.
+POST	 /abortQueuedMigrations 	Consistent Documentation	Clear all of a customer's queued migrations.
+POST	 /abortRepositoryMigration 	Consistent Documentation	Abort a repository migration queued or in progress.
+POST	 /acceptEnterpriseAdministratorInvitation 	Consistent Documentation	Accepts a pending invitation for a user to become an administrator of an enterprise.
+POST	 /acceptTopicSuggestion 	Consistent Documentation	Applies a suggested topic to the repository.
+POST	 /addAssigneesToAssignable 	Consistent Documentation	Adds assignees to an assignable object.
+POST	 /addComment 	Consistent Documentation	Adds a comment to an Issue or Pull Request.
+POST	 /addDiscussionComment 	Consistent Documentation	Adds a comment to a Discussion, possibly as a reply to another comment.
+POST	 /addDiscussionPollVote 	Consistent Documentation	Vote for an option in a discussion poll.
+POST	 /addEnterpriseOrganizationMember 	Consistent Documentation	Adds enterprise members to an organization within the enterprise.
+POST	 /addEnterpriseSupportEntitlement 	Consistent Documentation	Adds a support entitlement to an enterprise member.
+POST	 /addLabelsToLabelable 	Consistent Documentation	Adds labels to a labelable object.
+POST	 /addProjectCard 	Consistent Documentation	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
+POST	 /addProjectColumn 	Consistent Documentation	Adds a column to a Project.
+POST	 /addProjectV2DraftIssue 	Consistent Documentation	Creates a new draft issue and add it to a Project.
+POST	 /addProjectV2ItemById 	Consistent Documentation	Links an existing content instance to a Project.
+POST	 /addPullRequestReview 	Consistent Documentation	Adds a review to a Pull Request.
+POST	 /addPullRequestReviewComment 	Consistent Documentation	Adds a comment to a review.
+POST	 /addPullRequestReviewThread 	Consistent Documentation	Adds a new thread to a pending Pull Request Review.
+POST	 /addPullRequestReviewThreadReply 	Consistent Documentation	Adds a reply to an existing Pull Request Review Thread.
+POST	 /addReaction 	Consistent Documentation	Adds a reaction to a subject.
+POST	 /addStar 	Consistent Documentation	Adds a star to a Starrable.
+POST	 /addUpvote 	Consistent Documentation	Add an upvote to a discussion or discussion comment.
+POST	 /addVerifiableDomain 	Consistent Documentation	Adds a verifiable domain to an owning account.
+POST	 /approveDeployments 	Consistent Documentation	Approve all pending deployments under one or more environments.
+POST	 /approveVerifiableDomain 	Consistent Documentation	Approve a verifiable domain for notification delivery.
+POST	 /archiveProjectV2Item 	Consistent Documentation	Archives a ProjectV2Item.
+POST	 /archiveRepository 	Consistent Documentation	Marks a repository as archived.
+POST	 /cancelEnterpriseAdminInvitation 	Consistent Documentation	Cancels a pending invitation for an administrator to join an enterprise.
+POST	 /cancelSponsorship 	Consistent Documentation	Cancel an active sponsorship.
+POST	 /clearLabelsFromLabelable 	Consistent Documentation	Clears all labels from a labelable object.
+POST	 /clearProjectV2ItemFieldValue 	Consistent Documentation	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
+POST	 /cloneProject 	Consistent Documentation	Creates a new project by cloning configuration from an existing project.
+POST	 /cloneTemplateRepository 	Consistent Documentation	Create a new repository with the same files and directory structure as a template repository.
+POST	 /closeDiscussion 	Consistent Documentation	Close a discussion.
+POST	 /closeIssue 	Consistent Documentation	Close an issue.
+POST	 /closePullRequest 	Consistent Documentation	Close a pull request.
+POST	 /convertProjectCardNoteToIssue 	Consistent Documentation	Convert a project note card to one associated with a newly created issue.
+POST	 /convertPullRequestToDraft 	Consistent Documentation	Converts a pull request to draft.
+POST	 /copyProjectV2 	Consistent Documentation	Copy a project.
+POST	 /createAttributionInvitation 	Consistent Documentation	Invites a user to claim reattributable data.
+POST	 /createBranchProtectionRule 	Consistent Documentation	Create a new branch protection rule.
+POST	 /createCommitOnBranch 	Consistent Documentation	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
+POST	 /createDeployment 	Consistent Documentation	Creates a new deployment event.
+POST	 /createDeploymentStatus 	Consistent Documentation	Create a deployment status.
+POST	 /createDiscussion 	Consistent Documentation	Create a discussion.
+POST	 /createIssue 	Consistent Documentation	Creates a new issue.
+POST	 /createLabel 	Consistent Documentation	Creates a new label.
+POST	 /createLinkedBranch 	Consistent Documentation	Create a branch linked to an issue.
+POST	 /createMigrationSource 	Consistent Documentation	Creates a GitHub Enterprise Importer (GEI) migration source.
+POST	 /createProject 	Consistent Documentation	Creates a new project.
+POST	 /createProjectV2 	Consistent Documentation	Creates a new project.
+POST	 /createProjectV2Field 	Consistent Documentation	Create a new project field.
+POST	 /createPullRequest 	Consistent Documentation	Create a new pull request.
+POST	 /createRef 	Consistent Documentation	Create a new Git Ref.
+POST	 /createRepository 	Consistent Documentation	Create a new repository.
+POST	 /createRepositoryRuleset 	Consistent Documentation	Create a repository ruleset.
+POST	 /createSponsorsListing 	Consistent Documentation	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
+POST	 /createSponsorsTier 	Consistent Documentation	Create a new payment tier for your GitHub Sponsors profile.
+POST	 /createSponsorship 	Consistent Documentation	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
+POST	 /createSponsorships 	Consistent Documentation	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+POST	 /createTeamDiscussion 	Consistent Documentation	Creates a new team discussion.
+POST	 /createTeamDiscussionComment 	Consistent Documentation	Creates a new team discussion comment.
+POST	 /declineTopicSuggestion 	Consistent Documentation	Rejects a suggested topic for the repository.
+POST	 /deleteLinkedBranch 	Consistent Documentation	Unlink a branch from an issue.
+POST	 /dequeuePullRequest 	Consistent Documentation	Remove a pull request from the merge queue.
+POST	 /disablePullRequestAutoMerge 	Consistent Documentation	Disable auto merge on the given pull request.
+POST	 /dismissPullRequestReview 	Consistent Documentation	Dismisses an approved or rejected pull request review.
+POST	 /dismissRepositoryVulnerabilityAlert 	Consistent Documentation	Dismisses the Dependabot alert.
+POST	 /enablePullRequestAutoMerge 	Consistent Documentation	Enable the default auto-merge on a pull request.
+POST	 /enqueuePullRequest 	Consistent Documentation	Add a pull request to the merge queue.
+POST	 /followOrganization 	Consistent Documentation	Follow an organization.
+POST	 /followUser 	Consistent Documentation	Follow a user.
+POST	 /grantEnterpriseOrganizationsMigratorRole 	Consistent Documentation	Grant the migrator role to a user for all organizations under an enterprise account.
+POST	 /grantMigratorRole 	Consistent Documentation	Grant the migrator role to a user or a team.
+POST	 /inviteEnterpriseAdmin 	Consistent Documentation	Invite someone to become an administrator of the enterprise.
+POST	 /linkProjectV2ToRepository 	Consistent Documentation	Links a project to a repository.
+POST	 /linkProjectV2ToTeam 	Consistent Documentation	Links a project to a team.
+POST	 /linkRepositoryToProject 	Consistent Documentation	Creates a repository link for a project.
+POST	 /lockLockable 	Consistent Documentation	Lock a lockable object.
+POST	 /markDiscussionCommentAsAnswer 	Consistent Documentation	Mark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /markFileAsViewed 	Consistent Documentation	Mark a pull request file as viewed.
+POST	 /markProjectV2AsTemplate 	Consistent Documentation	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
+POST	 /markPullRequestReadyForReview 	Consistent Documentation	Marks a pull request ready for review.
+POST	 /mergeBranch 	Consistent Documentation	Merge a head into a branch.
+POST	 /mergePullRequest 	Consistent Documentation	Merge a pull request.
+POST	 /minimizeComment 	Consistent Documentation	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /moveProjectCard 	Consistent Documentation	Moves a project card to another place.
+POST	 /moveProjectColumn 	Consistent Documentation	Moves a project column to another place.
+POST	 /pinIssue 	Consistent Documentation	Pin an issue to a repository.
+POST	 /publishSponsorsTier 	Consistent Documentation	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
+POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Consistent Documentation	Regenerates the identity provider recovery codes for an enterprise.
+POST	 /regenerateVerifiableDomainToken 	Consistent Documentation	Regenerates a verifiable domain's verification token.
+POST	 /rejectDeployments 	Consistent Documentation	Reject all pending deployments under one or more environments.
+POST	 /removeAssigneesFromAssignable 	Consistent Documentation	Removes assignees from an assignable object.
+POST	 /removeEnterpriseAdmin 	Consistent Documentation	Removes an administrator from the enterprise.
+POST	 /removeEnterpriseIdentityProvider 	Consistent Documentation	Removes the identity provider from an enterprise.
+POST	 /removeEnterpriseMember 	Consistent Documentation	Removes a user from all organizations within the enterprise.
+POST	 /removeEnterpriseOrganization 	Consistent Documentation	Removes an organization from the enterprise.
+POST	 /removeEnterpriseSupportEntitlement 	Consistent Documentation	Removes a support entitlement from an enterprise member.
+POST	 /removeLabelsFromLabelable 	Consistent Documentation	Removes labels from a Labelable object.
+POST	 /removeOutsideCollaborator 	Consistent Documentation	Removes outside collaborator from all repositories in an organization.
+POST	 /removeReaction 	Consistent Documentation	Removes a reaction from a subject.
+POST	 /removeStar 	Consistent Documentation	Removes a star from a Starrable.
+POST	 /removeUpvote 	Consistent Documentation	Remove an upvote to a discussion or discussion comment.
+POST	 /reopenDiscussion 	Consistent Documentation	Reopen a discussion.
+POST	 /reopenIssue 	Consistent Documentation	Reopen a issue.
+POST	 /reopenPullRequest 	Consistent Documentation	Reopen a pull request.
+POST	 /requestReviews 	Consistent Documentation	Set review requests on a pull request.
+POST	 /resolveReviewThread 	Consistent Documentation	Marks a review thread as resolved.
+POST	 /retireSponsorsTier 	Consistent Documentation	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+POST	 /revertPullRequest 	Consistent Documentation	Create a pull request that reverts the changes from a merged pull request.
+POST	 /revokeEnterpriseOrganizationsMigratorRole 	Consistent Documentation	Revoke the migrator role to a user for all organizations under an enterprise account.
+POST	 /revokeMigratorRole 	Consistent Documentation	Revoke the migrator role from a user or a team.
+POST	 /setEnterpriseIdentityProvider 	Consistent Documentation	Creates or updates the identity provider for an enterprise.
+POST	 /setOrganizationInteractionLimit 	Consistent Documentation	Set an organization level interaction limit for an organization's public repositories.
+POST	 /setRepositoryInteractionLimit 	Consistent Documentation	Sets an interaction limit setting for a repository.
+POST	 /setUserInteractionLimit 	Consistent Documentation	Set a user level interaction limit for an user's public repositories.
+POST	 /startOrganizationMigration 	Consistent Documentation	Starts a GitHub Enterprise Importer organization migration.
+POST	 /startRepositoryMigration 	Consistent Documentation	Starts a GitHub Enterprise Importer (GEI) repository migration.
+POST	 /submitPullRequestReview 	Consistent Documentation	Submits a pending pull request review.
+POST	 /transferEnterpriseOrganization 	Consistent Documentation	Transfer an organization from one enterprise to another enterprise.
+POST	 /transferIssue 	Consistent Documentation	Transfer an issue to a different repository.
+POST	 /unarchiveProjectV2Item 	Consistent Documentation	Unarchives a ProjectV2Item.
+POST	 /unarchiveRepository 	Consistent Documentation	Unarchives a repository.
+POST	 /unfollowOrganization 	Consistent Documentation	Unfollow an organization.
+POST	 /unfollowUser 	Consistent Documentation	Unfollow a user.
+POST	 /unlinkProjectV2FromRepository 	Consistent Documentation	Unlinks a project from a repository.
+POST	 /unlinkProjectV2FromTeam 	Consistent Documentation	Unlinks a project to a team.
+POST	 /unlockLockable 	Consistent Documentation	Unlock a lockable object.
+POST	 /unmarkDiscussionCommentAsAnswer 	Consistent Documentation	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /unmarkFileAsViewed 	Consistent Documentation	Unmark a pull request file as viewed.
+POST	 /unmarkIssueAsDuplicate 	Consistent Documentation	Unmark an issue as a duplicate of another issue.
+POST	 /unmarkProjectV2AsTemplate 	Consistent Documentation	Unmark a project as a template.
+POST	 /unminimizeComment 	Consistent Documentation	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /unpinIssue 	Consistent Documentation	Unpin a pinned issue from a repository.
+POST	 /unresolveReviewThread 	Consistent Documentation	Marks a review thread as unresolved.
+POST	 /unsubscribeFromNotifications 	Consistent Documentation	Unsubscribes from notifications.
+POST	 /updateEnterpriseAdministratorRole 	Consistent Documentation	Updates the role of an enterprise administrator.
+POST	 /updateEnterpriseAllowPrivateRepositoryForkingSetting 	Consistent Documentation	Sets whether private repository forks are enabled for an enterprise.
+POST	 /updateEnterpriseDefaultRepositoryPermissionSetting 	Consistent Documentation	Sets the base repository permission for organizations in an enterprise.
+POST	 /updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Consistent Documentation	Sets whether organization members with admin permissions on a repository can change repository visibility.
+POST	 /updateEnterpriseMembersCanCreateRepositoriesSetting 	Consistent Documentation	Sets the members can create repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanInviteCollaboratorsSetting 	Consistent Documentation	Sets whether members can invite collaborators are enabled for an enterprise.
+POST	 /updateEnterpriseMembersCanMakePurchasesSetting 	Consistent Documentation	Sets whether or not an organization owner can make purchases.
+POST	 /updateEnterpriseMembersCanViewDependencyInsightsSetting 	Consistent Documentation	Sets the members can view dependency insights for an enterprise.
+POST	 /updateEnterpriseOrganizationProjectsSetting 	Consistent Documentation	Sets whether organization projects are enabled for an enterprise.
+POST	 /updateEnterpriseOwnerOrganizationRole 	Consistent Documentation	Updates the role of an enterprise owner with an organization.
+POST	 /updateEnterpriseProfile 	Consistent Documentation	Updates an enterprise's profile.
+POST	 /updateEnterpriseRepositoryProjectsSetting 	Consistent Documentation	Sets whether repository projects are enabled for a enterprise.
+POST	 /updateEnterpriseTeamDiscussionsSetting 	Consistent Documentation	Sets whether team discussions are enabled for an enterprise.
+POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Consistent Documentation	Sets whether two factor authentication is required for all users in an enterprise.
+POST	 /updateEnvironment 	Consistent Documentation	Updates an environment.
+POST	 /updateIssue 	Consistent Documentation	Updates an Issue.
+POST	 /updateIssueComment 	Consistent Documentation	Updates an IssueComment object.
+POST	 /updateLabel 	Consistent Documentation	Updates an existing label.
+POST	 /updateOrganizationAllowPrivateRepositoryForkingSetting 	Consistent Documentation	Sets whether private repository forks are enabled for an organization.
+POST	 /updateOrganizationWebCommitSignoffSetting 	Consistent Documentation	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+POST	 /updatePatreonSponsorability 	Consistent Documentation	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
+POST	 /updateProject 	Consistent Documentation	Updates an existing project.
+POST	 /updateProjectCard 	Consistent Documentation	Updates an existing project card.
+POST	 /updateProjectColumn 	Consistent Documentation	Updates an existing project column.
+POST	 /updateProjectV2 	Consistent Documentation	Updates an existing project (beta).
+POST	 /updateProjectV2DraftIssue 	Consistent Documentation	Updates a draft issue within a Project.
+POST	 /updateProjectV2ItemFieldValue 	Consistent Documentation	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
+POST	 /updateProjectV2ItemPosition 	Consistent Documentation	This mutation updates the position of the item in the project, where the position represents the priority of an item.
+POST	 /updatePullRequestBranch 	Consistent Documentation	Merge or Rebase HEAD from upstream branch into pull request branch.
+POST	 /updatePullRequestReview 	Consistent Documentation	Updates the body of a pull request review.
+POST	 /updatePullRequestReviewComment 	Consistent Documentation	Updates a pull request review comment.
+POST	 /updateRepositoryWebCommitSignoffSetting 	Consistent Documentation	Sets whether contributors are required to sign off on web-based commits for a repository.
+POST	 /updateSponsorshipPreferences 	Consistent Documentation	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
+POST	 /updateSubscription 	Consistent Documentation	Updates the state for subscribable subjects.
+POST	 /updateTeamDiscussion 	Consistent Documentation	Updates a team discussion.
+POST	 /updateTeamDiscussionComment 	Consistent Documentation	Updates a discussion comment.
+POST	 /updateTeamReviewAssignment 	Consistent Documentation	Updates team review assignment.
+POST	 /updateTopics 	Consistent Documentation	Replaces the repository's topics with the given topics.

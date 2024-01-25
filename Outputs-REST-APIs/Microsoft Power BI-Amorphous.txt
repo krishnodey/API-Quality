@@ -1,18 +1,15 @@
 ***Anti-Pattern*** 
-Count: 7
-/admin/capacities/AssignWorkspaces	Amorphous End-point	 [uppercase found] 
-/admin/capacities/UnassignWorkspaces	Amorphous End-point	 [uppercase found] 
-/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Amorphous End-point	 [uppercase found]  [uppercase found] 
+Count: 2
 /capacities/{capacityId}/Workloads/{workloadName}	Amorphous End-point	 [uppercase found] 
 /capacities/{capacityId}/Workloads	Amorphous End-point	 [uppercase found] 
-/AssignToCapacity	Amorphous End-point	 [uppercase found] 
-/groups/{groupId}/AssignToCapacity	Amorphous End-point	 [uppercase found] 
 
 ***Patterns*** 
-Count: 27
+Count: 32
 /admin/tenantKeys	Tidy End-point	
 /admin/apps?$top={$top}	Tidy End-point	
 /admin/apps/{appId}/users	Tidy End-point	
+/admin/capacities/AssignWorkspaces	Tidy End-point	
+/admin/capacities/UnassignWorkspaces	Tidy End-point	
 /admin/dashboards	Tidy End-point	
 /admin/groups/{groupId}/dashboards	Tidy End-point	
 /admin/dataflows/{dataflowId}/export	Tidy End-point	
@@ -26,6 +23,7 @@ Count: 27
 /admin/capacities	Tidy End-point	
 /admin/groups/{groupId}/users	Tidy End-point	
 /admin/pipelines/{pipelineId}/users/{identifier}	Tidy End-point	
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Tidy End-point	
 /admin/workspaces/modified	Tidy End-point	
 /admin/workspaces/getInfo	Tidy End-point	
 /apps/{appId}	Tidy End-point	
@@ -36,4 +34,6 @@ Count: 27
 /availableFeatures	Tidy End-point	
 /capacities	Tidy End-point	
 /capacities/{capacityId}/refreshables/{refreshableId}	Tidy End-point	
+/AssignToCapacity	Tidy End-point	
+/groups/{groupId}/AssignToCapacity	Tidy End-point	
 /groups/{groupId}/dashboards	Tidy End-point	

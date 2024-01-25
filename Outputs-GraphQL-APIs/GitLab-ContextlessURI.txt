@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 4
+ /aiMessages 	 Contextless Resource Names
+ /echo 	 Contextless Resource Names
+ /gitpodEnabled 	 Contextless Resource Names
+ /jobs 	 Contextless Resource Names
+
+***Patterns*** 
+Count: 51
+ /abuseReport/{id} 	 Contextual Resource Names
+ /abuseReportLabels 	 Contextual Resource Names
+ /addOnPurchase/{id} 	 Contextual Resource Names
+ /auditEventDefinitions 	 Contextual Resource Names
+ /auditEventsInstanceAmazonS3Configurations 	 Contextual Resource Names
+ /boardList/{id} 	 Contextual Resource Names
+ /ciCatalogResource/{id}	 Contextual Resource Names
+ /ciCatalogResources/{projectPath}	 Contextual Resource Names
+ /ciConfig/{projectPath} 	 Contextual Resource Names
+ /ciMinutesUsage/{namespaceId} 	 Contextual Resource Names
+ /ciPipelineStage/{id} 	 Contextual Resource Names
+ /ciQueueingHistory 	 Contextual Resource Names
+ /ciVariables 	 Contextual Resource Names
+ /containerRepository/{id} 	 Contextual Resource Names
+ /currentLicense 	 Contextual Resource Names
+ /currentUser 	 Contextual Resource Names
+ /designManagement 	 Contextual Resource Names
+ /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	 Contextual Resource Names
+ /epicBoardList/{id} 	 Contextual Resource Names
+ /explainVulnerabilityPrompt/{vulnerabilityId} 	 Contextual Resource Names
+ /frecentGroups 	 Contextual Resource Names
+ /frecentProjects 	 Contextual Resource Names
+ /geoNode 	 Contextual Resource Names
+ /group 	 Contextual Resource Names
+ groups 	 Contextual Resource Names
+ /instanceExternalAuditEventDestinations 	 Contextual Resource Names
+ /instanceGoogleCloudLoggingConfigurations 	 Contextual Resource Names
+ /instanceSecurityDashboard 	 Contextual Resource Names
+ /issue/{id} 	 Contextual Resource Names
+ /issues/{assigneeId} 	 Contextual Resource Names
+ /iteration/{id} 	 Contextual Resource Names
+ /licenseHistoryEntries 	 Contextual Resource Names
+ /memberRole/{id} 	 Contextual Resource Names
+ /memberRolePermissions 	 Contextual Resource Names
+ /memberRoles/{id} 	 Contextual Resource Names
+ /mergeRequest/{id} 	 Contextual Resource Names
+ /metadata 	 Contextual Resource Names
+ /milestone/{id} 	 Contextual Resource Names
+ /mlModel/{id} 	 Contextual Resource Names
+ /namespace 	 Contextual Resource Names
+ /note/{id} 	 Contextual Resource Names
+ /organization/{id} 	 Contextual Resource Names
+ /organizations 	 Contextual Resource Names
+ /package/{id} 	 Contextual Resource Names
+ /project/{fullPath} 	 Contextual Resource Names
+ /projects/{ids} 	 Contextual Resource Names
+ /queryComplexity 	 Contextual Resource Names
+ /runner/{id} 	 Contextual Resource Names
+ /runnerSetup 	 Contextual Resource Names
+ /runners/{creatorId}  	 Contextual Resource Names
+ /selfManagedAddOnEligibleUsers 	 Contextual Resource Names

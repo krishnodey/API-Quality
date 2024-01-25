@@ -1,0 +1,114 @@
+***Anti-Pattern*** 
+Count: 7
+/inbox_emails/card_id	Amorphous End-point	 [underscore found] 
+/pipe_relations/{id}	Amorphous End-point	 [underscore found] 
+/pipe_templates	Amorphous End-point	 [underscore found] 
+/recordsImportations/{tableID}	Amorphous End-point	 [uppercase found] 
+/table_record/{id}	Amorphous End-point	 [underscore found] 
+/table_records/{table_id}	Amorphous End-point	 [underscore found] 
+/table_relations/{ids}	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 102
+/allCards	Tidy End-point	
+/autoFillFields	Tidy End-point	
+/card	Tidy End-point	
+/cards	Tidy End-point	
+/cardsImportations/{pipeId}	Tidy End-point	
+/findCards/{pipeId}	Tidy End-point	
+/findCards/{tableId}	Tidy End-point	
+/me	Tidy End-point	
+/organization/{id}	Tidy End-point	
+/organizations/{ids}	Tidy End-point	
+/phase/{id}	Tidy End-point	
+/pipe/{id}	Tidy End-point	
+/pipeReportExport/{id}	Tidy End-point	
+/pipe/{ids}	Tidy End-point	
+/table/{id}	Tidy End-point	
+/table/{ids}	Tidy End-point	
+/clonePipes	Tidy End-point	
+/createCard	Tidy End-point	
+/createCardRelation	Tidy End-point	
+/createComment	Tidy End-point	
+/createFieldCondition	Tidy End-point	
+/createInboxEmail	Tidy End-point	
+/createLabel	Tidy End-point	
+/createOrganization	Tidy End-point	
+/createOrganizationWebhook	Tidy End-point	
+/createPhase	Tidy End-point	
+/createPhaseField	Tidy End-point	
+/createPipe	Tidy End-point	
+/createPipeRelation	Tidy End-point	
+/createPresignedUrl	Tidy End-point	
+/createPresignedUrlForPipePdfTemplate	Tidy End-point	
+/createTable	Tidy End-point	
+/createTableField	Tidy End-point	
+/createTableRecord	Tidy End-point	
+/createTableRecordInRestrictedTable	Tidy End-point	
+/createTableRelation	Tidy End-point	
+/createWebhook	Tidy End-point	
+/deleteCard	Tidy End-point	
+/deleteComment	Tidy End-point	
+/deleteFieldCondition	Tidy End-point	
+/deleteInboxEmail	Tidy End-point	
+/deleteLabel	Tidy End-point	
+/deleteOrganization	Tidy End-point	
+/deleteOrganizationWebhook	Tidy End-point	
+/deletePhase	Tidy End-point	
+/deletePhaseField	Tidy End-point	
+/deletePipe	Tidy End-point	
+/deletePipeRelation	Tidy End-point	
+/deleteTable	Tidy End-point	
+/deleteTableField	Tidy End-point	
+/deleteTableRecord	Tidy End-point	
+/deleteTableRelation	Tidy End-point	
+/deleteWebhook	Tidy End-point	
+/exportPipeReport	Tidy End-point	
+/createTableRelation	Tidy End-point	
+/createWebhook	Tidy End-point	
+/deleteCard	Tidy End-point	
+/deleteComment	Tidy End-point	
+/deleteFieldCondition	Tidy End-point	
+/deleteInboxEmail	Tidy End-point	
+/deleteInboxEmail	Tidy End-point	
+/deleteOrganization	Tidy End-point	
+/deleteOrganizationWebhook	Tidy End-point	
+/deletePhase	Tidy End-point	
+/deletePhaseField	Tidy End-point	
+/deletePipe	Tidy End-point	
+/deletePipeRelation	Tidy End-point	
+/deleteTable	Tidy End-point	
+/deleteTableField	Tidy End-point	
+/deleteTableRecord	Tidy End-point	
+/deleteTableRelation	Tidy End-point	
+/deleteWebhook	Tidy End-point	
+/exportPipeReport	Tidy End-point	
+/interfaceEmbedCreat	Tidy End-point	
+/inviteMembers	Tidy End-point	
+/moveCardToPhase	Tidy End-point	
+/recordsImporter	Tidy End-point	
+/removeUserFromOrg	Tidy End-point	
+/removeUserFromPipe	Tidy End-point	
+/removeUserFromTable	Tidy End-point	
+/sendInboxEmail	Tidy End-point	
+/setFieldConditionOrder	Tidy End-point	
+/setRole	Tidy End-point	
+/setRoles	Tidy End-point	
+/setSummaryAttributes	Tidy End-point	
+/setTableFieldOrder	Tidy End-point	
+/setTableRecordFieldValue	Tidy End-point	
+/updateCard	Tidy End-point	
+/updateCardField	Tidy End-point	
+/updateComment	Tidy End-point	
+/updateFieldsValues	Tidy End-point	
+/updateLabel	Tidy End-point	
+/updateOrganization	Tidy End-point	
+/updateOrganizationWebhook	Tidy End-point	
+/updatePhase	Tidy End-point	
+/updatePhaseField	Tidy End-point	
+/updatePipe	Tidy End-point	
+/updatePipeRelation	Tidy End-point	
+/updateTable	Tidy End-point	
+/updateTableField	Tidy End-point	
+/updateTableRecord	Tidy End-point	
+/updateWebhook	Tidy End-point	

@@ -1,6 +1,6 @@
 ***Anti-Pattern*** 
 Count: 1
-/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Amorphous End-point	 [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found]  [uppercase found] 
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Amorphous End-point	 [uppercase found]  [uppercase found] 
 
 ***Patterns*** 
 Count: 23

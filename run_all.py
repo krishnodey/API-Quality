@@ -34,7 +34,7 @@ def run(selected, uri_path, base_path):
     print("Finished Detection of NonStandardURI:\n")
 
 
-    print("Detection of CRUDyURI:")
+    '''print("Detection of CRUDyURI:")
     result_AP, result_P, p_count, ap_count = analyzer_obj.detect_crudy_uri()
     pattern_type = "CRUDyURI"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
@@ -91,7 +91,7 @@ def run(selected, uri_path, base_path):
     result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations(data)
     pattern_type = "InconsistantDoc"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type,base_path)
-    print("Finished Detection of InconsistantDocumentation:\n")
+    print("Finished Detection of InconsistantDocumentation:\n")'''
 
 
 
@@ -105,8 +105,8 @@ for api in base_path:
     content = file_obj.read_file()
     name_list = content.split('\n')
     for api_name in name_list:
-        if api_name in ["Adobe Audience Manager","Apple App Store Connect","BroadCom","Cisco Flare", "ClearBlade","Dropbox", "Google Nest", "GroupWise", "IBM Cloud Pak System", "IBM Watson IoT"]:
-            continue
+        #if api_name in ["Adobe Audience Manager","Apple App Store Connect","BroadCom","Cisco Flare", "ClearBlade","Dropbox", "Google Nest", "GroupWise", "IBM Cloud Pak System", "IBM Watson IoT"]:
+            #continue
         start_time = time.time()
         print(f"\nDetecting ----> {api_name}\n")
         path = api+"/"+api_name+"/"+api_name+".txt"

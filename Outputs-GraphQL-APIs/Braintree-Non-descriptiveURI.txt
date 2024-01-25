@@ -1,8 +1,10 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 2
+/tokenizeCvv	 Non-descriptive End-point
+/tokenizeUsBankLogin	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 15
+Count: 94
 /ping	 Self-descriptive End-point
 /pingInStoreReader	 Self-descriptive End-point
 /viewer	 Self-descriptive End-point
@@ -18,3 +20,82 @@ Count: 15
 /authorizeVenmoAccount	 Self-descriptive End-point
 /authorizeCreditCard	 Self-descriptive End-point
 /captureTransaction	 Self-descriptive End-point
+/chargeUsBankAccount	 Self-descriptive End-point
+/chargePayPalAccount	 Self-descriptive End-point
+/chargeVenmoAccount	 Self-descriptive End-point
+/chargeCreditCard	 Self-descriptive End-point
+/vaultPaymentMethod	 Self-descriptive End-point
+/vaultUsBankAccount	 Self-descriptive End-point
+/vaultCreditCard	 Self-descriptive End-point
+/refundTransaction	 Self-descriptive End-point
+/reverseTransaction	 Self-descriptive End-point
+/reverseRefund	 Self-descriptive End-point
+/refundCreditCard	 Self-descriptive End-point
+/refundUsBankAccount	 Self-descriptive End-point
+/updateCustomFields	 Self-descriptive End-point
+/verifyPaymentMethod	 Self-descriptive End-point
+/verifyCreditCard	 Self-descriptive End-point
+/verifyUsBankAccount	 Self-descriptive End-point
+/confirmMicroTransferAmounts	 Self-descriptive End-point
+/deletePaymentMethodFromVault	 Self-descriptive End-point
+/createClientToken	 Self-descriptive End-point
+/createUniversalAccessToken	 Self-descriptive End-point
+/partialCaptureTransaction	 Self-descriptive End-point
+/tokenizeCustomActionsPaymentMethod	 Self-descriptive End-point
+/tokenizeCreditCard	 Self-descriptive End-point
+/tokenizeNetworkToken	 Self-descriptive End-point
+/tokenizeSamsungPayCard	 Self-descriptive End-point
+/tokenizeUsBankAccount	 Self-descriptive End-point
+/tokenizePayPalOneTimePayment	 Self-descriptive End-point
+/createPayPalOneTimePayment	 Self-descriptive End-point
+/tokenizePayPalBillingAgreement	 Self-descriptive End-point
+/createPayPalBillingAgreement	 Self-descriptive End-point
+/createCustomer	 Self-descriptive End-point
+/updateCustomer	 Self-descriptive End-point
+/deleteCustomer	 Self-descriptive End-point
+/updateCreditCardBillingAddress	 Self-descriptive End-point
+/updateCreditCardCardholderName	 Self-descriptive End-point
+/updateCreditCardExpirationDate	 Self-descriptive End-point
+/performThreeDSecureLookup	 Self-descriptive End-point
+/acceptDispute	 Self-descriptive End-point
+/finalizeDispute	 Self-descriptive End-point
+/createDisputeTextEvidence	 Self-descriptive End-point
+/deleteDisputeEvidence	 Self-descriptive End-point
+/createDisputeFileEvidence	 Self-descriptive End-point
+/vaultPayPalBillingAgreement	 Self-descriptive End-point
+/sandboxSettleTransaction	 Self-descriptive End-point
+/createInStoreLocation	 Self-descriptive End-point
+/updateInStoreLocation	 Self-descriptive End-point
+/pairInStoreReader	 Self-descriptive End-point
+/updateInStoreReader	 Self-descriptive End-point
+/requestChargeFromInStoreReader	 Self-descriptive End-point
+/requestAuthorizeFromInStoreReader	 Self-descriptive End-point
+/requestCancelFromInStoreReader	 Self-descriptive End-point
+/requestRefundFromInStoreReader	 Self-descriptive End-point
+/requestVaultFromInStoreReader	 Self-descriptive End-point
+/requestTextDisplayFromInStoreReader	 Self-descriptive End-point
+/requestItemDisplayFromInStoreReader	 Self-descriptive End-point
+/requestFirmwareUpdateFromInStoreReader	 Self-descriptive End-point
+/requestSignaturePromptFromInStoreReader	 Self-descriptive End-point
+/requestConfirmationPromptFromInStoreReader	 Self-descriptive End-point
+/requestNonPciCardDataFromInStoreReader	 Self-descriptive End-point
+/requestAmountPromptFromInStoreReader	 Self-descriptive End-point
+/requestTextPromptFromInStoreReader	 Self-descriptive End-point
+/createVenmoPaymentContext	 Self-descriptive End-point
+/updateTransactionAmount	 Self-descriptive End-point
+/generateExchangeRateQuote	 Self-descriptive End-point
+/createNonInstantLocalPaymentContext	 Self-descriptive End-point
+/DisputeEvidence/{id}	 Self-descriptive End-point
+/DisputeEvidence/{legacyId}	 Self-descriptive End-point
+/InStoreContextResult/{id}	 Self-descriptive End-point
+/InStoreReaderOriginDetails	 Self-descriptive End-point
+/Node/{id}	 Self-descriptive End-point
+/Payment/{id}	 Self-descriptive End-point
+/Payment/{legacyId}	 Self-descriptive End-point
+/PaymentContext	 Self-descriptive End-point
+/PaymentStatusEvent	 Self-descriptive End-point
+/AccountCreationStatus	 Self-descriptive End-point
+/ApplePayStatus	 Self-descriptive End-point
+/ApplicationBankAccountPurpose	 Self-descriptive End-point
+/ApplicationStatus	 Self-descriptive End-point
+/BinRecordValue	 Self-descriptive End-point

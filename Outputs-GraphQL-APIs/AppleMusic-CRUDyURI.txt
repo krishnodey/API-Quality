@@ -1,8 +1,12 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+/v1/catalog/{storefront}/search	CRUDy End-point	 [search found] 
+/v1/catalog/{storefront}/search/hints	CRUDy End-point	 [search found] 
+/v1/catalog/{storefront}/search/suggestions	CRUDy End-point	 [search found] 
+/v1/me/library/search	CRUDy End-point	 [search found] 
 
 ***Patterns*** 
-Count: 15
+Count: 98
 /v1/catalog/{storefront}/albums/{id}	Verbless End-point	
 /v1/catalog/{storefront}/albums/{id}/{relationship}	Verbless End-point	
 /v1/catalog/{storefront}/albums/{id}/view/{view}	Verbless End-point	
@@ -18,3 +22,86 @@ Count: 15
 /v1/catalog/{storefront}/artists/{id}/{relationship}	Verbless End-point	
 /v1/catalog/{storefront}/artists/{id}/view/{view}	Verbless End-point	
 /v1/catalog/{storefront}/artists	Verbless End-point	
+/v1/me/library/artists/{id}	Verbless End-point	
+/v1/me/library/artists/{id}/{relationship}	Verbless End-point	
+/v1/me/library/artists	Verbless End-point	
+/v1/artists/{id}	Verbless End-point	
+/v1/catalog/{storefront}/songs/{id}	Verbless End-point	
+/v1/catalog/{storefront}/songs/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/songs	Verbless End-point	
+/v1/catalog/{storefront}/songs	Verbless End-point	
+/v1/catalog/{storefront}/songs	Verbless End-point	
+/v1/me/library/songs/{id}	Verbless End-point	
+/v1/me/library/songs/{id}/{relationship}	Verbless End-point	
+/v1/me/library/songs	Verbless End-point	
+/v1/me/library/songs	Verbless End-point	
+/v1/me/library	Verbless End-point	
+/v1/catalog/{storefront}/music-videos/{id}	Verbless End-point	
+/v1/catalog/{storefront}/music-videos/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/music-videos/{id}/view/{view}	Verbless End-point	
+/v1/catalog/{storefront}/music-videos	Verbless End-point	
+/v1/catalog/{storefront}/music-videos	Verbless End-point	
+/v1/catalog/{storefront}/music-videos	Verbless End-point	
+/v1/me/library/music-videos/{id}	Verbless End-point	
+> /v1/me/library/music-videos/{id}/{relationship}	Verbless End-point	
+/v1/me/library/music-videos	Verbless End-point	
+/v1/me/library/music-videos	Verbless End-point	
+/v1/me/library	Verbless End-point	
+/v1/catalog/{storefront}/playlists/{id}	Verbless End-point	
+/v1/catalog/{storefront}/playlists/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/playlists/{id}/view/{view}	Verbless End-point	
+/v1/catalog/{storefront}/playlists	Verbless End-point	
+/v1/catalog/{storefront}/playlists	Verbless End-point	
+/v1/me/library/playlists/{id}	Verbless End-point	
+/v1/me/library/playlists/{id}/{relationship}	Verbless End-point	
+/v1/me/library/playlists	Verbless End-point	
+/v1/me/library/playlists	Verbless End-point	
+/v1/me/library/playlist-folders	Verbless End-point	
+/v1/me/library/playlist-folders/{id}	Verbless End-point	
+/v1/me/library/playlist-folders/{id}/{relationship}	Verbless End-point	
+/v1/me/library/playlist-folders	Verbless End-point	
+/v1/me/library/playlist-folders	Verbless End-point	
+/v1/me/library/playlists	Verbless End-point	
+/v1/me/library/playlists/{id}/tracks	Verbless End-point	
+/v1/me/library	Verbless End-point	
+/v1/catalog/{storefront}/stations/{id}	Verbless End-point	
+/v1/catalog/{storefront}/stations/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/stations	Verbless End-point	
+/v1/catalog/{storefront}/stations	Verbless End-point	
+/v1/catalog/{storefront}/stations	Verbless End-point	
+/v1/catalog/{storefront}/station-genres/{id}	Verbless End-point	
+/v1/catalog/{storefront}/station-genres/{id}/{relationship}	Verbless End-point	
+/v1/catalog/{storefront}/station-genres	Verbless End-point	
+/v1/catalog/{storefront}/station-genres	Verbless End-point	
+/v1/me/ratings/albums/{id}	Verbless End-point	
+/v1/me/ratings/music-videos/{id}	Verbless End-point	
+/v1/me/ratings/playlists/{id}	Verbless End-point	
+/v1/me/ratings/songs/{id}	Verbless End-point	
+/v1/me/ratings/stations/{id}	Verbless End-point	
+/v1/me/ratings/albums	Verbless End-point	
+/v1/me/ratings/music-videos	Verbless End-point	
+/v1/me/ratings/playlists	Verbless End-point	
+/v1/me/ratings/songs	Verbless End-point	
+/v1/me/ratings/stations	Verbless End-point	
+/v1/me/ratings/albums/{id}	Verbless End-point	
+/v1/me/ratings/music-videos/{id}	Verbless End-point	
+/v1/me/ratings/playlists/{id}	Verbless End-point	
+> /v1/me/ratings/songs/{id}	Verbless End-point	
+/v1/me/ratings/stations/{id}	Verbless End-point	
+/v1/me/ratings/albums/{id}	Verbless End-point	
+/v1/me/ratings/music-videos/{id}	Verbless End-point	
+/v1/me/ratings/playlists/{id}	Verbless End-point	
+/v1/me/ratings/songs/{id}	Verbless End-point	
+/v1/me/ratings/stations/{id}	Verbless End-point	
+/v1/me/ratings/library-albums/{id}	Verbless End-point	
+/v1/me/ratings/library-music-videos/{id}	Verbless End-point	
+/v1/me/ratings/library-playlists/{id}	Verbless End-point	
+/v1/me/ratings/library-songs/{id}	Verbless End-point	
+/v1/me/ratings/library-albums	Verbless End-point	
+/v1/me/ratings/library-music-videos	Verbless End-point	
+/v1/me/ratings/library-playlists	Verbless End-point	
+/v1/me/ratings/library-songs	Verbless End-point	
+/v1/me/ratings/library-albums/{id}	Verbless End-point	
+/v1/me/ratings/library-music-videos/{id}	Verbless End-point	
+/v1/me/ratings/library-playlists/{id}	Verbless End-point	
+/v1/me/ratings/library-songs/{id}	Verbless End-point	

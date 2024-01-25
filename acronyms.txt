@@ -26,6 +26,7 @@ JSON >>JavaScript Object Notation
 hdmi>>high definition multimedia interface
 cec>>consumer electronics control
 app>>application
+apps>>applications
 ig >> instagram
 oauth>>authentication
 datasource>>data source
@@ -34,3 +35,4 @@ breakdown>> break down
 datasources>>data sources
 ci >> client
 ml >> machine learning
+ISRC >> International Standard Recording Code 

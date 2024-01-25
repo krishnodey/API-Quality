@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 18
+Count: 28
 -/{ig-comment-id}?fields={fields}	Pertinent Documentation	Get fields and edges on an IG Comment.
 -/oauth/access_token	Pertinent Documentation	To generate an app access token, you need
 -/{user-id}/accounts?access_token={user-access-token}	Pertinent Documentation	Page access tokens are used in Graph API calls to manage Pages. To generate a page access token, an admin of the page must grant your app the Page permission or permissions needed. Once granted, you can retrieve the Page access token using a user access token with the required permissions.
@@ -21,3 +21,13 @@ Count: 18
 -/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	Pertinent Documentation	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
 -/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Pertinent Documentation	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
 -{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Pertinent Documentation	Returns insights on an IG User.
+-/{api-version}//{instagram-container-id}	Pertinent Documentation	Get fields and edges on an IG Container.
+-/{api-version}//{ig-hashtag-id}	Pertinent Documentation	Returns Fields and Edges on an IG Hashtag.
+-/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Pertinent Documentation	Returns a list of the most recently published photo and video IG Media objects published with a specific hashtag.
+-/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields}	Pertinent Documentation	Returns the most popular photo and video IG Media objects that have been tagged with the hashtag.
+-/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Pertinent Documentation	Gets fields and edges on IG media.
+-/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	Pertinent Documentation	Enable or disable comments on an IG Media.
+-/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Pertinent Documentation	Get fields and edges on an Instagram Business or Creator Account.
+-/{ig-user-id}?fields=business_discovery.username({username})	Pertinent Documentation	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
+-/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Pertinent Documentation	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
+-/{api-version}/{ig-user-id}/insights	Pertinent Documentation	Returns insights on an IG User.

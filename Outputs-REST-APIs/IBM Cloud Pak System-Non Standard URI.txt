@@ -1,6 +1,6 @@
 ***Anti-Pattern*** 
-Count: 15
-/deployment/resources/virtual data center./<virtual data center.UID>	Non-standard End-point	 [blanck space/tab found] 
+Count: 14
+/deployment/resources/virtual data center./<virtual data center.UID>	Non-standard End-point	 [blank space/tab found] 
 /deployment/resources/subnets/<subnetUUID>	Non-standard End-point	 [unknown char found] 
 /deployment/resources/subnet/<subnetUUID>/addresses	Non-standard End-point	 [unknown char found] 
 /deployment/resources/subnet/<subnetUUID>/addresses	Non-standard End-point	 [unknown char found] 
@@ -9,7 +9,6 @@ Count: 15
 /deployment/resources/credentials/<credentialUUID>	Non-standard End-point	 [unknown char found] 
 /deployment/resources/images/<imageID>	Non-standard End-point	 [unknown char found] 
 /deployment/resources/groups/<groupUUID>	Non-standard End-point	 [unknown char found] 
-/deployment/resources/groups?isMaster=true	Non-standard End-point	 [unknown char found] 
 /deployment/resources/groups/group<UUID>?showNested=true	Non-standard End-point	 [unknown char found] 
 /deployment/resources/instances/<instanceUUID>	Non-standard End-point	 [unknown char found] 
 /deployment/resources/instances/<instanceUUID>	Non-standard End-point	 [unknown char found] 
@@ -17,7 +16,7 @@ Count: 15
 /deployment/resources/instances/<instanceUUID>	Non-standard End-point	 [unknown char found] 
 
 ***Patterns*** 
-Count: 19
+Count: 20
 /deployment/resources/instances	Standard End-point	
 /deployment/resources/vm_configurations	Standard End-point	
 /deployment/resources/vdcs/{uuid}/vm_configurations	Standard End-point	
@@ -27,6 +26,7 @@ Count: 19
 /deployment/resources/addresses	Standard End-point	
 /deployment/resources/credentials	Standard End-point	
 /deployment/resources/groups	Standard End-point	
+/deployment/resources/groups?isMaster=true	Standard End-point	
 /deployment/resources/instances	Standard End-point	
 /deployment/resources/addresses	Standard End-point	
 /deployment/resources/volumes	Standard End-point	

@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 44
+Count: 43
 /shop/admin/prices?customer_id=:customer_id	Amorphous End-point	 [underscore found] 
 /shop/admin/customers/:customer_id/prices	Amorphous End-point	 [underscore found] 
 /shop/admin/customers/:customer_id/prices/:variant_id	Amorphous End-point	 [underscore found] 
@@ -7,7 +7,6 @@ Count: 44
 /shop/admin/price_lists/:id	Amorphous End-point	 [underscore found] 
 /shop/admin/price_lists	Amorphous End-point	 [underscore found] 
 /shop/admin/price_lists/:id	Amorphous End-point	 [underscore found] 
-/shop/admin/products/:idUpdate Product	Amorphous End-point	 [uppercase found] 
 /shop/admin/properties/:property_id/property_values	Amorphous End-point	 [underscore found] 
 /shop/admin/properties/:property_id/property_values/:id	Amorphous End-point	 [underscore found] 
 /shop/admin/properties/:property_id/property_values	Amorphous End-point	 [underscore found] 
@@ -46,11 +45,12 @@ Count: 44
 /shop/admin/variants/update_stock	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 10
+Count: 11
 /shop/admin/products	Tidy End-point	
 /shop/admin/products/:id	Tidy End-point	
 /shop/admin/products	Tidy End-point	
 /shop/admin/products	Tidy End-point	
+/shop/admin/products/:idUpdate Product	Tidy End-point	
 /shop/admin/properties	Tidy End-point	
 /shop/admin/properties/:id	Tidy End-point	
 /shop/admin/properties/:id	Tidy End-point	

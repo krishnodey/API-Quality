@@ -38,31 +38,56 @@ class ApiAnalyzer:
         amorphus_result_AP = []
         amorphus_result_P = []
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
+        def has_consecutive_uppercase(s):
+            for i in range(len(s)-1):
+                if s[i].isupper() and s[i+1].isupper():
+                    return True
+            return False
 
+
+        def is_camel_case(s):
+            s = ''.join(i for i in s if not i.isdigit())
+            #print(s)
+            flag = 'False'
+            if s != s.lower() and s != s.upper() and has_consecutive_uppercase(s): #has_consecutive_uppercase
+                flag = 'False'   
+            elif s != s.lower() and s != s.upper() and "_" not in s and sum(i.isupper() for i in s) == 1: 
+                if s[0].isupper():
+                    flag = 'False'
+                elif s[0].islower():
+                    flag = 'True'
+            elif s != s.lower() and s != s.upper() and "_" not in s and sum(i.isupper() for i in s) >= 1:
+                flag = 'True'
+            return flag
+                
         for line in URI:
-            #print(line)
+            words = line.split("/")
+            #print(words)
             comment = ""
             found_AP = 0
 
             if "%5F".lower() in line.lower() or "%5F" in line or "_" in line:
                 found_AP = 1
                 comment += " [underscore found] "
-            
-            for i in range(1, len(line) - 1):
-                if 'A' <= line[i] <= 'Z' and not ('a' <= line[i-1] <= 'z' and 'a' <= line[i+1] <= 'z'):
-                    found_AP = 1
-                    comment += " [uppercase found] "
-
-
-            c = line.strip()[-1]
-            if c == '/' or c == '\\':
+                #c = line.strip()[-1]
+            elif line.strip()[-1] == '/' or line.strip()[-1] == '\\':
                 found_AP = 1
                 comment += " [trailing slash found] "
-
-            for extension in extensions:
-                if extension.lower() in line.lower() or extension.upper() in line:
+            else:
+                for extension in extensions:
+                    if extension.lower() in line.lower() or extension.upper() in line:
+                        found_AP = 1
+                        comment += " [extension found] "
+            
+            #elif any(ch.isupper() for wd in words):
+            for word in words:
+                word = word.strip()
+                word = word.replace("<", '').replace(">", '').replace('{', '').replace('}', '')
+                #print(word)
+                if any(ch.isupper() for ch in word) and is_camel_case(word) == "False":
+                    #print("notnot")
                     found_AP = 1
-                    comment += " [extension found] "
+                    comment += " [uppercase found] "
 
             if found_AP == 1:
                 ap_count = ap_count + 1
@@ -130,21 +155,15 @@ class ApiAnalyzer:
             'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'を', 'ん'
         ]
 
-        unknown_characters = ['!', '@', '#', '$', '~', '^', '*', '>', '<', '|', '%', '&', '+', '=', '`', '?', ',', ';', ':', '.']
+        #unknown_characters = ['!', '@', '#', '$', '~', '^', '*', '>', '<', '|', '%', '&', '+', '=', '`', '?', ',', ';', ':', '.']
 
 
 
         for line in URI:
             comment = ""
             found_AP = 0
+            line = line.strip()
 
-            '''if any(c in line.lower() for c in ['�', '�', '�']):
-                found_AP = 1
-                comment += " [sw spec char found] "'''
-
-            '''if any(c in line.lower() for c in ['�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�']):
-                found_AP = 1
-                comment += " [fr spec char found] "'''
             
             if any(c in line.lower() for c in european_languages):
                 found_AP = 1
@@ -163,11 +182,11 @@ class ApiAnalyzer:
                 comment += " [ japanese char found] "
             elif ' ' in line.strip() or '\t' in line.strip():
                 found_AP = 1
-                comment += " [blanck space/tab found] "
+                comment += " [blank space/tab found] "
             elif '--' in line:
                 found_AP = 1
                 comment += " [double hyphens found] "
-            elif any(c in line.lower() for c in unknown_characters): #['!', '@', '#', '$', '~', '^', '*', '>', '<']):
+            elif any(c in line.lower() for c in ['!', '@', '#', '$', '~', '^', '*', '>', '<']):
                 found_AP = 1
                 comment += " [unknown char found] "
 
@@ -226,7 +245,9 @@ class ApiAnalyzer:
                             
             #print(nodes)
 
-
+            
+            if len(nodes) < 1:
+                good_type = True
             # Check if any CRUDy word is found in the URI
             for node_word in nodes:
                 for crudy_word in crudyWords:

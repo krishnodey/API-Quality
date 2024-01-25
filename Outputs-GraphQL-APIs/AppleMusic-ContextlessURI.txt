@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 15
+Count: 102
  /v1/catalog/{storefront}/albums/{id} 	 Contextual Resource Names
  /v1/catalog/{storefront}/albums/{id}/{relationship} 	 Contextual Resource Names
  /v1/catalog/{storefront}/albums/{id}/view/{view}	 Contextual Resource Names
@@ -18,3 +18,90 @@ Count: 15
  /v1/catalog/{storefront}/artists/{id}/{relationship} 	 Contextual Resource Names
  /v1/catalog/{storefront}/artists/{id}/view/{view} 	 Contextual Resource Names
  /v1/catalog/{storefront}/artists 	 Contextual Resource Names
+ /v1/me/library/artists/{id} 	 Contextual Resource Names
+ /v1/me/library/artists/{id}/{relationship}	 Contextual Resource Names
+ /v1/me/library/artists 	 Contextual Resource Names
+ /v1/artists/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/songs/{id}	 Contextual Resource Names
+ /v1/catalog/{storefront}/songs/{id}/{relationship} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/songs 	 Contextual Resource Names
+ /v1/catalog/{storefront}/songs 	 Contextual Resource Names
+ /v1/catalog/{storefront}/songs 	 Contextual Resource Names
+ /v1/me/library/songs/{id} 	 Contextual Resource Names
+ /v1/me/library/songs/{id}/{relationship}	 Contextual Resource Names
+ /v1/me/library/songs 	 Contextual Resource Names
+ /v1/me/library/songs 	 Contextual Resource Names
+ /v1/me/library 	 Contextual Resource Names
+ /v1/catalog/{storefront}/music-videos/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/music-videos/{id}/{relationship} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/music-videos/{id}/view/{view}	 Contextual Resource Names
+ /v1/catalog/{storefront}/music-videos	 Contextual Resource Names
+ /v1/catalog/{storefront}/music-videos	 Contextual Resource Names
+ /v1/catalog/{storefront}/music-videos 	 Contextual Resource Names
+ /v1/me/library/music-videos/{id} 	 Contextual Resource Names
+> /v1/me/library/music-videos/{id}/{relationship} 	 Contextual Resource Names
+ /v1/me/library/music-videos 	 Contextual Resource Names
+ /v1/me/library/music-videos 	 Contextual Resource Names
+ /v1/me/library 	 Contextual Resource Names
+ /v1/catalog/{storefront}/playlists/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/playlists/{id}/{relationship}	 Contextual Resource Names
+ /v1/catalog/{storefront}/playlists/{id}/view/{view} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/playlists 	 Contextual Resource Names
+ /v1/catalog/{storefront}/playlists 	 Contextual Resource Names
+ /v1/me/library/playlists/{id} 	 Contextual Resource Names
+ /v1/me/library/playlists/{id}/{relationship} 	 Contextual Resource Names
+ /v1/me/library/playlists 	 Contextual Resource Names
+ /v1/me/library/playlists 	 Contextual Resource Names
+ /v1/me/library/playlist-folders 	 Contextual Resource Names
+ /v1/me/library/playlist-folders/{id} 	 Contextual Resource Names
+ /v1/me/library/playlist-folders/{id}/{relationship} 	 Contextual Resource Names
+ /v1/me/library/playlist-folders 	 Contextual Resource Names
+ /v1/me/library/playlist-folders 	 Contextual Resource Names
+ /v1/me/library/playlists 	 Contextual Resource Names
+ /v1/me/library/playlists/{id}/tracks 	 Contextual Resource Names
+ /v1/me/library 	 Contextual Resource Names
+ /v1/catalog/{storefront}/stations/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/stations/{id}/{relationship} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/stations 	 Contextual Resource Names
+ /v1/catalog/{storefront}/stations 	 Contextual Resource Names
+ /v1/catalog/{storefront}/stations 	 Contextual Resource Names
+ /v1/catalog/{storefront}/station-genres/{id} 	 Contextual Resource Names
+ /v1/catalog/{storefront}/station-genres/{id}/{relationship}	 Contextual Resource Names
+ /v1/catalog/{storefront}/station-genres 	 Contextual Resource Names
+ /v1/catalog/{storefront}/station-genres 	 Contextual Resource Names
+ /v1/catalog/{storefront}/search 	 Contextual Resource Names
+ /v1/catalog/{storefront}/search/hints 	 Contextual Resource Names
+ /v1/catalog/{storefront}/search/suggestions 	 Contextual Resource Names
+ /v1/me/library/search 	 Contextual Resource Names
+ /v1/me/ratings/albums/{id} 	 Contextual Resource Names
+ /v1/me/ratings/music-videos/{id} 	 Contextual Resource Names
+ /v1/me/ratings/playlists/{id} 	 Contextual Resource Names
+ /v1/me/ratings/songs/{id} 	 Contextual Resource Names
+ /v1/me/ratings/stations/{id} 	 Contextual Resource Names
+ /v1/me/ratings/albums 	 Contextual Resource Names
+ /v1/me/ratings/music-videos 	 Contextual Resource Names
+ /v1/me/ratings/playlists 	 Contextual Resource Names
+ /v1/me/ratings/songs 	 Contextual Resource Names
+ /v1/me/ratings/stations 	 Contextual Resource Names
+ /v1/me/ratings/albums/{id} 	 Contextual Resource Names
+ /v1/me/ratings/music-videos/{id} 	 Contextual Resource Names
+ /v1/me/ratings/playlists/{id} 	 Contextual Resource Names
+> /v1/me/ratings/songs/{id} 	 Contextual Resource Names
+ /v1/me/ratings/stations/{id} 	 Contextual Resource Names
+ /v1/me/ratings/albums/{id} 	 Contextual Resource Names
+ /v1/me/ratings/music-videos/{id} 	 Contextual Resource Names
+ /v1/me/ratings/playlists/{id} 	 Contextual Resource Names
+ /v1/me/ratings/songs/{id} 	 Contextual Resource Names
+ /v1/me/ratings/stations/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-albums/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-music-videos/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-playlists/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-songs/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-albums 	 Contextual Resource Names
+ /v1/me/ratings/library-music-videos 	 Contextual Resource Names
+ /v1/me/ratings/library-playlists 	 Contextual Resource Names
+ /v1/me/ratings/library-songs 	 Contextual Resource Names
+ /v1/me/ratings/library-albums/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-music-videos/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-playlists/{id} 	 Contextual Resource Names
+ /v1/me/ratings/library-songs/{id} 	 Contextual Resource Names

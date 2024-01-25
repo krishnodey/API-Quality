@@ -1,19 +1,56 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 14
+/v2/users/:id/bookmarks/:tweet_id	Amorphous End-point	 [underscore found] 
+/v2/users/:id/likes/:tweet_id	Amorphous End-point	 [underscore found] 
+/v2/tweets/:id/liking_users	Amorphous End-point	 [underscore found] 
+/v2/users/:id/liked_tweets	Amorphous End-point	 [underscore found] 
+/v2/tweets/:id/quote_tweets	Amorphous End-point	 [underscore found] 
+/v2/users/:id/retweets/:source_tweet_id	Amorphous End-point	 [underscore found] 
+/v2/tweets/:id/retweeted_by	Amorphous End-point	 [underscore found] 
+/v2/users/:id/timelines/reverse_chronological	Amorphous End-point	 [underscore found] 
+/v2/users/:source_user_id/following/:target_user_id	Amorphous End-point	 [underscore found] 
+/v2/users/:source_user_id/muting/:target_user_id	Amorphous End-point	 [underscore found] 
+/v2/spaces/by/creator_ids	Amorphous End-point	 [underscore found] 
+/v2/users/:id/owned_lists	Amorphous End-point	 [underscore found] 
+/v2/lists/:id/members/:user_id	Amorphous End-point	 [underscore found] 
+/v2/users/:id/list_memberships	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 14
-/v2/users/:id/bookmarks/:tweet_id	Tidy End-point	
+Count: 37
 /v2/users/:id/bookmarks	Tidy End-point	
 /v2/users/:id/bookmarks	Tidy End-point	
 /v2/tweets/search/stream	Tidy End-point	
 /v2/tweets/search/stream/rules	Tidy End-point	
-/tweets/search/stream endpoint.	Tidy End-point	
+/tweets/search/stream	Tidy End-point	
 /v2/tweets/:id/hidden	Tidy End-point	
-/v2/users/:id/likes/:tweet_id	Tidy End-point	
-/v2/tweets/:id/liking_users	Tidy End-point	
-/v2/users/:id/liked_tweets	Tidy End-point	
 /v2/users/:id/likes	Tidy End-point	
 /v2/tweets/:id	Tidy End-point	
 /v2/tweets	Tidy End-point	
-/2/tweets/:id/quote_tweets	Tidy End-point	
+/v2/tweets/:id/retweets	Tidy End-point	
+/v2/users/:id/retweets	Tidy End-point	
+/v2/tweets/search/all	Tidy End-point	
+/v2/tweets/search/recent	Tidy End-point	
+/v2/users/:id/mentions	Tidy End-point	
+/v2/users/:id/tweets	Tidy End-point	
+/v2/tweets/counts/all	Tidy End-point	
+/v2/tweets/counts/recent	Tidy End-point	
+/v2/users/:id/blocking	Tidy End-point	
+/v2/users/:id/followers	Tidy End-point	
+/v2/users/:id/following	Tidy End-point	
+/v2/users/:id/following	Tidy End-point	
+/v2/users/:id/muting	Tidy End-point	
+/v2/users/:id/muting	Tidy End-point	
+/v2/users/search	Tidy End-point	
+/v2/users	Tidy End-point	
+/v2/users/:id	Tidy End-point	
+/v2/users/by	Tidy End-point	
+/v2/users/by/username/:username	Tidy End-point	
+/v2/users/me	Tidy End-point	
+/v2/spaces/search	Tidy End-point	
+/v2/spaces/:id	Tidy End-point	
+/v2/spaces/:id/buyers	Tidy End-point	
+/v2/spaces/:id/tweets	Tidy End-point	
+/v2/lists/:id/tweets	Tidy End-point	
+/v2/lists/:id	Tidy End-point	
+/v2/lists/:id/members	Tidy End-point	
+/v2/lists/:id/members	Tidy End-point	

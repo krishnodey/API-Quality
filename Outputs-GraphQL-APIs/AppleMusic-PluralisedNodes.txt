@@ -1,9 +1,12 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 4
+POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 14
+Count: 98
 GET 	/v1/catalog/{storefront}/albums/{id}	 regular methods.
 GET 	/v1/catalog/{storefront}/albums/{id}/{relationship}	 regular methods.
 GET 	/v1/catalog/{storefront}/albums/{id}/view/{view}	 regular methods.
@@ -18,3 +21,87 @@ GET 	/v1/catalog/{storefront}/artists/{id}	 regular methods.
 GET 	/v1/catalog/{storefront}/artists/{id}/{relationship}	 regular methods.
 GET 	/v1/catalog/{storefront}/artists/{id}/view/{view}	 regular methods.
 GET 	/v1/catalog/{storefront}/artists	 regular methods.
+GET 	/v1/me/library/artists/{id}	 regular methods.
+GET 	/v1/me/library/artists/{id}/{relationship}	 regular methods.
+GET 	/v1/me/library/artists	 regular methods.
+GET 	/v1/artists/{id}	 regular methods.
+GET 	/v1/catalog/{storefront}/songs/{id}	 regular methods.
+GET 	/v1/catalog/{storefront}/songs/{id}/{relationship}	 regular methods.
+GET 	/v1/catalog/{storefront}/songs	 regular methods.
+GET 	/v1/catalog/{storefront}/songs	 regular methods.
+GET 	/v1/catalog/{storefront}/songs	 regular methods.
+GET 	/v1/me/library/songs/{id}	 regular methods.
+GET 	/v1/me/library/songs/{id}/{relationship}	 regular methods.
+GET 	/v1/me/library/songs	 regular methods.
+GET 	/v1/me/library/songs	 regular methods.
+GET 	/v1/catalog/{storefront}/music-videos/{id}	 regular methods.
+GET 	/v1/catalog/{storefront}/music-videos/{id}/{relationship}	 regular methods.
+GET 	/v1/catalog/{storefront}/music-videos/{id}/view/{view}	 regular methods.
+GET 	/v1/catalog/{storefront}/music-videos	 regular methods.
+GET 	/v1/catalog/{storefront}/music-videos	 regular methods.
+GET 	/v1/catalog/{storefront}/music-videos	 regular methods.
+GET 	/v1/me/library/music-videos/{id}	 regular methods.
+GET 	> /v1/me/library/music-videos/{id}/{relationship}	 regular methods.
+GET 	/v1/me/library/music-videos	 regular methods.
+GET 	/v1/me/library/music-videos	 regular methods.
+GET 	/v1/catalog/{storefront}/playlists/{id}	 regular methods.
+GET 	/v1/catalog/{storefront}/playlists/{id}/{relationship}	 regular methods.
+GET 	/v1/catalog/{storefront}/playlists/{id}/view/{view}	 regular methods.
+GET 	/v1/catalog/{storefront}/playlists	 regular methods.
+GET 	/v1/catalog/{storefront}/playlists	 regular methods.
+GET 	/v1/me/library/playlists/{id}	 regular methods.
+GET 	/v1/me/library/playlists/{id}/{relationship}	 regular methods.
+GET 	/v1/me/library/playlists	 regular methods.
+GET 	/v1/me/library/playlists	 regular methods.
+GET 	/v1/me/library/playlist-folders	 regular methods.
+GET 	/v1/me/library/playlist-folders/{id}	 regular methods.
+GET 	/v1/me/library/playlist-folders/{id}/{relationship}	 regular methods.
+GET 	/v1/me/library/playlist-folders	 regular methods.
+POST 	/v1/me/library/playlist-folders	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/v1/me/library/playlists	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/v1/me/library/playlists/{id}/tracks	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v1/catalog/{storefront}/stations/{id}	 regular methods.
+GET 	/v1/catalog/{storefront}/stations/{id}/{relationship}	 regular methods.
+GET 	/v1/catalog/{storefront}/stations	 regular methods.
+GET 	/v1/catalog/{storefront}/stations	 regular methods.
+GET 	/v1/catalog/{storefront}/stations	 regular methods.
+GET 	/v1/catalog/{storefront}/station-genres/{id}	 regular methods.
+GET 	/v1/catalog/{storefront}/station-genres/{id}/{relationship}	 regular methods.
+GET 	/v1/catalog/{storefront}/station-genres	 regular methods.
+GET 	/v1/catalog/{storefront}/station-genres	 regular methods.
+GET 	/v1/catalog/{storefront}/search	 regular methods.
+GET 	/v1/catalog/{storefront}/search/hints	 regular methods.
+GET 	/v1/catalog/{storefront}/search/suggestions	 regular methods.
+GET 	/v1/me/library/search	 regular methods.
+GET 	/v1/me/ratings/albums/{id}	 regular methods.
+GET 	/v1/me/ratings/music-videos/{id}	 regular methods.
+GET 	/v1/me/ratings/playlists/{id}	 regular methods.
+GET 	/v1/me/ratings/songs/{id}	 regular methods.
+GET 	/v1/me/ratings/stations/{id}	 regular methods.
+GET 	/v1/me/ratings/albums	 regular methods.
+GET 	/v1/me/ratings/music-videos	 regular methods.
+GET 	/v1/me/ratings/playlists	 regular methods.
+GET 	/v1/me/ratings/songs	 regular methods.
+GET 	/v1/me/ratings/stations	 regular methods.
+PUT 	/v1/me/ratings/albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/v1/me/ratings/music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/v1/me/ratings/playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	> /v1/me/ratings/songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/v1/me/ratings/stations/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/v1/me/ratings/albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/v1/me/ratings/music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/v1/me/ratings/playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/v1/me/ratings/songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/v1/me/ratings/stations/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/v1/me/ratings/library-albums/{id}	 regular methods.
+GET 	/v1/me/ratings/library-music-videos/{id}	 regular methods.
+GET 	/v1/me/ratings/library-playlists/{id}	 regular methods.
+GET 	/v1/me/ratings/library-songs/{id}	 regular methods.
+GET 	/v1/me/ratings/library-albums	 regular methods.
+GET 	/v1/me/ratings/library-music-videos	 regular methods.
+GET 	/v1/me/ratings/library-playlists	 regular methods.
+GET  	/v1/me/ratings/library-songs	 regular methods.
+PUT 	/v1/me/ratings/library-albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/v1/me/ratings/library-music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT  	/v1/me/ratings/library-playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/v1/me/ratings/library-songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

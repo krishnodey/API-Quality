@@ -1,31 +1,27 @@
 ***Anti-Pattern*** 
-Count: 23
-/addProjectV2DraftIssue	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/addProjectV2ItemById	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/archiveProjectV2Item	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/clearProjectV2ItemFieldValue	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/copyProjectV2	Amorphous End-point	 [uppercase found] 
-/createProjectV2	Amorphous End-point	 [uppercase found] 
-/createProjectV2Field	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/deleteProjectV2	Amorphous End-point	 [uppercase found] 
-/deleteProjectV2Field	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/deleteProjectV2Item	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/deleteProjectV2Workflow	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/linkProjectV2ToRepository	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/linkProjectV2ToTeam	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/markProjectV2AsTemplate	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/unarchiveProjectV2Item	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/unlinkProjectV2FromRepository	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/unlinkProjectV2FromTeam	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/unmarkProjectV2AsTemplate	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/updateProjectV2	Amorphous End-point	 [uppercase found] 
-/updateProjectV2Collaborators	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/updateProjectV2DraftIssue	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/updateProjectV2ItemFieldValue	Amorphous End-point	 [uppercase found]  [uppercase found] 
-/updateProjectV2ItemPosition	Amorphous End-point	 [uppercase found]  [uppercase found] 
+Count: 19
+/addProjectV2DraftIssue	Amorphous End-point	 [uppercase found] 
+/addProjectV2ItemById	Amorphous End-point	 [uppercase found] 
+/archiveProjectV2Item	Amorphous End-point	 [uppercase found] 
+/clearProjectV2ItemFieldValue	Amorphous End-point	 [uppercase found] 
+/createProjectV2Field	Amorphous End-point	 [uppercase found] 
+/deleteProjectV2Field	Amorphous End-point	 [uppercase found] 
+/deleteProjectV2Item	Amorphous End-point	 [uppercase found] 
+/deleteProjectV2Workflow	Amorphous End-point	 [uppercase found] 
+/linkProjectV2ToRepository	Amorphous End-point	 [uppercase found] 
+/linkProjectV2ToTeam	Amorphous End-point	 [uppercase found] 
+/markProjectV2AsTemplate	Amorphous End-point	 [uppercase found] 
+/unarchiveProjectV2Item	Amorphous End-point	 [uppercase found] 
+/unlinkProjectV2FromRepository	Amorphous End-point	 [uppercase found] 
+/unlinkProjectV2FromTeam	Amorphous End-point	 [uppercase found] 
+/unmarkProjectV2AsTemplate	Amorphous End-point	 [uppercase found] 
+/updateProjectV2Collaborators	Amorphous End-point	 [uppercase found] 
+/updateProjectV2DraftIssue	Amorphous End-point	 [uppercase found] 
+/updateProjectV2ItemFieldValue	Amorphous End-point	 [uppercase found] 
+/updateProjectV2ItemPosition	Amorphous End-point	 [uppercase found] 
 
 ***Patterns*** 
-Count: 233
+Count: 237
 /codeOfConduct	Tidy End-point	
 /codesOfConduct	Tidy End-point	
 /enterprise	Tidy End-point	
@@ -89,6 +85,7 @@ Count: 233
 /closePullRequest	Tidy End-point	
 /convertProjectCardNoteToIssue	Tidy End-point	
 /convertPullRequestToDraft	Tidy End-point	
+/copyProjectV2	Tidy End-point	
 /createAttributionInvitation	Tidy End-point	
 /createBranchProtectionRule	Tidy End-point	
 /createCheckRun	Tidy End-point	
@@ -105,6 +102,7 @@ Count: 233
 /createLinkedBranch	Tidy End-point	
 /createMigrationSource	Tidy End-point	
 /createProject	Tidy End-point	
+/createProjectV2	Tidy End-point	
 /createPullRequest	Tidy End-point	
 /createRef	Tidy End-point	
 /createRepository	Tidy End-point	
@@ -130,6 +128,7 @@ Count: 233
 /deleteProject	Tidy End-point	
 /deleteProjectCard	Tidy End-point	
 /deleteProjectColumn	Tidy End-point	
+/deleteProjectV2	Tidy End-point	
 /deletePullRequestReview	Tidy End-point	
 /deletePullRequestReviewComment	Tidy End-point	
 /deleteRef	Tidy End-point	
@@ -242,6 +241,7 @@ Count: 233
 /updateProject	Tidy End-point	
 /updateProjectCard	Tidy End-point	
 /updateProjectColumn	Tidy End-point	
+/updateProjectV2	Tidy End-point	
 /updatePullRequest	Tidy End-point	
 /updatePullRequestBranch	Tidy End-point	
 /updatePullRequestReview	Tidy End-point	

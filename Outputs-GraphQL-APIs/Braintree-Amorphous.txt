@@ -1,8 +1,12 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+/performThreeDSecureLookup	Amorphous End-point	 [uppercase found] 
+/Node/{id}	Amorphous End-point	 [uppercase found] 
+/Payment/{id}	Amorphous End-point	 [uppercase found] 
+/Payment/{legacyId}	Amorphous End-point	 [uppercase found] 
 
 ***Patterns*** 
-Count: 15
+Count: 92
 /ping	Tidy End-point	
 /pingInStoreReader	Tidy End-point	
 /viewer	Tidy End-point	
@@ -18,3 +22,80 @@ Count: 15
 /authorizeVenmoAccount	Tidy End-point	
 /authorizeCreditCard	Tidy End-point	
 /captureTransaction	Tidy End-point	
+/chargeUsBankAccount	Tidy End-point	
+/chargePayPalAccount	Tidy End-point	
+/chargeVenmoAccount	Tidy End-point	
+/chargeCreditCard	Tidy End-point	
+/vaultPaymentMethod	Tidy End-point	
+/vaultUsBankAccount	Tidy End-point	
+/vaultCreditCard	Tidy End-point	
+/refundTransaction	Tidy End-point	
+/reverseTransaction	Tidy End-point	
+/reverseRefund	Tidy End-point	
+/refundCreditCard	Tidy End-point	
+/refundUsBankAccount	Tidy End-point	
+/updateCustomFields	Tidy End-point	
+/verifyPaymentMethod	Tidy End-point	
+/verifyCreditCard	Tidy End-point	
+/verifyUsBankAccount	Tidy End-point	
+/confirmMicroTransferAmounts	Tidy End-point	
+/deletePaymentMethodFromVault	Tidy End-point	
+/createClientToken	Tidy End-point	
+/createUniversalAccessToken	Tidy End-point	
+/partialCaptureTransaction	Tidy End-point	
+/tokenizeCustomActionsPaymentMethod	Tidy End-point	
+/tokenizeCreditCard	Tidy End-point	
+/tokenizeCvv	Tidy End-point	
+/tokenizeNetworkToken	Tidy End-point	
+/tokenizeSamsungPayCard	Tidy End-point	
+/tokenizeUsBankAccount	Tidy End-point	
+/tokenizeUsBankLogin	Tidy End-point	
+/tokenizePayPalOneTimePayment	Tidy End-point	
+/createPayPalOneTimePayment	Tidy End-point	
+/tokenizePayPalBillingAgreement	Tidy End-point	
+/createPayPalBillingAgreement	Tidy End-point	
+/createCustomer	Tidy End-point	
+/updateCustomer	Tidy End-point	
+/deleteCustomer	Tidy End-point	
+/updateCreditCardBillingAddress	Tidy End-point	
+/updateCreditCardCardholderName	Tidy End-point	
+/updateCreditCardExpirationDate	Tidy End-point	
+/acceptDispute	Tidy End-point	
+/finalizeDispute	Tidy End-point	
+/createDisputeTextEvidence	Tidy End-point	
+/deleteDisputeEvidence	Tidy End-point	
+/createDisputeFileEvidence	Tidy End-point	
+/vaultPayPalBillingAgreement	Tidy End-point	
+/sandboxSettleTransaction	Tidy End-point	
+/createInStoreLocation	Tidy End-point	
+/updateInStoreLocation	Tidy End-point	
+/pairInStoreReader	Tidy End-point	
+/updateInStoreReader	Tidy End-point	
+/requestChargeFromInStoreReader	Tidy End-point	
+/requestAuthorizeFromInStoreReader	Tidy End-point	
+/requestCancelFromInStoreReader	Tidy End-point	
+/requestRefundFromInStoreReader	Tidy End-point	
+/requestVaultFromInStoreReader	Tidy End-point	
+/requestTextDisplayFromInStoreReader	Tidy End-point	
+/requestItemDisplayFromInStoreReader	Tidy End-point	
+/requestFirmwareUpdateFromInStoreReader	Tidy End-point	
+/requestSignaturePromptFromInStoreReader	Tidy End-point	
+/requestConfirmationPromptFromInStoreReader	Tidy End-point	
+/requestNonPciCardDataFromInStoreReader	Tidy End-point	
+/requestAmountPromptFromInStoreReader	Tidy End-point	
+/requestTextPromptFromInStoreReader	Tidy End-point	
+/createVenmoPaymentContext	Tidy End-point	
+/updateTransactionAmount	Tidy End-point	
+/generateExchangeRateQuote	Tidy End-point	
+/createNonInstantLocalPaymentContext	Tidy End-point	
+/DisputeEvidence/{id}	Tidy End-point	
+/DisputeEvidence/{legacyId}	Tidy End-point	
+/InStoreContextResult/{id}	Tidy End-point	
+/InStoreReaderOriginDetails	Tidy End-point	
+/PaymentContext	Tidy End-point	
+/PaymentStatusEvent	Tidy End-point	
+/AccountCreationStatus	Tidy End-point	
+/ApplePayStatus	Tidy End-point	
+/ApplicationBankAccountPurpose	Tidy End-point	
+/ApplicationStatus	Tidy End-point	
+/BinRecordValue	Tidy End-point	

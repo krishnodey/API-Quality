@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 14
+Count: 51
  /v2/users/:id/bookmarks/:tweet_id 	Hierarchical Nodes	
  /v2/users/:id/bookmarks	Hierarchical Nodes	
  /v2/users/:id/bookmarks	Hierarchical Nodes	
@@ -16,4 +16,41 @@ Count: 14
  /v2/users/:id/likes 	Hierarchical Nodes	
  /v2/tweets/:id 	Hierarchical Nodes	
  /v2/tweets 	Hierarchical Nodes	
- /2/tweets/:id/quote_tweets 	Hierarchical Nodes	
+ /v2/tweets/:id/quote_tweets 	Hierarchical Nodes	
+ /v2/users/:id/retweets/:source_tweet_id 	Hierarchical Nodes	
+ /v2/tweets/:id/retweeted_by 	Hierarchical Nodes	
+ /v2/tweets/:id/retweets 	Hierarchical Nodes	
+/v2/users/:id/retweets 	Hierarchical Nodes	
+/v2/tweets/search/all 	Hierarchical Nodes	
+ /v2/tweets/search/recent 	Hierarchical Nodes	
+ /v2/users/:id/mentions 	Hierarchical Nodes	
+ /v2/users/:id/timelines/reverse_chronological 	Hierarchical Nodes	
+ /v2/users/:id/tweets 	Hierarchical Nodes	
+ /v2/tweets/counts/all 	Hierarchical Nodes	
+ /v2/tweets/counts/recent 	Hierarchical Nodes	
+ /v2/users/:id/blocking 	Hierarchical Nodes	
+ /v2/users/:source_user_id/following/:target_user_id 	Hierarchical Nodes	
+ /v2/users/:id/followers 	Hierarchical Nodes	
+ /v2/users/:id/following 	Hierarchical Nodes	
+ /v2/users/:id/following 	Hierarchical Nodes	
+ /v2/users/:source_user_id/muting/:target_user_id 	Hierarchical Nodes	
+ /v2/users/:id/muting 	Hierarchical Nodes	
+ /v2/users/:id/muting 	Hierarchical Nodes	
+ /v2/users/search 	Hierarchical Nodes	
+ /v2/users 	Hierarchical Nodes	
+ /v2/users/:id 	Hierarchical Nodes	
+ /v2/users/by 	Hierarchical Nodes	
+ /v2/users/by/username/:username 	Hierarchical Nodes	
+ /v2/users/me 	Hierarchical Nodes	
+ /v2/spaces/search 	Hierarchical Nodes	
+ /v2/spaces/:id 	Hierarchical Nodes	
+ /v2/spaces/:id/buyers 	Hierarchical Nodes	
+ /v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces. 	Hierarchical Nodes	
+ /v2/spaces/by/creator_ids 	Hierarchical Nodes	
+ /v2/lists/:id/tweets 	Hierarchical Nodes	
+ /v2/lists/:id 	Hierarchical Nodes	
+ /v2/users/:id/owned_lists 	Hierarchical Nodes	
+ /v2/lists/:id/members/:user_id 	Hierarchical Nodes	
+ /v2/lists/:id/members 	Hierarchical Nodes	
+ /v2/users/:id/list_memberships 	Hierarchical Nodes	
+  /v2/lists/:id/members 	Hierarchical Nodes	

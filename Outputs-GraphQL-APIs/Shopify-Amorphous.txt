@@ -1,21 +1,38 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 2
+/Link	Amorphous End-point	 [uppercase found] 
+/Publication	Amorphous End-point	 [uppercase found] 
 
 ***Patterns*** 
-Count: 16
-/mutations/delegateAccessTokenCreate	Tidy End-point	
-/mutations/storefrontAccessTokenCreate	Tidy End-point	
-/mutations/storefrontAccessTokenDelete	Tidy End-point	
-/objects/AccessScope	Tidy End-point	
-/objects/DelegateAccessToken	Tidy End-point	
-/objects/StorefrontAccessToken	Tidy End-point	
-queries/shopifyqlQuery	Tidy End-point	
-/objects/ErrorPosition	Tidy End-point	
-/objects/ParseError	Tidy End-point	
-/objects/ParseErrorRange	Tidy End-point	
-/objects/PolarisVizDataPoint	Tidy End-point	
-/objects/PolarisVizDataSeries	Tidy End-point	
-/objects/PolarisVizResponse	Tidy End-point	
-/objects/TableData	Tidy End-point	
-/objects/TableDataColumn	Tidy End-point	
-/objects/TableResponse	Tidy End-point	
+Count: 31
+/delegateAccessTokenCreate	Tidy End-point	
+/storefrontAccessTokenCreate	Tidy End-point	
+/storefrontAccessTokenDelete	Tidy End-point	
+/AccessScope	Tidy End-point	
+/DelegateAccessToken	Tidy End-point	
+/StorefrontAccessToken	Tidy End-point	
+/shopifyqlQuery	Tidy End-point	
+/ErrorPosition	Tidy End-point	
+/ParseError	Tidy End-point	
+/ParseErrorRange	Tidy End-point	
+/PolarisVizDataPoint	Tidy End-point	
+/PolarisVizDataSeries	Tidy End-point	
+/PolarisVizResponse	Tidy End-point	
+/TableData	Tidy End-point	
+/TableDataColumn	Tidy End-point	
+/TableResponse	Tidy End-point	
+/query/{id}	Tidy End-point	
+/appByHandle	Tidy End-point	
+/appByKey	Tidy End-point	
+/appInstallation/{id}	Tidy End-point	
+/appInstallations	Tidy End-point	
+/currentAppInstallation	Tidy End-point	
+/publication/{id}	Tidy End-point	
+/publications	Tidy End-point	
+/publicationCreate	Tidy End-point	
+/publicationDelete{id}	Tidy End-point	
+/publicationUpdate	Tidy End-point	
+/AppFeedback	Tidy End-point	
+/AppInstallation	Tidy End-point	
+/FailedRequirement	Tidy End-point	
+/ResourceFeedback	Tidy End-point	

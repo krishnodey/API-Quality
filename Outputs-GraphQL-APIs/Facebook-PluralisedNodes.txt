@@ -1,10 +1,15 @@
 ***Anti-Pattern*** 
-Count: 2
+Count: 7
 POST 	/v18.0/{app-link-host-id}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/{business_id}/owned_apps	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/{application_id}/app_indexing	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/{application_id}/mmp_auditing	Pluralized Nodes	 [Singular last node with POST method.] 
+DELETE	/{page_id}/subscribed_apps.	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+DELETE 	/act_{ad_account_id}/subscribed_apps	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+DELETE 	/v19.0/{app-id}/scores	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+DELETE 	/v19.0/{app-id}/subscriptions	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 
 ***Patterns*** 
-Count: 18
+Count: 62
 GET 	/v18.0/{album-id}	 regular methods.
 POST 	/{group_id}/albums	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/v18.0/{album-id}/comments	 regular methods.
@@ -16,6 +21,7 @@ GET 	/v18.0/{app-link-host-id}	 regular methods.
 POST 	/app/app_link_hosts	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELET	/v18.0/{app-link-host-id}	 regular methods.
 GET	/v18.0/{application-id}	 regular methods.
+POST 	/{business_id}/owned_apps	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/v18.0/{application-id}/accounts	 regular methods.
 POST 	/{application_id}/accounts	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/v18.0/{application-id}/ad_placement_groups	 regular methods.
@@ -23,3 +29,46 @@ GET 	/v18.0/{application-id}/adnetworkanalytics_results	 regular methods.
 GE	/v18.0/{application-id}/aem_attribution	 regular methods.
 GET	/v18.0/{application-id}/aem_conversion_configs	 regular methods.
 GET 	/v18.0/{application-id}/aem_conversion_filter	 regular methods.
+GET 	/v19.0/{application-id}/agencies	 regular methods.
+GET 	/v19.0/{application-id}/app_event_types	 regular methods.
+GET 	/v19.0/{application-id}/app_installed_groups	 regular methods.
+GET 	/v19.0/{application-id}/appassets	 regular methods.
+GET 	/v19.0/{application-id}/button_auto_detection_device_selection	 regular methods.
+GET 	/v19.0/{application-id}/cloudbridge_settings	 regular methods.
+GET 	/v19.0/{application-id}/da_checks	 regular methods.
+GET 	/v19.0/{application-id}/events	 regular methods.
+GET 	/v19.0/{application-id}/ios_skadnetwork_conversion_config	 regular methods.
+GET 	/v19.0/{application-id}/mobile_sdk_gk	 regular methods.
+GET 	/v19.0/{application-id}/model_asset	 regular methods.
+GET 	/v19.0/{application-id}/monetized_digital_store_objects	 regular methods.
+GET	/v19.0/{application-id}/permissions	 regular methods.
+GET 	/v19.0/{application-id}/products	 regular methods.
+GET 	/v19.0/{application-id}/purchases	 regular methods.
+GET 	/v19.0/{app-id}/roles	 regular methods.
+GET 	/v19.0/{application-id}/subscribed_domains	 regular methods.
+GET 	/v19.0/{application-id}/subscribed_domains_phishing	 regular methods.
+POST 	/{application_id}/codeless_event_mappings	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/{application_id}/page_activities	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/{business_id}/client_apps	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/act_{ad_account_id}/subscribed_apps	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/{application_id}/activities	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v19.0/{application-id}/ad_placement_groups	 regular methods.
+GET 	/v19.0/{application-id}/adnetworkanalytics_results	 regular methods.
+GET 	/v19.0/{application-id}/mobile_sdk_gk	 regular methods.
+GET 	/v19.0/{application-id}/model_asset	 regular methods.
+GET 	/v19.0/{application-id}/monetized_digital_store_objects	 regular methods.
+GET 	/v19.0/{application-id}/permissions	 regular methods.
+GET 	/v19.0/{app-id}/picture	 regular methods.
+GET  	/v19.0/{application-id}/products	 regular methods.
+GET 	/v19.0/{application-id}/purchases	 regular methods.
+GET 	/v19.0/{app-id}/roles	 regular methods.
+GET 	/v19.0/{app-id}/scores	 regular methods.
+GET 	/v19.0/{application-id}/subscribed_domains	 regular methods.
+GET 	/v19.0/{application-id}/subscribed_domains_phishing	 regular methods.
+POST 	/v19.0/{app-id}/subscriptions	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/v19.0/{app-id}/translations	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/v19.0/branded_content_search	 regular methods.
+GET 	/v19.0/{cpas-advertiser-partnership-recommendation-id}	 regular methods.
+GET 	/v19.0/{canvas-id}	 regular methods.
+GET 	/v19.0/{canvas-id}/preview	 regular methods.
+GET 	/v19.0/{canvas-id}/previews	 regular methods.

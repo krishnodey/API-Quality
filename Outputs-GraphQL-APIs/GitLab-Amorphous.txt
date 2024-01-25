@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 1
+/auditEventsInstanceAmazonS3Configurations	Amorphous End-point	 [uppercase found] 
+
+***Patterns*** 
+Count: 54
+/abuseReport/{id}	Tidy End-point	
+/abuseReportLabels	Tidy End-point	
+/addOnPurchase/{id}	Tidy End-point	
+/aiMessages	Tidy End-point	
+/auditEventDefinitions	Tidy End-point	
+/boardList/{id}	Tidy End-point	
+/ciCatalogResource/{id}	Tidy End-point	
+/ciCatalogResources/{projectPath}	Tidy End-point	
+/ciConfig/{projectPath}	Tidy End-point	
+/ciMinutesUsage/{namespaceId}	Tidy End-point	
+/ciPipelineStage/{id}	Tidy End-point	
+/ciQueueingHistory	Tidy End-point	
+/ciVariables	Tidy End-point	
+/containerRepository/{id}	Tidy End-point	
+/currentLicense	Tidy End-point	
+/currentUser	Tidy End-point	
+/designManagement	Tidy End-point	
+/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	Tidy End-point	
+/echo	Tidy End-point	
+/epicBoardList/{id}	Tidy End-point	
+/explainVulnerabilityPrompt/{vulnerabilityId}	Tidy End-point	
+/frecentGroups	Tidy End-point	
+/frecentProjects	Tidy End-point	
+/geoNode	Tidy End-point	
+/gitpodEnabled	Tidy End-point	
+/group	Tidy End-point	
+groups	Tidy End-point	
+/instanceExternalAuditEventDestinations	Tidy End-point	
+/instanceGoogleCloudLoggingConfigurations	Tidy End-point	
+/instanceSecurityDashboard	Tidy End-point	
+/issue/{id}	Tidy End-point	
+/issues/{assigneeId}	Tidy End-point	
+/iteration/{id}	Tidy End-point	
+/jobs	Tidy End-point	
+/licenseHistoryEntries	Tidy End-point	
+/memberRole/{id}	Tidy End-point	
+/memberRolePermissions	Tidy End-point	
+/memberRoles/{id}	Tidy End-point	
+/mergeRequest/{id}	Tidy End-point	
+/metadata	Tidy End-point	
+/milestone/{id}	Tidy End-point	
+/mlModel/{id}	Tidy End-point	
+/namespace	Tidy End-point	
+/note/{id}	Tidy End-point	
+/organization/{id}	Tidy End-point	
+/organizations	Tidy End-point	
+/package/{id}	Tidy End-point	
+/project/{fullPath}	Tidy End-point	
+/projects/{ids}	Tidy End-point	
+/queryComplexity	Tidy End-point	
+/runner/{id}	Tidy End-point	
+/runnerSetup	Tidy End-point	
+/runners/{creatorId}	Tidy End-point	
+/selfManagedAddOnEligibleUsers	Tidy End-point	

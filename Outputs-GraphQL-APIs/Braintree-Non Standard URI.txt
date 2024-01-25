@@ -1,20 +1,101 @@
 ***Anti-Pattern*** 
-Count: 15
-/ping	Non-standard End-point	 [black space/tab found] 
-/pingInStoreReader	Non-standard End-point	 [black space/tab found] 
-/viewer	Non-standard End-point	 [black space/tab found] 
-/clientConfiguration	Non-standard End-point	 [black space/tab found] 
-/node	Non-standard End-point	 [black space/tab found] 
-/idFromLegacyId	Non-standard End-point	 [black space/tab found] 
-/report	Non-standard End-point	 [black space/tab found] 
-/search	Non-standard End-point	 [black space/tab found] 
-/paypalFinancingOptions	Non-standard End-point	 [black space/tab found] 
-/inStoreLocations	Non-standard End-point	 [black space/tab found] 
-/authorizePaymentMethod	Non-standard End-point	 [black space/tab found] 
-/authorizePayPalAccount	Non-standard End-point	 [black space/tab found] 
-/authorizeVenmoAccount	Non-standard End-point	 [black space/tab found] 
-/authorizeCreditCard	Non-standard End-point	 [black space/tab found] 
-/captureTransaction	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 0
+Count: 96
+/ping	Standard End-point	
+/pingInStoreReader	Standard End-point	
+/viewer	Standard End-point	
+/clientConfiguration	Standard End-point	
+/node	Standard End-point	
+/idFromLegacyId	Standard End-point	
+/report	Standard End-point	
+/search	Standard End-point	
+/paypalFinancingOptions	Standard End-point	
+/inStoreLocations	Standard End-point	
+/authorizePaymentMethod	Standard End-point	
+/authorizePayPalAccount	Standard End-point	
+/authorizeVenmoAccount	Standard End-point	
+/authorizeCreditCard	Standard End-point	
+/captureTransaction	Standard End-point	
+/chargeUsBankAccount	Standard End-point	
+/chargePayPalAccount	Standard End-point	
+/chargeVenmoAccount	Standard End-point	
+/chargeCreditCard	Standard End-point	
+/vaultPaymentMethod	Standard End-point	
+/vaultUsBankAccount	Standard End-point	
+/vaultCreditCard	Standard End-point	
+/refundTransaction	Standard End-point	
+/reverseTransaction	Standard End-point	
+/reverseRefund	Standard End-point	
+/refundCreditCard	Standard End-point	
+/refundUsBankAccount	Standard End-point	
+/updateCustomFields	Standard End-point	
+/verifyPaymentMethod	Standard End-point	
+/verifyCreditCard	Standard End-point	
+/verifyUsBankAccount	Standard End-point	
+/confirmMicroTransferAmounts	Standard End-point	
+/deletePaymentMethodFromVault	Standard End-point	
+/createClientToken	Standard End-point	
+/createUniversalAccessToken	Standard End-point	
+/partialCaptureTransaction	Standard End-point	
+/tokenizeCustomActionsPaymentMethod	Standard End-point	
+/tokenizeCreditCard	Standard End-point	
+/tokenizeCvv	Standard End-point	
+/tokenizeNetworkToken	Standard End-point	
+/tokenizeSamsungPayCard	Standard End-point	
+/tokenizeUsBankAccount	Standard End-point	
+/tokenizeUsBankLogin	Standard End-point	
+/tokenizePayPalOneTimePayment	Standard End-point	
+/createPayPalOneTimePayment	Standard End-point	
+/tokenizePayPalBillingAgreement	Standard End-point	
+/createPayPalBillingAgreement	Standard End-point	
+/createCustomer	Standard End-point	
+/updateCustomer	Standard End-point	
+/deleteCustomer	Standard End-point	
+/updateCreditCardBillingAddress	Standard End-point	
+/updateCreditCardCardholderName	Standard End-point	
+/updateCreditCardExpirationDate	Standard End-point	
+/performThreeDSecureLookup	Standard End-point	
+/acceptDispute	Standard End-point	
+/finalizeDispute	Standard End-point	
+/createDisputeTextEvidence	Standard End-point	
+/deleteDisputeEvidence	Standard End-point	
+/createDisputeFileEvidence	Standard End-point	
+/vaultPayPalBillingAgreement	Standard End-point	
+/sandboxSettleTransaction	Standard End-point	
+/createInStoreLocation	Standard End-point	
+/updateInStoreLocation	Standard End-point	
+/pairInStoreReader	Standard End-point	
+/updateInStoreReader	Standard End-point	
+/requestChargeFromInStoreReader	Standard End-point	
+/requestAuthorizeFromInStoreReader	Standard End-point	
+/requestCancelFromInStoreReader	Standard End-point	
+/requestRefundFromInStoreReader	Standard End-point	
+/requestVaultFromInStoreReader	Standard End-point	
+/requestTextDisplayFromInStoreReader	Standard End-point	
+/requestItemDisplayFromInStoreReader	Standard End-point	
+/requestFirmwareUpdateFromInStoreReader	Standard End-point	
+/requestSignaturePromptFromInStoreReader	Standard End-point	
+/requestConfirmationPromptFromInStoreReader	Standard End-point	
+/requestNonPciCardDataFromInStoreReader	Standard End-point	
+/requestAmountPromptFromInStoreReader	Standard End-point	
+/requestTextPromptFromInStoreReader	Standard End-point	
+/createVenmoPaymentContext	Standard End-point	
+/updateTransactionAmount	Standard End-point	
+/generateExchangeRateQuote	Standard End-point	
+/createNonInstantLocalPaymentContext	Standard End-point	
+/DisputeEvidence/{id}	Standard End-point	
+/DisputeEvidence/{legacyId}	Standard End-point	
+/InStoreContextResult/{id}	Standard End-point	
+/InStoreReaderOriginDetails	Standard End-point	
+/Node/{id}	Standard End-point	
+/Payment/{id}	Standard End-point	
+/Payment/{legacyId}	Standard End-point	
+/PaymentContext	Standard End-point	
+/PaymentStatusEvent	Standard End-point	
+/AccountCreationStatus	Standard End-point	
+/ApplePayStatus	Standard End-point	
+/ApplicationBankAccountPurpose	Standard End-point	
+/ApplicationStatus	Standard End-point	
+/BinRecordValue	Standard End-point	

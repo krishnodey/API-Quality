@@ -1,10 +1,9 @@
 ***Anti-Pattern*** 
-Count: 2
+Count: 1
 /admin/apps?$top={$top}	Non-standard End-point	 [unknown char found] 
-/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Non-standard End-point	 [unknown char found] 
 
 ***Patterns*** 
-Count: 32
+Count: 33
 /admin/tenantKeys	Standard End-point	
 /admin/apps/{appId}/users	Standard End-point	
 /admin/capacities/AssignWorkspaces	Standard End-point	
@@ -22,6 +21,7 @@ Count: 32
 /admin/capacities	Standard End-point	
 /admin/groups/{groupId}/users	Standard End-point	
 /admin/pipelines/{pipelineId}/users/{identifier}	Standard End-point	
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Standard End-point	
 /admin/workspaces/modified	Standard End-point	
 /admin/workspaces/getInfo	Standard End-point	
 /apps/{appId}	Standard End-point	

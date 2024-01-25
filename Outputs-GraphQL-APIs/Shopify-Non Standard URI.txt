@@ -1,21 +1,38 @@
 ***Anti-Pattern*** 
-Count: 8
-/objects/ErrorPosition	Non-standard End-point	 [black space/tab found] 
-/objects/ParseError	Non-standard End-point	 [black space/tab found] 
-/objects/ParseErrorRange	Non-standard End-point	 [black space/tab found] 
-/objects/PolarisVizDataPoint	Non-standard End-point	 [black space/tab found] 
-/objects/PolarisVizResponse	Non-standard End-point	 [black space/tab found] 
-/objects/TableData	Non-standard End-point	 [black space/tab found] 
-/objects/TableDataColumn	Non-standard End-point	 [black space/tab found] 
-/objects/TableResponse	Non-standard End-point	 [black space/tab found] 
+Count: 0
 
 ***Patterns*** 
-Count: 8
-/mutations/delegateAccessTokenCreate	Standard End-point	
-/mutations/storefrontAccessTokenCreate	Standard End-point	
-/mutations/storefrontAccessTokenDelete	Standard End-point	
-/objects/AccessScope	Standard End-point	
-/objects/DelegateAccessToken	Standard End-point	
-/objects/StorefrontAccessToken	Standard End-point	
-queries/shopifyqlQuery	Standard End-point	
-/objects/PolarisVizDataSeries	Standard End-point	
+Count: 33
+/delegateAccessTokenCreate	Standard End-point	
+/storefrontAccessTokenCreate	Standard End-point	
+/storefrontAccessTokenDelete	Standard End-point	
+/AccessScope	Standard End-point	
+/DelegateAccessToken	Standard End-point	
+/StorefrontAccessToken	Standard End-point	
+/shopifyqlQuery	Standard End-point	
+/ErrorPosition	Standard End-point	
+/ParseError	Standard End-point	
+/ParseErrorRange	Standard End-point	
+/PolarisVizDataPoint	Standard End-point	
+/PolarisVizDataSeries	Standard End-point	
+/PolarisVizResponse	Standard End-point	
+/TableData	Standard End-point	
+/TableDataColumn	Standard End-point	
+/TableResponse	Standard End-point	
+/query/{id}	Standard End-point	
+/appByHandle	Standard End-point	
+/appByKey	Standard End-point	
+/appInstallation/{id}	Standard End-point	
+/appInstallations	Standard End-point	
+/currentAppInstallation	Standard End-point	
+/publication/{id}	Standard End-point	
+/publications	Standard End-point	
+/publicationCreate	Standard End-point	
+/publicationDelete{id}	Standard End-point	
+/publicationUpdate	Standard End-point	
+/AppFeedback	Standard End-point	
+/AppInstallation	Standard End-point	
+/FailedRequirement	Standard End-point	
+/Link	Standard End-point	
+/Publication	Standard End-point	
+/ResourceFeedback	Standard End-point	

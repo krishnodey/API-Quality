@@ -41,12 +41,11 @@ analyzer_obj = ApiAnalyzer(uri)
 #analyzer_obj.detect_amorphous_uri()
 
 '''''''''''''''''''''''''Amorphous URIs'''''''''''''''''''''''''''''''''
-#print("Detection of AmorphousURI:")
-#result_AP, result_P, p_count, ap_count = analyzer_obj.detect_amorphous_uri()
-# Create the data string to write in the file]
-#pattern_type = "Amorphous"
-#uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#print("Finished Detection of AmorphousURI.\n")
+print("Detection of AmorphousURI:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_amorphous_uri()
+pattern_type = "Amorphous"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("Finished Detection of AmorphousURI.\n")
 
 
 '''''''''''''''''''''''''Non Standard URIs'''''''''''''''''''''''''''''''
@@ -105,11 +104,11 @@ print("Finished Detection of Non-descriptiveURI:")'''
 
 
 '''''''''''''''''''''''''NonHierarchicalNodes'''''''''''''''''''''''''''''''''''''''
-print("Detection of NonHierarchicalNodes:")
+'''print("Detection of NonHierarchicalNodes:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
 pattern_type = "NonHierarchicalNodes"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-print("Finished Detection of NonHierarchicalNodes:")
+print("Finished Detection of NonHierarchicalNodes:")'''
 
 
 '''''''''''''''''''''''''LessCohisiveDocumentation'''''''''''''''''''''''''''''''''''''''

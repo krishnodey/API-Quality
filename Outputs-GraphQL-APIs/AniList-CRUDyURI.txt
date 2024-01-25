@@ -1,32 +1,32 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 9
+v2/UpdateMediaListEntries	CRUDy End-point	 [update found] 
+v2/DeleteMediaListEntry	CRUDy End-point	 [delete found] 
+v2/DeleteCustomList	CRUDy End-point	 [delete found] 
+v2/DeleteActivity	CRUDy End-point	 [delete found] 
+v2/DeleteActivityReply	CRUDy End-point	 [delete found] 
+v2/UpdateFavouriteOrder	CRUDy End-point	 [update found] 
+v2/DeleteReview	CRUDy End-point	 [delete found] 
+v2/DeleteThread	CRUDy End-point	 [delete found] 
+v2/DeleteThreadComment	CRUDy End-point	 [delete found] 
 
 ***Patterns*** 
-Count: 27
+Count: 18
 /v2/oauth/token	Verbless End-point	
 /v2/oauth/pin	Verbless End-point	
 v2/SaveMediaListEntry	Verbless End-point	
-v2/UpdateMediaListEntries	Verbless End-point	
-v2/DeleteMediaListEntry	Verbless End-point	
-v2/DeleteCustomList	Verbless End-point	
 v2/SaveTextActivity	Verbless End-point	
 v2/SaveListActivity	Verbless End-point	
-v2/DeleteActivity	Verbless End-point	
 v2/ToggleActivityPin	Verbless End-point	
 v2/ToggleActivitySubscription	Verbless End-point	
 v2/SaveActivityReply	Verbless End-point	
-v2/DeleteActivityReply	Verbless End-point	
 v2/ToggleLike	Verbless End-point	
 v2/ToggleLikeV2	Verbless End-point	
 v2/ToggleFollow	Verbless End-point	
 v2/ToggleFavourite	Verbless End-point	
-v2/UpdateFavouriteOrder	Verbless End-point	
 v2/SaveReview	Verbless End-point	
-v2/DeleteReview	Verbless End-point	
 v2/RateReview	Verbless End-point	
 v2/SaveRecommendation	Verbless End-point	
 v2/SaveThread	Verbless End-point	
-v2/DeleteThread	Verbless End-point	
 v2/ToggleThreadSubscription	Verbless End-point	
 v2/SaveThreadComment	Verbless End-point	
-v2/DeleteThreadComment	Verbless End-point	

@@ -1,21 +1,38 @@
 ***Anti-Pattern*** 
 Count: 1
--/objects/PolarisVizResponse	Non-pertinent Documentation	A PolarisViz response to a ShopifyQL query.
+-/PolarisVizResponse	Non-pertinent Documentation	A PolarisViz response to a ShopifyQL query.
 
 ***Patterns*** 
-Count: 15
--/mutations/delegateAccessTokenCreate	Pertinent Documentation	creating a delegate access token.
--/mutations/storefrontAccessTokenCreate	Pertinent Documentation	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
--/mutations/storefrontAccessTokenDelete	Pertinent Documentation	Deletes a storefront access token.
--/objects/AccessScope	Pertinent Documentation	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
--/objects/DelegateAccessToken	Pertinent Documentation	A token that delegates a set of scopes from the original permission.
--/objects/StorefrontAccessToken	Pertinent Documentation	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
--queries/shopifyqlQuery	Pertinent Documentation	Returns the results of a ShopifyQL query
--/objects/ErrorPosition	Pertinent Documentation	Error position information in a ShopifyQL parsing error.
--/objects/ParseError	Pertinent Documentation	A ShopifyQL parsing error.
--/objects/ParseErrorRange	Pertinent Documentation	A range of ShopifyQL parsing errors.
--/objects/PolarisVizDataPoint	Pertinent Documentation	A PolarisViz data point structure for ShopifyQL query.
--/objects/PolarisVizDataSeries	Pertinent Documentation	The data series used for PolarisViz visualization.
--/objects/TableData	Pertinent Documentation	The result in a tabular format with schema information and formatted and unformatted row data.
--/objects/TableDataColumn	Pertinent Documentation	A nested array representation of the data. An index in an array represents a row number.
--/objects/TableResponse	Pertinent Documentation	The default table response structure for a ShopifyQL query.
+Count: 32
+-/delegateAccessTokenCreate	Pertinent Documentation	creating a delegate access token.
+-/storefrontAccessTokenCreate	Pertinent Documentation	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
+-/storefrontAccessTokenDelete	Pertinent Documentation	Deletes a storefront access token.
+-/AccessScope	Pertinent Documentation	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
+-/DelegateAccessToken	Pertinent Documentation	A token that delegates a set of scopes from the original permission.
+-/StorefrontAccessToken	Pertinent Documentation	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
+-/shopifyqlQuery	Pertinent Documentation	Returns the results of a ShopifyQL query
+-/ErrorPosition	Pertinent Documentation	Error position information in a ShopifyQL parsing error.
+-/ParseError	Pertinent Documentation	A ShopifyQL parsing error.
+-/ParseErrorRange	Pertinent Documentation	A range of ShopifyQL parsing errors.
+-/PolarisVizDataPoint	Pertinent Documentation	A PolarisViz data point structure for ShopifyQL query.
+-/PolarisVizDataSeries	Pertinent Documentation	The data series used for PolarisViz visualization.
+-/TableData	Pertinent Documentation	The result in a tabular format with schema information and formatted and unformatted row data.
+-/TableDataColumn	Pertinent Documentation	A nested array representation of the data. An index in an array represents a row number.
+-/TableResponse	Pertinent Documentation	The default table response structure for a ShopifyQL query.
+-/query/{id}	Pertinent Documentation	Lookup an App by ID or return the currently authenticated App.
+-/appByHandle	Pertinent Documentation	Fetches app by handle. Returns null if the app doesn't exist.
+-/appByKey	Pertinent Documentation	Fetches an app by its client ID. Returns null if the app doesn't exist.
+-/appInstallation/{id}	Pertinent Documentation	Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App.
+-/appInstallations	Pertinent Documentation	A list of app installations. To use this query, you need to contact Shopify Support to grant your custom app the read_apps access scope. Public apps can't be granted this access scope.
+-/currentAppInstallation	Pertinent Documentation	Return the AppInstallation for the currently authenticated App.
+-/publication/{id}	Pertinent Documentation	Lookup a publication by ID.
+-/publications	Pertinent Documentation	List of publications.
+-/publicationCreate	Pertinent Documentation	Creates a publication.
+-/publicationDelete{id}	Pertinent Documentation	Deletes a publication.
+-/publicationUpdate	Pertinent Documentation	Updates a publication.
+-/AppFeedback	Pertinent Documentation	Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store.
+-/AppInstallation	Pertinent Documentation	Represents an installed application on a shop.
+-/FailedRequirement	Pertinent Documentation	Requirements that must be met before an app can be installed.
+-/Link	Pertinent Documentation	A link to direct users to.
+-/Publication	Pertinent Documentation	A publication is a group of products and collections that is published to an app.
+-/ResourceFeedback	Pertinent Documentation	Represents feedback from apps about a resource, and the steps required to set up the apps on the shop.

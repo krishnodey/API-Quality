@@ -1,21 +1,17 @@
 ***Anti-Pattern*** 
-Count: 7
-/async?state	Non-standard End-point	 [unknown char found] 
-/diagnostics/attributes?locale	Non-standard End-point	 [unknown char found] 
-/diagnostics/index/{index}?attrs	Non-standard End-point	 [unknown char found] 
-/domains/{domain}/clientoptions?attrs	Non-standard End-point	 [unknown char found] 
-/domains/{domain}/clientoptions?attrs	Non-standard End-point	 [unknown char found] 
-/domains/{domain}/customaddresses/test?testAddress	Non-standard End-point	 [unknown char found] 
-/domains/{domain}/links?direction	Non-standard End-point	 [unknown char found] 
+Count: 0
 
 ***Patterns*** 
-Count: 49
+Count: 56
 /list/{type}	Standard End-point	
 /list/{type}/{base}	Standard End-point	
 /application	Standard End-point	
+/async?state	Standard End-point	
 /async/{id}	Standard End-point	
 /async/{id}	Standard End-point	
+/diagnostics/attributes?locale	Standard End-point	
 /diagnostics/index	Standard End-point	
+/diagnostics/index/{index}?attrs	Standard End-point	
 /diagnostics/object/{id}	Standard End-point	
 /domains	Standard End-point	
 /domains	Standard End-point	
@@ -31,9 +27,13 @@ Count: 49
 /domains/{domain}/administrator	Standard End-point	
 /domains/{domain}/administrator	Standard End-point	
 /domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/clientoptions?attrs	Standard End-point	
+/domains/{domain}/clientoptions?attrs	Standard End-point	
 /domains/{domain}/customaddresses	Standard End-point	
+/domains/{domain}/customaddresses/test?testAddress	Standard End-point	
 /domains/{domain}/gatewaysubdirs	Standard End-point	
 /domains/{domain}/info	Standard End-point	
+/domains/{domain}/links?direction	Standard End-point	
 /domains/{domain}/links/{link}	Standard End-point	
 /domains/{domain}/links/{link}	Standard End-point	
 /domains/{domain}/rebuild	Standard End-point	

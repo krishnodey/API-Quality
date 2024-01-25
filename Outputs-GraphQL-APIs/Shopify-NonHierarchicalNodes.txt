@@ -1,21 +1,38 @@
 ***Anti-Pattern*** 
-Count: 6
-/objects/AccessScope	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and access. 0 hierarchical relations were detected out of 2
-/objects/DelegateAccessToken	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and delegate. 0 hierarchical relations were detected out of 3
-/objects/StorefrontAccessToken	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and storefront. 0 hierarchical relations were detected out of 3
- /objects/TableData 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and table. 0 hierarchical relations were detected out of 2
- /objects/TableDataColumn 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and table. 0 hierarchical relations were detected out of 3
- /objects/TableResponse 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between objects and table. 0 hierarchical relations were detected out of 2
+Count: 0
 
 ***Patterns*** 
-Count: 10
-/mutations/delegateAccessTokenCreate	Hierarchical Nodes	
-/mutations/storefrontAccessTokenCreate	Hierarchical Nodes	
-/mutations/storefrontAccessTokenDelete	Hierarchical Nodes	
-queries/shopifyqlQuery	Hierarchical Nodes	
- /objects/ErrorPosition 	Hierarchical Nodes	
- /objects/ParseError 	Hierarchical Nodes	
- /objects/ParseErrorRange	Hierarchical Nodes	
- /objects/PolarisVizDataPoint	Hierarchical Nodes	
-/objects/PolarisVizDataSeries	Hierarchical Nodes	
- /objects/PolarisVizResponse 	Hierarchical Nodes	
+Count: 33
+ /delegateAccessTokenCreate	Hierarchical Nodes	
+ /storefrontAccessTokenCreate	Hierarchical Nodes	
+ /storefrontAccessTokenDelete	Hierarchical Nodes	
+ /AccessScope	Hierarchical Nodes	
+ /DelegateAccessToken	Hierarchical Nodes	
+ /StorefrontAccessToken	Hierarchical Nodes	
+ /shopifyqlQuery	Hierarchical Nodes	
+ /ErrorPosition 	Hierarchical Nodes	
+ /ParseError 	Hierarchical Nodes	
+ /ParseErrorRange	Hierarchical Nodes	
+ /PolarisVizDataPoint	Hierarchical Nodes	
+ /PolarisVizDataSeries	Hierarchical Nodes	
+ /PolarisVizResponse 	Hierarchical Nodes	
+ /TableData 	Hierarchical Nodes	
+ /TableDataColumn 	Hierarchical Nodes	
+ /TableResponse 	Hierarchical Nodes	
+ /query/{id} 	Hierarchical Nodes	
+ /appByHandle 	Hierarchical Nodes	
+ /appByKey 	Hierarchical Nodes	
+ /appInstallation/{id} 	Hierarchical Nodes	
+ /appInstallations 	Hierarchical Nodes	
+ /currentAppInstallation 	Hierarchical Nodes	
+ /publication/{id} 	Hierarchical Nodes	
+ /publications 	Hierarchical Nodes	
+ /publicationCreate 	Hierarchical Nodes	
+ /publicationDelete{id} 	Hierarchical Nodes	
+ /publicationUpdate	Hierarchical Nodes	
+ /AppFeedback 	Hierarchical Nodes	
+ /AppInstallation 	Hierarchical Nodes	
+ /FailedRequirement 	Hierarchical Nodes	
+ /Link 	Hierarchical Nodes	
+ /Publication 	Hierarchical Nodes	
+ /ResourceFeedback	Hierarchical Nodes	

@@ -1,14 +1,8 @@
 ***Anti-Pattern*** 
-Count: 6
-/flow/:id	Non-standard End-point	 [unknown char found] 
-/flow/:id	Non-standard End-point	 [unknown char found] 
-/flow/:id	Non-standard End-point	 [unknown char found] 
-/nodes/:module	Non-standard End-point	 [unknown char found] 
-/nodes/:module	Non-standard End-point	 [unknown char found] 
-/nodes/:module	Non-standard End-point	 [unknown char found] 
+Count: 0
 
 ***Patterns*** 
-Count: 9
+Count: 15
 /auth/login	Standard End-point	
 /auth/token	Standard End-point	
 /auth/revoke	Standard End-point	
@@ -16,5 +10,11 @@ Count: 9
 /flows	Standard End-point	
 /flows	Standard End-point	
 /flow	Standard End-point	
+/flow/:id	Standard End-point	
+/flow/:id	Standard End-point	
+/flow/:id	Standard End-point	
 /nodes	Standard End-point	
 /nodes	Standard End-point	
+/nodes/:module	Standard End-point	
+/nodes/:module	Standard End-point	
+/nodes/:module	Standard End-point	

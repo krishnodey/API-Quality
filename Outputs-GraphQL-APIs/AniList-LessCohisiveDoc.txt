@@ -1,11 +1,8 @@
 ***Anti-Pattern*** 
-Count: 3
--v2/ToggleFollow	Non-pertinent Documentation	Toggle the un/following of a user
--v2/ToggleFavourite	Non-pertinent Documentation	Favourite or unfavourite an anime, manga, character, staff member, or studio
--v2/SaveRecommendation	Non-pertinent Documentation	Recommendation a media
+Count: 0
 
 ***Patterns*** 
-Count: 24
+Count: 27
 -/v2/oauth/token	Pertinent Documentation	Converting Authorization Codes To Access Tokens
 -/v2/oauth/pin	Pertinent Documentation	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
 -v2/SaveMediaListEntry	Pertinent Documentation	Create or update a media list entry
@@ -21,10 +18,13 @@ Count: 24
 -v2/DeleteActivityReply	Pertinent Documentation	Delete an activity reply of the authenticated users
 -v2/ToggleLike	Pertinent Documentation	Add or remove a like from a likeable type. Returns all the users who liked the same model
 -v2/ToggleLikeV2	Pertinent Documentation	Add or remove a like from a likeable type.
+-v2/ToggleFollow	Pertinent Documentation	Toggle the un/following of a user
+-v2/ToggleFavourite	Pertinent Documentation	Favourite or unfavourite an anime, manga, character, staff member, or studio
 -v2/UpdateFavouriteOrder	Pertinent Documentation	Update the order favourites are displayed in
 -v2/SaveReview	Pertinent Documentation	Create or update a review
 -v2/DeleteReview	Pertinent Documentation	Delete a review
 -v2/RateReview	Pertinent Documentation	Rate a review
+-v2/SaveRecommendation	Pertinent Documentation	Recommendation a media
 -v2/SaveThread	Pertinent Documentation	Create or update a forum thread
 -v2/DeleteThread	Pertinent Documentation	Delete a thread
 -v2/ToggleThreadSubscription	Pertinent Documentation	Toggle the subscription of a forum thread

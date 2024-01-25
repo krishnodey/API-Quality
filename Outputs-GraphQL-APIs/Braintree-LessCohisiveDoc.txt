@@ -3,7 +3,7 @@ Count: 1
 -/ping	Non-pertinent Documentation	Returns the literal string 'pong'.
 
 ***Patterns*** 
-Count: 14
+Count: 95
 -/pingInStoreReader	Pertinent Documentation	Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
 -/viewer	Pertinent Documentation	The currently authenticated viewer.
 -/clientConfiguration	Pertinent Documentation	The client-side environment and payment method configuration.
@@ -18,3 +18,84 @@ Count: 14
 -/authorizeVenmoAccount	Pertinent Documentation	Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.
 -/authorizeCreditCard	Pertinent Documentation	Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.
 -/captureTransaction	Pertinent Documentation	Capture an authorized transaction and return a payload that includes details of the transaction.
+-/chargeUsBankAccount	Pertinent Documentation	Charge a US bank account and return a payload that includes details of the resulting transaction. See https://developers.braintreepayments.com/guides/ach/configuration for information on eligibility and setup.
+-/chargePayPalAccount	Pertinent Documentation	Charge a PayPal account and return a payload that includes details of the resulting transaction.
+-/chargeVenmoAccount	Pertinent Documentation	Charge a Venmo account and return a payload that includes details of the resulting transaction. See https://articles.braintreepayments.com/guides/payment-methods/venmo for information on eligibility and setup.
+-/chargeCreditCard	Pertinent Documentation	Charge a credit card of any origin and return a payload that includes details of the resulting transaction.
+-/vaultPaymentMethod	Pertinent Documentation	Vault payment information from a single-use payment method and return a payload that includes a new multi-use payment method. When vaulting a credit card, by default, this mutation will also verify that card before vaulting.
+-/vaultUsBankAccount	Pertinent Documentation	Vault payment information from a single-use US bank account payment method and return a payload that includes a new multi-use payment method.
+-/vaultCreditCard	Pertinent Documentation	Vault payment information from a single-use credit card and return a payload that includes a new multi-use payment method. By default, this mutation will also verify the card before vaulting.
+-/refundTransaction	Pertinent Documentation	Refund a settled transaction and return a payload that includes details of the refund.
+-/reverseTransaction	Pertinent Documentation	Reverse a transaction and return a payload that includes either the voided transaction or a refund.
+-/reverseRefund	Pertinent Documentation	Reverse a refund and return a payload that includes voided refund.
+-/refundCreditCard	Pertinent Documentation	Create a detached refund (unassociated with any previous Braintree payment) to a credit card and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration.
+-/refundUsBankAccount	Pertinent Documentation	Create a detached refund (unassociated with any previous Braintree payment) to a US Bank Account and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration.
+-/updateCustomFields	Pertinent Documentation	Update custom fields on a transaction or refund. Custom fields are defined in the Control Panel.
+-/verifyPaymentMethod	Pertinent Documentation	Run a verification on a multi-use payment method.
+-/verifyCreditCard	Pertinent Documentation	Run a verification on a multi-use credit card payment method.
+-/verifyUsBankAccount	Pertinent Documentation	Run a verification on a multi-use US bank account payment method.
+-/confirmMicroTransferAmounts	Pertinent Documentation	Confirm micro-transfer amounts initiated by vaultUsBankAccount or verifyUsBankAccount, completing the verification process for a US Bank Account via micro-transfer.
+-/deletePaymentMethodFromVault	Pertinent Documentation	Delete a multi-use payment method from the vault.
+-/createClientToken	Pertinent Documentation	Create a client token that can be used to initialize a client in order to tokenize payment information.
+-/createUniversalAccessToken	Pertinent Documentation	Create a PayPal access token that can be used to make additional API calls or initialize a client.
+-/partialCaptureTransaction	Pertinent Documentation	Partially capture funds from a transaction that was successfully authorized and return a payload that includes a new transaction with information about the capture. This is available for Venmo and PayPal transactions.
+-/tokenizeCustomActionsPaymentMethod	Pertinent Documentation	Tokenize Custom Actions fields and return a payload that includes a single-use payment method.
+-/tokenizeCreditCard	Pertinent Documentation	Tokenize credit card fields and return a payload that includes a single-use payment method.
+-/tokenizeCvv	Pertinent Documentation	Tokenize a credit card's CVV and return a payload that includes a single-use payment method.
+-/tokenizeNetworkToken	Pertinent Documentation	Tokenize a network tokenized payment instrument and return a payload that includes a single-use payment method.
+-/tokenizeSamsungPayCard	Pertinent Documentation	Tokenize Samsung Pay card fields and return a payload that includes a single-use payment method.
+-/tokenizeUsBankAccount	Pertinent Documentation	Tokenize US bank account fields and return a payload that includes a single-use payment method.
+-/tokenizeUsBankLogin	Pertinent Documentation	Tokenize US bank login fields and return a payload that includes a single-use payment method.
+-/tokenizePayPalOneTimePayment	Pertinent Documentation	Tokenize PayPal One-Time Payment and return a payload that includes a single-use payment method.
+-/createPayPalOneTimePayment	Pertinent Documentation	Set up a PayPal One-Time Payment for approval by a PayPal user. See documentation for more information. Your account must be enabled for this feature.
+-/tokenizePayPalBillingAgreement	Pertinent Documentation	Tokenize PayPal account and return a payload that includes a single-use payment method.
+-/createPayPalBillingAgreement	Pertinent Documentation	Set up a PayPal Billing Agreement Token for approval by a PayPal user.
+-/createCustomer	Pertinent Documentation	Create a customer for storing individual customer information and/or grouping transactions and multi-use payment methods.
+-/updateCustomer	Pertinent Documentation	Update a customer's information.
+-/deleteCustomer	Pertinent Documentation	Delete a customer, breaking association between any of the customer's transactions. Will not delete if the customer has existing payment methods.
+-/updateCreditCardBillingAddress	Pertinent Documentation	Set a new billing address for a multi-use credit card payment method. By default, this mutation will also verify the card with the new billing address before updating.
+-/updateCreditCardCardholderName	Pertinent Documentation	Set a new cardholder name for a multi-use credit card payment method. By default, this mutation will also verify the card with the new cardholder name before updating.
+-/updateCreditCardExpirationDate	Pertinent Documentation	Set a new expiration date for a multi-use credit card payment method. By default, this mutation will also verify the card with the new expiration date before updating.
+-/performThreeDSecureLookup	Pertinent Documentation	Attempt to perform 3D Secure Authentication on credit card payment method. This may consume the payment method and return a new single-use payment method.
+-/acceptDispute	Pertinent Documentation	Accepts a dispute and returns a payload that includes the dispute that was accepted. Only disputes with a status of OPEN can be accepted.
+-/finalizeDispute	Pertinent Documentation	Finalizes a dispute and returns a payload that includes the dispute that was finalized. Only disputes with a status of OPEN can be finalized.
+-/createDisputeTextEvidence	Pertinent Documentation	Creates text evidence to a dispute and returns a payload that includes the evidence that was created. Only disputes with a status of OPEN can have text evidence created for them.
+-/deleteDisputeEvidence	Pertinent Documentation	Deletes evidence from a dispute.
+-/createDisputeFileEvidence	Pertinent Documentation	Uploads an evidence file and associates it with a dispute. Note:: file upload requires a special request format. See the 'Uploading Files' integration guide for instructions on how to perform this mutation.
+-/vaultPayPalBillingAgreement	Pertinent Documentation	Vault an existing PayPal Billing Agreement that was not created through Braintree. Only use this mutation if you need to import PayPal Billing Agreements from an existing PayPal integration into your Braintree account.
+-/sandboxSettleTransaction	Pertinent Documentation	Force a transaction to settle in the sandbox environment. Generates an error elsewhere.
+-/createInStoreLocation	Pertinent Documentation	Creates a new In-Store Location to associate Readers.
+-/updateInStoreLocation	Pertinent Documentation	Updates an In-Store Location.
+-/pairInStoreReader	Pertinent Documentation	Pairs a Reader to an account and In-Store Location.
+-/updateInStoreReader	Pertinent Documentation	Updates an In-Store Reader.
+-/requestChargeFromInStoreReader	Pertinent Documentation	Request an in-store reader to begin the charge flow.
+-/requestAuthorizeFromInStoreReader	Pertinent Documentation	Request an in-store reader to begin the authorize flow. Only supported on payment application versions >= 5.1.0.
+-/requestCancelFromInStoreReader	Pertinent Documentation	Request an in-store reader to cancel the charge flow.
+-/requestRefundFromInStoreReader	Pertinent Documentation	Request an in-store reader to start an unreferenced refund flow.
+-/requestVaultFromInStoreReader	Pertinent Documentation	Request an in-store reader to vault a payment method.
+-/requestTextDisplayFromInStoreReader	Pertinent Documentation	Request an in-store reader to display text.
+-/requestItemDisplayFromInStoreReader	Pertinent Documentation	Request an in-store reader to display line items.
+-/requestFirmwareUpdateFromInStoreReader	Pertinent Documentation	Request an in-store reader to update to the latest version of software.
+-/requestSignaturePromptFromInStoreReader	Pertinent Documentation	Request an in-store reader to display a signature prompt. Only supported on payment application versions >= 3.3.0.
+-/requestConfirmationPromptFromInStoreReader	Pertinent Documentation	Request an in-store reader to display a confirmation prompt. Only supported on payment application versions >= 3.3.0.
+-/requestNonPciCardDataFromInStoreReader	Pertinent Documentation	Request an in-store reader to collect non PCI-scoped card data. Only supported on payment application versions >= 5.2.0.
+-/requestAmountPromptFromInStoreReader	Pertinent Documentation	Request an in-store reader to display an amount prompt. Only supported on payment application versions >= 5.2.0.
+-/requestTextPromptFromInStoreReader	Pertinent Documentation	Request an in-store reader to display a text prompt. Only supported on payment application versions >= 5.2.0.
+-/createVenmoPaymentContext	Pertinent Documentation	Create a Venmo payment context.
+-/updateTransactionAmount	Pertinent Documentation	Updates the authorization amount of the transaction.
+-/generateExchangeRateQuote	Pertinent Documentation	Generate a customized currency exchange rate quote for items on a merchant's page. This allows merchants to advertise products in their customer's currency. Your account must be enabled to use this feature.
+-/createNonInstantLocalPaymentContext	Pertinent Documentation	Creates a non-instant local payment context. Your account must be enabled to use this feature.
+-/DisputeEvidence/{id}	Pertinent Documentation	Evidence provided by a merchant to respond to a dispute.
+-/DisputeEvidence/{legacyId}	Pertinent Documentation	Evidence provided by a merchant to respond to a dispute.
+-/InStoreContextResult/{id}	Pertinent Documentation	Reference object for an in-store request.
+-/InStoreReaderOriginDetails	Pertinent Documentation	Additional information about the payment method supplied by an in-store payment reader.
+-/Node/{id}	Pertinent Documentation	Relay compatible Node interface.
+-/Payment/{id}	Pertinent Documentation	A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).
+-/Payment/{legacyId}	Pertinent Documentation	A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).
+-/PaymentContext	Pertinent Documentation	Context associated with a transaction.
+-/PaymentStatusEvent	Pertinent Documentation	Status event in the lifecycle of a payment.
+-/AccountCreationStatus	Pertinent Documentation	The status of the business account creation request.
+-/ApplePayStatus	Pertinent Documentation	The environment being used for Apple Pay.
+-/ApplicationBankAccountPurpose	Pertinent Documentation	The purpose of the merchant application bank account.
+-/ApplicationStatus	Pertinent Documentation	The status of a merchant account application.
+-/BinRecordValue	Pertinent Documentation	A boolean-like value that includes UNKNOWN in the case where the information isn't available.

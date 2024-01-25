@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 3
+-/echo	Non-pertinent Documentation	Testing endpoint to validate the API with.
+-/epicBoardList/{id}	Non-pertinent Documentation	Returns EpicList.
+-/project/{fullPath}	Non-pertinent Documentation	Find a project.
+
+***Patterns*** 
+Count: 52
+-/abuseReport/{id}	Pertinent Documentation	Find an abuse report.
+-/abuseReportLabels	Pertinent Documentation	Abuse report labels.
+-/addOnPurchase/{id}	Pertinent Documentation	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
+-/aiMessages	Pertinent Documentation	Find GitLab Duo Chat messages.
+-/auditEventDefinitions	Pertinent Documentation	Definitions for all audit events available on the instance.
+-/auditEventsInstanceAmazonS3Configurations	Pertinent Documentation	Instance-level Amazon S3 configurations for audit events.
+-/boardList/{id}	Pertinent Documentation	Find an issue board list.
+-/ciCatalogResource/{id}	Pertinent Documentation	A single CI/CD Catalog resource visible to an authorized user.
+-/ciCatalogResources/{projectPath}	Pertinent Documentation	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
+-/ciConfig/{projectPath}	Pertinent Documentation	Linted and processed contents of a CI config. Should not be requested more than once per request
+-/ciMinutesUsage/{namespaceId}	Pertinent Documentation	Compute usage data for a namespace.
+-/ciPipelineStage/{id}	Pertinent Documentation	Stage belonging to a CI pipeline.
+-/ciQueueingHistory	Pertinent Documentation	Time it took for ci job to be picked up by runner in percentiles.
+-/ciVariables	Pertinent Documentation	List of the instanceâ€™s CI/CD variables.
+-/containerRepository/{id}	Pertinent Documentation	Find a container repository.
+-/currentLicense	Pertinent Documentation	Fields related to the current license.
+-/currentUser	Pertinent Documentation	Get information about current user.
+-/designManagement	Pertinent Documentation	Fields related to design management.
+-/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	Pertinent Documentation	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
+-/explainVulnerabilityPrompt/{vulnerabilityId}	Pertinent Documentation	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
+-/frecentGroups	Pertinent Documentation	A userâ€™s frecently visited groups.
+-/frecentProjects	Pertinent Documentation	A userâ€™s frecently visited projects.
+-/geoNode	Pertinent Documentation	Find a Geo node
+-/gitpodEnabled	Pertinent Documentation	Whether Gitpod is enabled in application settings.
+-/group	Pertinent Documentation	Find a group
+-groups	Pertinent Documentation	Find groups.
+-/instanceExternalAuditEventDestinations	Pertinent Documentation	Instance level external audit event destinations.
+-/instanceGoogleCloudLoggingConfigurations	Pertinent Documentation	Instance level google cloud logging configurations.
+-/instanceSecurityDashboard	Pertinent Documentation	Fields related to Instance Security Dashboard.
+-/issue/{id}	Pertinent Documentation	Find an issue.
+-/issues/{assigneeId}	Pertinent Documentation	Find issues visible to the current user. At least one filter must be provided.
+-/iteration/{id}	Pertinent Documentation	Find an iteration.
+-/jobs	Pertinent Documentation	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
+-/licenseHistoryEntries	Pertinent Documentation	Fields related to entries in the license history.
+-/memberRole/{id}	Pertinent Documentation	Finds a single custom role.
+-/memberRolePermissions	Pertinent Documentation	List of all customizable permissions.
+-/memberRoles/{id}	Pertinent Documentation	Member roles available for the instance.
+-/mergeRequest/{id}	Pertinent Documentation	Find a merge request.
+-/metadata	Pertinent Documentation	Metadata about GitLab.
+-/milestone/{id}	Pertinent Documentation	Find a milestone.
+-/mlModel/{id}	Pertinent Documentation	Find machine learning models.
+-/namespace	Pertinent Documentation	Find a namespace.
+-/note/{id}	Pertinent Documentation	Find a note.
+-/organization/{id}	Pertinent Documentation	Find an organization.
+-/organizations	Pertinent Documentation	List organizations.
+-/package/{id}	Pertinent Documentation	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
+-/projects/{ids}	Pertinent Documentation	Find projects visible to the current user.
+-/queryComplexity	Pertinent Documentation	Information about the complexity of the GraphQL query.
+-/runner/{id}	Pertinent Documentation	Find a runner.
+-/runnerSetup	Pertinent Documentation	Runner setup instructions.
+-/runners/{creatorId}	Pertinent Documentation	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.
+-/selfManagedAddOnEligibleUsers	Pertinent Documentation	Users within the self-managed instance who are eligible for add-ons
