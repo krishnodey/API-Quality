@@ -60,4 +60,6 @@ from uri_cleaning import UriCleaning
 
 text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
 obj = UriCleaning()
-print(obj.preprocess_documentation(text))
+#print(obj.preprocess_documentation(text))
+node = "device/{ID}/name_pq"
+print(obj.get_uri_nodes(node))

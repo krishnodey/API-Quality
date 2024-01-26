@@ -1,48 +1,48 @@
-id >>identification
-ID >>identification
-ic >>integration Code
-sid >>segment	identification
-id >>identification
-ic >>integration Code
-sid >>segment	identification
-app >>application
-auth >>authentication
-Cam >>camera
-CO >>carbon monoxide
-eta >>estimated time of arrival
-async >>asynchronization
-mta >>message transfer agent
-acls >>access control lists
-vdcs >>virtual data centres
-IoT >>Internet of Things
-orgs >>organizations
-org >>organization
-auth >>authentication
-mqtt >>message queuing telemetry transport
-api >>application programming interface
-HTTP >>hypertext transfer protocol
-mgmt >>management
-JSON >>JavaScript Object Notation
+id>>identification
+ID>>identification
+ic>>integration Code
+sid>>segment identification
+id>>identification
+ic>>integration Code
+sid>>segment identification
+app>>application
+auth>>authentication
+Cam>>camera
+CO>>carbon monoxide
+eta>>estimated time of arrival
+async>>asynchronization
+mta>>message transfer agent
+acls>>access control lists
+vdcs>>virtual data centres
+IoT>>Internet of Things
+orgs>>organizations
+org>>organization
+auth>>authentication
+mqtt>>message queuing telemetry transport
+api>>application programming interface
+HTTP>>hypertext transfer protocol
+mgmt>>management
+JSON>>JavaScript Object Notation
 hdmi>>high definition multimedia interface
 cec>>consumer electronics control
 app>>application
 apps>>applications
-ig >> instagram
+ig>>instagram
 oauth>>authentication
 datasource>>data source
 ids>>identifications
 breakdown>> break down
 datasources>>data sources
-ci >> client
-ml >> machine learning
-ISRC >> international standard recording code
-systemmanagement >> system management 
-collectionmanagement >> collection management 
-reg >> register
-config >> configuration 
-attr >> attributes
-persid >> persistent identifier
-attmnt >> attachment 
-pcat >> catagory
-locale >> localization
-regen	>> regeneration
+ci>>client
+ml>>machine learning
+ISRC>>international standard recording code
+systemmanagement>>system management 
+collectionmanagement>>collection management 
+reg>>register
+config>>configuration 
+attr>>attributes
+persid>>persistent identifier
+attmnt>>attachment 
+pcat>>catagory
+locale>>localization
+regen>>regeneration

@@ -86,7 +86,7 @@ class UriCleaning:
         docu = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', doc)
         tokens = []
         for d in docu:
-            if d in ['may','might','will','would','shall', 'should', 'www', 'com', 'true','false', 'parameters', 'link','https']:
+            if d in ['may','might','will','would','shall', 'should', 'www', 'com', 'true', 'false', 'link','https']:
                 continue
             tokens.append(d.strip().lower())
         #print(tokens)
