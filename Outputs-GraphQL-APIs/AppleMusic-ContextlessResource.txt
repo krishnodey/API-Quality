@@ -39,7 +39,7 @@ Count: 102
  /v1/catalog/{storefront}/music-videos	 Contextual Resource Names
  /v1/catalog/{storefront}/music-videos 	 Contextual Resource Names
  /v1/me/library/music-videos/{id} 	 Contextual Resource Names
-> /v1/me/library/music-videos/{id}/{relationship} 	 Contextual Resource Names
+ /v1/me/library/music-videos/{id}/{relationship} 	 Contextual Resource Names
  /v1/me/library/music-videos 	 Contextual Resource Names
  /v1/me/library/music-videos 	 Contextual Resource Names
  /v1/me/library 	 Contextual Resource Names
@@ -86,7 +86,7 @@ Count: 102
  /v1/me/ratings/albums/{id} 	 Contextual Resource Names
  /v1/me/ratings/music-videos/{id} 	 Contextual Resource Names
  /v1/me/ratings/playlists/{id} 	 Contextual Resource Names
-> /v1/me/ratings/songs/{id} 	 Contextual Resource Names
+ /v1/me/ratings/songs/{id} 	 Contextual Resource Names
  /v1/me/ratings/stations/{id} 	 Contextual Resource Names
  /v1/me/ratings/albums/{id} 	 Contextual Resource Names
  /v1/me/ratings/music-videos/{id} 	 Contextual Resource Names

@@ -41,7 +41,7 @@ GET 	/v1/catalog/{storefront}/music-videos	 regular methods.
 GET 	/v1/catalog/{storefront}/music-videos	 regular methods.
 GET 	/v1/catalog/{storefront}/music-videos	 regular methods.
 GET 	/v1/me/library/music-videos/{id}	 regular methods.
-GET 	> /v1/me/library/music-videos/{id}/{relationship}	 regular methods.
+GET 	/v1/me/library/music-videos/{id}/{relationship}	 regular methods.
 GET 	/v1/me/library/music-videos	 regular methods.
 GET 	/v1/me/library/music-videos	 regular methods.
 GET 	/v1/catalog/{storefront}/playlists/{id}	 regular methods.
@@ -86,7 +86,7 @@ GET 	/v1/me/ratings/stations	 regular methods.
 PUT 	/v1/me/ratings/albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/v1/me/ratings/music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/v1/me/ratings/playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT 	> /v1/me/ratings/songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/v1/me/ratings/songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/v1/me/ratings/stations/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/v1/me/ratings/albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/v1/me/ratings/music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

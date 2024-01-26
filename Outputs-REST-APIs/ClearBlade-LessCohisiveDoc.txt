@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 17
+Count: 10
 -/api/v/2/devices/{systemKey}/{name}	Non-pertinent Documentation	Update a device's state or custom attributes only
 -/api/collection/{systemKey}/{collectionName}	Non-pertinent Documentation	Item update
 -/api/collection/{systemKey}/{collectionName}	Non-pertinent Documentation	Item create
@@ -10,16 +10,9 @@ Count: 17
 -/api/message/{systemKey}	Non-pertinent Documentation	Retrieve message history
 -/api/message/{systemKey}	Non-pertinent Documentation	Delete message history
 -/admin/logout	Non-pertinent Documentation	Logs a CB developer out of their session
--/admin/systemmanagement	Non-pertinent Documentation	Creates a new system in a developers account
--/admin/systemmanagement	Non-pertinent Documentation	Gets a systems info
--/admin/systemmanagement	Non-pertinent Documentation	Updates a systems info
--/admin/systemmanagement	Non-pertinent Documentation	Deletes a system
--/admin/collectionmanagement	Non-pertinent Documentation	Creates a new collection or connection in a system
--/admin/collectionmanagement	Non-pertinent Documentation	Updates an existing connection in a system
--/admin/collectionmanagement	Non-pertinent Documentation	Creates a column within an existing collection
 
 ***Patterns*** 
-Count: 28
+Count: 35
 -/api/user/reg	Pertinent Documentation	Register user
 -/api/user/auth	Pertinent Documentation	Authenticates a user into the system
 -/api/user/anon	Pertinent Documentation	Authenticates anonymous users into the system
@@ -48,3 +41,10 @@ Count: 28
 -/api/message/{systemKey}/publish	Pertinent Documentation	Publishes a message to a topic
 -/admin/reg	Pertinent Documentation	Registers a new developer account with the CB platform
 -/admin/auth	Pertinent Documentation	Authorizes a CB Developer account
+-/admin/systemmanagement	Pertinent Documentation	Creates a new system in a developers account
+-/admin/systemmanagement	Pertinent Documentation	Gets a systems info
+-/admin/systemmanagement	Pertinent Documentation	Updates a systems info
+-/admin/systemmanagement	Pertinent Documentation	Deletes a system
+-/admin/collectionmanagement	Pertinent Documentation	Creates a new collection or connection in a system
+-/admin/collectionmanagement	Pertinent Documentation	Updates an existing connection in a system
+-/admin/collectionmanagement	Pertinent Documentation	Creates a column within an existing collection

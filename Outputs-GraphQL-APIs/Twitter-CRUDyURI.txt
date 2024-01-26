@@ -2,7 +2,7 @@
 Count: 7
 /v2/tweets/search/stream	CRUDy End-point	 [search found] 
 /v2/tweets/search/stream/rules	CRUDy End-point	 [search found] 
-/tweets/search/stream endpoint.	CRUDy End-point	 [search found] 
+/tweets/search/stream	CRUDy End-point	 [search found] 
 /v2/tweets/search/all	CRUDy End-point	 [search found] 
 /v2/tweets/search/recent	CRUDy End-point	 [search found] 
 /v2/users/search	CRUDy End-point	 [search found] 
@@ -45,7 +45,7 @@ Count: 44
 /v2/users/me	Verbless End-point	
 /v2/spaces/:id	Verbless End-point	
 /v2/spaces/:id/buyers	Verbless End-point	
-/v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces.	Verbless End-point	
+/v2/spaces/:id/tweets	Verbless End-point	
 /v2/spaces/by/creator_ids	Verbless End-point	
 /v2/lists/:id/tweets	Verbless End-point	
 /v2/lists/:id	Verbless End-point	

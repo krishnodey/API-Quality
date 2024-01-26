@@ -1,10 +1,9 @@
 ***Anti-Pattern*** 
-Count: 2
-/apps	 Non-descriptive End-point
+Count: 1
 /appCategories/{id}/subcategories	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 30
+Count: 31
 /appCategories	 Self-descriptive End-point
 /appCategories/{id}	 Self-descriptive End-point
 /appEncryptionDeclarations	 Self-descriptive End-point
@@ -25,6 +24,7 @@ Count: 30
 /appStoreReviewDetails/{id}	 Self-descriptive End-point
 /appStoreVersionLocalizations/{id}	 Self-descriptive End-point
 /appStoreVersions/{id}	 Self-descriptive End-point
+/apps	 Self-descriptive End-point
 /betaAppLocalizations	 Self-descriptive End-point
 /endUserLicenseAgreements/{id}	 Self-descriptive End-point
 /financeReports	 Self-descriptive End-point

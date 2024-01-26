@@ -39,7 +39,7 @@ GET	 /v1/catalog/{storefront}/music-videos	Consistent Documentation	Fetch one or
 GET	 /v1/catalog/{storefront}/music-videos	Consistent Documentation	Fetch one or more music videos by using their International Standard Recording Code (ISRC) values.
 GET	 /v1/catalog/{storefront}/music-videos 	Consistent Documentation	Fetch the equivalent, available content in the storefront for the provided music videosâ€™ identifiers.
 GET	 /v1/me/library/music-videos/{id} 	Consistent Documentation	Fetch a library music video by using its identifier.
-GET	> /v1/me/library/music-videos/{id}/{relationship} 	Consistent Documentation	Fetch a library music videoâ€™s relationship by using its identifier.
+GET	 /v1/me/library/music-videos/{id}/{relationship} 	Consistent Documentation	Fetch a library music videoâ€™s relationship by using its identifier.
 GET	 /v1/me/library/music-videos 	Consistent Documentation	Fetch one or more library music videos by using their identifiers.
 GET	 /v1/me/library/music-videos 	Consistent Documentation	Fetch all the library music videos in alphabetical order.
 POST	 /v1/me/library 	Consistent Documentation	Add a catalog resource to a userâ€™s iCloud Music Library.
@@ -86,7 +86,7 @@ GET	 /v1/me/ratings/stations 	Consistent Documentation	Fetch the userâ€™s r
 PUT	 /v1/me/ratings/albums/{id} 	Consistent Documentation	Add a userâ€™s album rating by using the albumâ€™s identifier.
 PUT	 /v1/me/ratings/music-videos/{id} 	Consistent Documentation	Add a userâ€™s music video rating by using the music videoâ€™s identifier.
 PUT	 /v1/me/ratings/playlists/{id} 	Consistent Documentation	Add a userâ€™s playlist rating by using the playlistâ€™s identifier.
-PUT	> /v1/me/ratings/songs/{id} 	Consistent Documentation	Add a userâ€™s song rating by using the songâ€™s identifier.
+PUT	 /v1/me/ratings/songs/{id} 	Consistent Documentation	Add a userâ€™s song rating by using the songâ€™s identifier.
 PUT	 /v1/me/ratings/stations/{id} 	Consistent Documentation	Add a userâ€™s station rating by using the stationâ€™s identifier.
 DELETE	/v1/me/ratings/albums/{id}	Consistent Documentation	Remove a userâ€™s album rating by using the albumâ€™s identifier.
 DELETE	/v1/me/ratings/music-videos/{id}	Consistent Documentation	Remove a userâ€™s music video rating by using the music videoâ€™s identifier.

@@ -39,7 +39,7 @@ Count: 102
  /v1/catalog/{storefront}/music-videos	Hierarchical Nodes	
  /v1/catalog/{storefront}/music-videos 	Hierarchical Nodes	
  /v1/me/library/music-videos/{id} 	Hierarchical Nodes	
-> /v1/me/library/music-videos/{id}/{relationship} 	Hierarchical Nodes	
+ /v1/me/library/music-videos/{id}/{relationship} 	Hierarchical Nodes	
  /v1/me/library/music-videos 	Hierarchical Nodes	
  /v1/me/library/music-videos 	Hierarchical Nodes	
  /v1/me/library 	Hierarchical Nodes	
@@ -86,7 +86,7 @@ Count: 102
  /v1/me/ratings/albums/{id} 	Hierarchical Nodes	
  /v1/me/ratings/music-videos/{id} 	Hierarchical Nodes	
  /v1/me/ratings/playlists/{id} 	Hierarchical Nodes	
-> /v1/me/ratings/songs/{id} 	Hierarchical Nodes	
+ /v1/me/ratings/songs/{id} 	Hierarchical Nodes	
  /v1/me/ratings/stations/{id} 	Hierarchical Nodes	
  /v1/me/ratings/albums/{id} 	Hierarchical Nodes	
  /v1/me/ratings/music-videos/{id} 	Hierarchical Nodes	

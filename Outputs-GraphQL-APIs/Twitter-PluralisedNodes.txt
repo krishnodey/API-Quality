@@ -11,7 +11,7 @@ GET 	/v2/users/:id/bookmarks	 regular methods.
 POST 	/v2/users/:id/bookmarks	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/v2/tweets/search/stream	 regular methods.
 POST 	/v2/tweets/search/stream/rules	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/tweets/search/stream endpoint.	 regular methods.
+GET 	/tweets/search/stream	 regular methods.
 PUT 	/v2/tweets/:id/hidden	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE	/v2/users/:id/likes/:tweet_id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/v2/tweets/:id/liking_users	 regular methods.
@@ -45,7 +45,7 @@ GET 	/v2/users/me	 regular methods.
 GET 	/v2/spaces/search	 regular methods.
 GET 	/v2/spaces/:id	 regular methods.
 GET 	/v2/spaces/:id/buyers	 regular methods.
-GET 	/v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces.	 regular methods.
+GET 	/v2/spaces/:id/tweets	 regular methods.
 GET 	/v2/spaces/by/creator_ids	 regular methods.
 GET 	/v2/lists/:id/tweets	 regular methods.
 GET 	/v2/lists/:id	 regular methods.

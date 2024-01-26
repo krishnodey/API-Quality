@@ -1,10 +1,10 @@
 ***Anti-Pattern*** 
-Count: 1
--/admin/apps?$top={$top}	Non-pertinent Documentation	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
+Count: 0
 
 ***Patterns*** 
-Count: 33
+Count: 34
 -/admin/tenantKeys	Pertinent Documentation	Adds an encryption key for Power BI workspaces assigned to a capacity.
+-/admin/apps?$top={$top}	Pertinent Documentation	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
 -/admin/apps/{appId}/users	Pertinent Documentation	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
 -/admin/capacities/AssignWorkspaces	Pertinent Documentation	Assigns the provided workspaces to the specified premium capacity.
 -/admin/capacities/UnassignWorkspaces	Pertinent Documentation	Unassigns the provided workspaces from capacity.

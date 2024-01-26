@@ -39,7 +39,7 @@ Count: 102
 /v1/catalog/{storefront}/music-videos	 Self-descriptive End-point
 /v1/catalog/{storefront}/music-videos	 Self-descriptive End-point
 /v1/me/library/music-videos/{id}	 Self-descriptive End-point
-> /v1/me/library/music-videos/{id}/{relationship}	 Self-descriptive End-point
+/v1/me/library/music-videos/{id}/{relationship}	 Self-descriptive End-point
 /v1/me/library/music-videos	 Self-descriptive End-point
 /v1/me/library/music-videos	 Self-descriptive End-point
 /v1/me/library	 Self-descriptive End-point
@@ -86,7 +86,7 @@ Count: 102
 /v1/me/ratings/albums/{id}	 Self-descriptive End-point
 /v1/me/ratings/music-videos/{id}	 Self-descriptive End-point
 /v1/me/ratings/playlists/{id}	 Self-descriptive End-point
-> /v1/me/ratings/songs/{id}	 Self-descriptive End-point
+/v1/me/ratings/songs/{id}	 Self-descriptive End-point
 /v1/me/ratings/stations/{id}	 Self-descriptive End-point
 /v1/me/ratings/albums/{id}	 Self-descriptive End-point
 /v1/me/ratings/music-videos/{id}	 Self-descriptive End-point

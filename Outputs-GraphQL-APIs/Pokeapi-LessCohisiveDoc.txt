@@ -1,15 +1,15 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 4
+-/v2/results/	Non-pertinent Documentation	A list of named API resources.
 -/v2/berry/{id}/	Non-pertinent Documentation	The identifier for this resource.
 -/v2/berry-firmness/{id}/	Non-pertinent Documentation	The identifier for this resource.
 -/v2/berry-firmness/{names}/	Non-pertinent Documentation	The name of this resource listed in different languages.
 
 ***Patterns*** 
-Count: 21
+Count: 20
 -/v2/count/	Pertinent Documentation	The total number of resources available from this API.
 -/v2/next/	Pertinent Documentation	The URL for the next page in the list.
 -/v2/previous/	Pertinent Documentation	The URL for the previous page in the list.
--/v2/results/	Pertinent Documentation	A list of named API resources.
 -/v2/berry/{id or name}/	Pertinent Documentation	Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by PokÃ©mon.
 -/v2/berry/{name}/	Pertinent Documentation	The name for this resource.
 -/v2/berry/{growth_time}/	Pertinent Documentation	Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked.

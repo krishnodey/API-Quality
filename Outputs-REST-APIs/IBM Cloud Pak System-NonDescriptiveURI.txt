@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 13
+Count: 12
 /deployment/resources/virtual data center./<virtual data center.UID>	 Non-descriptive End-point
 /deployment/resources/subnets	 Non-descriptive End-point
 /deployment/resources/subnets/<subnetUUID>	 Non-descriptive End-point
@@ -12,10 +12,9 @@ Count: 13
 /deployment/resources/instances/<instanceUUID>	 Non-descriptive End-point
 /deployment/resources/volumes/<volumeUUID>	 Non-descriptive End-point
 /deployment/resources/instances/<instanceUUID>	 Non-descriptive End-point
-/audit/resources/audit_config	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 21
+Count: 22
 /deployment/resources/instances	 Self-descriptive End-point
 /deployment/resources/vm_configurations	 Self-descriptive End-point
 /deployment/resources/vdcs/{uuid}/vm_configurations	 Self-descriptive End-point
@@ -34,6 +33,7 @@ Count: 21
 /deployment/resources/volumes	 Self-descriptive End-point
 /deployment/resources/instance_snapshots	 Self-descriptive End-point
 /deployment/resources/acls	 Self-descriptive End-point
+/audit/resources/audit_config	 Self-descriptive End-point
 /admin/resources/backup	 Self-descriptive End-point
 /admin/resources/backup_subcomponents/{id}	 Self-descriptive End-point
 /admin/resources/chassis_management_modules	 Self-descriptive End-point

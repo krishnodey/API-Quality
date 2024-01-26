@@ -1,12 +1,10 @@
 ***Anti-Pattern*** 
-Count: 22
+Count: 20
 -/bui/getBUIAllConfig	Non-pertinent Documentation	Returns all the configuration properties for Service Point App.
 -/bui/getTicketsCustomData({persid})	Non-pertinent Documentation	Returns tickets summary attributes configured at SDM.
--/bui/attrInfo	Non-pertinent Documentation	Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page.
 -/bui/attrCtrl	Non-pertinent Documentation	Returns all dependent attributes for the provided ticket attribute ($attrname parameter)
 -/bui/changeStatus/{factory}({persid})	Non-pertinent Documentation	Returns updated status value of the provided ticket persistent id.
 -/bui/allFeeds({persid})	Non-pertinent Documentation	Returns Activity Log Information for the provided ticket
--/bui/attmnt	Non-pertinent Documentation	Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.
 -/bui/getBopSID	Non-pertinent Documentation	Returns BOP session ID, which can be used to download file.
 -/bui/attmnt({persid})/$value	Non-pertinent Documentation	Returns an attachment as binary data.
 -/bui/getMyResources	Non-pertinent Documentation	Returns all the resources(Assets) the user is having access to
@@ -24,12 +22,14 @@ Count: 22
 -/getOfferings	Non-pertinent Documentation	Returns featured offerings for the loggedin users domain, if Service Catalog is integrated.
 
 ***Patterns*** 
-Count: 18
+Count: 20
 -/api/getAccess	Pertinent Documentation	Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct.
 -/bui/getAllowedStatus	Pertinent Documentation	Returns the list of available Statuses based on allowed Status transition.
 -/bui/getMyTicketDetails({persid})	Pertinent Documentation	Returns ticket details along with extra attributes provided in the $attrList parameter.
 -/bui/getDefaultCategories	Pertinent Documentation	Returns the default list of categories for cr factory defined in Service Desk which is configurable.
+-/bui/attrInfo	Pertinent Documentation	Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page.
 -/bui/addLogComment	Pertinent Documentation	Add log comment to the ticket
+-/bui/attmnt	Pertinent Documentation	Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.
 -/bui/updateStatusForNotification	Pertinent Documentation	Marks the notification status as READ for the given notification persistent id
 -/bui/updateStatusForAllNotification	Pertinent Documentation	Marks all the notifications based on the $filter value provided as READ.
 -/bui/getMyActiveChatSession	Pertinent Documentation	Gets the active chat session details for the logged-in Service Point user.

@@ -3,6 +3,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import re
 from file_handler import FileReadWrite
+import spacy
 
 #nltk.download('punkt')
 #nltk.download('stopwords')
@@ -60,6 +61,46 @@ class UriCleaning:
         tokenized_uri = word_tokenize(" ".join(uri_nodes))
         uri_nodes = [word for word in tokenized_uri if word not in stop_words and not word.isdigit()]
         tokens = [token for token in uri_nodes if len(token) > 1] #get rid of single characters
+        return tokens
+    
+    def preprocess_documentation(self, text):
+        extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
+        pattern = re.compile('|'.join([re.escape(ext) for ext in extensions]))
+        doc = pattern.sub(' ', text)
+
+        #print(doc)
+        
+        clean_doc = ""
+        if "?" in doc:
+            clean_doc = doc[:doc.index("?")]
+        else:
+            clean_doc = doc
+        if "_" in clean_doc or "-" in clean_doc:
+            clean_doc = clean_doc.replace("_", " ").replace("-", " ")
+        else:
+            clean_doc = clean_doc
+        #clean_uri.append(ur)
+        #print(clean_doc)
+        
+        doc = re.sub(r'[^a-zA-Z0-9\s]', '', clean_doc)
+        docu = re.findall(r'[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)', doc)
+        tokens = []
+        for d in docu:
+            if d in ['may','might','will','would','shall', 'should', 'www', 'com', 'true','false', 'parameters', 'link','https']:
+                continue
+            tokens.append(d.strip().lower())
+        #print(tokens)
+
+        
+        nlp = spacy.load("en_core_web_lg")
+        stop_words = set(stopwords.words('english'))
+
+        tokens = word_tokenize(" ".join(tokens))
+        tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
+        dod = tokens
+        doc = nlp(" ".join(tokens))
+        lemmatized_tokens = [token.lemma_ for token in doc]
+        tokens = [token for token in lemmatized_tokens if len(token) > 1]
         return tokens
         
     def set_Acronym(self, text):

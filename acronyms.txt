@@ -35,4 +35,14 @@ breakdown>> break down
 datasources>>data sources
 ci >> client
 ml >> machine learning
-ISRC >> International Standard Recording Code 
+ISRC >> international standard recording code
+systemmanagement >> system management 
+collectionmanagement >> collection management 
+reg >> register
+config >> configuration 
+attr >> attributes
+persid >> persistent identifier
+attmnt >> attachment 
+pcat >> catagory
+locale >> localization
+regen	>> regeneration

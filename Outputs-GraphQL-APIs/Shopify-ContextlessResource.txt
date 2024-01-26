@@ -1,11 +1,8 @@
 ***Anti-Pattern*** 
-Count: 3
- /PolarisVizDataPoint	 Contextless Resource Names
- /PolarisVizDataSeries	 Contextless Resource Names
- /PolarisVizResponse 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 30
+Count: 33
  /delegateAccessTokenCreate	 Contextual Resource Names
  /storefrontAccessTokenCreate	 Contextual Resource Names
  /storefrontAccessTokenDelete	 Contextual Resource Names
@@ -16,6 +13,9 @@ Count: 30
  /ErrorPosition 	 Contextual Resource Names
  /ParseError 	 Contextual Resource Names
  /ParseErrorRange	 Contextual Resource Names
+ /PolarisVizDataPoint	 Contextual Resource Names
+ /PolarisVizDataSeries	 Contextual Resource Names
+ /PolarisVizResponse 	 Contextual Resource Names
  /TableData 	 Contextual Resource Names
  /TableDataColumn 	 Contextual Resource Names
  /TableResponse 	 Contextual Resource Names

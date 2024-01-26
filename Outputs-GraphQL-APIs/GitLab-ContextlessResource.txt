@@ -1,14 +1,18 @@
 ***Anti-Pattern*** 
-Count: 4
+Count: 9
+ /abuseReportLabels 	 Contextless Resource Names
  /aiMessages 	 Contextless Resource Names
  /echo 	 Contextless Resource Names
+ /frecentGroups 	 Contextless Resource Names
+ /geoNode 	 Contextless Resource Names
  /gitpodEnabled 	 Contextless Resource Names
+ /group 	 Contextless Resource Names
+ groups 	 Contextless Resource Names
  /jobs 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 51
+Count: 46
  /abuseReport/{id} 	 Contextual Resource Names
- /abuseReportLabels 	 Contextual Resource Names
  /addOnPurchase/{id} 	 Contextual Resource Names
  /auditEventDefinitions 	 Contextual Resource Names
  /auditEventsInstanceAmazonS3Configurations 	 Contextual Resource Names
@@ -27,11 +31,7 @@ Count: 51
  /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	 Contextual Resource Names
  /epicBoardList/{id} 	 Contextual Resource Names
  /explainVulnerabilityPrompt/{vulnerabilityId} 	 Contextual Resource Names
- /frecentGroups 	 Contextual Resource Names
  /frecentProjects 	 Contextual Resource Names
- /geoNode 	 Contextual Resource Names
- /group 	 Contextual Resource Names
- groups 	 Contextual Resource Names
  /instanceExternalAuditEventDestinations 	 Contextual Resource Names
  /instanceGoogleCloudLoggingConfigurations 	 Contextual Resource Names
  /instanceSecurityDashboard 	 Contextual Resource Names

@@ -1,13 +1,12 @@
 ***Anti-Pattern*** 
-Count: 5
+Count: 4
 -/meta	Non-pertinent Documentation	Return information about the GitHub instance.
 -/relay	Non-pertinent Documentation	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
 -/sponsorables	Non-pertinent Documentation	Users and organizations who can be sponsored via GitHub Sponsors.
 -/createAttributionInvitation	Non-pertinent Documentation	Invites a user to claim reattributable data.
--/unarchiveProjectV2Item	Non-pertinent Documentation	Unarchives a ProjectV2Item.
 
 ***Patterns*** 
-Count: 251
+Count: 252
 -/codeOfConduct	Pertinent Documentation	Look up a code of conduct by its key.
 -/codesOfConduct	Pertinent Documentation	Look up a code of conduct by its key.
 -/enterprise	Pertinent Documentation	Look up an enterprise by URL slug.
@@ -186,6 +185,7 @@ Count: 251
 -/submitPullRequestReview	Pertinent Documentation	Submits a pending pull request review.
 -/transferEnterpriseOrganization	Pertinent Documentation	Transfer an organization from one enterprise to another enterprise.
 -/transferIssue	Pertinent Documentation	Transfer an issue to a different repository.
+-/unarchiveProjectV2Item	Pertinent Documentation	Unarchives a ProjectV2Item.
 -/unarchiveRepository	Pertinent Documentation	Unarchives a repository.
 -/unfollowOrganization	Pertinent Documentation	Unfollow an organization.
 -/unfollowUser	Pertinent Documentation	Unfollow a user.

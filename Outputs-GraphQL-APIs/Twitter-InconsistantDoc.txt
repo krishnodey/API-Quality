@@ -10,7 +10,7 @@ DELETE	/v2/users/:id/bookmarks/:tweet_id	Consistent Documentation	Allows a user 
 GET	 /v2/users/:id/bookmarks	Consistent Documentation	Allows you to get an authenticated user's 800 most recent bookmarked Tweets.
 POST	 /v2/users/:id/bookmarks	Consistent Documentation	Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
 GET	 /v2/tweets/search/stream	Consistent Documentation	Streams Tweets in real-time that match the rules that you added to the stream using the POST /tweets/search/stream/rules endpoint. If you haven't added any rules to your stream, you will not receive any Tweets.
-GET	 /tweets/search/stream endpoint.	Consistent Documentation	Return either a single rule, or a list of rules that have been added to the stream.
+GET	 /tweets/search/stream 	Consistent Documentation	Return either a single rule, or a list of rules that have been added to the stream.
 PUT	 /v2/tweets/:id/hidden 	Consistent Documentation	Hides or unhides a reply to a Tweet.
 DELETE	/v2/users/:id/likes/:tweet_id	Consistent Documentation	Allows a user or authenticated user ID to unlike a Tweet.
 GET	 /v2/tweets/:id/liking_users 	Consistent Documentation	Allows you to get information about a Tweetâ€™s liking users.
@@ -47,7 +47,7 @@ GET	 /v2/users/me 	Consistent Documentation	Returns information about an authori
 GET	 /v2/spaces/search 	Consistent Documentation	Return live or scheduled Spaces matching your specified search terms. This endpoint performs a keyword search, meaning that it will return Spaces that are an exact case-insensitive match of the specified search term. The search term will match the original title of the Space.
 GET	 /v2/spaces/:id 	Consistent Documentation	Returns a variety of information about a single Space specified by the requested ID.
 GET	 /v2/spaces/:id/buyers 	Consistent Documentation	Returns a list of user who purchased a ticket to the requested Space. You must authenticate the request using the Access Token of the creator of the requested Space.
-GET	 /v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces. 	Consistent Documentation	id REQUIRED 	string	Unique identifier of the Space containing the Tweets you'd like to access.
+GET	 /v2/spaces/:id/tweets 	Consistent Documentation	Returns Tweets shared in the requested Spaces.
 GET	 /v2/spaces/by/creator_ids 	Consistent Documentation	Returns live or scheduled Spaces created by the specified user IDs. Up to 100 comma-separated IDs can be looked up using this endpoint.
 GET	 /v2/lists/:id/tweets 	Consistent Documentation	Returns a list of Tweets from the specified List.
 GET	 /v2/lists/:id 	Consistent Documentation	Returns the details of a specified List.

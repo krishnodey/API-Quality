@@ -1,16 +1,9 @@
 ***Anti-Pattern*** 
-Count: 8
--/{application_id}/accounts	Non-pertinent Documentation	When posting to this edge, a TestAccount will be created.
--/v18.0/{application-id}/aem_conversion_filter	Non-pertinent Documentation	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
+Count: 1
 -/v19.0/{application-id}/appassets	Non-pertinent Documentation	appassets
--/v19.0/{application-id}/cloudbridge_settings	Non-pertinent Documentation	ApplicationCloudbridgeSettings
--/v19.0/{application-id}/ios_skadnetwork_conversion_config	Non-pertinent Documentation	ApplicationiosSkadnetworkConversionConfig
--/v19.0/{application-id}/model_asset	Non-pertinent Documentation	ApplicationmodelAsset
--/v19.0/{application-id}/subscribed_domains	Non-pertinent Documentation	GETGraphApplicationSubscribedDomainsEdge
--/v19.0/{application-id}/subscribed_domains_phishing	Non-pertinent Documentation	GETGraphApplicationSubscribedDomainsPhishingEdge
 
 ***Patterns*** 
-Count: 61
+Count: 68
 -/v18.0/{album-id}	Pertinent Documentation	Get Fields and Edges on an Album.
 -/{group_id}/albums	Pertinent Documentation	When posting to this edge, an Album will be created.
 -/v18.0/{album-id}/comments	Pertinent Documentation	Represents a collection of Comments on the Album.
@@ -25,22 +18,29 @@ Count: 61
 -/v18.0/{application-id}	Pertinent Documentation	Get information about a Facebook app.
 -/{business_id}/owned_apps	Pertinent Documentation	When posting to this edge, an Application will be created.
 -/v18.0/{application-id}/accounts	Pertinent Documentation	Represents a collection of test users on an app.
+-/{application_id}/accounts	Pertinent Documentation	When posting to this edge, a TestAccount will be created.
 -/v18.0/{application-id}/ad_placement_groups	Pertinent Documentation	Ad placement groups for publishing ads on this app
 -/v18.0/{application-id}/adnetworkanalytics_results	Pertinent Documentation	Obtain the results of an async Audience Network query for this publisher entity
 -/v18.0/{application-id}/aem_attribution	Pertinent Documentation	aem_attribution
 -/v18.0/{application-id}/aem_conversion_configs	Pertinent Documentation	The aggregated event measurement conversion value configs for this app
+-/v18.0/{application-id}/aem_conversion_filter	Pertinent Documentation	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
 -/v19.0/{application-id}/agencies	Pertinent Documentation	The businesses which are not owner but can advertise for this app
 -/v19.0/{application-id}/app_event_types	Pertinent Documentation	Info about App Events logged for the app
 -/v19.0/{application-id}/app_installed_groups	Pertinent Documentation	List of facebook groups the app is installed in
 -/v19.0/{application-id}/button_auto_detection_device_selection	Pertinent Documentation	to turn on auto device sampling.
+-/v19.0/{application-id}/cloudbridge_settings	Pertinent Documentation	ApplicationCloudbridgeSettings
 -/v19.0/{application-id}/da_checks	Pertinent Documentation	A list of results after running Dynamic Ads checks on this app.
 -/v19.0/{application-id}/events	Pertinent Documentation	Retrieves events created on your page on behalf of your app
+-/v19.0/{application-id}/ios_skadnetwork_conversion_config	Pertinent Documentation	ApplicationiosSkadnetworkConversionConfig
 -/v19.0/{application-id}/mobile_sdk_gk	Pertinent Documentation	Gatekeeper for Mobile SDK
+-/v19.0/{application-id}/model_asset	Pertinent Documentation	ApplicationmodelAsset
 -/v19.0/{application-id}/monetized_digital_store_objects	Pertinent Documentation	List of digital store objects for this app monetized via Audience Network
 -/v19.0/{application-id}/permissions	Pertinent Documentation	The status of permissions that are have been submitted for Login Review
 -/v19.0/{application-id}/products	Pertinent Documentation	In-app-purchaseable products associated with this app
 -/v19.0/{application-id}/purchases	Pertinent Documentation	In-app-purchaseable products of this app owned by the user
 -/v19.0/{app-id}/roles	Pertinent Documentation	The developer roles defined for this app
+-/v19.0/{application-id}/subscribed_domains	Pertinent Documentation	GETGraphApplicationSubscribedDomainsEdge
+-/v19.0/{application-id}/subscribed_domains_phishing	Pertinent Documentation	GETGraphApplicationSubscribedDomainsPhishingEdge
 -/{application_id}/app_indexing	Pertinent Documentation	When posting to this edge, an Application will be created.
 -/{application_id}/codeless_event_mappings	Pertinent Documentation	When posting to this edge, an Application will be created.
 -/{application_id}/page_activities	Pertinent Documentation	When posting to this edge, an Application will be created.

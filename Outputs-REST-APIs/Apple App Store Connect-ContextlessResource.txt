@@ -1,10 +1,8 @@
 ***Anti-Pattern*** 
-Count: 2
- /preReleaseVersions 	 Contextless Resource Names
- /salesReports 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 30
+Count: 32
  /appCategories 	 Contextual Resource Names
  /appCategories/{id} 	 Contextual Resource Names
  /appEncryptionDeclarations 	 Contextual Resource Names
@@ -29,7 +27,9 @@ Count: 30
  /betaAppLocalizations 	 Contextual Resource Names
  /endUserLicenseAgreements/{id} 	 Contextual Resource Names
  /financeReports 	 Contextual Resource Names
+ /preReleaseVersions 	 Contextual Resource Names
  /routingAppCoverages/{id} 	 Contextual Resource Names
+ /salesReports 	 Contextual Resource Names
  /appCategories/{id}/subcategories 	 Contextual Resource Names
  /appEncryptionDeclarations/{id}/app 	 Contextual Resource Names
  /appInfos/{id}/ageRatingDeclaration 	 Contextual Resource Names

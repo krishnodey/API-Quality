@@ -1,6 +1,6 @@
 ***Anti-Pattern*** 
 Count: 1
-/tweets/search/stream endpoint. [No version found.]
+/tweets/search/stream [No version found.]
 
 ***Patterns*** 
 Count: 50
@@ -45,7 +45,7 @@ Count: 50
 /v2/spaces/search [Version found.]
 /v2/spaces/:id [Version found.]
 /v2/spaces/:id/buyers [Version found.]
-/v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces. [Version found.]
+/v2/spaces/:id/tweets [Version found.]
 /v2/spaces/by/creator_ids [Version found.]
 /v2/lists/:id/tweets [Version found.]
 /v2/lists/:id [Version found.]

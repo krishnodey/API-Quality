@@ -12,7 +12,7 @@ Count: 47
 /v2/users/:id/bookmarks	 Self-descriptive End-point
 /v2/tweets/search/stream	 Self-descriptive End-point
 /v2/tweets/search/stream/rules	 Self-descriptive End-point
-/tweets/search/stream endpoint.	 Self-descriptive End-point
+/tweets/search/stream	 Self-descriptive End-point
 /v2/tweets/:id/hidden	 Self-descriptive End-point
 /v2/users/:id/likes/:tweet_id	 Self-descriptive End-point
 /v2/tweets/:id/liking_users	 Self-descriptive End-point
@@ -45,7 +45,7 @@ Count: 47
 /v2/spaces/search	 Self-descriptive End-point
 /v2/spaces/:id	 Self-descriptive End-point
 /v2/spaces/:id/buyers	 Self-descriptive End-point
-/v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces.	 Self-descriptive End-point
+/v2/spaces/:id/tweets	 Self-descriptive End-point
 /v2/spaces/by/creator_ids	 Self-descriptive End-point
 /v2/lists/:id/tweets	 Self-descriptive End-point
 /v2/lists/:id	 Self-descriptive End-point

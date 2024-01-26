@@ -1,12 +1,10 @@
 ***Anti-Pattern*** 
-Count: 16
-/bui/getBUIAllConfig	 Non-descriptive End-point
+Count: 14
 /bui/getMyTicketDetails({persid})	 Non-descriptive End-point
 /bui/getTicketsCustomData({persid})	 Non-descriptive End-point
 /bui/attrCtrl	 Non-descriptive End-point
 /bui/changeStatus/{factory}({persid})	 Non-descriptive End-point
 /bui/allFeeds({persid})	 Non-descriptive End-point
-/bui/attmnt	 Non-descriptive End-point
 /bui/getDocument({id})	 Non-descriptive End-point
 /bui/getKDAttachments({id})	 Non-descriptive End-point
 /bui/getKDComments({id})	 Non-descriptive End-point
@@ -18,12 +16,14 @@ Count: 16
 /bui/{factory}({persid})	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 24
+Count: 26
 /api/getAccess	 Self-descriptive End-point
+/bui/getBUIAllConfig	 Self-descriptive End-point
 /bui/getAllowedStatus	 Self-descriptive End-point
 /bui/getDefaultCategories	 Self-descriptive End-point
 /bui/attrInfo	 Self-descriptive End-point
 /bui/addLogComment	 Self-descriptive End-point
+/bui/attmnt	 Self-descriptive End-point
 /bui/getBopSID	 Self-descriptive End-point
 /bui/attmnt({persid})/$value	 Self-descriptive End-point
 /bui/updateStatusForNotification	 Self-descriptive End-point

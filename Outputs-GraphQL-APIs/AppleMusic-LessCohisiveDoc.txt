@@ -39,7 +39,7 @@ Count: 102
 -/v1/catalog/{storefront}/music-videos	Pertinent Documentation	Fetch one or more music videos by using their International Standard Recording Code (ISRC) values.
 -/v1/catalog/{storefront}/music-videos	Pertinent Documentation	Fetch the equivalent, available content in the storefront for the provided music videosâ€™ identifiers.
 -/v1/me/library/music-videos/{id}	Pertinent Documentation	Fetch a library music video by using its identifier.
--> /v1/me/library/music-videos/{id}/{relationship}	Pertinent Documentation	Fetch a library music videoâ€™s relationship by using its identifier.
+-/v1/me/library/music-videos/{id}/{relationship}	Pertinent Documentation	Fetch a library music videoâ€™s relationship by using its identifier.
 -/v1/me/library/music-videos	Pertinent Documentation	Fetch one or more library music videos by using their identifiers.
 -/v1/me/library/music-videos	Pertinent Documentation	Fetch all the library music videos in alphabetical order.
 -/v1/me/library	Pertinent Documentation	Add a catalog resource to a userâ€™s iCloud Music Library.
@@ -86,7 +86,7 @@ Count: 102
 -/v1/me/ratings/albums/{id}	Pertinent Documentation	Add a userâ€™s album rating by using the albumâ€™s identifier.
 -/v1/me/ratings/music-videos/{id}	Pertinent Documentation	Add a userâ€™s music video rating by using the music videoâ€™s identifier.
 -/v1/me/ratings/playlists/{id}	Pertinent Documentation	Add a userâ€™s playlist rating by using the playlistâ€™s identifier.
--> /v1/me/ratings/songs/{id}	Pertinent Documentation	Add a userâ€™s song rating by using the songâ€™s identifier.
+-/v1/me/ratings/songs/{id}	Pertinent Documentation	Add a userâ€™s song rating by using the songâ€™s identifier.
 -/v1/me/ratings/stations/{id}	Pertinent Documentation	Add a userâ€™s station rating by using the stationâ€™s identifier.
 -/v1/me/ratings/albums/{id}	Pertinent Documentation	Remove a userâ€™s album rating by using the albumâ€™s identifier.
 -/v1/me/ratings/music-videos/{id}	Pertinent Documentation	Remove a userâ€™s music video rating by using the music videoâ€™s identifier.

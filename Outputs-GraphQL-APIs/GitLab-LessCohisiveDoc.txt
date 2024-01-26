@@ -1,11 +1,10 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 2
 -/echo	Non-pertinent Documentation	Testing endpoint to validate the API with.
--/epicBoardList/{id}	Non-pertinent Documentation	Returns EpicList.
 -/project/{fullPath}	Non-pertinent Documentation	Find a project.
 
 ***Patterns*** 
-Count: 52
+Count: 53
 -/abuseReport/{id}	Pertinent Documentation	Find an abuse report.
 -/abuseReportLabels	Pertinent Documentation	Abuse report labels.
 -/addOnPurchase/{id}	Pertinent Documentation	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
@@ -25,6 +24,7 @@ Count: 52
 -/currentUser	Pertinent Documentation	Get information about current user.
 -/designManagement	Pertinent Documentation	Fields related to design management.
 -/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	Pertinent Documentation	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
+-/epicBoardList/{id}	Pertinent Documentation	Returns EpicList.
 -/explainVulnerabilityPrompt/{vulnerabilityId}	Pertinent Documentation	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
 -/frecentGroups	Pertinent Documentation	A userâ€™s frecently visited groups.
 -/frecentProjects	Pertinent Documentation	A userâ€™s frecently visited projects.

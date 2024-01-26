@@ -1,24 +1,22 @@
 ***Anti-Pattern*** 
-Count: 29
+Count: 27
  /bui/getBUIAllConfig 	 Contextless Resource Names
  /bui/getAllowedStatus 	 Contextless Resource Names
  /bui/getMyTicketDetails({persid}) 	 Contextless Resource Names
  /bui/getTicketsCustomData({persid}) 	 Contextless Resource Names
  /bui/getDefaultCategories 	 Contextless Resource Names
- /bui/attrInfo 	 Contextless Resource Names
  /bui/attrCtrl 	 Contextless Resource Names
- /bui/addLogComment 	 Contextless Resource Names
  /bui/changeStatus/{factory}({persid}) 	 Contextless Resource Names
  /bui/allFeeds({persid}) 	 Contextless Resource Names
- /bui/attmnt 	 Contextless Resource Names
  /bui/getBopSID 	 Contextless Resource Names
  /bui/attmnt({persid})/$value 	 Contextless Resource Names
  /bui/getMyResources 	 Contextless Resource Names
+ /bui/getMyActiveChatSession 	 Contextless Resource Names
+ /bui/createChatThread 	 Contextless Resource Names
  /bui/getChatHistory/{roomName} 	 Contextless Resource Names
  /bui/getDocument({id}) 	 Contextless Resource Names
  /bui/getKDAttachments({id}) 	 Contextless Resource Names
  /bui/getKDComments({id}) 	 Contextless Resource Names
- /bui/addKDComment({id}) 	 Contextless Resource Names
  /bui/rateDocument({id}) 	 Contextless Resource Names
  /bui/kdLinkInfo({id}) 	 Contextless Resource Names
  /bui/unLinkSolution({id}) 	 Contextless Resource Names
@@ -31,13 +29,15 @@ Count: 29
  /getOfferings 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 11
+Count: 13
  /api/getAccess 	 Contextual Resource Names
+ /bui/attrInfo 	 Contextual Resource Names
+ /bui/addLogComment 	 Contextual Resource Names
+ /bui/attmnt 	 Contextual Resource Names
  /bui/updateStatusForNotification 	 Contextual Resource Names
  /bui/updateStatusForAllNotification 	 Contextual Resource Names
- /bui/getMyActiveChatSession 	 Contextual Resource Names
  /bui/checkActiveSessions 	 Contextual Resource Names
- /bui/createChatThread 	 Contextual Resource Names
+ /bui/addKDComment({id}) 	 Contextual Resource Names
  /bui/{factory} 	 Contextual Resource Names
  /bui/{factory} 	 Contextual Resource Names
  /getServiceRequest 	 Contextual Resource Names

@@ -1,15 +1,14 @@
 ***Anti-Pattern*** 
-Count: 7
+Count: 6
 /v18.0/{application-id}/aem_conversion_configs	 Non-descriptive End-point
 /v19.0/{application-id}/appassets	 Non-descriptive End-point
-/v19.0/{application-id}/ios_skadnetwork_conversion_config	 Non-descriptive End-point
 /v19.0/{application-id}/mobile_sdk_gk	 Non-descriptive End-point
 /v19.0/{application-id}/subscribed_domains_phishing	 Non-descriptive End-point
 /v19.0/{application-id}/mobile_sdk_gk	 Non-descriptive End-point
 /v19.0/{application-id}/subscribed_domains_phishing	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 62
+Count: 63
 /v18.0/{album-id}	 Self-descriptive End-point
 /{group_id}/albums	 Self-descriptive End-point
 /v18.0/{album-id}/comments	 Self-descriptive End-point
@@ -36,6 +35,7 @@ Count: 62
 /v19.0/{application-id}/cloudbridge_settings	 Self-descriptive End-point
 /v19.0/{application-id}/da_checks	 Self-descriptive End-point
 /v19.0/{application-id}/events	 Self-descriptive End-point
+/v19.0/{application-id}/ios_skadnetwork_conversion_config	 Self-descriptive End-point
 /v19.0/{application-id}/model_asset	 Self-descriptive End-point
 /v19.0/{application-id}/monetized_digital_store_objects	 Self-descriptive End-point
 /v19.0/{application-id}/permissions	 Self-descriptive End-point

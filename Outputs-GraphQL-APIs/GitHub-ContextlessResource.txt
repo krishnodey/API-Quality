@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 14
+Count: 13
  /meta 	 Contextless Resource Names
  /rateLimit 	 Contextless Resource Names
  /relay 	 Contextless Resource Names
@@ -7,16 +7,15 @@ Count: 14
  /abortQueuedMigrations 	 Contextless Resource Names
  /addLabelsToLabelable 	 Contextless Resource Names
  /clearLabelsFromLabelable 	 Contextless Resource Names
- /grantMigratorRole 	 Contextless Resource Names
- /moveProjectCard 	 Contextless Resource Names
  /removeLabelsFromLabelable 	 Contextless Resource Names
  /removeStar 	 Contextless Resource Names
  /rerequestCheckSuite 	 Contextless Resource Names
- /revokeMigratorRole 	 Contextless Resource Names
+ /unlockLockable 	 Contextless Resource Names
  /unmarkFileAsViewed 	 Contextless Resource Names
+ /updatePatreonSponsorability 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 242
+Count: 243
  /codeOfConduct 	 Contextual Resource Names
  /codesOfConduct 	 Contextual Resource Names
  /enterprise 	 Contextual Resource Names
@@ -141,6 +140,7 @@ Count: 242
  /followOrganization 	 Contextual Resource Names
  /followUser 	 Contextual Resource Names
  /grantEnterpriseOrganizationsMigratorRole 	 Contextual Resource Names
+ /grantMigratorRole 	 Contextual Resource Names
  /importProject 	 Contextual Resource Names
  /inviteEnterpriseAdmin 	 Contextual Resource Names
  /linkProjectV2ToRepository 	 Contextual Resource Names
@@ -154,6 +154,7 @@ Count: 242
  /mergeBranch 	 Contextual Resource Names
  /mergePullRequest 	 Contextual Resource Names
  /minimizeComment 	 Contextual Resource Names
+ /moveProjectCard 	 Contextual Resource Names
  /moveProjectColumn 	 Contextual Resource Names
  /pinIssue 	 Contextual Resource Names
  /publishSponsorsTier 	 Contextual Resource Names
@@ -177,6 +178,7 @@ Count: 242
  /retireSponsorsTier 	 Contextual Resource Names
  /revertPullRequest 	 Contextual Resource Names
  /revokeEnterpriseOrganizationsMigratorRole 	 Contextual Resource Names
+ /revokeMigratorRole 	 Contextual Resource Names
  /setEnterpriseIdentityProvider 	 Contextual Resource Names
  /setOrganizationInteractionLimit 	 Contextual Resource Names
  /setRepositoryInteractionLimit 	 Contextual Resource Names
@@ -193,7 +195,6 @@ Count: 242
  /unlinkProjectV2FromRepository 	 Contextual Resource Names
  /unlinkProjectV2FromTeam 	 Contextual Resource Names
  /unlinkRepositoryFromProject 	 Contextual Resource Names
- /unlockLockable 	 Contextual Resource Names
  /unmarkDiscussionCommentAsAnswer 	 Contextual Resource Names
  /unmarkIssueAsDuplicate 	 Contextual Resource Names
  /unmarkProjectV2AsTemplate 	 Contextual Resource Names
@@ -233,7 +234,6 @@ Count: 242
  /updateNotificationRestrictionSetting 	 Contextual Resource Names
  /updateOrganizationAllowPrivateRepositoryForkingSetting 	 Contextual Resource Names
  /updateOrganizationWebCommitSignoffSetting 	 Contextual Resource Names
- /updatePatreonSponsorability 	 Contextual Resource Names
  /updateProject 	 Contextual Resource Names
  /updateProjectCard 	 Contextual Resource Names
  /updateProjectColumn 	 Contextual Resource Names

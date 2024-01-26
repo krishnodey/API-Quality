@@ -1,11 +1,8 @@
 ***Anti-Pattern*** 
-Count: 3
- /company/<realmID>/companyinfo/<realmID> 	 Contextless Resource Names
- /company/<realmID>/companyinfo 	 Contextless Resource Names
- /company/<realmID>/companyinfo 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 18
+Count: 21
  /company/<realmID>/account 	 Contextual Resource Names
  /company/<realmID>/query?query=<selectStatement> 	 Contextual Resource Names
  /company/<realmID>/account/<accountId> 	 Contextual Resource Names
@@ -16,6 +13,9 @@ Count: 18
  /company/<realmID>/bill/<billId> 	 Contextual Resource Names
  /company/<realmID>/bill 	 Contextual Resource Names
  /company/<realmID>/query?query=<selectStatement> 	 Contextual Resource Names
+ /company/<realmID>/companyinfo/<realmID> 	 Contextual Resource Names
+ /company/<realmID>/companyinfo 	 Contextual Resource Names
+ /company/<realmID>/companyinfo 	 Contextual Resource Names
  /company/<realmID>/reports/InventoryValuationSummary?<name>=<value> 	 Contextual Resource Names
  /company/<realmID>/invoice 	 Contextual Resource Names
  /company/<realmID>/invoice?operation=delete 	 Contextual Resource Names

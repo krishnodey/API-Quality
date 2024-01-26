@@ -4,13 +4,13 @@ import csv
 # Specify the file path
 base_path = ['./Outputs-REST-APIs/', './Outputs-GraphQL-APIs/']
 pattern_types = [
-    "Amorphous",
-    "Non Standard URI",
+    "AmorphousURI",
+    "NonStandardURI",
     "CRUDyURI",
     "UnversionedURIs",
     "PluralisedNodes",
-    "Non-descriptiveURI",
-    "ContextlessURI",
+    "NonDescriptiveURI",
+    "ContextlessResource",
     "NonHierarchicalNodes",
     "LessCohisiveDoc",
     "InconsistantDoc"
@@ -24,10 +24,10 @@ for base in base_path:
 
     with open(summary_file, 'w', newline='') as summ_file:
         csv_writer = csv.writer(summ_file)
-        header_line = ['api_name', 'AmorphousURI', 'TidyURI', 'NonStandardURI', 'StandarURI', 'CRUDyURI', 'Verbless',
-                       'UnversionedURI', 'VersionedURI', 'PluralisedNodes', 'SingularNodes', 'Non-descriptiveURI',
-                       'DescriptiveURI', 'ContextlessURI', 'Contextual', 'NonHierarchicalNodes', 'HierarchicalNodes',
-                       'LessCohisiveDoc', 'CohisiveDoc', 'InconsistantDoc', 'Consistant']
+        header_line = ['api_name', 'AmorphousURI', 'TidyURI', 'NonStandardURI', 'StandarURI', 'CRUDyURI', 'VerblessURI',
+                       'UnversionedURI', 'VersionedURI', 'PluralisedNodes', 'SingularNodes', 'NonDescriptiveURI',
+                       'DescriptiveURI', 'ContextlessResource', 'ContextualResouce', 'NonHierarchicalNodes', 'HierarchicalNodes',
+                       'LessCohisiveDoc', 'CohisiveDoc', 'InconsistantDoc', 'ConsistantDoc']
         csv_writer.writerow(header_line)
 
         name_list = content.split('\n')

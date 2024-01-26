@@ -8,7 +8,7 @@ Count: 51
  /v2/users/:id/bookmarks	 Contextual Resource Names
  /v2/tweets/search/stream	 Contextual Resource Names
 /v2/tweets/search/stream/rules 	 Contextual Resource Names
- /tweets/search/stream endpoint.	 Contextual Resource Names
+ /tweets/search/stream 	 Contextual Resource Names
  /v2/tweets/:id/hidden 	 Contextual Resource Names
  /v2/users/:id/likes/:tweet_id 	 Contextual Resource Names
  /v2/tweets/:id/liking_users 	 Contextual Resource Names
@@ -45,7 +45,7 @@ Count: 51
  /v2/spaces/search 	 Contextual Resource Names
  /v2/spaces/:id 	 Contextual Resource Names
  /v2/spaces/:id/buyers 	 Contextual Resource Names
- /v2/spaces/:id/tweets Returns Tweets shared in the requested Spaces. 	 Contextual Resource Names
+ /v2/spaces/:id/tweets 	 Contextual Resource Names
  /v2/spaces/by/creator_ids 	 Contextual Resource Names
  /v2/lists/:id/tweets 	 Contextual Resource Names
  /v2/lists/:id 	 Contextual Resource Names

@@ -1,15 +1,8 @@
 ***Anti-Pattern*** 
-Count: 7
- /admin/systemmanagement 	 Contextless Resource Names
- /admin/systemmanagement 	 Contextless Resource Names
- /admin/systemmanagement 	 Contextless Resource Names
- /admin/systemmanagement 	 Contextless Resource Names
- /admin/collectionmanagement 	 Contextless Resource Names
- /admin/collectionmanagement 	 Contextless Resource Names
- /admin/collectionmanagement 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 38
+Count: 45
  /api/user/reg 	 Contextual Resource Names
  /api/user/auth 	 Contextual Resource Names
  /api/user/anon 	 Contextual Resource Names
@@ -48,3 +41,10 @@ Count: 38
  /admin/reg 	 Contextual Resource Names
  /admin/auth 	 Contextual Resource Names
  /admin/logout 	 Contextual Resource Names
+ /admin/systemmanagement 	 Contextual Resource Names
+ /admin/systemmanagement 	 Contextual Resource Names
+ /admin/systemmanagement 	 Contextual Resource Names
+ /admin/systemmanagement 	 Contextual Resource Names
+ /admin/collectionmanagement 	 Contextual Resource Names
+ /admin/collectionmanagement 	 Contextual Resource Names
+ /admin/collectionmanagement 	 Contextual Resource Names

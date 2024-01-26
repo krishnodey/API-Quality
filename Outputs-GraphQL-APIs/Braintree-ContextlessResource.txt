@@ -1,13 +1,14 @@
 ***Anti-Pattern*** 
-Count: 5
+Count: 6
  /ping 	 Contextless Resource Names
  /vaultUsBankAccount 	 Contextless Resource Names
+ /tokenizeCvv 	 Contextless Resource Names
+ /tokenizeUsBankLogin 	 Contextless Resource Names
  /performThreeDSecureLookup 	 Contextless Resource Names
- /ApplePayStatus 	 Contextless Resource Names
  /BinRecordValue 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 91
+Count: 90
  /pingInStoreReader 	 Contextual Resource Names
  /viewer 	 Contextual Resource Names
  /clientConfiguration 	 Contextual Resource Names
@@ -44,11 +45,9 @@ Count: 91
  /partialCaptureTransaction 	 Contextual Resource Names
  /tokenizeCustomActionsPaymentMethod 	 Contextual Resource Names
  /tokenizeCreditCard 	 Contextual Resource Names
- /tokenizeCvv 	 Contextual Resource Names
  /tokenizeNetworkToken 	 Contextual Resource Names
  /tokenizeSamsungPayCard 	 Contextual Resource Names
  /tokenizeUsBankAccount 	 Contextual Resource Names
- /tokenizeUsBankLogin 	 Contextual Resource Names
  /tokenizePayPalOneTimePayment 	 Contextual Resource Names
  /createPayPalOneTimePayment 	 Contextual Resource Names
  /tokenizePayPalBillingAgreement 	 Contextual Resource Names
@@ -97,5 +96,6 @@ Count: 91
  /PaymentContext 	 Contextual Resource Names
  /PaymentStatusEvent 	 Contextual Resource Names
  /AccountCreationStatus 	 Contextual Resource Names
+ /ApplePayStatus 	 Contextual Resource Names
  /ApplicationBankAccountPurpose 	 Contextual Resource Names
  /ApplicationStatus 	 Contextual Resource Names

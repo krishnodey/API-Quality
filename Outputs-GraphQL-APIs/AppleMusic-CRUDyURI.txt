@@ -43,7 +43,7 @@ Count: 98
 /v1/catalog/{storefront}/music-videos	Verbless End-point	
 /v1/catalog/{storefront}/music-videos	Verbless End-point	
 /v1/me/library/music-videos/{id}	Verbless End-point	
-> /v1/me/library/music-videos/{id}/{relationship}	Verbless End-point	
+/v1/me/library/music-videos/{id}/{relationship}	Verbless End-point	
 /v1/me/library/music-videos	Verbless End-point	
 /v1/me/library/music-videos	Verbless End-point	
 /v1/me/library	Verbless End-point	
@@ -86,7 +86,7 @@ Count: 98
 /v1/me/ratings/albums/{id}	Verbless End-point	
 /v1/me/ratings/music-videos/{id}	Verbless End-point	
 /v1/me/ratings/playlists/{id}	Verbless End-point	
-> /v1/me/ratings/songs/{id}	Verbless End-point	
+/v1/me/ratings/songs/{id}	Verbless End-point	
 /v1/me/ratings/stations/{id}	Verbless End-point	
 /v1/me/ratings/albums/{id}	Verbless End-point	
 /v1/me/ratings/music-videos/{id}	Verbless End-point	

@@ -1,17 +1,9 @@
 ***Anti-Pattern*** 
-Count: 9
-/admin/reg	 Non-descriptive End-point
+Count: 1
 /admin/logout	 Non-descriptive End-point
-/admin/systemmanagement	 Non-descriptive End-point
-/admin/systemmanagement	 Non-descriptive End-point
-/admin/systemmanagement	 Non-descriptive End-point
-/admin/systemmanagement	 Non-descriptive End-point
-/admin/collectionmanagement	 Non-descriptive End-point
-/admin/collectionmanagement	 Non-descriptive End-point
-/admin/collectionmanagement	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 36
+Count: 44
 /api/user/reg	 Self-descriptive End-point
 /api/user/auth	 Self-descriptive End-point
 /api/user/anon	 Self-descriptive End-point
@@ -47,4 +39,12 @@ Count: 36
 /api/message/{systemKey}	 Self-descriptive End-point
 /api/message/{systemKey}/publish	 Self-descriptive End-point
 /api/message/{systemKey}	 Self-descriptive End-point
+/admin/reg	 Self-descriptive End-point
 /admin/auth	 Self-descriptive End-point
+/admin/systemmanagement	 Self-descriptive End-point
+/admin/systemmanagement	 Self-descriptive End-point
+/admin/systemmanagement	 Self-descriptive End-point
+/admin/systemmanagement	 Self-descriptive End-point
+/admin/collectionmanagement	 Self-descriptive End-point
+/admin/collectionmanagement	 Self-descriptive End-point
+/admin/collectionmanagement	 Self-descriptive End-point

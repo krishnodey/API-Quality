@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+ v2/status 	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 21
+Count: 20
  v2/applications/{id} 	 Contextual Resource Names
  v2/artists/{id} 	 Contextual Resource Names
  v2/artworks/{id} 	 Contextual Resource Names
@@ -20,7 +21,6 @@ Count: 21
  v2/sales 	 Contextual Resource Names
  v2/search?q=Andy+Warhol 	 Contextual Resource Names
  v2/shows/{id} 	 Contextual Resource Names
- v2/status 	 Contextual Resource Names
  v2/user_details/{id} 	 Contextual Resource Names
  v2/users/{id}	 Contextual Resource Names
  v2/current_user 	 Contextual Resource Names

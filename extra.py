@@ -43,7 +43,7 @@ for line in data:
 
 print(des)'''
 
-from api_analyzer import ApiAnalyzer
+'''from api_analyzer import ApiAnalyzer
 
 data = ['/bulk/devices/remove']
 obj = ApiAnalyzer(data)
@@ -53,4 +53,11 @@ data = ['POST >> /bulk/devices/remove >> Remove multiple devices. Remove multipl
 
 ap, p, pc, apc = obj.detect_inconsistent_documentations(data)
 print(f"anti-pattern: {ap}")
-print(f"Pattern: {p}")
+print(f"Pattern: {p}")'''
+
+
+from uri_cleaning import UriCleaning
+
+text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
+obj = UriCleaning()
+print(obj.preprocess_documentation(text))

@@ -475,14 +475,14 @@ class ApiAnalyzer:
         nlp = spacy.load("en_core_web_lg")
         stop_words = set(stopwords.words('english'))
 
-        def preprocess_data(text):
+        '''def preprocess_data(text):
             tokens = word_tokenize(text.lower())
             tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
             doc = nlp(" ".join(tokens))
             lemmatized_tokens = [token.lemma_ for token in doc]
             tokens = [token for token in lemmatized_tokens if len(token) > 1]
             #print(tokens)
-            return tokens
+            return tokens'''
 
 
         def preprocess_word(text):
@@ -509,7 +509,7 @@ class ApiAnalyzer:
 
         processed_des =[]
         for des in description:
-            processed_des.append(preprocess_data(des))
+            processed_des.append(clean.preprocess_documentation(des))
         processed_nodes =[]
         for nd in nodes:
             processed_nodes.append(clean.get_uri_nodes(nd))
@@ -715,13 +715,13 @@ class ApiAnalyzer:
         nlp = spacy.load("en_core_web_lg")
         stop_words = set(stopwords.words('english'))
 
-        def preprocess_data(text):
-            tokens = word_tokenize(text.lower())
+        '''def preprocess_data(text):
+            tokens = word_tokenize(text)
             tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
             doc = nlp(" ".join(tokens))
             lemmatized_tokens = [token.lemma_ for token in doc]
             tokens = [token for token in lemmatized_tokens if len(token) > 1]
-            return tokens
+            return tokens'''
 
 
         def preprocess_word(text):
@@ -748,8 +748,7 @@ class ApiAnalyzer:
         
         processed_des =[]
         for des in description:
-            p_des = preprocess_data(des)
-            processed_des.append(p_des)
+            processed_des.append(clean.preprocess_documentation(des))
             #print(f"{des}--------{p_des}")
         processed_nodes =[]
         for nd in nodes:
@@ -790,9 +789,9 @@ class ApiAnalyzer:
             # Calculate similarity for each individual node
             topics = len(combined_node)
             #print(topics)
-            #print(combined_node)
+            print(combined_node)
             
-            #print(documentation)
+            print(documentation)
             if len(documentation)<1 or len(combined_node) < 1 :
                 p_count = p_count + 1
                 less_cohesive_P.append(f"-{node_uri}\t{P}\t{des}")
@@ -812,8 +811,8 @@ class ApiAnalyzer:
             #print(topic_words)
 
             # Display topic words horizontally
-            '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
-            print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
+            table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
+            print(tabulate(table, headers="firstrow", tablefmt="grid"))
 
 
             node_word_similarity = {}
@@ -828,11 +827,11 @@ class ApiAnalyzer:
             # Iterate through topics and print scores vertically
             for topic_idx in range(len(topic_words)):
                 topic_name = f"Topic {topic_idx + 1}"
-                #print(f"  {topic_name}:")
+                print(f"  {topic_name}:")
                 tmp = 0
                 for node, word_scores in node_word_similarity.items():
                     score = word_scores.get(topic_name, {})
-                    #print(f"    {node}: {score}")  # Print scores for each node under the topic
+                    print(f"    {node}: {score}")  # Print scores for each node under the topic
                     #tmp1 = simi_average(score)
                     #print(tmp1)
                     max_value_key = max(score, key=score.get)
@@ -841,11 +840,11 @@ class ApiAnalyzer:
                     tmp += max_value
                 avg_tmp = tmp / len(node_word_similarity)
                 topic_avg.append(avg_tmp)
-                #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
             
-            #print(f"Total Average for All Topics: {topic_avg}\n")
+            print(f"Total Average for All Topics: {topic_avg}\n")
             #for avg in topic_avg:
-            #print(max(topic_avg))
+            print(max(topic_avg))
             if round(max(topic_avg), 1) >= 0.5:
                 #print("cohisive")
                 p_count = p_count + 1
