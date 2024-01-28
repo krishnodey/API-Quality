@@ -3,43 +3,43 @@ Count: 0
 
 ***Patterns*** 
 Count: 40
- /api/getAccess 	Hierarchical Nodes	
- /bui/getBUIAllConfig 	Hierarchical Nodes	
- /bui/getAllowedStatus 	Hierarchical Nodes	
- /bui/getMyTicketDetails({persid}) 	Hierarchical Nodes	
- /bui/getTicketsCustomData({persid}) 	Hierarchical Nodes	
- /bui/getDefaultCategories 	Hierarchical Nodes	
- /bui/attrInfo 	Hierarchical Nodes	
- /bui/attrCtrl 	Hierarchical Nodes	
- /bui/addLogComment 	Hierarchical Nodes	
- /bui/changeStatus/{factory}({persid}) 	Hierarchical Nodes	
- /bui/allFeeds({persid}) 	Hierarchical Nodes	
- /bui/attmnt 	Hierarchical Nodes	
- /bui/getBopSID 	Hierarchical Nodes	
- /bui/attmnt({persid})/$value 	Hierarchical Nodes	
- /bui/updateStatusForNotification 	Hierarchical Nodes	
- /bui/updateStatusForAllNotification 	Hierarchical Nodes	
- /bui/getMyResources 	Hierarchical Nodes	
- /bui/getMyActiveChatSession 	Hierarchical Nodes	
- /bui/checkActiveSessions 	Hierarchical Nodes	
- /bui/createChatThread 	Hierarchical Nodes	
- /bui/getChatHistory/{roomName} 	Hierarchical Nodes	
- /bui/getDocument({id}) 	Hierarchical Nodes	
- /bui/getKDAttachments({id}) 	Hierarchical Nodes	
- /bui/getKDComments({id}) 	Hierarchical Nodes	
- /bui/addKDComment({id}) 	Hierarchical Nodes	
- /bui/rateDocument({id}) 	Hierarchical Nodes	
- /bui/kdLinkInfo({id}) 	Hierarchical Nodes	
- /bui/unLinkSolution({id}) 	Hierarchical Nodes	
- /bui/helpAbout 	Hierarchical Nodes	
- /bui/getEEMAuth 	Hierarchical Nodes	
- /bui/{factory}({persid}) 	Hierarchical Nodes	
- /bui/{factory}({persid}) 	Hierarchical Nodes	
- /bui/{factory} 	Hierarchical Nodes	
- /bui/{factory} 	Hierarchical Nodes	
- /gs/mytkt_active 	Hierarchical Nodes	
- /gs/mytkt_inactive 	Hierarchical Nodes	
- /getServiceRequest 	Hierarchical Nodes	
- /pcatSearch 	Hierarchical Nodes	
- /getOfferings 	Hierarchical Nodes	
- /suggestedSolutions 	Hierarchical Nodes	
+/api/getAccess	Hierarchical Nodes	
+/bui/getBUIAllConfig	Hierarchical Nodes	
+/bui/getAllowedStatus	Hierarchical Nodes	
+/bui/getMyTicketDetails({persid})	Hierarchical Nodes	
+/bui/getTicketsCustomData({persid})	Hierarchical Nodes	
+/bui/getDefaultCategories	Hierarchical Nodes	
+/bui/attrInfo	Hierarchical Nodes	
+/bui/attrCtrl	Hierarchical Nodes	
+/bui/addLogComment	Hierarchical Nodes	
+/bui/changeStatus/{factory}({persid})	Hierarchical Nodes	
+/bui/allFeeds({persid})	Hierarchical Nodes	
+/bui/attmnt	Hierarchical Nodes	
+/bui/getBopSID	Hierarchical Nodes	
+/bui/attmnt({persid})/$value	Hierarchical Nodes	
+/bui/updateStatusForNotification	Hierarchical Nodes	
+/bui/updateStatusForAllNotification	Hierarchical Nodes	
+/bui/getMyResources	Hierarchical Nodes	
+/bui/getMyActiveChatSession	Hierarchical Nodes	
+/bui/checkActiveSessions	Hierarchical Nodes	
+/bui/createChatThread	Hierarchical Nodes	
+/bui/getChatHistory/{roomName}	Hierarchical Nodes	
+/bui/getDocument({id})	Hierarchical Nodes	
+/bui/getKDAttachments({id})	Hierarchical Nodes	
+/bui/getKDComments({id})	Hierarchical Nodes	
+/bui/addKDComment({id})	Hierarchical Nodes	
+/bui/rateDocument({id})	Hierarchical Nodes	
+/bui/kdLinkInfo({id})	Hierarchical Nodes	
+/bui/unLinkSolution({id})	Hierarchical Nodes	
+/bui/helpAbout	Hierarchical Nodes	
+/bui/getEEMAuth	Hierarchical Nodes	
+/bui/{factory}({persid})	Hierarchical Nodes	
+/bui/{factory}({persid})	Hierarchical Nodes	
+/bui/{factory}	Hierarchical Nodes	
+/bui/{factory}	Hierarchical Nodes	
+/gs/mytkt_active	Hierarchical Nodes	
+/gs/mytkt_inactive	Hierarchical Nodes	
+/getServiceRequest	Hierarchical Nodes	
+/pcatSearch	Hierarchical Nodes	
+/getOfferings	Hierarchical Nodes	
+/suggestedSolutions	Hierarchical Nodes	

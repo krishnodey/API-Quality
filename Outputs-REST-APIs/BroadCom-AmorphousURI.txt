@@ -1,16 +1,14 @@
 ***Anti-Pattern*** 
-Count: 8
+Count: 6
 /bui/getBUIAllConfig	Amorphous End-point	 [uppercase found] 
 /bui/getBopSID	Amorphous End-point	 [uppercase found] 
 /bui/getKDAttachments({id})	Amorphous End-point	 [uppercase found] 
 /bui/getKDComments({id})	Amorphous End-point	 [uppercase found] 
 /bui/addKDComment({id})	Amorphous End-point	 [uppercase found] 
 /bui/getEEMAuth	Amorphous End-point	 [uppercase found] 
-/gs/mytkt_active	Amorphous End-point	 [underscore found] 
-/gs/mytkt_inactive	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 32
+Count: 34
 /api/getAccess	Tidy End-point	
 /bui/getAllowedStatus	Tidy End-point	
 /bui/getMyTicketDetails({persid})	Tidy End-point	
@@ -39,6 +37,8 @@ Count: 32
 /bui/{factory}({persid})	Tidy End-point	
 /bui/{factory}	Tidy End-point	
 /bui/{factory}	Tidy End-point	
+/gs/mytkt_active	Tidy End-point	
+/gs/mytkt_inactive	Tidy End-point	
 /getServiceRequest	Tidy End-point	
 /pcatSearch	Tidy End-point	
 /getOfferings	Tidy End-point	

@@ -20,30 +20,30 @@ POST 	/admin/collectionmanagement	Pluralized Nodes	 [Singular last node with POS
 
 ***Patterns*** 
 Count: 28
-GET 	/api/user/info	 regular methods.
+GET 	/api/user/info	 Regular methods
 PUT 	/api/user/info	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/api/user/pass	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/api/user	 regular methods.
+GET 	/api/user	 Regular methods
 PUT 	/api/v/2/devices/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/api/collection/{systemKey}/{collectionName}	 regular methods.
+GET 	/api/collection/{systemKey}/{collectionName}	 Regular methods
 PUT 	/api/collection/{systemKey}/{collectionName}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/api/collection/{systemKey}/{collectionName}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/api/data/{collectionID}	 regular methods.
+GET 	/api/data/{collectionID}	 Regular methods
 PUT 	/api/data/{collectionID}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/api/data/{collectionID}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/api/data/{collectionid}/columns	 regular methods.
-GET 	/codeadmin/v/2/library/{systemKey}	 regular methods.
-GET 	/codeadmin/v/2/library/{systemKey}/{name}	 regular methods.
+GET 	/api/data/{collectionid}/columns	 Regular methods
+GET 	/codeadmin/v/2/library/{systemKey}	 Regular methods
+GET 	/codeadmin/v/2/library/{systemKey}/{name}	 Regular methods
 PUT 	/codeadmin/v/2/library/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/codeadmin/v/2/library/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/codeadmin/v/2/history/library/{systemKey}/{name}	 regular methods.
-GET 	/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	 regular methods.
-GET 	/codeadmin/failed	 regular methods.
-GET 	/codeadmin/failed/{systemKey}	 regular methods.
+GET 	/codeadmin/v/2/history/library/{systemKey}/{name}	 Regular methods
+GET 	/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	 Regular methods
+GET 	/codeadmin/failed	 Regular methods
+GET 	/codeadmin/failed/{systemKey}	 Regular methods
 DELETE 	/codeadmin/failed/{systemKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/api/message/{systemKey}	 regular methods.
+GET 	/api/message/{systemKey}	 Regular methods
 DELETE 	/api/message/{systemKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/admin/systemmanagement	 regular methods.
+GET 	/admin/systemmanagement	 Regular methods
 PUT 	/admin/systemmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/admin/systemmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/admin/collectionmanagement	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

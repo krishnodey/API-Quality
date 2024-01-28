@@ -1,0 +1,56 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /abuseReport/{id} 	 Find an abuse report. id AbuseReportID! ID of the abuse report. 	 0 	 1 	 Regular methods
+GET 	 /abuseReportLabels 	 Abuse report labels. searchTerm String Search term to find labels with. 	 0 	 1 	 Regular methods
+GET 	 /addOnPurchase/{id} 	 Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for. 	 0 	 1 	 Regular methods
+GET 	 /aiMessages 	 Find GitLab Duo Chat messages. requestIds [ID!] Array of request IDs to fetch. roles [AiMessageRole!] Array of roles to fetch. 	 0 	 1 	 Regular methods
+GET 	 /auditEventDefinitions 	 Definitions for all audit events available on the instance. n/a 	 0 	 1 	 Regular methods
+GET 	 /auditEventsInstanceAmazonS3Configurations 	 Instance-level Amazon S3 configurations for audit events.n/a 	 0 	 1 	 Regular methods
+GET 	 /boardList/{id} 	 Find an issue board list. id ListID! Global ID of the list. 	 0 	 1 	 Regular methods
+GET 	 /ciCatalogResource/{id} 	 A single CI/CD Catalog resource visible to an authorized user. id CiCatalogResourceID CI/CD Catalog resource global ID. 	 0 	 1 	 Regular methods
+GET 	 /ciCatalogResources/{projectPath} 	 All CI/CD Catalog resources under a common namespace, visible to an authorized user. projectPath ID Project with the namespace catalog. 	 0 	 1 	 Regular methods
+GET 	 /ciConfig/{projectPath} 	 Linted and processed contents of a CI config. Should not be requested more than once per request projectPath ID! Project of the CI config. 	 0 	 1 	 Regular methods
+GET 	 /ciMinutesUsage/{namespaceId} 	 Compute usage data for a namespace. namespaceId NamespaceID Global ID of the Namespace for the monthly compute usage. 	 0 	 1 	 Regular methods
+GET 	 /ciPipelineStage/{id} 	 Stage belonging to a CI pipeline.id CiStageID! Global ID of the CI stage. 	 0 	 1 	 Regular methods
+GET 	 /ciQueueingHistory 	 Time it took for ci job to be picked up by runner in percentiles.n/a 	 0 	 1 	 Regular methods
+GET 	 /ciVariables 	 List of the instanceâ€™s CI/CD variables. n/a 	 0 	 1 	 Regular methods
+GET 	 /containerRepository/{id} 	 Find a container repository. id ContainerRepositoryID! Global ID of the container repository. 	 0 	 1 	 Regular methods
+GET 	 /currentLicense 	 Fields related to the current license. n/a 	 0 	 1 	 Regular methods
+GET 	 /currentUser 	 Get information about current user. n/a 	 0 	 1 	 Regular methods
+GET 	 /designManagement 	 Fields related to design management. n/a 	 0 	 1 	 Regular methods
+GET 	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	 Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice. displayNamespaceId NamespaceID Filter by display namespace. 	 0 	 1 	 Regular methods
+GET 	 /echo 	 Testing endpoint to validate the API with. n/a 	 0 	 1 	 Regular methods
+GET 	 /epicBoardList/{id} 	 Returns EpicList. id BoardsEpicListID! Global ID of the list. 	 0 	 1 	 Regular methods
+GET 	 /explainVulnerabilityPrompt/{vulnerabilityId} 	 GitLab Duo Vulnerability summary prompt for a specified vulnerability.vulnerabilityId VulnerabilityID! Vulnerability to generate a prompt for. 	 0 	 1 	 Regular methods
+GET 	 /frecentGroups 	 A userâ€™s frecently visited groups.n/a 	 0 	 1 	 Regular methods
+GET 	 /frecentProjects 	 A userâ€™s frecently visited projects. n/a 	 0 	 1 	 Regular methods
+GET 	 /geoNode 	 Find a Geo node n/a 	 0 	 1 	 Regular methods
+GET 	 /gitpodEnabled 	 Whether Gitpod is enabled in application settings. n/a 	 0 	 1 	 Regular methods
+GET 	 /group 	 Find a group n/a 	 0 	 1 	 Regular methods
+GET 	 groups 	 Find groups. n/a 	 0 	 1 	 Regular methods
+GET 	 /instanceExternalAuditEventDestinations 	 Instance level external audit event destinations. n/a 	 0 	 1 	 Regular methods
+GET 	 /instanceGoogleCloudLoggingConfigurations 	 Instance level google cloud logging configurations. n/a 	 0 	 1 	 Regular methods
+GET 	 /instanceSecurityDashboard 	 Fields related to Instance Security Dashboard.n/a 	 0 	 1 	 Regular methods
+GET 	 /issue/{id} 	 Find an issue. id IssueID! Global ID of the issue. 	 0 	 1 	 Regular methods
+GET 	 /issues/{assigneeId} 	 Find issues visible to the current user. At least one filter must be provided.assigneeId String ID of a user assigned to the issues. 	 0 	 1 	 Regular methods
+GET 	 /iteration/{id} 	 Find an iteration. id IterationID! Find an iteration by its ID. 	 0 	 1 	 Regular methods
+GET 	 /jobs 	 All jobs on this GitLab instance. Returns an empty result for users without administrator access. n/a 	 0 	 1 	 Regular methods
+GET 	 /licenseHistoryEntries 	 Fields related to entries in the license history. n/a 	 0 	 1 	 Regular methods
+GET 	 /memberRole/{id} 	 Finds a single custom role. id MemberRoleID Global ID of the member role to look up. 	 0 	 1 	 Regular methods
+GET 	 /memberRolePermissions 	 List of all customizable permissions.n/a 	 0 	 1 	 Regular methods
+GET 	 /memberRoles/{id} 	 Member roles available for the instance.id MemberRoleID Global ID of the member role to look up. 	 0 	 1 	 Regular methods
+GET 	 /mergeRequest/{id} 	 Find a merge request. id MergeRequestID! Global ID of the merge request. 	 0 	 1 	 Regular methods
+GET 	 /metadata 	 Metadata about GitLab. n/a 	 0 	 1 	 Regular methods
+GET 	 /milestone/{id} 	 Find a milestone. id MilestoneID! Find a milestone by its ID. 	 0 	 1 	 Regular methods
+GET 	 /mlModel/{id} 	 Find machine learning models. id MlModelID! ID of the model. 	 0 	 1 	 Regular methods
+GET 	 /namespace 	 Find a namespace.n/a 	 0 	 1 	 Regular methods
+GET 	 /note/{id} 	 Find a note. n/a 	 0 	 1 	 Regular methods
+GET 	 /organization/{id} 	 Find an organization. id OrganizationsOrganizationID! ID of the organization. 	 0 	 1 	 Regular methods
+GET 	 /organizations 	 List organizations.n/a 	 0 	 1 	 Regular methods
+GET 	 /package/{id} 	 Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status. id PackagesPackageID! Global ID of the package. 	 0 	 1 	 Regular methods
+GET 	 /project/{fullPath} 	 Find a project. fullPath ID! Full path of the project. For example, gitlab-org/gitlab-foss. 	 0 	 1 	 Regular methods
+GET 	 /projects/{ids} 	 Find projects visible to the current user. ids [ID!] Filter projects by IDs 	 0 	 1 	 Regular methods
+GET 	 /queryComplexity 	 Information about the complexity of the GraphQL query.n/a 	 0 	 1 	 Regular methods
+GET 	 /runner/{id} 	 Find a runner. id CiRunnerID! Runner ID. 	 0 	 1 	 Regular methods
+GET 	 /runnerSetup 	 Runner setup instructions. n/a 	 0 	 1 	 Regular methods
+GET 	 /runners/{creatorId} 	 Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access. creatorId UserID Filter runners by creator ID. 	 0 	 1 	 Regular methods
+GET 	 /selfManagedAddOnEligibleUsers 	 Users within the self-managed instance who are eligible for add-ons n/a 	 0 	 1 	 Regular methods

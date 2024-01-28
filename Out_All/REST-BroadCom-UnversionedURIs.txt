@@ -1,0 +1,41 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+POST 	 /api/getAccess 	 Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct. 	 1 	 0 	 No Version Found
+GET 	 /bui/getBUIAllConfig 	 Returns all the configuration properties for Service Point App. 	 1 	 0 	 No Version Found
+GET 	 /bui/getAllowedStatus 	 Returns the list of available Statuses based on allowed Status transition. 	 1 	 0 	 No Version Found
+GET 	 /bui/getMyTicketDetails({persid}) 	 Returns ticket details along with extra attributes provided in the $attrList parameter. 	 1 	 0 	 No Version Found
+GET 	 /bui/getTicketsCustomData({persid}) 	 Returns tickets summary attributes configured at SDM. 	 1 	 0 	 No Version Found
+GET 	 /bui/getDefaultCategories 	 Returns the default list of categories for cr factory defined in Service Desk which is configurable. 	 1 	 0 	 No Version Found
+GET 	 /bui/attrInfo 	 Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page. 	 1 	 0 	 No Version Found
+GET 	 /bui/attrCtrl 	 Returns all dependent attributes for the provided ticket attribute ($attrname parameter) 	 1 	 0 	 No Version Found
+POST 	 /bui/addLogComment 	 Add log comment to the ticket 	 1 	 0 	 No Version Found
+POST 	 /bui/changeStatus/{factory}({persid}) 	 Returns updated status value of the provided ticket persistent id. 	 1 	 0 	 No Version Found
+GET 	 /bui/allFeeds({persid}) 	 Returns Activity Log Information for the provided ticket 	 1 	 0 	 No Version Found
+POST 	 /bui/attmnt 	 Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file. 	 1 	 0 	 No Version Found
+GET 	 /bui/getBopSID 	 Returns BOP session ID, which can be used to download file. 	 1 	 0 	 No Version Found
+GET 	 /bui/attmnt({persid})/$value 	 Returns an attachment as binary data. 	 1 	 0 	 No Version Found
+PUT 	 /bui/updateStatusForNotification 	 Marks the notification status as READ for the given notification persistent id 	 1 	 0 	 No Version Found
+PUT 	 /bui/updateStatusForAllNotification 	 Marks all the notifications based on the $filter value provided as READ. 	 1 	 0 	 No Version Found
+GET 	 /bui/getMyResources 	 Returns all the resources(Assets) the user is having access to 	 1 	 0 	 No Version Found
+GET 	 /bui/getMyActiveChatSession 	 Gets the active chat session details for the logged-in Service Point user. 	 1 	 0 	 No Version Found
+GET 	 /bui/checkActiveSessions 	 Checks if the logged-in Service Point user has an active chat session. 	 1 	 0 	 No Version Found
+POST 	 /bui/createChatThread 	 Creates an activity log entry for initiating a chat session 	 1 	 0 	 No Version Found
+GET 	 /bui/getChatHistory/{roomName} 	 Gets the chat history for the logged-in ServicePoint user for the passed-in ticket id (here roomName is the ticket persistent id). 	 1 	 0 	 No Version Found
+GET 	 /bui/getDocument({id}) 	 Returns a Knowledge Document and updates the documents hits count if $updateHits parameter is true 	 1 	 0 	 No Version Found
+GET 	 /bui/getKDAttachments({id}) 	 Returns all Knowledge Document attachments for the provided document id. 	 1 	 0 	 No Version Found
+GET 	 /bui/getKDComments({id}) 	 Returns Knowledge Document comments for the provided document id. 	 1 	 0 	 No Version Found
+POST 	 /bui/addKDComment({id}) 	 Add a comment to an Existing Knowledge Document 	 1 	 0 	 No Version Found
+POST 	 /bui/rateDocument({id}) 	 Rate an Existing Knowledge Document 	 1 	 0 	 No Version Found
+GET 	 /bui/kdLinkInfo({id}) 	 It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket. 	 1 	 0 	 No Version Found
+POST 	 /bui/unLinkSolution({id}) 	 Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket 	 1 	 0 	 No Version Found
+GET 	 /bui/helpAbout 	 Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned 	 1 	 0 	 No Version Found
+GET 	 /bui/getEEMAuth 	 Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests) 	 1 	 0 	 No Version Found
+GET 	 /bui/{factory}({persid}) 	 Returns the object details specified by the persistent id of the mentioned factory 	 1 	 0 	 No Version Found
+PUT 	 /bui/{factory}({persid}) 	 Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory. 	 1 	 0 	 No Version Found
+GET 	 /bui/{factory} 	 Returns the objects based on the parameters for the mentioned factory 	 1 	 0 	 No Version Found
+POST 	 /bui/{factory} 	 Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.) 	 1 	 0 	 No Version Found
+GET 	 /gs/mytkt_active 	 Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 1 	 0 	 No Version Found
+GET 	 /gs/mytkt_inactive 	 Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 1 	 0 	 No Version Found
+GET 	 /getServiceRequest 	 Returns service requests of logged in user, if Service Catalog is integrated. 	 1 	 0 	 No Version Found
+GET 	 /pcatSearch 	 Returns relevant categories(and offerings if Service Catalog is integrated) based on configured parameters in Service Point configuration. 	 1 	 0 	 No Version Found
+GET 	 /getOfferings 	 Returns featured offerings for the loggedin users domain, if Service Catalog is integrated. 	 1 	 0 	 No Version Found
+GET 	 /suggestedSolutions 	 Returns all probable solutions for the provided search string. 	 1 	 0 	 No Version Found

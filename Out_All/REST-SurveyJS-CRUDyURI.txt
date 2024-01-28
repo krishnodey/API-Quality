@@ -1,0 +1,25 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+PUT 	 /setResultSummaryState?accessKey={accessKey} 	 Change the result summary state. 	 0 	 1 	
+GET 	 /getResultSummaryState/{id}?accessKey={accessKey} 	 Returns the result summary state. 	 0 	 1 	
+GET 	 /getPublicResultSummaryState/{id} 	 Returns public result summary state. 	 0 	 1 	
+GET 	 /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	 Returns survey results. 	 0 	 1 	
+GET 	 /getSurveyPublicResults/{id}?from={from}&till={till} 	 Returns survey public results. 	 0 	 1 	
+GET 	 /generateAccessKey?accessKey={accessKey} 	 Generates a new access key. The old access key becomes invalid. 	 0 	 1 	
+GET 	 /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	 Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json). 	 0 	 1 	
+GET 	 /getActive?accessKey={accessKey}&ownerId={ownerId} 	 Returns the list of active surveys. 	 0 	 1 	
+GET 	 /getArchive?accessKey={accessKey}&ownerId={ownerId} 	 Returns the list of archive surveys. 	 0 	 1 	
+POST 	 /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	 Create a new survey. 	 1 	 0 	 [create found] 
+PUT 	 /archive/{id}?accessKey={accessKey} 	 Archive the survey by it's id. All survey results will be still accessible. You have to delete a survey to remove the access to it's results. 	 0 	 1 	
+PUT 	 /restore/{id}?accessKey={accessKey} 	 Restore an archive survey by it's id. 	 0 	 1 	
+DELETE 	 /delete/{id}?accessKey={accessKey} 	 Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible. 	 1 	 0 	 [delete found] 
+PUT 	 /changeName/{id}?accessKey={accessKey}&name={name} 	 Change the survey name. 	 0 	 1 	
+PUT 	 /changeJson?accessKey={accessKey} 	 Change the survey json. 	 0 	 1 	
+PUT 	 /publish/{id}?accessKey={accessKey} 	 Publishing the survey. 	 0 	 1 	
+PUT 	 /unPublish/{id}?accessKey={accessKey} 	 Disable publishing the survey. 	 0 	 1 	
+PUT 	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Enable or disable using cookies of the publishing survey. 	 0 	 1 	
+POST 	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Enable or disable using cookies of the publishing survey. 	 0 	 1 	
+GET 	 /getIsResultPublic/{id}?accessKey={accessKey} 	 Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not. 	 0 	 1 	
+PUT 	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	 Enable or disable the ability to view survey results by non autorized user via direct link. 	 1 	 0 	 [make found] 
+PUT 	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	 Enable or disable the ability to view survey results by non autorized user via direct link. 	 0 	 1 	
+DELETE 	 /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	 Delete the survey result. Use it to delete spam or test results. 	 1 	 0 	 [delete found] 
+DELETE 	 /deleteAllResults/{id}?accessKey={accessKey} 	 Delete all survey results. Use it to delete all tested results before running survey. 	 1 	 0 	 [delete found] 

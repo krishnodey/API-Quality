@@ -1,29 +1,29 @@
 ***Anti-Pattern*** 
 Count: 3
- /getResultSummaryState/{id}?accessKey={accessKey} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 4
- /getPublicResultSummaryState/{id} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 5
- /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between make and result. 0 hierarchical relations were detected out of 3
+/getResultSummaryState/{id}?accessKey={accessKey}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 4
+/getPublicResultSummaryState/{id}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 5
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between make and result. 0 hierarchical relations were detected out of 3
 
 ***Patterns*** 
 Count: 21
- /setResultSummaryState?accessKey={accessKey} 	Hierarchical Nodes	
- /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	Hierarchical Nodes	
- /getSurveyPublicResults/{id}?from={from}&till={till} 	Hierarchical Nodes	
- /generateAccessKey?accessKey={accessKey} 	Hierarchical Nodes	
- /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	Hierarchical Nodes	
- /getActive?accessKey={accessKey}&ownerId={ownerId} 	Hierarchical Nodes	
- /getArchive?accessKey={accessKey}&ownerId={ownerId} 	Hierarchical Nodes	
- /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	Hierarchical Nodes	
- /archive/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /restore/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /delete/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /changeName/{id}?accessKey={accessKey}&name={name} 	Hierarchical Nodes	
- /changeJson?accessKey={accessKey} 	Hierarchical Nodes	
- /publish/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /unPublish/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Hierarchical Nodes	
- /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Hierarchical Nodes	
- /getIsResultPublic/{id}?accessKey={accessKey} 	Hierarchical Nodes	
- /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	Hierarchical Nodes	
- /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	Hierarchical Nodes	
- /deleteAllResults/{id}?accessKey={accessKey} 	Hierarchical Nodes	
+/setResultSummaryState?accessKey={accessKey}	Hierarchical Nodes	
+/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	Hierarchical Nodes	
+/getSurveyPublicResults/{id}?from={from}&till={till}	Hierarchical Nodes	
+/generateAccessKey?accessKey={accessKey}	Hierarchical Nodes	
+/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Hierarchical Nodes	
+/getActive?accessKey={accessKey}&ownerId={ownerId}	Hierarchical Nodes	
+/getArchive?accessKey={accessKey}&ownerId={ownerId}	Hierarchical Nodes	
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Hierarchical Nodes	
+/archive/{id}?accessKey={accessKey}	Hierarchical Nodes	
+/restore/{id}?accessKey={accessKey}	Hierarchical Nodes	
+/delete/{id}?accessKey={accessKey}	Hierarchical Nodes	
+/changeName/{id}?accessKey={accessKey}&name={name}	Hierarchical Nodes	
+/changeJson?accessKey={accessKey}	Hierarchical Nodes	
+/publish/{id}?accessKey={accessKey}	Hierarchical Nodes	
+/unPublish/{id}?accessKey={accessKey}	Hierarchical Nodes	
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Hierarchical Nodes	
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Hierarchical Nodes	
+/getIsResultPublic/{id}?accessKey={accessKey}	Hierarchical Nodes	
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Hierarchical Nodes	
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Hierarchical Nodes	
+/deleteAllResults/{id}?accessKey={accessKey}	Hierarchical Nodes	

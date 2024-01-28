@@ -1,50 +1,50 @@
 ***Anti-Pattern*** 
 Count: 36
-/api/user/reg [No version found.]
-/api/user/auth [No version found.]
-/api/user/anon [No version found.]
-/api/user/checkauth [No version found.]
-/api/user/logout [No version found.]
-/api/user/info [No version found.]
-/api/user/info [No version found.]
-/api/user/pass [No version found.]
-/api/user [No version found.]
-/api/collection/{systemKey}/{collectionName} [No version found.]
-/api/collection/{systemKey}/{collectionName} [No version found.]
-/api/collection/{systemKey}/{collectionName} [No version found.]
-/api/collection/{systemKey}/{collectionName} [No version found.]
-/api/data/{collectionID} [No version found.]
-/api/data/{collectionID} [No version found.]
-/api/data/{collectionID} [No version found.]
-/api/data/{collectionID} [No version found.]
-/api/data/{collectionid}/columns [No version found.]
-/api/code/{systemKey}/{serviceName} [No version found.]
-/codeadmin/failed [No version found.]
-/codeadmin/failed/{systemKey} [No version found.]
-/codeadmin/failed/{systemKey} [No version found.]
-/codeadmin/failed/{systemKey} [No version found.]
-/api/message/{systemKey} [No version found.]
-/api/message/{systemKey}/publish [No version found.]
-/api/message/{systemKey} [No version found.]
-/admin/reg [No version found.]
-/admin/auth [No version found.]
-/admin/logout [No version found.]
-/admin/systemmanagement [No version found.]
-/admin/systemmanagement [No version found.]
-/admin/systemmanagement [No version found.]
-/admin/systemmanagement [No version found.]
-/admin/collectionmanagement [No version found.]
-/admin/collectionmanagement [No version found.]
-/admin/collectionmanagement [No version found.]
+/api/user/reg 	 No Version Found
+/api/user/auth 	 No Version Found
+/api/user/anon 	 No Version Found
+/api/user/checkauth 	 No Version Found
+/api/user/logout 	 No Version Found
+/api/user/info 	 No Version Found
+/api/user/info 	 No Version Found
+/api/user/pass 	 No Version Found
+/api/user 	 No Version Found
+/api/collection/{systemKey}/{collectionName} 	 No Version Found
+/api/collection/{systemKey}/{collectionName} 	 No Version Found
+/api/collection/{systemKey}/{collectionName} 	 No Version Found
+/api/collection/{systemKey}/{collectionName} 	 No Version Found
+/api/data/{collectionID} 	 No Version Found
+/api/data/{collectionID} 	 No Version Found
+/api/data/{collectionID} 	 No Version Found
+/api/data/{collectionID} 	 No Version Found
+/api/data/{collectionid}/columns 	 No Version Found
+/api/code/{systemKey}/{serviceName} 	 No Version Found
+/codeadmin/failed 	 No Version Found
+/codeadmin/failed/{systemKey} 	 No Version Found
+/codeadmin/failed/{systemKey} 	 No Version Found
+/codeadmin/failed/{systemKey} 	 No Version Found
+/api/message/{systemKey} 	 No Version Found
+/api/message/{systemKey}/publish 	 No Version Found
+/api/message/{systemKey} 	 No Version Found
+/admin/reg 	 No Version Found
+/admin/auth 	 No Version Found
+/admin/logout 	 No Version Found
+/admin/systemmanagement 	 No Version Found
+/admin/systemmanagement 	 No Version Found
+/admin/systemmanagement 	 No Version Found
+/admin/systemmanagement 	 No Version Found
+/admin/collectionmanagement 	 No Version Found
+/admin/collectionmanagement 	 No Version Found
+/admin/collectionmanagement 	 No Version Found
 
 ***Patterns*** 
 Count: 9
-/api/v/2/devices/{systemKey}/{name} [Version found.]
-/api/v/2/devices/{SystemKey}/auth [Version found.]
-/codeadmin/v/2/library/{systemKey} [Version found.]
-/codeadmin/v/2/library/{systemKey}/{name} [Version found.]
-/codeadmin/v/2/library/{systemKey}/{name} [Version found.]
-/codeadmin/v/2/library/{systemKey}/{name} [Version found.]
-/codeadmin/v/2/library/{systemKey}/{name} [Version found.]
-/codeadmin/v/2/history/library/{systemKey}/{name} [Version found.]
-/codeadmin/v/2/history/library/{systemKey}/{name}/{version} [Version found.]
+/api/v/2/devices/{systemKey}/{name} 	 Version Found
+/api/v/2/devices/{SystemKey}/auth 	 Version Found
+/codeadmin/v/2/library/{systemKey} 	 Version Found
+/codeadmin/v/2/library/{systemKey}/{name} 	 Version Found
+/codeadmin/v/2/library/{systemKey}/{name} 	 Version Found
+/codeadmin/v/2/library/{systemKey}/{name} 	 Version Found
+/codeadmin/v/2/library/{systemKey}/{name} 	 Version Found
+/codeadmin/v/2/history/library/{systemKey}/{name} 	 Version Found
+/codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Version Found

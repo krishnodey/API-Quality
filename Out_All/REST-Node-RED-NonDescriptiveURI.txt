@@ -1,0 +1,16 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /auth/login 	 Get the active authentication scheme 	 1 	 0 	Non-descriptive End-point
+POST 	 /auth/token 	 Exchange credentials for access token 	 0 	 1 	 Self-descriptive End-point
+POST 	 /auth/revoke 	 Revoke an access token 	 0 	 1 	 Self-descriptive End-point
+GET 	 /settings 	 Get the runtime settings 	 0 	 1 	 Self-descriptive End-point
+GET 	 /flows 	 Get the active flow configuration 	 0 	 1 	 Self-descriptive End-point
+POST 	 /flows 	 Set the active flow configuration 	 0 	 1 	 Self-descriptive End-point
+POST 	 /flow 	 Add a flow to the active configuration 	 0 	 1 	 Self-descriptive End-point
+GET 	 /flow/:id 	 Get an individual flow configuration 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /flow/:id 	 Update an individual flow configuration 	 0 	 1 	 Self-descriptive End-point
+DELETE 	 /flow/:id 	 Delete an individual flow configuration 	 0 	 1 	 Self-descriptive End-point
+GET 	 /nodes 	 Get a list of the installed nodes 	 0 	 1 	 Self-descriptive End-point
+POST 	 /nodes 	 Install a new node module 	 0 	 1 	 Self-descriptive End-point
+GET 	 /nodes/:module 	 Get a node module’s information 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /nodes/:module 	 Enable/Disable a node module 	 0 	 1 	 Self-descriptive End-point
+DELETE 	 /nodes/:module 	 Remove a node module 	 0 	 1 	 Self-descriptive End-point

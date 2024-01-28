@@ -1,32 +1,32 @@
 ***Anti-Pattern*** 
 Count: 2
- v2/SaveListActivity	Non-hierarchical Nodes	Reversed hierarchy of type True detected between save and list. 0 hierarchical relations were detected out of 2
- v2/ToggleActivitySubscription	Non-hierarchical Nodes	Reversed hierarchy of type True detected between activity and subscription. 0 hierarchical relations were detected out of 2
+v2/SaveListActivity	Non-hierarchical Nodes	Reversed hierarchy of type True detected between save and list. 0 hierarchical relations were detected out of 2
+v2/ToggleActivitySubscription	Non-hierarchical Nodes	Reversed hierarchy of type True detected between activity and subscription. 0 hierarchical relations were detected out of 2
 
 ***Patterns*** 
 Count: 25
- /v2/oauth/token 	Hierarchical Nodes	
- /v2/oauth/pin 	Hierarchical Nodes	
- v2/SaveMediaListEntry	Hierarchical Nodes	
- v2/UpdateMediaListEntries	Hierarchical Nodes	
- v2/DeleteMediaListEntry	Hierarchical Nodes	
- v2/DeleteCustomList	Hierarchical Nodes	
- v2/SaveTextActivity	Hierarchical Nodes	
- v2/DeleteActivity	Hierarchical Nodes	
- v2/ToggleActivityPin	Hierarchical Nodes	
- v2/SaveActivityReply	Hierarchical Nodes	
- v2/DeleteActivityReply	Hierarchical Nodes	
- v2/ToggleLike	Hierarchical Nodes	
- v2/ToggleLikeV2	Hierarchical Nodes	
- v2/ToggleFollow	Hierarchical Nodes	
- v2/ToggleFavourite	Hierarchical Nodes	
- v2/UpdateFavouriteOrder	Hierarchical Nodes	
- v2/SaveReview	Hierarchical Nodes	
- v2/DeleteReview	Hierarchical Nodes	
- v2/RateReview	Hierarchical Nodes	
- v2/SaveRecommendation	Hierarchical Nodes	
- v2/SaveThread	Hierarchical Nodes	
- v2/DeleteThread	Hierarchical Nodes	
- v2/ToggleThreadSubscription	Hierarchical Nodes	
- v2/SaveThreadComment	Hierarchical Nodes	
- v2/DeleteThreadComment	Hierarchical Nodes	
+/v2/oauth/token	Hierarchical Nodes	
+/v2/oauth/pin	Hierarchical Nodes	
+v2/SaveMediaListEntry	Hierarchical Nodes	
+v2/UpdateMediaListEntries	Hierarchical Nodes	
+v2/DeleteMediaListEntry	Hierarchical Nodes	
+v2/DeleteCustomList	Hierarchical Nodes	
+v2/SaveTextActivity	Hierarchical Nodes	
+v2/DeleteActivity	Hierarchical Nodes	
+v2/ToggleActivityPin	Hierarchical Nodes	
+v2/SaveActivityReply	Hierarchical Nodes	
+v2/DeleteActivityReply	Hierarchical Nodes	
+v2/ToggleLike	Hierarchical Nodes	
+v2/ToggleLikeV2	Hierarchical Nodes	
+v2/ToggleFollow	Hierarchical Nodes	
+v2/ToggleFavourite	Hierarchical Nodes	
+v2/UpdateFavouriteOrder	Hierarchical Nodes	
+v2/SaveReview	Hierarchical Nodes	
+v2/DeleteReview	Hierarchical Nodes	
+v2/RateReview	Hierarchical Nodes	
+v2/SaveRecommendation	Hierarchical Nodes	
+v2/SaveThread	Hierarchical Nodes	
+v2/DeleteThread	Hierarchical Nodes	
+v2/ToggleThreadSubscription	Hierarchical Nodes	
+v2/SaveThreadComment	Hierarchical Nodes	
+v2/DeleteThreadComment	Hierarchical Nodes	

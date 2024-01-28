@@ -5,16 +5,16 @@ POST 	/requests/estimate	Pluralized Nodes	 [Singular last node with POST method.
 
 ***Patterns*** 
 Count: 13
-GET 	/oauth/authorize	 regular methods.
-GET 	/history	 regular methods.
-GET 	/payment-methods	 regular methods.
-GET 	/products	 regular methods.
-GET 	/products/{product_id}	 regular methods.
-GET 	/estimates/price	 regular methods.
-GET 	/estimates/time	 regular methods.
-GET 	/requests/current	 regular methods.
-PATCH 	/requests/current	 regular methods.
+GET 	/oauth/authorize	 Regular methods
+GET 	/history	 Regular methods
+GET 	/payment-methods	 Regular methods
+GET 	/products	 Regular methods
+GET 	/products/{product_id}	 Regular methods
+GET 	/estimates/price	 Regular methods
+GET 	/estimates/time	 Regular methods
+GET 	/requests/current	 Regular methods
+PATCH 	/requests/current	 Regular methods
 DELETE 	/requests/current	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/requests/{request_id}/receipt	 regular methods.
-GET 	/requests/{request_id}/map	 regular methods.
-GET 	/requests/{request_id}/receipt	 regular methods.
+GET 	/requests/{request_id}/receipt	 Regular methods
+GET 	/requests/{request_id}/map	 Regular methods
+GET 	/requests/{request_id}/receipt	 Regular methods

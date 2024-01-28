@@ -1,39 +1,39 @@
 ***Anti-Pattern*** 
 Count: 1
- /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 7
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Non-hierarchical Nodes	Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 7
 
 ***Patterns*** 
 Count: 33
- /admin/tenantKeys 	Hierarchical Nodes	
- /admin/apps?$top={$top} 	Hierarchical Nodes	
- /admin/apps/{appId}/users 	Hierarchical Nodes	
- /admin/capacities/AssignWorkspaces 	Hierarchical Nodes	
- /admin/capacities/UnassignWorkspaces 	Hierarchical Nodes	
- /admin/dashboards 	Hierarchical Nodes	
- /admin/groups/{groupId}/dashboards 	Hierarchical Nodes	
- /admin/dataflows/{dataflowId}/export 	Hierarchical Nodes	
- /admin/dataflows/{dataflowId}/datasources 	Hierarchical Nodes	
- /admin/groups/{groupId}/dataflows 	Hierarchical Nodes	
- /admin/dataflows/{dataflowId}/users 	Hierarchical Nodes	
- /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Hierarchical Nodes	
- /admin/groups/{groupId}/datasets 	Hierarchical Nodes	
- /admin/groups/{groupId}/datasets/upstreamDataflows 	Hierarchical Nodes	
- /admin/datasets/{datasetId}/datasources 	Hierarchical Nodes	
- /admin/capacities 	Hierarchical Nodes	
- /admin/groups/{groupId}/users 	Hierarchical Nodes	
- /admin/pipelines/{pipelineId}/users/{identifier} 	Hierarchical Nodes	
- /admin/workspaces/modified 	Hierarchical Nodes	
- /admin/workspaces/getInfo 	Hierarchical Nodes	
- /apps/{appId} 	Hierarchical Nodes	
- /apps/{appId}/dashboards/{dashboardId} 	Hierarchical Nodes	
- /apps/{appId}/reports/{reportId} 	Hierarchical Nodes	
- /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Hierarchical Nodes	
- /apps/{appId}/dashboards/{dashboardId}/tiles 	Hierarchical Nodes	
- /availableFeatures 	Hierarchical Nodes	
- /capacities 	Hierarchical Nodes	
- /capacities/{capacityId}/refreshables/{refreshableId} 	Hierarchical Nodes	
- /capacities/{capacityId}/Workloads/{workloadName} 	Hierarchical Nodes	
- /capacities/{capacityId}/Workloads 	Hierarchical Nodes	
- /AssignToCapacity 	Hierarchical Nodes	
- /groups/{groupId}/AssignToCapacity 	Hierarchical Nodes	
- /groups/{groupId}/dashboards 	Hierarchical Nodes	
+/admin/tenantKeys	Hierarchical Nodes	
+/admin/apps?$top={$top}	Hierarchical Nodes	
+/admin/apps/{appId}/users	Hierarchical Nodes	
+/admin/capacities/AssignWorkspaces	Hierarchical Nodes	
+/admin/capacities/UnassignWorkspaces	Hierarchical Nodes	
+/admin/dashboards	Hierarchical Nodes	
+/admin/groups/{groupId}/dashboards	Hierarchical Nodes	
+/admin/dataflows/{dataflowId}/export	Hierarchical Nodes	
+/admin/dataflows/{dataflowId}/datasources	Hierarchical Nodes	
+/admin/groups/{groupId}/dataflows	Hierarchical Nodes	
+/admin/dataflows/{dataflowId}/users	Hierarchical Nodes	
+/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	Hierarchical Nodes	
+/admin/groups/{groupId}/datasets	Hierarchical Nodes	
+/admin/groups/{groupId}/datasets/upstreamDataflows	Hierarchical Nodes	
+/admin/datasets/{datasetId}/datasources	Hierarchical Nodes	
+/admin/capacities	Hierarchical Nodes	
+/admin/groups/{groupId}/users	Hierarchical Nodes	
+/admin/pipelines/{pipelineId}/users/{identifier}	Hierarchical Nodes	
+/admin/workspaces/modified	Hierarchical Nodes	
+/admin/workspaces/getInfo	Hierarchical Nodes	
+/apps/{appId}	Hierarchical Nodes	
+/apps/{appId}/dashboards/{dashboardId}	Hierarchical Nodes	
+/apps/{appId}/reports/{reportId}	Hierarchical Nodes	
+/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	Hierarchical Nodes	
+/apps/{appId}/dashboards/{dashboardId}/tiles	Hierarchical Nodes	
+/availableFeatures	Hierarchical Nodes	
+/capacities	Hierarchical Nodes	
+/capacities/{capacityId}/refreshables/{refreshableId}	Hierarchical Nodes	
+/capacities/{capacityId}/Workloads/{workloadName}	Hierarchical Nodes	
+/capacities/{capacityId}/Workloads	Hierarchical Nodes	
+/AssignToCapacity	Hierarchical Nodes	
+/groups/{groupId}/AssignToCapacity	Hierarchical Nodes	
+/groups/{groupId}/dashboards	Hierarchical Nodes	

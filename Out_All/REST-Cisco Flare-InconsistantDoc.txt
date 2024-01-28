@@ -1,0 +1,26 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET	/environments	List environments. Gets a list of all environments. 	 0 	 1 	 Consistent Documentation
+GET	/environments?latitude={latitude}&longitude={longitude}	Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth. 	 0 	 1 	 Consistent Documentation
+GET	/environments?key={key}&value={value}	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair. 	 0 	 1 	 Consistent Documentation
+POST	/environments	New environment Creates a new environment from the template. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}	Get environment. Gets an environment. 	 0 	 1 	 Consistent Documentation
+PUT	/environments/{environment_id}	Update environment. Updates an environment. The message can contain just the properties of the object to be updated. 	 0 	 1 	 Consistent Documentation
+DELETE	/environments/{environment_id}	Delete environment. Deletes an environment. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones	List zones. Gets a list of all zones in the environment. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones?x={x}&y={y}	Gets a list of all zones in the environment. Params can include the following: If x and y coordinates are specified, returns a list of all zones in the environment containing the given point. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones?key={key}&value={value}	Gets a list of all zones in the environment. Params can include the following: If key and value are specified, returns zones whose data objects contain the given key/value pair. 	 0 	 1 	 Consistent Documentation
+POST	/environments/{environment_id}/zones	New zone. Creates a new zone from the template. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}	Get zone. Gets a zone. 	 0 	 1 	 Consistent Documentation
+PUT	/environments/{environment_id}/zones/{zone_id}	Updates a zone. The message can contain just the properties of the object to be updated. 	 0 	 1 	 Consistent Documentation
+DELETE	/environments/{environment_id}/zones/{zone_id}	Delete zone. Deletes a zone. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things	List things. Gets a list of all things in a zone. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair. 	 0 	 1 	 Consistent Documentation
+POST	/environments/{environment_id}/zones/{zone_id}/things	New thing. Creates a new thing from the template. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Get thing. Gets a thing. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Get thing data value. Gets a single data value for a thing. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call. 	 0 	 1 	 Consistent Documentation
+PUT	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Update thing. Updates a thing. The message can contain just the properties of the object to be updated. 	 0 	 1 	 Consistent Documentation
+DELETE	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Delete thing. Deletes a thing. 	 0 	 1 	 Consistent Documentation
+GET	/environments/{environment_id}/devices	List devices. Gets a list of all devices in the environment. 	 0 	 1 	 Consistent Documentation

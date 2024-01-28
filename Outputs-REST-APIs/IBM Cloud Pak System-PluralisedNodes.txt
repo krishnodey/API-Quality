@@ -23,17 +23,17 @@ DELETE 	/deployment/resources/credentials/<credentialUUID>	Singularized Nodes	 [
 DELETE 	/deployment/resources/images/<imageID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 POST 	/deployment/resources/groups	Singularized Nodes	 [Pluralized last node with POST method.] 
 PUT 	/deployment/resources/groups/<groupUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/deployment/resources/groups?isMaster=true	 regular methods.
-GET 	/deployment/resources/groups/group<UUID>?showNested=true	 regular methods.
+GET 	/deployment/resources/groups?isMaster=true	 Regular methods
+GET 	/deployment/resources/groups/group<UUID>?showNested=true	 Regular methods
 PUT 	/deployment/resources/instances/<instanceUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/deployment/resources/instances	 regular methods.
+GET 	/deployment/resources/instances	 Regular methods
 DELETE 	/deployment/resources/instances/<instanceUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/deployment/resources/addresses	 regular methods.
+GET 	/deployment/resources/addresses	 Regular methods
 POST 	/deployment/resources/volumes	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/deployment/resources/volumes/<volumeUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 POST 	/deployment/resources/volumes	Singularized Nodes	 [Pluralized last node with POST method.] 
 PUT 	/deployment/resources/instances/<instanceUUID>	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/deployment/resources/instance_snapshots	 regular methods.
-GET 	/deployment/resources/acls	 regular methods.
-GET 	/admin/resources/backup_subcomponents/{id}	 regular methods.
-GET 	/admin/resources/chassis_management_modules	 regular methods.
+GET 	/deployment/resources/instance_snapshots	 Regular methods
+GET 	/deployment/resources/acls	 Regular methods
+GET 	/admin/resources/backup_subcomponents/{id}	 Regular methods
+GET 	/admin/resources/chassis_management_modules	 Regular methods

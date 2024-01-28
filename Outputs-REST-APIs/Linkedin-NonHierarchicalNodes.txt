@@ -3,16 +3,16 @@ Count: 0
 
 ***Patterns*** 
 Count: 13
- /me 	Hierarchical Nodes	
- /people/(id:{person ID}) 	Hierarchical Nodes	
- /people/(id:{profile ID})?projection=(id,firstName,lastName) 	Hierarchical Nodes	
- /salesContracts?q=contractsByMember 	Hierarchical Nodes	
- /salesAnalyticsExportJobs/{jobId}?contract={contractUrn} 	Hierarchical Nodes	
- /salesAnalyticsExportJobs?action=exportSeatData 	Hierarchical Nodes	
- /salesAnalyticsExportJobs?action=exportActivityOutcomeData 	Hierarchical Nodes	
- /salesAnalyticsExportJobs?action=exportActivityData 	Hierarchical Nodes	
- /salesAccessTokens?q=viewerAndDeveloperApp 	Hierarchical Nodes	
- /salesNavigatorProfileAssociations/(instanceId:foo,partner:bar,recordId:baz) 	Hierarchical Nodes	
- /salesNavigatorProfileAssociations?ids=List((instanceId:foo,partner:bar,recordId:foo),(instanceId:foo,partner:bar,recordId:bar)) 	Hierarchical Nodes	
- /crmDataValidationExportJobs?crmInstanceId={crmInstanceId} 	Hierarchical Nodes	
- /crmDataValidationExportJobs/{jobId}?crmInstanceId={crmInstanceId} 	Hierarchical Nodes	
+/me	Hierarchical Nodes	
+/people/(id:{person ID})	Hierarchical Nodes	
+/people/(id:{profile ID})?projection=(id,firstName,lastName)	Hierarchical Nodes	
+/salesContracts?q=contractsByMember	Hierarchical Nodes	
+/salesAnalyticsExportJobs/{jobId}?contract={contractUrn}	Hierarchical Nodes	
+/salesAnalyticsExportJobs?action=exportSeatData	Hierarchical Nodes	
+/salesAnalyticsExportJobs?action=exportActivityOutcomeData	Hierarchical Nodes	
+/salesAnalyticsExportJobs?action=exportActivityData	Hierarchical Nodes	
+/salesAccessTokens?q=viewerAndDeveloperApp	Hierarchical Nodes	
+/salesNavigatorProfileAssociations/(instanceId:foo,partner:bar,recordId:baz)	Hierarchical Nodes	
+/salesNavigatorProfileAssociations?ids=List((instanceId:foo,partner:bar,recordId:foo),(instanceId:foo,partner:bar,recordId:bar))	Hierarchical Nodes	
+/crmDataValidationExportJobs?crmInstanceId={crmInstanceId}	Hierarchical Nodes	
+/crmDataValidationExportJobs/{jobId}?crmInstanceId={crmInstanceId}	Hierarchical Nodes	

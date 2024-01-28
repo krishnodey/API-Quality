@@ -1,0 +1,65 @@
+{"uri": "/models/bulk-delete", "method": "POST", "description": "Delete multiple algorithmic models with a single operation.", "pattern_name": "CRUDy End-point", "comment": "[delete found]"}
+{"uri": "/datasources/bulk-delete", "method": "POST", "description": "Bulk delete multiple data sources.", "pattern_name": "CRUDy End-point", "comment": "[delete found]"}
+{"uri": "/destinations/{destinationId}/bulk-create", "method": "POST", "description": "Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.", "pattern_name": "CRUDy End-point", "comment": "[create found]"}
+{"uri": "/destinations/{destinationId}/bulk-delete", "method": "POST", "description": "Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.", "pattern_name": "CRUDy End-point", "comment": "[delete found]"}
+{"uri": "/models/{modelId}", "method": "DELETE", "description": "Deletes an algorithmic model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models/{modelId}", "method": "DELETE", "description": "Deletes an algorithmic model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models", "method": "POST", "description": "Creates an algorithmic model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models", "method": "POST", "description": "Creates an algorithmic model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models/{modelId}/processing-history", "method": "GET", "description": "Returns an array of UNIX time stamps (UTC) of successful data runs for your model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models/{modelId}/runs/latest/traits", "method": "GET", "description": "Returns a list of your most influential (accurate) traits for your algorithmic model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models/{modelId}/runs/latest/stats", "method": "GET", "description": "Returns accuracy and reach values for your algorithmic model.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/models/limits", "method": "GET", "description": "Returns a count of the maximum number of algorithmic models you can create.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/algorithms/{algoTypeId}", "method": "GET", "description": "Returns ID, name, and description for the algorithm based on the passed in algoTypeId.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/algorithms", "method": "GET", "description": "Returns ID, name, and description for the available algorithms.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/available-data-feeds/", "method": "GET", "description": "Gets the 'Available Data Feed' resources for a buyer.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/available-data-feeds/{dataSourceId}", "method": "GET", "description": "Gets the data feed from the perspective of the buyer.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/available-data-feeds/{dataSourceId}/plans", "method": "GET", "description": "Gets the plans which belong to the data feed, from the perspective of the buyer.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/available-data-feeds/{dataSourceId}/subscribe", "method": "POST", "description": "Creates/Updates subscription to an available data feed.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/available-data-feeds/{dataSourceId}/requests", "method": "POST", "description": "Creates a request for an available data feed.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/billing-report", "method": "POST", "description": "Gets the billing report for last month in CSV format", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/billing-report", "method": "POST", "description": "Gets the billing report for last month in CSV format", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/usage", "method": "POST", "description": "Inserts impression data for the plan subscription for last month.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/bulk-usage", "method": "POST", "description": "Inserts bulk impression data for multiple plan subscriptions for last month.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/segment-impressions/", "method": "PATCH", "description": "Updates the segments and corresponding impression counts for destinations", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/segment-impressions/", "method": "PATCH", "description": "Updates the segments and corresponding impression counts for destinations", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/", "method": "POST", "description": "Creates a new `Data Feed`.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/", "method": "POST", "description": "Creates a new `Data Feed`.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}", "method": "DELETE", "description": "Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}", "method": "DELETE", "description": "Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}", "method": "DELETE", "description": "Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/plans/", "method": "POST", "description": "Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/plans/", "method": "POST", "description": "Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/subscriptions", "method": "PUT", "description": "Updates the list of 'Subscriptions' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/subscriptions", "method": "PUT", "description": "Updates the list of 'Subscriptions' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/requests/", "method": "POST", "description": "Creates a 'Subscription' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/requests/", "method": "POST", "description": "Creates a 'Subscription' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/requests/{requestId}", "method": "PUT", "description": "Updates an existing 'Data Feed Request'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/requests/{requestId}", "method": "PUT", "description": "Updates an existing 'Data Feed Request'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/potential-subscribers/", "method": "GET", "description": "Returns the list of potential subscribers for a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/plans/{planId}", "method": "DELETE", "description": "Deletes a 'Data Feed Plan' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/plans/{planId}", "method": "DELETE", "description": "Deletes a 'Data Feed Plan' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/data-feeds/{dataSourceId}/plans/{planId}", "method": "DELETE", "description": "Deletes a 'Data Feed Plan' under a 'Data Feed'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/", "method": "POST", "description": "Creates a Data Source of the type GENERAL or MERGE RULE.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/", "method": "POST", "description": "Creates a Data Source of the type GENERAL or MERGE RULE.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/{dataSourceId}", "method": "DELETE", "description": "Delete a specific data source.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/{dataSourceId}", "method": "DELETE", "description": "Delete a specific data source.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/{dataSourceId}", "method": "DELETE", "description": "Delete a specific data source.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/configurations/available-id-types", "method": "GET", "description": "Returns all available data source ID types.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/configurations/marketing-cloud-visitorid-versions", "method": "GET", "description": "Returns a list of all active Experience Cloud visitor ID versions.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/{dataSourceId}/history/inbound", "method": "GET", "description": "Returns Onboarding Status Report with success and failure rates for inbound data source files.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/datasources/{dataSourceId}/history/inbound/sampling-data", "method": "GET", "description": "Returns sampling data for a datasource for onboarding (inbound) files.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/signals/derived/{derivedSignalId}", "method": "DELETE", "description": "Deletes a single derived signal.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/signals/derived/{derivedSignalId}", "method": "DELETE", "description": "Deletes a single derived signal.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/signals/derived/{derivedSignalId}", "method": "DELETE", "description": "Deletes a single derived signal.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/signals/derived", "method": "POST", "description": "Creates a new derived signal", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/signals/derived", "method": "POST", "description": "Creates a new derived signal", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/signals/derived/limits", "method": "GET", "description": "Returns a count of the maximum number of derived signals you can create.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/", "method": "GET", "description": "Returns data for all your destinations.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/", "method": "GET", "description": "Returns data for all your destinations.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/limits", "method": "GET", "description": "Returns a count of the maximum number of destinations you can create.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/{destinationId}/history/outbound/", "method": "GET", "description": "Returns outbound history for a specific destination by 'destinationId'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/{destinationId}", "method": "PUT", "description": "Updates a specific destination by 'destinationId'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/{destinationId}", "method": "PUT", "description": "Updates a specific destination by 'destinationId'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/{destinationId}", "method": "PUT", "description": "Updates a specific destination by 'destinationId'.", "pattern_name": "Verbless End-point", "comment": ""}
+{"uri": "/destinations/{destinationId}/mappings-by-priority/", "method": "GET", "description": "Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.", "pattern_name": "Verbless End-point", "comment": ""}

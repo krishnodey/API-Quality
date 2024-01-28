@@ -3,35 +3,35 @@ Count: 0
 
 ***Patterns*** 
 Count: 32
- /appCategories 	Hierarchical Nodes	
- /appCategories/{id} 	Hierarchical Nodes	
- /appEncryptionDeclarations 	Hierarchical Nodes	
- /appEncryptionDeclarations/{id} 	Hierarchical Nodes	
- /appInfoLocalizations/{id} 	Hierarchical Nodes	
- /appInfos/{id} 	Hierarchical Nodes	
- /appPreOrders/{id} 	Hierarchical Nodes	
- /appPreviewSets/{id} 	Hierarchical Nodes	
- /appPreviews/{id} 	Hierarchical Nodes	
- /appPricePoints 	Hierarchical Nodes	
- /appPricePoints/{id} 	Hierarchical Nodes	
- /appPriceTiers 	Hierarchical Nodes	
- /appPriceTiers/{id} 	Hierarchical Nodes	
- /appPrices/{id} 	Hierarchical Nodes	
- /appScreenshotSets/{id} 	Hierarchical Nodes	
- /appScreenshots/{id} 	Hierarchical Nodes	
- /appStoreReviewAttachments/{id} 	Hierarchical Nodes	
- /appStoreReviewDetails/{id} 	Hierarchical Nodes	
- /appStoreVersionLocalizations/{id} 	Hierarchical Nodes	
- /appStoreVersions/{id} 	Hierarchical Nodes	
- /apps 	Hierarchical Nodes	
- /betaAppLocalizations 	Hierarchical Nodes	
- /endUserLicenseAgreements/{id} 	Hierarchical Nodes	
- /financeReports 	Hierarchical Nodes	
- /preReleaseVersions 	Hierarchical Nodes	
- /routingAppCoverages/{id} 	Hierarchical Nodes	
- /salesReports 	Hierarchical Nodes	
- /appCategories/{id}/subcategories 	Hierarchical Nodes	
- /appEncryptionDeclarations/{id}/app 	Hierarchical Nodes	
- /appInfos/{id}/ageRatingDeclaration 	Hierarchical Nodes	
- /appInfos/{id}/appInfoLocalizations 	Hierarchical Nodes	
- /appInfos/{id}/primaryCategory 	Hierarchical Nodes	
+/appCategories	Hierarchical Nodes	
+/appCategories/{id}	Hierarchical Nodes	
+/appEncryptionDeclarations	Hierarchical Nodes	
+/appEncryptionDeclarations/{id}	Hierarchical Nodes	
+/appInfoLocalizations/{id}	Hierarchical Nodes	
+/appInfos/{id}	Hierarchical Nodes	
+/appPreOrders/{id}	Hierarchical Nodes	
+/appPreviewSets/{id}	Hierarchical Nodes	
+/appPreviews/{id}	Hierarchical Nodes	
+/appPricePoints	Hierarchical Nodes	
+/appPricePoints/{id}	Hierarchical Nodes	
+/appPriceTiers	Hierarchical Nodes	
+/appPriceTiers/{id}	Hierarchical Nodes	
+/appPrices/{id}	Hierarchical Nodes	
+/appScreenshotSets/{id}	Hierarchical Nodes	
+/appScreenshots/{id}	Hierarchical Nodes	
+/appStoreReviewAttachments/{id}	Hierarchical Nodes	
+/appStoreReviewDetails/{id}	Hierarchical Nodes	
+/appStoreVersionLocalizations/{id}	Hierarchical Nodes	
+/appStoreVersions/{id}	Hierarchical Nodes	
+/apps	Hierarchical Nodes	
+/betaAppLocalizations	Hierarchical Nodes	
+/endUserLicenseAgreements/{id}	Hierarchical Nodes	
+/financeReports	Hierarchical Nodes	
+/preReleaseVersions	Hierarchical Nodes	
+/routingAppCoverages/{id}	Hierarchical Nodes	
+/salesReports	Hierarchical Nodes	
+/appCategories/{id}/subcategories	Hierarchical Nodes	
+/appEncryptionDeclarations/{id}/app	Hierarchical Nodes	
+/appInfos/{id}/ageRatingDeclaration	Hierarchical Nodes	
+/appInfos/{id}/appInfoLocalizations	Hierarchical Nodes	
+/appInfos/{id}/primaryCategory	Hierarchical Nodes	

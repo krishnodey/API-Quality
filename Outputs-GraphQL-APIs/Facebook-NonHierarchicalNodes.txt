@@ -1,74 +1,74 @@
 ***Anti-Pattern*** 
 Count: 6
- /v19.0/{application-id}/app_event_types	Non-hierarchical Nodes	Reversed hierarchy of type True detected between application and event. 0 hierarchical relations were detected out of 4
- /v19.0/{application-id}/button_auto_detection_device_selection	Non-hierarchical Nodes	Reversed hierarchy of type True detected between device and selection. 0 hierarchical relations were detected out of 6
- /v19.0/{application-id}/events 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 2
- /v19.0/{application-id}/monetized_digital_store_objects 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 5
- /{application_id}/codeless_event_mappings 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and mappings. 0 hierarchical relations were detected out of 4
- /v19.0/{application-id}/monetized_digital_store_objects 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 5
+/v19.0/{application-id}/app_event_types	Non-hierarchical Nodes	Reversed hierarchy of type True detected between application and event. 0 hierarchical relations were detected out of 4
+/v19.0/{application-id}/button_auto_detection_device_selection	Non-hierarchical Nodes	Reversed hierarchy of type True detected between device and selection. 0 hierarchical relations were detected out of 6
+/v19.0/{application-id}/events	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 2
+/v19.0/{application-id}/monetized_digital_store_objects	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 5
+/{application_id}/codeless_event_mappings	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and mappings. 0 hierarchical relations were detected out of 4
+/v19.0/{application-id}/monetized_digital_store_objects	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 5
 
 ***Patterns*** 
 Count: 63
-/v18.0/{album-id} 	Hierarchical Nodes	
- /{group_id}/albums	Hierarchical Nodes	
+/v18.0/{album-id}	Hierarchical Nodes	
+/{group_id}/albums	Hierarchical Nodes	
 /v18.0/{album-id}/comments	Hierarchical Nodes	
-/v18.0/{album-id}/likes 	Hierarchical Nodes	
- /v18.0/{album-id}/photos 	Hierarchical Nodes	
- /{album_id}/photos 	Hierarchical Nodes	
-/v18.0/{album-id}/picture 	Hierarchical Nodes	
-/v18.0/{app-link-host-id} 	Hierarchical Nodes	
+/v18.0/{album-id}/likes	Hierarchical Nodes	
+/v18.0/{album-id}/photos	Hierarchical Nodes	
+/{album_id}/photos	Hierarchical Nodes	
+/v18.0/{album-id}/picture	Hierarchical Nodes	
+/v18.0/{app-link-host-id}	Hierarchical Nodes	
 /app/app_link_hosts	Hierarchical Nodes	
 /v18.0/{app-link-host-id}	Hierarchical Nodes	
 /v18.0/{app-link-host-id}	Hierarchical Nodes	
-/v18.0/{application-id} 	Hierarchical Nodes	
- /{business_id}/owned_apps 	Hierarchical Nodes	
- /v18.0/{application-id}/accounts 	Hierarchical Nodes	
- /{application_id}/accounts 	Hierarchical Nodes	
-/v18.0/{application-id}/ad_placement_groups 	Hierarchical Nodes	
- /v18.0/{application-id}/adnetworkanalytics_results	Hierarchical Nodes	
+/v18.0/{application-id}	Hierarchical Nodes	
+/{business_id}/owned_apps	Hierarchical Nodes	
+/v18.0/{application-id}/accounts	Hierarchical Nodes	
+/{application_id}/accounts	Hierarchical Nodes	
+/v18.0/{application-id}/ad_placement_groups	Hierarchical Nodes	
+/v18.0/{application-id}/adnetworkanalytics_results	Hierarchical Nodes	
 /v18.0/{application-id}/aem_attribution	Hierarchical Nodes	
 /v18.0/{application-id}/aem_conversion_configs	Hierarchical Nodes	
 /v18.0/{application-id}/aem_conversion_filter	Hierarchical Nodes	
- /v19.0/{application-id}/agencies 	Hierarchical Nodes	
- /v19.0/{application-id}/app_installed_groups	Hierarchical Nodes	
- /v19.0/{application-id}/appassets 	Hierarchical Nodes	
+/v19.0/{application-id}/agencies	Hierarchical Nodes	
+/v19.0/{application-id}/app_installed_groups	Hierarchical Nodes	
+/v19.0/{application-id}/appassets	Hierarchical Nodes	
 /v19.0/{application-id}/cloudbridge_settings	Hierarchical Nodes	
- /v19.0/{application-id}/da_checks	Hierarchical Nodes	
+/v19.0/{application-id}/da_checks	Hierarchical Nodes	
 /v19.0/{application-id}/ios_skadnetwork_conversion_config	Hierarchical Nodes	
- /v19.0/{application-id}/mobile_sdk_gk 	Hierarchical Nodes	
- /v19.0/{application-id}/model_asset 	Hierarchical Nodes	
- /v19.0/{application-id}/permissions 	Hierarchical Nodes	
- /v19.0/{application-id}/products 	Hierarchical Nodes	
- /v19.0/{application-id}/purchases	Hierarchical Nodes	
- /v19.0/{app-id}/roles 	Hierarchical Nodes	
- /v19.0/{application-id}/subscribed_domains 	Hierarchical Nodes	
- /v19.0/{application-id}/subscribed_domains_phishing 	Hierarchical Nodes	
- /{application_id}/app_indexing 	Hierarchical Nodes	
- /{application_id}/page_activities 	Hierarchical Nodes	
- /{business_id}/client_apps	Hierarchical Nodes	
- /{application_id}/mmp_auditing	Hierarchical Nodes	
- /act_{ad_account_id}/subscribed_apps 	Hierarchical Nodes	
-  /{page_id}/subscribed_apps. 	Hierarchical Nodes	
- /act_{ad_account_id}/subscribed_apps 	Hierarchical Nodes	
- /{application_id}/activities 	Hierarchical Nodes	
- /v19.0/{application-id}/ad_placement_groups 	Hierarchical Nodes	
- /v19.0/{application-id}/adnetworkanalytics_results 	Hierarchical Nodes	
- /v19.0/{application-id}/mobile_sdk_gk 	Hierarchical Nodes	
- /v19.0/{application-id}/model_asset 	Hierarchical Nodes	
- /v19.0/{application-id}/permissions 	Hierarchical Nodes	
- /v19.0/{app-id}/picture 	Hierarchical Nodes	
- /v19.0/{application-id}/products 	Hierarchical Nodes	
- /v19.0/{application-id}/purchases 	Hierarchical Nodes	
- /v19.0/{app-id}/roles 	Hierarchical Nodes	
- /v19.0/{app-id}/scores 	Hierarchical Nodes	
- /v19.0/{app-id}/scores 	Hierarchical Nodes	
- /v19.0/{application-id}/subscribed_domains 	Hierarchical Nodes	
- /v19.0/{application-id}/subscribed_domains_phishing 	Hierarchical Nodes	
- /v19.0/{app-id}/subscriptions 	Hierarchical Nodes	
- /v19.0/{app-id}/subscriptions	Hierarchical Nodes	
- /v19.0/{app-id}/translations 	Hierarchical Nodes	
- /v19.0/branded_content_search 	Hierarchical Nodes	
- /v19.0/{cpas-advertiser-partnership-recommendation-id} 	Hierarchical Nodes	
-/v19.0/{canvas-id} 	Hierarchical Nodes	
- /v19.0/{canvas-id}/preview 	Hierarchical Nodes	
- /v19.0/{canvas-id}/previews 	Hierarchical Nodes	
+/v19.0/{application-id}/mobile_sdk_gk	Hierarchical Nodes	
+/v19.0/{application-id}/model_asset	Hierarchical Nodes	
+/v19.0/{application-id}/permissions	Hierarchical Nodes	
+/v19.0/{application-id}/products	Hierarchical Nodes	
+/v19.0/{application-id}/purchases	Hierarchical Nodes	
+/v19.0/{app-id}/roles	Hierarchical Nodes	
+/v19.0/{application-id}/subscribed_domains	Hierarchical Nodes	
+/v19.0/{application-id}/subscribed_domains_phishing	Hierarchical Nodes	
+/{application_id}/app_indexing	Hierarchical Nodes	
+/{application_id}/page_activities	Hierarchical Nodes	
+/{business_id}/client_apps	Hierarchical Nodes	
+/{application_id}/mmp_auditing	Hierarchical Nodes	
+/act_{ad_account_id}/subscribed_apps	Hierarchical Nodes	
+/{page_id}/subscribed_apps.	Hierarchical Nodes	
+/act_{ad_account_id}/subscribed_apps	Hierarchical Nodes	
+/{application_id}/activities	Hierarchical Nodes	
+/v19.0/{application-id}/ad_placement_groups	Hierarchical Nodes	
+/v19.0/{application-id}/adnetworkanalytics_results	Hierarchical Nodes	
+/v19.0/{application-id}/mobile_sdk_gk	Hierarchical Nodes	
+/v19.0/{application-id}/model_asset	Hierarchical Nodes	
+/v19.0/{application-id}/permissions	Hierarchical Nodes	
+/v19.0/{app-id}/picture	Hierarchical Nodes	
+/v19.0/{application-id}/products	Hierarchical Nodes	
+/v19.0/{application-id}/purchases	Hierarchical Nodes	
+/v19.0/{app-id}/roles	Hierarchical Nodes	
+/v19.0/{app-id}/scores	Hierarchical Nodes	
+/v19.0/{app-id}/scores	Hierarchical Nodes	
+/v19.0/{application-id}/subscribed_domains	Hierarchical Nodes	
+/v19.0/{application-id}/subscribed_domains_phishing	Hierarchical Nodes	
+/v19.0/{app-id}/subscriptions	Hierarchical Nodes	
+/v19.0/{app-id}/subscriptions	Hierarchical Nodes	
+/v19.0/{app-id}/translations	Hierarchical Nodes	
+/v19.0/branded_content_search	Hierarchical Nodes	
+/v19.0/{cpas-advertiser-partnership-recommendation-id}	Hierarchical Nodes	
+/v19.0/{canvas-id}	Hierarchical Nodes	
+/v19.0/{canvas-id}/preview	Hierarchical Nodes	
+/v19.0/{canvas-id}/previews	Hierarchical Nodes	

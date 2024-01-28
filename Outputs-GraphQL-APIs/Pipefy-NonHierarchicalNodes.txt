@@ -1,114 +1,114 @@
 ***Anti-Pattern*** 
 Count: 13
- /inbox_emails/card_id 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and identification. 0 hierarchical relations were detected out of 3
- /createCardRelation 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and relation. 0 hierarchical relations were detected out of 2
- /createPhase 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 1
- /createPhaseField 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 2
- /createTable 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 1
- /createTableField 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
- /createTableRecord 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
- /createTableRecordInRestrictedTable 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 4
- /createTableRelation 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
- /createTableRelation 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
- /setFieldConditionOrder 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and field. 0 hierarchical relations were detected out of 3
- /setTableFieldOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 3
- /setTableRecordFieldValue	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 4
+/inbox_emails/card_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and identification. 0 hierarchical relations were detected out of 3
+/createCardRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and relation. 0 hierarchical relations were detected out of 2
+/createPhase	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 1
+/createPhaseField	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 2
+/createTable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 1
+/createTableField	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+/createTableRecord	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+/createTableRecordInRestrictedTable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 4
+/createTableRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+/createTableRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+/setFieldConditionOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and field. 0 hierarchical relations were detected out of 3
+/setTableFieldOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 3
+/setTableRecordFieldValue	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 4
 
 ***Patterns*** 
 Count: 96
- /allCards 	Hierarchical Nodes	
- /autoFillFields 	Hierarchical Nodes	
- /card 	Hierarchical Nodes	
- /cards	Hierarchical Nodes	
- /cardsImportations/{pipeId}	Hierarchical Nodes	
- /findCards/{pipeId} 	Hierarchical Nodes	
- /findCards/{tableId}	Hierarchical Nodes	
- /me 	Hierarchical Nodes	
- /organization/{id} 	Hierarchical Nodes	
- /organizations/{ids} 	Hierarchical Nodes	
- /phase/{id} 	Hierarchical Nodes	
- /pipe/{id} 	Hierarchical Nodes	
- /pipeReportExport/{id}	Hierarchical Nodes	
- /pipe/{ids} 	Hierarchical Nodes	
- /pipe_relations/{id} 	Hierarchical Nodes	
- /pipe_templates 	Hierarchical Nodes	
- /recordsImportations/{tableID} 	Hierarchical Nodes	
- /table/{id}	Hierarchical Nodes	
- /table/{ids}	Hierarchical Nodes	
- /table_record/{id} 	Hierarchical Nodes	
- /table_records/{table_id} 	Hierarchical Nodes	
- /table_relations/{ids} 	Hierarchical Nodes	
- /clonePipes 	Hierarchical Nodes	
- /createCard  	Hierarchical Nodes	
- /createComment	Hierarchical Nodes	
- /createFieldCondition	Hierarchical Nodes	
- /createInboxEmail 	Hierarchical Nodes	
- /createLabel 	Hierarchical Nodes	
- /createOrganization	Hierarchical Nodes	
- /createOrganizationWebhook 	Hierarchical Nodes	
-/createPipe 	Hierarchical Nodes	
-/createPipeRelation 	Hierarchical Nodes	
- /createPresignedUrl 	Hierarchical Nodes	
- /createPresignedUrlForPipePdfTemplate 	Hierarchical Nodes	
- /createWebhook 	Hierarchical Nodes	
- /deleteCard 	Hierarchical Nodes	
- /deleteComment 	Hierarchical Nodes	
- /deleteFieldCondition 	Hierarchical Nodes	
- /deleteInboxEmail 	Hierarchical Nodes	
- /deleteLabel 	Hierarchical Nodes	
- /deleteOrganization 	Hierarchical Nodes	
- /deleteOrganizationWebhook 	Hierarchical Nodes	
- /deletePhase 	Hierarchical Nodes	
- /deletePhaseField 	Hierarchical Nodes	
- /deletePipe 	Hierarchical Nodes	
- /deletePipeRelation 	Hierarchical Nodes	
- /deleteTable 	Hierarchical Nodes	
- /deleteTableField 	Hierarchical Nodes	
- /deleteTableRecord 	Hierarchical Nodes	
- /deleteTableRelation 	Hierarchical Nodes	
- /deleteWebhook 	Hierarchical Nodes	
- /exportPipeReport	Hierarchical Nodes	
- /createWebhook 	Hierarchical Nodes	
- /deleteCard 	Hierarchical Nodes	
- /deleteComment 	Hierarchical Nodes	
- /deleteFieldCondition 	Hierarchical Nodes	
- /deleteInboxEmail	Hierarchical Nodes	
- /deleteInboxEmail 	Hierarchical Nodes	
- /deleteOrganization 	Hierarchical Nodes	
- /deleteOrganizationWebhook 	Hierarchical Nodes	
- /deletePhase 	Hierarchical Nodes	
- /deletePhaseField	Hierarchical Nodes	
- /deletePipe	Hierarchical Nodes	
- /deletePipeRelation	Hierarchical Nodes	
- /deleteTable 	Hierarchical Nodes	
- /deleteTableField	Hierarchical Nodes	
- /deleteTableRecord 	Hierarchical Nodes	
- /deleteTableRelation	Hierarchical Nodes	
- /deleteWebhook 	Hierarchical Nodes	
- /exportPipeReport 	Hierarchical Nodes	
- /interfaceEmbedCreat	Hierarchical Nodes	
- /inviteMembers 	Hierarchical Nodes	
- /moveCardToPhase 	Hierarchical Nodes	
- /recordsImporter 	Hierarchical Nodes	
- /removeUserFromOrg 	Hierarchical Nodes	
- /removeUserFromPipe 	Hierarchical Nodes	
- /removeUserFromTable 	Hierarchical Nodes	
- /sendInboxEmail 	Hierarchical Nodes	
- /setRole 	Hierarchical Nodes	
- /setRoles 	Hierarchical Nodes	
- /setSummaryAttributes 	Hierarchical Nodes	
- /updateCard 	Hierarchical Nodes	
- /updateCardField 	Hierarchical Nodes	
- /updateComment	Hierarchical Nodes	
- /updateFieldsValues 	Hierarchical Nodes	
- /updateLabel 	Hierarchical Nodes	
- /updateOrganization 	Hierarchical Nodes	
- /updateOrganizationWebhook 	Hierarchical Nodes	
- /updatePhase	Hierarchical Nodes	
- /updatePhaseField 	Hierarchical Nodes	
- /updatePipe 	Hierarchical Nodes	
- /updatePipeRelation 	Hierarchical Nodes	
- /updateTable 	Hierarchical Nodes	
- /updateTableField 	Hierarchical Nodes	
- /updateTableRecord 	Hierarchical Nodes	
- /updateWebhook	Hierarchical Nodes	
+/allCards	Hierarchical Nodes	
+/autoFillFields	Hierarchical Nodes	
+/card	Hierarchical Nodes	
+/cards	Hierarchical Nodes	
+/cardsImportations/{pipeId}	Hierarchical Nodes	
+/findCards/{pipeId}	Hierarchical Nodes	
+/findCards/{tableId}	Hierarchical Nodes	
+/me	Hierarchical Nodes	
+/organization/{id}	Hierarchical Nodes	
+/organizations/{ids}	Hierarchical Nodes	
+/phase/{id}	Hierarchical Nodes	
+/pipe/{id}	Hierarchical Nodes	
+/pipeReportExport/{id}	Hierarchical Nodes	
+/pipe/{ids}	Hierarchical Nodes	
+/pipe_relations/{id}	Hierarchical Nodes	
+/pipe_templates	Hierarchical Nodes	
+/recordsImportations/{tableID}	Hierarchical Nodes	
+/table/{id}	Hierarchical Nodes	
+/table/{ids}	Hierarchical Nodes	
+/table_record/{id}	Hierarchical Nodes	
+/table_records/{table_id}	Hierarchical Nodes	
+/table_relations/{ids}	Hierarchical Nodes	
+/clonePipes	Hierarchical Nodes	
+/createCard	Hierarchical Nodes	
+/createComment	Hierarchical Nodes	
+/createFieldCondition	Hierarchical Nodes	
+/createInboxEmail	Hierarchical Nodes	
+/createLabel	Hierarchical Nodes	
+/createOrganization	Hierarchical Nodes	
+/createOrganizationWebhook	Hierarchical Nodes	
+/createPipe	Hierarchical Nodes	
+/createPipeRelation	Hierarchical Nodes	
+/createPresignedUrl	Hierarchical Nodes	
+/createPresignedUrlForPipePdfTemplate	Hierarchical Nodes	
+/createWebhook	Hierarchical Nodes	
+/deleteCard	Hierarchical Nodes	
+/deleteComment	Hierarchical Nodes	
+/deleteFieldCondition	Hierarchical Nodes	
+/deleteInboxEmail	Hierarchical Nodes	
+/deleteLabel	Hierarchical Nodes	
+/deleteOrganization	Hierarchical Nodes	
+/deleteOrganizationWebhook	Hierarchical Nodes	
+/deletePhase	Hierarchical Nodes	
+/deletePhaseField	Hierarchical Nodes	
+/deletePipe	Hierarchical Nodes	
+/deletePipeRelation	Hierarchical Nodes	
+/deleteTable	Hierarchical Nodes	
+/deleteTableField	Hierarchical Nodes	
+/deleteTableRecord	Hierarchical Nodes	
+/deleteTableRelation	Hierarchical Nodes	
+/deleteWebhook	Hierarchical Nodes	
+/exportPipeReport	Hierarchical Nodes	
+/createWebhook	Hierarchical Nodes	
+/deleteCard	Hierarchical Nodes	
+/deleteComment	Hierarchical Nodes	
+/deleteFieldCondition	Hierarchical Nodes	
+/deleteInboxEmail	Hierarchical Nodes	
+/deleteInboxEmail	Hierarchical Nodes	
+/deleteOrganization	Hierarchical Nodes	
+/deleteOrganizationWebhook	Hierarchical Nodes	
+/deletePhase	Hierarchical Nodes	
+/deletePhaseField	Hierarchical Nodes	
+/deletePipe	Hierarchical Nodes	
+/deletePipeRelation	Hierarchical Nodes	
+/deleteTable	Hierarchical Nodes	
+/deleteTableField	Hierarchical Nodes	
+/deleteTableRecord	Hierarchical Nodes	
+/deleteTableRelation	Hierarchical Nodes	
+/deleteWebhook	Hierarchical Nodes	
+/exportPipeReport	Hierarchical Nodes	
+/interfaceEmbedCreat	Hierarchical Nodes	
+/inviteMembers	Hierarchical Nodes	
+/moveCardToPhase	Hierarchical Nodes	
+/recordsImporter	Hierarchical Nodes	
+/removeUserFromOrg	Hierarchical Nodes	
+/removeUserFromPipe	Hierarchical Nodes	
+/removeUserFromTable	Hierarchical Nodes	
+/sendInboxEmail	Hierarchical Nodes	
+/setRole	Hierarchical Nodes	
+/setRoles	Hierarchical Nodes	
+/setSummaryAttributes	Hierarchical Nodes	
+/updateCard	Hierarchical Nodes	
+/updateCardField	Hierarchical Nodes	
+/updateComment	Hierarchical Nodes	
+/updateFieldsValues	Hierarchical Nodes	
+/updateLabel	Hierarchical Nodes	
+/updateOrganization	Hierarchical Nodes	
+/updateOrganizationWebhook	Hierarchical Nodes	
+/updatePhase	Hierarchical Nodes	
+/updatePhaseField	Hierarchical Nodes	
+/updatePipe	Hierarchical Nodes	
+/updatePipeRelation	Hierarchical Nodes	
+/updateTable	Hierarchical Nodes	
+/updateTableField	Hierarchical Nodes	
+/updateTableRecord	Hierarchical Nodes	
+/updateWebhook	Hierarchical Nodes	

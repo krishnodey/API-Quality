@@ -12,34 +12,34 @@ POST 	/bui/{factory}	Pluralized Nodes	 [Singular last node with POST method.]
 
 ***Patterns*** 
 Count: 31
-GET 	/bui/getBUIAllConfig	 regular methods.
-GET 	/bui/getAllowedStatus	 regular methods.
-GET 	/bui/getMyTicketDetails({persid})	 regular methods.
-GET 	/bui/getTicketsCustomData({persid})	 regular methods.
-GET 	/bui/getDefaultCategories	 regular methods.
-GET 	/bui/attrInfo	 regular methods.
-GET 	/bui/attrCtrl	 regular methods.
-GET 	/bui/allFeeds({persid})	 regular methods.
-GET 	/bui/getBopSID	 regular methods.
-GET 	/bui/attmnt({persid})/$value	 regular methods.
+GET 	/bui/getBUIAllConfig	 Regular methods
+GET 	/bui/getAllowedStatus	 Regular methods
+GET 	/bui/getMyTicketDetails({persid})	 Regular methods
+GET 	/bui/getTicketsCustomData({persid})	 Regular methods
+GET 	/bui/getDefaultCategories	 Regular methods
+GET 	/bui/attrInfo	 Regular methods
+GET 	/bui/attrCtrl	 Regular methods
+GET 	/bui/allFeeds({persid})	 Regular methods
+GET 	/bui/getBopSID	 Regular methods
+GET 	/bui/attmnt({persid})/$value	 Regular methods
 PUT 	/bui/updateStatusForNotification	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/bui/updateStatusForAllNotification	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/bui/getMyResources	 regular methods.
-GET 	/bui/getMyActiveChatSession	 regular methods.
-GET 	/bui/checkActiveSessions	 regular methods.
-GET 	/bui/getChatHistory/{roomName}	 regular methods.
-GET 	/bui/getDocument({id})	 regular methods.
-GET 	/bui/getKDAttachments({id})	 regular methods.
-GET 	/bui/getKDComments({id})	 regular methods.
-GET 	/bui/kdLinkInfo({id})	 regular methods.
-GET 	/bui/helpAbout	 regular methods.
-GET 	/bui/getEEMAuth	 regular methods.
-GET 	/bui/{factory}({persid})	 regular methods.
+GET 	/bui/getMyResources	 Regular methods
+GET 	/bui/getMyActiveChatSession	 Regular methods
+GET 	/bui/checkActiveSessions	 Regular methods
+GET 	/bui/getChatHistory/{roomName}	 Regular methods
+GET 	/bui/getDocument({id})	 Regular methods
+GET 	/bui/getKDAttachments({id})	 Regular methods
+GET 	/bui/getKDComments({id})	 Regular methods
+GET 	/bui/kdLinkInfo({id})	 Regular methods
+GET 	/bui/helpAbout	 Regular methods
+GET 	/bui/getEEMAuth	 Regular methods
+GET 	/bui/{factory}({persid})	 Regular methods
 PUT 	/bui/{factory}({persid})	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/bui/{factory}	 regular methods.
-GET 	/gs/mytkt_active	 regular methods.
-GET 	/gs/mytkt_inactive	 regular methods.
-GET 	/getServiceRequest	 regular methods.
-GET 	/pcatSearch	 regular methods.
-GET 	/getOfferings	 regular methods.
-GET 	/suggestedSolutions	 regular methods.
+GET 	/bui/{factory}	 Regular methods
+GET 	/gs/mytkt_active	 Regular methods
+GET 	/gs/mytkt_inactive	 Regular methods
+GET 	/getServiceRequest	 Regular methods
+GET 	/pcatSearch	 Regular methods
+GET 	/getOfferings	 Regular methods
+GET 	/suggestedSolutions	 Regular methods

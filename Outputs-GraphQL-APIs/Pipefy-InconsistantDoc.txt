@@ -1,114 +1,114 @@
 ***Anti-Pattern*** 
 Count: 35
-POST	 /createPresignedUrl 	Inconsistent Documentation	Returns a temporary S3 presigned url to upload a file
-POST	 /createPresignedUrlForPipePdfTemplate 	Inconsistent Documentation	Returns a temporary S3 presigned url to upload a pdf template image
-POST	 /deleteCard 	Inconsistent Documentation	Deletes a card
-POST	 /deleteComment 	Inconsistent Documentation	Deletes a comment
-POST	 /deleteFieldCondition 	Inconsistent Documentation	Deletes a field condition
-POST	 /deleteInboxEmail 	Inconsistent Documentation	Deletes an email
-POST	 /deleteLabel 	Inconsistent Documentation	Deletes a label
-POST	 /deleteOrganization 	Inconsistent Documentation	Deletes an organization
-POST	 /deleteOrganizationWebhook 	Inconsistent Documentation	Deletes a webhook
-POST	 /deletePhase 	Inconsistent Documentation	Deletes a phase
-POST	 /deletePhaseField 	Inconsistent Documentation	Deletes a phase field
-POST	 /deletePipe 	Inconsistent Documentation	Deletes a pipe
-POST	 /deletePipeRelation 	Inconsistent Documentation	Deletes a pipe relation
-POST	 /deleteTable 	Inconsistent Documentation	Deletes a table
-POST	 /deleteTableField 	Inconsistent Documentation	Deletes a table field
-POST	 /deleteTableRecord 	Inconsistent Documentation	Deletes a record
-POST	 /deleteTableRelation 	Inconsistent Documentation	Deletes a table relation
-POST	 /deleteWebhook 	Inconsistent Documentation	Deletes a webhook (pipe or table level)
-POST	 /deleteCard 	Inconsistent Documentation	Deletes a card
-POST	 /deleteComment 	Inconsistent Documentation	Deletes a comment
-POST	 /deleteFieldCondition 	Inconsistent Documentation	Deletes a field condition
-POST	 /deleteInboxEmail	Inconsistent Documentation	Deletes an email
-POST	 /deleteInboxEmail 	Inconsistent Documentation	Deletes an email
-POST	 /deleteOrganization 	Inconsistent Documentation	Deletes an organization
-POST	 /deleteOrganizationWebhook 	Inconsistent Documentation	Deletes a webhook
-POST	 /deletePhase 	Inconsistent Documentation	Deletes a phase
-POST	 /deletePhaseField	Inconsistent Documentation	Deletes a phase field
-POST	 /deletePipe	Inconsistent Documentation	Deletes a pipe
-POST	 /deletePipeRelation	Inconsistent Documentation	Deletes a pipe relation
-POST	 /deleteTable 	Inconsistent Documentation	Deletes a table
-POST	 /deleteTableField	Inconsistent Documentation	Deletes a table field
-POST	 /deleteTableRecord 	Inconsistent Documentation	Deletes a record
-POST	 /deleteTableRelation	Inconsistent Documentation	Deletes a table relation
-POST	 /deleteWebhook 	Inconsistent Documentation	Deletes a webhook (pipe or table level)
-POST	 /updateFieldsValues 	Inconsistent Documentation	Update one or many values of fields inside a Card or Table record.
+POST	 /createPresignedUrl 	Inconsistent Documentation	Returns a temporary S3 presigned url to upload a file n/a
+POST	 /createPresignedUrlForPipePdfTemplate 	Inconsistent Documentation	Returns a temporary S3 presigned url to upload a pdf template image n/a
+POST	 /deleteCard 	Inconsistent Documentation	Deletes a card n/a
+POST	 /deleteComment 	Inconsistent Documentation	Deletes a comment n/a
+POST	 /deleteFieldCondition 	Inconsistent Documentation	Deletes a field condition n/a
+POST	 /deleteInboxEmail 	Inconsistent Documentation	Deletes an email n/a
+POST	 /deleteLabel 	Inconsistent Documentation	Deletes a label n/a
+POST	 /deleteOrganization 	Inconsistent Documentation	Deletes an organization n/a
+POST	 /deleteOrganizationWebhook 	Inconsistent Documentation	Deletes a webhook n/a
+POST	 /deletePhase 	Inconsistent Documentation	Deletes a phase n/a
+POST	 /deletePhaseField 	Inconsistent Documentation	Deletes a phase field n/a
+POST	 /deletePipe 	Inconsistent Documentation	Deletes a pipe n/a
+POST	 /deletePipeRelation 	Inconsistent Documentation	Deletes a pipe relation n/a
+POST	 /deleteTable 	Inconsistent Documentation	Deletes a table  n/a
+POST	 /deleteTableField 	Inconsistent Documentation	Deletes a table field  n/a
+POST	 /deleteTableRecord 	Inconsistent Documentation	Deletes a record n/a
+POST	 /deleteTableRelation 	Inconsistent Documentation	Deletes a table relation  n/a
+POST	 /deleteWebhook 	Inconsistent Documentation	Deletes a webhook (pipe or table level)  n/a
+POST	 /deleteCard 	Inconsistent Documentation	Deletes a card  n/a
+POST	 /deleteComment 	Inconsistent Documentation	Deletes a comment  n/a
+POST	 /deleteFieldCondition 	Inconsistent Documentation	Deletes a field condition  n/a
+POST	 /deleteInboxEmail	Inconsistent Documentation	Deletes an email  n/a
+POST	 /deleteInboxEmail 	Inconsistent Documentation	Deletes an email  n/a
+POST	 /deleteOrganization 	Inconsistent Documentation	Deletes an organization  n/a
+POST	 /deleteOrganizationWebhook 	Inconsistent Documentation	Deletes a webhook n/a
+POST	 /deletePhase 	Inconsistent Documentation	Deletes a phase n/a
+POST	 /deletePhaseField	Inconsistent Documentation	Deletes a phase field  n/a
+POST	 /deletePipe	Inconsistent Documentation	Deletes a pipe  n/a
+POST	 /deletePipeRelation	Inconsistent Documentation	Deletes a pipe relation  n/a
+POST	 /deleteTable 	Inconsistent Documentation	Deletes a table  n/a
+POST	 /deleteTableField	Inconsistent Documentation	Deletes a table field  n/a
+POST	 /deleteTableRecord 	Inconsistent Documentation	Deletes a record  n/a
+POST	 /deleteTableRelation	Inconsistent Documentation	Deletes a table relation  n/a
+POST	 /deleteWebhook 	Inconsistent Documentation	Deletes a webhook (pipe or table level)  n/a
+POST	 /updateFieldsValues 	Inconsistent Documentation	Update one or many values of fields inside a Card or Table record.  n/a
 
 ***Patterns*** 
 Count: 74
-GET	 /allCards 	Consistent Documentation	Fetches all pipe cards based on arguments
-GET	 /autoFillFields 	Consistent Documentation	Lookup the values that will automatically fill the child-card's start form fields
-GET	 /card 	Consistent Documentation	Lookup a card by its ID
-GET	 /cards	Consistent Documentation	Fetches a group of cards based on arguments
-GET	 /cardsImportations/{pipeId}	Consistent Documentation	Lookup the cards importer history by the pipe ID
-GET	 /findCards/{pipeId} 	Consistent Documentation	Fetch cards based on fields' inputs
-GET	 /findCards/{tableId}	Consistent Documentation	Fetch records based on fields' inputs
-GET	 /inbox_emails/card_id 	Consistent Documentation	Lookup the card's emails by its ID
-GET	 /me 	Consistent Documentation	Returns informations of the current authenticated user
-GET	 /organization/{id} 	Consistent Documentation	Lookup an organization by its ID
-GET	 /organizations/{ids} 	Consistent Documentation	Lookup organizations by their ID
-GET	 /phase/{id} 	Consistent Documentation	Lookup a phase by its ID
-GET	 /pipe/{id} 	Consistent Documentation	Lookup a pipe by its ID
-GET	 /pipeReportExport/{id}	Consistent Documentation	Lookup a pipe report export by its ID
-GET	 /pipe/{ids} 	Consistent Documentation	Lookup a pipe by their ID
-GET	 /pipe_relations/{id} 	Consistent Documentation	Lookup pipe relations by their ID
-GET	 /pipe_templates 	Consistent Documentation	Lookup all pipe templates available on Pipefy
-GET	 /recordsImportations/{tableID} 	Consistent Documentation	Lookup the records importer history by the table ID
-GET	 /table/{id}	Consistent Documentation	Lookup a database table by its ID
-GET	 /table/{ids}	Consistent Documentation	Lookup a database tables by their ID
-GET	 /table_record/{id} 	Consistent Documentation	Lookup a record by its ID
-GET	 /table_records/{table_id} 	Consistent Documentation	Fetches a group of records based on arguments
-GET	 /table_relations/{ids} 	Consistent Documentation	Lookup table relations by their ID
-POST	 /clonePipes 	Consistent Documentation	Clones a pipe
-POST	 /createCard  	Consistent Documentation	Creates a card
-POST	 /createCardRelation 	Consistent Documentation	Creates a card relation
-POST	 /createComment	Consistent Documentation	Creates a comment
-POST	 /createFieldCondition	Consistent Documentation	Creates a field condition
-POST	 /createInboxEmail 	Consistent Documentation	Creates an email
-POST	 /createLabel 	Consistent Documentation	Creates a label
-POST	 /createOrganization	Consistent Documentation	Creates an organization
-POST	 /createOrganizationWebhook 	Consistent Documentation	Creates an organization-level webhook
-POST	 /createPhase 	Consistent Documentation	Creates a phase
-POST	 /createPhaseField 	Consistent Documentation	Creates a phase field
-POST	/createPipe 	Consistent Documentation	Creates a pipe
-POST	/createPipeRelation 	Consistent Documentation	Creates a pipe relation
-POST	 /createTable 	Consistent Documentation	Creates a table
-POST	 /createTableField 	Consistent Documentation	Creates a table field
-POST	 /createTableRecord 	Consistent Documentation	Creates a record
-POST	 /createTableRecordInRestrictedTable 	Consistent Documentation	Creates a record in a private table
-POST	 /createTableRelation 	Consistent Documentation	Creates a table relation
-POST	 /createWebhook 	Consistent Documentation	Creates a webhook at a pipe or table level
-POST	 /exportPipeReport	Consistent Documentation	Exports a pipe report
-POST	 /createTableRelation 	Consistent Documentation	Creates a table relation
-POST	 /createWebhook 	Consistent Documentation	Creates a webhook at a pipe or table level
-POST	 /exportPipeReport 	Consistent Documentation	Exports a pipe report
-POST	 /interfaceEmbedCreat	Consistent Documentation	Create a new Interface
-POST	 /inviteMembers 	Consistent Documentation	Invites new members for the organization
-POST	 /moveCardToPhase 	Consistent Documentation	Moves a card to another phase
-POST	 /recordsImporter 	Consistent Documentation	Create new records from a xlsx file
-POST	 /removeUserFromOrg 	Consistent Documentation	Remove a user from an organization
-POST	 /removeUserFromPipe 	Consistent Documentation	Removes a user from pipe
-POST	 /removeUserFromTable 	Consistent Documentation	Removes a user from table
-POST	 /sendInboxEmail 	Consistent Documentation	Sends an email
-POST	 /setFieldConditionOrder 	Consistent Documentation	Sets field condition order
-POST	 /setRole 	Consistent Documentation	Sets the role of a user
-POST	 /setRoles 	Consistent Documentation	Sets role of multiple users
-POST	 /setSummaryAttributes 	Consistent Documentation	Sets summary attributes
-POST	 /setTableFieldOrder	Consistent Documentation	Sets table field order
-POST	 /setTableRecordFieldValue	Consistent Documentation	Sets record field value
-POST	 /updateCard 	Consistent Documentation	Updates an existing card
-POST	 /updateCardField 	Consistent Documentation	Updates an existing card field
-POST	 /updateComment	Consistent Documentation	Updates an existing comment
-POST	 /updateLabel 	Consistent Documentation	Updates an existing label
-POST	 /updateOrganization 	Consistent Documentation	Updates an existing organization
-POST	 /updateOrganizationWebhook 	Consistent Documentation	Updates an existing organization-level webhook
-POST	 /updatePhase	Consistent Documentation	Updates an existing phase
-POST	 /updatePhaseField 	Consistent Documentation	Updates an existing phase field
-POST	 /updatePipe 	Consistent Documentation	Updates an existing pipe
-POST	 /updatePipeRelation 	Consistent Documentation	Updates an existing pipe relation
-POST	 /updateTable 	Consistent Documentation	Updates an existing table
-POST	 /updateTableField 	Consistent Documentation	Updates an existing table field
-POST	 /updateTableRecord 	Consistent Documentation	Updates an existing record
-POST	 /updateWebhook	Consistent Documentation	Updates an existing webhook (pipe or table level)
+GET	 /allCards 	Consistent Documentation	Fetches all pipe cards based on arguments  n/a
+GET	 /autoFillFields 	Consistent Documentation	Lookup the values that will automatically fill the child-card's start form fields n/a
+GET	 /card 	Consistent Documentation	Lookup a card by its ID  n/a
+GET	 /cards	Consistent Documentation	Fetches a group of cards based on arguments n/a
+GET	 /cardsImportations/{pipeId}	Consistent Documentation	Lookup the cards importer history by the pipe ID pipeId: ID! Required. The pipe ID
+GET	 /findCards/{pipeId} 	Consistent Documentation	Fetch cards based on fields' inputs  pipeId: ID! Required. The pipe ID
+GET	 /findCards/{tableId}	Consistent Documentation	Fetch records based on fields' inputs tableId: String! Required. The table ID
+GET	 /inbox_emails/card_id 	Consistent Documentation	Lookup the card's emails by its ID card_id: ID! Required. The card ID
+GET	 /me 	Consistent Documentation	Returns informations of the current authenticated user n/a
+GET	 /organization/{id} 	Consistent Documentation	Lookup an organization by its ID id: ID! Required. The organization ID
+GET	 /organizations/{ids} 	Consistent Documentation	Lookup organizations by their ID ids: [ID] The organizations IDs
+GET	 /phase/{id} 	Consistent Documentation	Lookup a phase by its ID  id: ID! Required. The phase ID
+GET	 /pipe/{id} 	Consistent Documentation	Lookup a pipe by its ID id: ID! Required. The pipe ID
+GET	 /pipeReportExport/{id}	Consistent Documentation	Lookup a pipe report export by its ID id: ID! Required. The export ID
+GET	 /pipe/{ids} 	Consistent Documentation	Lookup a pipe by their ID ids: ID! Required. The pipes ID
+GET	 /pipe_relations/{id} 	Consistent Documentation	Lookup pipe relations by their ID ids: [ID]! Required. The pipe relation ID
+GET	 /pipe_templates 	Consistent Documentation	Lookup all pipe templates available on Pipefy n/a
+GET	 /recordsImportations/{tableID} 	Consistent Documentation	Lookup the records importer history by the table ID tableId: ID! Required. The table ID
+GET	 /table/{id}	Consistent Documentation	Lookup a database table by its ID  id: ID! Required. The table ID
+GET	 /table/{ids}	Consistent Documentation	Lookup a database tables by their ID  ids: ID! Required. The table ID
+GET	 /table_record/{id} 	Consistent Documentation	Lookup a record by its ID  id: ID! Required. The record ID
+GET	 /table_records/{table_id} 	Consistent Documentation	Fetches a group of records based on arguments table_id: ID! Required. The table ID
+GET	 /table_relations/{ids} 	Consistent Documentation	Lookup table relations by their ID ids: [ID]! Required. The table relation ID
+POST	 /clonePipes 	Consistent Documentation	Clones a pipe  n/a
+POST	 /createCard  	Consistent Documentation	Creates a card n/a
+POST	 /createCardRelation 	Consistent Documentation	Creates a card relation n/a
+POST	 /createComment	Consistent Documentation	Creates a comment  n/a
+POST	 /createFieldCondition	Consistent Documentation	Creates a field condition n/a
+POST	 /createInboxEmail 	Consistent Documentation	Creates an email n/a
+POST	 /createLabel 	Consistent Documentation	Creates a label  n/a
+POST	 /createOrganization	Consistent Documentation	Creates an organization n/a
+POST	 /createOrganizationWebhook 	Consistent Documentation	Creates an organization-level webhook n/a
+POST	 /createPhase 	Consistent Documentation	Creates a phase n/a
+POST	 /createPhaseField 	Consistent Documentation	Creates a phase field n/a
+POST	/createPipe 	Consistent Documentation	Creates a pipe n/a
+POST	/createPipeRelation 	Consistent Documentation	Creates a pipe relation  n/a
+POST	 /createTable 	Consistent Documentation	Creates a table n/a
+POST	 /createTableField 	Consistent Documentation	Creates a table field n/a
+POST	 /createTableRecord 	Consistent Documentation	Creates a record  n/a
+POST	 /createTableRecordInRestrictedTable 	Consistent Documentation	Creates a record in a private table n/a
+POST	 /createTableRelation 	Consistent Documentation	Creates a table relation n/a
+POST	 /createWebhook 	Consistent Documentation	Creates a webhook at a pipe or table level  n/a
+POST	 /exportPipeReport	Consistent Documentation	Exports a pipe report  n/a
+POST	 /createTableRelation 	Consistent Documentation	Creates a table relation  n/a
+POST	 /createWebhook 	Consistent Documentation	Creates a webhook at a pipe or table level  n/a
+POST	 /exportPipeReport 	Consistent Documentation	Exports a pipe report  n/a
+POST	 /interfaceEmbedCreat	Consistent Documentation	Create a new Interface  n/a
+POST	 /inviteMembers 	Consistent Documentation	Invites new members for the organization  n/a
+POST	 /moveCardToPhase 	Consistent Documentation	Moves a card to another phase  n/a
+POST	 /recordsImporter 	Consistent Documentation	Create new records from a xlsx file  n/a
+POST	 /removeUserFromOrg 	Consistent Documentation	Remove a user from an organization  n/a
+POST	 /removeUserFromPipe 	Consistent Documentation	Removes a user from pipe  n/a
+POST	 /removeUserFromTable 	Consistent Documentation	Removes a user from table  n/a
+POST	 /sendInboxEmail 	Consistent Documentation	Sends an email  n/a
+POST	 /setFieldConditionOrder 	Consistent Documentation	Sets field condition order  n/a
+POST	 /setRole 	Consistent Documentation	Sets the role of a user  n/a
+POST	 /setRoles 	Consistent Documentation	Sets role of multiple users  n/a
+POST	 /setSummaryAttributes 	Consistent Documentation	Sets summary attributes n/a
+POST	 /setTableFieldOrder	Consistent Documentation	Sets table field order  n/a
+POST	 /setTableRecordFieldValue	Consistent Documentation	Sets record field value  n/a
+POST	 /updateCard 	Consistent Documentation	Updates an existing card  n/a
+POST	 /updateCardField 	Consistent Documentation	Updates an existing card field  n/a
+POST	 /updateComment	Consistent Documentation	Updates an existing comment  n/a
+POST	 /updateLabel 	Consistent Documentation	Updates an existing label  n/a
+POST	 /updateOrganization 	Consistent Documentation	Updates an existing organization  n/a
+POST	 /updateOrganizationWebhook 	Consistent Documentation	Updates an existing organization-level webhook n/a
+POST	 /updatePhase	Consistent Documentation	Updates an existing phase  n/a
+POST	 /updatePhaseField 	Consistent Documentation	Updates an existing phase field  n/a
+POST	 /updatePipe 	Consistent Documentation	Updates an existing pipe  n/a
+POST	 /updatePipeRelation 	Consistent Documentation	Updates an existing pipe relation  n/a
+POST	 /updateTable 	Consistent Documentation	Updates an existing table  n/a
+POST	 /updateTableField 	Consistent Documentation	Updates an existing table field  n/a
+POST	 /updateTableRecord 	Consistent Documentation	Updates an existing record  n/a
+POST	 /updateWebhook	Consistent Documentation	Updates an existing webhook (pipe or table level)  n/a

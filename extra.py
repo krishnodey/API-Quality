@@ -56,10 +56,27 @@ print(f"anti-pattern: {ap}")
 print(f"Pattern: {p}")'''
 
 
-from uri_cleaning import UriCleaning
+'''from uri_cleaning import UriCleaning
 
 text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
 obj = UriCleaning()
 #print(obj.preprocess_documentation(text))
 node = "device/{ID}/name_pq"
-print(obj.get_uri_nodes(node))
+print(obj.get_uri_nodes(node))'''
+
+res_path = '.\Outputs-REST-APIs/Adobe Audience Manager-AmorphousURI.txt'
+with open(res_path, 'r') as file:
+    results = file.read()
+    results = results.split('\n')
+    for result in results:
+        result = result.split("\t")
+        #print(result)
+        if '/available-data-feeds/' in result:
+            #print('Found')
+            if result[1].strip() == 'Tidy End-point':
+                print("pattern")
+            elif len(result) > 2:
+                print('anti', result[2])
+        else:
+            print('Not Found')
+            

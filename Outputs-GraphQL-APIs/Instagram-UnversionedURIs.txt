@@ -1,33 +1,33 @@
 ***Anti-Pattern*** 
 Count: 26
-/{ig-comment-id}?fields={fields} [No version found.]
-/oauth/access_token [No version found.]
-/{user-id}/accounts?access_token={user-access-token} [No version found.]
-/{app-id}|{client-token} [No version found.]
-/{api-version}/{ig-comment-id} [No version found.]
-/{api-version}/{ig-comment-id}/replies [No version found.]
-/{ig-comment-id}/replies?message={message} [No version found.]
-/{ig-media-id}/comments [No version found.]
-/{ig-comment-id}/replies [No version found.]
-/{ig-comment-id} [No version found.]
-/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} [No version found.]
-/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} [No version found.]
-/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token} [No version found.]
-{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} [No version found.]
-/{api-version}/{ig-user-id} [No version found.]
-/{api-version}/{ig-user-id}?fields=business_discovery.username({username}) [No version found.]
-{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token} [No version found.]
-/{api-version}//{instagram-container-id} [No version found.]
-/{api-version}//{ig-hashtag-id} [No version found.]
-/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields} [No version found.]
-/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} [No version found.]
-/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token} [No version found.]
-/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} [No version found.]
-/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token} [No version found.]
-/{ig-user-id}?fields=business_discovery.username({username}) [No version found.]
-/{api-version}/{ig-user-id}/insights [No version found.]
+/{ig-comment-id}?fields={fields} 	 No Version Found
+/oauth/access_token 	 No Version Found
+/{user-id}/accounts?access_token={user-access-token} 	 No Version Found
+/{app-id}|{client-token} 	 No Version Found
+/{api-version}/{ig-comment-id} 	 No Version Found
+/{api-version}/{ig-comment-id}/replies 	 No Version Found
+/{ig-comment-id}/replies?message={message} 	 No Version Found
+/{ig-media-id}/comments 	 No Version Found
+/{ig-comment-id}/replies 	 No Version Found
+/{ig-comment-id} 	 No Version Found
+/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	 No Version Found
+/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	 No Version Found
+/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token} 	 No Version Found
+{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	 No Version Found
+/{api-version}/{ig-user-id} 	 No Version Found
+/{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	 No Version Found
+{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token} 	 No Version Found
+/{api-version}//{instagram-container-id} 	 No Version Found
+/{api-version}//{ig-hashtag-id} 	 No Version Found
+/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields} 	 No Version Found
+/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} 	 No Version Found
+/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token} 	 No Version Found
+/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} 	 No Version Found
+/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token} 	 No Version Found
+/{ig-user-id}?fields=business_discovery.username({username}) 	 No Version Found
+/{api-version}/{ig-user-id}/insights 	 No Version Found
 
 ***Patterns*** 
 Count: 2
-/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token} [Version found.]
-/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token} [Version found.]
+/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token} 	 Version Found
+/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token} 	 Version Found

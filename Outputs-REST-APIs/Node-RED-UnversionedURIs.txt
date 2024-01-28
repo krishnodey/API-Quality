@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
 Count: 15
-/auth/login [No version found.]
-/auth/token [No version found.]
-/auth/revoke [No version found.]
-/settings [No version found.]
-/flows [No version found.]
-/flows [No version found.]
-/flow [No version found.]
-/flow/:id [No version found.]
-/flow/:id [No version found.]
-/flow/:id [No version found.]
-/nodes [No version found.]
-/nodes [No version found.]
-/nodes/:module [No version found.]
-/nodes/:module [No version found.]
-/nodes/:module [No version found.]
+/auth/login 	 No Version Found
+/auth/token 	 No Version Found
+/auth/revoke 	 No Version Found
+/settings 	 No Version Found
+/flows 	 No Version Found
+/flows 	 No Version Found
+/flow 	 No Version Found
+/flow/:id 	 No Version Found
+/flow/:id 	 No Version Found
+/flow/:id 	 No Version Found
+/nodes 	 No Version Found
+/nodes 	 No Version Found
+/nodes/:module 	 No Version Found
+/nodes/:module 	 No Version Found
+/nodes/:module 	 No Version Found
 
 ***Patterns*** 
 Count: 0

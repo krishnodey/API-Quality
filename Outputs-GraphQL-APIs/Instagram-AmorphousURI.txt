@@ -1,25 +1,11 @@
 ***Anti-Pattern*** 
-Count: 16
-/oauth/access_token	Amorphous End-point	 [underscore found] 
-/{user-id}/accounts?access_token={user-access-token}	Amorphous End-point	 [underscore found] 
-/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Amorphous End-point	 [underscore found] 
-{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	Amorphous End-point	 [underscore found] 
-/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Amorphous End-point	 [underscore found] 
-{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Amorphous End-point	 [underscore found] 
-/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields}	Amorphous End-point	 [underscore found] 
-/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Amorphous End-point	 [underscore found] 
-/{ig-user-id}?fields=business_discovery.username({username})	Amorphous End-point	 [underscore found] 
-/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Amorphous End-point	 [underscore found] 
+Count: 0
 
 ***Patterns*** 
-Count: 12
+Count: 28
 /{ig-comment-id}?fields={fields}	Tidy End-point	
+/oauth/access_token	Tidy End-point	
+/{user-id}/accounts?access_token={user-access-token}	Tidy End-point	
 /{app-id}|{client-token}	Tidy End-point	
 /{api-version}/{ig-comment-id}	Tidy End-point	
 /{api-version}/{ig-comment-id}/replies	Tidy End-point	
@@ -27,7 +13,21 @@ Count: 12
 /{ig-media-id}/comments	Tidy End-point	
 /{ig-comment-id}/replies	Tidy End-point	
 /{ig-comment-id}	Tidy End-point	
+/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Tidy End-point	
+{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Tidy End-point	
 /{api-version}/{ig-user-id}	Tidy End-point	
+/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	Tidy End-point	
+/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Tidy End-point	
+{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Tidy End-point	
 /{api-version}//{instagram-container-id}	Tidy End-point	
 /{api-version}//{ig-hashtag-id}	Tidy End-point	
+/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Tidy End-point	
+/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields}	Tidy End-point	
+/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Tidy End-point	
+/{ig-user-id}?fields=business_discovery.username({username})	Tidy End-point	
+/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Tidy End-point	
 /{api-version}/{ig-user-id}/insights	Tidy End-point	

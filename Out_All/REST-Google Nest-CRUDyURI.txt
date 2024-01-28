@@ -1,0 +1,36 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /devices/thermostats/device_id/device_id 	 Nest Thermostat unique identifier. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/locale 	 Specifies language and region (or country) preference. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/software_version 	 Software version. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/structure_id 	 Structure unique identifier. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/name 	 Display name of the device. Can be any room name from a list we provide, or a custom name. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/name_long 	 Long display name of the device. Includes a custom (label), created by the user, or via wheres. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/last_connection 	 Timestamp of the last successful interaction with the Nest service, in ISO 8601 format. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/is_online 	 Device connection status with the Nest service. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/can_cool 	 System ability to cool (has AC). 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/can_heat 	 System ability to heat. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/is_using_emergency_heat 	 Emergency Heat status in systems with heat pumps for cooling. When Emergency Heat is on: The user can adjust the target temperature on the device, but cannot change the mode until Emergency Heat is turned off The hvac_mode can still be changed via the API 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/has_fan 	 System ability to control the fan independently from heating or cooling. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/fan_timer_active 	 Indicates if the fan timer is engaged; used with fan_timer_duration to turn on the fan for a (user-specified) preset duration. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/fan_timer_timeout 	 Timestamp showing when the fan timer reaches 0 (stop time), in ISO 8601 format. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/has_leaf 	 Displayed when the thermostat is set to an energy-saving temperature. 	 0 	 1 	
+POST 	 /devices/thermostats/device_id/temperature_scale 	 Fahrenheit or Celsius; used with temperature display. 	 0 	 1 	
+POST 	 /devices/thermostats/device_id/target_temperature_f 	 Desired temperature, in full degrees Fahrenheit (1°F). Used when hvac_mode = heat or cool. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/eco_temperature_high_f 	 Maximum Eco Temperature, displayed in whole degrees Fahrenheit (1°F). Used when hvac_mode = eco. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/eco_temperature_high_c 	 Maximum Eco Temperature, displayed in half degrees Celsius (0.5°C). Used when hvac_mode = eco. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/hvac_state 	 Indicates whether HVAC system is actively heating, cooling or is off. Use this value to indicate HVAC activity state. When off, the HVAC system is not actively heating or cooling. hvac_state is independent of fan operation. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/is_locked 	 Thermostat Lock status. When true, the Thermostat Lock feature is enabled, and restricts the temperature range to these min/max values: locked_temp_min_f, locked_temp_max_f, locked_temp_min_c, and locked_temp_max_c. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/sunlight_correction_enabled 	 Sunblock enabled status. Used with sunlight_correction_active. When true, Sunblock technology is enabled, and the Thermostat is automatically adjusting to direct sunlight, reading and setting the correct temperature. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/where_name 	 The display name of the device. Associated with the Thermostat where_id. Can be any room name from a list we provide, or a custom name. 	 0 	 1 	
+GET 	 /devices/thermostats/device_id/time_to_target_training 	 When in training mode, the Nest Thermostat learns about the HVAC system and discovers how much time it takes to reach the target temperature. When the Thermostat has enough information to make a reasonable estimate of the time to reach the target temperature, this value will change from training to ready. 	 0 	 1 	
+GET 	 /devices/smoke_co_alarms/device_id/name 	 Display name of the device; can be any room name from a list we provide, or a custom name. 	 0 	 1 	
+GET 	 /devices/smoke_co_alarms/device_id/ui_color_state 	 Indicates device status by color in the Nest app UI. It is an aggregate condition for battery+smoke+CO states, and reflects the actual color indicators displayed in the Nest app. 	 0 	 1 	
+GET 	 /devices/smoke_co_alarms/device_id/where_name 	 The display name of the device. Associated with the Nest Protect where_id. Can be any room name from a list we provide, or a custom name. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/where_id 	 A unique, Nest-generated identifier that represents name, the display name of the device. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/where_name 	 The display name of the device. Associated with the Nest Cam where_id. Can be any room name from a list we provide, or a custom name. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/is_public_share_enabled 	 Users can choose to share their video and make it viewable by anyone. When public share is enabled, you can read public_share_url. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/activity_zones 	 Returns an array of all defined Activity Zones. Activity Zones are used to monitor motion events within user-defined areas of the video stream. Requires Nest Aware. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/snapshot_url 	 Capture an image on demand. Returns the URL of an image captured from the live video stream. Requires that the camera is on and actively streaming. Use this field to get a snapshot from the live video stream. snapshot_url - returns the URL of an image captured from the live video stream Requires that the camera is on and actively streaming. The snapshot quality from the API is only 1080p throughput if you are: actively viewing the camera stream in the application (web_url). actively viewing the public stream (app_url). subscribed to Nest Aware. If you are not actively viewing the stream or do not have a Nest Aware subscription, the API has no 1080p source from which to retrieve a snapshot at that resolution and generates a lower-quality image. Also, low local network bandwidth may cause the API snapshot resolution to dip below 1080p with Nest Aware present. 	 0 	 1 	
+GET 	 devices/cameras/device_id/last_event 	 This object captures information about the last event that triggered a notification. Some fields and some permission combinations require a Nest Aware subscription to access last event information. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/last_event/has_sound 	 Sound event - sound was detected. 	 0 	 1 	
+GET 	 /devices/cameras/device_id/last_event/web_url 	 Web URL (deep link) to the last sound or motion event at home.nest.com. Used to display the last recorded event, and requires user to be signed in to the account. Requires Nest Aware. If the event URL has expired or the device does not have an active subscription, then this value is not included in the payload. 	 0 	 1 	

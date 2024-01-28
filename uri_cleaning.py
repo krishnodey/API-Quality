@@ -64,6 +64,7 @@ class UriCleaning:
         return tokens
     
     def preprocess_documentation(self, text):
+        text = text.replace('n/a','').replace('REQUIRED','').replace('Required','').replace('String','')
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
         pattern = re.compile('|'.join([re.escape(ext) for ext in extensions]))
         doc = pattern.sub(' ', text)

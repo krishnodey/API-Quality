@@ -6,15 +6,15 @@ POST 	/flow	Pluralized Nodes	 [Singular last node with POST method.]
 
 ***Patterns*** 
 Count: 12
-GET 	/auth/login	 regular methods.
-GET 	/settings	 regular methods.
-GET 	/flows	 regular methods.
+GET 	/auth/login	 Regular methods
+GET 	/settings	 Regular methods
+GET 	/flows	 Regular methods
 POST 	/flows	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/flow/:id	 regular methods.
+GET 	/flow/:id	 Regular methods
 PUT 	/flow/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/flow/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/nodes	 regular methods.
+GET 	/nodes	 Regular methods
 POST 	/nodes	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/nodes/:module	 regular methods.
+GET 	/nodes/:module	 Regular methods
 PUT 	/nodes/:module	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/nodes/:module	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

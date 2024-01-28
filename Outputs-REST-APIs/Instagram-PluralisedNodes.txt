@@ -6,21 +6,21 @@ POST 	/{ig-media-id}?comment_enabled={comment_enabled}	Pluralized Nodes	 [Singul
 
 ***Patterns*** 
 Count: 18
-GET 	/{ig-comment-id}?fields={fields}	 regular methods.
+GET 	/{ig-comment-id}?fields={fields}	 Regular methods
 DELETE 	/{ig-comment-id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/oauth/authorize	 regular methods.
-GET 	/access_token	 regular methods.
-GET 	/refresh_access_token	 regular methods.
-GET 	/oauth/authorize	 regular methods.
-GET 	/{media-id}	 regular methods.
-GET 	/{media-id}/children	 regular methods.
-GET 	/{user-id}/media	 regular methods.
-GET 	/me	Singularized Nodes	 regular methods.
-GET 	/{user-id}	 regular methods.
-GET 	/{user-id}/media	 regular methods.
-GET 	/{ig-hashtag-id}	 regular methods.
-GET 	/{ig-media-id}?fields={fields}	 regular methods.
+GET 	/oauth/authorize	 Regular methods
+GET 	/access_token	 Regular methods
+GET 	/refresh_access_token	 Regular methods
+GET 	/oauth/authorize	 Regular methods
+GET 	/{media-id}	 Regular methods
+GET 	/{media-id}/children	 Regular methods
+GET 	/{user-id}/media	 Regular methods
+GET 	/me	Singularized Nodes	 Regular methods
+GET 	/{user-id}	 Regular methods
+GET 	/{user-id}/media	 Regular methods
+GET 	/{ig-hashtag-id}	 Regular methods
+GET 	/{ig-media-id}?fields={fields}	 Regular methods
 POST 	/{ig-media-id}/comments?message={message}	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/{ig-media-id}/comments	 regular methods.
-GET 	/{ig-user-id}?fields={fields}	 regular methods.
-GET 	/{page-id}?fields=instagram_business_account	 regular methods.
+GET 	/{ig-media-id}/comments	 Regular methods
+GET 	/{ig-user-id}?fields={fields}	 Regular methods
+GET 	/{page-id}?fields=instagram_business_account	 Regular methods

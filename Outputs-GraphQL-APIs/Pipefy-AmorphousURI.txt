@@ -1,15 +1,8 @@
 ***Anti-Pattern*** 
-Count: 7
-/inbox_emails/card_id	Amorphous End-point	 [underscore found] 
-/pipe_relations/{id}	Amorphous End-point	 [underscore found] 
-/pipe_templates	Amorphous End-point	 [underscore found] 
-/recordsImportations/{tableID}	Amorphous End-point	 [uppercase found] 
-/table_record/{id}	Amorphous End-point	 [underscore found] 
-/table_records/{table_id}	Amorphous End-point	 [underscore found] 
-/table_relations/{ids}	Amorphous End-point	 [underscore found] 
+Count: 0
 
 ***Patterns*** 
-Count: 102
+Count: 109
 /allCards	Tidy End-point	
 /autoFillFields	Tidy End-point	
 /card	Tidy End-point	
@@ -17,6 +10,7 @@ Count: 102
 /cardsImportations/{pipeId}	Tidy End-point	
 /findCards/{pipeId}	Tidy End-point	
 /findCards/{tableId}	Tidy End-point	
+/inbox_emails/card_id	Tidy End-point	
 /me	Tidy End-point	
 /organization/{id}	Tidy End-point	
 /organizations/{ids}	Tidy End-point	
@@ -24,8 +18,14 @@ Count: 102
 /pipe/{id}	Tidy End-point	
 /pipeReportExport/{id}	Tidy End-point	
 /pipe/{ids}	Tidy End-point	
+/pipe_relations/{id}	Tidy End-point	
+/pipe_templates	Tidy End-point	
+/recordsImportations/{tableID}	Tidy End-point	
 /table/{id}	Tidy End-point	
 /table/{ids}	Tidy End-point	
+/table_record/{id}	Tidy End-point	
+/table_records/{table_id}	Tidy End-point	
+/table_relations/{ids}	Tidy End-point	
 /clonePipes	Tidy End-point	
 /createCard	Tidy End-point	
 /createCardRelation	Tidy End-point	

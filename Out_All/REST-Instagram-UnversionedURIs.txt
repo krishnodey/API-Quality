@@ -1,0 +1,22 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /{ig-comment-id}?fields={fields} 	 Reading a Comment 	 1 	 0 	 No Version Found
+POST 	 /{ig-comment-id}?hide={hide} 	 Hiding/Unhiding a Comment 	 1 	 0 	 No Version Found
+DELETE 	 /{ig-comment-id} 	 Deleting a Comment 	 1 	 0 	 No Version Found
+GET 	 /oauth/authorize 	 Get the Authorization Window. 	 1 	 0 	 No Version Found
+POST 	 /oauth/access_token 	 Exchange an Authorization Code for a short-lived Instagram User Access Token. 	 1 	 0 	 No Version Found
+GET 	 /access_token 	 Exchange a short-lived Instagram User Access Token for a long-lived Instagram User Access Token. 	 1 	 0 	 No Version Found
+GET 	 /refresh_access_token 	 Refresh a long-lived Instagram User Access Token. 	 1 	 0 	 No Version Found
+GET 	 /oauth/authorize 	 Get the Authorization Window. 	 1 	 0 	 No Version Found
+GET 	 /{media-id} 	 Get fields and edges on an image, video, or album. 	 1 	 0 	 No Version Found
+GET 	 /{media-id}/children 	 Get a list of images and videos on an album. 	 1 	 0 	 No Version Found
+GET 	 /{user-id}/media 	 Get a list of images, videos, or albums on a User. 	 1 	 0 	 No Version Found
+GET 	 /me 	 Get fields and edges on a User. 	 1 	 0 	 No Version Found
+GET 	 /{user-id} 	 Get fields and edges on a User. 	 1 	 0 	 No Version Found
+GET 	 /{user-id}/media 	 Get a list of images, videos, or albums on a User. 	 1 	 0 	 No Version Found
+GET 	 /{ig-hashtag-id} 	 Returns Fields and Edges on an IG Hashtag. 	 1 	 0 	 No Version Found
+GET 	 /{ig-media-id}?fields={fields} 	 Gets Fields and Edges on an IG Media. 	 1 	 0 	 No Version Found
+POST 	 /{ig-media-id}?comment_enabled={comment_enabled} 	 Enables or disables comments on a media object. 	 1 	 0 	 No Version Found
+POST 	 /{ig-media-id}/comments?message={message} 	 Creates an IG Comment on an IG Media object. 	 1 	 0 	 No Version Found
+GET 	 /{ig-media-id}/comments 	 Returns a list of IG Comments on an IG Media object. 	 1 	 0 	 No Version Found
+GET 	 /{ig-user-id}?fields={fields} 	 Get fields and edges on an Instagram Business or Creator Account. 	 1 	 0 	 No Version Found
+GET 	 /{page-id}?fields=instagram_business_account 	 Returns the IG User connected to the Facebook Page. 	 1 	 0 	 No Version Found

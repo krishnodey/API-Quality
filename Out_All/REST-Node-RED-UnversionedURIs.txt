@@ -1,0 +1,16 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /auth/login 	 Get the active authentication scheme 	 1 	 0 	 No Version Found
+POST 	 /auth/token 	 Exchange credentials for access token 	 1 	 0 	 No Version Found
+POST 	 /auth/revoke 	 Revoke an access token 	 1 	 0 	 No Version Found
+GET 	 /settings 	 Get the runtime settings 	 1 	 0 	 No Version Found
+GET 	 /flows 	 Get the active flow configuration 	 1 	 0 	 No Version Found
+POST 	 /flows 	 Set the active flow configuration 	 1 	 0 	 No Version Found
+POST 	 /flow 	 Add a flow to the active configuration 	 1 	 0 	 No Version Found
+GET 	 /flow/:id 	 Get an individual flow configuration 	 1 	 0 	 No Version Found
+PUT 	 /flow/:id 	 Update an individual flow configuration 	 1 	 0 	 No Version Found
+DELETE 	 /flow/:id 	 Delete an individual flow configuration 	 1 	 0 	 No Version Found
+GET 	 /nodes 	 Get a list of the installed nodes 	 1 	 0 	 No Version Found
+POST 	 /nodes 	 Install a new node module 	 1 	 0 	 No Version Found
+GET 	 /nodes/:module 	 Get a node module’s information 	 1 	 0 	 No Version Found
+PUT 	 /nodes/:module 	 Enable/Disable a node module 	 1 	 0 	 No Version Found
+DELETE 	 /nodes/:module 	 Remove a node module 	 1 	 0 	 No Version Found

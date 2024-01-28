@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
 Count: 3
- /requests/{request_id}/receipt 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
- /requests/{request_id}/map 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
- /requests/{request_id}/receipt 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
+/requests/{request_id}/receipt	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
+/requests/{request_id}/map	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
+/requests/{request_id}/receipt	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
 
 ***Patterns*** 
 Count: 12
- /oauth/authorize 	Hierarchical Nodes	
- /oauth/token 	Hierarchical Nodes	
- /history 	Hierarchical Nodes	
- /payment-methods 	Hierarchical Nodes	
- /products 	Hierarchical Nodes	
- /products/{product_id} 	Hierarchical Nodes	
- /estimates/price 	Hierarchical Nodes	
- /estimates/time 	Hierarchical Nodes	
- /requests/estimate 	Hierarchical Nodes	
- /requests/current 	Hierarchical Nodes	
- /requests/current 	Hierarchical Nodes	
- /requests/current 	Hierarchical Nodes	
+/oauth/authorize	Hierarchical Nodes	
+/oauth/token	Hierarchical Nodes	
+/history	Hierarchical Nodes	
+/payment-methods	Hierarchical Nodes	
+/products	Hierarchical Nodes	
+/products/{product_id}	Hierarchical Nodes	
+/estimates/price	Hierarchical Nodes	
+/estimates/time	Hierarchical Nodes	
+/requests/estimate	Hierarchical Nodes	
+/requests/current	Hierarchical Nodes	
+/requests/current	Hierarchical Nodes	
+/requests/current	Hierarchical Nodes	

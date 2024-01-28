@@ -1,0 +1,66 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+PUT 	 /models/{modelId} 	 Updates an algorithmic model. 	 0 	 1 	
+DELETE 	 /models/{modelId} 	 Deletes an algorithmic model. 	 0 	 1 	
+GET 	 /models 	 Returns an array of algorithmic models and their summary. 	 0 	 1 	
+POST 	 /models 	 Creates an algorithmic model. 	 0 	 1 	
+GET 	 /models/{modelId}/processing-history 	 Returns an array of UNIX time stamps (UTC) of successful data runs for your model. 	 0 	 1 	
+GET 	 /models/{modelId}/runs/latest/traits 	 Returns a list of your most influential (accurate) traits for your algorithmic model. 	 0 	 1 	
+GET 	 /models/{modelId}/runs/latest/stats 	 Returns accuracy and reach values for your algorithmic model. 	 0 	 1 	
+POST 	 /models/bulk-delete 	 Delete multiple algorithmic models with a single operation. 	 1 	 0 	 [delete found] 
+GET 	 /models/limits 	 Returns a count of the maximum number of algorithmic models you can create. 	 0 	 1 	
+GET 	 /algorithms/{algoTypeId} 	 Returns ID, name, and description for the algorithm based on the passed in algoTypeId. 	 0 	 1 	
+GET 	 /algorithms 	 Returns ID, name, and description for the available algorithms. 	 0 	 1 	
+GET 	 /available-data-feeds/ 	 Gets the 'Available Data Feed' resources for a buyer. 	 0 	 1 	
+GET 	 /available-data-feeds/{dataSourceId} 	 Gets the data feed from the perspective of the buyer. 	 0 	 1 	
+GET 	 /available-data-feeds/{dataSourceId}/plans 	 Gets the plans which belong to the data feed, from the perspective of the buyer. 	 0 	 1 	
+POST 	 /available-data-feeds/{dataSourceId}/subscribe 	 Creates/Updates subscription to an available data feed. 	 0 	 1 	
+POST 	 /available-data-feeds/{dataSourceId}/requests 	 Creates a request for an available data feed. 	 0 	 1 	
+GET 	 /data-feeds/billing-report 	 Gets the billing report for last month 	 0 	 1 	
+POST 	 /data-feeds/billing-report 	 Gets the billing report for last month in CSV format 	 0 	 1 	
+POST 	 /data-feeds/usage 	 Inserts impression data for the plan subscription for last month. 	 0 	 1 	
+POST 	 /data-feeds/bulk-usage 	 Inserts bulk impression data for multiple plan subscriptions for last month. 	 0 	 1 	
+GET 	 /destinations/segment-impressions/ 	 Returns all the segments and corresponding impression counts for all destinations 	 0 	 1 	
+PATCH 	 /destinations/segment-impressions/ 	 Updates the segments and corresponding impression counts for destinations 	 0 	 1 	
+GET 	 /data-feeds/ 	 Gets the `Data Feed` resources. 	 0 	 1 	
+POST 	 /data-feeds/ 	 Creates a new `Data Feed`. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId} 	 Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'. 	 0 	 1 	
+PUT 	 /data-feeds/{dataSourceId} 	 Updates the 'Data Feed'. 	 0 	 1 	
+DELETE 	 /data-feeds/{dataSourceId} 	 Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId}/plans/ 	 Gets the list of plans under a 'Data Feed'. 	 0 	 1 	
+POST 	 /data-feeds/{dataSourceId}/plans/ 	 Creates a new 'Plan' (also known as rate card) for this 'Data Feed'. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId}/subscriptions 	 Gets the list of 'Subscriptions' under a 'Data Feed'. 	 0 	 1 	
+PUT 	 /data-feeds/{dataSourceId}/subscriptions 	 Updates the list of 'Subscriptions' under a 'Data Feed'. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId}/requests/ 	 Gets the list of 'Subscriptions Request' under a 'Data Feed'. 	 0 	 1 	
+POST 	 /data-feeds/{dataSourceId}/requests/ 	 Creates a 'Subscription' under a 'Data Feed'. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId}/requests/{requestId} 	 Gets a 'Data Feed Request' with 'requestId'. 	 0 	 1 	
+PUT 	 /data-feeds/{dataSourceId}/requests/{requestId} 	 Updates an existing 'Data Feed Request'. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId}/potential-subscribers/ 	 Returns the list of potential subscribers for a 'Data Feed'. 	 0 	 1 	
+GET 	 /data-feeds/{dataSourceId}/plans/{planId} 	 Gets a 'Data Feed Plan' under a 'Data Feed'. 	 0 	 1 	
+PUT 	 /data-feeds/{dataSourceId}/plans/{planId} 	 Updates a 'Data Feed Plan' under a 'Data Feed'. 	 0 	 1 	
+DELETE 	 /data-feeds/{dataSourceId}/plans/{planId} 	 Deletes a 'Data Feed Plan' under a 'Data Feed'. 	 0 	 1 	
+GET 	 /datasources/ 	 Returns details about all GENERAL data sources. 	 0 	 1 	
+POST 	 /datasources/ 	 Creates a Data Source of the type GENERAL or MERGE RULE. 	 0 	 1 	
+GET 	 /datasources/{dataSourceId} 	 Returns details about a specific data source. 	 0 	 1 	
+PUT 	 /datasources/{dataSourceId} 	 Update a specific GENERAL or MERGE_RULE data source. 	 0 	 1 	
+DELETE 	 /datasources/{dataSourceId} 	 Delete a specific data source. 	 0 	 1 	
+POST 	 /datasources/bulk-delete 	 Bulk delete multiple data sources. 	 1 	 0 	 [delete found] 
+GET 	 /datasources/configurations/available-id-types 	 Returns all available data source ID types. 	 0 	 1 	
+GET 	 /datasources/configurations/marketing-cloud-visitorid-versions 	 Returns a list of all active Experience Cloud visitor ID versions. 	 0 	 1 	
+GET 	 /datasources/{dataSourceId}/history/inbound 	 Returns Onboarding Status Report with success and failure rates for inbound data source files. 	 0 	 1 	
+GET 	 /datasources/{dataSourceId}/history/inbound/sampling-data 	 Returns sampling data for a datasource for onboarding (inbound) files. 	 0 	 1 	
+GET 	 /signals/derived/{derivedSignalId} 	 Returns information about a single derived signal. 	 0 	 1 	
+PUT 	 /signals/derived/{derivedSignalId} 	 Updates a single derived signal. 	 0 	 1 	
+DELETE 	 /signals/derived/{derivedSignalId} 	 Deletes a single derived signal. 	 0 	 1 	
+GET 	 /signals/derived 	 Returns an array of derived signals and their information. 	 0 	 1 	
+POST 	 /signals/derived 	 Creates a new derived signal 	 0 	 1 	
+GET 	 /signals/derived/limits 	 Returns a count of the maximum number of derived signals you can create. 	 0 	 1 	
+POST 	 /destinations/ 	 Creates a new destination. 	 0 	 1 	
+GET 	 /destinations/ 	 Returns data for all your destinations. 	 0 	 1 	
+GET 	 /destinations/limits 	 Returns a count of the maximum number of destinations you can create. 	 0 	 1 	
+GET 	 /destinations/{destinationId}/history/outbound/ 	 Returns outbound history for a specific destination by 'destinationId'. 	 0 	 1 	
+GET 	 /destinations/{destinationId} 	 Returns a specific destination by 'destinationId'. 	 0 	 1 	
+DELETE 	 /destinations/{destinationId} 	 Deletes a specific destination by 'destinationId'. 	 0 	 1 	
+PUT 	 /destinations/{destinationId} 	 Updates a specific destination by 'destinationId'. 	 0 	 1 	
+POST 	 /destinations/{destinationId}/bulk-create 	 Creates multiple destination mappings for a specified destination by 'destinationId' in one operation. 	 1 	 0 	 [create found] 
+POST 	 /destinations/{destinationId}/bulk-delete 	 Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation. 	 1 	 0 	 [delete found] 
+GET 	 /destinations/{destinationId}/mappings-by-priority/ 	 Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority. 	 0 	 1 	

@@ -219,34 +219,34 @@ POST 	/verifyVerifiableDomain	Pluralized Nodes	 [Singular last node with POST me
 
 ***Patterns*** 
 Count: 40
-GET 	/codeOfConduct	 regular methods.
-GET 	/codesOfConduct	 regular methods.
-GET 	/enterprise	 regular methods.
-GET 	/enterpriseAdministratorInvitation	 regular methods.
-GET 	/enterpriseAdministratorInvitationByToken	 regular methods.
-GET 	/license	 regular methods.
-GET 	/licenses	 regular methods.
-GET 	/marketplaceCategories	 regular methods.
-GET 	/marketplaceCategory	 regular methods.
-GET 	/marketplaceListing	 regular methods.
-GET 	/marketplaceListings	 regular methods.
-GET 	/meta	 regular methods.
-GET 	/node	 regular methods.
-GET 	/nodes	 regular methods.
-GET 	/organization	 regular methods.
-GET 	/rateLimit	 regular methods.
-GET 	/relay	 regular methods.
-GET 	/repository	 regular methods.
-GET 	/repositoryOwner	 regular methods.
-GET 	/resource	 regular methods.
-GET 	/search	 regular methods.
-GET 	/securityAdvisories	 regular methods.
-GET 	/securityAdvisory	 regular methods.
-GET 	/securityVulnerabilities	 regular methods.
-GET 	/sponsorables	 regular methods.
-GET 	/topic	 regular methods.
-GET 	/user	 regular methods.
-GET 	/viewer	 regular methods.
+GET 	/codeOfConduct	 Regular methods
+GET 	/codesOfConduct	 Regular methods
+GET 	/enterprise	 Regular methods
+GET 	/enterpriseAdministratorInvitation	 Regular methods
+GET 	/enterpriseAdministratorInvitationByToken	 Regular methods
+GET 	/license	 Regular methods
+GET 	/licenses	 Regular methods
+GET 	/marketplaceCategories	 Regular methods
+GET 	/marketplaceCategory	 Regular methods
+GET 	/marketplaceListing	 Regular methods
+GET 	/marketplaceListings	 Regular methods
+GET 	/meta	 Regular methods
+GET 	/node	 Regular methods
+GET 	/nodes	 Regular methods
+GET 	/organization	 Regular methods
+GET 	/rateLimit	 Regular methods
+GET 	/relay	 Regular methods
+GET 	/repository	 Regular methods
+GET 	/repositoryOwner	 Regular methods
+GET 	/resource	 Regular methods
+GET 	/search	 Regular methods
+GET 	/securityAdvisories	 Regular methods
+GET 	/securityAdvisory	 Regular methods
+GET 	/securityVulnerabilities	 Regular methods
+GET 	/sponsorables	 Regular methods
+GET 	/topic	 Regular methods
+GET 	/user	 Regular methods
+GET 	/viewer	 Regular methods
 POST 	/abortQueuedMigrations	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/approveDeployments	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/createSponsorships	Singularized Nodes	 [Pluralized last node with POST method.] 

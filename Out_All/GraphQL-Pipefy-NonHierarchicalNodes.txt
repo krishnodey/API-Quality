@@ -1,0 +1,110 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /allCards 	 Fetches all pipe cards based on arguments  n/a 	 0 	 1 	 
+GET 	 /autoFillFields 	 Lookup the values that will automatically fill the child-card's start form fields n/a 	 0 	 1 	 
+GET 	 /card 	 Lookup a card by its ID  n/a 	 0 	 1 	 
+GET 	 /cards 	 Fetches a group of cards based on arguments n/a 	 0 	 1 	 
+GET 	 /cardsImportations/{pipeId} 	 Lookup the cards importer history by the pipe ID pipeId: ID! Required. The pipe ID 	 0 	 1 	 
+GET 	 /findCards/{pipeId} 	 Fetch cards based on fields' inputs  pipeId: ID! Required. The pipe ID 	 0 	 1 	 
+GET 	 /findCards/{tableId} 	 Fetch records based on fields' inputs tableId: String! Required. The table ID 	 0 	 1 	 
+GET 	 /inbox_emails/card_id 	 Lookup the card's emails by its ID card_id: ID! Required. The card ID 	 1 	 0 	 Reversed hierarchy of type True detected between card and identification. 0 hierarchical relations were detected out of 3
+GET 	 /me 	 Returns informations of the current authenticated user n/a 	 0 	 1 	 
+GET 	 /organization/{id} 	 Lookup an organization by its ID id: ID! Required. The organization ID 	 0 	 1 	 
+GET 	 /organizations/{ids} 	 Lookup organizations by their ID ids: [ID] The organizations IDs 	 0 	 1 	 
+GET 	 /phase/{id} 	 Lookup a phase by its ID  id: ID! Required. The phase ID 	 0 	 1 	 
+GET 	 /pipe/{id} 	 Lookup a pipe by its ID id: ID! Required. The pipe ID 	 0 	 1 	 
+GET 	 /pipeReportExport/{id} 	 Lookup a pipe report export by its ID id: ID! Required. The export ID 	 0 	 1 	 
+GET 	 /pipe/{ids} 	 Lookup a pipe by their ID ids: ID! Required. The pipes ID 	 0 	 1 	 
+GET 	 /pipe_relations/{id} 	 Lookup pipe relations by their ID ids: [ID]! Required. The pipe relation ID 	 0 	 1 	 
+GET 	 /pipe_templates 	 Lookup all pipe templates available on Pipefy n/a 	 0 	 1 	 
+GET 	 /recordsImportations/{tableID} 	 Lookup the records importer history by the table ID tableId: ID! Required. The table ID 	 0 	 1 	 
+GET 	 /table/{id} 	 Lookup a database table by its ID  id: ID! Required. The table ID 	 0 	 1 	 
+GET 	 /table/{ids} 	 Lookup a database tables by their ID  ids: ID! Required. The table ID 	 0 	 1 	 
+GET 	 /table_record/{id} 	 Lookup a record by its ID  id: ID! Required. The record ID 	 0 	 1 	 
+GET 	 /table_records/{table_id} 	 Fetches a group of records based on arguments table_id: ID! Required. The table ID 	 0 	 1 	 
+GET 	 /table_relations/{ids} 	 Lookup table relations by their ID ids: [ID]! Required. The table relation ID 	 0 	 1 	 
+POST 	 /clonePipes 	 Clones a pipe  n/a 	 0 	 1 	 
+POST 	 /createCard 	 Creates a card n/a 	 0 	 1 	 
+POST 	 /createCardRelation 	 Creates a card relation n/a 	 1 	 0 	 Reversed hierarchy of type True detected between card and relation. 0 hierarchical relations were detected out of 2
+POST 	 /createComment 	 Creates a comment  n/a 	 0 	 1 	 
+POST 	 /createFieldCondition 	 Creates a field condition n/a 	 0 	 1 	 
+POST 	 /createInboxEmail 	 Creates an email n/a 	 0 	 1 	 
+POST 	 /createLabel 	 Creates a label  n/a 	 0 	 1 	 
+POST 	 /createOrganization 	 Creates an organization n/a 	 0 	 1 	 
+POST 	 /createOrganizationWebhook 	 Creates an organization-level webhook n/a 	 0 	 1 	 
+POST 	 /createPhase 	 Creates a phase n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 1
+POST 	 /createPhaseField 	 Creates a phase field n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 2
+POST 	 /createPipe 	 Creates a pipe n/a 	 0 	 1 	 
+POST 	 /createPipeRelation 	 Creates a pipe relation  n/a 	 0 	 1 	 
+POST 	 /createPresignedUrl 	 Returns a temporary S3 presigned url to upload a file n/a 	 0 	 1 	 
+POST 	 /createPresignedUrlForPipePdfTemplate 	 Returns a temporary S3 presigned url to upload a pdf template image n/a 	 0 	 1 	 
+POST 	 /createTable 	 Creates a table n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 1
+POST 	 /createTableField 	 Creates a table field n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+POST 	 /createTableRecord 	 Creates a record  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+POST 	 /createTableRecordInRestrictedTable 	 Creates a record in a private table n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 4
+POST 	 /createTableRelation 	 Creates a table relation n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+POST 	 /createWebhook 	 Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 
+POST 	 /deleteCard 	 Deletes a card n/a 	 0 	 1 	 
+POST 	 /deleteComment 	 Deletes a comment n/a 	 0 	 1 	 
+POST 	 /deleteFieldCondition 	 Deletes a field condition n/a 	 0 	 1 	 
+POST 	 /deleteInboxEmail 	 Deletes an email n/a 	 0 	 1 	 
+POST 	 /deleteLabel 	 Deletes a label n/a 	 0 	 1 	 
+POST 	 /deleteOrganization 	 Deletes an organization n/a 	 0 	 1 	 
+POST 	 /deleteOrganizationWebhook 	 Deletes a webhook n/a 	 0 	 1 	 
+POST 	 /deletePhase 	 Deletes a phase n/a 	 0 	 1 	 
+POST 	 /deletePhaseField 	 Deletes a phase field n/a 	 0 	 1 	 
+POST 	 /deletePipe 	 Deletes a pipe n/a 	 0 	 1 	 
+POST 	 /deletePipeRelation 	 Deletes a pipe relation n/a 	 0 	 1 	 
+POST 	 /deleteTable 	 Deletes a table  n/a 	 0 	 1 	 
+POST 	 /deleteTableField 	 Deletes a table field  n/a 	 0 	 1 	 
+POST 	 /deleteTableRecord 	 Deletes a record n/a 	 0 	 1 	 
+POST 	 /deleteTableRelation 	 Deletes a table relation  n/a 	 0 	 1 	 
+POST 	 /deleteWebhook 	 Deletes a webhook (pipe or table level)  n/a 	 0 	 1 	 
+POST 	 /exportPipeReport 	 Exports a pipe report  n/a 	 0 	 1 	 
+POST 	 /createTableRelation 	 Creates a table relation  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
+POST 	 /createWebhook 	 Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 
+POST 	 /deleteCard 	 Deletes a card  n/a 	 0 	 1 	 
+POST 	 /deleteComment 	 Deletes a comment  n/a 	 0 	 1 	 
+POST 	 /deleteFieldCondition 	 Deletes a field condition  n/a 	 0 	 1 	 
+POST 	 /deleteInboxEmail 	 Deletes an email  n/a 	 0 	 1 	 
+POST 	 /deleteInboxEmail 	 Deletes an email  n/a 	 0 	 1 	 
+POST 	 /deleteOrganization 	 Deletes an organization  n/a 	 0 	 1 	 
+POST 	 /deleteOrganizationWebhook 	 Deletes a webhook n/a 	 0 	 1 	 
+POST 	 /deletePhase 	 Deletes a phase n/a 	 0 	 1 	 
+POST 	 /deletePhaseField 	 Deletes a phase field  n/a 	 0 	 1 	 
+POST 	 /deletePipe 	 Deletes a pipe  n/a 	 0 	 1 	 
+POST 	 /deletePipeRelation 	 Deletes a pipe relation  n/a 	 0 	 1 	 
+POST 	 /deleteTable 	 Deletes a table  n/a 	 0 	 1 	 
+POST 	 /deleteTableField 	 Deletes a table field  n/a 	 0 	 1 	 
+POST 	 /deleteTableRecord 	 Deletes a record  n/a 	 0 	 1 	 
+POST 	 /deleteTableRelation 	 Deletes a table relation  n/a 	 0 	 1 	 
+POST 	 /deleteWebhook 	 Deletes a webhook (pipe or table level)  n/a 	 0 	 1 	 
+POST 	 /exportPipeReport 	 Exports a pipe report  n/a 	 0 	 1 	 
+POST 	 /interfaceEmbedCreat 	 Create a new Interface  n/a 	 0 	 1 	 
+POST 	 /inviteMembers 	 Invites new members for the organization  n/a 	 0 	 1 	 
+POST 	 /moveCardToPhase 	 Moves a card to another phase  n/a 	 0 	 1 	 
+POST 	 /recordsImporter 	 Create new records from a xlsx file  n/a 	 0 	 1 	 
+POST 	 /removeUserFromOrg 	 Remove a user from an organization  n/a 	 0 	 1 	 
+POST 	 /removeUserFromPipe 	 Removes a user from pipe  n/a 	 0 	 1 	 
+POST 	 /removeUserFromTable 	 Removes a user from table  n/a 	 0 	 1 	 
+POST 	 /sendInboxEmail 	 Sends an email  n/a 	 0 	 1 	 
+POST 	 /setFieldConditionOrder 	 Sets field condition order  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between set and field. 0 hierarchical relations were detected out of 3
+POST 	 /setRole 	 Sets the role of a user  n/a 	 0 	 1 	 
+POST 	 /setRoles 	 Sets role of multiple users  n/a 	 0 	 1 	 
+POST 	 /setSummaryAttributes 	 Sets summary attributes n/a 	 0 	 1 	 
+POST 	 /setTableFieldOrder 	 Sets table field order  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 3
+POST 	 /setTableRecordFieldValue 	 Sets record field value  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 4
+POST 	 /updateCard 	 Updates an existing card  n/a 	 0 	 1 	 
+POST 	 /updateCardField 	 Updates an existing card field  n/a 	 0 	 1 	 
+POST 	 /updateComment 	 Updates an existing comment  n/a 	 0 	 1 	 
+POST 	 /updateFieldsValues 	 Update one or many values of fields inside a Card or Table record.  n/a 	 0 	 1 	 
+POST 	 /updateLabel 	 Updates an existing label  n/a 	 0 	 1 	 
+POST 	 /updateOrganization 	 Updates an existing organization  n/a 	 0 	 1 	 
+POST 	 /updateOrganizationWebhook 	 Updates an existing organization-level webhook n/a 	 0 	 1 	 
+POST 	 /updatePhase 	 Updates an existing phase  n/a 	 0 	 1 	 
+POST 	 /updatePhaseField 	 Updates an existing phase field  n/a 	 0 	 1 	 
+POST 	 /updatePipe 	 Updates an existing pipe  n/a 	 0 	 1 	 
+POST 	 /updatePipeRelation 	 Updates an existing pipe relation  n/a 	 0 	 1 	 
+POST 	 /updateTable 	 Updates an existing table  n/a 	 0 	 1 	 
+POST 	 /updateTableField 	 Updates an existing table field  n/a 	 0 	 1 	 
+POST 	 /updateTableRecord 	 Updates an existing record  n/a 	 0 	 1 	 
+POST 	 /updateWebhook 	 Updates an existing webhook (pipe or table level)  n/a 	 0 	 1 	 

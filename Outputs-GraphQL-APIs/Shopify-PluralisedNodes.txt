@@ -27,12 +27,12 @@ POST 	/ResourceFeedback	Pluralized Nodes	 [Singular last node with POST method.]
 
 ***Patterns*** 
 Count: 9
-GET 	/shopifyqlQuery	 regular methods.
-GET 	/query/{id}	 regular methods.
-GET 	/appByHandle	 regular methods.
-GET 	/appByKey	 regular methods.
-GET 	/appInstallation/{id}	 regular methods.
-GET 	/appInstallations	 regular methods.
-GET 	/currentAppInstallation	 regular methods.
-GET 	/publication/{id}	 regular methods.
-GET 	/publications	 regular methods.
+GET 	/shopifyqlQuery	 Regular methods
+GET 	/query/{id}	 Regular methods
+GET 	/appByHandle	 Regular methods
+GET 	/appByKey	 Regular methods
+GET 	/appInstallation/{id}	 Regular methods
+GET 	/appInstallations	 Regular methods
+GET 	/currentAppInstallation	 Regular methods
+GET 	/publication/{id}	 Regular methods
+GET 	/publications	 Regular methods

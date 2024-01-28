@@ -1,0 +1,56 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /abuseReport/{id} 	 Find an abuse report.id AbuseReportID! ID of the abuse report. 	 0 	 1 	
+GET 	 /abuseReportLabels 	 Abuse report labels.searchTerm String Search term to find labels with. 	 0 	 1 	
+GET 	 /addOnPurchase/{id} 	 Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for. 	 0 	 1 	
+GET 	 /aiMessages 	 Find GitLab Duo Chat messages.requestIds [ID!] Array of request IDs to fetch. roles [AiMessageRole!] Array of roles to fetch. 	 0 	 1 	
+GET 	 /auditEventDefinitions 	 Definitions for all audit events available on the instance.n/a 	 0 	 1 	
+GET 	 /auditEventsInstanceAmazonS3Configurations 	 Instance-level Amazon S3 configurations for audit events.n/a 	 1 	 0 	 [uppercase found] 
+GET 	 /boardList/{id} 	 Find an issue board list.id ListID! Global ID of the list. 	 0 	 1 	
+GET 	 /ciCatalogResource/{id} 	 A single CI/CD Catalog resource visible to an authorized user.id CiCatalogResourceID CI/CD Catalog resource global ID. 	 0 	 1 	
+GET 	 /ciCatalogResources/{projectPath} 	 All CI/CD Catalog resources under a common namespace, visible to an authorized user.projectPath ID Project with the namespace catalog. 	 0 	 1 	
+GET 	 /ciConfig/{projectPath} 	 Linted and processed contents of a CI config. Should not be requested more than once per requestprojectPath ID! Project of the CI config. 	 0 	 1 	
+GET 	 /ciMinutesUsage/{namespaceId} 	 Compute usage data for a namespace.namespaceId NamespaceID Global ID of the Namespace for the monthly compute usage. 	 0 	 1 	
+GET 	 /ciPipelineStage/{id} 	 Stage belonging to a CI pipeline.id CiStageID! Global ID of the CI stage. 	 0 	 1 	
+GET 	 /ciQueueingHistory 	 Time it took for ci job to be picked up by runner in percentiles.n/a 	 0 	 1 	
+GET 	 /ciVariables 	 List of the instanceâ€™s CI/CD variables.n/a 	 0 	 1 	
+GET 	 /containerRepository/{id} 	 Find a container repository.id ContainerRepositoryID! Global ID of the container repository. 	 0 	 1 	
+GET 	 /currentLicense 	 Fields related to the current license.n/a 	 0 	 1 	
+GET 	 /currentUser 	 Get information about current user.n/a 	 0 	 1 	
+GET 	 /designManagement 	 Fields related to design management.n/a 	 0 	 1 	
+GET 	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	 Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.displayNamespaceId NamespaceID Filter by display namespace. 	 0 	 1 	
+GET 	 /echo 	 Testing endpoint to validate the API with.n/a 	 0 	 1 	
+GET 	 /epicBoardList/{id} 	 Returns EpicList.id BoardsEpicListID! Global ID of the list. 	 0 	 1 	
+GET 	 /explainVulnerabilityPrompt/{vulnerabilityId} 	 GitLab Duo Vulnerability summary prompt for a specified vulnerability.vulnerabilityId VulnerabilityID! Vulnerability to generate a prompt for. 	 0 	 1 	
+GET 	 /frecentGroups 	 A userâ€™s frecently visited groups.n/a 	 0 	 1 	
+GET 	 /frecentProjects 	 A userâ€™s frecently visited projects.n/a 	 0 	 1 	
+GET 	 /geoNode 	 Find a Geo noden/a 	 0 	 1 	
+GET 	 /gitpodEnabled 	 Whether Gitpod is enabled in application settings.n/a 	 0 	 1 	
+GET 	 /group 	 Find a groupn/a 	 0 	 1 	
+GET 	 groups 	 Find groups.n/a 	 0 	 1 	
+GET 	 /instanceExternalAuditEventDestinations 	 Instance level external audit event destinations.n/a 	 0 	 1 	
+GET 	 /instanceGoogleCloudLoggingConfigurations 	 Instance level google cloud logging configurations.n/a 	 0 	 1 	
+GET 	 /instanceSecurityDashboard 	 Fields related to Instance Security Dashboard.n/a 	 0 	 1 	
+GET 	 /issue/{id} 	 Find an issue.id IssueID! Global ID of the issue. 	 0 	 1 	
+GET 	 /issues/{assigneeId} 	 Find issues visible to the current user. At least one filter must be provided.assigneeId String ID of a user assigned to the issues. 	 0 	 1 	
+GET 	 /iteration/{id} 	 Find an iteration.id IterationID! Find an iteration by its ID. 	 0 	 1 	
+GET 	 /jobs 	 All jobs on this GitLab instance. Returns an empty result for users without administrator access.n/a 	 0 	 1 	
+GET 	 /licenseHistoryEntries 	 Fields related to entries in the license history.n/a 	 0 	 1 	
+GET 	 /memberRole/{id} 	 Finds a single custom role.id MemberRoleID Global ID of the member role to look up. 	 0 	 1 	
+GET 	 /memberRolePermissions 	 List of all customizable permissions.n/a 	 0 	 1 	
+GET 	 /memberRoles/{id} 	 Member roles available for the instance.id MemberRoleID Global ID of the member role to look up. 	 0 	 1 	
+GET 	 /mergeRequest/{id} 	 Find a merge request.id MergeRequestID! Global ID of the merge request. 	 0 	 1 	
+GET 	 /metadata 	 Metadata about GitLab.n/a 	 0 	 1 	
+GET 	 /milestone/{id} 	 Find a milestone.id MilestoneID! Find a milestone by its ID. 	 0 	 1 	
+GET 	 /mlModel/{id} 	 Find machine learning models.id MlModelID! ID of the model. 	 0 	 1 	
+GET 	 /namespace 	 Find a namespace.n/a 	 0 	 1 	
+GET 	 /note/{id} 	 Find a note.n/a 	 0 	 1 	
+GET 	 /organization/{id} 	 Find an organization.id OrganizationsOrganizationID! ID of the organization. 	 0 	 1 	
+GET 	 /organizations 	 List organizations.n/a 	 0 	 1 	
+GET 	 /package/{id} 	 Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.id PackagesPackageID! Global ID of the package. 	 0 	 1 	
+GET 	 /project/{fullPath} 	 Find a project.fullPath ID! Full path of the project. For example, gitlab-org/gitlab-foss. 	 0 	 1 	
+GET 	 /projects/{ids} 	 Find projects visible to the current user.ids [ID!] Filter projects by IDs 	 0 	 1 	
+GET 	 /queryComplexity 	 Information about the complexity of the GraphQL query.n/a 	 0 	 1 	
+GET 	 /runner/{id} 	 Find a runner.id CiRunnerID! Runner ID. 	 0 	 1 	
+GET 	 /runnerSetup 	 Runner setup instructions.n/a 	 0 	 1 	
+GET 	 /runners/{creatorId} 	 Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.creatorId UserID Filter runners by creator ID. 	 0 	 1 	
+GET 	 /selfManagedAddOnEligibleUsers 	 Users within the self-managed instance who are eligible for add-onsn/a 	 0 	 1 	

@@ -1,26 +1,26 @@
 ***Anti-Pattern*** 
 Count: 21
-/company/<realmID>/account [No version found.]
-/company/<realmID>/query?query=<selectStatement> [No version found.]
-/company/<realmID>/account/<accountId> [No version found.]
-/company/<realmID>/account [No version found.]
-/company/<realmID>/bill [No version found.]
-/company/<realmID>/bill?operation=delete [No version found.]
-/company/<realmID>/query?query=<selectStatement> [No version found.]
-/company/<realmID>/bill/<billId> [No version found.]
-/company/<realmID>/bill [No version found.]
-/company/<realmID>/query?query=<selectStatement> [No version found.]
-/company/<realmID>/companyinfo/<realmID> [No version found.]
-/company/<realmID>/companyinfo [No version found.]
-/company/<realmID>/companyinfo [No version found.]
-/company/<realmID>/reports/InventoryValuationSummary?<name>=<value> [No version found.]
-/company/<realmID>/invoice [No version found.]
-/company/<realmID>/invoice?operation=delete [No version found.]
-/company/<realmID>/invoice?operation=void [No version found.]
-/company/<realmID>/invoice/<invoiceId>/pdf [No version found.]
-/company/<realmID>/query?query=<selectStatement> [No version found.]
-/company/<realmID>/invoice [No version found.]
-/company/<realmID>/purchase [No version found.]
+/company/<realmID>/account 	 No Version Found
+/company/<realmID>/query?query=<selectStatement> 	 No Version Found
+/company/<realmID>/account/<accountId> 	 No Version Found
+/company/<realmID>/account 	 No Version Found
+/company/<realmID>/bill 	 No Version Found
+/company/<realmID>/bill?operation=delete 	 No Version Found
+/company/<realmID>/query?query=<selectStatement> 	 No Version Found
+/company/<realmID>/bill/<billId> 	 No Version Found
+/company/<realmID>/bill 	 No Version Found
+/company/<realmID>/query?query=<selectStatement> 	 No Version Found
+/company/<realmID>/companyinfo/<realmID> 	 No Version Found
+/company/<realmID>/companyinfo 	 No Version Found
+/company/<realmID>/companyinfo 	 No Version Found
+/company/<realmID>/reports/InventoryValuationSummary?<name>=<value> 	 No Version Found
+/company/<realmID>/invoice 	 No Version Found
+/company/<realmID>/invoice?operation=delete 	 No Version Found
+/company/<realmID>/invoice?operation=void 	 No Version Found
+/company/<realmID>/invoice/<invoiceId>/pdf 	 No Version Found
+/company/<realmID>/query?query=<selectStatement> 	 No Version Found
+/company/<realmID>/invoice 	 No Version Found
+/company/<realmID>/purchase 	 No Version Found
 
 ***Patterns*** 
 Count: 0

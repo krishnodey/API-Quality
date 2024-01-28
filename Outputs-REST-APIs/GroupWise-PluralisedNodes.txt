@@ -6,56 +6,56 @@ POST 	/domains/{domain}/gateways/{gateway}/recoverDb	Pluralized Nodes	 [Singular
 
 ***Patterns*** 
 Count: 53
-GET 	/list/{type}	 regular methods.
-GET 	/list/{type}/{base}	 regular methods.
-GET 	/application	 regular methods.
-GET 	/async?state	 regular methods.
-GET 	/async/{id}	 regular methods.
+GET 	/list/{type}	 Regular methods
+GET 	/list/{type}/{base}	 Regular methods
+GET 	/application	 Regular methods
+GET 	/async?state	 Regular methods
+GET 	/async/{id}	 Regular methods
 DELETE 	/async/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/diagnostics/attributes?locale	 regular methods.
-GET 	/diagnostics/index	 regular methods.
-GET 	/diagnostics/index/{index}?attrs	 regular methods.
-GET 	/diagnostics/object/{id}	 regular methods.
-GET 	/domains	 regular methods.
+GET 	/diagnostics/attributes?locale	 Regular methods
+GET 	/diagnostics/index	 Regular methods
+GET 	/diagnostics/index/{index}?attrs	 Regular methods
+GET 	/diagnostics/object/{id}	 Regular methods
+GET 	/domains	 Regular methods
 POST 	/domains	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/domains/{domain}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/domains/{domain}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}	 regular methods.
-GET 	/domains/{domain}/addressbook/fields	 regular methods.
-GET 	/domains/{domain}/addressbook/labels	 regular methods.
+GET 	/domains/{domain}	 Regular methods
+GET 	/domains/{domain}/addressbook/fields	 Regular methods
+GET 	/domains/{domain}/addressbook/labels	 Regular methods
 PUT 	/domains/{domain}/addressbook/labels/{field}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/domains/{domain}/addressbook/labels/{field}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/addressbook/view	 regular methods.
+GET 	/domains/{domain}/addressbook/view	 Regular methods
 PUT 	/domains/{domain}/addressbook/view	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/administrator	 regular methods.
+GET 	/domains/{domain}/administrator	 Regular methods
 PUT 	/domains/{domain}/administrator	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/domains/{domain}/administrator	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/clientoptions?attrs	 regular methods.
+GET 	/domains/{domain}/clientoptions?attrs	 Regular methods
 PUT 	/domains/{domain}/clientoptions?attrs	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/customaddresses	 regular methods.
-GET 	/domains/{domain}/customaddresses/test?testAddress	 regular methods.
-GET 	/domains/{domain}/gatewaysubdirs	 regular methods.
-GET 	/domains/{domain}/info	 regular methods.
-GET 	/domains/{domain}/links?direction	 regular methods.
-GET 	/domains/{domain}/links/{link}	 regular methods.
+GET 	/domains/{domain}/customaddresses	 Regular methods
+GET 	/domains/{domain}/customaddresses/test?testAddress	 Regular methods
+GET 	/domains/{domain}/gatewaysubdirs	 Regular methods
+GET 	/domains/{domain}/info	 Regular methods
+GET 	/domains/{domain}/links?direction	 Regular methods
+GET 	/domains/{domain}/links/{link}	 Regular methods
 PUT 	/domains/{domain}/links/{link}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/refaccesscontrols	 regular methods.
+GET 	/domains/{domain}/refaccesscontrols	 Regular methods
 PUT 	/domains/{domain}/refaccesscontrols	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/attributes	 regular methods.
-GET 	/domains/{domain}/gateways	 regular methods.
+GET 	/domains/attributes	 Regular methods
+GET 	/domains/{domain}/gateways	 Regular methods
 POST 	/domains/{domain}/gateways	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/domains/{domain}/gateways/{gateway}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/domains/{domain}/gateways/{gateway}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/gateways/{gateway}	 regular methods.
-GET 	/domains/{domain}/gateways/{gateway}/administrators	 regular methods.
+GET 	/domains/{domain}/gateways/{gateway}	 Regular methods
+GET 	/domains/{domain}/gateways/{gateway}/administrators	 Regular methods
 POST 	/domains/{domain}/gateways/{gateway}/administrators	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/domains/{domain}/gateways/{gateway}/administrators/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/domains/{domain}/gateways/{gateway}/administrators/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/gateways/{gateway}/aliases	 regular methods.
-GET 	/domains/{domain}/gateways/{gateway}/classofservice	 regular methods.
-GET 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 regular methods.
+GET 	/domains/{domain}/gateways/{gateway}/aliases	 Regular methods
+GET 	/domains/{domain}/gateways/{gateway}/classofservice	 Regular methods
+GET 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Regular methods
 PUT 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	 regular methods.
+GET 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	 Regular methods
 POST 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

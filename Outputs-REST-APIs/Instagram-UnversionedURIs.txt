@@ -1,26 +1,26 @@
 ***Anti-Pattern*** 
 Count: 21
-/{ig-comment-id}?fields={fields} [No version found.]
-/{ig-comment-id}?hide={hide} [No version found.]
-/{ig-comment-id} [No version found.]
-/oauth/authorize [No version found.]
-/oauth/access_token [No version found.]
-/access_token [No version found.]
-/refresh_access_token [No version found.]
-/oauth/authorize [No version found.]
-/{media-id} [No version found.]
-/{media-id}/children [No version found.]
-/{user-id}/media [No version found.]
-/me [No version found.]
-/{user-id} [No version found.]
-/{user-id}/media [No version found.]
-/{ig-hashtag-id} [No version found.]
-/{ig-media-id}?fields={fields} [No version found.]
-/{ig-media-id}?comment_enabled={comment_enabled} [No version found.]
-/{ig-media-id}/comments?message={message} [No version found.]
-/{ig-media-id}/comments [No version found.]
-/{ig-user-id}?fields={fields} [No version found.]
-/{page-id}?fields=instagram_business_account [No version found.]
+/{ig-comment-id}?fields={fields} 	 No Version Found
+/{ig-comment-id}?hide={hide} 	 No Version Found
+/{ig-comment-id} 	 No Version Found
+/oauth/authorize 	 No Version Found
+/oauth/access_token 	 No Version Found
+/access_token 	 No Version Found
+/refresh_access_token 	 No Version Found
+/oauth/authorize 	 No Version Found
+/{media-id} 	 No Version Found
+/{media-id}/children 	 No Version Found
+/{user-id}/media 	 No Version Found
+/me 	 No Version Found
+/{user-id} 	 No Version Found
+/{user-id}/media 	 No Version Found
+/{ig-hashtag-id} 	 No Version Found
+/{ig-media-id}?fields={fields} 	 No Version Found
+/{ig-media-id}?comment_enabled={comment_enabled} 	 No Version Found
+/{ig-media-id}/comments?message={message} 	 No Version Found
+/{ig-media-id}/comments 	 No Version Found
+/{ig-user-id}?fields={fields} 	 No Version Found
+/{page-id}?fields=instagram_business_account 	 No Version Found
 
 ***Patterns*** 
 Count: 0

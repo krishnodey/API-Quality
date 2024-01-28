@@ -30,6 +30,8 @@ class ApiAnalyzer:
 
     def detect_amorphous_uri(self, URI=None):
         URI = URI if URI else self.URI
+        
+
         P = "Tidy End-point"
         AP = "Amorphous End-point"
         found_AP = 0
@@ -37,6 +39,9 @@ class ApiAnalyzer:
         ap_count = 0
         amorphus_result_AP = []
         amorphus_result_P = []
+        amp_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        amp_lst.append(str)
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
         def has_consecutive_uppercase(s):
             for i in range(len(s)-1):
@@ -59,44 +64,58 @@ class ApiAnalyzer:
             elif s != s.lower() and s != s.upper() and "_" not in s and sum(i.isupper() for i in s) >= 1:
                 flag = 'True'
             return flag
-                
+        
         for line in URI:
-            words = line.split("/")
+            tmp = line.split(">>")
+            #print(tmp[1])
+            words = tmp[1].strip().split("/")
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2].strip()}{tmp[3].strip()}"
+            #print(tmp[2].split("/n"))
+
+
             #print(words)
             comment = ""
             found_AP = 0
 
-            if "%5F".lower() in line.lower() or "%5F" in line or "_" in line:
+            if "%5F".lower() in tmp[1].lower() or "%5F" in tmp[1]:
                 found_AP = 1
                 comment += " [underscore found] "
                 #c = line.strip()[-1]
-            elif line.strip()[-1] == '/' or line.strip()[-1] == '\\':
+            elif tmp[1].strip()[-1] == '/' or tmp[1].strip()[-1] == '\\':
                 found_AP = 1
                 comment += " [trailing slash found] "
             else:
                 for extension in extensions:
-                    if extension.lower() in line.lower() or extension.upper() in line:
+                    if extension.lower() in tmp[1].lower() or extension.upper() in tmp[1]:
                         found_AP = 1
                         comment += " [extension found] "
             
             #elif any(ch.isupper() for wd in words):
             for word in words:
                 word = word.strip()
-                word = word.replace("<", '').replace(">", '').replace('{', '').replace('}', '')
-                #print(word)
-                if any(ch.isupper() for ch in word) and is_camel_case(word) == "False":
-                    #print("notnot")
-                    found_AP = 1
-                    comment += " [uppercase found] "
+                word = word.replace("<", '').replace(">", '') #replace("{", '').replace("}",'')
+                if word: 
+                    if word[0].strip() == "{" and word[-1].strip() == "}":
+                        #print("variable")
+                        continue
+                    elif any(ch.isupper() for ch in word) and is_camel_case(word) == "False":
+                        found_AP = 1
+                        comment += " [uppercase found] "
 
             if found_AP == 1:
                 ap_count = ap_count + 1
-                amorphus_result_AP.append(line.strip() + "\t" + AP + "\t" + comment)
+                amorphus_result_AP.append(tmp[1].strip() + "\t" + AP + "\t" + comment)
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t{comment}"
             else:
                 p_count = p_count + 1
-                amorphus_result_P.append(line.strip() + "\t" + P + "\t" + comment)
+                amorphus_result_P.append(tmp[1].strip() + "\t" + P + "\t" + comment)
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t{comment}"
+            amp_lst.append(str)
+            
 
-        return amorphus_result_AP, amorphus_result_P, p_count, ap_count
+        return amorphus_result_AP, amorphus_result_P, p_count, ap_count, amp_lst
     
     def detect_non_standard_uri(self, URI=None):
         URI = URI if URI else self.URI
@@ -104,6 +123,9 @@ class ApiAnalyzer:
         AP = "Non-standard End-point"
         standard_uri_result_AP = []
         standard_uri_result_P = []
+        standard_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        standard_lst.append(str)
         p_count = 0
         ap_count = 0
         # Common European languages
@@ -159,7 +181,20 @@ class ApiAnalyzer:
 
 
 
-        for line in URI:
+        for ur in URI:
+            tmp = ur.strip().split(">>")
+            #print(tmp)
+            line = tmp[1].strip()
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2]}{tmp[3]}"
+
+            #print(tmp[1])
+            #words = tmp[1].strip().split("/")
+            #print(words)
+            #print(words)
+
+            
             comment = ""
             found_AP = 0
             line = line.strip()
@@ -191,13 +226,16 @@ class ApiAnalyzer:
                 comment += " [unknown char found] "
 
             if found_AP == 1:
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t{comment}"
                 standard_uri_result_AP.append(f"{line.strip()}\t{AP}\t{comment}")
                 ap_count += 1
             else:
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t{comment}"
                 standard_uri_result_P.append(f"{line.strip()}\t{P}\t{comment}")
                 p_count += 1
+            standard_lst.append(str)
 
-        return standard_uri_result_AP, standard_uri_result_P, p_count, ap_count
+        return standard_uri_result_AP, standard_uri_result_P, p_count, ap_count, standard_lst
     
     
 
@@ -210,8 +248,19 @@ class ApiAnalyzer:
         crudyURIResult_P = []
         p_count = 0
         ap_count = 0
+        crudy_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        crudy_lst.append(str)
+        for ur in URI:
+            tmp = ur.strip().split(">>")
+            #print(tmp)
+            line = tmp[1].strip()
 
-        for line in URI:
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2]}{tmp[3]}"
+
+
             #print(line)
             good_type = False
             comment = ""
@@ -263,13 +312,15 @@ class ApiAnalyzer:
                     break
 
             if not good_type:
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t{comment}"
                 ap_count = ap_count + 1
                 crudyURIResult_AP.append(f"{line.strip()}\t{AP}\t{comment}")
             else:
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t{comment}"
                 p_count = p_count + 1
                 crudyURIResult_P.append(f"{line.strip()}\t{P}\t{comment}")
-
-        return crudyURIResult_AP, crudyURIResult_P, p_count, ap_count
+            crudy_lst.append(str)
+        return crudyURIResult_AP, crudyURIResult_P, p_count, ap_count, crudy_lst
     
     
 
@@ -279,10 +330,21 @@ class ApiAnalyzer:
         unversioned_result_AP = []
         p_count = 0
         ap_count = 0
-
+        version_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        version_lst.append(str)
         #print(URI)
 
-        for line in URI:
+        for ur in URI:
+            tmp = ur.strip().split(">>")
+            #print(tmp)
+            line = tmp[1].strip()
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2]}{tmp[3]}"
+
+
+
             '''regex_list = [
                 ".*v1.*", ".*v0.*", ".*v2.*", ".*v3.*", ".*v3.*",
                 ".*/v/.*", ".*api-version=.*", "/v\d+\.\d+/", "/v\d+\.\d+/"
@@ -303,13 +365,16 @@ class ApiAnalyzer:
             matches = any(re.match(regex, line) for regex in regex_list)
 
             if matches:
-                versioned_result_P.append(f"{line.strip()} [Version found.]")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t Version Found"
+                versioned_result_P.append(f"{line.strip()} \t Version Found")
                 p_count += 1
             else:
-                unversioned_result_AP.append(f"{line.strip()} [No version found.]")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t No Version Found"
+                unversioned_result_AP.append(f"{line.strip()} \t No Version Found")
                 ap_count += 1
+            version_lst.append(str)
 
-        return unversioned_result_AP, versioned_result_P , p_count, ap_count
+        return unversioned_result_AP, versioned_result_P , p_count, ap_count, version_lst
 
 
     def detect_pluralized_node(self, URI=None):
@@ -320,6 +385,9 @@ class ApiAnalyzer:
         AP = "Pluralized Nodes"
         p_count = 0
         ap_count = 0
+        plural_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        plural_lst.append(str)
 
         def is_plural(word):
             lemmatizer = WordNetLemmatizer()
@@ -331,6 +399,12 @@ class ApiAnalyzer:
             tmp = line.split(">>")
             #print(tmp[1])
             http_method = tmp[0].strip()
+
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2]}{tmp[3]}"
+
+
             '''nodes = [st.strip().replace("[^a-zA-Z0-9]", "") for st in tmp[1].split("/")]
             splitted_nodes = []
             for node in nodes:
@@ -362,11 +436,13 @@ class ApiAnalyzer:
             comment2 = " [Pluralized last node with POST method.] "
             comment3 = " [Pluralized last node with PUT|DELETE method.] "
             comment4 = " [Singular last node with PUT|DELETE method.] "
+            comment5 = "Regular methods"
 
             #if no nodes in uri
             if len(nodes) < 1: 
                 p_count += 1
-                pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t regular methods.")
+                pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t {comment5}")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t {comment5}"
                 continue
             last_node = nodes[-1]
 
@@ -374,22 +450,27 @@ class ApiAnalyzer:
                 if is_plural(last_node):
                     p_count += 1
                     pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t{comment2}")
+                    str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t {comment2}"
                 else:
                     ap_count += 1
                     pluralised_result_AP.append(f"{tmp[0]}\t{tmp[1].strip()}\t{AP}\t{comment1}")
+                    str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t {comment1}"
 
             elif http_method == "DELETE" or http_method == "PUT":
                 if is_plural(last_node):
                     ap_count += 1
                     pluralised_result_AP.append(f"{tmp[0]}\t{tmp[1].strip()}\t{AP}\t{comment3}")
+                    str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t {comment3}"
                 else:
                     p_count += 1
                     pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t{P}\t{comment4}")
+                    str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t {comment4}"
             else:
                 p_count += 1
-                pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t regular methods.")
-
-        return pluralised_result_AP, pluralised_result_P, p_count, ap_count
+                pluralised_result_P.append(f"{tmp[0]}\t{tmp[1].strip()}\t {comment5}")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t {comment5}"
+            plural_lst.append(str)
+        return pluralised_result_AP, pluralised_result_P, p_count, ap_count, plural_lst
     
 
     def detect_non_descriptive_uri(self, URI=None):
@@ -400,8 +481,20 @@ class ApiAnalyzer:
         AP = "Non-descriptive End-point"
         p_count = 0
         ap_count = 0
+        des_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        des_lst.append(str)
 
-        for line in URI:
+
+        for ur in URI:
+            tmp = ur.strip().split(">>")
+            #print(tmp)
+            line = tmp[1].strip()
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2]} {tmp[3]}"
+
+
             #print(line)
             #uri_nodes = uri.split("/")
             #print(uri_nodes)
@@ -441,11 +534,14 @@ class ApiAnalyzer:
             if not pattern:
                 ap_count = ap_count + 1
                 non_descriptive_AP.append(f"{line.strip()}\t {AP}")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t{AP}"
             elif pattern:
                 p_count = p_count + 1
                 self_descriptive_P.append(f"{line.strip()}\t {P}")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t {P}"
+            des_lst.append(str)
 
-        return non_descriptive_AP, self_descriptive_P, p_count, ap_count
+        return non_descriptive_AP, self_descriptive_P, p_count, ap_count, des_lst
     
 
     def detect_contextless(self, URI=None):
@@ -456,17 +552,26 @@ class ApiAnalyzer:
         AP = "Contextless Resource Names"
         p_count = 0
         ap_count = 0
+        context_lst = []
+        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        context_lst.append(msg)
+
+
         #print(lines)
         description = []
         nodes = []
+        http_method = []
         for ln in URI:
             tmp = ln.split(">>")
 
-            if len(ln) == 4:
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
                 text = f"{tmp[2]} {tmp[3]}"
                 description.append(text)
-            description.append(tmp[2])
+            else:
+                description.append(tmp[2])
             nodes.append(tmp[1])
+            http_method.append(tmp[0])
         #print(description)
         #print(nodes)
 
@@ -560,7 +665,7 @@ class ApiAnalyzer:
                 similarity_scores[f"Topic {idx}"] = word_similarity
             return similarity_scores
 
-        for combined_node, origianl_node in zip(processed_nodes, nodes):
+        for method, combined_node, origianl_node, des in zip(http_method, processed_nodes, nodes, description):
 
             if len(combined_node)<1:
                 p_count = p_count + 1
@@ -598,13 +703,15 @@ class ApiAnalyzer:
             if round(max(topic_avg),1) >= 0.5:
                 #print("contextual")
                 p_count = p_count + 1
-                contextual_P.append(f"{origianl_node}\t {P}")
+                contextual_P.append(f"{origianl_node.strip()}\t {P}")
+                msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
             else:
                 #print("contextless")
                 ap_count = ap_count + 1
-                contextless_AP.append(f"{origianl_node}\t {AP}")
-
-        return contextless_AP, contextual_P, p_count, ap_count
+                contextless_AP.append(f"{origianl_node.strip()}\t {AP}")
+                msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 1 \t 0 \t {AP}"
+            context_lst.append(msg)
+        return contextless_AP, contextual_P, p_count, ap_count, context_lst
     
 
 
@@ -618,8 +725,19 @@ class ApiAnalyzer:
         non_hierarchy_result_P = []
         p_count = 0
         ap_count = 0
+        hier_lst = []
+        str = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        hier_lst.append(str)
 
-        for uri in URI:
+        for ur in URI:
+            tmp = ur.strip().split(">>")
+            #print(tmp)
+            uri = tmp[1].strip()
+
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
+                tmp[2] = f"{tmp[2]} {tmp[3]}"
+
             #print(uri)
             clean = UriCleaning()
             nodes = clean.get_uri_nodes(uri)
@@ -680,11 +798,14 @@ class ApiAnalyzer:
 
             if not good_type:
                 ap_count = ap_count + 1
-                non_hierarchy_result_AP.append(f"{uri}\t{AP}\t{result_information}")
+                non_hierarchy_result_AP.append(f"{uri.strip()}\t{AP}\t{result_information}")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 1 \t 0 \t {result_information}"
             else:
                 p_count = p_count + 1
-                non_hierarchy_result_P.append(f"{uri}\t{P}\t{result_information}")
-        return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
+                non_hierarchy_result_P.append(f"{uri.strip()}\t{P}\t{result_information}")
+                str = f"{tmp[0].strip()} \t {tmp[1].strip()} \t {tmp[2].strip()} \t 0 \t 1 \t {result_information}"
+            hier_lst.append(str)
+        return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count, hier_lst
     
 
     
@@ -694,13 +815,17 @@ class ApiAnalyzer:
     def detect_less_cohesive_documentation(self, URI):    
         description = []
         nodes = []
+        http_method = []
         for ln in URI:
             tmp = ln.split(">>")
-            if len(ln) == 4:
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
                 text = f"{tmp[2]} {tmp[3]}"
                 description.append(text)
-            description.append(tmp[2])
+            else:
+                description.append(tmp[2])
             nodes.append(tmp[1])
+            http_method.append(tmp[0])
         #print(description)
         #print(nodes)
             
@@ -710,6 +835,11 @@ class ApiAnalyzer:
         less_cohesive_P = []
         p_count = 0
         ap_count = 0
+
+        cohisive_lst = []
+        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        cohisive_lst.append(msg)
+
 
         # Tokenize, remove stopwords, and lemmatize the descriptions
         nlp = spacy.load("en_core_web_lg")
@@ -785,7 +915,7 @@ class ApiAnalyzer:
                 similarity_scores[f"Topic {idx}"] = word_similarity
             return similarity_scores
 
-        for combined_node, documentation, node_uri, des in zip(processed_nodes,processed_des, nodes, description):
+        for method, combined_node, documentation, node_uri, des in zip(http_method, processed_nodes,processed_des, nodes, description):
             # Calculate similarity for each individual node
             topics = len(combined_node)
             #print(topics)
@@ -794,7 +924,8 @@ class ApiAnalyzer:
             print(documentation)
             if len(documentation)<1 or len(combined_node) < 1 :
                 p_count = p_count + 1
-                less_cohesive_P.append(f"-{node_uri}\t{P}\t{des}")
+                less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des}")
+                msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
                 continue
                 
             # Create a dictionary and corpus for LDA modeling
@@ -811,8 +942,8 @@ class ApiAnalyzer:
             #print(topic_words)
 
             # Display topic words horizontally
-            table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
-            print(tabulate(table, headers="firstrow", tablefmt="grid"))
+            '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
+            print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
 
 
             node_word_similarity = {}
@@ -849,11 +980,15 @@ class ApiAnalyzer:
                 #print("cohisive")
                 p_count = p_count + 1
                 less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des.strip()}")
+                msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
             else:
                 #print("less_cohisive")
                 ap_count = ap_count + 1
                 less_cohesive_AP.append(f"-{node_uri.strip()}\t{AP}\t{des.strip()}")
-        return less_cohesive_AP, less_cohesive_P, p_count, ap_count
+                msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 1 \t 0 \t {AP}"
+            cohisive_lst.append(msg)
+            
+        return less_cohesive_AP, less_cohesive_P, p_count, ap_count, cohisive_lst
     
 
 
@@ -868,12 +1003,18 @@ class ApiAnalyzer:
         description = []
         nodes = []
         http_method = []
+        incos_lst = []
+        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
+        incos_lst.append(msg)
+
         for ln in URI:
             tmp = ln.split(">>")
-            if len(ln) == 4:
+            if len(tmp) == 4:
+                tmp[3] = ' '.join(tmp[3].split())
                 text = f"{tmp[2]} {tmp[3]}"
                 description.append(text)
-            description.append(tmp[2])
+            else:
+                description.append(tmp[2])
             nodes.append(tmp[1])
             http_method.append(tmp[0])
             #print(description)
@@ -915,37 +1056,47 @@ class ApiAnalyzer:
             if method == "get":
                 #if any(item in get for item in words):
                 if any(item in get for item in words):
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
                     inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
                     inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
                     p_count += 1
             elif method == "delete":
                 if any(item in delete for item in words):
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
                     inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
                     inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
                     p_count += 1
             elif method == "put":
                 if any(item in put for item in words):
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
                     inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
                     inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
             elif method == "post":
                 if any(item in post for item in words):
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
                     inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                 else:
+                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
                     inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
             else:
+                msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
                 inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
                 p_count += 1
+            incos_lst.append(msg)
 
-        return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
+        return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count, incos_lst
 
 
 

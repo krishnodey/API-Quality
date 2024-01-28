@@ -1,0 +1,33 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /appCategories 	 filter by attribute platforms 	 1 	 0 	 No Version Found
+GET 	 /appCategories/{id} 	 the fields to include for returned resources of type appCategories 	 1 	 0 	 No Version Found
+GET 	 /appEncryptionDeclarations 	 filter by attribute platform 	 1 	 0 	 No Version Found
+GET 	 /appEncryptionDeclarations/{id} 	 the fields to include for returned resources of type appEncryptionDeclarations 	 1 	 0 	 No Version Found
+GET 	 /appInfoLocalizations/{id} 	 the fields to include for returned resources of type appInfoLocalizations 	 1 	 0 	 No Version Found
+GET 	 /appInfos/{id} 	 the fields to include for returned resources of type appInfos 	 1 	 0 	 No Version Found
+GET 	 /appPreOrders/{id} 	 the fields to include for returned resources of type appPreOrders 	 1 	 0 	 No Version Found
+GET 	 /appPreviewSets/{id} 	 the fields to include for returned resources of type appPreviews 	 1 	 0 	 No Version Found
+GET 	 /appPreviews/{id} 	 the fields to include for returned resources of type appPreviews 	 1 	 0 	 No Version Found
+GET 	 /appPricePoints 	 filter by id(s) of related priceTier 	 1 	 0 	 No Version Found
+GET 	 /appPricePoints/{id} 	 the fields to include for returned resources of type appPricePoints 	 1 	 0 	 No Version Found
+GET 	 /appPriceTiers 	 filter by id(s) 	 1 	 0 	 No Version Found
+GET 	 /appPriceTiers/{id} 	 the fields to include for returned resources of type appPriceTiers 	 1 	 0 	 No Version Found
+GET 	 /appPrices/{id} 	 the fields to include for returned resources of type appPrices 	 1 	 0 	 No Version Found
+GET 	 /appScreenshotSets/{id} 	 the fields to include for returned resources of type appScreenshotSets 	 1 	 0 	 No Version Found
+GET 	 /appScreenshots/{id} 	 the fields to include for returned resources of type appScreenshots 	 1 	 0 	 No Version Found
+GET 	 /appStoreReviewAttachments/{id} 	 the fields to include for returned resources of type appStoreReviewAttachments 	 1 	 0 	 No Version Found
+GET 	 /appStoreReviewDetails/{id} 	 he fields to include for returned resources of type appStoreReviewDetails 	 1 	 0 	 No Version Found
+GET 	 /appStoreVersionLocalizations/{id} 	 the fields to include for returned resources of type appStoreVersionLocalizations 	 1 	 0 	 No Version Found
+GET 	 /appStoreVersions/{id} 	 the fields to include for returned resources of type appStoreVersions 	 1 	 0 	 No Version Found
+GET 	 /apps 	 filter by attribute 'appStoreVersions.appStoreState 	 1 	 0 	 No Version Found
+GET 	 /betaAppLocalizations 	 filter by attribute locale 	 1 	 0 	 No Version Found
+GET 	 /endUserLicenseAgreements/{id} 	 the fields to include for returned resources of type endUserLicenseAgreements 	 1 	 0 	 No Version Found
+GET 	 /financeReports 	 filter by attribute regionCode 	 1 	 0 	 No Version Found
+GET 	 /preReleaseVersions 	 filter by attribute builds.expired 	 1 	 0 	 No Version Found
+GET 	 /routingAppCoverages/{id} 	 the fields to include for returned resources of type routingAppCoverages 	 1 	 0 	 No Version Found
+GET 	 /salesReports 	 filter by attribute frequency 	 1 	 0 	 No Version Found
+GET 	 /appCategories/{id}/subcategories 	 the fields to include for returned resources of type appCategories 	 1 	 0 	 No Version Found
+GET 	 /appEncryptionDeclarations/{id}/app 	 the fields to include for returned resources of type apps 	 1 	 0 	 No Version Found
+GET 	 /appInfos/{id}/ageRatingDeclaration 	 the fields to include for returned resources of type ageRatingDeclarations 	 1 	 0 	 No Version Found
+GET 	 /appInfos/{id}/appInfoLocalizations 	 filter by attribute locale 	 1 	 0 	 No Version Found
+GET 	 /appInfos/{id}/primaryCategory 	 the fields to include for returned resources of type appCategories 	 1 	 0 	 No Version Found

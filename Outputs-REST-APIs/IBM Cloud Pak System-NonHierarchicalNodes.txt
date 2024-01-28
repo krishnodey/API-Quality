@@ -1,39 +1,39 @@
 ***Anti-Pattern*** 
 Count: 2
- /deployment/resources/addresses/<addressUUID> 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 4
- /deployment/resources/addresses/<addressUUID> 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 4
+/deployment/resources/addresses/<addressUUID>	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 4
+/deployment/resources/addresses/<addressUUID>	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 4
 
 ***Patterns*** 
 Count: 32
- /deployment/resources/instances 	Hierarchical Nodes	
- /deployment/resources/virtual data center./<virtual data center.UID> 	Hierarchical Nodes	
- /deployment/resources/vm_configurations 	Hierarchical Nodes	
- /deployment/resources/vdcs/{uuid}/vm_configurations 	Hierarchical Nodes	
- /deployment/resources/volume_configurations 	Hierarchical Nodes	
- /deployment/resources/vdcs/{uuid}/volume_configurations 	Hierarchical Nodes	
- /deployment/resources/subnets 	Hierarchical Nodes	
- /deployment/resources/subnets/<subnetUUID> 	Hierarchical Nodes	
- /deployment/resources/addresses 	Hierarchical Nodes	
- /deployment/resources/subnet/<subnetUUID>/addresses 	Hierarchical Nodes	
- /deployment/resources/subnet/<subnetUUID>/addresses 	Hierarchical Nodes	
- /deployment/resources/credentials 	Hierarchical Nodes	
- /deployment/resources/credentials/<credentialUUID> 	Hierarchical Nodes	
- /deployment/resources/images/<imageID> 	Hierarchical Nodes	
- /deployment/resources/groups 	Hierarchical Nodes	
- /deployment/resources/groups/<groupUUID> 	Hierarchical Nodes	
- /deployment/resources/groups?isMaster=true 	Hierarchical Nodes	
- /deployment/resources/groups/group<UUID>?showNested=true 	Hierarchical Nodes	
- /deployment/resources/instances/<instanceUUID> 	Hierarchical Nodes	
- /deployment/resources/instances 	Hierarchical Nodes	
- /deployment/resources/instances/<instanceUUID> 	Hierarchical Nodes	
- /deployment/resources/addresses 	Hierarchical Nodes	
- /deployment/resources/volumes 	Hierarchical Nodes	
- /deployment/resources/volumes/<volumeUUID> 	Hierarchical Nodes	
- /deployment/resources/volumes 	Hierarchical Nodes	
- /deployment/resources/instances/<instanceUUID> 	Hierarchical Nodes	
- /deployment/resources/instance_snapshots 	Hierarchical Nodes	
- /deployment/resources/acls 	Hierarchical Nodes	
- /audit/resources/audit_config 	Hierarchical Nodes	
- /admin/resources/backup 	Hierarchical Nodes	
- /admin/resources/backup_subcomponents/{id} 	Hierarchical Nodes	
- /admin/resources/chassis_management_modules 	Hierarchical Nodes	
+/deployment/resources/instances	Hierarchical Nodes	
+/deployment/resources/virtual data center./<virtual data center.UID>	Hierarchical Nodes	
+/deployment/resources/vm_configurations	Hierarchical Nodes	
+/deployment/resources/vdcs/{uuid}/vm_configurations	Hierarchical Nodes	
+/deployment/resources/volume_configurations	Hierarchical Nodes	
+/deployment/resources/vdcs/{uuid}/volume_configurations	Hierarchical Nodes	
+/deployment/resources/subnets	Hierarchical Nodes	
+/deployment/resources/subnets/<subnetUUID>	Hierarchical Nodes	
+/deployment/resources/addresses	Hierarchical Nodes	
+/deployment/resources/subnet/<subnetUUID>/addresses	Hierarchical Nodes	
+/deployment/resources/subnet/<subnetUUID>/addresses	Hierarchical Nodes	
+/deployment/resources/credentials	Hierarchical Nodes	
+/deployment/resources/credentials/<credentialUUID>	Hierarchical Nodes	
+/deployment/resources/images/<imageID>	Hierarchical Nodes	
+/deployment/resources/groups	Hierarchical Nodes	
+/deployment/resources/groups/<groupUUID>	Hierarchical Nodes	
+/deployment/resources/groups?isMaster=true	Hierarchical Nodes	
+/deployment/resources/groups/group<UUID>?showNested=true	Hierarchical Nodes	
+/deployment/resources/instances/<instanceUUID>	Hierarchical Nodes	
+/deployment/resources/instances	Hierarchical Nodes	
+/deployment/resources/instances/<instanceUUID>	Hierarchical Nodes	
+/deployment/resources/addresses	Hierarchical Nodes	
+/deployment/resources/volumes	Hierarchical Nodes	
+/deployment/resources/volumes/<volumeUUID>	Hierarchical Nodes	
+/deployment/resources/volumes	Hierarchical Nodes	
+/deployment/resources/instances/<instanceUUID>	Hierarchical Nodes	
+/deployment/resources/instance_snapshots	Hierarchical Nodes	
+/deployment/resources/acls	Hierarchical Nodes	
+/audit/resources/audit_config	Hierarchical Nodes	
+/admin/resources/backup	Hierarchical Nodes	
+/admin/resources/backup_subcomponents/{id}	Hierarchical Nodes	
+/admin/resources/chassis_management_modules	Hierarchical Nodes	

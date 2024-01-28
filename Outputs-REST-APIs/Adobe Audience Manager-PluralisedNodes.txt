@@ -15,56 +15,56 @@ POST 	/destinations/{destinationId}/bulk-delete	Pluralized Nodes	 [Singular last
 Count: 55
 PUT 	/models/{modelId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/models/{modelId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/models	 regular methods.
+GET 	/models	 Regular methods
 POST 	/models	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/models/{modelId}/processing-history	 regular methods.
-GET 	/models/{modelId}/runs/latest/traits	 regular methods.
-GET 	/models/{modelId}/runs/latest/stats	 regular methods.
-GET 	/models/limits	 regular methods.
-GET 	/algorithms/{algoTypeId}	 regular methods.
-GET 	/algorithms	 regular methods.
-GET 	/available-data-feeds/	 regular methods.
-GET 	/available-data-feeds/{dataSourceId}	 regular methods.
-GET 	/available-data-feeds/{dataSourceId}/plans	 regular methods.
+GET 	/models/{modelId}/processing-history	 Regular methods
+GET 	/models/{modelId}/runs/latest/traits	 Regular methods
+GET 	/models/{modelId}/runs/latest/stats	 Regular methods
+GET 	/models/limits	 Regular methods
+GET 	/algorithms/{algoTypeId}	 Regular methods
+GET 	/algorithms	 Regular methods
+GET 	/available-data-feeds/	 Regular methods
+GET 	/available-data-feeds/{dataSourceId}	 Regular methods
+GET 	/available-data-feeds/{dataSourceId}/plans	 Regular methods
 POST 	/available-data-feeds/{dataSourceId}/requests	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/data-feeds/billing-report	 regular methods.
-GET 	/destinations/segment-impressions/	 regular methods.
-PATCH 	/destinations/segment-impressions/	 regular methods.
-GET 	/data-feeds/	 regular methods.
+GET 	/data-feeds/billing-report	 Regular methods
+GET 	/destinations/segment-impressions/	 Regular methods
+PATCH 	/destinations/segment-impressions/	 Regular methods
+GET 	/data-feeds/	 Regular methods
 POST 	/data-feeds/	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/data-feeds/{dataSourceId}	 regular methods.
+GET 	/data-feeds/{dataSourceId}	 Regular methods
 PUT 	/data-feeds/{dataSourceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/data-feeds/{dataSourceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/data-feeds/{dataSourceId}/plans/	 regular methods.
+GET 	/data-feeds/{dataSourceId}/plans/	 Regular methods
 POST 	/data-feeds/{dataSourceId}/plans/	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/data-feeds/{dataSourceId}/subscriptions	 regular methods.
-GET 	/data-feeds/{dataSourceId}/requests/	 regular methods.
+GET 	/data-feeds/{dataSourceId}/subscriptions	 Regular methods
+GET 	/data-feeds/{dataSourceId}/requests/	 Regular methods
 POST 	/data-feeds/{dataSourceId}/requests/	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/data-feeds/{dataSourceId}/requests/{requestId}	 regular methods.
+GET 	/data-feeds/{dataSourceId}/requests/{requestId}	 Regular methods
 PUT 	/data-feeds/{dataSourceId}/requests/{requestId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/data-feeds/{dataSourceId}/potential-subscribers/	 regular methods.
-GET 	/data-feeds/{dataSourceId}/plans/{planId}	 regular methods.
+GET 	/data-feeds/{dataSourceId}/potential-subscribers/	 Regular methods
+GET 	/data-feeds/{dataSourceId}/plans/{planId}	 Regular methods
 PUT 	/data-feeds/{dataSourceId}/plans/{planId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/data-feeds/{dataSourceId}/plans/{planId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/datasources/	 regular methods.
+GET 	/datasources/	 Regular methods
 POST 	/datasources/	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/datasources/{dataSourceId}	 regular methods.
+GET 	/datasources/{dataSourceId}	 Regular methods
 PUT 	/datasources/{dataSourceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/datasources/{dataSourceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/datasources/configurations/available-id-types	 regular methods.
-GET 	/datasources/configurations/marketing-cloud-visitorid-versions	 regular methods.
-GET 	/datasources/{dataSourceId}/history/inbound	 regular methods.
-GET 	/datasources/{dataSourceId}/history/inbound/sampling-data	 regular methods.
-GET 	/signals/derived/{derivedSignalId}	 regular methods.
+GET 	/datasources/configurations/available-id-types	 Regular methods
+GET 	/datasources/configurations/marketing-cloud-visitorid-versions	 Regular methods
+GET 	/datasources/{dataSourceId}/history/inbound	 Regular methods
+GET 	/datasources/{dataSourceId}/history/inbound/sampling-data	 Regular methods
+GET 	/signals/derived/{derivedSignalId}	 Regular methods
 PUT 	/signals/derived/{derivedSignalId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/signals/derived/{derivedSignalId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/signals/derived	 regular methods.
-GET 	/signals/derived/limits	 regular methods.
+GET 	/signals/derived	 Regular methods
+GET 	/signals/derived/limits	 Regular methods
 POST 	/destinations/	Singularized Nodes	 [Pluralized last node with POST method.] 
-GET 	/destinations/	 regular methods.
-GET 	/destinations/limits	 regular methods.
-GET 	/destinations/{destinationId}/history/outbound/	 regular methods.
-GET 	/destinations/{destinationId}	 regular methods.
+GET 	/destinations/	 Regular methods
+GET 	/destinations/limits	 Regular methods
+GET 	/destinations/{destinationId}/history/outbound/	 Regular methods
+GET 	/destinations/{destinationId}	 Regular methods
 DELETE 	/destinations/{destinationId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 PUT 	/destinations/{destinationId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-GET 	/destinations/{destinationId}/mappings-by-priority/	 regular methods.
+GET 	/destinations/{destinationId}/mappings-by-priority/	 Regular methods

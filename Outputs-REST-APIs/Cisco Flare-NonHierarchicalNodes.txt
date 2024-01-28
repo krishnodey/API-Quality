@@ -3,28 +3,28 @@ Count: 0
 
 ***Patterns*** 
 Count: 25
- /environments 	Hierarchical Nodes	
- /environments?latitude={latitude}&longitude={longitude} 	Hierarchical Nodes	
- /environments?key={key}&value={value} 	Hierarchical Nodes	
- /environments 	Hierarchical Nodes	
- /environments/{environment_id} 	Hierarchical Nodes	
- /environments/{environment_id} 	Hierarchical Nodes	
- /environments/{environment_id} 	Hierarchical Nodes	
- /environments/{environment_id}/zones 	Hierarchical Nodes	
- /environments/{environment_id}/zones?x={x}&y={y} 	Hierarchical Nodes	
- /environments/{environment_id}/zones?key={key}&value={value} 	Hierarchical Nodes	
- /environments/{environment_id}/zones 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	Hierarchical Nodes	
- /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	Hierarchical Nodes	
- /environments/{environment_id}/devices 	Hierarchical Nodes	
+/environments	Hierarchical Nodes	
+/environments?latitude={latitude}&longitude={longitude}	Hierarchical Nodes	
+/environments?key={key}&value={value}	Hierarchical Nodes	
+/environments	Hierarchical Nodes	
+/environments/{environment_id}	Hierarchical Nodes	
+/environments/{environment_id}	Hierarchical Nodes	
+/environments/{environment_id}	Hierarchical Nodes	
+/environments/{environment_id}/zones	Hierarchical Nodes	
+/environments/{environment_id}/zones?x={x}&y={y}	Hierarchical Nodes	
+/environments/{environment_id}/zones?key={key}&value={value}	Hierarchical Nodes	
+/environments/{environment_id}/zones	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Hierarchical Nodes	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Hierarchical Nodes	
+/environments/{environment_id}/devices	Hierarchical Nodes	

@@ -84,29 +84,29 @@ POST 	/updateWebhook	Pluralized Nodes	 [Singular last node with POST method.]
 
 ***Patterns*** 
 Count: 28
-GET 	/allCards	 regular methods.
-GET 	/autoFillFields	 regular methods.
-GET 	/card	 regular methods.
-GET 	/cards	 regular methods.
-GET	/cardsImportations/{pipeId}	 regular methods.
-GET 	/findCards/{pipeId}	 regular methods.
-GET 	/findCards/{tableId}	 regular methods.
-GET 	/inbox_emails/card_id	 regular methods.
-GET 	/me	Singularized Nodes	 regular methods.
-GET 	/organization/{id}	 regular methods.
-GET 	/organizations/{ids}	 regular methods.
-GET 	/phase/{id}	 regular methods.
-GET 	/pipe/{id}	 regular methods.
-GET	/pipeReportExport/{id}	 regular methods.
-GET 	/pipe/{ids}	 regular methods.
-GET 	/pipe_relations/{id}	 regular methods.
-GET 	/pipe_templates	 regular methods.
-GET 	/recordsImportations/{tableID}	 regular methods.
-GET 	/table/{id}	 regular methods.
-GET 	/table/{ids}	 regular methods.
-GET 	/table_record/{id}	 regular methods.
-GET 	/table_records/{table_id}	 regular methods.
-GET 	/table_relations/{ids}	 regular methods.
+GET 	/allCards	 Regular methods
+GET 	/autoFillFields	 Regular methods
+GET 	/card	 Regular methods
+GET 	/cards	 Regular methods
+GET	/cardsImportations/{pipeId}	 Regular methods
+GET 	/findCards/{pipeId}	 Regular methods
+GET 	/findCards/{tableId}	 Regular methods
+GET 	/inbox_emails/card_id	 Regular methods
+GET 	/me	Singularized Nodes	 Regular methods
+GET 	/organization/{id}	 Regular methods
+GET 	/organizations/{ids}	 Regular methods
+GET 	/phase/{id}	 Regular methods
+GET 	/pipe/{id}	 Regular methods
+GET	/pipeReportExport/{id}	 Regular methods
+GET 	/pipe/{ids}	 Regular methods
+GET 	/pipe_relations/{id}	 Regular methods
+GET 	/pipe_templates	 Regular methods
+GET 	/recordsImportations/{tableID}	 Regular methods
+GET 	/table/{id}	 Regular methods
+GET 	/table/{ids}	 Regular methods
+GET 	/table_record/{id}	 Regular methods
+GET 	/table_records/{table_id}	 Regular methods
+GET 	/table_relations/{ids}	 Regular methods
 POST 	/clonePipes	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/inviteMembers	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/setRoles	Singularized Nodes	 [Pluralized last node with POST method.] 

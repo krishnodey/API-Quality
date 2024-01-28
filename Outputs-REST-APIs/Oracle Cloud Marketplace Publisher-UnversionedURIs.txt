@@ -1,48 +1,48 @@
 ***Anti-Pattern*** 
 Count: 37
-/installrequests [No version found.]
-/applications/{listingVersionId} [No version found.]
-/applications/{listingVersionId}/banner [No version found.]
-/applications/{listingVersionId}/comments/{id} [No version found.]
-/applications/{listingVersionId}/packages/{packageVersionId} [No version found.]
-/applications/{listingVersionId}/relateddocs/{id} [No version found.]
-/applications/{listingVersionId}/screenshots/{id} [No version found.]
-/applications/{listingVersionId}/supportingdocs/{id} [No version found.]
-/applications [No version found.]
-/applications/{listingVersionId} [No version found.]
-/applications/{listingVersionId}/availableservices [No version found.]
-/applications/{listingVersionId}/comments [No version found.]
-/applications/{listingVersionId}/packages [No version found.]
-/applications/{listingVersionId}/packages/{packageVersionId} [No version found.]
-/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs [No version found.]
-/applications/{listingVersionId}/recommendedservices [No version found.]
-/applications/{listingVersionId} [No version found.]
-/applications/{listingVersionId}/banner [No version found.]
-/applications/{listingVersionId}/packages/{packageVersionId} [No version found.]
-/applications/{listingVersionId}/relateddocs/{id} [No version found.]
-/applications/{listingVersionId}/screenshots [No version found.]
-/applications/{listingVersionId}/supportingdocs/{id} [No version found.]
-/applications [No version found.]
-/applications/{listingVersionId}/banner [No version found.]
-/applications/{listingVersionId}/comments [No version found.]
-/applications/{listingVersionId}/icon [No version found.]
-/applications/{listingVersionId}/packages [No version found.]
-/applications/{listingVersionId}/relateddocs [No version found.]
-/applications/{listingVersionId}/screenshots [No version found.]
-/applications/{listingVersionId}/supportingdocs [No version found.]
-/applications/{listingVersionId}/version [No version found.]
-/applications/{listingVersionId} [No version found.]
-/applications/{listingVersionId}/banner [No version found.]
-/applications/{listingVersionId}/comments/{id} [No version found.]
-/applications/{listingVersionId}/icon [No version found.]
-/applications/{listingVersionId}/packages/{packageVersionId} [No version found.]
-/applications/{listingVersionId}/recommendedservices [No version found.]
+/installrequests 	 No Version Found
+/applications/{listingVersionId} 	 No Version Found
+/applications/{listingVersionId}/banner 	 No Version Found
+/applications/{listingVersionId}/comments/{id} 	 No Version Found
+/applications/{listingVersionId}/packages/{packageVersionId} 	 No Version Found
+/applications/{listingVersionId}/relateddocs/{id} 	 No Version Found
+/applications/{listingVersionId}/screenshots/{id} 	 No Version Found
+/applications/{listingVersionId}/supportingdocs/{id} 	 No Version Found
+/applications 	 No Version Found
+/applications/{listingVersionId} 	 No Version Found
+/applications/{listingVersionId}/availableservices 	 No Version Found
+/applications/{listingVersionId}/comments 	 No Version Found
+/applications/{listingVersionId}/packages 	 No Version Found
+/applications/{listingVersionId}/packages/{packageVersionId} 	 No Version Found
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	 No Version Found
+/applications/{listingVersionId}/recommendedservices 	 No Version Found
+/applications/{listingVersionId} 	 No Version Found
+/applications/{listingVersionId}/banner 	 No Version Found
+/applications/{listingVersionId}/packages/{packageVersionId} 	 No Version Found
+/applications/{listingVersionId}/relateddocs/{id} 	 No Version Found
+/applications/{listingVersionId}/screenshots 	 No Version Found
+/applications/{listingVersionId}/supportingdocs/{id} 	 No Version Found
+/applications 	 No Version Found
+/applications/{listingVersionId}/banner 	 No Version Found
+/applications/{listingVersionId}/comments 	 No Version Found
+/applications/{listingVersionId}/icon 	 No Version Found
+/applications/{listingVersionId}/packages 	 No Version Found
+/applications/{listingVersionId}/relateddocs 	 No Version Found
+/applications/{listingVersionId}/screenshots 	 No Version Found
+/applications/{listingVersionId}/supportingdocs 	 No Version Found
+/applications/{listingVersionId}/version 	 No Version Found
+/applications/{listingVersionId} 	 No Version Found
+/applications/{listingVersionId}/banner 	 No Version Found
+/applications/{listingVersionId}/comments/{id} 	 No Version Found
+/applications/{listingVersionId}/icon 	 No Version Found
+/applications/{listingVersionId}/packages/{packageVersionId} 	 No Version Found
+/applications/{listingVersionId}/recommendedservices 	 No Version Found
 
 ***Patterns*** 
 Count: 6
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} [Version found.]
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} [Version found.]
-/appstore/publisher/v2/applications/{listingVersionId}/packages [Version found.]
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} [Version found.]
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs [Version found.]
-/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} [Version found.]
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Version Found
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	 Version Found
+/appstore/publisher/v2/applications/{listingVersionId}/packages 	 Version Found
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Version Found
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	 Version Found
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Version Found

@@ -3,46 +3,46 @@ Count: 0
 
 ***Patterns*** 
 Count: 43
- /installrequests 	Hierarchical Nodes	
- /applications/{listingVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/banner 	Hierarchical Nodes	
- /applications/{listingVersionId}/comments/{id} 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/relateddocs/{id} 	Hierarchical Nodes	
- /applications/{listingVersionId}/screenshots/{id} 	Hierarchical Nodes	
- /applications/{listingVersionId}/supportingdocs/{id} 	Hierarchical Nodes	
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Hierarchical Nodes	
- /applications 	Hierarchical Nodes	
- /applications/{listingVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/availableservices 	Hierarchical Nodes	
- /applications/{listingVersionId}/comments 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Hierarchical Nodes	
- /applications/{listingVersionId}/recommendedservices 	Hierarchical Nodes	
- /appstore/publisher/v2/applications/{listingVersionId}/packages 	Hierarchical Nodes	
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Hierarchical Nodes	
- /applications/{listingVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/banner 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/relateddocs/{id} 	Hierarchical Nodes	
- /applications/{listingVersionId}/screenshots 	Hierarchical Nodes	
- /applications/{listingVersionId}/supportingdocs/{id} 	Hierarchical Nodes	
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /applications 	Hierarchical Nodes	
- /applications/{listingVersionId}/banner 	Hierarchical Nodes	
- /applications/{listingVersionId}/comments 	Hierarchical Nodes	
- /applications/{listingVersionId}/icon 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages 	Hierarchical Nodes	
- /applications/{listingVersionId}/relateddocs 	Hierarchical Nodes	
- /applications/{listingVersionId}/screenshots 	Hierarchical Nodes	
- /applications/{listingVersionId}/supportingdocs 	Hierarchical Nodes	
- /applications/{listingVersionId}/version 	Hierarchical Nodes	
- /applications/{listingVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/banner 	Hierarchical Nodes	
- /applications/{listingVersionId}/comments/{id} 	Hierarchical Nodes	
- /applications/{listingVersionId}/icon 	Hierarchical Nodes	
- /applications/{listingVersionId}/packages/{packageVersionId} 	Hierarchical Nodes	
- /applications/{listingVersionId}/recommendedservices 	Hierarchical Nodes	
+/installrequests	Hierarchical Nodes	
+/applications/{listingVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/banner	Hierarchical Nodes	
+/applications/{listingVersionId}/comments/{id}	Hierarchical Nodes	
+/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/relateddocs/{id}	Hierarchical Nodes	
+/applications/{listingVersionId}/screenshots/{id}	Hierarchical Nodes	
+/applications/{listingVersionId}/supportingdocs/{id}	Hierarchical Nodes	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Hierarchical Nodes	
+/applications	Hierarchical Nodes	
+/applications/{listingVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/availableservices	Hierarchical Nodes	
+/applications/{listingVersionId}/comments	Hierarchical Nodes	
+/applications/{listingVersionId}/packages	Hierarchical Nodes	
+/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Hierarchical Nodes	
+/applications/{listingVersionId}/recommendedservices	Hierarchical Nodes	
+/appstore/publisher/v2/applications/{listingVersionId}/packages	Hierarchical Nodes	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Hierarchical Nodes	
+/applications/{listingVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/banner	Hierarchical Nodes	
+/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/relateddocs/{id}	Hierarchical Nodes	
+/applications/{listingVersionId}/screenshots	Hierarchical Nodes	
+/applications/{listingVersionId}/supportingdocs/{id}	Hierarchical Nodes	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/applications	Hierarchical Nodes	
+/applications/{listingVersionId}/banner	Hierarchical Nodes	
+/applications/{listingVersionId}/comments	Hierarchical Nodes	
+/applications/{listingVersionId}/icon	Hierarchical Nodes	
+/applications/{listingVersionId}/packages	Hierarchical Nodes	
+/applications/{listingVersionId}/relateddocs	Hierarchical Nodes	
+/applications/{listingVersionId}/screenshots	Hierarchical Nodes	
+/applications/{listingVersionId}/supportingdocs	Hierarchical Nodes	
+/applications/{listingVersionId}/version	Hierarchical Nodes	
+/applications/{listingVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/banner	Hierarchical Nodes	
+/applications/{listingVersionId}/comments/{id}	Hierarchical Nodes	
+/applications/{listingVersionId}/icon	Hierarchical Nodes	
+/applications/{listingVersionId}/packages/{packageVersionId}	Hierarchical Nodes	
+/applications/{listingVersionId}/recommendedservices	Hierarchical Nodes	

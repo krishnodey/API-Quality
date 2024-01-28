@@ -1,0 +1,16 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /auth/login 	 Get the active authentication scheme 	 0 	 1 	 Regular methods
+POST 	 /auth/token 	 Exchange credentials for access token 	 1 	 0 	  [Singular last node with POST method.] 
+POST 	 /auth/revoke 	 Revoke an access token 	 1 	 0 	  [Singular last node with POST method.] 
+GET 	 /settings 	 Get the runtime settings 	 0 	 1 	 Regular methods
+GET 	 /flows 	 Get the active flow configuration 	 0 	 1 	 Regular methods
+POST 	 /flows 	 Set the active flow configuration 	 0 	 1 	  [Pluralized last node with POST method.] 
+POST 	 /flow 	 Add a flow to the active configuration 	 1 	 0 	  [Singular last node with POST method.] 
+GET 	 /flow/:id 	 Get an individual flow configuration 	 0 	 1 	 Regular methods
+PUT 	 /flow/:id 	 Update an individual flow configuration 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
+DELETE 	 /flow/:id 	 Delete an individual flow configuration 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
+GET 	 /nodes 	 Get a list of the installed nodes 	 0 	 1 	 Regular methods
+POST 	 /nodes 	 Install a new node module 	 0 	 1 	  [Pluralized last node with POST method.] 
+GET 	 /nodes/:module 	 Get a node module’s information 	 0 	 1 	 Regular methods
+PUT 	 /nodes/:module 	 Enable/Disable a node module 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
+DELETE 	 /nodes/:module 	 Remove a node module 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 

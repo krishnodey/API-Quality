@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
 Count: 15
-/oauth/authorize [No version found.]
-/oauth/token [No version found.]
-/history [No version found.]
-/payment-methods [No version found.]
-/products [No version found.]
-/products/{product_id} [No version found.]
-/estimates/price [No version found.]
-/estimates/time [No version found.]
-/requests/estimate [No version found.]
-/requests/current [No version found.]
-/requests/current [No version found.]
-/requests/current [No version found.]
-/requests/{request_id}/receipt [No version found.]
-/requests/{request_id}/map [No version found.]
-/requests/{request_id}/receipt [No version found.]
+/oauth/authorize 	 No Version Found
+/oauth/token 	 No Version Found
+/history 	 No Version Found
+/payment-methods 	 No Version Found
+/products 	 No Version Found
+/products/{product_id} 	 No Version Found
+/estimates/price 	 No Version Found
+/estimates/time 	 No Version Found
+/requests/estimate 	 No Version Found
+/requests/current 	 No Version Found
+/requests/current 	 No Version Found
+/requests/current 	 No Version Found
+/requests/{request_id}/receipt 	 No Version Found
+/requests/{request_id}/map 	 No Version Found
+/requests/{request_id}/receipt 	 No Version Found
 
 ***Patterns*** 
 Count: 0

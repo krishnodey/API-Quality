@@ -3,27 +3,27 @@ Count: 0
 
 ***Patterns*** 
 Count: 24
-/v2/count/ [Version found.]
-/v2/next/ [Version found.]
-/v2/previous/ [Version found.]
-/v2/results/ [Version found.]
-/v2/berry/{id or name}/ [Version found.]
-/v2/berry/{id}/ [Version found.]
-/v2/berry/{name}/ [Version found.]
-/v2/berry/{growth_time}/ [Version found.]
-/v2/berry/{max_harvest}/ [Version found.]
-/v2/berry/{natural_gift_power}/ [Version found.]
-/v2/berry/{size}/ [Version found.]
-/v2/berry/{smoothness}/ [Version found.]
-/v2/berry/{soil_dryness}/ [Version found.]
-/v2/berry/{firmness}/ [Version found.]
-/v2/berry/{flavors}/ [Version found.]
-/v2/berry/{items}/ [Version found.]
-/v2/berry/{natural_gift_type}/ [Version found.]
-/v2/berry/{potency}/ [Version found.]
-/v2/berry-firmness/{id}/ [Version found.]
-/v2/berry-firmness/{id or name}/ [Version found.]
-/v2/berry-firmness/{name}/ [Version found.]
-/v2/berry-firmness/{berries}/ [Version found.]
-/v2/berry-firmness/{names}/ [Version found.]
-v2/berry-flavor/{id or name}/ [Version found.]
+/v2/count/ 	 Version Found
+/v2/next/ 	 Version Found
+/v2/previous/ 	 Version Found
+/v2/results/ 	 Version Found
+/v2/berry/{id or name}/ 	 Version Found
+/v2/berry/{id}/ 	 Version Found
+/v2/berry/{name}/ 	 Version Found
+/v2/berry/{growth_time}/ 	 Version Found
+/v2/berry/{max_harvest}/ 	 Version Found
+/v2/berry/{natural_gift_power}/ 	 Version Found
+/v2/berry/{size}/ 	 Version Found
+/v2/berry/{smoothness}/ 	 Version Found
+/v2/berry/{soil_dryness}/ 	 Version Found
+/v2/berry/{firmness}/ 	 Version Found
+/v2/berry/{flavors}/ 	 Version Found
+/v2/berry/{items}/ 	 Version Found
+/v2/berry/{natural_gift_type}/ 	 Version Found
+/v2/berry/{potency}/ 	 Version Found
+/v2/berry-firmness/{id}/ 	 Version Found
+/v2/berry-firmness/{id or name}/ 	 Version Found
+/v2/berry-firmness/{name}/ 	 Version Found
+/v2/berry-firmness/{berries}/ 	 Version Found
+/v2/berry-firmness/{names}/ 	 Version Found
+v2/berry-flavor/{id or name}/ 	 Version Found

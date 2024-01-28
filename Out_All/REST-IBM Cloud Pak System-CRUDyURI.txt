@@ -1,0 +1,35 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+POST 	 /deployment/resources/instances 	 Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance. 	 0 	 1 	
+DELETE 	 /deployment/resources/virtual data center./<virtual data center.UID> 	 Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment. 	 0 	 1 	
+POST 	 /deployment/resources/vm_configurations 	 Create a new configuration for the virtual machine. 	 0 	 1 	
+POST 	 /deployment/resources/vdcs/{uuid}/vm_configurations 	 Create a new configuration for the virtual machine. 	 0 	 1 	
+POST 	 /deployment/resources/volume_configurations 	 Create a new volume configuration. 	 0 	 1 	
+POST 	 /deployment/resources/vdcs/{uuid}/volume_configurations 	 Create a new volume configuration. 	 0 	 1 	
+POST 	 /deployment/resources/subnets 	 Create a new subnet. 	 0 	 1 	
+DELETE 	 /deployment/resources/subnets/<subnetUUID> 	 Delete a subnet. 	 0 	 1 	
+POST 	 /deployment/resources/addresses 	 Create a new address. 	 0 	 1 	
+POST 	 /deployment/resources/subnet/<subnetUUID>/addresses 	 Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet. 	 0 	 1 	
+PUT 	 /deployment/resources/subnet/<subnetUUID>/addresses 	 Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet. 	 0 	 1 	
+PUT 	 /deployment/resources/addresses/<addressUUID> 	 You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another. 	 0 	 1 	
+DELETE 	 /deployment/resources/addresses/<addressUUID> 	 Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address. 	 0 	 1 	
+POST 	 /deployment/resources/credentials 	 Creating a new credential 	 0 	 1 	
+DELETE 	 /deployment/resources/credentials/<credentialUUID> 	 Deleting a credential 	 0 	 1 	
+DELETE 	 /deployment/resources/images/<imageID> 	 Deleting images from the system 	 0 	 1 	
+POST 	 /deployment/resources/groups 	 Creating a group 	 0 	 1 	
+PUT 	 /deployment/resources/groups/<groupUUID> 	 Updating a group 	 0 	 1 	
+GET 	 /deployment/resources/groups?isMaster=true 	 Retrieving master groups 	 0 	 1 	
+GET 	 /deployment/resources/groups/group<UUID>?showNested=true 	 Retrieving nested and parent groups 	 0 	 1 	
+PUT 	 /deployment/resources/instances/<instanceUUID> 	 Stopping, starting, or and restarting virtual machines 	 0 	 1 	
+GET 	 /deployment/resources/instances 	 Viewing currently deployed virtual machines 	 0 	 1 	
+DELETE 	 /deployment/resources/instances/<instanceUUID> 	 Deleting currently deployed virtual machines 	 0 	 1 	
+GET 	 /deployment/resources/addresses 	 Getting a new address 	 0 	 1 	
+POST 	 /deployment/resources/volumes 	 Creating a volume 	 0 	 1 	
+DELETE 	 /deployment/resources/volumes/<volumeUUID> 	 Deleting a volume 	 0 	 1 	
+POST 	 /deployment/resources/volumes 	 Attaching or detaching volumes 	 0 	 1 	
+PUT 	 /deployment/resources/instances/<instanceUUID> 	 Storing a previously deployed virtual machine 	 0 	 1 	
+GET 	 /deployment/resources/instance_snapshots 	 Retrieving a list of snapshots 	 0 	 1 	
+GET 	 /deployment/resources/acls 	 Get all acls 	 0 	 1 	
+POST 	 /audit/resources/audit_config 	 Create an audit configuration 	 0 	 1 	
+POST 	 /admin/resources/backup 	 Initiate a backup operation 	 0 	 1 	
+GET 	 /admin/resources/backup_subcomponents/{id} 	 Get information on a specified volume group 	 0 	 1 	
+GET 	 /admin/resources/chassis_management_modules 	 Get all chassis management modules 	 0 	 1 	

@@ -1,11 +1,11 @@
 ***Anti-Pattern*** 
-Count: 2
-/people/(id:{person ID})	 Non-descriptive End-point
+Count: 1
 /salesNavigatorProfileAssociations/(instanceId:foo,partner:bar,recordId:baz)	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 11
+Count: 12
 /me	 Self-descriptive End-point
+/people/(id:{person ID})	 Self-descriptive End-point
 /people/(id:{profile ID})?projection=(id,firstName,lastName)	 Self-descriptive End-point
 /salesContracts?q=contractsByMember	 Self-descriptive End-point
 /salesAnalyticsExportJobs/{jobId}?contract={contractUrn}	 Self-descriptive End-point

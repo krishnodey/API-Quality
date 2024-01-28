@@ -86,16 +86,16 @@ POST 	/BinRecordValue	Pluralized Nodes	 [Singular last node with POST method.]
 
 ***Patterns*** 
 Count: 13
-GET 	/ping	 regular methods.
-GET 	/pingInStoreReader	 regular methods.
-GET 	/viewer	 regular methods.
-GET 	/clientConfiguration	 regular methods.
-GET 	/node	 regular methods.
-GET 	/idFromLegacyId	 regular methods.
-GET 	/report	 regular methods.
-GET 	/search	 regular methods.
-GET 	/paypalFinancingOptions	 regular methods.
-GET 	/inStoreLocations	 regular methods.
+GET 	/ping	 Regular methods
+GET 	/pingInStoreReader	 Regular methods
+GET 	/viewer	 Regular methods
+GET 	/clientConfiguration	 Regular methods
+GET 	/node	 Regular methods
+GET 	/idFromLegacyId	 Regular methods
+GET 	/report	 Regular methods
+GET 	/search	 Regular methods
+GET 	/paypalFinancingOptions	 Regular methods
+GET 	/inStoreLocations	 Regular methods
 POST 	/updateCustomFields	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/confirmMicroTransferAmounts	Singularized Nodes	 [Pluralized last node with POST method.] 
 POST 	/InStoreReaderOriginDetails	Singularized Nodes	 [Pluralized last node with POST method.] 

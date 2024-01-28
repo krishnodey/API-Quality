@@ -3,36 +3,36 @@ Count: 0
 
 ***Patterns*** 
 Count: 33
- /delegateAccessTokenCreate	Hierarchical Nodes	
- /storefrontAccessTokenCreate	Hierarchical Nodes	
- /storefrontAccessTokenDelete	Hierarchical Nodes	
- /AccessScope	Hierarchical Nodes	
- /DelegateAccessToken	Hierarchical Nodes	
- /StorefrontAccessToken	Hierarchical Nodes	
- /shopifyqlQuery	Hierarchical Nodes	
- /ErrorPosition 	Hierarchical Nodes	
- /ParseError 	Hierarchical Nodes	
- /ParseErrorRange	Hierarchical Nodes	
- /PolarisVizDataPoint	Hierarchical Nodes	
- /PolarisVizDataSeries	Hierarchical Nodes	
- /PolarisVizResponse 	Hierarchical Nodes	
- /TableData 	Hierarchical Nodes	
- /TableDataColumn 	Hierarchical Nodes	
- /TableResponse 	Hierarchical Nodes	
- /query/{id} 	Hierarchical Nodes	
- /appByHandle 	Hierarchical Nodes	
- /appByKey 	Hierarchical Nodes	
- /appInstallation/{id} 	Hierarchical Nodes	
- /appInstallations 	Hierarchical Nodes	
- /currentAppInstallation 	Hierarchical Nodes	
- /publication/{id} 	Hierarchical Nodes	
- /publications 	Hierarchical Nodes	
- /publicationCreate 	Hierarchical Nodes	
- /publicationDelete{id} 	Hierarchical Nodes	
- /publicationUpdate	Hierarchical Nodes	
- /AppFeedback 	Hierarchical Nodes	
- /AppInstallation 	Hierarchical Nodes	
- /FailedRequirement 	Hierarchical Nodes	
- /Link 	Hierarchical Nodes	
- /Publication 	Hierarchical Nodes	
- /ResourceFeedback	Hierarchical Nodes	
+/delegateAccessTokenCreate	Hierarchical Nodes	
+/storefrontAccessTokenCreate	Hierarchical Nodes	
+/storefrontAccessTokenDelete	Hierarchical Nodes	
+/AccessScope	Hierarchical Nodes	
+/DelegateAccessToken	Hierarchical Nodes	
+/StorefrontAccessToken	Hierarchical Nodes	
+/shopifyqlQuery	Hierarchical Nodes	
+/ErrorPosition	Hierarchical Nodes	
+/ParseError	Hierarchical Nodes	
+/ParseErrorRange	Hierarchical Nodes	
+/PolarisVizDataPoint	Hierarchical Nodes	
+/PolarisVizDataSeries	Hierarchical Nodes	
+/PolarisVizResponse	Hierarchical Nodes	
+/TableData	Hierarchical Nodes	
+/TableDataColumn	Hierarchical Nodes	
+/TableResponse	Hierarchical Nodes	
+/query/{id}	Hierarchical Nodes	
+/appByHandle	Hierarchical Nodes	
+/appByKey	Hierarchical Nodes	
+/appInstallation/{id}	Hierarchical Nodes	
+/appInstallations	Hierarchical Nodes	
+/currentAppInstallation	Hierarchical Nodes	
+/publication/{id}	Hierarchical Nodes	
+/publications	Hierarchical Nodes	
+/publicationCreate	Hierarchical Nodes	
+/publicationDelete{id}	Hierarchical Nodes	
+/publicationUpdate	Hierarchical Nodes	
+/AppFeedback	Hierarchical Nodes	
+/AppInstallation	Hierarchical Nodes	
+/FailedRequirement	Hierarchical Nodes	
+/Link	Hierarchical Nodes	
+/Publication	Hierarchical Nodes	
+/ResourceFeedback	Hierarchical Nodes	

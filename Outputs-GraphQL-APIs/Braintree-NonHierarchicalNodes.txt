@@ -1,101 +1,101 @@
 ***Anti-Pattern*** 
 Count: 7
- /chargePayPalAccount 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between charge and pay. 0 hierarchical relations were detected out of 3
- /refundTransaction 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between refund and transaction. 0 hierarchical relations were detected out of 1
- /createDisputeFileEvidence 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between file and evidence. 0 hierarchical relations were detected out of 3
- /requestChargeFromInStoreReader 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between request and charge. 0 hierarchical relations were detected out of 3
- /requestTextPromptFromInStoreReader 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between text and prompt. 0 hierarchical relations were detected out of 4
- /DisputeEvidence/{id} 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between evidence and identification. 0 hierarchical relations were detected out of 2
- /PaymentStatusEvent 	Non-hierarchical Nodes	Reversed hierarchy of type True detected between status and event. 0 hierarchical relations were detected out of 2
+/chargePayPalAccount	Non-hierarchical Nodes	Reversed hierarchy of type True detected between charge and pay. 0 hierarchical relations were detected out of 3
+/refundTransaction	Non-hierarchical Nodes	Reversed hierarchy of type True detected between refund and transaction. 0 hierarchical relations were detected out of 1
+/createDisputeFileEvidence	Non-hierarchical Nodes	Reversed hierarchy of type True detected between file and evidence. 0 hierarchical relations were detected out of 3
+/requestChargeFromInStoreReader	Non-hierarchical Nodes	Reversed hierarchy of type True detected between request and charge. 0 hierarchical relations were detected out of 3
+/requestTextPromptFromInStoreReader	Non-hierarchical Nodes	Reversed hierarchy of type True detected between text and prompt. 0 hierarchical relations were detected out of 4
+/DisputeEvidence/{id}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between evidence and identification. 0 hierarchical relations were detected out of 2
+/PaymentStatusEvent	Non-hierarchical Nodes	Reversed hierarchy of type True detected between status and event. 0 hierarchical relations were detected out of 2
 
 ***Patterns*** 
 Count: 89
- /ping 	Hierarchical Nodes	
- /pingInStoreReader 	Hierarchical Nodes	
- /viewer 	Hierarchical Nodes	
- /clientConfiguration 	Hierarchical Nodes	
- /node 	Hierarchical Nodes	
- /idFromLegacyId 	Hierarchical Nodes	
- /report 	Hierarchical Nodes	
- /search 	Hierarchical Nodes	
- /paypalFinancingOptions 	Hierarchical Nodes	
- /inStoreLocations 	Hierarchical Nodes	
- /authorizePaymentMethod 	Hierarchical Nodes	
- /authorizePayPalAccount 	Hierarchical Nodes	
- /authorizeVenmoAccount 	Hierarchical Nodes	
- /authorizeCreditCard 	Hierarchical Nodes	
- /captureTransaction 	Hierarchical Nodes	
- /chargeUsBankAccount 	Hierarchical Nodes	
- /chargeVenmoAccount 	Hierarchical Nodes	
- /chargeCreditCard 	Hierarchical Nodes	
- /vaultPaymentMethod 	Hierarchical Nodes	
- /vaultUsBankAccount 	Hierarchical Nodes	
- /vaultCreditCard 	Hierarchical Nodes	
- /reverseTransaction 	Hierarchical Nodes	
- /reverseRefund 	Hierarchical Nodes	
- /refundCreditCard	Hierarchical Nodes	
- /refundUsBankAccount	Hierarchical Nodes	
- /updateCustomFields 	Hierarchical Nodes	
- /verifyPaymentMethod	Hierarchical Nodes	
- /verifyCreditCard 	Hierarchical Nodes	
- /verifyUsBankAccount 	Hierarchical Nodes	
- /confirmMicroTransferAmounts	Hierarchical Nodes	
- /deletePaymentMethodFromVault 	Hierarchical Nodes	
- /createClientToken 	Hierarchical Nodes	
- /createUniversalAccessToken 	Hierarchical Nodes	
- /partialCaptureTransaction 	Hierarchical Nodes	
- /tokenizeCustomActionsPaymentMethod 	Hierarchical Nodes	
- /tokenizeCreditCard 	Hierarchical Nodes	
- /tokenizeCvv 	Hierarchical Nodes	
- /tokenizeNetworkToken 	Hierarchical Nodes	
- /tokenizeSamsungPayCard 	Hierarchical Nodes	
- /tokenizeUsBankAccount 	Hierarchical Nodes	
- /tokenizeUsBankLogin 	Hierarchical Nodes	
- /tokenizePayPalOneTimePayment 	Hierarchical Nodes	
- /createPayPalOneTimePayment 	Hierarchical Nodes	
- /tokenizePayPalBillingAgreement 	Hierarchical Nodes	
- /createPayPalBillingAgreement 	Hierarchical Nodes	
- /createCustomer 	Hierarchical Nodes	
- /updateCustomer 	Hierarchical Nodes	
- /deleteCustomer 	Hierarchical Nodes	
- /updateCreditCardBillingAddress 	Hierarchical Nodes	
- /updateCreditCardCardholderName 	Hierarchical Nodes	
- /updateCreditCardExpirationDate 	Hierarchical Nodes	
- /performThreeDSecureLookup 	Hierarchical Nodes	
- /acceptDispute 	Hierarchical Nodes	
- /finalizeDispute 	Hierarchical Nodes	
- /createDisputeTextEvidence 	Hierarchical Nodes	
- /deleteDisputeEvidence 	Hierarchical Nodes	
- /vaultPayPalBillingAgreement 	Hierarchical Nodes	
- /sandboxSettleTransaction 	Hierarchical Nodes	
- /createInStoreLocation 	Hierarchical Nodes	
- /updateInStoreLocation 	Hierarchical Nodes	
- /pairInStoreReader 	Hierarchical Nodes	
- /updateInStoreReader 	Hierarchical Nodes	
- /requestAuthorizeFromInStoreReader 	Hierarchical Nodes	
- /requestCancelFromInStoreReader 	Hierarchical Nodes	
- /requestRefundFromInStoreReader 	Hierarchical Nodes	
- /requestVaultFromInStoreReader	Hierarchical Nodes	
- /requestTextDisplayFromInStoreReader 	Hierarchical Nodes	
- /requestItemDisplayFromInStoreReader 	Hierarchical Nodes	
- /requestFirmwareUpdateFromInStoreReader 	Hierarchical Nodes	
- /requestSignaturePromptFromInStoreReader 	Hierarchical Nodes	
- /requestConfirmationPromptFromInStoreReader	Hierarchical Nodes	
- /requestNonPciCardDataFromInStoreReader 	Hierarchical Nodes	
- /requestAmountPromptFromInStoreReader 	Hierarchical Nodes	
- /createVenmoPaymentContext 	Hierarchical Nodes	
- /updateTransactionAmount 	Hierarchical Nodes	
- /generateExchangeRateQuote 	Hierarchical Nodes	
- /createNonInstantLocalPaymentContext 	Hierarchical Nodes	
- /DisputeEvidence/{legacyId} 	Hierarchical Nodes	
- /InStoreContextResult/{id} 	Hierarchical Nodes	
- /InStoreReaderOriginDetails 	Hierarchical Nodes	
- /Node/{id} 	Hierarchical Nodes	
- /Payment/{id} 	Hierarchical Nodes	
- /Payment/{legacyId} 	Hierarchical Nodes	
- /PaymentContext 	Hierarchical Nodes	
- /AccountCreationStatus 	Hierarchical Nodes	
- /ApplePayStatus 	Hierarchical Nodes	
- /ApplicationBankAccountPurpose 	Hierarchical Nodes	
- /ApplicationStatus 	Hierarchical Nodes	
- /BinRecordValue 	Hierarchical Nodes	
+/ping	Hierarchical Nodes	
+/pingInStoreReader	Hierarchical Nodes	
+/viewer	Hierarchical Nodes	
+/clientConfiguration	Hierarchical Nodes	
+/node	Hierarchical Nodes	
+/idFromLegacyId	Hierarchical Nodes	
+/report	Hierarchical Nodes	
+/search	Hierarchical Nodes	
+/paypalFinancingOptions	Hierarchical Nodes	
+/inStoreLocations	Hierarchical Nodes	
+/authorizePaymentMethod	Hierarchical Nodes	
+/authorizePayPalAccount	Hierarchical Nodes	
+/authorizeVenmoAccount	Hierarchical Nodes	
+/authorizeCreditCard	Hierarchical Nodes	
+/captureTransaction	Hierarchical Nodes	
+/chargeUsBankAccount	Hierarchical Nodes	
+/chargeVenmoAccount	Hierarchical Nodes	
+/chargeCreditCard	Hierarchical Nodes	
+/vaultPaymentMethod	Hierarchical Nodes	
+/vaultUsBankAccount	Hierarchical Nodes	
+/vaultCreditCard	Hierarchical Nodes	
+/reverseTransaction	Hierarchical Nodes	
+/reverseRefund	Hierarchical Nodes	
+/refundCreditCard	Hierarchical Nodes	
+/refundUsBankAccount	Hierarchical Nodes	
+/updateCustomFields	Hierarchical Nodes	
+/verifyPaymentMethod	Hierarchical Nodes	
+/verifyCreditCard	Hierarchical Nodes	
+/verifyUsBankAccount	Hierarchical Nodes	
+/confirmMicroTransferAmounts	Hierarchical Nodes	
+/deletePaymentMethodFromVault	Hierarchical Nodes	
+/createClientToken	Hierarchical Nodes	
+/createUniversalAccessToken	Hierarchical Nodes	
+/partialCaptureTransaction	Hierarchical Nodes	
+/tokenizeCustomActionsPaymentMethod	Hierarchical Nodes	
+/tokenizeCreditCard	Hierarchical Nodes	
+/tokenizeCvv	Hierarchical Nodes	
+/tokenizeNetworkToken	Hierarchical Nodes	
+/tokenizeSamsungPayCard	Hierarchical Nodes	
+/tokenizeUsBankAccount	Hierarchical Nodes	
+/tokenizeUsBankLogin	Hierarchical Nodes	
+/tokenizePayPalOneTimePayment	Hierarchical Nodes	
+/createPayPalOneTimePayment	Hierarchical Nodes	
+/tokenizePayPalBillingAgreement	Hierarchical Nodes	
+/createPayPalBillingAgreement	Hierarchical Nodes	
+/createCustomer	Hierarchical Nodes	
+/updateCustomer	Hierarchical Nodes	
+/deleteCustomer	Hierarchical Nodes	
+/updateCreditCardBillingAddress	Hierarchical Nodes	
+/updateCreditCardCardholderName	Hierarchical Nodes	
+/updateCreditCardExpirationDate	Hierarchical Nodes	
+/performThreeDSecureLookup	Hierarchical Nodes	
+/acceptDispute	Hierarchical Nodes	
+/finalizeDispute	Hierarchical Nodes	
+/createDisputeTextEvidence	Hierarchical Nodes	
+/deleteDisputeEvidence	Hierarchical Nodes	
+/vaultPayPalBillingAgreement	Hierarchical Nodes	
+/sandboxSettleTransaction	Hierarchical Nodes	
+/createInStoreLocation	Hierarchical Nodes	
+/updateInStoreLocation	Hierarchical Nodes	
+/pairInStoreReader	Hierarchical Nodes	
+/updateInStoreReader	Hierarchical Nodes	
+/requestAuthorizeFromInStoreReader	Hierarchical Nodes	
+/requestCancelFromInStoreReader	Hierarchical Nodes	
+/requestRefundFromInStoreReader	Hierarchical Nodes	
+/requestVaultFromInStoreReader	Hierarchical Nodes	
+/requestTextDisplayFromInStoreReader	Hierarchical Nodes	
+/requestItemDisplayFromInStoreReader	Hierarchical Nodes	
+/requestFirmwareUpdateFromInStoreReader	Hierarchical Nodes	
+/requestSignaturePromptFromInStoreReader	Hierarchical Nodes	
+/requestConfirmationPromptFromInStoreReader	Hierarchical Nodes	
+/requestNonPciCardDataFromInStoreReader	Hierarchical Nodes	
+/requestAmountPromptFromInStoreReader	Hierarchical Nodes	
+/createVenmoPaymentContext	Hierarchical Nodes	
+/updateTransactionAmount	Hierarchical Nodes	
+/generateExchangeRateQuote	Hierarchical Nodes	
+/createNonInstantLocalPaymentContext	Hierarchical Nodes	
+/DisputeEvidence/{legacyId}	Hierarchical Nodes	
+/InStoreContextResult/{id}	Hierarchical Nodes	
+/InStoreReaderOriginDetails	Hierarchical Nodes	
+/Node/{id}	Hierarchical Nodes	
+/Payment/{id}	Hierarchical Nodes	
+/Payment/{legacyId}	Hierarchical Nodes	
+/PaymentContext	Hierarchical Nodes	
+/AccountCreationStatus	Hierarchical Nodes	
+/ApplePayStatus	Hierarchical Nodes	
+/ApplicationBankAccountPurpose	Hierarchical Nodes	
+/ApplicationStatus	Hierarchical Nodes	
+/BinRecordValue	Hierarchical Nodes	

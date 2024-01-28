@@ -1,0 +1,97 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET 	 /ping 	 Returns the literal string 'pong'.  n/a 	 0 	 1 	 
+GET 	 /pingInStoreReader 	 Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device. 	 0 	 1 	 
+GET 	 /viewer 	 The currently authenticated viewer.  n/a 	 0 	 1 	 
+GET 	 /clientConfiguration 	 The client-side environment and payment method configuration. n/a 	 0 	 1 	 
+GET 	 /node 	 Fetch any object that extends the Node interface using its ID. n/a 	 0 	 1 	 
+GET 	 /idFromLegacyId 	 Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods.  n/a 	 0 	 1 	 
+GET 	 /report 	 A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters. n/a 	 0 	 1 	 
+GET 	 /search 	 A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters. n/a 	 0 	 1 	 
+GET 	 /paypalFinancingOptions 	 Retrieve PayPal financing options that include payment installment plans. n/a 	 0 	 1 	 
+GET 	 /inStoreLocations 	 Retrieve a paginated list of all in-store locations.  n/a 	 0 	 1 	 
+POST 	 /authorizePaymentMethod 	 Authorize an eligible payment method and return a payload that includes details of the resulting transaction. n/a 	 0 	 1 	 
+POST 	 /authorizePayPalAccount 	 Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction. n/a 	 0 	 1 	 
+POST 	 /authorizeVenmoAccount 	 Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.  n/a 	 0 	 1 	 
+POST 	 /authorizeCreditCard 	 Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.  n/a 	 0 	 1 	 
+POST 	 /captureTransaction 	 Capture an authorized transaction and return a payload that includes details of the transaction.  n/a 	 0 	 1 	 
+POST 	 /chargeUsBankAccount 	 Charge a US bank account and return a payload that includes details of the resulting transaction. See https://developers.braintreepayments.com/guides/ach/configuration for information on eligibility and setup. n/a 	 0 	 1 	 
+POST 	 /chargePayPalAccount 	 Charge a PayPal account and return a payload that includes details of the resulting transaction. n/a 	 1 	 0 	 Reversed hierarchy of type True detected between charge and pay. 0 hierarchical relations were detected out of 3
+POST 	 /chargeVenmoAccount 	 Charge a Venmo account and return a payload that includes details of the resulting transaction. See https://articles.braintreepayments.com/guides/payment-methods/venmo for information on eligibility and setup. n/a 	 0 	 1 	 
+POST 	 /chargeCreditCard 	 Charge a credit card of any origin and return a payload that includes details of the resulting transaction. n/a 	 0 	 1 	 
+POST 	 /vaultPaymentMethod 	 Vault payment information from a single-use payment method and return a payload that includes a new multi-use payment method. When vaulting a credit card, by default, this mutation will also verify that card before vaulting. n/a 	 0 	 1 	 
+POST 	 /vaultUsBankAccount 	 Vault payment information from a single-use US bank account payment method and return a payload that includes a new multi-use payment method. n/a 	 0 	 1 	 
+POST 	 /vaultCreditCard 	 Vault payment information from a single-use credit card and return a payload that includes a new multi-use payment method. By default, this mutation will also verify the card before vaulting. n/a 	 0 	 1 	 
+POST 	 /refundTransaction 	 Refund a settled transaction and return a payload that includes details of the refund.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between refund and transaction. 0 hierarchical relations were detected out of 1
+POST 	 /reverseTransaction 	 Reverse a transaction and return a payload that includes either the voided transaction or a refund. n/a 	 0 	 1 	 
+POST 	 /reverseRefund 	 Reverse a refund and return a payload that includes voided refund. n/a 	 0 	 1 	 
+POST 	 /refundCreditCard 	 Create a detached refund (unassociated with any previous Braintree payment) to a credit card and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration. n/a 	 0 	 1 	 
+POST 	 /refundUsBankAccount 	 Create a detached refund (unassociated with any previous Braintree payment) to a US Bank Account and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration. n/a 	 0 	 1 	 
+POST 	 /updateCustomFields 	 Update custom fields on a transaction or refund. Custom fields are defined in the Control Panel. n/a 	 0 	 1 	 
+POST 	 /verifyPaymentMethod 	 Run a verification on a multi-use payment method. n/a 	 0 	 1 	 
+POST 	 /verifyCreditCard 	 Run a verification on a multi-use credit card payment method. n/a 	 0 	 1 	 
+POST 	 /verifyUsBankAccount 	 Run a verification on a multi-use US bank account payment method. n/a 	 0 	 1 	 
+POST 	 /confirmMicroTransferAmounts 	 Confirm micro-transfer amounts initiated by vaultUsBankAccount or verifyUsBankAccount, completing the verification process for a US Bank Account via micro-transfer. n/a 	 0 	 1 	 
+POST 	 /deletePaymentMethodFromVault 	 Delete a multi-use payment method from the vault. n/a 	 0 	 1 	 
+POST 	 /createClientToken 	 Create a client token that can be used to initialize a client in order to tokenize payment information. n/a 	 0 	 1 	 
+POST 	 /createUniversalAccessToken 	 Create a PayPal access token that can be used to make additional API calls or initialize a client. n/a 	 0 	 1 	 
+POST 	 /partialCaptureTransaction 	 Partially capture funds from a transaction that was successfully authorized and return a payload that includes a new transaction with information about the capture. This is available for Venmo and PayPal transactions. n/a 	 0 	 1 	 
+POST 	 /tokenizeCustomActionsPaymentMethod 	 Tokenize Custom Actions fields and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizeCreditCard 	 Tokenize credit card fields and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizeCvv 	 Tokenize a credit card's CVV and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizeNetworkToken 	 Tokenize a network tokenized payment instrument and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizeSamsungPayCard 	 Tokenize Samsung Pay card fields and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizeUsBankAccount 	 Tokenize US bank account fields and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizeUsBankLogin 	 Tokenize US bank login fields and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /tokenizePayPalOneTimePayment 	 Tokenize PayPal One-Time Payment and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /createPayPalOneTimePayment 	 Set up a PayPal One-Time Payment for approval by a PayPal user. See documentation for more information. Your account must be enabled for this feature. n/a 	 0 	 1 	 
+POST 	 /tokenizePayPalBillingAgreement 	 Tokenize PayPal account and return a payload that includes a single-use payment method. n/a 	 0 	 1 	 
+POST 	 /createPayPalBillingAgreement 	 Set up a PayPal Billing Agreement Token for approval by a PayPal user. n/a 	 0 	 1 	 
+POST 	 /createCustomer 	 Create a customer for storing individual customer information and/or grouping transactions and multi-use payment methods. n/a 	 0 	 1 	 
+POST 	 /updateCustomer 	 Update a customer's information.  n/a 	 0 	 1 	 
+POST 	 /deleteCustomer 	 Delete a customer, breaking association between any of the customer's transactions. Will not delete if the customer has existing payment methods.  n/a 	 0 	 1 	 
+POST 	 /updateCreditCardBillingAddress 	 Set a new billing address for a multi-use credit card payment method. By default, this mutation will also verify the card with the new billing address before updating.  n/a 	 0 	 1 	 
+POST 	 /updateCreditCardCardholderName 	 Set a new cardholder name for a multi-use credit card payment method. By default, this mutation will also verify the card with the new cardholder name before updating.  n/a 	 0 	 1 	 
+POST 	 /updateCreditCardExpirationDate 	 Set a new expiration date for a multi-use credit card payment method. By default, this mutation will also verify the card with the new expiration date before updating.  n/a 	 0 	 1 	 
+POST 	 /performThreeDSecureLookup 	 Attempt to perform 3D Secure Authentication on credit card payment method. This may consume the payment method and return a new single-use payment method.  n/a 	 0 	 1 	 
+POST 	 /acceptDispute 	 Accepts a dispute and returns a payload that includes the dispute that was accepted. Only disputes with a status of OPEN can be accepted.  n/a 	 0 	 1 	 
+POST 	 /finalizeDispute 	 Finalizes a dispute and returns a payload that includes the dispute that was finalized. Only disputes with a status of OPEN can be finalized.  n/a 	 0 	 1 	 
+POST 	 /createDisputeTextEvidence 	 Creates text evidence to a dispute and returns a payload that includes the evidence that was created. Only disputes with a status of OPEN can have text evidence created for them.  n/a 	 0 	 1 	 
+POST 	 /deleteDisputeEvidence 	 Deletes evidence from a dispute.  n/a 	 0 	 1 	 
+POST 	 /createDisputeFileEvidence 	 Uploads an evidence file and associates it with a dispute. Note:: file upload requires a special request format. See the 'Uploading Files' integration guide for instructions on how to perform this mutation.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between file and evidence. 0 hierarchical relations were detected out of 3
+POST 	 /vaultPayPalBillingAgreement 	 Vault an existing PayPal Billing Agreement that was not created through Braintree. Only use this mutation if you need to import PayPal Billing Agreements from an existing PayPal integration into your Braintree account.  n/a 	 0 	 1 	 
+POST 	 /sandboxSettleTransaction 	 Force a transaction to settle in the sandbox environment. Generates an error elsewhere.  n/a 	 0 	 1 	 
+POST 	 /createInStoreLocation 	 Creates a new In-Store Location to associate Readers.  n/a 	 0 	 1 	 
+POST 	 /updateInStoreLocation 	 Updates an In-Store Location.  n/a 	 0 	 1 	 
+POST 	 /pairInStoreReader 	 Pairs a Reader to an account and In-Store Location.  n/a 	 0 	 1 	 
+POST 	 /updateInStoreReader 	 Updates an In-Store Reader.  n/a 	 0 	 1 	 
+POST 	 /requestChargeFromInStoreReader 	 Request an in-store reader to begin the charge flow.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between request and charge. 0 hierarchical relations were detected out of 3
+POST 	 /requestAuthorizeFromInStoreReader 	 Request an in-store reader to begin the authorize flow. Only supported on payment application versions >= 5.1.0.  n/a 	 0 	 1 	 
+POST 	 /requestCancelFromInStoreReader 	 Request an in-store reader to cancel the charge flow.  n/a 	 0 	 1 	 
+POST 	 /requestRefundFromInStoreReader 	 Request an in-store reader to start an unreferenced refund flow.  n/a 	 0 	 1 	 
+POST 	 /requestVaultFromInStoreReader 	 Request an in-store reader to vault a payment method.  n/a 	 0 	 1 	 
+POST 	 /requestTextDisplayFromInStoreReader 	 Request an in-store reader to display text.  n/a 	 0 	 1 	 
+POST 	 /requestItemDisplayFromInStoreReader 	 Request an in-store reader to display line items.  n/a 	 0 	 1 	 
+POST 	 /requestFirmwareUpdateFromInStoreReader 	 Request an in-store reader to update to the latest version of software.  n/a 	 0 	 1 	 
+POST 	 /requestSignaturePromptFromInStoreReader 	 Request an in-store reader to display a signature prompt. Only supported on payment application versions >= 3.3.0.  n/a 	 0 	 1 	 
+POST 	 /requestConfirmationPromptFromInStoreReader 	 Request an in-store reader to display a confirmation prompt. Only supported on payment application versions >= 3.3.0.  n/a 	 0 	 1 	 
+POST 	 /requestNonPciCardDataFromInStoreReader 	 Request an in-store reader to collect non PCI-scoped card data. Only supported on payment application versions >= 5.2.0.  n/a 	 0 	 1 	 
+POST 	 /requestAmountPromptFromInStoreReader 	 Request an in-store reader to display an amount prompt. Only supported on payment application versions >= 5.2.0.  n/a 	 0 	 1 	 
+POST 	 /requestTextPromptFromInStoreReader 	 Request an in-store reader to display a text prompt. Only supported on payment application versions >= 5.2.0.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between text and prompt. 0 hierarchical relations were detected out of 4
+POST 	 /createVenmoPaymentContext 	 Create a Venmo payment context.  n/a 	 0 	 1 	 
+POST 	 /updateTransactionAmount 	 Updates the authorization amount of the transaction.  n/a 	 0 	 1 	 
+POST 	 /generateExchangeRateQuote 	 Generate a customized currency exchange rate quote for items on a merchant's page. This allows merchants to advertise products in their customer's currency. Your account must be enabled to use this feature.  n/a 	 0 	 1 	 
+POST 	 /createNonInstantLocalPaymentContext 	 Creates a non-instant local payment context. Your account must be enabled to use this feature.  n/a 	 0 	 1 	 
+POST 	 /DisputeEvidence/{id} 	 Evidence provided by a merchant to respond to a dispute.  id: ID! Unique identifier 	 1 	 0 	 Reversed hierarchy of type True detected between evidence and identification. 0 hierarchical relations were detected out of 2
+POST 	 /DisputeEvidence/{legacyId} 	 Evidence provided by a merchant to respond to a dispute.  legacyId: ID! Legacy unique identifier. 	 0 	 1 	 
+POST 	 /InStoreContextResult/{id} 	 Reference object for an in-store request. 	 0 	 1 	 
+POST 	 /InStoreReaderOriginDetails 	 Additional information about the payment method supplied by an in-store payment reader.  n/a 	 0 	 1 	 
+POST 	 /Node/{id} 	 Relay compatible Node interface.  id: ID! Global ID for a given object. 	 0 	 1 	 
+POST 	 /Payment/{id} 	 A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund). 	 0 	 1 	 
+POST 	 /Payment/{legacyId} 	 A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).   legacyId: ID! Legacy unique identifier. 	 0 	 1 	 
+POST 	 /PaymentContext 	 Context associated with a transaction.  id: ID! Unique identifier. 	 0 	 1 	 
+POST 	 /PaymentStatusEvent 	 Status event in the lifecycle of a payment.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between status and event. 0 hierarchical relations were detected out of 2
+POST 	 /AccountCreationStatus 	 The status of the business account creation request.  n/a 	 0 	 1 	 
+POST 	 /ApplePayStatus 	 The environment being used for Apple Pay.  n/a 	 0 	 1 	 
+POST 	 /ApplicationBankAccountPurpose 	 The purpose of the merchant application bank account.  n/a 	 0 	 1 	 
+POST 	 /ApplicationStatus 	 The status of a merchant account application.  n/a 	 0 	 1 	 
+POST 	 /BinRecordValue 	 A boolean-like value that includes UNKNOWN in the case where the information isn't available.  n/a 	 0 	 1 	 
