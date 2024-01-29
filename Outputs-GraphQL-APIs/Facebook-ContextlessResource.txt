@@ -3,72 +3,72 @@ Count: 0
 
 ***Patterns*** 
 Count: 69
-/v18.0/{album-id} 	 Contextual Resource Names
- /{group_id}/albums	 Contextual Resource Names
+/v18.0/{album-id}	 Contextual Resource Names
+/{group_id}/albums	 Contextual Resource Names
 /v18.0/{album-id}/comments	 Contextual Resource Names
-/v18.0/{album-id}/likes 	 Contextual Resource Names
- /v18.0/{album-id}/photos 	 Contextual Resource Names
- /{album_id}/photos 	 Contextual Resource Names
-/v18.0/{album-id}/picture 	 Contextual Resource Names
-/v18.0/{app-link-host-id} 	 Contextual Resource Names
+/v18.0/{album-id}/likes	 Contextual Resource Names
+/v18.0/{album-id}/photos	 Contextual Resource Names
+/{album_id}/photos	 Contextual Resource Names
+/v18.0/{album-id}/picture	 Contextual Resource Names
+/v18.0/{app-link-host-id}	 Contextual Resource Names
 /app/app_link_hosts	 Contextual Resource Names
 /v18.0/{app-link-host-id}	 Contextual Resource Names
 /v18.0/{app-link-host-id}	 Contextual Resource Names
-/v18.0/{application-id} 	 Contextual Resource Names
- /{business_id}/owned_apps 	 Contextual Resource Names
- /v18.0/{application-id}/accounts 	 Contextual Resource Names
- /{application_id}/accounts 	 Contextual Resource Names
-/v18.0/{application-id}/ad_placement_groups 	 Contextual Resource Names
- /v18.0/{application-id}/adnetworkanalytics_results	 Contextual Resource Names
+/v18.0/{application-id}	 Contextual Resource Names
+/{business_id}/owned_apps	 Contextual Resource Names
+/v18.0/{application-id}/accounts	 Contextual Resource Names
+/{application_id}/accounts	 Contextual Resource Names
+/v18.0/{application-id}/ad_placement_groups	 Contextual Resource Names
+/v18.0/{application-id}/adnetworkanalytics_results	 Contextual Resource Names
 /v18.0/{application-id}/aem_attribution	 Contextual Resource Names
 /v18.0/{application-id}/aem_conversion_configs	 Contextual Resource Names
 /v18.0/{application-id}/aem_conversion_filter	 Contextual Resource Names
- /v19.0/{application-id}/agencies 	 Contextual Resource Names
- /v19.0/{application-id}/app_event_types	 Contextual Resource Names
- /v19.0/{application-id}/app_installed_groups	 Contextual Resource Names
- /v19.0/{application-id}/appassets 	 Contextual Resource Names
- /v19.0/{application-id}/button_auto_detection_device_selection	 Contextual Resource Names
+/v19.0/{application-id}/agencies	 Contextual Resource Names
+/v19.0/{application-id}/app_event_types	 Contextual Resource Names
+/v19.0/{application-id}/app_installed_groups	 Contextual Resource Names
+/v19.0/{application-id}/appassets	 Contextual Resource Names
+/v19.0/{application-id}/button_auto_detection_device_selection	 Contextual Resource Names
 /v19.0/{application-id}/cloudbridge_settings	 Contextual Resource Names
- /v19.0/{application-id}/da_checks	 Contextual Resource Names
- /v19.0/{application-id}/events 	 Contextual Resource Names
+/v19.0/{application-id}/da_checks	 Contextual Resource Names
+/v19.0/{application-id}/events	 Contextual Resource Names
 /v19.0/{application-id}/ios_skadnetwork_conversion_config	 Contextual Resource Names
- /v19.0/{application-id}/mobile_sdk_gk 	 Contextual Resource Names
- /v19.0/{application-id}/model_asset 	 Contextual Resource Names
- /v19.0/{application-id}/monetized_digital_store_objects 	 Contextual Resource Names
- /v19.0/{application-id}/permissions 	 Contextual Resource Names
- /v19.0/{application-id}/products 	 Contextual Resource Names
- /v19.0/{application-id}/purchases	 Contextual Resource Names
- /v19.0/{app-id}/roles 	 Contextual Resource Names
- /v19.0/{application-id}/subscribed_domains 	 Contextual Resource Names
- /v19.0/{application-id}/subscribed_domains_phishing 	 Contextual Resource Names
- /{application_id}/app_indexing 	 Contextual Resource Names
- /{application_id}/codeless_event_mappings 	 Contextual Resource Names
- /{application_id}/page_activities 	 Contextual Resource Names
- /{business_id}/client_apps	 Contextual Resource Names
- /{application_id}/mmp_auditing	 Contextual Resource Names
- /act_{ad_account_id}/subscribed_apps 	 Contextual Resource Names
-  /{page_id}/subscribed_apps. 	 Contextual Resource Names
- /act_{ad_account_id}/subscribed_apps 	 Contextual Resource Names
- /{application_id}/activities 	 Contextual Resource Names
- /v19.0/{application-id}/ad_placement_groups 	 Contextual Resource Names
- /v19.0/{application-id}/adnetworkanalytics_results 	 Contextual Resource Names
- /v19.0/{application-id}/mobile_sdk_gk 	 Contextual Resource Names
- /v19.0/{application-id}/model_asset 	 Contextual Resource Names
- /v19.0/{application-id}/monetized_digital_store_objects 	 Contextual Resource Names
- /v19.0/{application-id}/permissions 	 Contextual Resource Names
- /v19.0/{app-id}/picture 	 Contextual Resource Names
- /v19.0/{application-id}/products 	 Contextual Resource Names
- /v19.0/{application-id}/purchases 	 Contextual Resource Names
- /v19.0/{app-id}/roles 	 Contextual Resource Names
- /v19.0/{app-id}/scores 	 Contextual Resource Names
- /v19.0/{app-id}/scores 	 Contextual Resource Names
- /v19.0/{application-id}/subscribed_domains 	 Contextual Resource Names
- /v19.0/{application-id}/subscribed_domains_phishing 	 Contextual Resource Names
- /v19.0/{app-id}/subscriptions 	 Contextual Resource Names
- /v19.0/{app-id}/subscriptions	 Contextual Resource Names
- /v19.0/{app-id}/translations 	 Contextual Resource Names
- /v19.0/branded_content_search 	 Contextual Resource Names
- /v19.0/{cpas-advertiser-partnership-recommendation-id} 	 Contextual Resource Names
-/v19.0/{canvas-id} 	 Contextual Resource Names
- /v19.0/{canvas-id}/preview 	 Contextual Resource Names
- /v19.0/{canvas-id}/previews 	 Contextual Resource Names
+/v19.0/{application-id}/mobile_sdk_gk	 Contextual Resource Names
+/v19.0/{application-id}/model_asset	 Contextual Resource Names
+/v19.0/{application-id}/monetized_digital_store_objects	 Contextual Resource Names
+/v19.0/{application-id}/permissions	 Contextual Resource Names
+/v19.0/{application-id}/products	 Contextual Resource Names
+/v19.0/{application-id}/purchases	 Contextual Resource Names
+/v19.0/{app-id}/roles	 Contextual Resource Names
+/v19.0/{application-id}/subscribed_domains	 Contextual Resource Names
+/v19.0/{application-id}/subscribed_domains_phishing	 Contextual Resource Names
+/{application_id}/app_indexing	 Contextual Resource Names
+/{application_id}/codeless_event_mappings	 Contextual Resource Names
+/{application_id}/page_activities	 Contextual Resource Names
+/{business_id}/client_apps	 Contextual Resource Names
+/{application_id}/mmp_auditing	 Contextual Resource Names
+/act_{ad_account_id}/subscribed_apps	 Contextual Resource Names
+/{page_id}/subscribed_apps.	 Contextual Resource Names
+/act_{ad_account_id}/subscribed_apps	 Contextual Resource Names
+/{application_id}/activities	 Contextual Resource Names
+/v19.0/{application-id}/ad_placement_groups	 Contextual Resource Names
+/v19.0/{application-id}/adnetworkanalytics_results	 Contextual Resource Names
+/v19.0/{application-id}/mobile_sdk_gk	 Contextual Resource Names
+/v19.0/{application-id}/model_asset	 Contextual Resource Names
+/v19.0/{application-id}/monetized_digital_store_objects	 Contextual Resource Names
+/v19.0/{application-id}/permissions	 Contextual Resource Names
+/v19.0/{app-id}/picture	 Contextual Resource Names
+/v19.0/{application-id}/products	 Contextual Resource Names
+/v19.0/{application-id}/purchases	 Contextual Resource Names
+/v19.0/{app-id}/roles	 Contextual Resource Names
+/v19.0/{app-id}/scores	 Contextual Resource Names
+/v19.0/{app-id}/scores	 Contextual Resource Names
+/v19.0/{application-id}/subscribed_domains	 Contextual Resource Names
+/v19.0/{application-id}/subscribed_domains_phishing	 Contextual Resource Names
+/v19.0/{app-id}/subscriptions	 Contextual Resource Names
+/v19.0/{app-id}/subscriptions	 Contextual Resource Names
+/v19.0/{app-id}/translations	 Contextual Resource Names
+/v19.0/branded_content_search	 Contextual Resource Names
+/v19.0/{cpas-advertiser-partnership-recommendation-id}	 Contextual Resource Names
+/v19.0/{canvas-id}	 Contextual Resource Names
+/v19.0/{canvas-id}/preview	 Contextual Resource Names
+/v19.0/{canvas-id}/previews	 Contextual Resource Names

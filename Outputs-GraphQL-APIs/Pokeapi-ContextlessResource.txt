@@ -7,20 +7,20 @@ Count: 24
 /v2/next/	 Contextual Resource Names
 /v2/previous/	 Contextual Resource Names
 /v2/results/	 Contextual Resource Names
- /v2/berry/{id or name}/	 Contextual Resource Names
- /v2/berry/{id}/	 Contextual Resource Names
- /v2/berry/{name}/	 Contextual Resource Names
- /v2/berry/{growth_time}/	 Contextual Resource Names
- /v2/berry/{max_harvest}/	 Contextual Resource Names
- /v2/berry/{natural_gift_power}/	 Contextual Resource Names
- /v2/berry/{size}/	 Contextual Resource Names
- /v2/berry/{smoothness}/	 Contextual Resource Names
- /v2/berry/{soil_dryness}/	 Contextual Resource Names
- /v2/berry/{firmness}/	 Contextual Resource Names
- /v2/berry/{flavors}/	 Contextual Resource Names
- /v2/berry/{items}/	 Contextual Resource Names
- /v2/berry/{natural_gift_type}/	 Contextual Resource Names
- /v2/berry/{potency}/	 Contextual Resource Names
+/v2/berry/{id or name}/	 Contextual Resource Names
+/v2/berry/{id}/	 Contextual Resource Names
+/v2/berry/{name}/	 Contextual Resource Names
+/v2/berry/{growth_time}/	 Contextual Resource Names
+/v2/berry/{max_harvest}/	 Contextual Resource Names
+/v2/berry/{natural_gift_power}/	 Contextual Resource Names
+/v2/berry/{size}/	 Contextual Resource Names
+/v2/berry/{smoothness}/	 Contextual Resource Names
+/v2/berry/{soil_dryness}/	 Contextual Resource Names
+/v2/berry/{firmness}/	 Contextual Resource Names
+/v2/berry/{flavors}/	 Contextual Resource Names
+/v2/berry/{items}/	 Contextual Resource Names
+/v2/berry/{natural_gift_type}/	 Contextual Resource Names
+/v2/berry/{potency}/	 Contextual Resource Names
 /v2/berry-firmness/{id}/	 Contextual Resource Names
 /v2/berry-firmness/{id or name}/	 Contextual Resource Names
 /v2/berry-firmness/{name}/	 Contextual Resource Names

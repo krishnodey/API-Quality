@@ -1,0 +1,25 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET	/v2/count/	The total number of resources available from this API.  n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/next/	The URL for the next page in the list.  n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/previous/	The URL for the previous page in the list.  n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/results/	A list of named API resources.  n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{id or name}/	Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by PokÃ©mon. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{id}/	The identifier for this resource. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{name}/	The name for this resource. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{growth_time}/	Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{max_harvest}/	The maximum number of these berries that can grow on one tree in Generation IV. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{natural_gift_power}/	The power of the move "Natural Gift" when used with this Berry. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{size}/	The size of this Berry, in millimeters. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{smoothness}/	The smoothness of this Berry, used in making PokÃ©blocks or Poffins. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{soil_dryness}/	The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{firmness}/	The firmness of this berry, used in making PokÃ©blocks or Poffins. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{flavors}/	A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{items}/	Berries are actually items. This is a reference to the item specific data for this berry. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{natural_gift_type}/	The type inherited by "Natural Gift" when used with this Berry. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry/{potency}/	How powerful the referenced flavor is for this berry. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry-firmness/{id}/	The identifier for this resource. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry-firmness/{id or name}/	n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry-firmness/{name}/	The name for this resource. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry-firmness/{berries}/	A list of the berries with this firmness. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry-firmness/{names}/	The name of this resource listed in different languages. n/a 	 0 	 1 	 Contextual Resource Names
+GET	v2/berry-flavor/{id or name}/	Flavors determine whether a PokÃ©mon will benefit or suffer from eating a berry based on their nature. n/a 	 0 	 1 	 Contextual Resource Names

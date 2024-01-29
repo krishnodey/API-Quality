@@ -33,8 +33,8 @@ GET 	 /bui/{factory}({persid}) 	 Returns the object details specified by the per
 PUT 	 /bui/{factory}({persid}) 	 Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory. 	 0 	 1 	
 GET 	 /bui/{factory} 	 Returns the objects based on the parameters for the mentioned factory 	 0 	 1 	
 POST 	 /bui/{factory} 	 Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.) 	 0 	 1 	
-GET 	 /gs/mytkt_active 	 Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 0 	 1 	
-GET 	 /gs/mytkt_inactive 	 Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 0 	 1 	
+GET 	 /gs/mytkt_active 	 Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 1 	 0 	 [underscore found] 
+GET 	 /gs/mytkt_inactive 	 Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 1 	 0 	 [underscore found] 
 GET 	 /getServiceRequest 	 Returns service requests of logged in user, if Service Catalog is integrated. 	 0 	 1 	
 GET 	 /pcatSearch 	 Returns relevant categories(and offerings if Service Catalog is integrated) based on configured parameters in Service Point configuration. 	 0 	 1 	
 GET 	 /getOfferings 	 Returns featured offerings for the loggedin users domain, if Service Catalog is integrated. 	 0 	 1 	

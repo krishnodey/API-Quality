@@ -46,7 +46,7 @@ for base in base_path:
                 pattern_count = 0
 
                 # Read the file line by line
-                with open(file_path, 'r') as file:
+                with open(file_path, 'r', encoding='utf-8') as file:
                     lines = file.readlines()
 
                     # Iterate through each line

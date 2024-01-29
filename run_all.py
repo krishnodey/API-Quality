@@ -20,7 +20,6 @@ def run(selected, uri_path, base_path):
     #analyzer_obj.detect_amorphous_uri()
     
     
-
     print("Detection of AmorphousURI:")
     result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_amorphous_uri(data)
     pattern_type = "AmorphousURI"
@@ -71,17 +70,15 @@ def run(selected, uri_path, base_path):
     print("Finished Detection of Non-descriptiveURI:")
     
 
-    '''
+    
     print("Detection of ContextlessResource:")
     result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_contextless(data)
     pattern_type = "ContextlessResource"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
     print("Finished Detection of ContextlessResource:")
-    '''
-
-
-
+    
+    
     print("Detection of NonHierarchicalNodes:")
     result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_non_hierarchical_nodes(data)
     pattern_type = "NonHierarchicalNodes"
@@ -89,15 +86,15 @@ def run(selected, uri_path, base_path):
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
     print("Finished Detection of NonHierarchicalNodes:")
 
-    '''
+
     print("Detection of LessCohisiveDocumentation:")
     result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_less_cohesive_documentation(data)
     pattern_type = "LessCohisiveDoc"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
     print("Finished Detection of LessCohisiveDocumentation:")
-    '''
-    
+
+
     print("Detection of InconsistantDocumentation:")
     result_AP, result_P, p_count, ap_count, re= analyzer_obj.detect_inconsistent_documentations(data)
     pattern_type = "InconsistantDoc"
@@ -110,8 +107,8 @@ def run(selected, uri_path, base_path):
 
 
 total_time = 0
-#base_path = ["REST-APIs"] #, "GraphQL-APIs"]
-base_path = ["GraphQL-APIs"]
+base_path = ["REST-APIs"] #, "GraphQL-APIs"]
+#base_path = ["GraphQL-APIs"]
 for api in base_path:
     print(f"Detecting (Anti)Pattern for {api}")
     api_path = f"{api.strip()}/APIList.txt"

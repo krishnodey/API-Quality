@@ -3,31 +3,31 @@ Count: 0
 
 ***Patterns*** 
 Count: 28
- /{ig-comment-id}?fields={fields} 	 Contextual Resource Names
- /oauth/access_token 	 Contextual Resource Names
- /{user-id}/accounts?access_token={user-access-token} 	 Contextual Resource Names
- /{app-id}|{client-token} 	 Contextual Resource Names
- /{api-version}/{ig-comment-id} 	 Contextual Resource Names
- /{api-version}/{ig-comment-id}/replies 	 Contextual Resource Names
- /{ig-comment-id}/replies?message={message} 	 Contextual Resource Names
- /{ig-media-id}/comments 	 Contextual Resource Names
- /{ig-comment-id}/replies 	 Contextual Resource Names
- /{ig-comment-id}	 Contextual Resource Names
- /{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	 Contextual Resource Names
- /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	 Contextual Resource Names
- /{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	 Contextual Resource Names
- {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	 Contextual Resource Names
- /{api-version}/{ig-user-id} 	 Contextual Resource Names
- /{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	 Contextual Resource Names
- /v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 Contextual Resource Names
- {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	 Contextual Resource Names
- /{api-version}//{instagram-container-id} 	 Contextual Resource Names
- /{api-version}//{ig-hashtag-id} 	 Contextual Resource Names
- /{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	 Contextual Resource Names
- /{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} 	 Contextual Resource Names
- /{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	 Contextual Resource Names
- /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} 	 Contextual Resource Names
+/{ig-comment-id}?fields={fields}	 Contextual Resource Names
+/oauth/access_token	 Contextual Resource Names
+/{user-id}/accounts?access_token={user-access-token}	 Contextual Resource Names
+/{app-id}|{client-token}	 Contextual Resource Names
+/{api-version}/{ig-comment-id}	 Contextual Resource Names
+/{api-version}/{ig-comment-id}/replies	 Contextual Resource Names
+/{ig-comment-id}/replies?message={message}	 Contextual Resource Names
+/{ig-media-id}/comments	 Contextual Resource Names
+/{ig-comment-id}/replies	 Contextual Resource Names
+/{ig-comment-id}	 Contextual Resource Names
+/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	 Contextual Resource Names
+/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	 Contextual Resource Names
+/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	 Contextual Resource Names
+{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	 Contextual Resource Names
+/{api-version}/{ig-user-id}	 Contextual Resource Names
+/{api-version}/{ig-user-id}?fields=business_discovery.username({username})	 Contextual Resource Names
+/v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	 Contextual Resource Names
+{api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	 Contextual Resource Names
+/{api-version}//{instagram-container-id}	 Contextual Resource Names
+/{api-version}//{ig-hashtag-id}	 Contextual Resource Names
+/{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	 Contextual Resource Names
+/{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields}	 Contextual Resource Names
+/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	 Contextual Resource Names
+/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	 Contextual Resource Names
 /{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	 Contextual Resource Names
- /{ig-user-id}?fields=business_discovery.username({username}) 	 Contextual Resource Names
+/{ig-user-id}?fields=business_discovery.username({username})	 Contextual Resource Names
 /v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	 Contextual Resource Names
- /{api-version}/{ig-user-id}/insights 	 Contextual Resource Names
+/{api-version}/{ig-user-id}/insights	 Contextual Resource Names

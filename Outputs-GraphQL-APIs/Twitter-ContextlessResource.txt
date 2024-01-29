@@ -3,54 +3,54 @@ Count: 0
 
 ***Patterns*** 
 Count: 51
- /v2/users/:id/bookmarks/:tweet_id 	 Contextual Resource Names
- /v2/users/:id/bookmarks	 Contextual Resource Names
- /v2/users/:id/bookmarks	 Contextual Resource Names
- /v2/tweets/search/stream	 Contextual Resource Names
-/v2/tweets/search/stream/rules 	 Contextual Resource Names
- /tweets/search/stream 	 Contextual Resource Names
- /v2/tweets/:id/hidden 	 Contextual Resource Names
- /v2/users/:id/likes/:tweet_id 	 Contextual Resource Names
- /v2/tweets/:id/liking_users 	 Contextual Resource Names
- /v2/users/:id/liked_tweets 	 Contextual Resource Names
- /v2/users/:id/likes 	 Contextual Resource Names
- /v2/tweets/:id 	 Contextual Resource Names
- /v2/tweets 	 Contextual Resource Names
- /v2/tweets/:id/quote_tweets 	 Contextual Resource Names
- /v2/users/:id/retweets/:source_tweet_id 	 Contextual Resource Names
- /v2/tweets/:id/retweeted_by 	 Contextual Resource Names
- /v2/tweets/:id/retweets 	 Contextual Resource Names
-/v2/users/:id/retweets 	 Contextual Resource Names
-/v2/tweets/search/all 	 Contextual Resource Names
- /v2/tweets/search/recent 	 Contextual Resource Names
- /v2/users/:id/mentions 	 Contextual Resource Names
- /v2/users/:id/timelines/reverse_chronological 	 Contextual Resource Names
- /v2/users/:id/tweets 	 Contextual Resource Names
- /v2/tweets/counts/all 	 Contextual Resource Names
- /v2/tweets/counts/recent 	 Contextual Resource Names
- /v2/users/:id/blocking 	 Contextual Resource Names
- /v2/users/:source_user_id/following/:target_user_id 	 Contextual Resource Names
- /v2/users/:id/followers 	 Contextual Resource Names
- /v2/users/:id/following 	 Contextual Resource Names
- /v2/users/:id/following 	 Contextual Resource Names
- /v2/users/:source_user_id/muting/:target_user_id 	 Contextual Resource Names
- /v2/users/:id/muting 	 Contextual Resource Names
- /v2/users/:id/muting 	 Contextual Resource Names
- /v2/users/search 	 Contextual Resource Names
- /v2/users 	 Contextual Resource Names
- /v2/users/:id 	 Contextual Resource Names
- /v2/users/by 	 Contextual Resource Names
- /v2/users/by/username/:username 	 Contextual Resource Names
- /v2/users/me 	 Contextual Resource Names
- /v2/spaces/search 	 Contextual Resource Names
- /v2/spaces/:id 	 Contextual Resource Names
- /v2/spaces/:id/buyers 	 Contextual Resource Names
- /v2/spaces/:id/tweets 	 Contextual Resource Names
- /v2/spaces/by/creator_ids 	 Contextual Resource Names
- /v2/lists/:id/tweets 	 Contextual Resource Names
- /v2/lists/:id 	 Contextual Resource Names
- /v2/users/:id/owned_lists 	 Contextual Resource Names
- /v2/lists/:id/members/:user_id 	 Contextual Resource Names
- /v2/lists/:id/members 	 Contextual Resource Names
- /v2/users/:id/list_memberships 	 Contextual Resource Names
-  /v2/lists/:id/members 	 Contextual Resource Names
+/v2/users/:id/bookmarks/:tweet_id	 Contextual Resource Names
+/v2/users/:id/bookmarks	 Contextual Resource Names
+/v2/users/:id/bookmarks	 Contextual Resource Names
+/v2/tweets/search/stream	 Contextual Resource Names
+/v2/tweets/search/stream/rules	 Contextual Resource Names
+/tweets/search/stream	 Contextual Resource Names
+/v2/tweets/:id/hidden	 Contextual Resource Names
+/v2/users/:id/likes/:tweet_id	 Contextual Resource Names
+/v2/tweets/:id/liking_users	 Contextual Resource Names
+/v2/users/:id/liked_tweets	 Contextual Resource Names
+/v2/users/:id/likes	 Contextual Resource Names
+/v2/tweets/:id	 Contextual Resource Names
+/v2/tweets	 Contextual Resource Names
+/v2/tweets/:id/quote_tweets	 Contextual Resource Names
+/v2/users/:id/retweets/:source_tweet_id	 Contextual Resource Names
+/v2/tweets/:id/retweeted_by	 Contextual Resource Names
+/v2/tweets/:id/retweets	 Contextual Resource Names
+/v2/users/:id/retweets	 Contextual Resource Names
+/v2/tweets/search/all	 Contextual Resource Names
+/v2/tweets/search/recent	 Contextual Resource Names
+/v2/users/:id/mentions	 Contextual Resource Names
+/v2/users/:id/timelines/reverse_chronological	 Contextual Resource Names
+/v2/users/:id/tweets	 Contextual Resource Names
+/v2/tweets/counts/all	 Contextual Resource Names
+/v2/tweets/counts/recent	 Contextual Resource Names
+/v2/users/:id/blocking	 Contextual Resource Names
+/v2/users/:source_user_id/following/:target_user_id	 Contextual Resource Names
+/v2/users/:id/followers	 Contextual Resource Names
+/v2/users/:id/following	 Contextual Resource Names
+/v2/users/:id/following	 Contextual Resource Names
+/v2/users/:source_user_id/muting/:target_user_id	 Contextual Resource Names
+/v2/users/:id/muting	 Contextual Resource Names
+/v2/users/:id/muting	 Contextual Resource Names
+/v2/users/search	 Contextual Resource Names
+/v2/users	 Contextual Resource Names
+/v2/users/:id	 Contextual Resource Names
+/v2/users/by	 Contextual Resource Names
+/v2/users/by/username/:username	 Contextual Resource Names
+/v2/users/me	 Contextual Resource Names
+/v2/spaces/search	 Contextual Resource Names
+/v2/spaces/:id	 Contextual Resource Names
+/v2/spaces/:id/buyers	 Contextual Resource Names
+/v2/spaces/:id/tweets	 Contextual Resource Names
+/v2/spaces/by/creator_ids	 Contextual Resource Names
+/v2/lists/:id/tweets	 Contextual Resource Names
+/v2/lists/:id	 Contextual Resource Names
+/v2/users/:id/owned_lists	 Contextual Resource Names
+/v2/lists/:id/members/:user_id	 Contextual Resource Names
+/v2/lists/:id/members	 Contextual Resource Names
+/v2/users/:id/list_memberships	 Contextual Resource Names
+/v2/lists/:id/members	 Contextual Resource Names

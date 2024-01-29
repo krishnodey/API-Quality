@@ -78,24 +78,12 @@ class ApiAnalyzer:
             #print(words)
             comment = ""
             found_AP = 0
-
-            if "%5F".lower() in tmp[1].lower() or "%5F" in tmp[1]:
-                found_AP = 1
-                comment += " [underscore found] "
-                #c = line.strip()[-1]
-            elif tmp[1].strip()[-1] == '/' or tmp[1].strip()[-1] == '\\':
-                found_AP = 1
-                comment += " [trailing slash found] "
-            else:
-                for extension in extensions:
-                    if extension.lower() in tmp[1].lower() or extension.upper() in tmp[1]:
-                        found_AP = 1
-                        comment += " [extension found] "
-            
+        
             #elif any(ch.isupper() for wd in words):
             for word in words:
                 word = word.strip()
                 word = word.replace("<", '').replace(">", '') #replace("{", '').replace("}",'')
+                flag = 0
                 if word: 
                     if word[0].strip() == "{" and word[-1].strip() == "}":
                         #print("variable")
@@ -103,7 +91,28 @@ class ApiAnalyzer:
                     elif any(ch.isupper() for ch in word) and is_camel_case(word) == "False":
                         found_AP = 1
                         comment += " [uppercase found] "
-
+                        flag = 1
+                    
+                    elif "%5F" in word.lower() or "%5F" in word or "_" in word:
+                        found_AP = 1
+                        comment += " [underscore found] "
+                        flag = 1
+                    elif tmp[1].strip()[-1] == '/' or tmp[1].strip()[-1] == '\\':
+                        found_AP = 1
+                        comment += " [trailing slash found] "
+                        flag = 1
+                    else:
+                        for extension in extensions:
+                            if extension.lower() in tmp[1].lower() or extension.upper() in tmp[1]:
+                                found_AP = 1
+                                comment += " [extension found] "
+                                flag = 1
+                if flag == 1:
+                    break
+                        
+                
+                    
+            
             if found_AP == 1:
                 ap_count = ap_count + 1
                 amorphus_result_AP.append(tmp[1].strip() + "\t" + AP + "\t" + comment)
@@ -958,7 +967,7 @@ class ApiAnalyzer:
             # Iterate through topics and print scores vertically
             for topic_idx in range(len(topic_words)):
                 topic_name = f"Topic {topic_idx + 1}"
-                print(f"  {topic_name}:")
+                #print(f"  {topic_name}:")
                 tmp = 0
                 for node, word_scores in node_word_similarity.items():
                     score = word_scores.get(topic_name, {})
@@ -971,11 +980,11 @@ class ApiAnalyzer:
                     tmp += max_value
                 avg_tmp = tmp / len(node_word_similarity)
                 topic_avg.append(avg_tmp)
-                print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
             
-            print(f"Total Average for All Topics: {topic_avg}\n")
+            #print(f"Total Average for All Topics: {topic_avg}\n")
             #for avg in topic_avg:
-            print(max(topic_avg))
+            #print(max(topic_avg))
             if round(max(topic_avg), 1) >= 0.5:
                 #print("cohisive")
                 p_count = p_count + 1

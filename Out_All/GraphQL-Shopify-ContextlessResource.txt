@@ -1,0 +1,34 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+POST	/delegateAccessTokenCreate	creating a delegate access token. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/storefrontAccessTokenCreate	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/storefrontAccessTokenDelete	Deletes a storefront access token.  n/a 	 0 	 1 	 Contextual Resource Names
+POST	/AccessScope	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/DelegateAccessToken	A token that delegates a set of scopes from the original permission. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/StorefrontAccessToken	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop. n/a 	 0 	 1 	 Contextual Resource Names
+GET	/shopifyqlQuery	Returns the results of a ShopifyQL query  n/a 	 0 	 1 	 Contextual Resource Names
+POST	/ErrorPosition	Error position information in a ShopifyQL parsing error.  n/a 	 0 	 1 	 Contextual Resource Names
+POST	/ParseError	A ShopifyQL parsing error. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/ParseErrorRange	A range of ShopifyQL parsing errors. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/PolarisVizDataPoint	A PolarisViz data point structure for ShopifyQL query. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/PolarisVizDataSeries	The data series used for PolarisViz visualization. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/PolarisVizResponse	A PolarisViz response to a ShopifyQL query. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/TableData	The result in a tabular format with schema information and formatted and unformatted row data. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/TableDataColumn	A nested array representation of the data. An index in an array represents a row number. n/a 	 0 	 1 	 Contextual Resource Names
+POST	/TableResponse	The default table response structure for a ShopifyQL query.  n/a 	 0 	 1 	 Contextual Resource Names
+GET	/query/{id}	Lookup an App by ID or return the currently authenticated App.  id ID The ID to lookup the App by. 	 0 	 1 	 Contextual Resource Names
+GET	/appByHandle	Fetches app by handle. Returns null if the app doesn't exist. 	 0 	 1 	 Contextual Resource Names
+GET	/appByKey	Fetches an app by its client ID. Returns null if the app doesn't exist. 	 0 	 1 	 Contextual Resource Names
+GET	/appInstallation/{id}	Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App. id ID ID used to lookup AppInstallation. 	 0 	 1 	 Contextual Resource Names
+GET	/appInstallations	A list of app installations. To use this query, you need to contact Shopify Support to grant your custom app the read_apps access scope. Public apps can't be granted this access scope. 	 0 	 1 	 Contextual Resource Names
+GET	/currentAppInstallation	Return the AppInstallation for the currently authenticated App. 	 0 	 1 	 Contextual Resource Names
+GET	/publication/{id}	Lookup a publication by ID. id id ID! non-null The ID of the Publication to return. 	 0 	 1 	 Contextual Resource Names
+GET	/publications	List of publications. 	 0 	 1 	 Contextual Resource Names
+POST	/publicationCreate	Creates a publication. 	 0 	 1 	 Contextual Resource Names
+POST	/publicationDelete{id}	Deletes a publication. id ID! required The ID of the publication to delete. 	 0 	 1 	 Contextual Resource Names
+POST	/publicationUpdate	Updates a publication.  id ID! required The ID of the publication to update. 	 0 	 1 	 Contextual Resource Names
+POST	/AppFeedback	Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store. 	 0 	 1 	 Contextual Resource Names
+POST	/AppInstallation	Represents an installed application on a shop. 	 0 	 1 	 Contextual Resource Names
+POST	/FailedRequirement	Requirements that must be met before an app can be installed. 	 0 	 1 	 Contextual Resource Names
+POST	/Link	A link to direct users to. 	 0 	 1 	 Contextual Resource Names
+POST	/Publication	A publication is a group of products and collections that is published to an app. 	 0 	 1 	 Contextual Resource Names
+POST	/ResourceFeedback	Represents feedback from apps about a resource, and the steps required to set up the apps on the shop. 	 0 	 1 	 Contextual Resource Names

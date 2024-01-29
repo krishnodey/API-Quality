@@ -21,7 +21,7 @@ GET >>/v18.0/{application-id}/aem_conversion_filter>>Boolean for if product_set_
 GET >> /v19.0/{application-id}/agencies >> The businesses which are not owner but can advertise for this app>>
 GET >> /v19.0/{application-id}/app_event_types>>Info about App Events logged for the app>>
 GET >> /v19.0/{application-id}/app_installed_groups>>List of facebook groups the app is installed in>>group_id group_id ID Id of the group to check if app is installed in it or not
-GET >> /v19.0/{application-id}/appassets >> appassets >> 
+GET >> /v19.0/{application-id}/appassets >> An Edge to the CanvasAppAsset >> 
 GET >> /v19.0/{application-id}/button_auto_detection_device_selection>> to turn on auto device sampling.>>device_id string Device id of the given app.
 GET >>/v19.0/{application-id}/cloudbridge_settings>>ApplicationCloudbridgeSettings >> 
 GET >> /v19.0/{application-id}/da_checks>>A list of results after running Dynamic Ads checks on this app.>>checks list<string> Default value: Vector A list of Dynamic Ads checks that will be run. If not specified, all checks will be run. Valid values are: app_missing_param_in_events connection_method enum{ALL, APP, BROWSER, SERVER} Connection method of pixel/app event to check. This is optional

@@ -1,6 +1,10 @@
 ***Anti-Pattern*** 
-Count: 14
+Count: 22
 /deployment/resources/virtual data center./<virtual data center.UID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/vm_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/vdcs/{uuid}/vm_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/volume_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/vdcs/{uuid}/volume_configurations	Amorphous End-point	 [underscore found] 
 /deployment/resources/subnets/<subnetUUID>	Amorphous End-point	 [uppercase found] 
 /deployment/resources/subnet/<subnetUUID>/addresses	Amorphous End-point	 [uppercase found] 
 /deployment/resources/subnet/<subnetUUID>/addresses	Amorphous End-point	 [uppercase found] 
@@ -14,14 +18,14 @@ Count: 14
 /deployment/resources/instances/<instanceUUID>	Amorphous End-point	 [uppercase found] 
 /deployment/resources/volumes/<volumeUUID>	Amorphous End-point	 [uppercase found] 
 /deployment/resources/instances/<instanceUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/instance_snapshots	Amorphous End-point	 [underscore found] 
+/audit/resources/audit_config	Amorphous End-point	 [underscore found] 
+/admin/resources/backup_subcomponents/{id}	Amorphous End-point	 [underscore found] 
+/admin/resources/chassis_management_modules	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 20
+Count: 12
 /deployment/resources/instances	Tidy End-point	
-/deployment/resources/vm_configurations	Tidy End-point	
-/deployment/resources/vdcs/{uuid}/vm_configurations	Tidy End-point	
-/deployment/resources/volume_configurations	Tidy End-point	
-/deployment/resources/vdcs/{uuid}/volume_configurations	Tidy End-point	
 /deployment/resources/subnets	Tidy End-point	
 /deployment/resources/addresses	Tidy End-point	
 /deployment/resources/credentials	Tidy End-point	
@@ -31,9 +35,5 @@ Count: 20
 /deployment/resources/addresses	Tidy End-point	
 /deployment/resources/volumes	Tidy End-point	
 /deployment/resources/volumes	Tidy End-point	
-/deployment/resources/instance_snapshots	Tidy End-point	
 /deployment/resources/acls	Tidy End-point	
-/audit/resources/audit_config	Tidy End-point	
 /admin/resources/backup	Tidy End-point	
-/admin/resources/backup_subcomponents/{id}	Tidy End-point	
-/admin/resources/chassis_management_modules	Tidy End-point	

@@ -1,15 +1,16 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 4
+/oauth/access_token	Amorphous End-point	 [underscore found] 
+/access_token	Amorphous End-point	 [underscore found] 
+/refresh_access_token	Amorphous End-point	 [underscore found] 
+/{page-id}?fields=instagram_business_account	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 21
+Count: 17
 /{ig-comment-id}?fields={fields}	Tidy End-point	
 /{ig-comment-id}?hide={hide}	Tidy End-point	
 /{ig-comment-id}	Tidy End-point	
 /oauth/authorize	Tidy End-point	
-/oauth/access_token	Tidy End-point	
-/access_token	Tidy End-point	
-/refresh_access_token	Tidy End-point	
 /oauth/authorize	Tidy End-point	
 /{media-id}	Tidy End-point	
 /{media-id}/children	Tidy End-point	
@@ -23,4 +24,3 @@ Count: 21
 /{ig-media-id}/comments?message={message}	Tidy End-point	
 /{ig-media-id}/comments	Tidy End-point	
 /{ig-user-id}?fields={fields}	Tidy End-point	
-/{page-id}?fields=instagram_business_account	Tidy End-point	

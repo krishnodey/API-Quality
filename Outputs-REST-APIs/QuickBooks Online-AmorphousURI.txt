@@ -10,7 +10,7 @@ Count: 21
 /company/<realmID>/bill/<billId>	Amorphous End-point	 [uppercase found] 
 /company/<realmID>/bill	Amorphous End-point	 [uppercase found] 
 /company/<realmID>/query?query=<selectStatement>	Amorphous End-point	 [uppercase found] 
-/company/<realmID>/companyinfo/<realmID>	Amorphous End-point	 [uppercase found]  [uppercase found] 
+/company/<realmID>/companyinfo/<realmID>	Amorphous End-point	 [uppercase found] 
 /company/<realmID>/companyinfo	Amorphous End-point	 [uppercase found] 
 /company/<realmID>/companyinfo	Amorphous End-point	 [uppercase found] 
 /company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	Amorphous End-point	 [uppercase found] 

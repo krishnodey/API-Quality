@@ -23,7 +23,7 @@ GET 	 /devices/status 	 Returns a list of device statuses. 	 0 	 1
 PUT 	 /devices/<deviceID>/status 	 Modifies current status of a device. 	 1 	 0 	 [uppercase found] 
 GET 	 /devices/<deviceID>/certificate 	 Returns fields for a device's certificates. 	 1 	 0 	 [uppercase found] 
 GET 	 /devices/<deviceID>/shares 	 Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device. 	 1 	 0 	 [uppercase found] 
-GET 	 /devices/<deviceID>/shares/<shareID> 	 Returns a device share. Required permissions: READ on user (device owner) and READ on device. 	 1 	 0 	 [uppercase found]  [uppercase found] 
+GET 	 /devices/<deviceID>/shares/<shareID> 	 Returns a device share. Required permissions: READ on user (device owner) and READ on device. 	 1 	 0 	 [uppercase found] 
 POST 	 /devices/<deviceID>/shares 	 Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device. 	 1 	 0 	 [uppercase found] 
 GET 	 /users/<userID>/shares 	 List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient). 	 1 	 0 	 [uppercase found] 
 GET 	 /devicetypes/<deviceTypeID> 	 Returns the device type of a device. 	 1 	 0 	 [uppercase found] 
@@ -35,13 +35,13 @@ POST 	 /devicetypes/<deviceTypeId>/whitelist 	 Uploads an Approved List as a CSV
 GET 	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	 Returns the status of an uploaded CSV. 	 0 	 1 	
 GET 	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	 Returns the rows that were rejected in an uploaded CSV. 	 0 	 1 	
 GET 	 /devicetypes/<deviceTypeId>/whitelist 	 Returns the Approved List for a device type. 	 0 	 1 	
-DELETE 	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	 Deletes a specified device from a device type's Approved List. 	 1 	 0 	 [uppercase found]  [uppercase found] 
+DELETE 	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	 Deletes a specified device from a device type's Approved List. 	 1 	 0 	 [uppercase found] 
 PUT 	 /devicetypes/<deviceTypeID>/whitelist/enable 	 Enables or disables a device type's Approved List. 	 1 	 0 	 [uppercase found] 
 POST 	 /devicetypes/<deviceTypeID>/whitelist/certificates 	 Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details. 	 1 	 0 	 [uppercase found] 
-DELETE 	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	 Deletes an Approved List certificate for a device type. 	 1 	 0 	 [uppercase found]  [uppercase found] 
+DELETE 	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	 Deletes an Approved List certificate for a device type. 	 1 	 0 	 [uppercase found] 
 GET 	 /devicetypes/<deviceTypeID>/whitelist/status 	 Returns the enabled/disabled status of an Approved List. 	 1 	 0 	 [uppercase found] 
 GET 	 /devicetypes/<deviceTypeID>/whitelist/certificates 	 Returns details of an Approved List certificate. 	 1 	 0 	 [uppercase found] 
-GET 	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	 Returns a specified vendor device ID. 	 1 	 0 	 [uppercase found]  [uppercase found] 
+GET 	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	 Returns a specified vendor device ID. 	 1 	 0 	 [uppercase found] 
 POST 	 /messages 	 Sends a message. 	 0 	 1 	
 GET 	 /messages 	 Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset 	 0 	 1 	
 POST 	 /actions 	 Sends an Action to the specified device. 	 0 	 1 	
