@@ -1,12 +1,9 @@
 ***Anti-Pattern*** 
-Count: 4
+Count: 1
 -/company/<realmID>/query?query=<selectStatement>	Non-pertinent Documentation	Query a bill
--/company/<realmID>/query?query=<selectStatement>	Non-pertinent Documentation	Query companyinfo
--/company/<realmID>/companyinfo	Non-pertinent Documentation	Available with minor version 11. Use this operation to update any of the writable fields of the companyinfo object. The request body must include all writable fields of the existing object as returned in a read response. Writable fields omitted from the request body are set to NULL. The ID of the object to update is specified in the request body.
--/company/<realmID>/companyinfo	Non-pertinent Documentation	Sparse updating provides the ability to update a subset of properties for a given object; only elements specified in the request are updated. Missing elements are left untouched. The ID of the object to update is specified in the request body.? Available with minor version 11.
 
 ***Patterns*** 
-Count: 17
+Count: 20
 -/company/<realmID>/account	Pertinent Documentation	Create an account
 -/company/<realmID>/query?query=<selectStatement>	Pertinent Documentation	Returns the results of the query.
 -/company/<realmID>/account/<accountId>	Pertinent Documentation	Retrieves the details of an Account object that has been previously created.
@@ -15,7 +12,10 @@ Count: 17
 -/company/<realmID>/bill?operation=delete	Pertinent Documentation	This operation deletes the bill object specified in the request body. Include a minimum of Bill.Id and Bill.SyncToken in the request body. You must unlink any linked transactions associated with the bill object before deleting it.
 -/company/<realmID>/bill/<billId>	Pertinent Documentation	Retrieves the details of a bill that has been previously created.
 -/company/<realmID>/bill	Pertinent Documentation	Use this operation to update any of the writable fields of an existing bill object. The request body must include all writable fields of the existing object as returned in a read response. Writable fields omitted from the request body are set to NULL. The ID of the object to update is specified in the request body.
+-/company/<realmID>/query?query=<selectStatement>	Pertinent Documentation	Query companyinfo
 -/company/<realmID>/companyinfo/<realmID>	Pertinent Documentation	Retrieves the details of the CompanyInfo object.
+-/company/<realmID>/companyinfo	Pertinent Documentation	Available with minor version 11. Use this operation to update any of the writable fields of the companyinfo object. The request body must include all writable fields of the existing object as returned in a read response. Writable fields omitted from the request body are set to NULL. The ID of the object to update is specified in the request body.
+-/company/<realmID>/companyinfo	Pertinent Documentation	Sparse updating provides the ability to update a subset of properties for a given object; only elements specified in the request are updated. Missing elements are left untouched. The ID of the object to update is specified in the request body.? Available with minor version 11.
 -/company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	Pertinent Documentation	Query a report
 -/company/<realmID>/invoice	Pertinent Documentation	Create an invoice
 -/company/<realmID>/invoice?operation=delete	Pertinent Documentation	This operation deletes the invoice object specified in the request body. Include a minimum of Invoice.Id and Invoice.SyncToken in the request body. You must unlink any linked transactions associated with the invoice object before deleting it.

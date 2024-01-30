@@ -1,10 +1,9 @@
 ***Anti-Pattern*** 
-Count: 2
--/device/types/{typeId}/devices/{deviceId}/edgestatus	Non-pertinent Documentation	Return the status of containers from an edge node. Return the status of containers from an edge node.
+Count: 1
 -/usage/data-traffic	Non-pertinent Documentation	Retrieve the amount of data used. Retrieve the amount of data used.
 
 ***Patterns*** 
-Count: 55
+Count: 56
 -/bulk/devices	Pertinent Documentation	List devices. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'.
 -/bulk/devices/add	Pertinent Documentation	Register multiple new devices. Register multiple new devices, each request can contain a maximum of 512 kB. The response body will contain the generated authentication tokens for all devices. You must make sure to record these tokens when processing the response. We are not able to retrieve lost authentication tokens.
 -/bulk/devices/remove	Pertinent Documentation	Delete multiple devices. Delete multiple devices, each request can contain a maximum of 512 kB.
@@ -19,6 +18,7 @@ Count: 55
 -/device/types/{typeId}/devices/{deviceId}	Pertinent Documentation	Update device. Updates a device.
 -/device/types/{typeId}/devices/{deviceId}	Pertinent Documentation	Remove device. Removes a device.
 -/device/types/{typeId}/devices/{deviceId}/devices	Pertinent Documentation	Get devices that are connected through the gateway specified by id {deviceId}. Gets information on devices that are connected through the specified gateway (typeId, deviceId) to Watson IoT Platform.
+-/device/types/{typeId}/devices/{deviceId}/edgestatus	Pertinent Documentation	Return the status of containers from an edge node. Return the status of containers from an edge node.
 -/device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	Pertinent Documentation	Return the status of containers from an edge node filtering by service. Return the status of containers from an edge node filtering by service.
 -/logs/connection	Pertinent Documentation	List device connection log events. List connection log events for a device to aid in diagnosing connectivity problems. The entries record successful connection, unsuccessful connection attempts, intentional disconnection and server-initiated disconnection.
 -/service-status	Pertinent Documentation	Retrieve the status of services for an organization. Retrieve the organization-specific status of each of the services offered by Watson IoT Platform.

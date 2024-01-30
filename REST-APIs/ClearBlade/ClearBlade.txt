@@ -23,7 +23,7 @@ GET >> /codeadmin/v/2/library/{systemKey} >> Gets the libraries for a system
 GET >> /codeadmin/v/2/library/{systemKey}/{name} >> Gets the libraries for a system
 PUT >> /codeadmin/v/2/library/{systemKey}/{name} >> Updates the libraries for a system
 POST >> /codeadmin/v/2/library/{systemKey}/{name} >> Creates libraries for a system
-DELETE >> /codeadmin/v/2/library/{systemKey}/{name} >> Deletes a librarie for a system
+DELETE >> /codeadmin/v/2/library/{systemKey}/{name} >> Deletes a libraries for a system
 GET >> /codeadmin/v/2/history/library/{systemKey}/{name} >> Gets all versions of a library for a system
 GET >> /codeadmin/v/2/history/library/{systemKey}/{name}/{version} >> Gets a specific version of a library for a system
 GET >> /codeadmin/failed >> Lists failed code service runs for all systems that a developer can access

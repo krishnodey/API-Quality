@@ -1,85 +1,85 @@
 ***Anti-Pattern*** 
-Count: 1
- /pricing/devicetypes/<deviceTypeID>/pricingtiers 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 79
- /users/self 	 Contextual Resource Names
- /users/<userID>/properties 	 Contextual Resource Names
- /users/<userID>/properties 	 Contextual Resource Names
- /users/<userID>/properties 	 Contextual Resource Names
- /users/<userID>/properties 	 Contextual Resource Names
- /users/<userID>/devices 	 Contextual Resource Names
- /users/<userID>/devicetypes 	 Contextual Resource Names
- /users/<userID>/rules 	 Contextual Resource Names
- /users/<userID>/scenes 	 Contextual Resource Names
- /users/<userID>/trials 	 Contextual Resource Names
- /devices/<deviceID> 	 Contextual Resource Names
- /devices 	 Contextual Resource Names
- /devices/<deviceID> 	 Contextual Resource Names
- /devices/<deviceID> 	 Contextual Resource Names
- /devices/<deviceID>/tokens 	 Contextual Resource Names
- /devices/<deviceID>/tokens 	 Contextual Resource Names
- /devices/<deviceID>/tokens 	 Contextual Resource Names
- /devices/<deviceID>/providerauth 	 Contextual Resource Names
- /devices/<deviceID>/providerauth 	 Contextual Resource Names
- /devices/<deviceID>/status 	 Contextual Resource Names
- /devices/status 	 Contextual Resource Names
- /devices/<deviceID>/status 	 Contextual Resource Names
- /devices/<deviceID>/certificate 	 Contextual Resource Names
- /devices/<deviceID>/shares 	 Contextual Resource Names
- /devices/<deviceID>/shares/<shareID> 	 Contextual Resource Names
- /devices/<deviceID>/shares 	 Contextual Resource Names
- /users/<userID>/shares 	 Contextual Resource Names
- /devicetypes/<deviceTypeID> 	 Contextual Resource Names
- /devicetypes/<deviceTypeID> 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/manifests/latest/properties 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/manifests/<version>/properties 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/availablemanifestversions 	 Contextual Resource Names
- /devicetypes/<deviceTypeId>/whitelist 	 Contextual Resource Names
- /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	 Contextual Resource Names
- /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	 Contextual Resource Names
- /devicetypes/<deviceTypeId>/whitelist 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/enable 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/certificates 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/status 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/certificates 	 Contextual Resource Names
- /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	 Contextual Resource Names
- /messages 	 Contextual Resource Names
- /messages 	 Contextual Resource Names
- /actions 	 Contextual Resource Names
- /actions 	 Contextual Resource Names
- /messages/last 	 Contextual Resource Names
- /messages/analytics/aggregates 	 Contextual Resource Names
- /messages/analytics/histogram 	 Contextual Resource Names
- /messages/presence 	 Contextual Resource Names
- /messages/snapshots 	 Contextual Resource Names
- /pricing/devices/<deviceID>/revenueshare/upgradepath 	 Contextual Resource Names
- /pricing/devices/<deviceID>/pricingtiers 	 Contextual Resource Names
- /messages/export 	 Contextual Resource Names
- /messages/export/<exportID>/status 	 Contextual Resource Names
- /messages/export/<exportID>/result 	 Contextual Resource Names
- /messages/export/history 	 Contextual Resource Names
- /subscriptions 	 Contextual Resource Names
- /subscriptions 	 Contextual Resource Names
- /subscriptions/<subscriptionID> 	 Contextual Resource Names
- /subscriptions/<subscriptionID>/validate 	 Contextual Resource Names
- /notifications/<notificationID>/messages 	 Contextual Resource Names
- /rules/<ruleID> 	 Contextual Resource Names
- /rules 	 Contextual Resource Names
- /rules/<ruleID> 	 Contextual Resource Names
- /rules/<ruleID> 	 Contextual Resource Names
- /rules/<ruleID>/executions 	 Contextual Resource Names
- /rules/<ruleID>/actions 	 Contextual Resource Names
- /rules/<ruleID>/actions 	 Contextual Resource Names
- /scenes 	 Contextual Resource Names
- /scenes/<sceneID> 	 Contextual Resource Names
- /scenes/<sceneID> 	 Contextual Resource Names
- /scenes 	 Contextual Resource Names
- /scenes/<sceneID> 	 Contextual Resource Names
- /scenes/<sceneID> 	 Contextual Resource Names
- /ml/models 	 Contextual Resource Names
- /ml/models/<modelID>/predict 	 Contextual Resource Names
- /ml/models/<modelID> 	 Contextual Resource Names
+Count: 80
+/users/self	 Contextual Resource Names
+/users/<userID>/properties	 Contextual Resource Names
+/users/<userID>/properties	 Contextual Resource Names
+/users/<userID>/properties	 Contextual Resource Names
+/users/<userID>/properties	 Contextual Resource Names
+/users/<userID>/devices	 Contextual Resource Names
+/users/<userID>/devicetypes	 Contextual Resource Names
+/users/<userID>/rules	 Contextual Resource Names
+/users/<userID>/scenes	 Contextual Resource Names
+/users/<userID>/trials	 Contextual Resource Names
+/devices/<deviceID>	 Contextual Resource Names
+/devices	 Contextual Resource Names
+/devices/<deviceID>	 Contextual Resource Names
+/devices/<deviceID>	 Contextual Resource Names
+/devices/<deviceID>/tokens	 Contextual Resource Names
+/devices/<deviceID>/tokens	 Contextual Resource Names
+/devices/<deviceID>/tokens	 Contextual Resource Names
+/devices/<deviceID>/providerauth	 Contextual Resource Names
+/devices/<deviceID>/providerauth	 Contextual Resource Names
+/devices/<deviceID>/status	 Contextual Resource Names
+/devices/status	 Contextual Resource Names
+/devices/<deviceID>/status	 Contextual Resource Names
+/devices/<deviceID>/certificate	 Contextual Resource Names
+/devices/<deviceID>/shares	 Contextual Resource Names
+/devices/<deviceID>/shares/<shareID>	 Contextual Resource Names
+/devices/<deviceID>/shares	 Contextual Resource Names
+/users/<userID>/shares	 Contextual Resource Names
+/devicetypes/<deviceTypeID>	 Contextual Resource Names
+/devicetypes/<deviceTypeID>	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/manifests/latest/properties	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/manifests/<version>/properties	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/availablemanifestversions	 Contextual Resource Names
+/devicetypes/<deviceTypeId>/whitelist	 Contextual Resource Names
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	 Contextual Resource Names
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	 Contextual Resource Names
+/devicetypes/<deviceTypeId>/whitelist	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/enable	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/certificates	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/status	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/certificates	 Contextual Resource Names
+/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	 Contextual Resource Names
+/messages	 Contextual Resource Names
+/messages	 Contextual Resource Names
+/actions	 Contextual Resource Names
+/actions	 Contextual Resource Names
+/messages/last	 Contextual Resource Names
+/messages/analytics/aggregates	 Contextual Resource Names
+/messages/analytics/histogram	 Contextual Resource Names
+/messages/presence	 Contextual Resource Names
+/messages/snapshots	 Contextual Resource Names
+/pricing/devices/<deviceID>/revenueshare/upgradepath	 Contextual Resource Names
+/pricing/devicetypes/<deviceTypeID>/pricingtiers	 Contextual Resource Names
+/pricing/devices/<deviceID>/pricingtiers	 Contextual Resource Names
+/messages/export	 Contextual Resource Names
+/messages/export/<exportID>/status	 Contextual Resource Names
+/messages/export/<exportID>/result	 Contextual Resource Names
+/messages/export/history	 Contextual Resource Names
+/subscriptions	 Contextual Resource Names
+/subscriptions	 Contextual Resource Names
+/subscriptions/<subscriptionID>	 Contextual Resource Names
+/subscriptions/<subscriptionID>/validate	 Contextual Resource Names
+/notifications/<notificationID>/messages	 Contextual Resource Names
+/rules/<ruleID>	 Contextual Resource Names
+/rules	 Contextual Resource Names
+/rules/<ruleID>	 Contextual Resource Names
+/rules/<ruleID>	 Contextual Resource Names
+/rules/<ruleID>/executions	 Contextual Resource Names
+/rules/<ruleID>/actions	 Contextual Resource Names
+/rules/<ruleID>/actions	 Contextual Resource Names
+/scenes	 Contextual Resource Names
+/scenes/<sceneID>	 Contextual Resource Names
+/scenes/<sceneID>	 Contextual Resource Names
+/scenes	 Contextual Resource Names
+/scenes/<sceneID>	 Contextual Resource Names
+/scenes/<sceneID>	 Contextual Resource Names
+/ml/models	 Contextual Resource Names
+/ml/models/<modelID>/predict	 Contextual Resource Names
+/ml/models/<modelID>	 Contextual Resource Names

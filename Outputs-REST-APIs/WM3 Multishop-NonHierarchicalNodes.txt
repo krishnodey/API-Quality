@@ -1,12 +1,12 @@
 ***Anti-Pattern*** 
 Count: 7
-/shop/admin/properties/:property_id/property_values	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 6
-/shop/admin/properties/:property_id/property_values/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 7
-/shop/admin/properties/:property_id/property_values	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 6
-/shop/admin/properties/:property_id/property_values/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 7
-/shop/admin/tax_rates	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 3
-/shop/admin/tax_rates/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 4
-/shop/admin/tax_rates/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 4
+/shop/admin/properties/:property_id/property_values	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/properties/:property_id/property_values/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/properties/:property_id/property_values	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/properties/:property_id/property_values/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/tax_rates	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 53
+/shop/admin/tax_rates/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 53
+/shop/admin/tax_rates/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 53
 
 ***Patterns*** 
 Count: 47

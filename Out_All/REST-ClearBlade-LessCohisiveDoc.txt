@@ -1,0 +1,46 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+POST	/api/user/reg	Register user 	 0 	 1 	 Pertinent Documentation
+POST	/api/user/auth	Authenticates a user into the system 	 0 	 1 	 Pertinent Documentation
+POST	/api/user/anon	Authenticates anonymous users into the system 	 0 	 1 	 Pertinent Documentation
+POST	/api/user/checkauth	Checks if user is authenticated 	 0 	 1 	 Pertinent Documentation
+POST	/api/user/logout	Logs out a user 	 0 	 1 	 Pertinent Documentation
+GET	/api/user/info	Returns information about a logged in user 	 0 	 1 	 Pertinent Documentation
+PUT	/api/user/info	Updates a logged in users information 	 0 	 1 	 Pertinent Documentation
+PUT	/api/user/pass	Changes a logged in users password 	 0 	 1 	 Pertinent Documentation
+GET	/api/user	Gets list of users 	 0 	 1 	 Pertinent Documentation
+PUT	/api/v/2/devices/{systemKey}/{name}	Update a device's state or custom attributes only 	 0 	 1 	 Pertinent Documentation
+POST	/api/v/2/devices/{SystemKey}/auth	Authenticates a device into the system 	 0 	 1 	 Pertinent Documentation
+GET	/api/collection/{systemKey}/{collectionName}	fetch collection 	 0 	 1 	 Pertinent Documentation
+PUT	/api/collection/{systemKey}/{collectionName}	Item update 	 1 	 0 	 Non-pertinent Documentation
+POST	/api/collection/{systemKey}/{collectionName}	Item create 	 1 	 0 	 Non-pertinent Documentation
+DELETE	/api/collection/{systemKey}/{collectionName}	Item delete 	 1 	 0 	 Non-pertinent Documentation
+GET	/api/data/{collectionID}	fetch collection 	 0 	 1 	 Pertinent Documentation
+PUT	/api/data/{collectionID}	Item update 	 1 	 0 	 Non-pertinent Documentation
+POST	/api/data/{collectionID}	Item create 	 1 	 0 	 Non-pertinent Documentation
+DELETE	/api/data/{collectionID}	Item delete 	 1 	 0 	 Non-pertinent Documentation
+GET	/api/data/{collectionid}/columns	get column key names 	 1 	 0 	 Non-pertinent Documentation
+POST	/api/code/{systemKey}/{serviceName}	Calls/executes ClearCode service 	 0 	 1 	 Pertinent Documentation
+GET	/codeadmin/v/2/library/{systemKey}	Gets the libraries for a system 	 0 	 1 	 Pertinent Documentation
+GET	/codeadmin/v/2/library/{systemKey}/{name}	Gets the libraries for a system 	 0 	 1 	 Pertinent Documentation
+PUT	/codeadmin/v/2/library/{systemKey}/{name}	Updates the libraries for a system 	 0 	 1 	 Pertinent Documentation
+POST	/codeadmin/v/2/library/{systemKey}/{name}	Creates libraries for a system 	 0 	 1 	 Pertinent Documentation
+DELETE	/codeadmin/v/2/library/{systemKey}/{name}	Deletes a libraries for a system 	 0 	 1 	 Pertinent Documentation
+GET	/codeadmin/v/2/history/library/{systemKey}/{name}	Gets all versions of a library for a system 	 0 	 1 	 Pertinent Documentation
+GET	/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	Gets a specific version of a library for a system 	 0 	 1 	 Pertinent Documentation
+GET	/codeadmin/failed	Lists failed code service runs for all systems that a developer can access 	 0 	 1 	 Pertinent Documentation
+GET	/codeadmin/failed/{systemKey}	Lists failed code service runs for specified system 	 0 	 1 	 Pertinent Documentation
+POST	/codeadmin/failed/{systemKey}	Retry failed code services 	 0 	 1 	 Pertinent Documentation
+DELETE	/codeadmin/failed/{systemKey}	Delete failed code service run from list 	 0 	 1 	 Pertinent Documentation
+GET	/api/message/{systemKey}	Retrieve message history 	 0 	 1 	 Pertinent Documentation
+POST	/api/message/{systemKey}/publish	Publishes a message to a topic 	 0 	 1 	 Pertinent Documentation
+DELETE	/api/message/{systemKey}	Delete message history 	 0 	 1 	 Pertinent Documentation
+POST	/admin/reg	Registers a new developer account with the CB platform 	 0 	 1 	 Pertinent Documentation
+POST	/admin/auth	Authorizes a CB Developer account 	 0 	 1 	 Pertinent Documentation
+POST	/admin/logout	Logs a CB developer out of their session 	 0 	 1 	 Pertinent Documentation
+POST	/admin/systemmanagement	Creates a new system in a developers account 	 0 	 1 	 Pertinent Documentation
+GET	/admin/systemmanagement	Gets a systems info 	 0 	 1 	 Pertinent Documentation
+PUT	/admin/systemmanagement	Updates a systems info 	 0 	 1 	 Pertinent Documentation
+DELETE	/admin/systemmanagement	Deletes a system 	 0 	 1 	 Pertinent Documentation
+POST	/admin/collectionmanagement	Creates a new collection or connection in a system 	 0 	 1 	 Pertinent Documentation
+PUT	/admin/collectionmanagement	Updates an existing connection in a system 	 0 	 1 	 Pertinent Documentation
+PUT	/admin/collectionmanagement	Creates a column within an existing collection 	 0 	 1 	 Pertinent Documentation

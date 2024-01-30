@@ -3,57 +3,57 @@ Count: 0
 
 ***Patterns*** 
 Count: 54
- /shop/admin/prices?customer_id=:customer_id 	 Contextual Resource Names
- /shop/admin/customers/:customer_id/prices 	 Contextual Resource Names
- /shop/admin/customers/:customer_id/prices/:variant_id 	 Contextual Resource Names
- /shop/admin/price_lists 	 Contextual Resource Names
- /shop/admin/price_lists/:id 	 Contextual Resource Names
- /shop/admin/price_lists 	 Contextual Resource Names
- /shop/admin/price_lists/:id 	 Contextual Resource Names
- /shop/admin/products 	 Contextual Resource Names
- /shop/admin/products/:id 	 Contextual Resource Names
- /shop/admin/products 	 Contextual Resource Names
- /shop/admin/products 	 Contextual Resource Names
- /shop/admin/products/:idUpdate Product 	 Contextual Resource Names
- /shop/admin/properties 	 Contextual Resource Names
- /shop/admin/properties/:id 	 Contextual Resource Names
- /shop/admin/properties/:id 	 Contextual Resource Names
- /shop/admin/properties/:property_id/property_values 	 Contextual Resource Names
- /shop/admin/properties/:property_id/property_values/:id 	 Contextual Resource Names
- /shop/admin/properties/:property_id/property_values 	 Contextual Resource Names
- /shop/admin/properties/:property_id/property_values/:id 	 Contextual Resource Names
- /shop/admin/shipping_categories 	 Contextual Resource Names
- /shop/admin/shipping_categories/:id 	 Contextual Resource Names
- /shop/admin/shipping_categories 	 Contextual Resource Names
- /shop/admin/shipping_categories/:id 	 Contextual Resource Names
- /shop/admin/shipping_methods 	 Contextual Resource Names
- /shop/admin/shipping_methods/:id 	 Contextual Resource Names
- /shop/admin/prices/:price_id/staggered_prices 	 Contextual Resource Names
- /shop/admin/prices/:price_id/staggered_prices/:id 	 Contextual Resource Names
- /shop/admin/prices/:price_id/staggered_prices 	 Contextual Resource Names
- /shop/admin/prices/:price_id/staggered_prices/:id 	 Contextual Resource Names
- /shop/admin/prices/:price_id/staggered_prices/:id 	 Contextual Resource Names
- /shop/admin/stock_items 	 Contextual Resource Names
- /shop/admin/stock_items/:id 	 Contextual Resource Names
- /shop/admin/variants/:variant_id/stock_item 	 Contextual Resource Names
- /shop/admin/stock_items/:id 	 Contextual Resource Names
- /shop/admin/variants/:variant_id/stock_item 	 Contextual Resource Names
- /shop/admin/stock_items/:id/movement 	 Contextual Resource Names
- /shop/admin/variants/:variant_id/stock_item/movement 	 Contextual Resource Names
- /shop/admin/tax_categories 	 Contextual Resource Names
- /shop/admin/tax_categories/:id 	 Contextual Resource Names
- /shop/admin/tax_rates 	 Contextual Resource Names
- /shop/admin/tax_rates/:id 	 Contextual Resource Names
- /shop/admin/tax_rates/:id 	 Contextual Resource Names
- /shop/admin/tax_zones 	 Contextual Resource Names
- /shop/admin/tax_zones/:id 	 Contextual Resource Names
- /shop/admin/tax_zones 	 Contextual Resource Names
- /shop/admin/tax_zones/:id 	 Contextual Resource Names
- /shop/admin/variants 	 Contextual Resource Names
- /shop/admin/products/:product_id/variants 	 Contextual Resource Names
- /shop/admin/variants/:id 	 Contextual Resource Names
- /shop/admin/products/:product_id/variants/:id 	 Contextual Resource Names
- /shop/admin/products/:product_id/variants 	 Contextual Resource Names
- /shop/admin/variants/:id 	 Contextual Resource Names
- /shop/admin/products/:product_id/variants/:id 	 Contextual Resource Names
- /shop/admin/variants/update_stock 	 Contextual Resource Names
+/shop/admin/prices?customer_id=:customer_id	 Contextual Resource Names
+/shop/admin/customers/:customer_id/prices	 Contextual Resource Names
+/shop/admin/customers/:customer_id/prices/:variant_id	 Contextual Resource Names
+/shop/admin/price_lists	 Contextual Resource Names
+/shop/admin/price_lists/:id	 Contextual Resource Names
+/shop/admin/price_lists	 Contextual Resource Names
+/shop/admin/price_lists/:id	 Contextual Resource Names
+/shop/admin/products	 Contextual Resource Names
+/shop/admin/products/:id	 Contextual Resource Names
+/shop/admin/products	 Contextual Resource Names
+/shop/admin/products	 Contextual Resource Names
+/shop/admin/products/:idUpdate Product	 Contextual Resource Names
+/shop/admin/properties	 Contextual Resource Names
+/shop/admin/properties/:id	 Contextual Resource Names
+/shop/admin/properties/:id	 Contextual Resource Names
+/shop/admin/properties/:property_id/property_values	 Contextual Resource Names
+/shop/admin/properties/:property_id/property_values/:id	 Contextual Resource Names
+/shop/admin/properties/:property_id/property_values	 Contextual Resource Names
+/shop/admin/properties/:property_id/property_values/:id	 Contextual Resource Names
+/shop/admin/shipping_categories	 Contextual Resource Names
+/shop/admin/shipping_categories/:id	 Contextual Resource Names
+/shop/admin/shipping_categories	 Contextual Resource Names
+/shop/admin/shipping_categories/:id	 Contextual Resource Names
+/shop/admin/shipping_methods	 Contextual Resource Names
+/shop/admin/shipping_methods/:id	 Contextual Resource Names
+/shop/admin/prices/:price_id/staggered_prices	 Contextual Resource Names
+/shop/admin/prices/:price_id/staggered_prices/:id	 Contextual Resource Names
+/shop/admin/prices/:price_id/staggered_prices	 Contextual Resource Names
+/shop/admin/prices/:price_id/staggered_prices/:id	 Contextual Resource Names
+/shop/admin/prices/:price_id/staggered_prices/:id	 Contextual Resource Names
+/shop/admin/stock_items	 Contextual Resource Names
+/shop/admin/stock_items/:id	 Contextual Resource Names
+/shop/admin/variants/:variant_id/stock_item	 Contextual Resource Names
+/shop/admin/stock_items/:id	 Contextual Resource Names
+/shop/admin/variants/:variant_id/stock_item	 Contextual Resource Names
+/shop/admin/stock_items/:id/movement	 Contextual Resource Names
+/shop/admin/variants/:variant_id/stock_item/movement	 Contextual Resource Names
+/shop/admin/tax_categories	 Contextual Resource Names
+/shop/admin/tax_categories/:id	 Contextual Resource Names
+/shop/admin/tax_rates	 Contextual Resource Names
+/shop/admin/tax_rates/:id	 Contextual Resource Names
+/shop/admin/tax_rates/:id	 Contextual Resource Names
+/shop/admin/tax_zones	 Contextual Resource Names
+/shop/admin/tax_zones/:id	 Contextual Resource Names
+/shop/admin/tax_zones	 Contextual Resource Names
+/shop/admin/tax_zones/:id	 Contextual Resource Names
+/shop/admin/variants	 Contextual Resource Names
+/shop/admin/products/:product_id/variants	 Contextual Resource Names
+/shop/admin/variants/:id	 Contextual Resource Names
+/shop/admin/products/:product_id/variants/:id	 Contextual Resource Names
+/shop/admin/products/:product_id/variants	 Contextual Resource Names
+/shop/admin/variants/:id	 Contextual Resource Names
+/shop/admin/products/:product_id/variants/:id	 Contextual Resource Names
+/shop/admin/variants/update_stock	 Contextual Resource Names

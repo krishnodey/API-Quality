@@ -1,16 +1,11 @@
 ***Anti-Pattern*** 
-Count: 8
+Count: 3
 -/async?state	Non-pertinent Documentation	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
 -/async/{id}	Non-pertinent Documentation	Get a particular asynchronous job status
 -/async/{id}	Non-pertinent Documentation	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
--/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Non-pertinent Documentation	Update a specific Class of Service given the name
--/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Non-pertinent Documentation	Delete a specific Class of Service given the name
--/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Non-pertinent Documentation	List the members for a specific class of service
--/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Non-pertinent Documentation	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
--/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Non-pertinent Documentation	Remove a member from this class of service by id
 
 ***Patterns*** 
-Count: 48
+Count: 53
 -/list/{type}	Pertinent Documentation	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
 -/list/{type}/{base}	Pertinent Documentation	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
 -/application	Pertinent Documentation	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
@@ -58,4 +53,9 @@ Count: 48
 -/domains/{domain}/gateways/{gateway}/classofservice	Pertinent Documentation	List the classes of service for a specific gateway
 -/domains/{domain}/gateways/{gateway}/classofservice	Pertinent Documentation	Create a Gwia Class of Service for the specified gateway
 -/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Pertinent Documentation	Get a specific Gateway given the name
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Pertinent Documentation	Update a specific Class of Service given the name
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Pertinent Documentation	Delete a specific Class of Service given the name
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Pertinent Documentation	List the members for a specific class of service
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Pertinent Documentation	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Pertinent Documentation	Remove a member from this class of service by id
 -/domains/{domain}/gateways/{gateway}/recoverDb	Pertinent Documentation	Recover the Access Control database for the specified gateway. This command will recover the database in place.

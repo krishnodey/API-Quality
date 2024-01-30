@@ -1,0 +1,81 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET	/users/self	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/properties	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token. 	 0 	 1 	 Pertinent Documentation
+POST	/users/<userID>/properties	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload. 	 0 	 1 	 Pertinent Documentation
+PUT	/users/<userID>/properties	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload. 	 0 	 1 	 Pertinent Documentation
+DELETE	/users/<userID>/properties	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/devices	Returns all devices owned by a user and/or shared devices on the user's account. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/devicetypes	Returns the device types owned by a user. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/rules	Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/scenes	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/trials	Returns the trials of a participant or administrator. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/<deviceID>	Returns a specific shared or owned device. Required permissions: READ on the device. 	 0 	 1 	 Pertinent Documentation
+POST	/devices	Adds a device. 	 0 	 1 	 Pertinent Documentation
+PUT	/devices/<deviceID>	Modifies a device's parameters. 	 0 	 1 	 Pertinent Documentation
+DELETE	/devices/<deviceID>	Deletes a device. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/<deviceID>/tokens	Returns the access token of a device. 	 0 	 1 	 Pertinent Documentation
+PUT	/devices/<deviceID>/tokens	Creates a new access token for a device. 	 0 	 1 	 Pertinent Documentation
+DELETE	/devices/<deviceID>/tokens	Deletes the access token of a device. 	 0 	 1 	 Pertinent Documentation
+POST	/devices/<deviceID>/providerauth	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/devices/<deviceID>/providerauth	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/<deviceID>/status	Returns current status of a device. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/status	Returns a list of device statuses. 	 0 	 1 	 Pertinent Documentation
+PUT	/devices/<deviceID>/status	Modifies current status of a device. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/<deviceID>/certificate	Returns fields for a device's certificates. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/<deviceID>/shares	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device. 	 0 	 1 	 Pertinent Documentation
+GET	/devices/<deviceID>/shares/<shareID>	Returns a device share. Required permissions: READ on user (device owner) and READ on device. 	 0 	 1 	 Pertinent Documentation
+POST	/devices/<deviceID>/shares	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device. 	 0 	 1 	 Pertinent Documentation
+GET	/users/<userID>/shares	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient). 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>	Returns the device type of a device. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>	Returns a list of device types. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>/manifests/latest/properties	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>/manifests/<version>/properties	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>/availablemanifestversions	Returns the available Manifest versions for a device type. 	 0 	 1 	 Pertinent Documentation
+POST	/devicetypes/<deviceTypeId>/whitelist	Uploads an Approved List as a CSV file. 	 1 	 0 	 Non-pertinent Documentation
+GET	/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Returns the status of an uploaded CSV. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Returns the rows that were rejected in an uploaded CSV. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeId>/whitelist	Returns the Approved List for a device type. 	 0 	 1 	 Pertinent Documentation
+DELETE	/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Deletes a specified device from a device type's Approved List. 	 0 	 1 	 Pertinent Documentation
+PUT	/devicetypes/<deviceTypeID>/whitelist/enable	Enables or disables a device type's Approved List. 	 0 	 1 	 Pertinent Documentation
+POST	/devicetypes/<deviceTypeID>/whitelist/certificates	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details. 	 0 	 1 	 Pertinent Documentation
+DELETE	/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Deletes an Approved List certificate for a device type. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>/whitelist/status	Returns the enabled/disabled status of an Approved List. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>/whitelist/certificates	Returns details of an Approved List certificate. 	 0 	 1 	 Pertinent Documentation
+GET	/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Returns a specified vendor device ID. 	 0 	 1 	 Pertinent Documentation
+POST	/messages	Sends a message. 	 0 	 1 	 Pertinent Documentation
+GET	/messages	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset 	 0 	 1 	 Pertinent Documentation
+POST	/actions	Sends an Action to the specified device. 	 0 	 1 	 Pertinent Documentation
+GET	/actions	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset 	 0 	 1 	 Pertinent Documentation
+GET	/messages/last	Returns the most recent normalized messages from a device or devices. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/analytics/aggregates	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/analytics/histogram	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/presence	Returns presence of normalized messages. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/snapshots	Returns last received value for all Manifest fields (aka device state) of a device or devices. 	 1 	 0 	 Non-pertinent Documentation
+GET	/pricing/devices/<deviceID>/revenueshare/upgradepath	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token. 	 0 	 1 	 Pertinent Documentation
+GET	/pricing/devicetypes/<deviceTypeID>/pricingtiers	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token. 	 0 	 1 	 Pertinent Documentation
+GET	/pricing/devices/<deviceID>/pricingtiers	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token. 	 0 	 1 	 Pertinent Documentation
+POST	/messages/export	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/export/<exportID>/status	Returns the status of the messages export. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/export/<exportID>/result	Returns the result of the export query. The result call returns the response in tgz format. 	 0 	 1 	 Pertinent Documentation
+GET	/messages/export/history	Returns a list of export queries that have been performed. 	 0 	 1 	 Pertinent Documentation
+POST	/subscriptions	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations. 	 0 	 1 	 Pertinent Documentation
+GET	/subscriptions	Returns all subscriptions for the current application. This call accepts application tokens as the access token. 	 0 	 1 	 Pertinent Documentation
+GET	/subscriptions/<subscriptionID>	Returns a subscription. This call accepts application and user tokens as the access token. 	 0 	 1 	 Pertinent Documentation
+POST	/subscriptions/<subscriptionID>/validate	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token. 	 0 	 1 	 Pertinent Documentation
+GET	/notifications/<notificationID>/messages	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token. 	 0 	 1 	 Pertinent Documentation
+GET	/rules/<ruleID>	Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule. 	 0 	 1 	 Pertinent Documentation
+POST	/rules	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule. 	 0 	 1 	 Pertinent Documentation
+PUT	/rules/<ruleID>	Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule. 	 0 	 1 	 Pertinent Documentation
+DELETE	/rules/<ruleID>	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule. 	 0 	 1 	 Pertinent Documentation
+GET	/rules/<ruleID>/executions	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule. 	 0 	 1 	 Pertinent Documentation
+POST	/rules/<ruleID>/actions	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static. 	 0 	 1 	 Pertinent Documentation
+GET	/rules/<ruleID>/actions	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token. 	 0 	 1 	 Pertinent Documentation
+POST	/scenes	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token. 	 0 	 1 	 Pertinent Documentation
+PUT	/scenes/<sceneID>	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene. 	 0 	 1 	 Pertinent Documentation
+GET	/scenes/<sceneID>	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene. 	 0 	 1 	 Pertinent Documentation
+GET	/scenes	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene. 	 0 	 1 	 Pertinent Documentation
+DELETE	/scenes/<sceneID>	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene. 	 0 	 1 	 Pertinent Documentation
+POST	/scenes/<sceneID>	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene. 	 0 	 1 	 Pertinent Documentation
+POST	/ml/models	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model. 	 0 	 1 	 Pertinent Documentation
+POST	/ml/models/<modelID>/predict	Returns the predicted output for a machine learning model. 	 0 	 1 	 Pertinent Documentation
+GET	/ml/models/<modelID>	Returns a model. 	 0 	 1 	 Pertinent Documentation

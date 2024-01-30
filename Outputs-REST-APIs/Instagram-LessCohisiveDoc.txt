@@ -14,7 +14,7 @@ Count: 19
 -/refresh_access_token	Pertinent Documentation	Refresh a long-lived Instagram User Access Token.
 -/oauth/authorize	Pertinent Documentation	Get the Authorization Window.
 -/{user-id}/media	Pertinent Documentation	Get a list of images, videos, or albums on a User.
-- /me 	Pertinent Documentation	 Get fields and edges on a User.
+-/me	Pertinent Documentation	 Get fields and edges on a User.
 
 -/{user-id}	Pertinent Documentation	Get fields and edges on a User.
 -/{user-id}/media	Pertinent Documentation	Get a list of images, videos, or albums on a User.

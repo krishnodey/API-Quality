@@ -1,20 +1,20 @@
 id>>identification
 ID>>identification
-ic>>integration Code
+ic>>integration code
 sid>>segment identification
 id>>identification
-ic>>integration Code
+ic>>integration code
 sid>>segment identification
 app>>application
 auth>>authentication
-Cam>>camera
-CO>>carbon monoxide
-eta>>estimated time of arrival
+cam>>camera
+co>>carbon monoxide
+eta>>estimated time arrival
 async>>asynchronization
 mta>>message transfer agent
 acls>>access control lists
 vdcs>>virtual data centres
-IoT>>Internet of Things
+IoT>>internet things
 orgs>>organizations
 org>>organization
 auth>>authentication
@@ -22,7 +22,7 @@ mqtt>>message queuing telemetry transport
 api>>application programming interface
 HTTP>>hypertext transfer protocol
 mgmt>>management
-JSON>>JavaScript Object Notation
+JSON>>java script object notation
 hdmi>>high definition multimedia interface
 cec>>consumer electronics control
 app>>application
@@ -31,7 +31,7 @@ ig>>instagram
 oauth>>authentication
 datasource>>data source
 ids>>identifications
-breakdown>> break down
+breakdown>>break down
 datasources>>data sources
 ci>>client
 ml>>machine learning
@@ -42,149 +42,134 @@ reg>>register
 config>>configuration 
 attr>>attributes
 persid>>persistent identifier
-attmnt>>attachment 
+attmnt>>attachment
 pcat>>catagory
 locale>>localization
 regen>>regeneration
-lastvalue>>last	value
-mitigationactions>>mitigation	actions
-authorizerName>>authorizer	Name
-scheduledaudits>>scheduled	audits
-confirmdestination>>confirm	destination
-phonenumber>>phone	number
-accountAddress>>account	Address
-assetId>>asset	identification
-eventId>>event	identification
-bundleId>>bundle	identification
-nodeinfo>>node	info
-mutualcontacts>>mutualcontacts	mutualcontacts
-geoloc>>geo	location
-mutualcontacts>>mutual	contacts
-talkgroup>>talk	group
-uploaddata>>upload	data
-userdirectory>>user	directory
-checkauth>>check	auth
-codeadmin>>code	admin
-systemmanagement>>system	management
-allcollections>>all	collections
-allsystems>>all	systems
-regensystemsecret>>regenerate	system	secret
-forgotpass>>forgot	password
-putpass>>put	password
-eventtotals>>event	totals
-eventlist>>event	list
-userevents>>user	events
-errorCodes>>error	Codes
-deviceStatus>>device	Status
-physicalinterfaces>>physical	interfaces
-logicalinterfaces>>logical	interfaces
-edgestatus>>edge	status
-mqttPublishMessage>>mqtt	Publish	Message
-mqttSubscriptionStream>>mqtt	Subscription	Stream
-payloadCounts>>payload	Counts
-solutionUser>>solution	User
-validateContext>>validate	Context
-setConnectionStatus>>set	Connection	Status
-compositeState>>composite	State
-commandStream>>command	Stream
-stateStream>>state	Stream
-managedClusters>>managed	Clusters
-resourceGroups>>resource	Groups
-applicationGateways>>application	Gateways
-providerauth>>provider	authentication
-availablemanifestversions>>available	manifest	versions
-rejectedRows>>rejected	Rows
-upgradepath>>upgrade	path
-revenueshare>>revenue	share
-pricingtiers>>pricing	tiers
-serverproperties>>server	properties
-devicemgmt>>device	management
-devicetypes>>device	types
-audioClip>>audio	Clip
-modifyGroupMembers>>modify	Group	Members
-groupVolume>>group	Volume
-playbackSession>>playback	Session
-skipToItem>>skip	To	Item
-refreshCloudQueue>>refresh	Cloud	Queue
-togglePlayPause>>toggle	Play	Pause
-skipToPreviousTrack>>skip	To	Previous	Track
-skipToNextTrack>>skip	To	Next	Track
-playMode>>play	Mode
-seekRelative>>seek	Relative
-musicServiceAccounts>>music	Service	Accounts
-tvPowerState>>television	Power	State
-homeTheater>>home	Theater
-districtheat>>district	heat
-webhooks>>web	hooks
-integrationCode>>integration	Code
-segmentTestGroupId>>segment	Test	Group	Id
-draftId>>draft	Id
-addressbook>>address	book
-clientoptions>>client	options
-customaddresses>>custom	addresses
-gatewaysubdirs>>gateway	sub	directories
-refaccesscontrols>>reference	access	controls
-classofservice>>class	of	service
-smtprelayallowexception>>smtp	relay	allow	exception
-postoffice>>post	office
-groupmemberships>>group	memberships
-administeredgroups>>administered	groups
-customAddress>>custom	Address
-globalsignatures>>global	signatures
-internetdomains>>internet	domains
-moverequests>>move	requests
-restoreareas>>restore	areas
-openOrders>>open	Orders
-tradeHistories>>trade	Histories
-balanceHistories>>balance	Histories
-attrCtrl>>attribute	control
-attrInfo>>attribute infomation
-attmnt>>attribute	mount
-systemmanagement>>system	management
-collectionmanagement>>collection	management
-eventtotals>>event	totals
-eventlist>>event	list
-userevents>>user	events
-systemKey>>system	Key
-allcollections>>all	collections
-forgotpass>>forgot	pass
-putpass>>put	pass
-fileops>>file	operations
-MyDropboxFolder>>My	Dropbox	Folder
-physicalinterfaces>>physical	interfaces
-logicalinterfaces>>logical	interfaces
-logicalInterfaceId>>logical	Interface	Id
-thingTypeId>>thing	Type	Id
-thingId>>thing	Id
-ocitenancies>>oci	tenancies
-storageimages>>storage	images
-computeimages>>compute	images
-serviceproviders>>service	providers
-successstories>>success	stories
-trainedprofessionals>>trained	professionals
-machineimagestatus>>machine	image	status
-supportingdoctypes>>supporting	doc	types
-installstatuses>>install	statuses
-devicetypes>>device	types
-machineimages>>machine	images
-cloudservices>>cloud	services
-resourcenames>>resource	names
-screenshots>>screen	shots
-supportingdocs>>supporting	docs
-recommendedservices>>recommended	services
-relateddocs>>related	docs
-appstore>>application	store
-packagelogs>>package	logs
-availableservices>>available	services
-installrequests>>install	requests
-companyinfo>>company	info
-taxagency>>tax	agency
-providerauth>>provider	authentication
-availablemanifestversions>>available	manifest	versions
-revenueshare>>revenue	share
-pricingtiers>>pricing	tiers
+lastvalue>>last value
+mitigationactions>>mitigation actions
+scheduledaudits>>scheduled audits
+confirmdestination>>confirm destination
+phonenumber>>phone number
+nodeinfo>>node info
+mutualcontacts>>mutualcontacts mutualcontacts
+geoloc>>geographic location
+mutualcontacts>>mutual contacts
+talkgroup>>talk group
+uploaddata>>upload data
+userdirectory>>user directory
+checkauth>>check authentication
+codeadmin>>code admin
+systemmanagement>>system management
+allcollections>>all collections
+allsystems>>all systems
+regensystemsecret>>regenerate system secret
+forgotpass>>forgot password
+putpass>>put password
+eventtotals>>event totals
+eventlist>>event list
+userevents>>user events
+physicalinterfaces>>physical interfaces
+logicalinterfaces>>logical interfaces
+edgestatus>>edge status
+providerauth>>provider authentication
+availablemanifestversions>>available manifest versions
+upgradepath>>upgrade path
+revenueshare>>revenue share
+pricingtiers>>pricing tiers
+serverproperties>>server properties
 devicemgmt>>device management
-serverproperties>>server	properties
-upgradepath>>upgrade	path
-downvote>>down	vote
-upvote>>up	vote
+devicetypes>>device types
+tv>>television
+districtheat>>district heat
+webhooks>>web hooks
+addressbook>>address book
+clientoptions>>client options
+customaddresses>>custom addresses
+gatewaysubdirs>>gateway directories
+refaccesscontrols>>reference access controls
+classofservice>>class service
+smtprelayallowexception>>smtp relay allow exception
+postoffice>>post office
+groupmemberships>>group memberships
+administeredgroups>>administered groups
+globalsignatures>>global signatures
+internetdomains>>internet domains
+moverequests>>move requests
+restoreareas>>restore areas
+attrctrl>>attribute control
+attrinfo>>attribute infomation
+attmnt>>attribute mount
+systemmanagement>>system management
+collectionmanagement>>collection management
+eventtotals>>event totals
+eventlist>>event list
+userevents>>user events
+allcollections>>collections
+forgotpass>>forgot pass
+putpass>>put pass
+fileops>>file operations
+physicalinterfaces>>physical interfaces
+logicalinterfaces>>logical interfaces
+ocitenancies>>oci tenancies
+storageimages>>storage images
+computeimages>>compute images
+serviceproviders>>service providers
+successstories>>success stories
+trainedprofessionals>>trained professionals
+machineimagestatus>>machine image status
+supportingdoctypes>>supporting document types
+installstatuses>>install statuses
+devicetypes>>device types
+machineimages>>machine images
+cloudservices>>cloud services
+resourcenames>>resource names
+screenshots>>screen shots
+supportingdocs>>supporting documents
+recommendedservices>>recommended services
+relateddocs>>related documents
+appstore>>application store
+packagelogs>>package logs
+availableservices>>available services
+installrequests>>install requests
+companyinfo>>company info
+taxagency>>tax agency
+providerauth>>provider authentication
+availablemanifestversions>>available manifest versions
+revenueshare>>revenue share
+pricingtiers>>pricing tiers
+devicemgmt>>device management
+serverproperties>>server properties
+upgradepath>>upgrade path
+downvote>>down vote
+upvote>>up vote
+async>>asynchronous
+Config>>configuration
+config>>configuration
+bui>>return
+BUI>>retrun
+ctrl>>control
+attrname>>attribute name
+sid>>session indentifier
+attmnt>>attachment
+KDAttachments>>knowledge document attachment
+kdattachments>>knowledge document attachment
+KDComments>>knowledge document comments
+kdcomments>>knowledge document comments
+kd>>knowledge document
+EEMAuth>>eem authentication
+eemauth>>eem authentication
+detailspersid>>details persistent identifier
+detaspersid>>deta persistent identifier
+feedspersid>>feed persistent identifier
+attmntpersid>>attachment persistent identifier
+documentid>>document indentifier
+solutionid>>solution indentifier
+categoriesand>>categories
+mytkt>>ticket
+factorypersid>>factory persistent identifier
+ee>>eem
+infoid>>information identifier
+si>>session indentifier
+bo>>bop
+logout>>log out

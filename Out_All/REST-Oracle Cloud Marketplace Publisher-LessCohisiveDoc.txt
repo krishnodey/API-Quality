@@ -1,0 +1,44 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET	/installrequests	Get the list of application install requests for all your published apps. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}	Delete an application. Only applications that are in a NEW state can be deleted. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}/banner	Delete the banner for the application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}/comments/{id}	Delete a status comment. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}/packages/{packageVersionId}	Delete the package of an application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}/relateddocs/{id}	Delete a related document for an existing application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}/screenshots/{id}	Delete a screenshot for an existing application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/applications/{listingVersionId}/supportingdocs/{id}	Delete a supporting document for an existing application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Delete the package of an application. 	 0 	 1 	 Pertinent Documentation
+DELETE	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Delete a specific resource of the application's package. 	 0 	 1 	 Pertinent Documentation
+GET	/applications	Get the list of all applications for the publisher. 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}	Get the details of the application with the specified listing ID. 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}/availableservices	Get a list of service integrators. Publishers can recommend particular service integrators for their application listings by adding them to each application listing as recommended services. 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}/comments	Get the status comments for the application. 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}/packages	Get the package configured for the application. A package describes the install/uninstall steps and the resources required for the application. 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}/packages/{packageVersionId}	Get the details of the specified package. 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Get the details of the specified package logs( validation / test install). 	 0 	 1 	 Pertinent Documentation
+GET	/applications/{listingVersionId}/recommendedservices	Get the list of all the recommended services configured for a listing. 	 0 	 1 	 Pertinent Documentation
+GET	/appstore/publisher/v2/applications/{listingVersionId}/packages	Get the package configured for the application. A package describes the resources and its properties required for the application. 	 0 	 1 	 Pertinent Documentation
+GET	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Get the details of the specified package. 	 0 	 1 	 Pertinent Documentation
+GET	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Fetches the packagelogs of an applications's package version id. 	 0 	 1 	 Pertinent Documentation
+PATCH	/applications/{listingVersionId}	This method can be used to perform a partial update operation on application attributes or perform a state change operation in the application life-cycle. In order to perform a partial update, provide any root-level attribute in the payload. The content of that specified attribute will be completely replaced, while keeping the values of the other attributes same as before. 	 0 	 1 	 Pertinent Documentation
+PATCH	/applications/{listingVersionId}/banner	Partially Update the banner for the application. 	 0 	 1 	 Pertinent Documentation
+PATCH	/applications/{listingVersionId}/packages/{packageVersionId}	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated. 	 0 	 1 	 Pertinent Documentation
+PATCH	/applications/{listingVersionId}/relateddocs/{id}	Partially Update a related document for the application. 	 0 	 1 	 Pertinent Documentation
+PATCH	/applications/{listingVersionId}/screenshots	Partially Update the Screenshot for an application. 	 0 	 1 	 Pertinent Documentation
+PATCH	/applications/{listingVersionId}/supportingdocs/{id}	Partially Update a supporting document for the application. 	 0 	 1 	 Pertinent Documentation
+PATCH	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated. 	 0 	 1 	 Pertinent Documentation
+POST	/applications	Create a new application listing. The application goes through a state lifecycle. A newly created application starts off in the "New" state. Application edits are allowed in this state. To publish the listing to the Marketplace, the application listing needs to be submitted for approval. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/banner	Create a banner for the application. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/comments	Create a status comment for the application. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/icon	Upload an icon for the application listing. The icon dimensions must be 130 X 130 px. The following extensions are allowed: png, jpg. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/packages	Create a package for the given application. A package is an orchestration template that describes the application install/uninstall/upgrade steps. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/relateddocs	Creates related documents for the an application with the specified ID. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/screenshots	Create screenshots for an application. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/supportingdocs	Creates supporting documents for the an application with the specified ID. 	 0 	 1 	 Pertinent Documentation
+POST	/applications/{listingVersionId}/version	Create a new version for an already published application listing. A new version is necessary to make edits to an already published listing.The new version has to go though the same life cycle and approval workflow to get published to the Marketplace. Publishing the new version automatically archives the older version from the Marketplace. At any given point only one version of the application is active on the Marketplace. 	 0 	 1 	 Pertinent Documentation
+PUT	/applications/{listingVersionId}	Update the Application listing. Only applications in a NEW or REJECTED state can be updated. To update a listing that is published, a new version of the listing must be created. 	 0 	 1 	 Pertinent Documentation
+PUT	/applications/{listingVersionId}/banner	Update the banner for the application. 	 0 	 1 	 Pertinent Documentation
+PUT	/applications/{listingVersionId}/comments/{id}	Update status comment. 	 0 	 1 	 Pertinent Documentation
+PUT	/applications/{listingVersionId}/icon	Update the icon for the application. 	 0 	 1 	 Pertinent Documentation
+PUT	/applications/{listingVersionId}/packages/{packageVersionId}	Update the specified package. If the package was validated it will need to be validated again after the update.Packages of an already published listing cannot be updated. 	 0 	 1 	 Pertinent Documentation
+PUT	/applications/{listingVersionId}/recommendedservices	Creates a list of recommended service integrators for an application with specified id. If the call is made with an empty list, it clears the entire existing list of recommended services associated with this application, if any. 	 0 	 1 	 Pertinent Documentation

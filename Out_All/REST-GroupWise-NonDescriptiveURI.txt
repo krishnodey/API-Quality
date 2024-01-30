@@ -23,18 +23,18 @@ PUT 	 /domains/{domain}/addressbook/view 	 Returns the address book view defined
 GET 	 /domains/{domain}/administrator 	 Return the administrator for this domain 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /domains/{domain}/administrator 	 Set the administrator for this domain 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /domains/{domain}/administrator 	 Clear the administrator for this domain 	 0 	 1 	 Self-descriptive End-point
-GET 	 /domains/{domain}/clientoptions?attrs 	 Get the Client Options under a specific Domain 	 1 	 0 	Non-descriptive End-point
-PUT 	 /domains/{domain}/clientoptions?attrs 	 Update the Client Options under a specific Domain 	 1 	 0 	Non-descriptive End-point
-GET 	 /domains/{domain}/customaddresses 	 Get all Custom Addresses under a specific Domain 	 1 	 0 	Non-descriptive End-point
+GET 	 /domains/{domain}/clientoptions?attrs 	 Get the Client Options under a specific Domain 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /domains/{domain}/clientoptions?attrs 	 Update the Client Options under a specific Domain 	 0 	 1 	 Self-descriptive End-point
+GET 	 /domains/{domain}/customaddresses 	 Get all Custom Addresses under a specific Domain 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/customaddresses/test?testAddress 	 Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string 	 0 	 1 	 Self-descriptive End-point
-GET 	 /domains/{domain}/gatewaysubdirs 	 List the gateway sub-directories for the domain. 	 1 	 0 	Non-descriptive End-point
+GET 	 /domains/{domain}/gatewaysubdirs 	 List the gateway sub-directories for the domain. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/info 	 Retrieve statistical information about the objects contained in this domain 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/links?direction 	 List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound). 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/links/{link} 	 Get the domain link between domainName and linkName 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /domains/{domain}/links/{link} 	 Update the domain link between domainName and linkName 	 0 	 1 	 Self-descriptive End-point
 POST 	 /domains/{domain}/rebuild 	 Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service. 	 0 	 1 	 Self-descriptive End-point
-GET 	 /domains/{domain}/refaccesscontrols 	 Get the Access Control List for the domain 	 1 	 0 	Non-descriptive End-point
-PUT 	 /domains/{domain}/refaccesscontrols 	 Update the Access Control List for the domain 	 1 	 0 	Non-descriptive End-point
+GET 	 /domains/{domain}/refaccesscontrols 	 Get the Access Control List for the domain 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /domains/{domain}/refaccesscontrols 	 Update the Access Control List for the domain 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/attributes 	 Get all available Domain Attributes 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/gateways 	 Performs a query to find all the Gateways for this GroupWise system. 	 0 	 1 	 Self-descriptive End-point
 POST 	 /domains/{domain}/gateways 	 Create an Gateway given the Gateway data 	 0 	 1 	 Self-descriptive End-point
@@ -46,11 +46,11 @@ POST 	 /domains/{domain}/gateways/{gateway}/administrators 	 Adds a new administ
 DELETE 	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	 Remove an administrator member from this gateway 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	 Remove an administrator member from this gateway 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/gateways/{gateway}/aliases 	 Performs a query to find all the aliases for this gateway 	 0 	 1 	 Self-descriptive End-point
-GET 	 /domains/{domain}/gateways/{gateway}/classofservice 	 List the classes of service for a specific gateway 	 1 	 0 	Non-descriptive End-point
-POST 	 /domains/{domain}/gateways/{gateway}/classofservice 	 Create a Gwia Class of Service for the specified gateway 	 1 	 0 	Non-descriptive End-point
-GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Get a specific Gateway given the name 	 1 	 0 	Non-descriptive End-point
-PUT 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Update a specific Class of Service given the name 	 1 	 0 	Non-descriptive End-point
-DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Delete a specific Class of Service given the name 	 1 	 0 	Non-descriptive End-point
+GET 	 /domains/{domain}/gateways/{gateway}/classofservice 	 List the classes of service for a specific gateway 	 0 	 1 	 Self-descriptive End-point
+POST 	 /domains/{domain}/gateways/{gateway}/classofservice 	 Create a Gwia Class of Service for the specified gateway 	 0 	 1 	 Self-descriptive End-point
+GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Get a specific Gateway given the name 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Update a specific Class of Service given the name 	 0 	 1 	 Self-descriptive End-point
+DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Delete a specific Class of Service given the name 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 List the members for a specific class of service 	 0 	 1 	 Self-descriptive End-point
 POST 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	 Remove a member from this class of service by id 	 0 	 1 	 Self-descriptive End-point

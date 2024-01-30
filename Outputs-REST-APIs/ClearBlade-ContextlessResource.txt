@@ -3,48 +3,48 @@ Count: 0
 
 ***Patterns*** 
 Count: 45
- /api/user/reg 	 Contextual Resource Names
- /api/user/auth 	 Contextual Resource Names
- /api/user/anon 	 Contextual Resource Names
- /api/user/checkauth 	 Contextual Resource Names
- /api/user/logout 	 Contextual Resource Names
- /api/user/info 	 Contextual Resource Names
- /api/user/info 	 Contextual Resource Names
- /api/user/pass 	 Contextual Resource Names
- /api/user 	 Contextual Resource Names
- /api/v/2/devices/{systemKey}/{name} 	 Contextual Resource Names
- /api/v/2/devices/{SystemKey}/auth 	 Contextual Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
- /api/collection/{systemKey}/{collectionName} 	 Contextual Resource Names
- /api/data/{collectionID} 	 Contextual Resource Names
- /api/data/{collectionID} 	 Contextual Resource Names
- /api/data/{collectionID} 	 Contextual Resource Names
- /api/data/{collectionID} 	 Contextual Resource Names
- /api/data/{collectionid}/columns 	 Contextual Resource Names
- /api/code/{systemKey}/{serviceName} 	 Contextual Resource Names
- /codeadmin/v/2/library/{systemKey} 	 Contextual Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
- /codeadmin/v/2/library/{systemKey}/{name} 	 Contextual Resource Names
- /codeadmin/v/2/history/library/{systemKey}/{name} 	 Contextual Resource Names
- /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Contextual Resource Names
- /codeadmin/failed 	 Contextual Resource Names
- /codeadmin/failed/{systemKey} 	 Contextual Resource Names
- /codeadmin/failed/{systemKey} 	 Contextual Resource Names
- /codeadmin/failed/{systemKey} 	 Contextual Resource Names
- /api/message/{systemKey} 	 Contextual Resource Names
- /api/message/{systemKey}/publish 	 Contextual Resource Names
- /api/message/{systemKey} 	 Contextual Resource Names
- /admin/reg 	 Contextual Resource Names
- /admin/auth 	 Contextual Resource Names
- /admin/logout 	 Contextual Resource Names
- /admin/systemmanagement 	 Contextual Resource Names
- /admin/systemmanagement 	 Contextual Resource Names
- /admin/systemmanagement 	 Contextual Resource Names
- /admin/systemmanagement 	 Contextual Resource Names
- /admin/collectionmanagement 	 Contextual Resource Names
- /admin/collectionmanagement 	 Contextual Resource Names
- /admin/collectionmanagement 	 Contextual Resource Names
+/api/user/reg	 Contextual Resource Names
+/api/user/auth	 Contextual Resource Names
+/api/user/anon	 Contextual Resource Names
+/api/user/checkauth	 Contextual Resource Names
+/api/user/logout	 Contextual Resource Names
+/api/user/info	 Contextual Resource Names
+/api/user/info	 Contextual Resource Names
+/api/user/pass	 Contextual Resource Names
+/api/user	 Contextual Resource Names
+/api/v/2/devices/{systemKey}/{name}	 Contextual Resource Names
+/api/v/2/devices/{SystemKey}/auth	 Contextual Resource Names
+/api/collection/{systemKey}/{collectionName}	 Contextual Resource Names
+/api/collection/{systemKey}/{collectionName}	 Contextual Resource Names
+/api/collection/{systemKey}/{collectionName}	 Contextual Resource Names
+/api/collection/{systemKey}/{collectionName}	 Contextual Resource Names
+/api/data/{collectionID}	 Contextual Resource Names
+/api/data/{collectionID}	 Contextual Resource Names
+/api/data/{collectionID}	 Contextual Resource Names
+/api/data/{collectionID}	 Contextual Resource Names
+/api/data/{collectionid}/columns	 Contextual Resource Names
+/api/code/{systemKey}/{serviceName}	 Contextual Resource Names
+/codeadmin/v/2/library/{systemKey}	 Contextual Resource Names
+/codeadmin/v/2/library/{systemKey}/{name}	 Contextual Resource Names
+/codeadmin/v/2/library/{systemKey}/{name}	 Contextual Resource Names
+/codeadmin/v/2/library/{systemKey}/{name}	 Contextual Resource Names
+/codeadmin/v/2/library/{systemKey}/{name}	 Contextual Resource Names
+/codeadmin/v/2/history/library/{systemKey}/{name}	 Contextual Resource Names
+/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	 Contextual Resource Names
+/codeadmin/failed	 Contextual Resource Names
+/codeadmin/failed/{systemKey}	 Contextual Resource Names
+/codeadmin/failed/{systemKey}	 Contextual Resource Names
+/codeadmin/failed/{systemKey}	 Contextual Resource Names
+/api/message/{systemKey}	 Contextual Resource Names
+/api/message/{systemKey}/publish	 Contextual Resource Names
+/api/message/{systemKey}	 Contextual Resource Names
+/admin/reg	 Contextual Resource Names
+/admin/auth	 Contextual Resource Names
+/admin/logout	 Contextual Resource Names
+/admin/systemmanagement	 Contextual Resource Names
+/admin/systemmanagement	 Contextual Resource Names
+/admin/systemmanagement	 Contextual Resource Names
+/admin/systemmanagement	 Contextual Resource Names
+/admin/collectionmanagement	 Contextual Resource Names
+/admin/collectionmanagement	 Contextual Resource Names
+/admin/collectionmanagement	 Contextual Resource Names

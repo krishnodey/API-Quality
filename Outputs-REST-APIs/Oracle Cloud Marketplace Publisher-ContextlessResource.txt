@@ -1,48 +1,48 @@
 ***Anti-Pattern*** 
-Count: 1
- /installrequests 	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 42
- /applications/{listingVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/banner 	 Contextual Resource Names
- /applications/{listingVersionId}/comments/{id} 	 Contextual Resource Names
- /applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/relateddocs/{id} 	 Contextual Resource Names
- /applications/{listingVersionId}/screenshots/{id} 	 Contextual Resource Names
- /applications/{listingVersionId}/supportingdocs/{id} 	 Contextual Resource Names
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	 Contextual Resource Names
- /applications 	 Contextual Resource Names
- /applications/{listingVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/availableservices 	 Contextual Resource Names
- /applications/{listingVersionId}/comments 	 Contextual Resource Names
- /applications/{listingVersionId}/packages 	 Contextual Resource Names
- /applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	 Contextual Resource Names
- /applications/{listingVersionId}/recommendedservices 	 Contextual Resource Names
- /appstore/publisher/v2/applications/{listingVersionId}/packages 	 Contextual Resource Names
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	 Contextual Resource Names
- /applications/{listingVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/banner 	 Contextual Resource Names
- /applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/relateddocs/{id} 	 Contextual Resource Names
- /applications/{listingVersionId}/screenshots 	 Contextual Resource Names
- /applications/{listingVersionId}/supportingdocs/{id} 	 Contextual Resource Names
- /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /applications 	 Contextual Resource Names
- /applications/{listingVersionId}/banner 	 Contextual Resource Names
- /applications/{listingVersionId}/comments 	 Contextual Resource Names
- /applications/{listingVersionId}/icon 	 Contextual Resource Names
- /applications/{listingVersionId}/packages 	 Contextual Resource Names
- /applications/{listingVersionId}/relateddocs 	 Contextual Resource Names
- /applications/{listingVersionId}/screenshots 	 Contextual Resource Names
- /applications/{listingVersionId}/supportingdocs 	 Contextual Resource Names
- /applications/{listingVersionId}/version 	 Contextual Resource Names
- /applications/{listingVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/banner 	 Contextual Resource Names
- /applications/{listingVersionId}/comments/{id} 	 Contextual Resource Names
- /applications/{listingVersionId}/icon 	 Contextual Resource Names
- /applications/{listingVersionId}/packages/{packageVersionId} 	 Contextual Resource Names
- /applications/{listingVersionId}/recommendedservices 	 Contextual Resource Names
+Count: 43
+/installrequests	 Contextual Resource Names
+/applications/{listingVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/banner	 Contextual Resource Names
+/applications/{listingVersionId}/comments/{id}	 Contextual Resource Names
+/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/relateddocs/{id}	 Contextual Resource Names
+/applications/{listingVersionId}/screenshots/{id}	 Contextual Resource Names
+/applications/{listingVersionId}/supportingdocs/{id}	 Contextual Resource Names
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	 Contextual Resource Names
+/applications	 Contextual Resource Names
+/applications/{listingVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/availableservices	 Contextual Resource Names
+/applications/{listingVersionId}/comments	 Contextual Resource Names
+/applications/{listingVersionId}/packages	 Contextual Resource Names
+/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	 Contextual Resource Names
+/applications/{listingVersionId}/recommendedservices	 Contextual Resource Names
+/appstore/publisher/v2/applications/{listingVersionId}/packages	 Contextual Resource Names
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	 Contextual Resource Names
+/applications/{listingVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/banner	 Contextual Resource Names
+/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/relateddocs/{id}	 Contextual Resource Names
+/applications/{listingVersionId}/screenshots	 Contextual Resource Names
+/applications/{listingVersionId}/supportingdocs/{id}	 Contextual Resource Names
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/applications	 Contextual Resource Names
+/applications/{listingVersionId}/banner	 Contextual Resource Names
+/applications/{listingVersionId}/comments	 Contextual Resource Names
+/applications/{listingVersionId}/icon	 Contextual Resource Names
+/applications/{listingVersionId}/packages	 Contextual Resource Names
+/applications/{listingVersionId}/relateddocs	 Contextual Resource Names
+/applications/{listingVersionId}/screenshots	 Contextual Resource Names
+/applications/{listingVersionId}/supportingdocs	 Contextual Resource Names
+/applications/{listingVersionId}/version	 Contextual Resource Names
+/applications/{listingVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/banner	 Contextual Resource Names
+/applications/{listingVersionId}/comments/{id}	 Contextual Resource Names
+/applications/{listingVersionId}/icon	 Contextual Resource Names
+/applications/{listingVersionId}/packages/{packageVersionId}	 Contextual Resource Names
+/applications/{listingVersionId}/recommendedservices	 Contextual Resource Names

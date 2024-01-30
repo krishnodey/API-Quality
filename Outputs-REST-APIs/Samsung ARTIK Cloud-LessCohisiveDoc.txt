@@ -1,11 +1,10 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 2
 -/devicetypes/<deviceTypeId>/whitelist	Non-pertinent Documentation	Uploads an Approved List as a CSV file.
--/devicetypes/<deviceTypeID>/whitelist/status	Non-pertinent Documentation	Returns the enabled/disabled status of an Approved List.
 -/messages/snapshots	Non-pertinent Documentation	Returns last received value for all Manifest fields (aka device state) of a device or devices.
 
 ***Patterns*** 
-Count: 77
+Count: 78
 -/users/self	Pertinent Documentation	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
 -/users/<userID>/properties	Pertinent Documentation	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
 -/users/<userID>/properties	Pertinent Documentation	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
@@ -45,6 +44,7 @@ Count: 77
 -/devicetypes/<deviceTypeID>/whitelist/enable	Pertinent Documentation	Enables or disables a device type's Approved List.
 -/devicetypes/<deviceTypeID>/whitelist/certificates	Pertinent Documentation	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
 -/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Pertinent Documentation	Deletes an Approved List certificate for a device type.
+-/devicetypes/<deviceTypeID>/whitelist/status	Pertinent Documentation	Returns the enabled/disabled status of an Approved List.
 -/devicetypes/<deviceTypeID>/whitelist/certificates	Pertinent Documentation	Returns details of an Approved List certificate.
 -/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Pertinent Documentation	Returns a specified vendor device ID.
 -/messages	Pertinent Documentation	Sends a message.

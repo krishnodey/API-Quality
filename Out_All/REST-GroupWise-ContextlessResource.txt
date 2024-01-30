@@ -1,0 +1,57 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET	/list/{type}	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users) 	 0 	 1 	 Contextual Resource Names
+GET	/list/{type}/{base}	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users) 	 0 	 1 	 Contextual Resource Names
+GET	/application	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document. 	 0 	 1 	 Contextual Resource Names
+GET	/async?state	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}. 	 1 	 0 	 Contextless Resource Names
+GET	/async/{id}	Get a particular asynchronous job status 	 1 	 0 	 Contextless Resource Names
+DELETE	/async/{id}	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list. 	 1 	 0 	 Contextless Resource Names
+GET	/diagnostics/attributes?locale	Return a map of attribute id to names. 	 0 	 1 	 Contextual Resource Names
+GET	/diagnostics/index	Returns the list of available indices to query 	 0 	 1 	 Contextual Resource Names
+GET	/diagnostics/index/{index}?attrs	Reads objects from the specified index 	 0 	 1 	 Contextual Resource Names
+GET	/diagnostics/object/{id}	Dump an object from the domain database identified by it's DRN and record type. 	 0 	 1 	 Contextual Resource Names
+GET	/domains	Get a list of Domains for this system. 	 0 	 1 	 Contextual Resource Names
+POST	/domains	Create a domain given the data. Note: The "rebuild" resource should be used to create the related database file (wpdomain.db) afterwards. 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}	Delete a specific Domain given the domain name 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}	Update a GroupWise Domain given the Domain data 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}	Get a specific Domain given the name 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/addressbook/fields	Returns the address book fields available for adding to a view. Note that this excludes admin defined fields which can only be added to a view if they have been properly mapped to a directory attribute. 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/addressbook/labels	Get the address book labels defined for the domain 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/addressbook/labels/{field}	Set the address book label for the given field 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}/addressbook/labels/{field}	Delete the address book label for the given field 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/addressbook/view	Returns the address book view defined for the domain 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/addressbook/view	Returns the address book view defined for the domain 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/administrator	Return the administrator for this domain 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/administrator	Set the administrator for this domain 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}/administrator	Clear the administrator for this domain 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/clientoptions?attrs	Get the Client Options under a specific Domain 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/clientoptions?attrs	Update the Client Options under a specific Domain 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/customaddresses	Get all Custom Addresses under a specific Domain 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/customaddresses/test?testAddress	Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gatewaysubdirs	List the gateway sub-directories for the domain. 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/info	Retrieve statistical information about the objects contained in this domain 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/links?direction	List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound). 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/links/{link}	Get the domain link between domainName and linkName 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/links/{link}	Update the domain link between domainName and linkName 	 0 	 1 	 Contextual Resource Names
+POST	/domains/{domain}/rebuild	Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service. 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/refaccesscontrols	Get the Access Control List for the domain 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/refaccesscontrols	Update the Access Control List for the domain 	 0 	 1 	 Contextual Resource Names
+GET	/domains/attributes	Get all available Domain Attributes 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways	Performs a query to find all the Gateways for this GroupWise system. 	 0 	 1 	 Contextual Resource Names
+POST	/domains/{domain}/gateways	Create an Gateway given the Gateway data 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}/gateways/{gateway}	Delete a specific Gateway given the name 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/gateways/{gateway}	Update a Gateway given the data 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways/{gateway}	Get a specific Gateway given the name 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways/{gateway}/administrators	Performs a query to find all the administrators for this gateway 	 0 	 1 	 Contextual Resource Names
+POST	/domains/{domain}/gateways/{gateway}/administrators	Adds a new administrator to this gateway. 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}/gateways/{gateway}/administrators/{id}	Remove an administrator member from this gateway 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/gateways/{gateway}/administrators/{id}	Remove an administrator member from this gateway 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways/{gateway}/aliases	Performs a query to find all the aliases for this gateway 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways/{gateway}/classofservice	List the classes of service for a specific gateway 	 0 	 1 	 Contextual Resource Names
+POST	/domains/{domain}/gateways/{gateway}/classofservice	Create a Gwia Class of Service for the specified gateway 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Get a specific Gateway given the name 	 0 	 1 	 Contextual Resource Names
+PUT	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Update a specific Class of Service given the name 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Delete a specific Class of Service given the name 	 0 	 1 	 Contextual Resource Names
+GET	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	List the members for a specific class of service 	 0 	 1 	 Contextual Resource Names
+POST	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored 	 0 	 1 	 Contextual Resource Names
+DELETE	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Remove a member from this class of service by id 	 0 	 1 	 Contextual Resource Names
+POST	/domains/{domain}/gateways/{gateway}/recoverDb	Recover the Access Control database for the specified gateway. This command will recover the database in place. 	 0 	 1 	 Contextual Resource Names

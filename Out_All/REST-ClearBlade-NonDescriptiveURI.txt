@@ -27,7 +27,7 @@ POST 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Creates libraries for a syste
 DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a librarie for a system 	 0 	 1 	 Self-descriptive End-point
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name} 	 Gets all versions of a library for a system 	 0 	 1 	 Self-descriptive End-point
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Gets a specific version of a library for a system 	 0 	 1 	 Self-descriptive End-point
-GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 0 	 1 	 Self-descriptive End-point
+GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 1 	 0 	Non-descriptive End-point
 GET 	 /codeadmin/failed/{systemKey} 	 Lists failed code service runs for specified system 	 0 	 1 	 Self-descriptive End-point
 POST 	 /codeadmin/failed/{systemKey} 	 Retry failed code services 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /codeadmin/failed/{systemKey} 	 Delete failed code service run from list 	 0 	 1 	 Self-descriptive End-point

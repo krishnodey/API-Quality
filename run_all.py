@@ -20,7 +20,7 @@ def run(selected, uri_path, base_path):
     #analyzer_obj.detect_amorphous_uri()
     
     
-    print("Detection of AmorphousURI:")
+    '''print("Detection of AmorphousURI:")
     result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_amorphous_uri(data)
     pattern_type = "AmorphousURI"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
@@ -67,7 +67,7 @@ def run(selected, uri_path, base_path):
     pattern_type = "NonDescriptiveURI"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
-    print("Finished Detection of Non-descriptiveURI:")
+    print("Finished Detection of Non-descriptiveURI:")'''
     
 
     
@@ -79,12 +79,12 @@ def run(selected, uri_path, base_path):
     print("Finished Detection of ContextlessResource:")
     
     
-    print("Detection of NonHierarchicalNodes:")
+    '''print("Detection of NonHierarchicalNodes:")
     result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_non_hierarchical_nodes(data)
     pattern_type = "NonHierarchicalNodes"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
-    print("Finished Detection of NonHierarchicalNodes:")
+    print("Finished Detection of NonHierarchicalNodes:")'''
 
 
     print("Detection of LessCohisiveDocumentation:")
@@ -92,15 +92,15 @@ def run(selected, uri_path, base_path):
     pattern_type = "LessCohisiveDoc"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
-    print("Finished Detection of LessCohisiveDocumentation:")
+    print("Finished Detection of LessCohisiveDocumentation")
 
 
-    print("Detection of InconsistantDocumentation:")
+    '''print("Detection of InconsistantDocumentation:")
     result_AP, result_P, p_count, ap_count, re= analyzer_obj.detect_inconsistent_documentations(data)
     pattern_type = "InconsistantDoc"
     uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     uri_obj.write_out_data(re, selected, pattern_type, base_path)
-    print("Finished Detection of InconsistantDocumentation:")
+    print("Finished Detection of InconsistantDocumentation:")'''
     
 
 
@@ -116,8 +116,8 @@ for api in base_path:
     content = file_obj.read_file()
     name_list = content.split('\n')
     for api_name in name_list:
-        #if api_name in ["Adobe Audience Manager","Apple App Store Connect","BroadCom","Cisco Flare", "ClearBlade","Dropbox", "Google Nest", "GroupWise", "IBM Cloud Pak System", "IBM Watson IoT"]:
-            #continue
+        if api_name in ["Adobe Audience Manager","Apple App Store Connect","BroadCom","Cisco Flare", "ClearBlade","Dropbox", "Google Nest"]:#, "GroupWise", "IBM Cloud Pak System", "IBM Watson IoT"]:
+            continue
         start_time = time.time()
         print(f"\nDetecting ----> {api_name}\n")
         path = api+"/"+api_name+"/"+api_name+".txt"

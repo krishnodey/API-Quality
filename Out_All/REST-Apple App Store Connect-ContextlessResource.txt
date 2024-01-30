@@ -1,0 +1,33 @@
+HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
+GET	/appCategories	filter by attribute platforms 	 0 	 1 	 Contextual Resource Names
+GET	/appCategories/{id}	the fields to include for returned resources of type appCategories 	 0 	 1 	 Contextual Resource Names
+GET	/appEncryptionDeclarations	filter by attribute platform 	 0 	 1 	 Contextual Resource Names
+GET	/appEncryptionDeclarations/{id}	the fields to include for returned resources of type appEncryptionDeclarations 	 0 	 1 	 Contextual Resource Names
+GET	/appInfoLocalizations/{id}	the fields to include for returned resources of type appInfoLocalizations 	 0 	 1 	 Contextual Resource Names
+GET	/appInfos/{id}	the fields to include for returned resources of type appInfos 	 0 	 1 	 Contextual Resource Names
+GET	/appPreOrders/{id}	the fields to include for returned resources of type appPreOrders 	 0 	 1 	 Contextual Resource Names
+GET	/appPreviewSets/{id}	the fields to include for returned resources of type appPreviews 	 0 	 1 	 Contextual Resource Names
+GET	/appPreviews/{id}	the fields to include for returned resources of type appPreviews 	 0 	 1 	 Contextual Resource Names
+GET	/appPricePoints	filter by id(s) of related priceTier 	 0 	 1 	 Contextual Resource Names
+GET	/appPricePoints/{id}	the fields to include for returned resources of type appPricePoints 	 0 	 1 	 Contextual Resource Names
+GET	/appPriceTiers	filter by id(s) 	 0 	 1 	 Contextual Resource Names
+GET	/appPriceTiers/{id}	the fields to include for returned resources of type appPriceTiers 	 0 	 1 	 Contextual Resource Names
+GET	/appPrices/{id}	the fields to include for returned resources of type appPrices 	 0 	 1 	 Contextual Resource Names
+GET	/appScreenshotSets/{id}	the fields to include for returned resources of type appScreenshotSets 	 0 	 1 	 Contextual Resource Names
+GET	/appScreenshots/{id}	the fields to include for returned resources of type appScreenshots 	 0 	 1 	 Contextual Resource Names
+GET	/appStoreReviewAttachments/{id}	the fields to include for returned resources of type appStoreReviewAttachments 	 0 	 1 	 Contextual Resource Names
+GET	/appStoreReviewDetails/{id}	he fields to include for returned resources of type appStoreReviewDetails 	 0 	 1 	 Contextual Resource Names
+GET	/appStoreVersionLocalizations/{id}	the fields to include for returned resources of type appStoreVersionLocalizations 	 0 	 1 	 Contextual Resource Names
+GET	/appStoreVersions/{id}	the fields to include for returned resources of type appStoreVersions 	 0 	 1 	 Contextual Resource Names
+GET	/apps	filter by attribute 'appStoreVersions.appStoreState 	 0 	 1 	 Contextual Resource Names
+GET	/betaAppLocalizations	filter by attribute locale 	 0 	 1 	 Contextual Resource Names
+GET	/endUserLicenseAgreements/{id}	the fields to include for returned resources of type endUserLicenseAgreements 	 0 	 1 	 Contextual Resource Names
+GET	/financeReports	filter by attribute regionCode 	 0 	 1 	 Contextual Resource Names
+GET	/preReleaseVersions	filter by attribute builds.expired 	 0 	 1 	 Contextual Resource Names
+GET	/routingAppCoverages/{id}	the fields to include for returned resources of type routingAppCoverages 	 0 	 1 	 Contextual Resource Names
+GET	/salesReports	filter by attribute frequency 	 0 	 1 	 Contextual Resource Names
+GET	/appCategories/{id}/subcategories	the fields to include for returned resources of type appCategories 	 0 	 1 	 Contextual Resource Names
+GET	/appEncryptionDeclarations/{id}/app	the fields to include for returned resources of type apps 	 0 	 1 	 Contextual Resource Names
+GET	/appInfos/{id}/ageRatingDeclaration	the fields to include for returned resources of type ageRatingDeclarations 	 0 	 1 	 Contextual Resource Names
+GET	/appInfos/{id}/appInfoLocalizations	filter by attribute locale 	 0 	 1 	 Contextual Resource Names
+GET	/appInfos/{id}/primaryCategory	the fields to include for returned resources of type appCategories 	 0 	 1 	 Contextual Resource Names

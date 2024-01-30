@@ -80,7 +80,7 @@ with open(res_path, 'r') as file:
         else:
             print('Not Found')
             '''
-import csv
+'''import csv
 
 base_path = ['REST-APIs/', 'GraphQL-APIs/']
 i = 1
@@ -108,6 +108,40 @@ with open(write_path, 'w', newline='') as w_file:
                         i += 1
 
 print("Data has been written to Alldata.csv")
+
+'''
+from uri_cleaning import UriCleaning
+obj = UriCleaning()
+text = '/codeadmin/v/2/library/{systemKey}/{name}'
+'''processed_nodes =  obj.get_uri_nodes(text)
+print(obj.get_uri_nodes(text))
+
+for new in processed_nodes:
+            print(new)
+            for i in range(len(new)):
+                val = obj.set_Acronym(new[i])
+                print(new[i])
+                print(val)
+                if val is not None:
+                    for index in range(len(val)):
+                        if i + index < len(new):
+                            new[i + index] = val[index]
+                        else:
+                            new.append(val[index])
+
+print(processed_nodes)
+
+val = obj.set_Acronym('codeadmin')
+print(val)'''
+
+#new = obj.get_Acronym(["codeadmin","api", "claire"])
+
+#print(new)
                     
-        
+clean = obj.get_uri_nodes('codeadmin/api/cliareAll/newIs/eem/bop/v2')   
+
+print(clean)
+
+clean = obj.preprocess_documentation('Calls/executes ClearCode service_newIs')
+print(clean)
 

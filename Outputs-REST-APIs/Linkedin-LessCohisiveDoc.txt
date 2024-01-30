@@ -5,7 +5,7 @@ Count: 2
 
 ***Patterns*** 
 Count: 11
-- /me 	Pertinent Documentation	 To identify and retrieve the current member's profile based on the access token
+-/me	Pertinent Documentation	 To identify and retrieve the current member's profile based on the access token
 
 -/salesContracts?q=contractsByMember	Pertinent Documentation	Find all contracts where user has an active seat.
 -/salesAnalyticsExportJobs/{jobId}?contract={contractUrn}	Pertinent Documentation	Fetches the SalesAnalyticsExportJob object corresponding to the job id with the latest status
