@@ -1,10 +1,8 @@
 ***Anti-Pattern*** 
-Count: 2
-/webhooks.json	 Non-descriptive End-point
-/webhooks.json	 Non-descriptive End-point
+Count: 0
 
 ***Patterns*** 
-Count: 69
+Count: 71
 /admin/oauth/access_scopes.json	 Self-descriptive End-point
 /storefront_access_tokens.json	 Self-descriptive End-point
 /storefront_access_tokens/{storefront_access_token_id}.json	 Self-descriptive End-point
@@ -61,8 +59,10 @@ Count: 69
 /events.json	 Self-descriptive End-point
 /events/{event_id}.json	 Self-descriptive End-point
 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00	 Self-descriptive End-point
+/webhooks.json	 Self-descriptive End-point
 /webhooks/count.json	 Self-descriptive End-point
 /webhooks/{webhook_id}.json	 Self-descriptive End-point
+/webhooks.json	 Self-descriptive End-point
 /webhooks/{webhook_id}.json	 Self-descriptive End-point
 /webhooks/{webhook_id}.json	 Self-descriptive End-point
 /inventory_items.json?ids=808950810,39072856,457924702	 Self-descriptive End-point

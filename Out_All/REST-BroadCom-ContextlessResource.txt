@@ -19,7 +19,7 @@ GET	/bui/getMyResources	Returns all the resources(Assets) the user is having acc
 GET	/bui/getMyActiveChatSession	Gets the active chat session details for the logged-in Service Point user. 	 0 	 1 	 Contextual Resource Names
 GET	/bui/checkActiveSessions	Checks if the logged-in Service Point user has an active chat session. 	 0 	 1 	 Contextual Resource Names
 POST	/bui/createChatThread	Creates an activity log entry for initiating a chat session 	 0 	 1 	 Contextual Resource Names
-GET	/bui/getChatHistory/{roomName}	Gets the chat history for the logged-in ServicePoint user for the passed-in ticket id (here roomName is the ticket persistent id). 	 0 	 1 	 Contextual Resource Names
+GET	/bui/getChatHistory/{roomName}	Gets the chat history for the logged-in ServicePoint user for the passed-in ticket id (here roomName is the ticket persistent id). 	 1 	 0 	 Contextless Resource Names
 GET	/bui/getDocument({id})	Returns a Knowledge Document and updates the documents hits count if $updateHits parameter is true 	 0 	 1 	 Contextual Resource Names
 GET	/bui/getKDAttachments({id})	Returns all Knowledge Document attachments for the provided document id. 	 0 	 1 	 Contextual Resource Names
 GET	/bui/getKDComments({id})	Returns Knowledge Document comments for the provided document id. 	 0 	 1 	 Contextual Resource Names
@@ -28,7 +28,7 @@ POST	/bui/rateDocument({id})	Rate an Existing Knowledge Document 	 0 	 1 	 Conte
 GET	/bui/kdLinkInfo({id})	It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket. 	 0 	 1 	 Contextual Resource Names
 POST	/bui/unLinkSolution({id})	Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket 	 0 	 1 	 Contextual Resource Names
 GET	/bui/helpAbout	Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned 	 0 	 1 	 Contextual Resource Names
-GET	/bui/getEEMAuth	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests) 	 1 	 0 	 Contextless Resource Names
+GET	/bui/getEEMAuth	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests) 	 0 	 1 	 Contextual Resource Names
 GET	/bui/{factory}({persid})	Returns the object details specified by the persistent id of the mentioned factory 	 0 	 1 	 Contextual Resource Names
 PUT	/bui/{factory}({persid})	Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory. 	 0 	 1 	 Contextual Resource Names
 GET	/bui/{factory}	Returns the objects based on the parameters for the mentioned factory 	 0 	 1 	 Contextual Resource Names

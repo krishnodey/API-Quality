@@ -2,16 +2,16 @@ HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
 POST 	 /api/getAccess 	 Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /bui/getBUIAllConfig 	 Returns all the configuration properties for Service Point App. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /bui/getAllowedStatus 	 Returns the list of available Statuses based on allowed Status transition. 	 0 	 1 	 Self-descriptive End-point
-GET 	 /bui/getMyTicketDetails({persid}) 	 Returns ticket details along with extra attributes provided in the $attrList parameter. 	 1 	 0 	Non-descriptive End-point
+GET 	 /bui/getMyTicketDetails({persid}) 	 Returns ticket details along with extra attributes provided in the $attrList parameter. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /bui/getTicketsCustomData({persid}) 	 Returns tickets summary attributes configured at SDM. 	 1 	 0 	Non-descriptive End-point
 GET 	 /bui/getDefaultCategories 	 Returns the default list of categories for cr factory defined in Service Desk which is configurable. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /bui/attrInfo 	 Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page. 	 0 	 1 	 Self-descriptive End-point
-GET 	 /bui/attrCtrl 	 Returns all dependent attributes for the provided ticket attribute ($attrname parameter) 	 1 	 0 	Non-descriptive End-point
+GET 	 /bui/attrCtrl 	 Returns all dependent attributes for the provided ticket attribute ($attrname parameter) 	 0 	 1 	 Self-descriptive End-point
 POST 	 /bui/addLogComment 	 Add log comment to the ticket 	 0 	 1 	 Self-descriptive End-point
-POST 	 /bui/changeStatus/{factory}({persid}) 	 Returns updated status value of the provided ticket persistent id. 	 1 	 0 	Non-descriptive End-point
-GET 	 /bui/allFeeds({persid}) 	 Returns Activity Log Information for the provided ticket 	 1 	 0 	Non-descriptive End-point
+POST 	 /bui/changeStatus/{factory}({persid}) 	 Returns updated status value of the provided ticket persistent id. 	 0 	 1 	 Self-descriptive End-point
+GET 	 /bui/allFeeds({persid}) 	 Returns Activity Log Information for the provided ticket 	 0 	 1 	 Self-descriptive End-point
 POST 	 /bui/attmnt 	 Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file. 	 0 	 1 	 Self-descriptive End-point
-GET 	 /bui/getBopSID 	 Returns BOP session ID, which can be used to download file. 	 0 	 1 	 Self-descriptive End-point
+GET 	 /bui/getBopSID 	 Returns BOP session ID, which can be used to download file. 	 1 	 0 	Non-descriptive End-point
 GET 	 /bui/attmnt({persid})/$value 	 Returns an attachment as binary data. 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /bui/updateStatusForNotification 	 Marks the notification status as READ for the given notification persistent id 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /bui/updateStatusForAllNotification 	 Marks all the notifications based on the $filter value provided as READ. 	 0 	 1 	 Self-descriptive End-point
@@ -25,12 +25,12 @@ GET 	 /bui/getKDAttachments({id}) 	 Returns all Knowledge Document attachments f
 GET 	 /bui/getKDComments({id}) 	 Returns Knowledge Document comments for the provided document id. 	 1 	 0 	Non-descriptive End-point
 POST 	 /bui/addKDComment({id}) 	 Add a comment to an Existing Knowledge Document 	 1 	 0 	Non-descriptive End-point
 POST 	 /bui/rateDocument({id}) 	 Rate an Existing Knowledge Document 	 1 	 0 	Non-descriptive End-point
-GET 	 /bui/kdLinkInfo({id}) 	 It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket. 	 1 	 0 	Non-descriptive End-point
+GET 	 /bui/kdLinkInfo({id}) 	 It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket. 	 0 	 1 	 Self-descriptive End-point
 POST 	 /bui/unLinkSolution({id}) 	 Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket 	 1 	 0 	Non-descriptive End-point
 GET 	 /bui/helpAbout 	 Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned 	 0 	 1 	 Self-descriptive End-point
 GET 	 /bui/getEEMAuth 	 Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests) 	 0 	 1 	 Self-descriptive End-point
-GET 	 /bui/{factory}({persid}) 	 Returns the object details specified by the persistent id of the mentioned factory 	 1 	 0 	Non-descriptive End-point
-PUT 	 /bui/{factory}({persid}) 	 Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory. 	 1 	 0 	Non-descriptive End-point
+GET 	 /bui/{factory}({persid}) 	 Returns the object details specified by the persistent id of the mentioned factory 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /bui/{factory}({persid}) 	 Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /bui/{factory} 	 Returns the objects based on the parameters for the mentioned factory 	 0 	 1 	 Self-descriptive End-point
 POST 	 /bui/{factory} 	 Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.) 	 0 	 1 	 Self-descriptive End-point
 GET 	 /gs/mytkt_active 	 Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api. 	 0 	 1 	 Self-descriptive End-point

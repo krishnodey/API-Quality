@@ -1,9 +1,12 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 4
 /async?state	 Non-descriptive End-point
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Non-descriptive End-point
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Non-descriptive End-point
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 55
+Count: 52
 /list/{type}	 Self-descriptive End-point
 /list/{type}/{base}	 Self-descriptive End-point
 /application	 Self-descriptive End-point
@@ -52,9 +55,6 @@ Count: 55
 /domains/{domain}/gateways/{gateway}/aliases	 Self-descriptive End-point
 /domains/{domain}/gateways/{gateway}/classofservice	 Self-descriptive End-point
 /domains/{domain}/gateways/{gateway}/classofservice	 Self-descriptive End-point
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Self-descriptive End-point
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Self-descriptive End-point
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Self-descriptive End-point
 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	 Self-descriptive End-point
 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	 Self-descriptive End-point
 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	 Self-descriptive End-point

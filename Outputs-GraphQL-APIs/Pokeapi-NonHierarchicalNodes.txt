@@ -1,6 +1,6 @@
 ***Anti-Pattern*** 
 Count: 1
-/v2/berry/{natural_gift_power}/	Non-hierarchical Nodes	Reversed hierarchy of type True detected between gift and power. 0 hierarchical relations were detected out of 3
+/v2/berry/{natural_gift_power}/	Non-hierarchical Nodes	Reversed hierarchy of type True detected between gift and power. 0 hierarchical relations were detected out of 23
 
 ***Patterns*** 
 Count: 23

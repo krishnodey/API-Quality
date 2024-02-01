@@ -1,9 +1,8 @@
 ***Anti-Pattern*** 
-Count: 15
+Count: 13
 /meta	 Non-descriptive End-point
 /sponsorables	 Non-descriptive End-point
 /addLabelsToLabelable	 Non-descriptive End-point
-/addUpvote	 Non-descriptive End-point
 /clearLabelsFromLabelable	 Non-descriptive End-point
 /createRepositoryRuleset	 Non-descriptive End-point
 /deleteRepositoryRuleset	 Non-descriptive End-point
@@ -11,13 +10,12 @@ Count: 15
 /lockLockable	 Non-descriptive End-point
 /removeEnterpriseAdmin	 Non-descriptive End-point
 /removeLabelsFromLabelable	 Non-descriptive End-point
-/removeUpvote	 Non-descriptive End-point
 /unlockLockable	 Non-descriptive End-point
 /updatePatreonSponsorability	 Non-descriptive End-point
 /updateRepositoryRuleset	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 241
+Count: 243
 /codeOfConduct	 Self-descriptive End-point
 /codesOfConduct	 Self-descriptive End-point
 /enterprise	 Self-descriptive End-point
@@ -64,6 +62,7 @@ Count: 241
 /addPullRequestReviewThreadReply	 Self-descriptive End-point
 /addReaction	 Self-descriptive End-point
 /addStar	 Self-descriptive End-point
+/addUpvote	 Self-descriptive End-point
 /addVerifiableDomain	 Self-descriptive End-point
 /approveDeployments	 Self-descriptive End-point
 /approveVerifiableDomain	 Self-descriptive End-point
@@ -169,6 +168,7 @@ Count: 241
 /removeOutsideCollaborator	 Self-descriptive End-point
 /removeReaction	 Self-descriptive End-point
 /removeStar	 Self-descriptive End-point
+/removeUpvote	 Self-descriptive End-point
 /reopenDiscussion	 Self-descriptive End-point
 /reopenIssue	 Self-descriptive End-point
 /reopenPullRequest	 Self-descriptive End-point

@@ -483,8 +483,8 @@ class ApiAnalyzer:
         #print(topic_words)
 
         # Display topic words horizontally
-        table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
-        print(tabulate(table, headers="firstrow", tablefmt="grid"))
+        '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
+        print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
 
         def calculate_similarity(uri_node, topic_words):
             similarity_scores = {}
@@ -494,10 +494,12 @@ class ApiAnalyzer:
             return similarity_scores
 
         for method, combined_node, origianl_node, des in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
-            print(f"{method}---{combined_node}---{des}")
+            #print(f"{method}---{combined_node}---{des}")
             if len(combined_node)<1:
                 p_count = p_count + 1
                 contextual_P.append(f"-{origianl_node}\t{P}")
+                msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
+                context_lst.append(msg)
                 continue
             # Calculate similarity for each individual node
             node_word_similarity = {}
@@ -511,23 +513,24 @@ class ApiAnalyzer:
             # Iterate through topics and print scores vertically
             for topic_idx in range(len(topic_words)):
                 topic_name = f"Topic {topic_idx + 1}"
-                print(f"  {topic_name}:")
+                #print(f"  {topic_name}:")
                 tmp = 0
                 for node, word_scores in node_word_similarity.items():
                     score = word_scores.get(topic_name, {})
-                    print(f"    {node}: {score}")  # Print scores for each node under the topic
+                    #print(f"    {node}: {score}")  # Print scores for each node under the topic
                     max_key = max(score, key = score.get)
                     max_val = score[max_key]
                     #print(max_val)
                     tmp += max_val
                 avg_tmp = tmp / len(node_word_similarity)
                 topic_avg.append(avg_tmp)
+                print("->", end=" ")
                 #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
             
             #print(f"Total Average for All Topics: {topic_avg}\n")
             #for avg in topic_avg:
             
-            print(max(topic_avg))
+            #print(max(topic_avg))
             if round(max(topic_avg),1) >= 0.5:
                 #print("contextual")
                 p_count = p_count + 1
@@ -539,7 +542,7 @@ class ApiAnalyzer:
                 contextless_AP.append(f"{origianl_node.strip()}\t {AP}")
                 msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 1 \t 0 \t {AP}"
             context_lst.append(msg)
-            print("->", end=" ")
+            #print("->", end=" ")
         return contextless_AP, contextual_P, p_count, ap_count, context_lst
     
 
@@ -652,16 +655,18 @@ class ApiAnalyzer:
             return similarity_scores
 
         for method, combined_node, documentation, node_uri, des in zip(self.http_method, self.processed_nodes,self.processed_des, self.nodes, self.description):
-            print(f"\nn {method}---{combined_node}----{documentation}-{des}")
+            #print(f"\nn {method}---{combined_node}----{documentation}-{des}")
             # Calculate similarity for each individual node
             topics = len(combined_node)
             #print(topics)
-            print(combined_node)
-            print(documentation)
+            #print(combined_node)
+            #print(documentation)
             if len(documentation)<1 or len(combined_node) < 1 :
                 p_count = p_count + 1
                 less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des}")
                 msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
+                cohisive_lst.append(msg)
+                
                 continue
                 
             # Create a dictionary and corpus for LDA modeling
@@ -694,11 +699,11 @@ class ApiAnalyzer:
             # Iterate through topics and print scores vertically
             for topic_idx in range(len(topic_words)):
                 topic_name = f"Topic {topic_idx + 1}"
-                print(f"  {topic_name}:")
+                #print(f"  {topic_name}:")
                 tmp = 0
                 for node, word_scores in node_word_similarity.items():
                     score = word_scores.get(topic_name, {})
-                    print(f"    {node}: {score}")  # Print scores for each node under the topic
+                    #print(f"    {node}: {score}")  # Print scores for each node under the topic
                     #tmp1 = simi_average(score)
                     #print(tmp1)
                     max_value_key = max(score, key=score.get)
@@ -708,10 +713,11 @@ class ApiAnalyzer:
                 avg_tmp = tmp / len(node_word_similarity)
                 topic_avg.append(avg_tmp)
                 #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                print("->", end=" ")
             
             #print(f"Total Average for All Topics: {topic_avg}\n")
             #for avg in topic_avg:
-            print(max(topic_avg))
+            #print(max(topic_avg))
             if round(max(topic_avg), 1) >= 0.5:
                 #print("cohisive")
                 p_count = p_count + 1
@@ -723,7 +729,7 @@ class ApiAnalyzer:
                 less_cohesive_AP.append(f"-{node_uri.strip()}\t{AP}\t{des.strip()}")
                 msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 1 \t 0 \t {AP}"
             cohisive_lst.append(msg)
-            print("->", end=" ")
+            #print("->", end=" ")
         return less_cohesive_AP, less_cohesive_P, p_count, ap_count, cohisive_lst
     
 

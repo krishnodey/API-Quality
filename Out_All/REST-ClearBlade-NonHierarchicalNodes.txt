@@ -8,23 +8,23 @@ GET 	 /api/user/info 	 Returns information about a logged in user 	 0 	 1
 PUT 	 /api/user/info 	 Updates a logged in users information 	 0 	 1 	 
 PUT 	 /api/user/pass 	 Changes a logged in users password 	 0 	 1 	 
 GET 	 /api/user 	 Gets list of users 	 0 	 1 	 
-PUT 	 /api/v/2/devices/{systemKey}/{name} 	 Update a device's state or custom attributes only 	 0 	 1 	 
-POST 	 /api/v/2/devices/{SystemKey}/auth 	 Authenticates a device into the system 	 0 	 1 	 
+PUT 	 /api/v/2/devices/{systemKey}/{name} 	 Update a device's state or custom attributes only 	 1 	 0 	 Reversed hierarchy of type True detected between interface and devices. 0 hierarchical relations were detected out of 44
+POST 	 /api/v/2/devices/{SystemKey}/auth 	 Authenticates a device into the system 	 1 	 0 	 Reversed hierarchy of type True detected between interface and devices. 0 hierarchical relations were detected out of 44
 GET 	 /api/collection/{systemKey}/{collectionName} 	 fetch collection 	 0 	 1 	 
 PUT 	 /api/collection/{systemKey}/{collectionName} 	 Item update 	 0 	 1 	 
 POST 	 /api/collection/{systemKey}/{collectionName} 	 Item create 	 0 	 1 	 
 DELETE 	 /api/collection/{systemKey}/{collectionName} 	 Item delete 	 0 	 1 	 
-GET 	 /api/data/{collectionID} 	 fetch collection 	 0 	 1 	 
-PUT 	 /api/data/{collectionID} 	 Item update 	 0 	 1 	 
-POST 	 /api/data/{collectionID} 	 Item create 	 0 	 1 	 
-DELETE 	 /api/data/{collectionID} 	 Item delete 	 0 	 1 	 
+GET 	 /api/data/{collectionID} 	 fetch collection 	 1 	 0 	 Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+PUT 	 /api/data/{collectionID} 	 Item update 	 1 	 0 	 Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+POST 	 /api/data/{collectionID} 	 Item create 	 1 	 0 	 Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+DELETE 	 /api/data/{collectionID} 	 Item delete 	 1 	 0 	 Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
 GET 	 /api/data/{collectionid}/columns 	 get column key names 	 0 	 1 	 
-POST 	 /api/code/{systemKey}/{serviceName} 	 Calls/executes ClearCode service 	 0 	 1 	 
+POST 	 /api/code/{systemKey}/{serviceName} 	 Calls/executes ClearCode service 	 1 	 0 	 Reversed hierarchy of type True detected between interface and code. 0 hierarchical relations were detected out of 44
 GET 	 /codeadmin/v/2/library/{systemKey} 	 Gets the libraries for a system 	 0 	 1 	 
 GET 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Gets the libraries for a system 	 0 	 1 	 
 PUT 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Updates the libraries for a system 	 0 	 1 	 
 POST 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Creates libraries for a system 	 0 	 1 	 
-DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a librarie for a system 	 0 	 1 	 
+DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a libraries for a system 	 0 	 1 	 
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name} 	 Gets all versions of a library for a system 	 0 	 1 	 
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Gets a specific version of a library for a system 	 0 	 1 	 
 GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 0 	 1 	 

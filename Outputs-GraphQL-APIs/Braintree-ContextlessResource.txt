@@ -1,10 +1,11 @@
 ***Anti-Pattern*** 
-Count: 2
+Count: 3
 /ping	 Contextless Resource Names
+/performThreeDSecureLookup	 Contextless Resource Names
 /BinRecordValue	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 94
+Count: 93
 /pingInStoreReader	 Contextual Resource Names
 /viewer	 Contextual Resource Names
 /clientConfiguration	 Contextual Resource Names
@@ -57,7 +58,6 @@ Count: 94
 /updateCreditCardBillingAddress	 Contextual Resource Names
 /updateCreditCardCardholderName	 Contextual Resource Names
 /updateCreditCardExpirationDate	 Contextual Resource Names
-/performThreeDSecureLookup	 Contextual Resource Names
 /acceptDispute	 Contextual Resource Names
 /finalizeDispute	 Contextual Resource Names
 /createDisputeTextEvidence	 Contextual Resource Names

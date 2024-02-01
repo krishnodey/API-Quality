@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+/v2/spaces/search	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 51
+Count: 50
 /v2/users/:id/bookmarks/:tweet_id	 Contextual Resource Names
 /v2/users/:id/bookmarks	 Contextual Resource Names
 /v2/users/:id/bookmarks	 Contextual Resource Names
@@ -42,7 +43,6 @@ Count: 51
 /v2/users/by	 Contextual Resource Names
 /v2/users/by/username/:username	 Contextual Resource Names
 /v2/users/me	 Contextual Resource Names
-/v2/spaces/search	 Contextual Resource Names
 /v2/spaces/:id	 Contextual Resource Names
 /v2/spaces/:id/buyers	 Contextual Resource Names
 /v2/spaces/:id/tweets	 Contextual Resource Names

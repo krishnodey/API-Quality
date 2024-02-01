@@ -52,6 +52,6 @@ GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Get a spec
 PUT 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Update a specific Class of Service given the name 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Delete a specific Class of Service given the name 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 List the members for a specific class of service 	 0 	 1 	 Regular methods
-POST 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored 	 1 	 0 	  [Singular last node with POST method.] 
+POST 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored 	 0 	 1 	  [Pluralized last node with POST method.] 
 DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	 Remove a member from this class of service by id 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 POST 	 /domains/{domain}/gateways/{gateway}/recoverDb 	 Recover the Access Control database for the specified gateway. This command will recover the database in place. 	 1 	 0 	  [Singular last node with POST method.] 

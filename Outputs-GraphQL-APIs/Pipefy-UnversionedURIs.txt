@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 109
+Count: 91
 /allCards 	 No Version Found
 /autoFillFields 	 No Version Found
 /card 	 No Version Found
@@ -42,16 +42,11 @@ Count: 109
 /createTableField 	 No Version Found
 /createTableRecord 	 No Version Found
 /createTableRecordInRestrictedTable 	 No Version Found
-/createTableRelation 	 No Version Found
-/createWebhook 	 No Version Found
-/deleteCard 	 No Version Found
-/deleteComment 	 No Version Found
 /deleteFieldCondition 	 No Version Found
 /deleteInboxEmail 	 No Version Found
 /deleteLabel 	 No Version Found
 /deleteOrganization 	 No Version Found
 /deleteOrganizationWebhook 	 No Version Found
-/deletePhase 	 No Version Found
 /deletePhaseField 	 No Version Found
 /deletePipe 	 No Version Found
 /deletePipeRelation 	 No Version Found
@@ -65,21 +60,8 @@ Count: 109
 /createWebhook 	 No Version Found
 /deleteCard 	 No Version Found
 /deleteComment 	 No Version Found
-/deleteFieldCondition 	 No Version Found
-/deleteInboxEmail 	 No Version Found
-/deleteInboxEmail 	 No Version Found
-/deleteOrganization 	 No Version Found
-/deleteOrganizationWebhook 	 No Version Found
-/deletePhase 	 No Version Found
-/deletePhaseField 	 No Version Found
 /deletePipe 	 No Version Found
-/deletePipeRelation 	 No Version Found
-/deleteTable 	 No Version Found
 /deleteTableField 	 No Version Found
-/deleteTableRecord 	 No Version Found
-/deleteTableRelation 	 No Version Found
-/deleteWebhook 	 No Version Found
-/exportPipeReport 	 No Version Found
 /interfaceEmbedCreat 	 No Version Found
 /inviteMembers 	 No Version Found
 /moveCardToPhase 	 No Version Found

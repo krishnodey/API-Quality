@@ -1,14 +1,14 @@
 ***Anti-Pattern*** 
 Count: 6
-/v19.0/{application-id}/app_event_types	Non-hierarchical Nodes	Reversed hierarchy of type True detected between application and event. 0 hierarchical relations were detected out of 4
-/v19.0/{application-id}/button_auto_detection_device_selection	Non-hierarchical Nodes	Reversed hierarchy of type True detected between device and selection. 0 hierarchical relations were detected out of 6
-/v19.0/{application-id}/events	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 2
-/v19.0/{application-id}/monetized_digital_store_objects	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 5
-/{application_id}/codeless_event_mappings	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and mappings. 0 hierarchical relations were detected out of 4
-/v19.0/{application-id}/monetized_digital_store_objects	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 5
+/v19.0/{application-id}/app_event_types	Non-hierarchical Nodes	Reversed hierarchy of type True detected between application and event. 0 hierarchical relations were detected out of 65
+/v19.0/{application-id}/button_auto_detection_device_selection	Non-hierarchical Nodes	Reversed hierarchy of type True detected between device and selection. 0 hierarchical relations were detected out of 65
+/v19.0/{application-id}/events	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 65
+/v19.0/{application-id}/monetized_digital_store_objects	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 65
+/{application_id}/codeless_event_mappings	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and mappings. 0 hierarchical relations were detected out of 65
+/v19.0/{application-id}/monetized_digital_store_objects	Non-hierarchical Nodes	Reversed hierarchy of type True detected between store and objects. 0 hierarchical relations were detected out of 65
 
 ***Patterns*** 
-Count: 63
+Count: 60
 /v18.0/{album-id}	Hierarchical Nodes	
 /{group_id}/albums	Hierarchical Nodes	
 /v18.0/{album-id}/comments	Hierarchical Nodes	
@@ -36,11 +36,9 @@ Count: 63
 /v19.0/{application-id}/da_checks	Hierarchical Nodes	
 /v19.0/{application-id}/ios_skadnetwork_conversion_config	Hierarchical Nodes	
 /v19.0/{application-id}/mobile_sdk_gk	Hierarchical Nodes	
-/v19.0/{application-id}/model_asset	Hierarchical Nodes	
 /v19.0/{application-id}/permissions	Hierarchical Nodes	
 /v19.0/{application-id}/products	Hierarchical Nodes	
 /v19.0/{application-id}/purchases	Hierarchical Nodes	
-/v19.0/{app-id}/roles	Hierarchical Nodes	
 /v19.0/{application-id}/subscribed_domains	Hierarchical Nodes	
 /v19.0/{application-id}/subscribed_domains_phishing	Hierarchical Nodes	
 /{application_id}/app_indexing	Hierarchical Nodes	
@@ -53,7 +51,6 @@ Count: 63
 /{application_id}/activities	Hierarchical Nodes	
 /v19.0/{application-id}/ad_placement_groups	Hierarchical Nodes	
 /v19.0/{application-id}/adnetworkanalytics_results	Hierarchical Nodes	
-/v19.0/{application-id}/mobile_sdk_gk	Hierarchical Nodes	
 /v19.0/{application-id}/model_asset	Hierarchical Nodes	
 /v19.0/{application-id}/permissions	Hierarchical Nodes	
 /v19.0/{app-id}/picture	Hierarchical Nodes	

@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 73
+Count: 56
 /createCard	CRUDy End-point	 [create found] 
 /createCardRelation	CRUDy End-point	 [create found] 
 /createComment	CRUDy End-point	 [create found] 
@@ -18,16 +18,11 @@ Count: 73
 /createTableField	CRUDy End-point	 [create found] 
 /createTableRecord	CRUDy End-point	 [create found] 
 /createTableRecordInRestrictedTable	CRUDy End-point	 [create found] 
-/createTableRelation	CRUDy End-point	 [create found] 
-/createWebhook	CRUDy End-point	 [create found] 
-/deleteCard	CRUDy End-point	 [delete found] 
-/deleteComment	CRUDy End-point	 [delete found] 
 /deleteFieldCondition	CRUDy End-point	 [delete found] 
 /deleteInboxEmail	CRUDy End-point	 [delete found] 
 /deleteLabel	CRUDy End-point	 [delete found] 
 /deleteOrganization	CRUDy End-point	 [delete found] 
 /deleteOrganizationWebhook	CRUDy End-point	 [delete found] 
-/deletePhase	CRUDy End-point	 [delete found] 
 /deletePhaseField	CRUDy End-point	 [delete found] 
 /deletePipe	CRUDy End-point	 [delete found] 
 /deletePipeRelation	CRUDy End-point	 [delete found] 
@@ -40,20 +35,8 @@ Count: 73
 /createWebhook	CRUDy End-point	 [create found] 
 /deleteCard	CRUDy End-point	 [delete found] 
 /deleteComment	CRUDy End-point	 [delete found] 
-/deleteFieldCondition	CRUDy End-point	 [delete found] 
-/deleteInboxEmail	CRUDy End-point	 [delete found] 
-/deleteInboxEmail	CRUDy End-point	 [delete found] 
-/deleteOrganization	CRUDy End-point	 [delete found] 
-/deleteOrganizationWebhook	CRUDy End-point	 [delete found] 
-/deletePhase	CRUDy End-point	 [delete found] 
-/deletePhaseField	CRUDy End-point	 [delete found] 
 /deletePipe	CRUDy End-point	 [delete found] 
-/deletePipeRelation	CRUDy End-point	 [delete found] 
-/deleteTable	CRUDy End-point	 [delete found] 
 /deleteTableField	CRUDy End-point	 [delete found] 
-/deleteTableRecord	CRUDy End-point	 [delete found] 
-/deleteTableRelation	CRUDy End-point	 [delete found] 
-/deleteWebhook	CRUDy End-point	 [delete found] 
 /moveCardToPhase	CRUDy End-point	 [move found] 
 /removeUserFromOrg	CRUDy End-point	 [remove found] 
 /removeUserFromPipe	CRUDy End-point	 [remove found] 
@@ -75,7 +58,7 @@ Count: 73
 /updateWebhook	CRUDy End-point	 [update found] 
 
 ***Patterns*** 
-Count: 36
+Count: 35
 /allCards	Verbless End-point	
 /autoFillFields	Verbless End-point	
 /card	Verbless End-point	
@@ -100,7 +83,6 @@ Count: 36
 /table_records/{table_id}	Verbless End-point	
 /table_relations/{ids}	Verbless End-point	
 /clonePipes	Verbless End-point	
-/exportPipeReport	Verbless End-point	
 /exportPipeReport	Verbless End-point	
 /interfaceEmbedCreat	Verbless End-point	
 /inviteMembers	Verbless End-point	

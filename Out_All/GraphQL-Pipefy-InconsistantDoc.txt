@@ -41,16 +41,11 @@ POST	/createTable	Creates a table n/a 	 0 	 1 	 Consistent Documentation
 POST	/createTableField	Creates a table field n/a 	 0 	 1 	 Consistent Documentation
 POST	/createTableRecord	Creates a record  n/a 	 0 	 1 	 Consistent Documentation
 POST	/createTableRecordInRestrictedTable	Creates a record in a private table n/a 	 0 	 1 	 Consistent Documentation
-POST	/createTableRelation	Creates a table relation n/a 	 0 	 1 	 Consistent Documentation
-POST	/createWebhook	Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 Consistent Documentation
-POST	/deleteCard	Deletes a card n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteComment	Deletes a comment n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deleteFieldCondition	Deletes a field condition n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deleteInboxEmail	Deletes an email n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deleteLabel	Deletes a label n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deleteOrganization	Deletes an organization n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deleteOrganizationWebhook	Deletes a webhook n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deletePhase	Deletes a phase n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deletePhaseField	Deletes a phase field n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deletePipe	Deletes a pipe n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deletePipeRelation	Deletes a pipe relation n/a 	 1 	 0 	 Inconsistent Documentation
@@ -64,21 +59,7 @@ POST	/createTableRelation	Creates a table relation  n/a 	 0 	 1 	 Consistent Doc
 POST	/createWebhook	Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 Consistent Documentation
 POST	/deleteCard	Deletes a card  n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deleteComment	Deletes a comment  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteFieldCondition	Deletes a field condition  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteInboxEmail	Deletes an email  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteInboxEmail	Deletes an email  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteOrganization	Deletes an organization  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteOrganizationWebhook	Deletes a webhook n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deletePhase	Deletes a phase n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deletePhaseField	Deletes a phase field  n/a 	 1 	 0 	 Inconsistent Documentation
 POST	/deletePipe	Deletes a pipe  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deletePipeRelation	Deletes a pipe relation  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteTable	Deletes a table  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteTableField	Deletes a table field  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteTableRecord	Deletes a record  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteTableRelation	Deletes a table relation  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/deleteWebhook	Deletes a webhook (pipe or table level)  n/a 	 1 	 0 	 Inconsistent Documentation
-POST	/exportPipeReport	Exports a pipe report  n/a 	 0 	 1 	 Consistent Documentation
 POST	/interfaceEmbedCreat	Create a new Interface  n/a 	 0 	 1 	 Consistent Documentation
 POST	/inviteMembers	Invites new members for the organization  n/a 	 0 	 1 	 Consistent Documentation
 POST	/moveCardToPhase	Moves a card to another phase  n/a 	 0 	 1 	 Consistent Documentation

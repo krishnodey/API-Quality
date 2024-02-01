@@ -1,110 +1,91 @@
 HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
-GET 	 /allCards 	 Fetches all pipe cards based on argumentsn/a 	 0 	 1 	
-GET 	 /autoFillFields 	 Lookup the values that will automatically fill the child-card's start form fieldsn/a 	 0 	 1 	
-GET 	 /card 	 Lookup a card by its IDn/a 	 0 	 1 	
-GET 	 /cards 	 Fetches a group of cards based on argumentsn/a 	 0 	 1 	
-GET 	 /cardsImportations/{pipeId} 	 Lookup the cards importer history by the pipe IDpipeId: ID! Required. The pipe ID 	 0 	 1 	
-GET 	 /findCards/{pipeId} 	 Fetch cards based on fields' inputspipeId: ID! Required. The pipe ID 	 0 	 1 	
-GET 	 /findCards/{tableId} 	 Fetch records based on fields' inputstableId: String! Required. The table ID 	 0 	 1 	
-GET 	 /inbox_emails/card_id 	 Lookup the card's emails by its IDcard_id: ID! Required. The card ID 	 0 	 1 	
-GET 	 /me 	 Returns informations of the current authenticated usern/a 	 0 	 1 	
-GET 	 /organization/{id} 	 Lookup an organization by its IDid: ID! Required. The organization ID 	 0 	 1 	
-GET 	 /organizations/{ids} 	 Lookup organizations by their IDids: [ID] The organizations IDs 	 0 	 1 	
-GET 	 /phase/{id} 	 Lookup a phase by its IDid: ID! Required. The phase ID 	 0 	 1 	
-GET 	 /pipe/{id} 	 Lookup a pipe by its IDid: ID! Required. The pipe ID 	 0 	 1 	
-GET 	 /pipeReportExport/{id} 	 Lookup a pipe report export by its IDid: ID! Required. The export ID 	 0 	 1 	
-GET 	 /pipe/{ids} 	 Lookup a pipe by their IDids: ID! Required. The pipes ID 	 0 	 1 	
-GET 	 /pipe_relations/{id} 	 Lookup pipe relations by their IDids: [ID]! Required. The pipe relation ID 	 0 	 1 	
-GET 	 /pipe_templates 	 Lookup all pipe templates available on Pipefyn/a 	 0 	 1 	
-GET 	 /recordsImportations/{tableID} 	 Lookup the records importer history by the table IDtableId: ID! Required. The table ID 	 0 	 1 	
-GET 	 /table/{id} 	 Lookup a database table by its IDid: ID! Required. The table ID 	 0 	 1 	
-GET 	 /table/{ids} 	 Lookup a database tables by their IDids: ID! Required. The table ID 	 0 	 1 	
-GET 	 /table_record/{id} 	 Lookup a record by its IDid: ID! Required. The record ID 	 0 	 1 	
-GET 	 /table_records/{table_id} 	 Fetches a group of records based on argumentstable_id: ID! Required. The table ID 	 0 	 1 	
-GET 	 /table_relations/{ids} 	 Lookup table relations by their IDids: [ID]! Required. The table relation ID 	 0 	 1 	
-POST 	 /clonePipes 	 Clones a pipen/a 	 0 	 1 	
-POST 	 /createCard 	 Creates a cardn/a 	 0 	 1 	
-POST 	 /createCardRelation 	 Creates a card relationn/a 	 0 	 1 	
-POST 	 /createComment 	 Creates a commentn/a 	 0 	 1 	
-POST 	 /createFieldCondition 	 Creates a field conditionn/a 	 0 	 1 	
-POST 	 /createInboxEmail 	 Creates an emailn/a 	 0 	 1 	
-POST 	 /createLabel 	 Creates a labeln/a 	 0 	 1 	
-POST 	 /createOrganization 	 Creates an organizationn/a 	 0 	 1 	
-POST 	 /createOrganizationWebhook 	 Creates an organization-level webhookn/a 	 0 	 1 	
-POST 	 /createPhase 	 Creates a phasen/a 	 0 	 1 	
-POST 	 /createPhaseField 	 Creates a phase fieldn/a 	 0 	 1 	
-POST 	 /createPipe 	 Creates a pipen/a 	 0 	 1 	
-POST 	 /createPipeRelation 	 Creates a pipe relationn/a 	 0 	 1 	
-POST 	 /createPresignedUrl 	 Returns a temporary S3 presigned url to upload a filen/a 	 0 	 1 	
-POST 	 /createPresignedUrlForPipePdfTemplate 	 Returns a temporary S3 presigned url to upload a pdf template imagen/a 	 0 	 1 	
-POST 	 /createTable 	 Creates a tablen/a 	 0 	 1 	
-POST 	 /createTableField 	 Creates a table fieldn/a 	 0 	 1 	
-POST 	 /createTableRecord 	 Creates a recordn/a 	 0 	 1 	
-POST 	 /createTableRecordInRestrictedTable 	 Creates a record in a private tablen/a 	 0 	 1 	
-POST 	 /createTableRelation 	 Creates a table relationn/a 	 0 	 1 	
-POST 	 /createWebhook 	 Creates a webhook at a pipe or table leveln/a 	 0 	 1 	
-POST 	 /deleteCard 	 Deletes a cardn/a 	 0 	 1 	
-POST 	 /deleteComment 	 Deletes a commentn/a 	 0 	 1 	
-POST 	 /deleteFieldCondition 	 Deletes a field conditionn/a 	 0 	 1 	
-POST 	 /deleteInboxEmail 	 Deletes an emailn/a 	 0 	 1 	
-POST 	 /deleteLabel 	 Deletes a labeln/a 	 0 	 1 	
-POST 	 /deleteOrganization 	 Deletes an organizationn/a 	 0 	 1 	
-POST 	 /deleteOrganizationWebhook 	 Deletes a webhookn/a 	 0 	 1 	
-POST 	 /deletePhase 	 Deletes a phasen/a 	 0 	 1 	
-POST 	 /deletePhaseField 	 Deletes a phase fieldn/a 	 0 	 1 	
-POST 	 /deletePipe 	 Deletes a pipen/a 	 0 	 1 	
-POST 	 /deletePipeRelation 	 Deletes a pipe relationn/a 	 0 	 1 	
-POST 	 /deleteTable 	 Deletes a tablen/a 	 0 	 1 	
-POST 	 /deleteTableField 	 Deletes a table fieldn/a 	 0 	 1 	
-POST 	 /deleteTableRecord 	 Deletes a recordn/a 	 0 	 1 	
-POST 	 /deleteTableRelation 	 Deletes a table relationn/a 	 0 	 1 	
-POST 	 /deleteWebhook 	 Deletes a webhook (pipe or table level)n/a 	 0 	 1 	
-POST 	 /exportPipeReport 	 Exports a pipe reportn/a 	 0 	 1 	
-POST 	 /createTableRelation 	 Creates a table relationn/a 	 0 	 1 	
-POST 	 /createWebhook 	 Creates a webhook at a pipe or table leveln/a 	 0 	 1 	
-POST 	 /deleteCard 	 Deletes a cardn/a 	 0 	 1 	
-POST 	 /deleteComment 	 Deletes a commentn/a 	 0 	 1 	
-POST 	 /deleteFieldCondition 	 Deletes a field conditionn/a 	 0 	 1 	
-POST 	 /deleteInboxEmail 	 Deletes an emailn/a 	 0 	 1 	
-POST 	 /deleteInboxEmail 	 Deletes an emailn/a 	 0 	 1 	
-POST 	 /deleteOrganization 	 Deletes an organizationn/a 	 0 	 1 	
-POST 	 /deleteOrganizationWebhook 	 Deletes a webhookn/a 	 0 	 1 	
-POST 	 /deletePhase 	 Deletes a phasen/a 	 0 	 1 	
-POST 	 /deletePhaseField 	 Deletes a phase fieldn/a 	 0 	 1 	
-POST 	 /deletePipe 	 Deletes a pipen/a 	 0 	 1 	
-POST 	 /deletePipeRelation 	 Deletes a pipe relationn/a 	 0 	 1 	
-POST 	 /deleteTable 	 Deletes a tablen/a 	 0 	 1 	
-POST 	 /deleteTableField 	 Deletes a table fieldn/a 	 0 	 1 	
-POST 	 /deleteTableRecord 	 Deletes a recordn/a 	 0 	 1 	
-POST 	 /deleteTableRelation 	 Deletes a table relationn/a 	 0 	 1 	
-POST 	 /deleteWebhook 	 Deletes a webhook (pipe or table level)n/a 	 0 	 1 	
-POST 	 /exportPipeReport 	 Exports a pipe reportn/a 	 0 	 1 	
-POST 	 /interfaceEmbedCreat 	 Create a new Interfacen/a 	 0 	 1 	
-POST 	 /inviteMembers 	 Invites new members for the organizationn/a 	 0 	 1 	
-POST 	 /moveCardToPhase 	 Moves a card to another phasen/a 	 0 	 1 	
-POST 	 /recordsImporter 	 Create new records from a xlsx filen/a 	 0 	 1 	
-POST 	 /removeUserFromOrg 	 Remove a user from an organizationn/a 	 0 	 1 	
-POST 	 /removeUserFromPipe 	 Removes a user from pipen/a 	 0 	 1 	
-POST 	 /removeUserFromTable 	 Removes a user from tablen/a 	 0 	 1 	
-POST 	 /sendInboxEmail 	 Sends an emailn/a 	 0 	 1 	
-POST 	 /setFieldConditionOrder 	 Sets field condition ordern/a 	 0 	 1 	
-POST 	 /setRole 	 Sets the role of a usern/a 	 0 	 1 	
-POST 	 /setRoles 	 Sets role of multiple usersn/a 	 0 	 1 	
-POST 	 /setSummaryAttributes 	 Sets summary attributesn/a 	 0 	 1 	
-POST 	 /setTableFieldOrder 	 Sets table field ordern/a 	 0 	 1 	
-POST 	 /setTableRecordFieldValue 	 Sets record field valuen/a 	 0 	 1 	
-POST 	 /updateCard 	 Updates an existing cardn/a 	 0 	 1 	
-POST 	 /updateCardField 	 Updates an existing card fieldn/a 	 0 	 1 	
-POST 	 /updateComment 	 Updates an existing commentn/a 	 0 	 1 	
-POST 	 /updateFieldsValues 	 Update one or many values of fields inside a Card or Table record.n/a 	 0 	 1 	
-POST 	 /updateLabel 	 Updates an existing labeln/a 	 0 	 1 	
-POST 	 /updateOrganization 	 Updates an existing organizationn/a 	 0 	 1 	
-POST 	 /updateOrganizationWebhook 	 Updates an existing organization-level webhookn/a 	 0 	 1 	
-POST 	 /updatePhase 	 Updates an existing phasen/a 	 0 	 1 	
-POST 	 /updatePhaseField 	 Updates an existing phase fieldn/a 	 0 	 1 	
-POST 	 /updatePipe 	 Updates an existing pipen/a 	 0 	 1 	
-POST 	 /updatePipeRelation 	 Updates an existing pipe relationn/a 	 0 	 1 	
-POST 	 /updateTable 	 Updates an existing tablen/a 	 0 	 1 	
-POST 	 /updateTableField 	 Updates an existing table fieldn/a 	 0 	 1 	
-POST 	 /updateTableRecord 	 Updates an existing recordn/a 	 0 	 1 	
-POST 	 /updateWebhook 	 Updates an existing webhook (pipe or table level)n/a 	 0 	 1 	
+GET 	 /allCards 	 Fetches all pipe cards based on arguments  n/a 	 0 	 1 	
+GET 	 /autoFillFields 	 Lookup the values that will automatically fill the child-card's start form fields n/a 	 0 	 1 	
+GET 	 /card 	 Lookup a card by its ID  n/a 	 0 	 1 	
+GET 	 /cards 	 Fetches a group of cards based on arguments n/a 	 0 	 1 	
+GET 	 /cardsImportations/{pipeId} 	 Lookup the cards importer history by the pipe ID pipeId: ID! Required. The pipe ID 	 0 	 1 	
+GET 	 /findCards/{pipeId} 	 Fetch cards based on fields' inputs  pipeId: ID! Required. The pipe ID 	 0 	 1 	
+GET 	 /findCards/{tableId} 	 Fetch records based on fields' inputs tableId: String! Required. The table ID 	 0 	 1 	
+GET 	 /inbox_emails/card_id 	 Lookup the card's emails by its ID card_id: ID! Required. The card ID 	 1 	 0 	 [underscore found] 
+GET 	 /me 	 Returns informations of the current authenticated user n/a 	 0 	 1 	
+GET 	 /organization/{id} 	 Lookup an organization by its ID id: ID! Required. The organization ID 	 0 	 1 	
+GET 	 /organizations/{ids} 	 Lookup organizations by their ID ids: [ID] The organizations IDs 	 0 	 1 	
+GET 	 /phase/{id} 	 Lookup a phase by its ID  id: ID! Required. The phase ID 	 0 	 1 	
+GET 	 /pipe/{id} 	 Lookup a pipe by its ID id: ID! Required. The pipe ID 	 0 	 1 	
+GET 	 /pipeReportExport/{id} 	 Lookup a pipe report export by its ID id: ID! Required. The export ID 	 0 	 1 	
+GET 	 /pipe/{ids} 	 Lookup a pipe by their ID ids: ID! Required. The pipes ID 	 0 	 1 	
+GET 	 /pipe_relations/{id} 	 Lookup pipe relations by their ID ids: [ID]! Required. The pipe relation ID 	 1 	 0 	 [underscore found] 
+GET 	 /pipe_templates 	 Lookup all pipe templates available on Pipefy n/a 	 1 	 0 	 [underscore found] 
+GET 	 /recordsImportations/{tableID} 	 Lookup the records importer history by the table ID tableId: ID! Required. The table ID 	 0 	 1 	
+GET 	 /table/{id} 	 Lookup a database table by its ID  id: ID! Required. The table ID 	 0 	 1 	
+GET 	 /table/{ids} 	 Lookup a database tables by their ID  ids: ID! Required. The table ID 	 0 	 1 	
+GET 	 /table_record/{id} 	 Lookup a record by its ID  id: ID! Required. The record ID 	 1 	 0 	 [underscore found] 
+GET 	 /table_records/{table_id} 	 Fetches a group of records based on arguments table_id: ID! Required. The table ID 	 1 	 0 	 [underscore found] 
+GET 	 /table_relations/{ids} 	 Lookup table relations by their ID ids: [ID]! Required. The table relation ID 	 1 	 0 	 [underscore found] 
+POST 	 /clonePipes 	 Clones a pipe  n/a 	 0 	 1 	
+POST 	 /createCard 	 Creates a card n/a 	 0 	 1 	
+POST 	 /createCardRelation 	 Creates a card relation n/a 	 0 	 1 	
+POST 	 /createComment 	 Creates a comment  n/a 	 0 	 1 	
+POST 	 /createFieldCondition 	 Creates a field condition n/a 	 0 	 1 	
+POST 	 /createInboxEmail 	 Creates an email n/a 	 0 	 1 	
+POST 	 /createLabel 	 Creates a label  n/a 	 0 	 1 	
+POST 	 /createOrganization 	 Creates an organization n/a 	 0 	 1 	
+POST 	 /createOrganizationWebhook 	 Creates an organization-level webhook n/a 	 0 	 1 	
+POST 	 /createPhase 	 Creates a phase n/a 	 0 	 1 	
+POST 	 /createPhaseField 	 Creates a phase field n/a 	 0 	 1 	
+POST 	 /createPipe 	 Creates a pipe n/a 	 0 	 1 	
+POST 	 /createPipeRelation 	 Creates a pipe relation  n/a 	 0 	 1 	
+POST 	 /createPresignedUrl 	 Returns a temporary S3 presigned url to upload a file n/a 	 0 	 1 	
+POST 	 /createPresignedUrlForPipePdfTemplate 	 Returns a temporary S3 presigned url to upload a pdf template image n/a 	 0 	 1 	
+POST 	 /createTable 	 Creates a table n/a 	 0 	 1 	
+POST 	 /createTableField 	 Creates a table field n/a 	 0 	 1 	
+POST 	 /createTableRecord 	 Creates a record  n/a 	 0 	 1 	
+POST 	 /createTableRecordInRestrictedTable 	 Creates a record in a private table n/a 	 0 	 1 	
+POST 	 /deleteFieldCondition 	 Deletes a field condition n/a 	 0 	 1 	
+POST 	 /deleteInboxEmail 	 Deletes an email n/a 	 0 	 1 	
+POST 	 /deleteLabel 	 Deletes a label n/a 	 0 	 1 	
+POST 	 /deleteOrganization 	 Deletes an organization n/a 	 0 	 1 	
+POST 	 /deleteOrganizationWebhook 	 Deletes a webhook n/a 	 0 	 1 	
+POST 	 /deletePhaseField 	 Deletes a phase field n/a 	 0 	 1 	
+POST 	 /deletePipe 	 Deletes a pipe n/a 	 0 	 1 	
+POST 	 /deletePipeRelation 	 Deletes a pipe relation n/a 	 0 	 1 	
+POST 	 /deleteTable 	 Deletes a table  n/a 	 0 	 1 	
+POST 	 /deleteTableField 	 Deletes a table field  n/a 	 0 	 1 	
+POST 	 /deleteTableRecord 	 Deletes a record n/a 	 0 	 1 	
+POST 	 /deleteTableRelation 	 Deletes a table relation  n/a 	 0 	 1 	
+POST 	 /deleteWebhook 	 Deletes a webhook (pipe or table level)  n/a 	 0 	 1 	
+POST 	 /exportPipeReport 	 Exports a pipe report  n/a 	 0 	 1 	
+POST 	 /createTableRelation 	 Creates a table relation  n/a 	 0 	 1 	
+POST 	 /createWebhook 	 Creates a webhook at a pipe or table level  n/a 	 0 	 1 	
+POST 	 /deleteCard 	 Deletes a card  n/a 	 0 	 1 	
+POST 	 /deleteComment 	 Deletes a comment  n/a 	 0 	 1 	
+POST 	 /deletePipe 	 Deletes a pipe  n/a 	 0 	 1 	
+POST 	 /interfaceEmbedCreat 	 Create a new Interface  n/a 	 0 	 1 	
+POST 	 /inviteMembers 	 Invites new members for the organization  n/a 	 0 	 1 	
+POST 	 /moveCardToPhase 	 Moves a card to another phase  n/a 	 0 	 1 	
+POST 	 /recordsImporter 	 Create new records from a xlsx file  n/a 	 0 	 1 	
+POST 	 /removeUserFromOrg 	 Remove a user from an organization  n/a 	 0 	 1 	
+POST 	 /removeUserFromPipe 	 Removes a user from pipe  n/a 	 0 	 1 	
+POST 	 /removeUserFromTable 	 Removes a user from table  n/a 	 0 	 1 	
+POST 	 /sendInboxEmail 	 Sends an email  n/a 	 0 	 1 	
+POST 	 /setFieldConditionOrder 	 Sets field condition order  n/a 	 0 	 1 	
+POST 	 /setRole 	 Sets the role of a user  n/a 	 0 	 1 	
+POST 	 /setRoles 	 Sets role of multiple users  n/a 	 0 	 1 	
+POST 	 /setSummaryAttributes 	 Sets summary attributes n/a 	 0 	 1 	
+POST 	 /setTableFieldOrder 	 Sets table field order  n/a 	 0 	 1 	
+POST 	 /setTableRecordFieldValue 	 Sets record field value  n/a 	 0 	 1 	
+POST 	 /updateCard 	 Updates an existing card  n/a 	 0 	 1 	
+POST 	 /updateCardField 	 Updates an existing card field  n/a 	 0 	 1 	
+POST 	 /updateComment 	 Updates an existing comment  n/a 	 0 	 1 	
+POST 	 /updateFieldsValues 	 Update one or many values of fields inside a Card or Table record.  n/a 	 0 	 1 	
+POST 	 /updateLabel 	 Updates an existing label  n/a 	 0 	 1 	
+POST 	 /updateOrganization 	 Updates an existing organization  n/a 	 0 	 1 	
+POST 	 /updateOrganizationWebhook 	 Updates an existing organization-level webhook n/a 	 0 	 1 	
+POST 	 /updatePhase 	 Updates an existing phase  n/a 	 0 	 1 	
+POST 	 /updatePhaseField 	 Updates an existing phase field  n/a 	 0 	 1 	
+POST 	 /updatePipe 	 Updates an existing pipe  n/a 	 0 	 1 	
+POST 	 /updatePipeRelation 	 Updates an existing pipe relation  n/a 	 0 	 1 	
+POST 	 /updateTable 	 Updates an existing table  n/a 	 0 	 1 	
+POST 	 /updateTableField 	 Updates an existing table field  n/a 	 0 	 1 	
+POST 	 /updateTableRecord 	 Updates an existing record  n/a 	 0 	 1 	
+POST 	 /updateWebhook 	 Updates an existing webhook (pipe or table level)  n/a 	 0 	 1 	

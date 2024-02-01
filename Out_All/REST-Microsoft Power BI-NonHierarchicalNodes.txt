@@ -17,7 +17,7 @@ GET 	 /admin/datasets/{datasetId}/datasources 	 Returns a list of datasources fo
 GET 	 /admin/capacities 	 Returns a list of capacities for the organization. 	 0 	 1 	 
 POST 	 /admin/groups/{groupId}/users 	 Grants user permissions to the specified workspace. 	 0 	 1 	 
 DELETE 	 /admin/pipelines/{pipelineId}/users/{identifier} 	 Remove user permissions from a specified deployment pipeline. 	 0 	 1 	 
-POST 	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	 Rotate the encryption key for Power BI workspaces assigned to a capacity. 	 1 	 0 	 Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 7
+POST 	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	 Rotate the encryption key for Power BI workspaces assigned to a capacity. 	 1 	 0 	 Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 33
 GET 	 /admin/workspaces/modified 	 Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter. 	 0 	 1 	 
 POST 	 /admin/workspaces/getInfo 	 Initiate a call to receive metadata for the requested list of workspaces. (Preview) 	 0 	 1 	 
 GET 	 /apps/{appId} 	 Returns the specified installed app. 	 0 	 1 	 

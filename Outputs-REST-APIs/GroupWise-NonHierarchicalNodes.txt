@@ -1,11 +1,12 @@
 ***Anti-Pattern*** 
-Count: 3
-/domains/{domain}/links/{link}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 3
-/domains/{domain}/links/{link}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 3
-/domains/attributes	Non-hierarchical Nodes	Reversed hierarchy of type True detected between domains and attributes. 0 hierarchical relations were detected out of 1
+Count: 4
+/domains/{domain}/customaddresses/test?testAddress	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and test. 0 hierarchical relations were detected out of 55
+/domains/{domain}/links/{link}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 55
+/domains/{domain}/links/{link}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 55
+/domains/attributes	Non-hierarchical Nodes	Reversed hierarchy of type True detected between domains and attributes. 0 hierarchical relations were detected out of 55
 
 ***Patterns*** 
-Count: 53
+Count: 52
 /list/{type}	Hierarchical Nodes	
 /list/{type}/{base}	Hierarchical Nodes	
 /application	Hierarchical Nodes	
@@ -33,7 +34,6 @@ Count: 53
 /domains/{domain}/clientoptions?attrs	Hierarchical Nodes	
 /domains/{domain}/clientoptions?attrs	Hierarchical Nodes	
 /domains/{domain}/customaddresses	Hierarchical Nodes	
-/domains/{domain}/customaddresses/test?testAddress	Hierarchical Nodes	
 /domains/{domain}/gatewaysubdirs	Hierarchical Nodes	
 /domains/{domain}/info	Hierarchical Nodes	
 /domains/{domain}/links?direction	Hierarchical Nodes	

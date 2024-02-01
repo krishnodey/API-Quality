@@ -1,9 +1,9 @@
 ***Anti-Pattern*** 
-Count: 1
-/account/set_profile_photo	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 31
+Count: 32
+/account/set_profile_photo	 Contextual Resource Names
 /auth/token/from_oauth1	 Contextual Resource Names
 /auth/token/revoke	 Contextual Resource Names
 /check/app	 Contextual Resource Names

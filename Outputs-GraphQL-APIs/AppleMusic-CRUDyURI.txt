@@ -6,7 +6,7 @@ Count: 4
 /v1/me/library/search	CRUDy End-point	 [search found] 
 
 ***Patterns*** 
-Count: 98
+Count: 95
 /v1/catalog/{storefront}/albums/{id}	Verbless End-point	
 /v1/catalog/{storefront}/albums/{id}/{relationship}	Verbless End-point	
 /v1/catalog/{storefront}/albums/{id}/view/{view}	Verbless End-point	
@@ -35,7 +35,6 @@ Count: 98
 /v1/me/library/songs/{id}/{relationship}	Verbless End-point	
 /v1/me/library/songs	Verbless End-point	
 /v1/me/library/songs	Verbless End-point	
-/v1/me/library	Verbless End-point	
 /v1/catalog/{storefront}/music-videos/{id}	Verbless End-point	
 /v1/catalog/{storefront}/music-videos/{id}/{relationship}	Verbless End-point	
 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Verbless End-point	
@@ -46,7 +45,6 @@ Count: 98
 /v1/me/library/music-videos/{id}/{relationship}	Verbless End-point	
 /v1/me/library/music-videos	Verbless End-point	
 /v1/me/library/music-videos	Verbless End-point	
-/v1/me/library	Verbless End-point	
 /v1/catalog/{storefront}/playlists/{id}	Verbless End-point	
 /v1/catalog/{storefront}/playlists/{id}/{relationship}	Verbless End-point	
 /v1/catalog/{storefront}/playlists/{id}/view/{view}	Verbless End-point	
@@ -63,7 +61,6 @@ Count: 98
 /v1/me/library/playlist-folders	Verbless End-point	
 /v1/me/library/playlists	Verbless End-point	
 /v1/me/library/playlists/{id}/tracks	Verbless End-point	
-/v1/me/library	Verbless End-point	
 /v1/catalog/{storefront}/stations/{id}	Verbless End-point	
 /v1/catalog/{storefront}/stations/{id}/{relationship}	Verbless End-point	
 /v1/catalog/{storefront}/stations	Verbless End-point	

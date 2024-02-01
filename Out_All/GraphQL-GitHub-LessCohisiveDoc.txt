@@ -15,7 +15,7 @@ GET	/node	Fetches an object given its ID.  id: ID of the object. 	 0 	 1 	 Perti
 GET	/nodes	Lookup nodes by a list of IDs.  ids: The list of node IDs. 	 0 	 1 	 Pertinent Documentation
 GET	/organization	Lookup a organization by login.  login: The organization's login. 	 0 	 1 	 Pertinent Documentation
 GET	/rateLimit	The client's rate limit information.  dryRun: If true, calculate the cost for the query without evaluating it. 	 0 	 1 	 Pertinent Documentation
-GET	/relay	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.). 	 1 	 0 	 Non-pertinent Documentation
+GET	/relay	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.). 	 0 	 1 	 Pertinent Documentation
 GET	/repository	Lookup a given repository by the owner and repository name.  followRenames: Follow repository renames. If disabled, a repository referenced by its old name will return an error., name: The name of the repository., owner: The login field of a user or organization. 	 0 	 1 	 Pertinent Documentation
 GET	/repositoryOwner	Lookup a repository owner (ie. either a User or an Organization) by login.  login: The username to lookup the owner by. 	 0 	 1 	 Pertinent Documentation
 GET	/resource	Lookup resource by a URL.  url: The URL. 	 0 	 1 	 Pertinent Documentation

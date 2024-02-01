@@ -3,7 +3,7 @@ Count: 1
 /v19.0/branded_content_search	CRUDy End-point	 [search found] 
 
 ***Patterns*** 
-Count: 68
+Count: 65
 /v18.0/{album-id}	Verbless End-point	
 /{group_id}/albums	Verbless End-point	
 /v18.0/{album-id}/comments	Verbless End-point	
@@ -34,12 +34,10 @@ Count: 68
 /v19.0/{application-id}/events	Verbless End-point	
 /v19.0/{application-id}/ios_skadnetwork_conversion_config	Verbless End-point	
 /v19.0/{application-id}/mobile_sdk_gk	Verbless End-point	
-/v19.0/{application-id}/model_asset	Verbless End-point	
 /v19.0/{application-id}/monetized_digital_store_objects	Verbless End-point	
 /v19.0/{application-id}/permissions	Verbless End-point	
 /v19.0/{application-id}/products	Verbless End-point	
 /v19.0/{application-id}/purchases	Verbless End-point	
-/v19.0/{app-id}/roles	Verbless End-point	
 /v19.0/{application-id}/subscribed_domains	Verbless End-point	
 /v19.0/{application-id}/subscribed_domains_phishing	Verbless End-point	
 /{application_id}/app_indexing	Verbless End-point	
@@ -53,7 +51,6 @@ Count: 68
 /{application_id}/activities	Verbless End-point	
 /v19.0/{application-id}/ad_placement_groups	Verbless End-point	
 /v19.0/{application-id}/adnetworkanalytics_results	Verbless End-point	
-/v19.0/{application-id}/mobile_sdk_gk	Verbless End-point	
 /v19.0/{application-id}/model_asset	Verbless End-point	
 /v19.0/{application-id}/monetized_digital_store_objects	Verbless End-point	
 /v19.0/{application-id}/permissions	Verbless End-point	

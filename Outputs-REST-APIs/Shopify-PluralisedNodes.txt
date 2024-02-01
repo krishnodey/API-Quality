@@ -1,16 +1,15 @@
 ***Anti-Pattern*** 
-Count: 8
+Count: 7
 POST 	/customers/{customer_id}/account_activation_url.json	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/customers/{customer_id}/send_invite.json	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/price_rules/{price_rule_id}/batch.json	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/webhooks.json	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/inventory_levels/adjust.json	Pluralized Nodes	 [Singular last node with POST method.] 
 DELETE 	/inventory_levels.json?inventory_item_id=808950810&location_id=905684977	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 POST 	/inventory_levels/connect.json	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/inventory_levels/set.json	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 63
+Count: 64
 GET 	/admin/oauth/access_scopes.json	 Regular methods
 POST 	/storefront_access_tokens.json	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/storefront_access_tokens/{storefront_access_token_id}.json	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
@@ -67,6 +66,7 @@ GET 	/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	 Regular method
 GET 	/webhooks.json	 Regular methods
 GET 	/webhooks/count.json	 Regular methods
 GET 	/webhooks/{webhook_id}.json	 Regular methods
+POST 	/webhooks.json	Singularized Nodes	 [Pluralized last node with POST method.] 
 PUT 	/webhooks/{webhook_id}.json	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/webhooks/{webhook_id}.json	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/inventory_items.json?ids=808950810,39072856,457924702	 Regular methods

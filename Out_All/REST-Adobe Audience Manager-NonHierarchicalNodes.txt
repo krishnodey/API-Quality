@@ -32,8 +32,8 @@ GET 	 /data-feeds/{dataSourceId}/subscriptions 	 Gets the list of 'Subscriptions
 PUT 	 /data-feeds/{dataSourceId}/subscriptions 	 Updates the list of 'Subscriptions' under a 'Data Feed'. 	 0 	 1 	 
 GET 	 /data-feeds/{dataSourceId}/requests/ 	 Gets the list of 'Subscriptions Request' under a 'Data Feed'. 	 0 	 1 	 
 POST 	 /data-feeds/{dataSourceId}/requests/ 	 Creates a 'Subscription' under a 'Data Feed'. 	 0 	 1 	 
-GET 	 /data-feeds/{dataSourceId}/requests/{requestId} 	 Gets a 'Data Feed Request' with 'requestId'. 	 1 	 0 	 Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 7
-PUT 	 /data-feeds/{dataSourceId}/requests/{requestId} 	 Updates an existing 'Data Feed Request'. 	 1 	 0 	 Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 7
+GET 	 /data-feeds/{dataSourceId}/requests/{requestId} 	 Gets a 'Data Feed Request' with 'requestId'. 	 1 	 0 	 Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 64
+PUT 	 /data-feeds/{dataSourceId}/requests/{requestId} 	 Updates an existing 'Data Feed Request'. 	 1 	 0 	 Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 64
 GET 	 /data-feeds/{dataSourceId}/potential-subscribers/ 	 Returns the list of potential subscribers for a 'Data Feed'. 	 0 	 1 	 
 GET 	 /data-feeds/{dataSourceId}/plans/{planId} 	 Gets a 'Data Feed Plan' under a 'Data Feed'. 	 0 	 1 	 
 PUT 	 /data-feeds/{dataSourceId}/plans/{planId} 	 Updates a 'Data Feed Plan' under a 'Data Feed'. 	 0 	 1 	 

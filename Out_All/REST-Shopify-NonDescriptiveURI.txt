@@ -55,10 +55,10 @@ DELETE 	 /price_rules/{price_rule_id}.json 	 Remove an existing PriceRule 	 0 	 
 GET 	 /events.json 	 Retrieves a list of events 	 0 	 1 	 Self-descriptive End-point
 GET 	 /events/{event_id}.json 	 Retrieves a single event 	 0 	 1 	 Self-descriptive End-point
 GET 	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	 Retrieves a count of events 	 0 	 1 	 Self-descriptive End-point
-GET 	 /webhooks.json 	 Retrieves a list of webhooks 	 1 	 0 	Non-descriptive End-point
+GET 	 /webhooks.json 	 Retrieves a list of webhooks 	 0 	 1 	 Self-descriptive End-point
 GET 	 /webhooks/count.json 	 Receive a count of all Webhooks 	 0 	 1 	 Self-descriptive End-point
 GET 	 /webhooks/{webhook_id}.json 	 Receive a single Webhook 	 0 	 1 	 Self-descriptive End-point
-POST 	 /webhooks.json 	 Create a new Webhook 	 1 	 0 	Non-descriptive End-point
+POST 	 /webhooks.json 	 Create a new Webhook 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /webhooks/{webhook_id}.json 	 Modify an existing Webhook 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /webhooks/{webhook_id}.json 	 Remove an existing Webhook 	 0 	 1 	 Self-descriptive End-point
 GET 	 /inventory_items.json?ids=808950810,39072856,457924702 	 Retrieves a list of inventory items 	 0 	 1 	 Self-descriptive End-point

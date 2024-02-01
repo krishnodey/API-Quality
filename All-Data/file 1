@@ -1,0 +1,91 @@
+1458,GraphQL,Pipefy,GET,/allCards,Fetches all pipe cards based on arguments n/a
+1459,GraphQL,Pipefy,GET,/autoFillFields,Lookup the values that will automatically fill the child-card's start form fields n/a
+1460,GraphQL,Pipefy,GET,/card,Lookup a card by its ID n/a
+1461,GraphQL,Pipefy,GET,/cards,Fetches a group of cards based on arguments n/a
+1462,GraphQL,Pipefy,GET,/cardsImportations/{pipeId},Lookup the cards importer history by the pipe ID pipeId: ID! Required. The pipe ID
+1463,GraphQL,Pipefy,GET,/findCards/{pipeId},Fetch cards based on fields' inputs pipeId: ID! Required. The pipe ID
+1464,GraphQL,Pipefy,GET,/findCards/{tableId},Fetch records based on fields' inputs tableId: String! Required. The table ID
+1465,GraphQL,Pipefy,GET,/inbox_emails/card_id,Lookup the card's emails by its ID card_id: ID! Required. The card ID
+1466,GraphQL,Pipefy,GET,/me,Returns informations of the current authenticated user n/a
+1467,GraphQL,Pipefy,GET,/organization/{id},Lookup an organization by its ID id: ID! Required. The organization ID
+1468,GraphQL,Pipefy,GET,/organizations/{ids},Lookup organizations by their ID ids: [ID] The organizations IDs
+1469,GraphQL,Pipefy,GET,/phase/{id},Lookup a phase by its ID id: ID! Required. The phase ID
+1470,GraphQL,Pipefy,GET,/pipe/{id},Lookup a pipe by its ID id: ID! Required. The pipe ID
+1471,GraphQL,Pipefy,GET,/pipeReportExport/{id},Lookup a pipe report export by its ID id: ID! Required. The export ID
+1472,GraphQL,Pipefy,GET,/pipe/{ids},Lookup a pipe by their ID ids: ID! Required. The pipes ID
+1473,GraphQL,Pipefy,GET,/pipe_relations/{id},Lookup pipe relations by their ID ids: [ID]! Required. The pipe relation ID
+1474,GraphQL,Pipefy,GET,/pipe_templates,Lookup all pipe templates available on Pipefy n/a
+1475,GraphQL,Pipefy,GET,/recordsImportations/{tableID},Lookup the records importer history by the table ID tableId: ID! Required. The table ID
+1476,GraphQL,Pipefy,GET,/table/{id},Lookup a database table by its ID id: ID! Required. The table ID
+1477,GraphQL,Pipefy,GET,/table/{ids},Lookup a database tables by their ID ids: ID! Required. The table ID
+1478,GraphQL,Pipefy,GET,/table_record/{id},Lookup a record by its ID id: ID! Required. The record ID
+1479,GraphQL,Pipefy,GET,/table_records/{table_id},Fetches a group of records based on arguments table_id: ID! Required. The table ID
+1480,GraphQL,Pipefy,GET,/table_relations/{ids},Lookup table relations by their ID ids: [ID]! Required. The table relation ID
+1481,GraphQL,Pipefy,POST,/clonePipes,Clones a pipe n/a
+1482,GraphQL,Pipefy,POST,/createCard,Creates a card n/a
+1483,GraphQL,Pipefy,POST,/createCardRelation,Creates a card relation n/a
+1484,GraphQL,Pipefy,POST,/createComment,Creates a comment n/a
+1485,GraphQL,Pipefy,POST,/createFieldCondition,Creates a field condition n/a
+1486,GraphQL,Pipefy,POST,/createInboxEmail,Creates an email n/a
+1487,GraphQL,Pipefy,POST,/createLabel,Creates a label n/a
+1488,GraphQL,Pipefy,POST,/createOrganization,Creates an organization n/a
+1489,GraphQL,Pipefy,POST,/createOrganizationWebhook,Creates an organization-level webhook n/a
+1490,GraphQL,Pipefy,POST,/createPhase,Creates a phase n/a
+1491,GraphQL,Pipefy,POST,/createPhaseField,Creates a phase field n/a
+1492,GraphQL,Pipefy,POST,/createPipe,Creates a pipe n/a
+1493,GraphQL,Pipefy,POST,/createPipeRelation,Creates a pipe relation n/a
+1494,GraphQL,Pipefy,POST,/createPresignedUrl,Returns a temporary S3 presigned url to upload a file n/a
+1495,GraphQL,Pipefy,POST,/createPresignedUrlForPipePdfTemplate,Returns a temporary S3 presigned url to upload a pdf template image n/a
+1496,GraphQL,Pipefy,POST,/createTable,Creates a table n/a
+1497,GraphQL,Pipefy,POST,/createTableField,Creates a table field n/a
+1498,GraphQL,Pipefy,POST,/createTableRecord,Creates a record n/a
+1499,GraphQL,Pipefy,POST,/createTableRecordInRestrictedTable,Creates a record in a private table n/a
+1500,GraphQL,Pipefy,POST,/deleteFieldCondition,Deletes a field condition n/a
+1501,GraphQL,Pipefy,POST,/deleteInboxEmail,Deletes an email n/a
+1502,GraphQL,Pipefy,POST,/deleteLabel,Deletes a label n/a
+1503,GraphQL,Pipefy,POST,/deleteOrganization,Deletes an organization n/a
+1504,GraphQL,Pipefy,POST,/deleteOrganizationWebhook,Deletes a webhook n/a
+1505,GraphQL,Pipefy,POST,/deletePhaseField,Deletes a phase field n/a
+1506,GraphQL,Pipefy,POST,/deletePipe,Deletes a pipe n/a
+1507,GraphQL,Pipefy,POST,/deletePipeRelation,Deletes a pipe relation n/a
+1508,GraphQL,Pipefy,POST,/deleteTable,Deletes a table n/a
+1509,GraphQL,Pipefy,POST,/deleteTableField,Deletes a table field n/a
+1510,GraphQL,Pipefy,POST,/deleteTableRecord,Deletes a record n/a
+1511,GraphQL,Pipefy,POST,/deleteTableRelation,Deletes a table relation n/a
+1512,GraphQL,Pipefy,POST,/deleteWebhook,Deletes a webhook (pipe or table level) n/a
+1513,GraphQL,Pipefy,POST,/exportPipeReport,Exports a pipe report n/a
+1514,GraphQL,Pipefy,POST,/createTableRelation,Creates a table relation n/a
+1515,GraphQL,Pipefy,POST,/createWebhook,Creates a webhook at a pipe or table level n/a
+1516,GraphQL,Pipefy,POST,/deleteCard,Deletes a card n/a
+1517,GraphQL,Pipefy,POST,/deleteComment,Deletes a comment n/a
+1518,GraphQL,Pipefy,POST,/deletePipe,Deletes a pipe n/a
+1521,GraphQL,Pipefy,POST,/deleteTableRelation,Deletes a table relation n/a
+1523,GraphQL,Pipefy,POST,/interfaceEmbedCreat,Create a new Interface n/a
+1524,GraphQL,Pipefy,POST,/inviteMembers,Invites new members for the organization n/a
+1525,GraphQL,Pipefy,POST,/moveCardToPhase,Moves a card to another phase n/a
+1526,GraphQL,Pipefy,POST,/recordsImporter,Create new records from a xlsx file n/a
+1527,GraphQL,Pipefy,POST,/removeUserFromOrg,Remove a user from an organization n/a
+1528,GraphQL,Pipefy,POST,/removeUserFromPipe,Removes a user from pipe n/a
+1529,GraphQL,Pipefy,POST,/removeUserFromTable,Removes a user from table n/a
+1530,GraphQL,Pipefy,POST,/sendInboxEmail,Sends an email n/a
+1531,GraphQL,Pipefy,POST,/setFieldConditionOrder,Sets field condition order n/a
+1532,GraphQL,Pipefy,POST,/setRole,Sets the role of a user n/a
+1533,GraphQL,Pipefy,POST,/setRoles,Sets role of multiple users n/a
+1534,GraphQL,Pipefy,POST,/setSummaryAttributes,Sets summary attributes n/a
+1535,GraphQL,Pipefy,POST,/setTableFieldOrder,Sets table field order n/a
+1536,GraphQL,Pipefy,POST,/setTableRecordFieldValue,Sets record field value n/a
+1537,GraphQL,Pipefy,POST,/updateCard,Updates an existing card n/a
+1538,GraphQL,Pipefy,POST,/updateCardField,Updates an existing card field n/a
+1539,GraphQL,Pipefy,POST,/updateComment,Updates an existing comment n/a
+1540,GraphQL,Pipefy,POST,/updateFieldsValues,Update one or many values of fields inside a Card or Table record. n/a
+1541,GraphQL,Pipefy,POST,/updateLabel,Updates an existing label n/a
+1542,GraphQL,Pipefy,POST,/updateOrganization,Updates an existing organization n/a
+1543,GraphQL,Pipefy,POST,/updateOrganizationWebhook,Updates an existing organization-level webhook n/a
+1544,GraphQL,Pipefy,POST,/updatePhase,Updates an existing phase n/a
+1545,GraphQL,Pipefy,POST,/updatePhaseField,Updates an existing phase field n/a
+1546,GraphQL,Pipefy,POST,/updatePipe,Updates an existing pipe n/a
+1547,GraphQL,Pipefy,POST,/updatePipeRelation,Updates an existing pipe relation n/a
+1548,GraphQL,Pipefy,POST,/updateTable,Updates an existing table n/a
+1549,GraphQL,Pipefy,POST,/updateTableField,Updates an existing table field n/a
+1550,GraphQL,Pipefy,POST,/updateTableRecord,Updates an existing record n/a
+1551,GraphQL,Pipefy,POST,/updateWebhook,Updates an existing webhook (pipe or table level) n/a

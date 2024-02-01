@@ -23,7 +23,7 @@ Count: 20
 -/v2/berry/{items}/	Pertinent Documentation	Berries are actually items. This is a reference to the item specific data for this berry. n/a
 -/v2/berry/{natural_gift_type}/	Pertinent Documentation	The type inherited by "Natural Gift" when used with this Berry. n/a
 -/v2/berry/{potency}/	Pertinent Documentation	How powerful the referenced flavor is for this berry. n/a
--/v2/berry-firmness/{id or name}/	Pertinent Documentation	 n/a
+-/v2/berry-firmness/{id or name}/	Pertinent Documentation	Berries can be soft or hard. id The identifier for this resource. name The name for this resource.
 -/v2/berry-firmness/{name}/	Pertinent Documentation	The name for this resource. n/a
 -/v2/berry-firmness/{berries}/	Pertinent Documentation	A list of the berries with this firmness. n/a
 -v2/berry-flavor/{id or name}/	Pertinent Documentation	Flavors determine whether a PokÃ©mon will benefit or suffer from eating a berry based on their nature. n/a

@@ -1,8 +1,15 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 7
+/api/v/2/devices/{systemKey}/{name}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between interface and devices. 0 hierarchical relations were detected out of 44
+/api/v/2/devices/{SystemKey}/auth	Non-hierarchical Nodes	Reversed hierarchy of type True detected between interface and devices. 0 hierarchical relations were detected out of 44
+/api/data/{collectionID}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+/api/data/{collectionID}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+/api/data/{collectionID}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+/api/data/{collectionID}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between data and collection. 0 hierarchical relations were detected out of 44
+/api/code/{systemKey}/{serviceName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between interface and code. 0 hierarchical relations were detected out of 44
 
 ***Patterns*** 
-Count: 45
+Count: 38
 /api/user/reg	Hierarchical Nodes	
 /api/user/auth	Hierarchical Nodes	
 /api/user/anon	Hierarchical Nodes	
@@ -12,18 +19,11 @@ Count: 45
 /api/user/info	Hierarchical Nodes	
 /api/user/pass	Hierarchical Nodes	
 /api/user	Hierarchical Nodes	
-/api/v/2/devices/{systemKey}/{name}	Hierarchical Nodes	
-/api/v/2/devices/{SystemKey}/auth	Hierarchical Nodes	
 /api/collection/{systemKey}/{collectionName}	Hierarchical Nodes	
 /api/collection/{systemKey}/{collectionName}	Hierarchical Nodes	
 /api/collection/{systemKey}/{collectionName}	Hierarchical Nodes	
 /api/collection/{systemKey}/{collectionName}	Hierarchical Nodes	
-/api/data/{collectionID}	Hierarchical Nodes	
-/api/data/{collectionID}	Hierarchical Nodes	
-/api/data/{collectionID}	Hierarchical Nodes	
-/api/data/{collectionID}	Hierarchical Nodes	
 /api/data/{collectionid}/columns	Hierarchical Nodes	
-/api/code/{systemKey}/{serviceName}	Hierarchical Nodes	
 /codeadmin/v/2/library/{systemKey}	Hierarchical Nodes	
 /codeadmin/v/2/library/{systemKey}/{name}	Hierarchical Nodes	
 /codeadmin/v/2/library/{systemKey}/{name}	Hierarchical Nodes	

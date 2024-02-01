@@ -1,26 +1,26 @@
 ***Anti-Pattern*** 
 Count: 21
-/addDiscussionPollVote	Non-hierarchical Nodes	Reversed hierarchy of type True detected between poll and vote. 0 hierarchical relations were detected out of 3
-/addEnterpriseOrganizationMember	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 3
-/archiveRepository	Non-hierarchical Nodes	Reversed hierarchy of type True detected between archive and repository. 0 hierarchical relations were detected out of 1
-/clearLabelsFromLabelable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between clear and labels. 0 hierarchical relations were detected out of 2
-/createCheckRun	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and check. 0 hierarchical relations were detected out of 2
-/createCheckSuite	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and check. 0 hierarchical relations were detected out of 2
-/createEnterpriseOrganization	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 2
-/createProject	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 1
-/createProjectV2	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 1
-/createProjectV2Field	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 2
-/grantEnterpriseOrganizationsMigratorRole	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organizations. 0 hierarchical relations were detected out of 4
-/minimizeComment	Non-hierarchical Nodes	Reversed hierarchy of type True detected between minimize and comment. 0 hierarchical relations were detected out of 1
-/moveProjectCard	Non-hierarchical Nodes	Reversed hierarchy of type True detected between move and project. 0 hierarchical relations were detected out of 2
-/moveProjectColumn	Non-hierarchical Nodes	Reversed hierarchy of type True detected between move and project. 0 hierarchical relations were detected out of 2
-/removeEnterpriseOrganization	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 2
-/revokeEnterpriseOrganizationsMigratorRole	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organizations. 0 hierarchical relations were detected out of 4
-/startOrganizationMigration	Non-hierarchical Nodes	Reversed hierarchy of type True detected between start and organization. 0 hierarchical relations were detected out of 2
-/transferEnterpriseOrganization	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 2
-/transferIssue	Non-hierarchical Nodes	Reversed hierarchy of type True detected between transfer and issue. 0 hierarchical relations were detected out of 1
-/updateEnterpriseOrganizationProjectsSetting	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 4
-/updateProjectV2ItemPosition	Non-hierarchical Nodes	Reversed hierarchy of type True detected between item and position. 0 hierarchical relations were detected out of 3
+/addDiscussionPollVote	Non-hierarchical Nodes	Reversed hierarchy of type True detected between poll and vote. 0 hierarchical relations were detected out of 255
+/addEnterpriseOrganizationMember	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 255
+/archiveRepository	Non-hierarchical Nodes	Reversed hierarchy of type True detected between archive and repository. 0 hierarchical relations were detected out of 255
+/clearLabelsFromLabelable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between clear and labels. 0 hierarchical relations were detected out of 255
+/createCheckRun	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and check. 0 hierarchical relations were detected out of 255
+/createCheckSuite	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and check. 0 hierarchical relations were detected out of 255
+/createEnterpriseOrganization	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 255
+/createProject	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 255
+/createProjectV2	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 255
+/createProjectV2Field	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and project. 0 hierarchical relations were detected out of 255
+/grantEnterpriseOrganizationsMigratorRole	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organizations. 0 hierarchical relations were detected out of 255
+/minimizeComment	Non-hierarchical Nodes	Reversed hierarchy of type True detected between minimize and comment. 0 hierarchical relations were detected out of 255
+/moveProjectCard	Non-hierarchical Nodes	Reversed hierarchy of type True detected between move and project. 0 hierarchical relations were detected out of 255
+/moveProjectColumn	Non-hierarchical Nodes	Reversed hierarchy of type True detected between move and project. 0 hierarchical relations were detected out of 255
+/removeEnterpriseOrganization	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 255
+/revokeEnterpriseOrganizationsMigratorRole	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organizations. 0 hierarchical relations were detected out of 255
+/startOrganizationMigration	Non-hierarchical Nodes	Reversed hierarchy of type True detected between start and organization. 0 hierarchical relations were detected out of 255
+/transferEnterpriseOrganization	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 255
+/transferIssue	Non-hierarchical Nodes	Reversed hierarchy of type True detected between transfer and issue. 0 hierarchical relations were detected out of 255
+/updateEnterpriseOrganizationProjectsSetting	Non-hierarchical Nodes	Reversed hierarchy of type True detected between enterprise and organization. 0 hierarchical relations were detected out of 255
+/updateProjectV2ItemPosition	Non-hierarchical Nodes	Reversed hierarchy of type True detected between item and position. 0 hierarchical relations were detected out of 255
 
 ***Patterns*** 
 Count: 235

@@ -16,7 +16,7 @@ Count: 14
 /{application_id}/activities 	 No Version Found
 
 ***Patterns*** 
-Count: 55
+Count: 52
 /v18.0/{album-id} 	 Version Found
 /v18.0/{album-id}/comments 	 Version Found
 /v18.0/{album-id}/likes 	 Version Found
@@ -42,17 +42,14 @@ Count: 55
 /v19.0/{application-id}/events 	 Version Found
 /v19.0/{application-id}/ios_skadnetwork_conversion_config 	 Version Found
 /v19.0/{application-id}/mobile_sdk_gk 	 Version Found
-/v19.0/{application-id}/model_asset 	 Version Found
 /v19.0/{application-id}/monetized_digital_store_objects 	 Version Found
 /v19.0/{application-id}/permissions 	 Version Found
 /v19.0/{application-id}/products 	 Version Found
 /v19.0/{application-id}/purchases 	 Version Found
-/v19.0/{app-id}/roles 	 Version Found
 /v19.0/{application-id}/subscribed_domains 	 Version Found
 /v19.0/{application-id}/subscribed_domains_phishing 	 Version Found
 /v19.0/{application-id}/ad_placement_groups 	 Version Found
 /v19.0/{application-id}/adnetworkanalytics_results 	 Version Found
-/v19.0/{application-id}/mobile_sdk_gk 	 Version Found
 /v19.0/{application-id}/model_asset 	 Version Found
 /v19.0/{application-id}/monetized_digital_store_objects 	 Version Found
 /v19.0/{application-id}/permissions 	 Version Found

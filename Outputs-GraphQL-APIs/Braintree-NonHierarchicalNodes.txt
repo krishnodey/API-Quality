@@ -1,12 +1,12 @@
 ***Anti-Pattern*** 
 Count: 7
-/chargePayPalAccount	Non-hierarchical Nodes	Reversed hierarchy of type True detected between charge and pay. 0 hierarchical relations were detected out of 3
-/refundTransaction	Non-hierarchical Nodes	Reversed hierarchy of type True detected between refund and transaction. 0 hierarchical relations were detected out of 1
-/createDisputeFileEvidence	Non-hierarchical Nodes	Reversed hierarchy of type True detected between file and evidence. 0 hierarchical relations were detected out of 3
-/requestChargeFromInStoreReader	Non-hierarchical Nodes	Reversed hierarchy of type True detected between request and charge. 0 hierarchical relations were detected out of 3
-/requestTextPromptFromInStoreReader	Non-hierarchical Nodes	Reversed hierarchy of type True detected between text and prompt. 0 hierarchical relations were detected out of 4
-/DisputeEvidence/{id}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between evidence and identification. 0 hierarchical relations were detected out of 2
-/PaymentStatusEvent	Non-hierarchical Nodes	Reversed hierarchy of type True detected between status and event. 0 hierarchical relations were detected out of 2
+/chargePayPalAccount	Non-hierarchical Nodes	Reversed hierarchy of type True detected between charge and pay. 0 hierarchical relations were detected out of 95
+/refundTransaction	Non-hierarchical Nodes	Reversed hierarchy of type True detected between refund and transaction. 0 hierarchical relations were detected out of 95
+/createDisputeFileEvidence	Non-hierarchical Nodes	Reversed hierarchy of type True detected between file and evidence. 0 hierarchical relations were detected out of 95
+/requestChargeFromInStoreReader	Non-hierarchical Nodes	Reversed hierarchy of type True detected between request and charge. 0 hierarchical relations were detected out of 95
+/requestTextPromptFromInStoreReader	Non-hierarchical Nodes	Reversed hierarchy of type True detected between text and prompt. 0 hierarchical relations were detected out of 95
+/DisputeEvidence/{id}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between evidence and identification. 0 hierarchical relations were detected out of 95
+/PaymentStatusEvent	Non-hierarchical Nodes	Reversed hierarchy of type True detected between status and event. 0 hierarchical relations were detected out of 95
 
 ***Patterns*** 
 Count: 89

@@ -1,5 +1,5 @@
 HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
-POST	/admin/tenantKeys	Adds an encryption key for Power BI workspaces assigned to a capacity. 	 1 	 0 	 Contextless Resource Names
+POST	/admin/tenantKeys	Adds an encryption key for Power BI workspaces assigned to a capacity. 	 0 	 1 	 Contextual Resource Names
 GET	/admin/apps?$top={$top}	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum. 	 0 	 1 	 Contextual Resource Names
 GET	/admin/apps/{appId}/users	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum. 	 0 	 1 	 Contextual Resource Names
 POST	/admin/capacities/AssignWorkspaces	Assigns the provided workspaces to the specified premium capacity. 	 0 	 1 	 Contextual Resource Names

@@ -7,6 +7,7 @@ GET	/cardsImportations/{pipeId}	Lookup the cards importer history by the pipe ID
 GET	/findCards/{pipeId}	Fetch cards based on fields' inputs  pipeId: ID! Required. The pipe ID 	 0 	 1 	 Pertinent Documentation
 GET	/findCards/{tableId}	Fetch records based on fields' inputs tableId: String! Required. The table ID 	 0 	 1 	 Pertinent Documentation
 GET	/inbox_emails/card_id	Lookup the card's emails by its ID card_id: ID! Required. The card ID 	 0 	 1 	 Pertinent Documentation
+GET	/me	Returns informations of the current authenticated user n/a 	 0 	 1 	 Pertinent Documentation
 GET	/organization/{id}	Lookup an organization by its ID id: ID! Required. The organization ID 	 0 	 1 	 Pertinent Documentation
 GET	/organizations/{ids}	Lookup organizations by their ID ids: [ID] The organizations IDs 	 0 	 1 	 Pertinent Documentation
 GET	/phase/{id}	Lookup a phase by its ID  id: ID! Required. The phase ID 	 0 	 1 	 Pertinent Documentation
@@ -40,16 +41,11 @@ POST	/createTable	Creates a table n/a 	 0 	 1 	 Pertinent Documentation
 POST	/createTableField	Creates a table field n/a 	 0 	 1 	 Pertinent Documentation
 POST	/createTableRecord	Creates a record  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/createTableRecordInRestrictedTable	Creates a record in a private table n/a 	 0 	 1 	 Pertinent Documentation
-POST	/createTableRelation	Creates a table relation n/a 	 0 	 1 	 Pertinent Documentation
-POST	/createWebhook	Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteCard	Deletes a card n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteComment	Deletes a comment n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteFieldCondition	Deletes a field condition n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteInboxEmail	Deletes an email n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteLabel	Deletes a label n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteOrganization	Deletes an organization n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteOrganizationWebhook	Deletes a webhook n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deletePhase	Deletes a phase n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deletePhaseField	Deletes a phase field n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deletePipe	Deletes a pipe n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deletePipeRelation	Deletes a pipe relation n/a 	 0 	 1 	 Pertinent Documentation
@@ -63,21 +59,7 @@ POST	/createTableRelation	Creates a table relation  n/a 	 0 	 1 	 Pertinent Docu
 POST	/createWebhook	Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteCard	Deletes a card  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deleteComment	Deletes a comment  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteFieldCondition	Deletes a field condition  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteInboxEmail	Deletes an email  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteInboxEmail	Deletes an email  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteOrganization	Deletes an organization  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteOrganizationWebhook	Deletes a webhook n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deletePhase	Deletes a phase n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deletePhaseField	Deletes a phase field  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/deletePipe	Deletes a pipe  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deletePipeRelation	Deletes a pipe relation  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteTable	Deletes a table  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteTableField	Deletes a table field  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteTableRecord	Deletes a record  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteTableRelation	Deletes a table relation  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/deleteWebhook	Deletes a webhook (pipe or table level)  n/a 	 0 	 1 	 Pertinent Documentation
-POST	/exportPipeReport	Exports a pipe report  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/interfaceEmbedCreat	Create a new Interface  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/inviteMembers	Invites new members for the organization  n/a 	 0 	 1 	 Pertinent Documentation
 POST	/moveCardToPhase	Moves a card to another phase  n/a 	 0 	 1 	 Pertinent Documentation

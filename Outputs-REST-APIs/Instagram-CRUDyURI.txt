@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 21
+Count: 19
 /{ig-comment-id}?fields={fields}	Verbless End-point	
 /{ig-comment-id}?hide={hide}	Verbless End-point	
 /{ig-comment-id}	Verbless End-point	
@@ -10,13 +10,11 @@ Count: 21
 /oauth/access_token	Verbless End-point	
 /access_token	Verbless End-point	
 /refresh_access_token	Verbless End-point	
-/oauth/authorize	Verbless End-point	
 /{media-id}	Verbless End-point	
 /{media-id}/children	Verbless End-point	
 /{user-id}/media	Verbless End-point	
 /me	Verbless End-point	
 /{user-id}	Verbless End-point	
-/{user-id}/media	Verbless End-point	
 /{ig-hashtag-id}	Verbless End-point	
 /{ig-media-id}?fields={fields}	Verbless End-point	
 /{ig-media-id}?comment_enabled={comment_enabled}	Verbless End-point	

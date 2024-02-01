@@ -13,7 +13,7 @@ PUT 	 /archive/{id}?accessKey={accessKey} 	 Archive the survey by it's id. All s
 PUT 	 /restore/{id}?accessKey={accessKey} 	 Restore an archive survey by it's id. 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /delete/{id}?accessKey={accessKey} 	 Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible. 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /changeName/{id}?accessKey={accessKey}&name={name} 	 Change the survey name. 	 0 	 1 	 Self-descriptive End-point
-PUT 	 /changeJson?accessKey={accessKey} 	 Change the survey json. 	 0 	 1 	 Self-descriptive End-point
+PUT 	 /changeJson?accessKey={accessKey} 	 Change the survey json. 	 1 	 0 	Non-descriptive End-point
 PUT 	 /publish/{id}?accessKey={accessKey} 	 Publishing the survey. 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /unPublish/{id}?accessKey={accessKey} 	 Disable publishing the survey. 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Enable or disable using cookies of the publishing survey. 	 0 	 1 	 Self-descriptive End-point

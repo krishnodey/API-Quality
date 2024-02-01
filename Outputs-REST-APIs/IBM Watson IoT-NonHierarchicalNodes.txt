@@ -1,17 +1,17 @@
 ***Anti-Pattern*** 
 Count: 12
-/mgmt/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
-/mgmt/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 3
-/mgmt/requests/{requestId}/cancel	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 4
-/mgmt/requests/{requestId}/deviceStatus	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 5
-/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 9
-/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 10
-/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 9
-/device/types/{deviceType}/devices/{deviceId}/events	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 7
-/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 9
-/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between commands and command. 0 hierarchical relations were detected out of 9
-/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 9
-/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Non-hierarchical Nodes	Reversed hierarchy of type True detected between commands and command. 0 hierarchical relations were detected out of 10
+/mgmt/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 56
+/mgmt/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 56
+/mgmt/requests/{requestId}/cancel	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 56
+/mgmt/requests/{requestId}/deviceStatus	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 56
+/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 56
+/mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 56
+/device/types/{deviceType}/devices/{deviceId}/events/{eventName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 56
+/device/types/{deviceType}/devices/{deviceId}/events	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 56
+/application/types/{typeId}/devices/{deviceId}/events/{eventName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 56
+/application/types/{typeId}/devices/{deviceId}/commands/{commandId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between commands and command. 0 hierarchical relations were detected out of 56
+/device/types/{typeId}/devices/{deviceId}/events/{eventName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 56
+/device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request	Non-hierarchical Nodes	Reversed hierarchy of type True detected between commands and command. 0 hierarchical relations were detected out of 56
 
 ***Patterns*** 
 Count: 45

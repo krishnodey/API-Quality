@@ -1,21 +1,20 @@
 ***Anti-Pattern*** 
-Count: 13
-/inbox_emails/card_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and identification. 0 hierarchical relations were detected out of 3
-/createCardRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and relation. 0 hierarchical relations were detected out of 2
-/createPhase	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 1
-/createPhaseField	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 2
-/createTable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 1
-/createTableField	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
-/createTableRecord	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
-/createTableRecordInRestrictedTable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 4
-/createTableRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
-/createTableRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 2
-/setFieldConditionOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and field. 0 hierarchical relations were detected out of 3
-/setTableFieldOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 3
-/setTableRecordFieldValue	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 4
+Count: 12
+/inbox_emails/card_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and identification. 0 hierarchical relations were detected out of 90
+/createCardRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between card and relation. 0 hierarchical relations were detected out of 90
+/createPhase	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 90
+/createPhaseField	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and phase. 0 hierarchical relations were detected out of 90
+/createTable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 90
+/createTableField	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 90
+/createTableRecord	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 90
+/createTableRecordInRestrictedTable	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 90
+/createTableRelation	Non-hierarchical Nodes	Reversed hierarchy of type True detected between create and table. 0 hierarchical relations were detected out of 90
+/setFieldConditionOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and field. 0 hierarchical relations were detected out of 90
+/setTableFieldOrder	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 90
+/setTableRecordFieldValue	Non-hierarchical Nodes	Reversed hierarchy of type True detected between set and table. 0 hierarchical relations were detected out of 90
 
 ***Patterns*** 
-Count: 96
+Count: 79
 /allCards	Hierarchical Nodes	
 /autoFillFields	Hierarchical Nodes	
 /card	Hierarchical Nodes	
@@ -50,15 +49,11 @@ Count: 96
 /createPipeRelation	Hierarchical Nodes	
 /createPresignedUrl	Hierarchical Nodes	
 /createPresignedUrlForPipePdfTemplate	Hierarchical Nodes	
-/createWebhook	Hierarchical Nodes	
-/deleteCard	Hierarchical Nodes	
-/deleteComment	Hierarchical Nodes	
 /deleteFieldCondition	Hierarchical Nodes	
 /deleteInboxEmail	Hierarchical Nodes	
 /deleteLabel	Hierarchical Nodes	
 /deleteOrganization	Hierarchical Nodes	
 /deleteOrganizationWebhook	Hierarchical Nodes	
-/deletePhase	Hierarchical Nodes	
 /deletePhaseField	Hierarchical Nodes	
 /deletePipe	Hierarchical Nodes	
 /deletePipeRelation	Hierarchical Nodes	
@@ -71,21 +66,8 @@ Count: 96
 /createWebhook	Hierarchical Nodes	
 /deleteCard	Hierarchical Nodes	
 /deleteComment	Hierarchical Nodes	
-/deleteFieldCondition	Hierarchical Nodes	
-/deleteInboxEmail	Hierarchical Nodes	
-/deleteInboxEmail	Hierarchical Nodes	
-/deleteOrganization	Hierarchical Nodes	
-/deleteOrganizationWebhook	Hierarchical Nodes	
-/deletePhase	Hierarchical Nodes	
-/deletePhaseField	Hierarchical Nodes	
 /deletePipe	Hierarchical Nodes	
-/deletePipeRelation	Hierarchical Nodes	
-/deleteTable	Hierarchical Nodes	
 /deleteTableField	Hierarchical Nodes	
-/deleteTableRecord	Hierarchical Nodes	
-/deleteTableRelation	Hierarchical Nodes	
-/deleteWebhook	Hierarchical Nodes	
-/exportPipeReport	Hierarchical Nodes	
 /interfaceEmbedCreat	Hierarchical Nodes	
 /inviteMembers	Hierarchical Nodes	
 /moveCardToPhase	Hierarchical Nodes	

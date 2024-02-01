@@ -1,10 +1,9 @@
 ***Anti-Pattern*** 
-Count: 2
-/createPresignedUrlForPipePdfTemplate	 Contextless Resource Names
+Count: 1
 /inviteMembers	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 107
+Count: 90
 /allCards	 Contextual Resource Names
 /autoFillFields	 Contextual Resource Names
 /card	 Contextual Resource Names
@@ -42,20 +41,16 @@ Count: 107
 /createPipe	 Contextual Resource Names
 /createPipeRelation	 Contextual Resource Names
 /createPresignedUrl	 Contextual Resource Names
+/createPresignedUrlForPipePdfTemplate	 Contextual Resource Names
 /createTable	 Contextual Resource Names
 /createTableField	 Contextual Resource Names
 /createTableRecord	 Contextual Resource Names
 /createTableRecordInRestrictedTable	 Contextual Resource Names
-/createTableRelation	 Contextual Resource Names
-/createWebhook	 Contextual Resource Names
-/deleteCard	 Contextual Resource Names
-/deleteComment	 Contextual Resource Names
 /deleteFieldCondition	 Contextual Resource Names
 /deleteInboxEmail	 Contextual Resource Names
 /deleteLabel	 Contextual Resource Names
 /deleteOrganization	 Contextual Resource Names
 /deleteOrganizationWebhook	 Contextual Resource Names
-/deletePhase	 Contextual Resource Names
 /deletePhaseField	 Contextual Resource Names
 /deletePipe	 Contextual Resource Names
 /deletePipeRelation	 Contextual Resource Names
@@ -69,21 +64,8 @@ Count: 107
 /createWebhook	 Contextual Resource Names
 /deleteCard	 Contextual Resource Names
 /deleteComment	 Contextual Resource Names
-/deleteFieldCondition	 Contextual Resource Names
-/deleteInboxEmail	 Contextual Resource Names
-/deleteInboxEmail	 Contextual Resource Names
-/deleteOrganization	 Contextual Resource Names
-/deleteOrganizationWebhook	 Contextual Resource Names
-/deletePhase	 Contextual Resource Names
-/deletePhaseField	 Contextual Resource Names
 /deletePipe	 Contextual Resource Names
-/deletePipeRelation	 Contextual Resource Names
-/deleteTable	 Contextual Resource Names
 /deleteTableField	 Contextual Resource Names
-/deleteTableRecord	 Contextual Resource Names
-/deleteTableRelation	 Contextual Resource Names
-/deleteWebhook	 Contextual Resource Names
-/exportPipeReport	 Contextual Resource Names
 /interfaceEmbedCreat	 Contextual Resource Names
 /moveCardToPhase	 Contextual Resource Names
 /recordsImporter	 Contextual Resource Names

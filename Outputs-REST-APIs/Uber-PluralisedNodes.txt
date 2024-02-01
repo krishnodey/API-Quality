@@ -4,7 +4,7 @@ POST 	/oauth/token	Pluralized Nodes	 [Singular last node with POST method.]
 POST 	/requests/estimate	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 13
+Count: 12
 GET 	/oauth/authorize	 Regular methods
 GET 	/history	 Regular methods
 GET 	/payment-methods	 Regular methods
@@ -17,4 +17,3 @@ PATCH 	/requests/current	 Regular methods
 DELETE 	/requests/current	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/requests/{request_id}/receipt	 Regular methods
 GET 	/requests/{request_id}/map	 Regular methods
-GET 	/requests/{request_id}/receipt	 Regular methods

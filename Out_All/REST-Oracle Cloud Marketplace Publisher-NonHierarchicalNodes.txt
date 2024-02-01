@@ -6,7 +6,7 @@ DELETE 	 /applications/{listingVersionId}/comments/{id} 	 Delete a status commen
 DELETE 	 /applications/{listingVersionId}/packages/{packageVersionId} 	 Delete the package of an application. 	 0 	 1 	 
 DELETE 	 /applications/{listingVersionId}/relateddocs/{id} 	 Delete a related document for an existing application. 	 0 	 1 	 
 DELETE 	 /applications/{listingVersionId}/screenshots/{id} 	 Delete a screenshot for an existing application. 	 0 	 1 	 
-DELETE 	 /applications/{listingVersionId}/supportingdocs/{id} 	 Delete a supporting document for an existing application. 	 0 	 1 	 
+DELETE 	 /applications/{listingVersionId}/supportingdocs/{id} 	 Delete a supporting document for an existing application. 	 1 	 0 	 Reversed hierarchy of type True detected between supporting and documents. 0 hierarchical relations were detected out of 42
 DELETE 	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Delete the package of an application. 	 0 	 1 	 
 DELETE 	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	 Delete a specific resource of the application's package. 	 0 	 1 	 
 GET 	 /applications 	 Get the list of all applications for the publisher. 	 0 	 1 	 
@@ -25,7 +25,7 @@ PATCH 	 /applications/{listingVersionId}/banner 	 Partially Update the banner fo
 PATCH 	 /applications/{listingVersionId}/packages/{packageVersionId} 	 Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated. 	 0 	 1 	 
 PATCH 	 /applications/{listingVersionId}/relateddocs/{id} 	 Partially Update a related document for the application. 	 0 	 1 	 
 PATCH 	 /applications/{listingVersionId}/screenshots 	 Partially Update the Screenshot for an application. 	 0 	 1 	 
-PATCH 	 /applications/{listingVersionId}/supportingdocs/{id} 	 Partially Update a supporting document for the application. 	 0 	 1 	 
+PATCH 	 /applications/{listingVersionId}/supportingdocs/{id} 	 Partially Update a supporting document for the application. 	 1 	 0 	 Reversed hierarchy of type True detected between supporting and documents. 0 hierarchical relations were detected out of 42
 PATCH 	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	 Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated. 	 0 	 1 	 
 POST 	 /applications 	 Create a new application listing. The application goes through a state lifecycle. A newly created application starts off in the "New" state. Application edits are allowed in this state. To publish the listing to the Marketplace, the application listing needs to be submitted for approval. 	 0 	 1 	 
 POST 	 /applications/{listingVersionId}/banner 	 Create a banner for the application. 	 0 	 1 	 
@@ -34,7 +34,7 @@ POST 	 /applications/{listingVersionId}/icon 	 Upload an icon for the applicatio
 POST 	 /applications/{listingVersionId}/packages 	 Create a package for the given application. A package is an orchestration template that describes the application install/uninstall/upgrade steps. 	 0 	 1 	 
 POST 	 /applications/{listingVersionId}/relateddocs 	 Creates related documents for the an application with the specified ID. 	 0 	 1 	 
 POST 	 /applications/{listingVersionId}/screenshots 	 Create screenshots for an application. 	 0 	 1 	 
-POST 	 /applications/{listingVersionId}/supportingdocs 	 Creates supporting documents for the an application with the specified ID. 	 0 	 1 	 
+POST 	 /applications/{listingVersionId}/supportingdocs 	 Creates supporting documents for the an application with the specified ID. 	 1 	 0 	 Reversed hierarchy of type True detected between supporting and documents. 0 hierarchical relations were detected out of 42
 POST 	 /applications/{listingVersionId}/version 	 Create a new version for an already published application listing. A new version is necessary to make edits to an already published listing.The new version has to go though the same life cycle and approval workflow to get published to the Marketplace. Publishing the new version automatically archives the older version from the Marketplace. At any given point only one version of the application is active on the Marketplace. 	 0 	 1 	 
 PUT 	 /applications/{listingVersionId} 	 Update the Application listing. Only applications in a NEW or REJECTED state can be updated. To update a listing that is published, a new version of the listing must be created. 	 0 	 1 	 
 PUT 	 /applications/{listingVersionId}/banner 	 Update the banner for the application. 	 0 	 1 	 

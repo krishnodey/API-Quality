@@ -1,10 +1,11 @@
 ***Anti-Pattern*** 
-Count: 17
+Count: 18
 POST 	/api/user/reg	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/api/user/auth	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/api/user/anon	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/api/user/checkauth	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/api/user/logout	Pluralized Nodes	 [Singular last node with POST method.] 
+PUT 	/api/user/pass	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 POST 	/api/v/2/devices/{SystemKey}/auth	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/api/collection/{systemKey}/{collectionName}	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/api/data/{collectionID}	Pluralized Nodes	 [Singular last node with POST method.] 
@@ -19,10 +20,9 @@ POST 	/admin/systemmanagement	Pluralized Nodes	 [Singular last node with POST me
 POST 	/admin/collectionmanagement	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 28
+Count: 27
 GET 	/api/user/info	 Regular methods
 PUT 	/api/user/info	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT 	/api/user/pass	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/api/user	 Regular methods
 PUT 	/api/v/2/devices/{systemKey}/{name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/api/collection/{systemKey}/{collectionName}	 Regular methods

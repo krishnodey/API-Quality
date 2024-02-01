@@ -48,9 +48,9 @@ PUT 	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	 Remove an admin
 GET 	 /domains/{domain}/gateways/{gateway}/aliases 	 Performs a query to find all the aliases for this gateway 	 0 	 1 	 Self-descriptive End-point
 GET 	 /domains/{domain}/gateways/{gateway}/classofservice 	 List the classes of service for a specific gateway 	 0 	 1 	 Self-descriptive End-point
 POST 	 /domains/{domain}/gateways/{gateway}/classofservice 	 Create a Gwia Class of Service for the specified gateway 	 0 	 1 	 Self-descriptive End-point
-GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Get a specific Gateway given the name 	 0 	 1 	 Self-descriptive End-point
-PUT 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Update a specific Class of Service given the name 	 0 	 1 	 Self-descriptive End-point
-DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Delete a specific Class of Service given the name 	 0 	 1 	 Self-descriptive End-point
+GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Get a specific Gateway given the name 	 1 	 0 	Non-descriptive End-point
+PUT 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Update a specific Class of Service given the name 	 1 	 0 	Non-descriptive End-point
+DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	 Delete a specific Class of Service given the name 	 1 	 0 	Non-descriptive End-point
 GET 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 List the members for a specific class of service 	 0 	 1 	 Self-descriptive End-point
 POST 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	 Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	 Remove a member from this class of service by id 	 0 	 1 	 Self-descriptive End-point

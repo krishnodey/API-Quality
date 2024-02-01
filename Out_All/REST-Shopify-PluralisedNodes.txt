@@ -58,7 +58,7 @@ GET 	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	 Retrieves a 
 GET 	 /webhooks.json 	 Retrieves a list of webhooks 	 0 	 1 	 Regular methods
 GET 	 /webhooks/count.json 	 Receive a count of all Webhooks 	 0 	 1 	 Regular methods
 GET 	 /webhooks/{webhook_id}.json 	 Receive a single Webhook 	 0 	 1 	 Regular methods
-POST 	 /webhooks.json 	 Create a new Webhook 	 1 	 0 	  [Singular last node with POST method.] 
+POST 	 /webhooks.json 	 Create a new Webhook 	 0 	 1 	  [Pluralized last node with POST method.] 
 PUT 	 /webhooks/{webhook_id}.json 	 Modify an existing Webhook 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 DELETE 	 /webhooks/{webhook_id}.json 	 Remove an existing Webhook 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 GET 	 /inventory_items.json?ids=808950810,39072856,457924702 	 Retrieves a list of inventory items 	 0 	 1 	 Regular methods

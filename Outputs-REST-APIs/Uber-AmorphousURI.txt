@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 15
+Count: 14
 /oauth/authorize	Tidy End-point	
 /oauth/token	Tidy End-point	
 /history	Tidy End-point	
@@ -17,4 +17,3 @@ Count: 15
 /requests/current	Tidy End-point	
 /requests/{request_id}/receipt	Tidy End-point	
 /requests/{request_id}/map	Tidy End-point	
-/requests/{request_id}/receipt	Tidy End-point	

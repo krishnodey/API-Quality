@@ -13,7 +13,7 @@ GET 	 /device/types/{typeId}/devices/{deviceId} 	 Get device. Gets device detail
 PUT 	 /device/types/{typeId}/devices/{deviceId} 	 Update device. Updates a device. 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /device/types/{typeId}/devices/{deviceId} 	 Remove device. Removes a device. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /device/types/{typeId}/devices/{deviceId}/devices 	 Get devices that are connected through the gateway specified by id {deviceId}. Gets information on devices that are connected through the specified gateway (typeId, deviceId) to Watson IoT Platform. 	 0 	 1 	 Self-descriptive End-point
-GET 	 /device/types/{typeId}/devices/{deviceId}/edgestatus 	 Return the status of containers from an edge node. Return the status of containers from an edge node. 	 1 	 0 	Non-descriptive End-point
+GET 	 /device/types/{typeId}/devices/{deviceId}/edgestatus 	 Return the status of containers from an edge node. Return the status of containers from an edge node. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId} 	 Return the status of containers from an edge node filtering by service. Return the status of containers from an edge node filtering by service. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /logs/connection 	 List device connection log events. List connection log events for a device to aid in diagnosing connectivity problems. The entries record successful connection, unsuccessful connection attempts, intentional disconnection and server-initiated disconnection. 	 0 	 1 	 Self-descriptive End-point
 GET 	 /usage/data-traffic 	 Retrieve the amount of data used. Retrieve the amount of data used. 	 0 	 1 	 Self-descriptive End-point

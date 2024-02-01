@@ -1,30 +1,27 @@
 ***Anti-Pattern*** 
-Count: 14
-/bui/getMyTicketDetails({persid})	 Non-descriptive End-point
+Count: 8
 /bui/getTicketsCustomData({persid})	 Non-descriptive End-point
-/bui/attrCtrl	 Non-descriptive End-point
-/bui/changeStatus/{factory}({persid})	 Non-descriptive End-point
-/bui/allFeeds({persid})	 Non-descriptive End-point
+/bui/getBopSID	 Non-descriptive End-point
 /bui/getDocument({id})	 Non-descriptive End-point
 /bui/getKDAttachments({id})	 Non-descriptive End-point
 /bui/getKDComments({id})	 Non-descriptive End-point
 /bui/addKDComment({id})	 Non-descriptive End-point
 /bui/rateDocument({id})	 Non-descriptive End-point
-/bui/kdLinkInfo({id})	 Non-descriptive End-point
 /bui/unLinkSolution({id})	 Non-descriptive End-point
-/bui/{factory}({persid})	 Non-descriptive End-point
-/bui/{factory}({persid})	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 26
+Count: 32
 /api/getAccess	 Self-descriptive End-point
 /bui/getBUIAllConfig	 Self-descriptive End-point
 /bui/getAllowedStatus	 Self-descriptive End-point
+/bui/getMyTicketDetails({persid})	 Self-descriptive End-point
 /bui/getDefaultCategories	 Self-descriptive End-point
 /bui/attrInfo	 Self-descriptive End-point
+/bui/attrCtrl	 Self-descriptive End-point
 /bui/addLogComment	 Self-descriptive End-point
+/bui/changeStatus/{factory}({persid})	 Self-descriptive End-point
+/bui/allFeeds({persid})	 Self-descriptive End-point
 /bui/attmnt	 Self-descriptive End-point
-/bui/getBopSID	 Self-descriptive End-point
 /bui/attmnt({persid})/$value	 Self-descriptive End-point
 /bui/updateStatusForNotification	 Self-descriptive End-point
 /bui/updateStatusForAllNotification	 Self-descriptive End-point
@@ -33,8 +30,11 @@ Count: 26
 /bui/checkActiveSessions	 Self-descriptive End-point
 /bui/createChatThread	 Self-descriptive End-point
 /bui/getChatHistory/{roomName}	 Self-descriptive End-point
+/bui/kdLinkInfo({id})	 Self-descriptive End-point
 /bui/helpAbout	 Self-descriptive End-point
 /bui/getEEMAuth	 Self-descriptive End-point
+/bui/{factory}({persid})	 Self-descriptive End-point
+/bui/{factory}({persid})	 Self-descriptive End-point
 /bui/{factory}	 Self-descriptive End-point
 /bui/{factory}	 Self-descriptive End-point
 /gs/mytkt_active	 Self-descriptive End-point

@@ -1,7 +1,7 @@
 ***Anti-Pattern*** 
 Count: 4
 /bui/getBopSID	 Contextless Resource Names
-/bui/getEEMAuth	 Contextless Resource Names
+/bui/getChatHistory/{roomName}	 Contextless Resource Names
 /pcatSearch	 Contextless Resource Names
 /getOfferings	 Contextless Resource Names
 
@@ -26,7 +26,6 @@ Count: 36
 /bui/getMyActiveChatSession	 Contextual Resource Names
 /bui/checkActiveSessions	 Contextual Resource Names
 /bui/createChatThread	 Contextual Resource Names
-/bui/getChatHistory/{roomName}	 Contextual Resource Names
 /bui/getDocument({id})	 Contextual Resource Names
 /bui/getKDAttachments({id})	 Contextual Resource Names
 /bui/getKDComments({id})	 Contextual Resource Names
@@ -35,6 +34,7 @@ Count: 36
 /bui/kdLinkInfo({id})	 Contextual Resource Names
 /bui/unLinkSolution({id})	 Contextual Resource Names
 /bui/helpAbout	 Contextual Resource Names
+/bui/getEEMAuth	 Contextual Resource Names
 /bui/{factory}({persid})	 Contextual Resource Names
 /bui/{factory}({persid})	 Contextual Resource Names
 /bui/{factory}	 Contextual Resource Names

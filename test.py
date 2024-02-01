@@ -90,6 +90,20 @@ uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of Non-descriptiveURI:\n")
 
 
+print("Detection of NonHierarchicalNodes:")
+result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_non_hierarchical_nodes()
+pattern_type = "NonHierarchicalNodes"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+uri_obj.write_out_data(re, selected, pattern_type, base_path)
+print("\nFinished Detection of NonHierarchicalNodes:\n")
+
+print("Detection of InconsistantDocumentation:")
+result_AP, result_P, p_count, ap_count, re= analyzer_obj.detect_inconsistent_documentations()
+pattern_type = "InconsistantDoc"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+uri_obj.write_out_data(re, selected, pattern_type, base_path)
+print("\nFinished Detection of InconsistantDocumentation:\n")
+
 
 print("Detection of ContextlessResource:")
 result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_contextless()
@@ -100,27 +114,11 @@ print("\nFinished Detection of ContextlessResource:\n")
 
 
 
-print("Detection of NonHierarchicalNodes:")
-result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_non_hierarchical_nodes()
-pattern_type = "NonHierarchicalNodes"
-uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
-print("\nFinished Detection of NonHierarchicalNodes:\n")
-
-
 print("Detection of LessCohisiveDocumentation:")
 result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_less_cohesive_documentation()
 pattern_type = "LessCohisiveDoc"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
 uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of LessCohisiveDocumentation:\n")
-
-
-print("Detection of InconsistantDocumentation:")
-result_AP, result_P, p_count, ap_count, re= analyzer_obj.detect_inconsistent_documentations()
-pattern_type = "InconsistantDoc"
-uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
-print("\nFinished Detection of InconsistantDocumentation:\n")
 
 

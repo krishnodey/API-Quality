@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 21
+Count: 19
 /{ig-comment-id}?fields={fields}	Standard End-point	
 /{ig-comment-id}?hide={hide}	Standard End-point	
 /{ig-comment-id}	Standard End-point	
@@ -10,13 +10,11 @@ Count: 21
 /oauth/access_token	Standard End-point	
 /access_token	Standard End-point	
 /refresh_access_token	Standard End-point	
-/oauth/authorize	Standard End-point	
 /{media-id}	Standard End-point	
 /{media-id}/children	Standard End-point	
 /{user-id}/media	Standard End-point	
 /me	Standard End-point	
 /{user-id}	Standard End-point	
-/{user-id}/media	Standard End-point	
 /{ig-hashtag-id}	Standard End-point	
 /{ig-media-id}?fields={fields}	Standard End-point	
 /{ig-media-id}?comment_enabled={comment_enabled}	Standard End-point	

@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 21
+Count: 19
 /{ig-comment-id}?fields={fields}	Hierarchical Nodes	
 /{ig-comment-id}?hide={hide}	Hierarchical Nodes	
 /{ig-comment-id}	Hierarchical Nodes	
@@ -10,13 +10,11 @@ Count: 21
 /oauth/access_token	Hierarchical Nodes	
 /access_token	Hierarchical Nodes	
 /refresh_access_token	Hierarchical Nodes	
-/oauth/authorize	Hierarchical Nodes	
 /{media-id}	Hierarchical Nodes	
 /{media-id}/children	Hierarchical Nodes	
 /{user-id}/media	Hierarchical Nodes	
 /me	Hierarchical Nodes	
 /{user-id}	Hierarchical Nodes	
-/{user-id}/media	Hierarchical Nodes	
 /{ig-hashtag-id}	Hierarchical Nodes	
 /{ig-media-id}?fields={fields}	Hierarchical Nodes	
 /{ig-media-id}?comment_enabled={comment_enabled}	Hierarchical Nodes	

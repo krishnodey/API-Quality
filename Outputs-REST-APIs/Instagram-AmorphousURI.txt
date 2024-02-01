@@ -6,18 +6,16 @@ Count: 4
 /{page-id}?fields=instagram_business_account	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 17
+Count: 15
 /{ig-comment-id}?fields={fields}	Tidy End-point	
 /{ig-comment-id}?hide={hide}	Tidy End-point	
 /{ig-comment-id}	Tidy End-point	
-/oauth/authorize	Tidy End-point	
 /oauth/authorize	Tidy End-point	
 /{media-id}	Tidy End-point	
 /{media-id}/children	Tidy End-point	
 /{user-id}/media	Tidy End-point	
 /me	Tidy End-point	
 /{user-id}	Tidy End-point	
-/{user-id}/media	Tidy End-point	
 /{ig-hashtag-id}	Tidy End-point	
 /{ig-media-id}?fields={fields}	Tidy End-point	
 /{ig-media-id}?comment_enabled={comment_enabled}	Tidy End-point	

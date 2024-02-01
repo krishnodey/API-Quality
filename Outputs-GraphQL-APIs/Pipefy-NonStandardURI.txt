@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 109
+Count: 91
 /allCards	Standard End-point	
 /autoFillFields	Standard End-point	
 /card	Standard End-point	
@@ -45,16 +45,11 @@ Count: 109
 /createTableField	Standard End-point	
 /createTableRecord	Standard End-point	
 /createTableRecordInRestrictedTable	Standard End-point	
-/createTableRelation	Standard End-point	
-/createWebhook	Standard End-point	
-/deleteCard	Standard End-point	
-/deleteComment	Standard End-point	
 /deleteFieldCondition	Standard End-point	
 /deleteInboxEmail	Standard End-point	
 /deleteLabel	Standard End-point	
 /deleteOrganization	Standard End-point	
 /deleteOrganizationWebhook	Standard End-point	
-/deletePhase	Standard End-point	
 /deletePhaseField	Standard End-point	
 /deletePipe	Standard End-point	
 /deletePipeRelation	Standard End-point	
@@ -68,21 +63,8 @@ Count: 109
 /createWebhook	Standard End-point	
 /deleteCard	Standard End-point	
 /deleteComment	Standard End-point	
-/deleteFieldCondition	Standard End-point	
-/deleteInboxEmail	Standard End-point	
-/deleteInboxEmail	Standard End-point	
-/deleteOrganization	Standard End-point	
-/deleteOrganizationWebhook	Standard End-point	
-/deletePhase	Standard End-point	
-/deletePhaseField	Standard End-point	
 /deletePipe	Standard End-point	
-/deletePipeRelation	Standard End-point	
-/deleteTable	Standard End-point	
 /deleteTableField	Standard End-point	
-/deleteTableRecord	Standard End-point	
-/deleteTableRelation	Standard End-point	
-/deleteWebhook	Standard End-point	
-/exportPipeReport	Standard End-point	
 /interfaceEmbedCreat	Standard End-point	
 /inviteMembers	Standard End-point	
 /moveCardToPhase	Standard End-point	

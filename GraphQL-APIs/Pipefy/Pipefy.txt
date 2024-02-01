@@ -40,16 +40,11 @@ POST >> /createTable >> Creates a table>>n/a
 POST >> /createTableField >> Creates a table field>>n/a
 POST >> /createTableRecord >> Creates a record >>n/a
 POST >> /createTableRecordInRestrictedTable >> Creates a record in a private table>>n/a
-POST >> /createTableRelation >> Creates a table relation>>n/a
-POST >> /createWebhook >> Creates a webhook at a pipe or table level >>n/a
-POST >> /deleteCard >> Deletes a card>>n/a
-POST >> /deleteComment >> Deletes a comment>>n/a
 POST >> /deleteFieldCondition >> Deletes a field condition>>n/a
 POST >> /deleteInboxEmail >> Deletes an email>>n/a
 POST >> /deleteLabel >> Deletes a label>>n/a
 POST >> /deleteOrganization >> Deletes an organization>>n/a
 POST >> /deleteOrganizationWebhook >> Deletes a webhook>>n/a
-POST >> /deletePhase >> Deletes a phase>>n/a
 POST >> /deletePhaseField >>Deletes a phase field>>n/a
 POST >> /deletePipe >>Deletes a pipe>>n/a
 POST >> /deletePipeRelation >> Deletes a pipe relation>>n/a
@@ -63,21 +58,7 @@ POST >> /createTableRelation >> Creates a table relation >>n/a
 POST >> /createWebhook >> Creates a webhook at a pipe or table level >>n/a
 POST >> /deleteCard >> Deletes a card >>n/a
 POST >> /deleteComment >> Deletes a comment >>n/a
-POST >> /deleteFieldCondition >> Deletes a field condition >>n/a
-POST >> /deleteInboxEmail>> Deletes an email >>n/a
-POST >> /deleteInboxEmail >> Deletes an email >>n/a
-POST >> /deleteOrganization >> Deletes an organization >>n/a
-POST >> /deleteOrganizationWebhook >> Deletes a webhook>>n/a
-POST >> /deletePhase >>Deletes a phase>>n/a
-POST >> /deletePhaseField>>Deletes a phase field >>n/a
 POST >> /deletePipe>>Deletes a pipe >>n/a
-POST >> /deletePipeRelation>>Deletes a pipe relation >>n/a
-POST >> /deleteTable >> Deletes a table >>n/a
-POST >> /deleteTableField>>Deletes a table field >>n/a
-POST >> /deleteTableRecord >>Deletes a record >>n/a
-POST >> /deleteTableRelation>> Deletes a table relation >>n/a
-POST >> /deleteWebhook >> Deletes a webhook (pipe or table level) >>n/a
-POST >> /exportPipeReport >> Exports a pipe report >>n/a
 POST >> /interfaceEmbedCreat>> Create a new Interface >>n/a
 POST >> /inviteMembers >> Invites new members for the organization >>n/a
 POST >> /moveCardToPhase >> Moves a card to another phase >>n/a

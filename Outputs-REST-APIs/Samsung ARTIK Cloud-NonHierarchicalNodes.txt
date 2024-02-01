@@ -1,9 +1,9 @@
 ***Anti-Pattern*** 
 Count: 4
-/devices/<deviceID>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 3
-/devices/<deviceID>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 3
-/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 7
-/messages/export/<exportID>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 4
+/devices/<deviceID>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
+/devices/<deviceID>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
+/messages/export/<exportID>/status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
 
 ***Patterns*** 
 Count: 76

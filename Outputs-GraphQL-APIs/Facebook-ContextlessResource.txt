@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 69
+Count: 66
 /v18.0/{album-id}	 Contextual Resource Names
 /{group_id}/albums	 Contextual Resource Names
 /v18.0/{album-id}/comments	 Contextual Resource Names
@@ -33,12 +33,10 @@ Count: 69
 /v19.0/{application-id}/events	 Contextual Resource Names
 /v19.0/{application-id}/ios_skadnetwork_conversion_config	 Contextual Resource Names
 /v19.0/{application-id}/mobile_sdk_gk	 Contextual Resource Names
-/v19.0/{application-id}/model_asset	 Contextual Resource Names
 /v19.0/{application-id}/monetized_digital_store_objects	 Contextual Resource Names
 /v19.0/{application-id}/permissions	 Contextual Resource Names
 /v19.0/{application-id}/products	 Contextual Resource Names
 /v19.0/{application-id}/purchases	 Contextual Resource Names
-/v19.0/{app-id}/roles	 Contextual Resource Names
 /v19.0/{application-id}/subscribed_domains	 Contextual Resource Names
 /v19.0/{application-id}/subscribed_domains_phishing	 Contextual Resource Names
 /{application_id}/app_indexing	 Contextual Resource Names
@@ -52,7 +50,6 @@ Count: 69
 /{application_id}/activities	 Contextual Resource Names
 /v19.0/{application-id}/ad_placement_groups	 Contextual Resource Names
 /v19.0/{application-id}/adnetworkanalytics_results	 Contextual Resource Names
-/v19.0/{application-id}/mobile_sdk_gk	 Contextual Resource Names
 /v19.0/{application-id}/model_asset	 Contextual Resource Names
 /v19.0/{application-id}/monetized_digital_store_objects	 Contextual Resource Names
 /v19.0/{application-id}/permissions	 Contextual Resource Names

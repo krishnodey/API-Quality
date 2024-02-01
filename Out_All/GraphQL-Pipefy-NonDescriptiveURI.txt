@@ -41,16 +41,11 @@ POST 	 /createTable 	 Creates a table n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /createTableField 	 Creates a table field n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /createTableRecord 	 Creates a record  n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /createTableRecordInRestrictedTable 	 Creates a record in a private table n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /createTableRelation 	 Creates a table relation n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /createWebhook 	 Creates a webhook at a pipe or table level  n/a 	 1 	 0 	Non-descriptive End-point
-POST 	 /deleteCard 	 Deletes a card n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteComment 	 Deletes a comment n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deleteFieldCondition 	 Deletes a field condition n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deleteInboxEmail 	 Deletes an email n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deleteLabel 	 Deletes a label n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deleteOrganization 	 Deletes an organization n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deleteOrganizationWebhook 	 Deletes a webhook n/a 	 1 	 0 	Non-descriptive End-point
-POST 	 /deletePhase 	 Deletes a phase n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deletePhaseField 	 Deletes a phase field n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deletePipe 	 Deletes a pipe n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deletePipeRelation 	 Deletes a pipe relation n/a 	 0 	 1 	 Self-descriptive End-point
@@ -64,21 +59,7 @@ POST 	 /createTableRelation 	 Creates a table relation  n/a 	 0 	 1 	 Self-descr
 POST 	 /createWebhook 	 Creates a webhook at a pipe or table level  n/a 	 1 	 0 	Non-descriptive End-point
 POST 	 /deleteCard 	 Deletes a card  n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deleteComment 	 Deletes a comment  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteFieldCondition 	 Deletes a field condition  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteInboxEmail 	 Deletes an email  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteInboxEmail 	 Deletes an email  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteOrganization 	 Deletes an organization  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteOrganizationWebhook 	 Deletes a webhook n/a 	 1 	 0 	Non-descriptive End-point
-POST 	 /deletePhase 	 Deletes a phase n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deletePhaseField 	 Deletes a phase field  n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /deletePipe 	 Deletes a pipe  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deletePipeRelation 	 Deletes a pipe relation  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteTable 	 Deletes a table  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteTableField 	 Deletes a table field  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteTableRecord 	 Deletes a record  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteTableRelation 	 Deletes a table relation  n/a 	 0 	 1 	 Self-descriptive End-point
-POST 	 /deleteWebhook 	 Deletes a webhook (pipe or table level)  n/a 	 1 	 0 	Non-descriptive End-point
-POST 	 /exportPipeReport 	 Exports a pipe report  n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /interfaceEmbedCreat 	 Create a new Interface  n/a 	 1 	 0 	Non-descriptive End-point
 POST 	 /inviteMembers 	 Invites new members for the organization  n/a 	 0 	 1 	 Self-descriptive End-point
 POST 	 /moveCardToPhase 	 Moves a card to another phase  n/a 	 0 	 1 	 Self-descriptive End-point

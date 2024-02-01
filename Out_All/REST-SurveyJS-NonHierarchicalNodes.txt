@@ -1,7 +1,7 @@
 HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
 PUT 	 /setResultSummaryState?accessKey={accessKey} 	 Change the result summary state. 	 0 	 1 	 
-GET 	 /getResultSummaryState/{id}?accessKey={accessKey} 	 Returns the result summary state. 	 1 	 0 	 Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 4
-GET 	 /getPublicResultSummaryState/{id} 	 Returns public result summary state. 	 1 	 0 	 Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 5
+GET 	 /getResultSummaryState/{id}?accessKey={accessKey} 	 Returns the result summary state. 	 1 	 0 	 Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 23
+GET 	 /getPublicResultSummaryState/{id} 	 Returns public result summary state. 	 1 	 0 	 Reversed hierarchy of type True detected between state and identification. 0 hierarchical relations were detected out of 23
 GET 	 /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	 Returns survey results. 	 0 	 1 	 
 GET 	 /getSurveyPublicResults/{id}?from={from}&till={till} 	 Returns survey public results. 	 0 	 1 	 
 GET 	 /generateAccessKey?accessKey={accessKey} 	 Generates a new access key. The old access key becomes invalid. 	 0 	 1 	 
@@ -19,7 +19,7 @@ PUT 	 /unPublish/{id}?accessKey={accessKey} 	 Disable publishing the survey. 	 0
 PUT 	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Enable or disable using cookies of the publishing survey. 	 0 	 1 	 
 POST 	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 Enable or disable using cookies of the publishing survey. 	 0 	 1 	 
 GET 	 /getIsResultPublic/{id}?accessKey={accessKey} 	 Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not. 	 0 	 1 	 
-PUT 	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	 Enable or disable the ability to view survey results by non autorized user via direct link. 	 1 	 0 	 Reversed hierarchy of type True detected between make and result. 0 hierarchical relations were detected out of 3
+PUT 	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	 Enable or disable the ability to view survey results by non autorized user via direct link. 	 1 	 0 	 Reversed hierarchy of type True detected between make and result. 0 hierarchical relations were detected out of 23
 PUT 	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	 Enable or disable the ability to view survey results by non autorized user via direct link. 	 0 	 1 	 
 DELETE 	 /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	 Delete the survey result. Use it to delete spam or test results. 	 0 	 1 	 
 DELETE 	 /deleteAllResults/{id}?accessKey={accessKey} 	 Delete all survey results. Use it to delete all tested results before running survey. 	 0 	 1 	 

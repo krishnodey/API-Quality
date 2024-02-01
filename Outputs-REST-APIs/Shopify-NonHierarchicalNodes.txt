@@ -1,13 +1,13 @@
 ***Anti-Pattern*** 
 Count: 8
-/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 5
-/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 5
-/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 5
-/customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and set. 0 hierarchical relations were detected out of 4
-/customers/{customer_id}/addresses/{address_id}/default.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 6
-/events/{event_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and identification. 0 hierarchical relations were detected out of 2
-/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	Non-hierarchical Nodes	Reversed hierarchy of type True detected between events and count. 0 hierarchical relations were detected out of 1
-/inventory_levels/set.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between levels and set. 0 hierarchical relations were detected out of 2
+/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and set. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/{address_id}/default.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/events/{event_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and identification. 0 hierarchical relations were detected out of 70
+/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	Non-hierarchical Nodes	Reversed hierarchy of type True detected between events and count. 0 hierarchical relations were detected out of 70
+/inventory_levels/set.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between levels and set. 0 hierarchical relations were detected out of 70
 
 ***Patterns*** 
 Count: 63

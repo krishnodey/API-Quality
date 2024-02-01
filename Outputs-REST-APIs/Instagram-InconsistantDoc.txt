@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 21
+Count: 19
 GET	 /{ig-comment-id}?fields={fields} 	Consistent Documentation	Reading a Comment
 POST	 /{ig-comment-id}?hide={hide} 	Consistent Documentation	Hiding/Unhiding a Comment
 DELETE	/{ig-comment-id}	Consistent Documentation	Deleting a Comment
@@ -10,13 +10,11 @@ GET	 /oauth/authorize 	Consistent Documentation	Get the Authorization Window.
 POST	 /oauth/access_token 	Consistent Documentation	Exchange an Authorization Code for a short-lived Instagram User Access Token.
 GET	 /access_token 	Consistent Documentation	Exchange a short-lived Instagram User Access Token for a long-lived Instagram User Access Token.
 GET	 /refresh_access_token 	Consistent Documentation	Refresh a long-lived Instagram User Access Token.
-GET	 /oauth/authorize 	Consistent Documentation	Get the Authorization Window.
 GET	 /{media-id} 	Consistent Documentation	Get fields and edges on an image, video, or album.
 GET	 /{media-id}/children 	Consistent Documentation	Get a list of images and videos on an album.
 GET	 /{user-id}/media 	Consistent Documentation	Get a list of images, videos, or albums on a User.
 GET	 /me 	Consistent Documentation	Get fields and edges on a User.
 GET	 /{user-id} 	Consistent Documentation	Get fields and edges on a User.
-GET	 /{user-id}/media 	Consistent Documentation	Get a list of images, videos, or albums on a User.
 GET	 /{ig-hashtag-id} 	Consistent Documentation	Returns Fields and Edges on an IG Hashtag.
 GET	 /{ig-media-id}?fields={fields} 	Consistent Documentation	Gets Fields and Edges on an IG Media.
 POST	 /{ig-media-id}?comment_enabled={comment_enabled} 	Consistent Documentation	Enables or disables comments on a media object.

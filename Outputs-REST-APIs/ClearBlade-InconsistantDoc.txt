@@ -30,7 +30,7 @@ GET	 /codeadmin/v/2/library/{systemKey} 	Consistent Documentation	Gets the libra
 GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Gets the libraries for a system
 PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Updates the libraries for a system
 POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Consistent Documentation	Creates libraries for a system
-DELETE	/codeadmin/v/2/library/{systemKey}/{name}	Consistent Documentation	Deletes a librarie for a system
+DELETE	/codeadmin/v/2/library/{systemKey}/{name}	Consistent Documentation	Deletes a libraries for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Consistent Documentation	Gets all versions of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Consistent Documentation	Gets a specific version of a library for a system
 GET	 /codeadmin/failed 	Consistent Documentation	Lists failed code service runs for all systems that a developer can access

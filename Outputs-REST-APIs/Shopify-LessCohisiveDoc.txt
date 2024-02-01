@@ -1,12 +1,9 @@
 ***Anti-Pattern*** 
-Count: 4
--/webhooks/{webhook_id}.json	Non-pertinent Documentation	Receive a single Webhook
+Count: 1
 -/webhooks.json	Non-pertinent Documentation	Create a new Webhook
--/webhooks/{webhook_id}.json	Non-pertinent Documentation	Modify an existing Webhook
--/webhooks/{webhook_id}.json	Non-pertinent Documentation	Remove an existing Webhook
 
 ***Patterns*** 
-Count: 67
+Count: 70
 -/admin/oauth/access_scopes.json	Pertinent Documentation	Retrieves a list of access scopes associated to the access token.
 -/storefront_access_tokens.json	Pertinent Documentation	Creates a new StorefrontAccessToken
 -/storefront_access_tokens/{storefront_access_token_id}.json	Pertinent Documentation	Deletes an existing storefront access token
@@ -65,6 +62,9 @@ Count: 67
 -/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	Pertinent Documentation	Retrieves a count of events
 -/webhooks.json	Pertinent Documentation	Retrieves a list of webhooks
 -/webhooks/count.json	Pertinent Documentation	Receive a count of all Webhooks
+-/webhooks/{webhook_id}.json	Pertinent Documentation	Receive a single Webhook
+-/webhooks/{webhook_id}.json	Pertinent Documentation	Modify an existing Webhook
+-/webhooks/{webhook_id}.json	Pertinent Documentation	Remove an existing Webhook
 -/inventory_items.json?ids=808950810,39072856,457924702	Pertinent Documentation	Retrieves a list of inventory items
 -/inventory_items/{inventory_item_id}.json	Pertinent Documentation	Retrieves a single inventory item by ID
 -/inventory_items/{inventory_item_id}.json	Pertinent Documentation	Updates an existing inventory item

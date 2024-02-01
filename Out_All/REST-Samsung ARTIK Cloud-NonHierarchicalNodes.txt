@@ -18,9 +18,9 @@ PUT 	 /devices/<deviceID>/tokens 	 Creates a new access token for a device. 	 0 
 DELETE 	 /devices/<deviceID>/tokens 	 Deletes the access token of a device. 	 0 	 1 	 
 POST 	 /devices/<deviceID>/providerauth 	 Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application. 	 0 	 1 	 
 DELETE 	 /devices/<deviceID>/providerauth 	 Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device. 	 0 	 1 	 
-GET 	 /devices/<deviceID>/status 	 Returns current status of a device. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 3
+GET 	 /devices/<deviceID>/status 	 Returns current status of a device. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
 GET 	 /devices/status 	 Returns a list of device statuses. 	 0 	 1 	 
-PUT 	 /devices/<deviceID>/status 	 Modifies current status of a device. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 3
+PUT 	 /devices/<deviceID>/status 	 Modifies current status of a device. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
 GET 	 /devices/<deviceID>/certificate 	 Returns fields for a device's certificates. 	 0 	 1 	 
 GET 	 /devices/<deviceID>/shares 	 Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device. 	 0 	 1 	 
 GET 	 /devices/<deviceID>/shares/<shareID> 	 Returns a device share. Required permissions: READ on user (device owner) and READ on device. 	 0 	 1 	 
@@ -32,7 +32,7 @@ GET 	 /devicetypes/<deviceTypeID>/manifests/latest/properties 	 Returns the prop
 GET 	 /devicetypes/<deviceTypeID>/manifests/<version>/properties 	 Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in. 	 0 	 1 	 
 GET 	 /devicetypes/<deviceTypeID>/availablemanifestversions 	 Returns the available Manifest versions for a device type. 	 0 	 1 	 
 POST 	 /devicetypes/<deviceTypeId>/whitelist 	 Uploads an Approved List as a CSV file. 	 0 	 1 	 
-GET 	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	 Returns the status of an uploaded CSV. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 7
+GET 	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	 Returns the status of an uploaded CSV. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
 GET 	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	 Returns the rows that were rejected in an uploaded CSV. 	 0 	 1 	 
 GET 	 /devicetypes/<deviceTypeId>/whitelist 	 Returns the Approved List for a device type. 	 0 	 1 	 
 DELETE 	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	 Deletes a specified device from a device type's Approved List. 	 0 	 1 	 
@@ -55,7 +55,7 @@ GET 	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	 If a user's device 
 GET 	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	 Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token. 	 0 	 1 	 
 GET 	 /pricing/devices/<deviceID>/pricingtiers 	 Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token. 	 0 	 1 	 
 POST 	 /messages/export 	 Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column. 	 0 	 1 	 
-GET 	 /messages/export/<exportID>/status 	 Returns the status of the messages export. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 4
+GET 	 /messages/export/<exportID>/status 	 Returns the status of the messages export. 	 1 	 0 	 Reversed hierarchy of type True detected between identification and status. 0 hierarchical relations were detected out of 79
 GET 	 /messages/export/<exportID>/result 	 Returns the result of the export query. The result call returns the response in tgz format. 	 0 	 1 	 
 GET 	 /messages/export/history 	 Returns a list of export queries that have been performed. 	 0 	 1 	 
 POST 	 /subscriptions 	 Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations. 	 0 	 1 	 

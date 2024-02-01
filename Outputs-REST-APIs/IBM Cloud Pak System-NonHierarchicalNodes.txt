@@ -1,7 +1,7 @@
 ***Anti-Pattern*** 
 Count: 2
-/deployment/resources/addresses/<addressUUID>	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 4
-/deployment/resources/addresses/<addressUUID>	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 4
+/deployment/resources/addresses/<addressUUID>	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 33
+/deployment/resources/addresses/<addressUUID>	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 33
 
 ***Patterns*** 
 Count: 32

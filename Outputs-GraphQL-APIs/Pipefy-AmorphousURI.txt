@@ -1,8 +1,14 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 6
+/inbox_emails/card_id	Amorphous End-point	 [underscore found] 
+/pipe_relations/{id}	Amorphous End-point	 [underscore found] 
+/pipe_templates	Amorphous End-point	 [underscore found] 
+/table_record/{id}	Amorphous End-point	 [underscore found] 
+/table_records/{table_id}	Amorphous End-point	 [underscore found] 
+/table_relations/{ids}	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 109
+Count: 85
 /allCards	Tidy End-point	
 /autoFillFields	Tidy End-point	
 /card	Tidy End-point	
@@ -10,7 +16,6 @@ Count: 109
 /cardsImportations/{pipeId}	Tidy End-point	
 /findCards/{pipeId}	Tidy End-point	
 /findCards/{tableId}	Tidy End-point	
-/inbox_emails/card_id	Tidy End-point	
 /me	Tidy End-point	
 /organization/{id}	Tidy End-point	
 /organizations/{ids}	Tidy End-point	
@@ -18,14 +23,9 @@ Count: 109
 /pipe/{id}	Tidy End-point	
 /pipeReportExport/{id}	Tidy End-point	
 /pipe/{ids}	Tidy End-point	
-/pipe_relations/{id}	Tidy End-point	
-/pipe_templates	Tidy End-point	
 /recordsImportations/{tableID}	Tidy End-point	
 /table/{id}	Tidy End-point	
 /table/{ids}	Tidy End-point	
-/table_record/{id}	Tidy End-point	
-/table_records/{table_id}	Tidy End-point	
-/table_relations/{ids}	Tidy End-point	
 /clonePipes	Tidy End-point	
 /createCard	Tidy End-point	
 /createCardRelation	Tidy End-point	
@@ -45,16 +45,11 @@ Count: 109
 /createTableField	Tidy End-point	
 /createTableRecord	Tidy End-point	
 /createTableRecordInRestrictedTable	Tidy End-point	
-/createTableRelation	Tidy End-point	
-/createWebhook	Tidy End-point	
-/deleteCard	Tidy End-point	
-/deleteComment	Tidy End-point	
 /deleteFieldCondition	Tidy End-point	
 /deleteInboxEmail	Tidy End-point	
 /deleteLabel	Tidy End-point	
 /deleteOrganization	Tidy End-point	
 /deleteOrganizationWebhook	Tidy End-point	
-/deletePhase	Tidy End-point	
 /deletePhaseField	Tidy End-point	
 /deletePipe	Tidy End-point	
 /deletePipeRelation	Tidy End-point	
@@ -68,21 +63,8 @@ Count: 109
 /createWebhook	Tidy End-point	
 /deleteCard	Tidy End-point	
 /deleteComment	Tidy End-point	
-/deleteFieldCondition	Tidy End-point	
-/deleteInboxEmail	Tidy End-point	
-/deleteInboxEmail	Tidy End-point	
-/deleteOrganization	Tidy End-point	
-/deleteOrganizationWebhook	Tidy End-point	
-/deletePhase	Tidy End-point	
-/deletePhaseField	Tidy End-point	
 /deletePipe	Tidy End-point	
-/deletePipeRelation	Tidy End-point	
-/deleteTable	Tidy End-point	
 /deleteTableField	Tidy End-point	
-/deleteTableRecord	Tidy End-point	
-/deleteTableRelation	Tidy End-point	
-/deleteWebhook	Tidy End-point	
-/exportPipeReport	Tidy End-point	
 /interfaceEmbedCreat	Tidy End-point	
 /inviteMembers	Tidy End-point	
 /moveCardToPhase	Tidy End-point	

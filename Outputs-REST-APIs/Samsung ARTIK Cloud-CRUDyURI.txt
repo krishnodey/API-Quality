@@ -1,8 +1,9 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 1
+/pricing/devices/<deviceID>/revenueshare/upgradepath	CRUDy End-point	 [upgrade found] 
 
 ***Patterns*** 
-Count: 80
+Count: 79
 /users/self	Verbless End-point	
 /users/<userID>/properties	Verbless End-point	
 /users/<userID>/properties	Verbless End-point	
@@ -55,7 +56,6 @@ Count: 80
 /messages/analytics/histogram	Verbless End-point	
 /messages/presence	Verbless End-point	
 /messages/snapshots	Verbless End-point	
-/pricing/devices/<deviceID>/revenueshare/upgradepath	Verbless End-point	
 /pricing/devicetypes/<deviceTypeID>/pricingtiers	Verbless End-point	
 /pricing/devices/<deviceID>/pricingtiers	Verbless End-point	
 /messages/export	Verbless End-point	

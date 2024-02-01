@@ -1,28 +1,28 @@
 HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
-POST 	 /v2/oauth/token 	 Converting Authorization Codes To Access Tokensn/a 	 0 	 1 	
-POST 	 /v2/oauth/pin 	 If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL. n/a 	 0 	 1 	
-POST 	 v2/SaveMediaListEntry 	 Create or update a media list entry n/a 	 0 	 1 	
-POST 	 v2/UpdateMediaListEntries 	 Update multiple media list entries to the same valuesn/a 	 1 	 0 	 [update found] 
-POST 	 v2/DeleteMediaListEntry 	 Delete a media list entryn/a 	 1 	 0 	 [delete found] 
-POST 	 v2/DeleteCustomList 	 Delete a custom list and remove the list entries from itn/a 	 1 	 0 	 [delete found] 
-POST 	 v2/SaveTextActivity 	 Create or update text activity for the currently authenticated usern/a 	 0 	 1 	
-POST 	 v2/SaveListActivity 	 Update list activityn/a 	 0 	 1 	
-POST 	 v2/DeleteActivity 	 Delete an activity item of the authenticated usersn/a 	 1 	 0 	 [delete found] 
-POST 	 v2/ToggleActivityPin 	 Toggle activity to be pinned to the top of the user's activity feedn/a 	 0 	 1 	
-POST 	 v2/ToggleActivitySubscription 	 Toggle the subscription of an activity itemn/a 	 0 	 1 	
-POST 	 v2/SaveActivityReply 	 Create or update an activity replyn/a 	 0 	 1 	
-POST 	 v2/DeleteActivityReply 	 Delete an activity reply of the authenticated usersn/a 	 1 	 0 	 [delete found] 
-POST 	 v2/ToggleLike 	 Add or remove a like from a likeable type. Returns all the users who liked the same modeln/a 	 0 	 1 	
-POST 	 v2/ToggleLikeV2 	 Add or remove a like from a likeable type.n/a 	 0 	 1 	
-POST 	 v2/ToggleFollow 	 Toggle the un/following of a usern/a 	 0 	 1 	
-POST 	 v2/ToggleFavourite 	 Favourite or unfavourite an anime, manga, character, staff member, or studion/a 	 0 	 1 	
-POST 	 v2/UpdateFavouriteOrder 	 Update the order favourites are displayed inn/a 	 1 	 0 	 [update found] 
-POST 	 v2/SaveReview 	 Create or update a reviewn/a 	 0 	 1 	
-POST 	 v2/DeleteReview 	 Delete a reviewn/a 	 1 	 0 	 [delete found] 
-POST 	 v2/RateReview 	 Rate a reviewn/a 	 0 	 1 	
-POST 	 v2/SaveRecommendation 	 Recommendation a median/a 	 0 	 1 	
-POST 	 v2/SaveThread 	 Create or update a forum thread n/a 	 0 	 1 	
-POST 	 v2/DeleteThread 	 Delete a threadn/a 	 1 	 0 	 [delete found] 
-POST 	 v2/ToggleThreadSubscription 	 Toggle the subscription of a forum thread n/a 	 0 	 1 	
-POST 	 v2/SaveThreadComment 	 Create or update a thread commentn/a 	 0 	 1 	
-POST 	 v2/DeleteThreadComment 	 Delete a thread commentn/a 	 1 	 0 	 [delete found] 
+POST 	 /v2/oauth/token 	 Converting Authorization Codes To Access Tokens n/a 	 0 	 1 	
+POST 	 /v2/oauth/pin 	 If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.  n/a 	 0 	 1 	
+POST 	 v2/SaveMediaListEntry 	 Create or update a media list entry  n/a 	 0 	 1 	
+POST 	 v2/UpdateMediaListEntries 	 Update multiple media list entries to the same values n/a 	 1 	 0 	 [update found] 
+POST 	 v2/DeleteMediaListEntry 	 Delete a media list entry n/a 	 1 	 0 	 [delete found] 
+POST 	 v2/DeleteCustomList 	 Delete a custom list and remove the list entries from it n/a 	 1 	 0 	 [delete found] 
+POST 	 v2/SaveTextActivity 	 Create or update text activity for the currently authenticated user n/a 	 0 	 1 	
+POST 	 v2/SaveListActivity 	 Update list activity n/a 	 0 	 1 	
+POST 	 v2/DeleteActivity 	 Delete an activity item of the authenticated users n/a 	 1 	 0 	 [delete found] 
+POST 	 v2/ToggleActivityPin 	 Toggle activity to be pinned to the top of the user's activity feed n/a 	 0 	 1 	
+POST 	 v2/ToggleActivitySubscription 	 Toggle the subscription of an activity item n/a 	 0 	 1 	
+POST 	 v2/SaveActivityReply 	 Create or update an activity reply n/a 	 0 	 1 	
+POST 	 v2/DeleteActivityReply 	 Delete an activity reply of the authenticated users n/a 	 1 	 0 	 [delete found] 
+POST 	 v2/ToggleLike 	 Add or remove a like from a likeable type. Returns all the users who liked the same model n/a 	 0 	 1 	
+POST 	 v2/ToggleLikeV2 	 Add or remove a like from a likeable type. n/a 	 0 	 1 	
+POST 	 v2/ToggleFollow 	 Toggle the un/following of a user n/a 	 0 	 1 	
+POST 	 v2/ToggleFavourite 	 Favourite or unfavourite an anime, manga, character, staff member, or studio n/a 	 0 	 1 	
+POST 	 v2/UpdateFavouriteOrder 	 Update the order favourites are displayed in n/a 	 1 	 0 	 [update found] 
+POST 	 v2/SaveReview 	 Create or update a review n/a 	 0 	 1 	
+POST 	 v2/DeleteReview 	 Delete a review n/a 	 1 	 0 	 [delete found] 
+POST 	 v2/RateReview 	 Rate a review n/a 	 0 	 1 	
+POST 	 v2/SaveRecommendation 	 Recommendation a media n/a 	 0 	 1 	
+POST 	 v2/SaveThread 	 Create or update a forum thread  n/a 	 0 	 1 	
+POST 	 v2/DeleteThread 	 Delete a thread n/a 	 1 	 0 	 [delete found] 
+POST 	 v2/ToggleThreadSubscription 	 Toggle the subscription of a forum thread  n/a 	 0 	 1 	
+POST 	 v2/SaveThreadComment 	 Create or update a thread comment n/a 	 0 	 1 	
+POST 	 v2/DeleteThreadComment 	 Delete a thread comment n/a 	 1 	 0 	 [delete found] 

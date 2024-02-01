@@ -30,12 +30,12 @@ DELETE 	 /customers/{customer_id}.json 	 Deletes a customer. 	 0 	 1
 GET 	 /customers/count.json 	 Retrieves a count of customers 	 0 	 1 	 
 GET 	 /customers/{customer_id}/orders.json 	 Retrieves all orders belonging to a customer 	 0 	 1 	 
 GET 	 /customers/{customer_id}/addresses.json 	 Retrieves a list of addresses for a customer 	 0 	 1 	 
-GET 	 /customers/{customer_id}/addresses/{address_id}.json 	 Retrieves details for a single customer address 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 5
+GET 	 /customers/{customer_id}/addresses/{address_id}.json 	 Retrieves details for a single customer address 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
 POST 	 /customers/{customer_id}/addresses.json 	 Creates a new address for a customer 	 0 	 1 	 
-PUT 	 /customers/{customer_id}/addresses/{address_id}.json 	 Updates an existing customer address 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 5
-DELETE 	 /customers/{customer_id}/addresses/{address_id}.json 	 Removes an address from a customer’s address list 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 5
-PUT 	 /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	 Performs bulk operations for multiple customer addresses 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and set. 0 hierarchical relations were detected out of 4
-PUT 	 /customers/{customer_id}/addresses/{address_id}/default.json 	 Sets the default address for a customer 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 6
+PUT 	 /customers/{customer_id}/addresses/{address_id}.json 	 Updates an existing customer address 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+DELETE 	 /customers/{customer_id}/addresses/{address_id}.json 	 Removes an address from a customer’s address list 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+PUT 	 /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	 Performs bulk operations for multiple customer addresses 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and set. 0 hierarchical relations were detected out of 70
+PUT 	 /customers/{customer_id}/addresses/{address_id}/default.json 	 Sets the default address for a customer 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
 POST 	 /price_rules/{price_rule_id}/discount_codes.json 	 Creates a discount code 	 0 	 1 	 
 PUT 	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	 Updates an existing discount code 	 0 	 1 	 
 GET 	 /price_rules/{price_rule_id}/discount_codes.json 	 Retrieves a list of discount codes 	 0 	 1 	 
@@ -53,8 +53,8 @@ GET 	 /price_rules/{price_rule_id}.json 	 Retrieves a single price rule 	 0 	 1
 GET 	 /price_rules/count.json 	 Retrieves a count of all price rules 	 0 	 1 	 
 DELETE 	 /price_rules/{price_rule_id}.json 	 Remove an existing PriceRule 	 0 	 1 	 
 GET 	 /events.json 	 Retrieves a list of events 	 0 	 1 	 
-GET 	 /events/{event_id}.json 	 Retrieves a single event 	 1 	 0 	 Reversed hierarchy of type True detected between event and identification. 0 hierarchical relations were detected out of 2
-GET 	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	 Retrieves a count of events 	 1 	 0 	 Reversed hierarchy of type True detected between events and count. 0 hierarchical relations were detected out of 1
+GET 	 /events/{event_id}.json 	 Retrieves a single event 	 1 	 0 	 Reversed hierarchy of type True detected between event and identification. 0 hierarchical relations were detected out of 70
+GET 	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	 Retrieves a count of events 	 1 	 0 	 Reversed hierarchy of type True detected between events and count. 0 hierarchical relations were detected out of 70
 GET 	 /webhooks.json 	 Retrieves a list of webhooks 	 0 	 1 	 
 GET 	 /webhooks/count.json 	 Receive a count of all Webhooks 	 0 	 1 	 
 GET 	 /webhooks/{webhook_id}.json 	 Receive a single Webhook 	 0 	 1 	 
@@ -68,5 +68,5 @@ GET 	 /inventory_levels.json 	 Retrieves a list of inventory levels 	 0 	 1
 POST 	 /inventory_levels/adjust.json 	 Adjusts the inventory level of an inventory item at a location 	 0 	 1 	 
 DELETE 	 /inventory_levels.json?inventory_item_id=808950810&location_id=905684977 	 Deletes an inventory level from a location 	 0 	 1 	 
 POST 	 /inventory_levels/connect.json 	 Connects an inventory item to a location 	 0 	 1 	 
-POST 	 /inventory_levels/set.json 	 Sets the inventory level for an inventory item at a location 	 1 	 0 	 Reversed hierarchy of type True detected between levels and set. 0 hierarchical relations were detected out of 2
+POST 	 /inventory_levels/set.json 	 Sets the inventory level for an inventory item at a location 	 1 	 0 	 Reversed hierarchy of type True detected between levels and set. 0 hierarchical relations were detected out of 70
 GET 	 /locations.json 	 Retrieves a list of locations 	 0 	 1 	 

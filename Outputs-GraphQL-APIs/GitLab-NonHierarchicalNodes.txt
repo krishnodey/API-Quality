@@ -1,8 +1,8 @@
 ***Anti-Pattern*** 
 Count: 3
-/auditEventDefinitions	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 2
-/auditEventsInstanceAmazonS3Configurations	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and events. 0 hierarchical relations were detected out of 4
-/instanceExternalAuditEventDestinations	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 4
+/auditEventDefinitions	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 54
+/auditEventsInstanceAmazonS3Configurations	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and events. 0 hierarchical relations were detected out of 54
+/instanceExternalAuditEventDestinations	Non-hierarchical Nodes	Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 54
 
 ***Patterns*** 
 Count: 52

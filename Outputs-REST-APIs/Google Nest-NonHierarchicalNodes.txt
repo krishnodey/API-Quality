@@ -1,38 +1,38 @@
 ***Anti-Pattern*** 
-Count: 28
-/devices/thermostats/device_id/device_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/locale	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/software_version	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/structure_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/name	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/name_long	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/last_connection	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/is_online	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/can_cool	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/can_heat	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/is_using_emergency_heat	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/thermostats/device_id/has_fan	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/fan_timer_active	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/thermostats/device_id/fan_timer_timeout	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/thermostats/device_id/has_leaf	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/temperature_scale	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/target_temperature_f	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/eco_temperature_high_f	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/thermostats/device_id/eco_temperature_high_c	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/thermostats/device_id/hvac_state	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 5
-/devices/thermostats/device_id/is_locked	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/sunlight_correction_enabled	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/thermostats/device_id/where_name	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 4
-/devices/thermostats/device_id/time_to_target_training	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 6
-/devices/smoke_co_alarms/device_id/ui_color_state	Non-hierarchical Nodes	Reversed hierarchy of type True detected between color and state. 0 hierarchical relations were detected out of 8
-devices/cameras/device_id/last_event	Non-hierarchical Nodes	Reversed hierarchy of type True detected between last and event. 0 hierarchical relations were detected out of 5
-/devices/cameras/device_id/last_event/has_sound	Non-hierarchical Nodes	Reversed hierarchy of type True detected between last and event. 0 hierarchical relations were detected out of 6
-/devices/cameras/device_id/last_event/web_url	Non-hierarchical Nodes	Reversed hierarchy of type True detected between last and event. 0 hierarchical relations were detected out of 7
+Count: 30
+/devices/thermostats/device_id/device_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/locale	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/software_version	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/structure_id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/name	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/name_long	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/last_connection	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/is_online	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/can_cool	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/can_heat	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/is_using_emergency_heat	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/has_fan	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/fan_timer_active	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/fan_timer_timeout	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/has_leaf	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/temperature_scale	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/target_temperature_f	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/eco_temperature_high_f	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/eco_temperature_high_c	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/hvac_state	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/is_locked	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/sunlight_correction_enabled	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/where_name	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/thermostats/device_id/time_to_target_training	Non-hierarchical Nodes	Reversed hierarchy of type True detected between devices and thermostats. 0 hierarchical relations were detected out of 34
+/devices/smoke_co_alarms/device_id/name	Non-hierarchical Nodes	Reversed hierarchy of type True detected between alarms and device. 0 hierarchical relations were detected out of 34
+/devices/smoke_co_alarms/device_id/ui_color_state	Non-hierarchical Nodes	Reversed hierarchy of type True detected between alarms and device. 0 hierarchical relations were detected out of 34
+/devices/smoke_co_alarms/device_id/where_name	Non-hierarchical Nodes	Reversed hierarchy of type True detected between alarms and device. 0 hierarchical relations were detected out of 34
+devices/cameras/device_id/last_event	Non-hierarchical Nodes	Reversed hierarchy of type True detected between last and event. 0 hierarchical relations were detected out of 34
+/devices/cameras/device_id/last_event/has_sound	Non-hierarchical Nodes	Reversed hierarchy of type True detected between last and event. 0 hierarchical relations were detected out of 34
+/devices/cameras/device_id/last_event/web_url	Non-hierarchical Nodes	Reversed hierarchy of type True detected between last and event. 0 hierarchical relations were detected out of 34
 
 ***Patterns*** 
-Count: 7
-/devices/smoke_co_alarms/device_id/name	Hierarchical Nodes	
-/devices/smoke_co_alarms/device_id/where_name	Hierarchical Nodes	
+Count: 5
 /devices/cameras/device_id/where_id	Hierarchical Nodes	
 /devices/cameras/device_id/where_name	Hierarchical Nodes	
 /devices/cameras/device_id/is_public_share_enabled	Hierarchical Nodes	

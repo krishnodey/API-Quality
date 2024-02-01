@@ -1,10 +1,8 @@
 ***Anti-Pattern*** 
-Count: 2
-/codeadmin/failed	 Non-descriptive End-point
-/admin/logout	 Non-descriptive End-point
+Count: 0
 
 ***Patterns*** 
-Count: 43
+Count: 45
 /api/user/reg	 Self-descriptive End-point
 /api/user/auth	 Self-descriptive End-point
 /api/user/anon	 Self-descriptive End-point
@@ -33,6 +31,7 @@ Count: 43
 /codeadmin/v/2/library/{systemKey}/{name}	 Self-descriptive End-point
 /codeadmin/v/2/history/library/{systemKey}/{name}	 Self-descriptive End-point
 /codeadmin/v/2/history/library/{systemKey}/{name}/{version}	 Self-descriptive End-point
+/codeadmin/failed	 Self-descriptive End-point
 /codeadmin/failed/{systemKey}	 Self-descriptive End-point
 /codeadmin/failed/{systemKey}	 Self-descriptive End-point
 /codeadmin/failed/{systemKey}	 Self-descriptive End-point
@@ -41,6 +40,7 @@ Count: 43
 /api/message/{systemKey}	 Self-descriptive End-point
 /admin/reg	 Self-descriptive End-point
 /admin/auth	 Self-descriptive End-point
+/admin/logout	 Self-descriptive End-point
 /admin/systemmanagement	 Self-descriptive End-point
 /admin/systemmanagement	 Self-descriptive End-point
 /admin/systemmanagement	 Self-descriptive End-point

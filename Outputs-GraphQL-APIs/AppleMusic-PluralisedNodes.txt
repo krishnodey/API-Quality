@@ -1,8 +1,5 @@
 ***Anti-Pattern*** 
-Count: 4
-POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
+Count: 1
 POST 	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 

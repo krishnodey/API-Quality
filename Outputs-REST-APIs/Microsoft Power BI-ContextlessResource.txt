@@ -1,9 +1,9 @@
 ***Anti-Pattern*** 
-Count: 1
-/admin/tenantKeys	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 33
+Count: 34
+/admin/tenantKeys	 Contextual Resource Names
 /admin/apps?$top={$top}	 Contextual Resource Names
 /admin/apps/{appId}/users	 Contextual Resource Names
 /admin/capacities/AssignWorkspaces	 Contextual Resource Names

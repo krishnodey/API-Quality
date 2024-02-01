@@ -18,7 +18,7 @@ GET	/v2/berry/{items}/	Berries are actually items. This is a reference to the it
 GET	/v2/berry/{natural_gift_type}/	The type inherited by "Natural Gift" when used with this Berry. n/a 	 0 	 1 	 Contextual Resource Names
 GET	/v2/berry/{potency}/	How powerful the referenced flavor is for this berry. n/a 	 0 	 1 	 Contextual Resource Names
 GET	/v2/berry-firmness/{id}/	The identifier for this resource. n/a 	 0 	 1 	 Contextual Resource Names
-GET	/v2/berry-firmness/{id or name}/	n/a 	 0 	 1 	 Contextual Resource Names
+GET	/v2/berry-firmness/{id or name}/	Berries can be soft or hard. id The identifier for this resource. name The name for this resource. 	 0 	 1 	 Contextual Resource Names
 GET	/v2/berry-firmness/{name}/	The name for this resource. n/a 	 0 	 1 	 Contextual Resource Names
 GET	/v2/berry-firmness/{berries}/	A list of the berries with this firmness. n/a 	 0 	 1 	 Contextual Resource Names
 GET	/v2/berry-firmness/{names}/	The name of this resource listed in different languages. n/a 	 0 	 1 	 Contextual Resource Names

@@ -1,31 +1,31 @@
 HTTP-Method	URI	Description	Anti-Pattern	Pattern	Comment
-POST 	 /delegateAccessTokenCreate 	 creating a delegate access token.n/a 	 1 	 0 	 [create found] 
-POST 	 /storefrontAccessTokenCreate 	 Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.n/a 	 1 	 0 	 [create found] 
-POST 	 /storefrontAccessTokenDelete 	 Deletes a storefront access token. n/a 	 1 	 0 	 [delete found] 
-POST 	 /AccessScope 	 The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.n/a 	 0 	 1 	
-POST 	 /DelegateAccessToken 	 A token that delegates a set of scopes from the original permission.n/a 	 0 	 1 	
-POST 	 /StorefrontAccessToken 	 A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.n/a 	 0 	 1 	
-GET 	 /shopifyqlQuery 	 Returns the results of a ShopifyQL query n/a 	 0 	 1 	
-POST 	 /ErrorPosition 	 Error position information in a ShopifyQL parsing error. n/a 	 0 	 1 	
-POST 	 /ParseError 	 A ShopifyQL parsing error.n/a 	 0 	 1 	
-POST 	 /ParseErrorRange 	 A range of ShopifyQL parsing errors.n/a 	 0 	 1 	
-POST 	 /PolarisVizDataPoint 	 A PolarisViz data point structure for ShopifyQL query.n/a 	 0 	 1 	
-POST 	 /PolarisVizDataSeries 	 The data series used for PolarisViz visualization.n/a 	 0 	 1 	
-POST 	 /PolarisVizResponse 	 A PolarisViz response to a ShopifyQL query.n/a 	 0 	 1 	
-POST 	 /TableData 	 The result in a tabular format with schema information and formatted and unformatted row data.n/a 	 0 	 1 	
-POST 	 /TableDataColumn 	 A nested array representation of the data. An index in an array represents a row number.n/a 	 0 	 1 	
-POST 	 /TableResponse 	 The default table response structure for a ShopifyQL query. n/a 	 0 	 1 	
-GET 	 /query/{id} 	 Lookup an App by ID or return the currently authenticated App. id ID The ID to lookup the App by. 	 0 	 1 	
+POST 	 /delegateAccessTokenCreate 	 creating a delegate access token. n/a 	 1 	 0 	 [create found] 
+POST 	 /storefrontAccessTokenCreate 	 Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop. n/a 	 1 	 0 	 [create found] 
+POST 	 /storefrontAccessTokenDelete 	 Deletes a storefront access token.  n/a 	 1 	 0 	 [delete found] 
+POST 	 /AccessScope 	 The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications. n/a 	 0 	 1 	
+POST 	 /DelegateAccessToken 	 A token that delegates a set of scopes from the original permission. n/a 	 0 	 1 	
+POST 	 /StorefrontAccessToken 	 A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop. n/a 	 0 	 1 	
+GET 	 /shopifyqlQuery 	 Returns the results of a ShopifyQL query  n/a 	 0 	 1 	
+POST 	 /ErrorPosition 	 Error position information in a ShopifyQL parsing error.  n/a 	 0 	 1 	
+POST 	 /ParseError 	 A ShopifyQL parsing error. n/a 	 0 	 1 	
+POST 	 /ParseErrorRange 	 A range of ShopifyQL parsing errors. n/a 	 0 	 1 	
+POST 	 /PolarisVizDataPoint 	 A PolarisViz data point structure for ShopifyQL query. n/a 	 0 	 1 	
+POST 	 /PolarisVizDataSeries 	 The data series used for PolarisViz visualization. n/a 	 0 	 1 	
+POST 	 /PolarisVizResponse 	 A PolarisViz response to a ShopifyQL query. n/a 	 0 	 1 	
+POST 	 /TableData 	 The result in a tabular format with schema information and formatted and unformatted row data. n/a 	 0 	 1 	
+POST 	 /TableDataColumn 	 A nested array representation of the data. An index in an array represents a row number. n/a 	 0 	 1 	
+POST 	 /TableResponse 	 The default table response structure for a ShopifyQL query.  n/a 	 0 	 1 	
+GET 	 /query/{id} 	 Lookup an App by ID or return the currently authenticated App.  id ID The ID to lookup the App by. 	 0 	 1 	
 GET 	 /appByHandle 	 Fetches app by handle. Returns null if the app doesn't exist. 	 0 	 1 	
 GET 	 /appByKey 	 Fetches an app by its client ID. Returns null if the app doesn't exist. 	 0 	 1 	
-GET 	 /appInstallation/{id} 	 Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App.id ID ID used to lookup AppInstallation. 	 0 	 1 	
+GET 	 /appInstallation/{id} 	 Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App. id ID ID used to lookup AppInstallation. 	 0 	 1 	
 GET 	 /appInstallations 	 A list of app installations. To use this query, you need to contact Shopify Support to grant your custom app the read_apps access scope. Public apps can't be granted this access scope. 	 0 	 1 	
 GET 	 /currentAppInstallation 	 Return the AppInstallation for the currently authenticated App. 	 0 	 1 	
-GET 	 /publication/{id} 	 Lookup a publication by ID.id id ID! non-null The ID of the Publication to return. 	 0 	 1 	
+GET 	 /publication/{id} 	 Lookup a publication by ID. id id ID! non-null The ID of the Publication to return. 	 0 	 1 	
 GET 	 /publications 	 List of publications. 	 0 	 1 	
 POST 	 /publicationCreate 	 Creates a publication. 	 1 	 0 	 [create found] 
-POST 	 /publicationDelete{id} 	 Deletes a publication.id ID! required The ID of the publication to delete. 	 0 	 1 	
-POST 	 /publicationUpdate 	 Updates a publication. id ID! required The ID of the publication to update. 	 1 	 0 	 [update found] 
+POST 	 /publicationDelete{id} 	 Deletes a publication. id ID! required The ID of the publication to delete. 	 0 	 1 	
+POST 	 /publicationUpdate 	 Updates a publication.  id ID! required The ID of the publication to update. 	 1 	 0 	 [update found] 
 POST 	 /AppFeedback 	 Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store. 	 0 	 1 	
 POST 	 /AppInstallation 	 Represents an installed application on a shop. 	 0 	 1 	
 POST 	 /FailedRequirement 	 Requirements that must be met before an app can be installed. 	 0 	 1 	

@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 15
+Count: 14
 /oauth/authorize 	 No Version Found
 /oauth/token 	 No Version Found
 /history 	 No Version Found
@@ -14,7 +14,6 @@ Count: 15
 /requests/current 	 No Version Found
 /requests/{request_id}/receipt 	 No Version Found
 /requests/{request_id}/map 	 No Version Found
-/requests/{request_id}/receipt 	 No Version Found
 
 ***Patterns*** 
 Count: 0

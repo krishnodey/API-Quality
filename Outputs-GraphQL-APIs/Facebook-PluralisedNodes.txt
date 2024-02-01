@@ -9,7 +9,7 @@ DELETE 	/v19.0/{app-id}/scores	Pluralized Nodes	 [Pluralized last node with PUT|
 DELETE 	/v19.0/{app-id}/subscriptions	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 
 ***Patterns*** 
-Count: 62
+Count: 59
 GET 	/v18.0/{album-id}	 Regular methods
 POST 	/{group_id}/albums	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/v18.0/{album-id}/comments	 Regular methods
@@ -39,12 +39,10 @@ GET 	/v19.0/{application-id}/da_checks	 Regular methods
 GET 	/v19.0/{application-id}/events	 Regular methods
 GET 	/v19.0/{application-id}/ios_skadnetwork_conversion_config	 Regular methods
 GET 	/v19.0/{application-id}/mobile_sdk_gk	 Regular methods
-GET 	/v19.0/{application-id}/model_asset	 Regular methods
 GET 	/v19.0/{application-id}/monetized_digital_store_objects	 Regular methods
 GET	/v19.0/{application-id}/permissions	 Regular methods
 GET 	/v19.0/{application-id}/products	 Regular methods
 GET 	/v19.0/{application-id}/purchases	 Regular methods
-GET 	/v19.0/{app-id}/roles	 Regular methods
 GET 	/v19.0/{application-id}/subscribed_domains	 Regular methods
 GET 	/v19.0/{application-id}/subscribed_domains_phishing	 Regular methods
 POST 	/{application_id}/codeless_event_mappings	Singularized Nodes	 [Pluralized last node with POST method.] 
@@ -54,7 +52,6 @@ POST 	/act_{ad_account_id}/subscribed_apps	Singularized Nodes	 [Pluralized last 
 POST 	/{application_id}/activities	Singularized Nodes	 [Pluralized last node with POST method.] 
 GET 	/v19.0/{application-id}/ad_placement_groups	 Regular methods
 GET 	/v19.0/{application-id}/adnetworkanalytics_results	 Regular methods
-GET 	/v19.0/{application-id}/mobile_sdk_gk	 Regular methods
 GET 	/v19.0/{application-id}/model_asset	 Regular methods
 GET 	/v19.0/{application-id}/monetized_digital_store_objects	 Regular methods
 GET 	/v19.0/{application-id}/permissions	 Regular methods

@@ -6,13 +6,11 @@ GET 	 /oauth/authorize 	 Get the Authorization Window. 	 0 	 1
 POST 	 /oauth/access_token 	 Exchange an Authorization Code for a short-lived Instagram User Access Token. 	 1 	 0 	 [underscore found] 
 GET 	 /access_token 	 Exchange a short-lived Instagram User Access Token for a long-lived Instagram User Access Token. 	 1 	 0 	 [underscore found] 
 GET 	 /refresh_access_token 	 Refresh a long-lived Instagram User Access Token. 	 1 	 0 	 [underscore found] 
-GET 	 /oauth/authorize 	 Get the Authorization Window. 	 0 	 1 	
 GET 	 /{media-id} 	 Get fields and edges on an image, video, or album. 	 0 	 1 	
 GET 	 /{media-id}/children 	 Get a list of images and videos on an album. 	 0 	 1 	
 GET 	 /{user-id}/media 	 Get a list of images, videos, or albums on a User. 	 0 	 1 	
 GET 	 /me 	 Get fields and edges on a User. 	 0 	 1 	
 GET 	 /{user-id} 	 Get fields and edges on a User. 	 0 	 1 	
-GET 	 /{user-id}/media 	 Get a list of images, videos, or albums on a User. 	 0 	 1 	
 GET 	 /{ig-hashtag-id} 	 Returns Fields and Edges on an IG Hashtag. 	 0 	 1 	
 GET 	 /{ig-media-id}?fields={fields} 	 Gets Fields and Edges on an IG Media. 	 0 	 1 	
 POST 	 /{ig-media-id}?comment_enabled={comment_enabled} 	 Enables or disables comments on a media object. 	 0 	 1 	

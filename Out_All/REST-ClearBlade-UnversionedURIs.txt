@@ -24,7 +24,7 @@ GET 	 /codeadmin/v/2/library/{systemKey} 	 Gets the libraries for a system 	 0 	
 GET 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Gets the libraries for a system 	 0 	 1 	 Version Found
 PUT 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Updates the libraries for a system 	 0 	 1 	 Version Found
 POST 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Creates libraries for a system 	 0 	 1 	 Version Found
-DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a librarie for a system 	 0 	 1 	 Version Found
+DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a libraries for a system 	 0 	 1 	 Version Found
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name} 	 Gets all versions of a library for a system 	 0 	 1 	 Version Found
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Gets a specific version of a library for a system 	 0 	 1 	 Version Found
 GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 1 	 0 	 No Version Found

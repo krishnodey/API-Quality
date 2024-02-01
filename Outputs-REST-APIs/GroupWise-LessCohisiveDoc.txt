@@ -1,14 +1,14 @@
 ***Anti-Pattern*** 
-Count: 3
--/async?state	Non-pertinent Documentation	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
+Count: 2
 -/async/{id}	Non-pertinent Documentation	Get a particular asynchronous job status
 -/async/{id}	Non-pertinent Documentation	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
 
 ***Patterns*** 
-Count: 53
+Count: 54
 -/list/{type}	Pertinent Documentation	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
 -/list/{type}/{base}	Pertinent Documentation	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
 -/application	Pertinent Documentation	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
+-/async?state	Pertinent Documentation	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
 -/diagnostics/attributes?locale	Pertinent Documentation	Return a map of attribute id to names.
 -/diagnostics/index	Pertinent Documentation	Returns the list of available indices to query
 -/diagnostics/index/{index}?attrs	Pertinent Documentation	Reads objects from the specified index

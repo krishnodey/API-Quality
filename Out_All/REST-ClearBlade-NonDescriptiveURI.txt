@@ -24,10 +24,10 @@ GET 	 /codeadmin/v/2/library/{systemKey} 	 Gets the libraries for a system 	 0 	
 GET 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Gets the libraries for a system 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Updates the libraries for a system 	 0 	 1 	 Self-descriptive End-point
 POST 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Creates libraries for a system 	 0 	 1 	 Self-descriptive End-point
-DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a librarie for a system 	 0 	 1 	 Self-descriptive End-point
+DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a libraries for a system 	 0 	 1 	 Self-descriptive End-point
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name} 	 Gets all versions of a library for a system 	 0 	 1 	 Self-descriptive End-point
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Gets a specific version of a library for a system 	 0 	 1 	 Self-descriptive End-point
-GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 1 	 0 	Non-descriptive End-point
+GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 0 	 1 	 Self-descriptive End-point
 GET 	 /codeadmin/failed/{systemKey} 	 Lists failed code service runs for specified system 	 0 	 1 	 Self-descriptive End-point
 POST 	 /codeadmin/failed/{systemKey} 	 Retry failed code services 	 0 	 1 	 Self-descriptive End-point
 DELETE 	 /codeadmin/failed/{systemKey} 	 Delete failed code service run from list 	 0 	 1 	 Self-descriptive End-point
@@ -36,7 +36,7 @@ POST 	 /api/message/{systemKey}/publish 	 Publishes a message to a topic 	 0 	 1
 DELETE 	 /api/message/{systemKey} 	 Delete message history 	 0 	 1 	 Self-descriptive End-point
 POST 	 /admin/reg 	 Registers a new developer account with the CB platform 	 0 	 1 	 Self-descriptive End-point
 POST 	 /admin/auth 	 Authorizes a CB Developer account 	 0 	 1 	 Self-descriptive End-point
-POST 	 /admin/logout 	 Logs a CB developer out of their session 	 1 	 0 	Non-descriptive End-point
+POST 	 /admin/logout 	 Logs a CB developer out of their session 	 0 	 1 	 Self-descriptive End-point
 POST 	 /admin/systemmanagement 	 Creates a new system in a developers account 	 0 	 1 	 Self-descriptive End-point
 GET 	 /admin/systemmanagement 	 Gets a systems info 	 0 	 1 	 Self-descriptive End-point
 PUT 	 /admin/systemmanagement 	 Updates a systems info 	 0 	 1 	 Self-descriptive End-point

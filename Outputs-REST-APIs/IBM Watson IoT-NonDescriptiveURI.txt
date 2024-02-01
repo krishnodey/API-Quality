@@ -1,6 +1,5 @@
 ***Anti-Pattern*** 
-Count: 7
-/device/types/{typeId}/devices/{deviceId}/edgestatus	 Non-descriptive End-point
+Count: 6
 /config/lec	 Non-descriptive End-point
 /config/lec	 Non-descriptive End-point
 /device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode	 Non-descriptive End-point
@@ -9,7 +8,7 @@ Count: 7
 /s2s/services/{serviceUuid}	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 50
+Count: 51
 /bulk/devices	 Self-descriptive End-point
 /bulk/devices/add	 Self-descriptive End-point
 /bulk/devices/remove	 Self-descriptive End-point
@@ -24,6 +23,7 @@ Count: 50
 /device/types/{typeId}/devices/{deviceId}	 Self-descriptive End-point
 /device/types/{typeId}/devices/{deviceId}	 Self-descriptive End-point
 /device/types/{typeId}/devices/{deviceId}/devices	 Self-descriptive End-point
+/device/types/{typeId}/devices/{deviceId}/edgestatus	 Self-descriptive End-point
 /device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId}	 Self-descriptive End-point
 /logs/connection	 Self-descriptive End-point
 /usage/data-traffic	 Self-descriptive End-point

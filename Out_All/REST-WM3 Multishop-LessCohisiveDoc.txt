@@ -10,6 +10,7 @@ GET	/shop/admin/products	Retrieve Products 	 0 	 1 	 Pertinent Documentation
 GET	/shop/admin/products/:id	Retrieve Product 	 0 	 1 	 Pertinent Documentation
 POST	/shop/admin/products	Create Product 	 0 	 1 	 Pertinent Documentation
 POST	/shop/admin/products	Create multiple Products 	 0 	 1 	 Pertinent Documentation
+PUT	/shop/admin/products/:idUpdate Product	 	 0 	 1 	 Pertinent Documentation
 GET	/shop/admin/properties	Retrieve Properties 	 0 	 1 	 Pertinent Documentation
 GET	/shop/admin/properties/:id	Retrieve Property 	 0 	 1 	 Pertinent Documentation
 PUT	/shop/admin/properties/:id	Update Property 	 0 	 1 	 Pertinent Documentation

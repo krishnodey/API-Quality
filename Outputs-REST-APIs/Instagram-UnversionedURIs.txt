@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 21
+Count: 19
 /{ig-comment-id}?fields={fields} 	 No Version Found
 /{ig-comment-id}?hide={hide} 	 No Version Found
 /{ig-comment-id} 	 No Version Found
@@ -7,13 +7,11 @@ Count: 21
 /oauth/access_token 	 No Version Found
 /access_token 	 No Version Found
 /refresh_access_token 	 No Version Found
-/oauth/authorize 	 No Version Found
 /{media-id} 	 No Version Found
 /{media-id}/children 	 No Version Found
 /{user-id}/media 	 No Version Found
 /me 	 No Version Found
 /{user-id} 	 No Version Found
-/{user-id}/media 	 No Version Found
 /{ig-hashtag-id} 	 No Version Found
 /{ig-media-id}?fields={fields} 	 No Version Found
 /{ig-media-id}?comment_enabled={comment_enabled} 	 No Version Found

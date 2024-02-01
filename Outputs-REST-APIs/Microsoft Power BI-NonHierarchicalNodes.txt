@@ -1,6 +1,6 @@
 ***Anti-Pattern*** 
 Count: 1
-/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Non-hierarchical Nodes	Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 7
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Non-hierarchical Nodes	Reversed hierarchy of type True detected between key and identification. 0 hierarchical relations were detected out of 33
 
 ***Patterns*** 
 Count: 33

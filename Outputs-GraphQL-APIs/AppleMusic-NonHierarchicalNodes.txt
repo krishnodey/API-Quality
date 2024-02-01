@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 102
+Count: 99
 /v1/catalog/{storefront}/albums/{id}	Hierarchical Nodes	
 /v1/catalog/{storefront}/albums/{id}/{relationship}	Hierarchical Nodes	
 /v1/catalog/{storefront}/albums/{id}/view/{view}	Hierarchical Nodes	
@@ -31,7 +31,6 @@ Count: 102
 /v1/me/library/songs/{id}/{relationship}	Hierarchical Nodes	
 /v1/me/library/songs	Hierarchical Nodes	
 /v1/me/library/songs	Hierarchical Nodes	
-/v1/me/library	Hierarchical Nodes	
 /v1/catalog/{storefront}/music-videos/{id}	Hierarchical Nodes	
 /v1/catalog/{storefront}/music-videos/{id}/{relationship}	Hierarchical Nodes	
 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Hierarchical Nodes	
@@ -42,7 +41,6 @@ Count: 102
 /v1/me/library/music-videos/{id}/{relationship}	Hierarchical Nodes	
 /v1/me/library/music-videos	Hierarchical Nodes	
 /v1/me/library/music-videos	Hierarchical Nodes	
-/v1/me/library	Hierarchical Nodes	
 /v1/catalog/{storefront}/playlists/{id}	Hierarchical Nodes	
 /v1/catalog/{storefront}/playlists/{id}/{relationship}	Hierarchical Nodes	
 /v1/catalog/{storefront}/playlists/{id}/view/{view}	Hierarchical Nodes	
@@ -59,7 +57,6 @@ Count: 102
 /v1/me/library/playlist-folders	Hierarchical Nodes	
 /v1/me/library/playlists	Hierarchical Nodes	
 /v1/me/library/playlists/{id}/tracks	Hierarchical Nodes	
-/v1/me/library	Hierarchical Nodes	
 /v1/catalog/{storefront}/stations/{id}	Hierarchical Nodes	
 /v1/catalog/{storefront}/stations/{id}/{relationship}	Hierarchical Nodes	
 /v1/catalog/{storefront}/stations	Hierarchical Nodes	

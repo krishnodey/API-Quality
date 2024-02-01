@@ -7,6 +7,7 @@ GET	/cardsImportations/{pipeId}	Lookup the cards importer history by the pipe ID
 GET	/findCards/{pipeId}	Fetch cards based on fields' inputs  pipeId: ID! Required. The pipe ID 	 0 	 1 	 Contextual Resource Names
 GET	/findCards/{tableId}	Fetch records based on fields' inputs tableId: String! Required. The table ID 	 0 	 1 	 Contextual Resource Names
 GET	/inbox_emails/card_id	Lookup the card's emails by its ID card_id: ID! Required. The card ID 	 0 	 1 	 Contextual Resource Names
+GET	/me	Returns informations of the current authenticated user n/a 	 0 	 1 	 Contextual Resource Names
 GET	/organization/{id}	Lookup an organization by its ID id: ID! Required. The organization ID 	 0 	 1 	 Contextual Resource Names
 GET	/organizations/{ids}	Lookup organizations by their ID ids: [ID] The organizations IDs 	 0 	 1 	 Contextual Resource Names
 GET	/phase/{id}	Lookup a phase by its ID  id: ID! Required. The phase ID 	 0 	 1 	 Contextual Resource Names
@@ -35,21 +36,16 @@ POST	/createPhaseField	Creates a phase field n/a 	 0 	 1 	 Contextual Resource N
 POST	/createPipe	Creates a pipe n/a 	 0 	 1 	 Contextual Resource Names
 POST	/createPipeRelation	Creates a pipe relation  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/createPresignedUrl	Returns a temporary S3 presigned url to upload a file n/a 	 0 	 1 	 Contextual Resource Names
-POST	/createPresignedUrlForPipePdfTemplate	Returns a temporary S3 presigned url to upload a pdf template image n/a 	 1 	 0 	 Contextless Resource Names
+POST	/createPresignedUrlForPipePdfTemplate	Returns a temporary S3 presigned url to upload a pdf template image n/a 	 0 	 1 	 Contextual Resource Names
 POST	/createTable	Creates a table n/a 	 0 	 1 	 Contextual Resource Names
 POST	/createTableField	Creates a table field n/a 	 0 	 1 	 Contextual Resource Names
 POST	/createTableRecord	Creates a record  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/createTableRecordInRestrictedTable	Creates a record in a private table n/a 	 0 	 1 	 Contextual Resource Names
-POST	/createTableRelation	Creates a table relation n/a 	 0 	 1 	 Contextual Resource Names
-POST	/createWebhook	Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteCard	Deletes a card n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteComment	Deletes a comment n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteFieldCondition	Deletes a field condition n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteInboxEmail	Deletes an email n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteLabel	Deletes a label n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteOrganization	Deletes an organization n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteOrganizationWebhook	Deletes a webhook n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deletePhase	Deletes a phase n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deletePhaseField	Deletes a phase field n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deletePipe	Deletes a pipe n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deletePipeRelation	Deletes a pipe relation n/a 	 0 	 1 	 Contextual Resource Names
@@ -63,21 +59,7 @@ POST	/createTableRelation	Creates a table relation  n/a 	 0 	 1 	 Contextual Res
 POST	/createWebhook	Creates a webhook at a pipe or table level  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteCard	Deletes a card  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deleteComment	Deletes a comment  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteFieldCondition	Deletes a field condition  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteInboxEmail	Deletes an email  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteInboxEmail	Deletes an email  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteOrganization	Deletes an organization  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteOrganizationWebhook	Deletes a webhook n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deletePhase	Deletes a phase n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deletePhaseField	Deletes a phase field  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/deletePipe	Deletes a pipe  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deletePipeRelation	Deletes a pipe relation  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteTable	Deletes a table  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteTableField	Deletes a table field  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteTableRecord	Deletes a record  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteTableRelation	Deletes a table relation  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/deleteWebhook	Deletes a webhook (pipe or table level)  n/a 	 0 	 1 	 Contextual Resource Names
-POST	/exportPipeReport	Exports a pipe report  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/interfaceEmbedCreat	Create a new Interface  n/a 	 0 	 1 	 Contextual Resource Names
 POST	/inviteMembers	Invites new members for the organization  n/a 	 1 	 0 	 Contextless Resource Names
 POST	/moveCardToPhase	Moves a card to another phase  n/a 	 0 	 1 	 Contextual Resource Names

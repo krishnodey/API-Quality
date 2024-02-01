@@ -26,16 +26,16 @@ DELETE 	 /domains/{domain}/administrator 	 Clear the administrator for this doma
 GET 	 /domains/{domain}/clientoptions?attrs 	 Get the Client Options under a specific Domain 	 0 	 1 	 
 PUT 	 /domains/{domain}/clientoptions?attrs 	 Update the Client Options under a specific Domain 	 0 	 1 	 
 GET 	 /domains/{domain}/customaddresses 	 Get all Custom Addresses under a specific Domain 	 0 	 1 	 
-GET 	 /domains/{domain}/customaddresses/test?testAddress 	 Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string 	 0 	 1 	 
+GET 	 /domains/{domain}/customaddresses/test?testAddress 	 Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string 	 1 	 0 	 Reversed hierarchy of type True detected between addresses and test. 0 hierarchical relations were detected out of 55
 GET 	 /domains/{domain}/gatewaysubdirs 	 List the gateway sub-directories for the domain. 	 0 	 1 	 
 GET 	 /domains/{domain}/info 	 Retrieve statistical information about the objects contained in this domain 	 0 	 1 	 
 GET 	 /domains/{domain}/links?direction 	 List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound). 	 0 	 1 	 
-GET 	 /domains/{domain}/links/{link} 	 Get the domain link between domainName and linkName 	 1 	 0 	 Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 3
-PUT 	 /domains/{domain}/links/{link} 	 Update the domain link between domainName and linkName 	 1 	 0 	 Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 3
+GET 	 /domains/{domain}/links/{link} 	 Get the domain link between domainName and linkName 	 1 	 0 	 Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 55
+PUT 	 /domains/{domain}/links/{link} 	 Update the domain link between domainName and linkName 	 1 	 0 	 Reversed hierarchy of type True detected between links and link. 0 hierarchical relations were detected out of 55
 POST 	 /domains/{domain}/rebuild 	 Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service. 	 0 	 1 	 
 GET 	 /domains/{domain}/refaccesscontrols 	 Get the Access Control List for the domain 	 0 	 1 	 
 PUT 	 /domains/{domain}/refaccesscontrols 	 Update the Access Control List for the domain 	 0 	 1 	 
-GET 	 /domains/attributes 	 Get all available Domain Attributes 	 1 	 0 	 Reversed hierarchy of type True detected between domains and attributes. 0 hierarchical relations were detected out of 1
+GET 	 /domains/attributes 	 Get all available Domain Attributes 	 1 	 0 	 Reversed hierarchy of type True detected between domains and attributes. 0 hierarchical relations were detected out of 55
 GET 	 /domains/{domain}/gateways 	 Performs a query to find all the Gateways for this GroupWise system. 	 0 	 1 	 
 POST 	 /domains/{domain}/gateways 	 Create an Gateway given the Gateway data 	 0 	 1 	 
 DELETE 	 /domains/{domain}/gateways/{gateway} 	 Delete a specific Gateway given the name 	 0 	 1 	 

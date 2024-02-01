@@ -1,12 +1,9 @@
 ***Anti-Pattern*** 
-Count: 4
+Count: 1
 /events.json	 Contextless Resource Names
-/webhooks.json	 Contextless Resource Names
-/webhooks/count.json	 Contextless Resource Names
-/webhooks.json	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 67
+Count: 70
 /admin/oauth/access_scopes.json	 Contextual Resource Names
 /storefront_access_tokens.json	 Contextual Resource Names
 /storefront_access_tokens/{storefront_access_token_id}.json	 Contextual Resource Names
@@ -62,7 +59,10 @@ Count: 67
 /price_rules/{price_rule_id}.json	 Contextual Resource Names
 /events/{event_id}.json	 Contextual Resource Names
 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00	 Contextual Resource Names
+/webhooks.json	 Contextual Resource Names
+/webhooks/count.json	 Contextual Resource Names
 /webhooks/{webhook_id}.json	 Contextual Resource Names
+/webhooks.json	 Contextual Resource Names
 /webhooks/{webhook_id}.json	 Contextual Resource Names
 /webhooks/{webhook_id}.json	 Contextual Resource Names
 /inventory_items.json?ids=808950810,39072856,457924702	 Contextual Resource Names

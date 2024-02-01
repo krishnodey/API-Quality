@@ -3,8 +3,8 @@ GET 	 /abuseReport/{id} 	 Find an abuse report.  id AbuseReportID! ID of the abu
 GET 	 /abuseReportLabels 	 Abuse report labels.  searchTerm String Search term to find labels with. 	 0 	 1 	 
 GET 	 /addOnPurchase/{id} 	 Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for. 	 0 	 1 	 
 GET 	 /aiMessages 	 Find GitLab Duo Chat messages.  requestIds [ID!] Array of request IDs to fetch. roles [AiMessageRole!] Array of roles to fetch. 	 0 	 1 	 
-GET 	 /auditEventDefinitions 	 Definitions for all audit events available on the instance.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 2
-GET 	 /auditEventsInstanceAmazonS3Configurations 	 Instance-level Amazon S3 configurations for audit events. n/a 	 1 	 0 	 Reversed hierarchy of type True detected between audit and events. 0 hierarchical relations were detected out of 4
+GET 	 /auditEventDefinitions 	 Definitions for all audit events available on the instance.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 54
+GET 	 /auditEventsInstanceAmazonS3Configurations 	 Instance-level Amazon S3 configurations for audit events. n/a 	 1 	 0 	 Reversed hierarchy of type True detected between audit and events. 0 hierarchical relations were detected out of 54
 GET 	 /boardList/{id} 	 Find an issue board list.  id ListID! Global ID of the list. 	 0 	 1 	 
 GET 	 /ciCatalogResource/{id} 	 A single CI/CD Catalog resource visible to an authorized user.  id CiCatalogResourceID CI/CD Catalog resource global ID. 	 0 	 1 	 
 GET 	 /ciCatalogResources/{projectPath} 	 All CI/CD Catalog resources under a common namespace, visible to an authorized user.  projectPath ID Project with the namespace catalog. 	 0 	 1 	 
@@ -27,7 +27,7 @@ GET 	 /geoNode 	 Find a Geo node  n/a 	 0 	 1
 GET 	 /gitpodEnabled 	 Whether Gitpod is enabled in application settings.  n/a 	 0 	 1 	 
 GET 	 /group 	 Find a group  n/a 	 0 	 1 	 
 GET 	 groups 	 Find groups.  n/a 	 0 	 1 	 
-GET 	 /instanceExternalAuditEventDestinations 	 Instance level external audit event destinations.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 4
+GET 	 /instanceExternalAuditEventDestinations 	 Instance level external audit event destinations.  n/a 	 1 	 0 	 Reversed hierarchy of type True detected between audit and event. 0 hierarchical relations were detected out of 54
 GET 	 /instanceGoogleCloudLoggingConfigurations 	 Instance level google cloud logging configurations.  n/a 	 0 	 1 	 
 GET 	 /instanceSecurityDashboard 	 Fields related to Instance Security Dashboard. n/a 	 0 	 1 	 
 GET 	 /issue/{id} 	 Find an issue.  id IssueID! Global ID of the issue. 	 0 	 1 	 

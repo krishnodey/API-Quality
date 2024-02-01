@@ -1,14 +1,14 @@
 ***Anti-Pattern*** 
-Count: 3
-/async?state	 Contextless Resource Names
-/async/{id}	 Contextless Resource Names
-/async/{id}	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
-Count: 53
+Count: 56
 /list/{type}	 Contextual Resource Names
 /list/{type}/{base}	 Contextual Resource Names
 /application	 Contextual Resource Names
+/async?state	 Contextual Resource Names
+/async/{id}	 Contextual Resource Names
+/async/{id}	 Contextual Resource Names
 /diagnostics/attributes?locale	 Contextual Resource Names
 /diagnostics/index	 Contextual Resource Names
 /diagnostics/index/{index}?attrs	 Contextual Resource Names

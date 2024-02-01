@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 109
+Count: 91
 -/allCards	Pertinent Documentation	Fetches all pipe cards based on arguments  n/a
 -/autoFillFields	Pertinent Documentation	Lookup the values that will automatically fill the child-card's start form fields n/a
 -/card	Pertinent Documentation	Lookup a card by its ID  n/a
@@ -45,16 +45,11 @@ Count: 109
 -/createTableField	Pertinent Documentation	Creates a table field n/a
 -/createTableRecord	Pertinent Documentation	Creates a record  n/a
 -/createTableRecordInRestrictedTable	Pertinent Documentation	Creates a record in a private table n/a
--/createTableRelation	Pertinent Documentation	Creates a table relation n/a
--/createWebhook	Pertinent Documentation	Creates a webhook at a pipe or table level  n/a
--/deleteCard	Pertinent Documentation	Deletes a card n/a
--/deleteComment	Pertinent Documentation	Deletes a comment n/a
 -/deleteFieldCondition	Pertinent Documentation	Deletes a field condition n/a
 -/deleteInboxEmail	Pertinent Documentation	Deletes an email n/a
 -/deleteLabel	Pertinent Documentation	Deletes a label n/a
 -/deleteOrganization	Pertinent Documentation	Deletes an organization n/a
 -/deleteOrganizationWebhook	Pertinent Documentation	Deletes a webhook n/a
--/deletePhase	Pertinent Documentation	Deletes a phase n/a
 -/deletePhaseField	Pertinent Documentation	Deletes a phase field n/a
 -/deletePipe	Pertinent Documentation	Deletes a pipe n/a
 -/deletePipeRelation	Pertinent Documentation	Deletes a pipe relation n/a
@@ -68,21 +63,8 @@ Count: 109
 -/createWebhook	Pertinent Documentation	Creates a webhook at a pipe or table level  n/a
 -/deleteCard	Pertinent Documentation	Deletes a card  n/a
 -/deleteComment	Pertinent Documentation	Deletes a comment  n/a
--/deleteFieldCondition	Pertinent Documentation	Deletes a field condition  n/a
--/deleteInboxEmail	Pertinent Documentation	Deletes an email  n/a
--/deleteInboxEmail	Pertinent Documentation	Deletes an email  n/a
--/deleteOrganization	Pertinent Documentation	Deletes an organization  n/a
--/deleteOrganizationWebhook	Pertinent Documentation	Deletes a webhook n/a
--/deletePhase	Pertinent Documentation	Deletes a phase n/a
--/deletePhaseField	Pertinent Documentation	Deletes a phase field  n/a
 -/deletePipe	Pertinent Documentation	Deletes a pipe  n/a
--/deletePipeRelation	Pertinent Documentation	Deletes a pipe relation  n/a
--/deleteTable	Pertinent Documentation	Deletes a table  n/a
 -/deleteTableField	Pertinent Documentation	Deletes a table field  n/a
--/deleteTableRecord	Pertinent Documentation	Deletes a record  n/a
--/deleteTableRelation	Pertinent Documentation	Deletes a table relation  n/a
--/deleteWebhook	Pertinent Documentation	Deletes a webhook (pipe or table level)  n/a
--/exportPipeReport	Pertinent Documentation	Exports a pipe report  n/a
 -/interfaceEmbedCreat	Pertinent Documentation	Create a new Interface  n/a
 -/inviteMembers	Pertinent Documentation	Invites new members for the organization  n/a
 -/moveCardToPhase	Pertinent Documentation	Moves a card to another phase  n/a

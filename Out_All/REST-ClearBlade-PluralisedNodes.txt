@@ -6,7 +6,7 @@ POST 	 /api/user/checkauth 	 Checks if user is authenticated 	 1 	 0 	  [Singula
 POST 	 /api/user/logout 	 Logs out a user 	 1 	 0 	  [Singular last node with POST method.] 
 GET 	 /api/user/info 	 Returns information about a logged in user 	 0 	 1 	 Regular methods
 PUT 	 /api/user/info 	 Updates a logged in users information 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
-PUT 	 /api/user/pass 	 Changes a logged in users password 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
+PUT 	 /api/user/pass 	 Changes a logged in users password 	 1 	 0 	  [Pluralized last node with PUT|DELETE method.] 
 GET 	 /api/user 	 Gets list of users 	 0 	 1 	 Regular methods
 PUT 	 /api/v/2/devices/{systemKey}/{name} 	 Update a device's state or custom attributes only 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 POST 	 /api/v/2/devices/{SystemKey}/auth 	 Authenticates a device into the system 	 1 	 0 	  [Singular last node with POST method.] 
@@ -24,7 +24,7 @@ GET 	 /codeadmin/v/2/library/{systemKey} 	 Gets the libraries for a system 	 0 	
 GET 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Gets the libraries for a system 	 0 	 1 	 Regular methods
 PUT 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Updates the libraries for a system 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 POST 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Creates libraries for a system 	 1 	 0 	  [Singular last node with POST method.] 
-DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a librarie for a system 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
+DELETE 	 /codeadmin/v/2/library/{systemKey}/{name} 	 Deletes a libraries for a system 	 0 	 1 	  [Singular last node with PUT|DELETE method.] 
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name} 	 Gets all versions of a library for a system 	 0 	 1 	 Regular methods
 GET 	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	 Gets a specific version of a library for a system 	 0 	 1 	 Regular methods
 GET 	 /codeadmin/failed 	 Lists failed code service runs for all systems that a developer can access 	 0 	 1 	 Regular methods

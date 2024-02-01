@@ -1,14 +1,13 @@
 ***Anti-Pattern*** 
-Count: 6
+Count: 5
 PUT 	/domains/{domain}/clientoptions?attrs	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 POST 	/domains/{domain}/rebuild	Pluralized Nodes	 [Singular last node with POST method.] 
 PUT 	/domains/{domain}/refaccesscontrols	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
 POST 	/domains/{domain}/gateways/{gateway}/classofservice	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Pluralized Nodes	 [Singular last node with POST method.] 
 POST 	/domains/{domain}/gateways/{gateway}/recoverDb	Pluralized Nodes	 [Singular last node with POST method.] 
 
 ***Patterns*** 
-Count: 50
+Count: 51
 GET 	/list/{type}	 Regular methods
 GET 	/list/{type}/{base}	 Regular methods
 GET 	/application	 Regular methods
@@ -58,4 +57,5 @@ GET 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	 Regular meth
 PUT 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 DELETE 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
 GET 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	 Regular methods
+POST 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Singularized Nodes	 [Pluralized last node with POST method.] 
 DELETE 	/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

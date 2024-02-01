@@ -1,29 +1,36 @@
 ***Anti-Pattern*** 
-Count: 21
+Count: 28
 /meta	 Contextless Resource Names
 /rateLimit	 Contextless Resource Names
 /relay	 Contextless Resource Names
 /sponsorables	 Contextless Resource Names
+/viewer	 Contextless Resource Names
 /abortQueuedMigrations	 Contextless Resource Names
-/addDiscussionPollVote	 Contextless Resource Names
 /addLabelsToLabelable	 Contextless Resource Names
 /addStar	 Contextless Resource Names
-/cancelSponsorship	 Contextless Resource Names
+/addUpvote	 Contextless Resource Names
 /clearLabelsFromLabelable	 Contextless Resource Names
+/deleteLabel	 Contextless Resource Names
+/deleteRef	 Contextless Resource Names
 /grantMigratorRole	 Contextless Resource Names
+/mergeBranch	 Contextless Resource Names
 /moveProjectCard	 Contextless Resource Names
 /publishSponsorsTier	 Contextless Resource Names
 /removeLabelsFromLabelable	 Contextless Resource Names
+/removeOutsideCollaborator	 Contextless Resource Names
 /removeStar	 Contextless Resource Names
+/removeUpvote	 Contextless Resource Names
 /rerequestCheckSuite	 Contextless Resource Names
 /retireSponsorsTier	 Contextless Resource Names
 /revokeMigratorRole	 Contextless Resource Names
-/unlockLockable	 Contextless Resource Names
 /unmarkFileAsViewed	 Contextless Resource Names
+/unmarkIssueAsDuplicate	 Contextless Resource Names
+/unpinIssue	 Contextless Resource Names
+/unresolveReviewThread	 Contextless Resource Names
 /updatePatreonSponsorability	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 235
+Count: 228
 /codeOfConduct	 Contextual Resource Names
 /codesOfConduct	 Contextual Resource Names
 /enterprise	 Contextual Resource Names
@@ -47,13 +54,13 @@ Count: 235
 /securityVulnerabilities	 Contextual Resource Names
 /topic	 Contextual Resource Names
 /user	 Contextual Resource Names
-/viewer	 Contextual Resource Names
 /abortRepositoryMigration	 Contextual Resource Names
 /acceptEnterpriseAdministratorInvitation	 Contextual Resource Names
 /acceptTopicSuggestion	 Contextual Resource Names
 /addAssigneesToAssignable	 Contextual Resource Names
 /addComment	 Contextual Resource Names
 /addDiscussionComment	 Contextual Resource Names
+/addDiscussionPollVote	 Contextual Resource Names
 /addEnterpriseOrganizationMember	 Contextual Resource Names
 /addEnterpriseSupportEntitlement	 Contextual Resource Names
 /addProjectCard	 Contextual Resource Names
@@ -65,13 +72,13 @@ Count: 235
 /addPullRequestReviewThread	 Contextual Resource Names
 /addPullRequestReviewThreadReply	 Contextual Resource Names
 /addReaction	 Contextual Resource Names
-/addUpvote	 Contextual Resource Names
 /addVerifiableDomain	 Contextual Resource Names
 /approveDeployments	 Contextual Resource Names
 /approveVerifiableDomain	 Contextual Resource Names
 /archiveProjectV2Item	 Contextual Resource Names
 /archiveRepository	 Contextual Resource Names
 /cancelEnterpriseAdminInvitation	 Contextual Resource Names
+/cancelSponsorship	 Contextual Resource Names
 /changeUserStatus	 Contextual Resource Names
 /clearProjectV2ItemFieldValue	 Contextual Resource Names
 /cloneProject	 Contextual Resource Names
@@ -119,7 +126,6 @@ Count: 235
 /deleteIpAllowListEntry	 Contextual Resource Names
 /deleteIssue	 Contextual Resource Names
 /deleteIssueComment	 Contextual Resource Names
-/deleteLabel	 Contextual Resource Names
 /deleteLinkedBranch	 Contextual Resource Names
 /deletePackageVersion	 Contextual Resource Names
 /deleteProject	 Contextual Resource Names
@@ -131,7 +137,6 @@ Count: 235
 /deleteProjectV2Workflow	 Contextual Resource Names
 /deletePullRequestReview	 Contextual Resource Names
 /deletePullRequestReviewComment	 Contextual Resource Names
-/deleteRef	 Contextual Resource Names
 /deleteRepositoryRuleset	 Contextual Resource Names
 /deleteTeamDiscussion	 Contextual Resource Names
 /deleteTeamDiscussionComment	 Contextual Resource Names
@@ -155,7 +160,6 @@ Count: 235
 /markFileAsViewed	 Contextual Resource Names
 /markProjectV2AsTemplate	 Contextual Resource Names
 /markPullRequestReadyForReview	 Contextual Resource Names
-/mergeBranch	 Contextual Resource Names
 /mergePullRequest	 Contextual Resource Names
 /minimizeComment	 Contextual Resource Names
 /moveProjectColumn	 Contextual Resource Names
@@ -169,9 +173,7 @@ Count: 235
 /removeEnterpriseMember	 Contextual Resource Names
 /removeEnterpriseOrganization	 Contextual Resource Names
 /removeEnterpriseSupportEntitlement	 Contextual Resource Names
-/removeOutsideCollaborator	 Contextual Resource Names
 /removeReaction	 Contextual Resource Names
-/removeUpvote	 Contextual Resource Names
 /reopenDiscussion	 Contextual Resource Names
 /reopenIssue	 Contextual Resource Names
 /reopenPullRequest	 Contextual Resource Names
@@ -195,12 +197,10 @@ Count: 235
 /unlinkProjectV2FromRepository	 Contextual Resource Names
 /unlinkProjectV2FromTeam	 Contextual Resource Names
 /unlinkRepositoryFromProject	 Contextual Resource Names
+/unlockLockable	 Contextual Resource Names
 /unmarkDiscussionCommentAsAnswer	 Contextual Resource Names
-/unmarkIssueAsDuplicate	 Contextual Resource Names
 /unmarkProjectV2AsTemplate	 Contextual Resource Names
 /unminimizeComment	 Contextual Resource Names
-/unpinIssue	 Contextual Resource Names
-/unresolveReviewThread	 Contextual Resource Names
 /unsubscribeFromNotifications	 Contextual Resource Names
 /updateBranchProtectionRule	 Contextual Resource Names
 /updateCheckRun	 Contextual Resource Names

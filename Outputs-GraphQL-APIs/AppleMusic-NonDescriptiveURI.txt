@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 102
+Count: 99
 /v1/catalog/{storefront}/albums/{id}	 Self-descriptive End-point
 /v1/catalog/{storefront}/albums/{id}/{relationship}	 Self-descriptive End-point
 /v1/catalog/{storefront}/albums/{id}/view/{view}	 Self-descriptive End-point
@@ -31,7 +31,6 @@ Count: 102
 /v1/me/library/songs/{id}/{relationship}	 Self-descriptive End-point
 /v1/me/library/songs	 Self-descriptive End-point
 /v1/me/library/songs	 Self-descriptive End-point
-/v1/me/library	 Self-descriptive End-point
 /v1/catalog/{storefront}/music-videos/{id}	 Self-descriptive End-point
 /v1/catalog/{storefront}/music-videos/{id}/{relationship}	 Self-descriptive End-point
 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	 Self-descriptive End-point
@@ -42,7 +41,6 @@ Count: 102
 /v1/me/library/music-videos/{id}/{relationship}	 Self-descriptive End-point
 /v1/me/library/music-videos	 Self-descriptive End-point
 /v1/me/library/music-videos	 Self-descriptive End-point
-/v1/me/library	 Self-descriptive End-point
 /v1/catalog/{storefront}/playlists/{id}	 Self-descriptive End-point
 /v1/catalog/{storefront}/playlists/{id}/{relationship}	 Self-descriptive End-point
 /v1/catalog/{storefront}/playlists/{id}/view/{view}	 Self-descriptive End-point
@@ -59,7 +57,6 @@ Count: 102
 /v1/me/library/playlist-folders	 Self-descriptive End-point
 /v1/me/library/playlists	 Self-descriptive End-point
 /v1/me/library/playlists/{id}/tracks	 Self-descriptive End-point
-/v1/me/library	 Self-descriptive End-point
 /v1/catalog/{storefront}/stations/{id}	 Self-descriptive End-point
 /v1/catalog/{storefront}/stations/{id}/{relationship}	 Self-descriptive End-point
 /v1/catalog/{storefront}/stations	 Self-descriptive End-point

@@ -1,11 +1,11 @@
 ***Anti-Pattern*** 
-Count: 1
-/history	 Contextless Resource Names
+Count: 0
 
 ***Patterns*** 
 Count: 14
 /oauth/authorize	 Contextual Resource Names
 /oauth/token	 Contextual Resource Names
+/history	 Contextual Resource Names
 /payment-methods	 Contextual Resource Names
 /products	 Contextual Resource Names
 /products/{product_id}	 Contextual Resource Names
@@ -17,4 +17,3 @@ Count: 14
 /requests/current	 Contextual Resource Names
 /requests/{request_id}/receipt	 Contextual Resource Names
 /requests/{request_id}/map	 Contextual Resource Names
-/requests/{request_id}/receipt	 Contextual Resource Names

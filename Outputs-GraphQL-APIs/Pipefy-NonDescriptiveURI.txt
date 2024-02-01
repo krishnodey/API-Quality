@@ -1,18 +1,15 @@
 ***Anti-Pattern*** 
-Count: 10
+Count: 7
 /createOrganizationWebhook	 Non-descriptive End-point
-/createWebhook	 Non-descriptive End-point
 /deleteOrganizationWebhook	 Non-descriptive End-point
 /deleteWebhook	 Non-descriptive End-point
 /createWebhook	 Non-descriptive End-point
-/deleteOrganizationWebhook	 Non-descriptive End-point
-/deleteWebhook	 Non-descriptive End-point
 /interfaceEmbedCreat	 Non-descriptive End-point
 /updateOrganizationWebhook	 Non-descriptive End-point
 /updateWebhook	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 99
+Count: 84
 /allCards	 Self-descriptive End-point
 /autoFillFields	 Self-descriptive End-point
 /card	 Self-descriptive End-point
@@ -54,14 +51,10 @@ Count: 99
 /createTableField	 Self-descriptive End-point
 /createTableRecord	 Self-descriptive End-point
 /createTableRecordInRestrictedTable	 Self-descriptive End-point
-/createTableRelation	 Self-descriptive End-point
-/deleteCard	 Self-descriptive End-point
-/deleteComment	 Self-descriptive End-point
 /deleteFieldCondition	 Self-descriptive End-point
 /deleteInboxEmail	 Self-descriptive End-point
 /deleteLabel	 Self-descriptive End-point
 /deleteOrganization	 Self-descriptive End-point
-/deletePhase	 Self-descriptive End-point
 /deletePhaseField	 Self-descriptive End-point
 /deletePipe	 Self-descriptive End-point
 /deletePipeRelation	 Self-descriptive End-point
@@ -73,19 +66,8 @@ Count: 99
 /createTableRelation	 Self-descriptive End-point
 /deleteCard	 Self-descriptive End-point
 /deleteComment	 Self-descriptive End-point
-/deleteFieldCondition	 Self-descriptive End-point
-/deleteInboxEmail	 Self-descriptive End-point
-/deleteInboxEmail	 Self-descriptive End-point
-/deleteOrganization	 Self-descriptive End-point
-/deletePhase	 Self-descriptive End-point
-/deletePhaseField	 Self-descriptive End-point
 /deletePipe	 Self-descriptive End-point
-/deletePipeRelation	 Self-descriptive End-point
-/deleteTable	 Self-descriptive End-point
 /deleteTableField	 Self-descriptive End-point
-/deleteTableRecord	 Self-descriptive End-point
-/deleteTableRelation	 Self-descriptive End-point
-/exportPipeReport	 Self-descriptive End-point
 /inviteMembers	 Self-descriptive End-point
 /moveCardToPhase	 Self-descriptive End-point
 /recordsImporter	 Self-descriptive End-point

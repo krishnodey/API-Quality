@@ -8,7 +8,5 @@ https://developers.facebook.com/docs/instagram-api/reference
 https://developer.twitter.com/en/docs/api-reference-index
 https://graphql.braintreepayments.com/reference/#Mutation--captureTransaction
 https://developers.artsy.net/v2/
-
-
 https://api-docs.pipefy.com/reference/mutations/deleteTableRelation/
 https://docs.gitlab.com/ee/api/graphql/reference/#queryaimessages

@@ -1,7 +1,7 @@
 ***Anti-Pattern*** 
 Count: 2
-/files/move_batch/check_v2	Non-hierarchical Nodes	Reversed hierarchy of type True detected between files and move. 0 hierarchical relations were detected out of 3
-/files/save_url/check_job_status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between files and save. 0 hierarchical relations were detected out of 5
+/files/move_batch/check_v2	Non-hierarchical Nodes	Reversed hierarchy of type True detected between files and move. 0 hierarchical relations were detected out of 31
+/files/save_url/check_job_status	Non-hierarchical Nodes	Reversed hierarchy of type True detected between files and save. 0 hierarchical relations were detected out of 31
 
 ***Patterns*** 
 Count: 30

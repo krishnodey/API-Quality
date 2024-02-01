@@ -1,11 +1,9 @@
 ***Anti-Pattern*** 
-Count: 3
-/company/<realmID>/companyinfo	 Non-descriptive End-point
-/company/<realmID>/companyinfo	 Non-descriptive End-point
+Count: 1
 /company/<realmID>/invoice/<invoiceId>/pdf	 Non-descriptive End-point
 
 ***Patterns*** 
-Count: 18
+Count: 20
 /company/<realmID>/account	 Self-descriptive End-point
 /company/<realmID>/query?query=<selectStatement>	 Self-descriptive End-point
 /company/<realmID>/account/<accountId>	 Self-descriptive End-point
@@ -17,6 +15,8 @@ Count: 18
 /company/<realmID>/bill	 Self-descriptive End-point
 /company/<realmID>/query?query=<selectStatement>	 Self-descriptive End-point
 /company/<realmID>/companyinfo/<realmID>	 Self-descriptive End-point
+/company/<realmID>/companyinfo	 Self-descriptive End-point
+/company/<realmID>/companyinfo	 Self-descriptive End-point
 /company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	 Self-descriptive End-point
 /company/<realmID>/invoice	 Self-descriptive End-point
 /company/<realmID>/invoice?operation=delete	 Self-descriptive End-point
