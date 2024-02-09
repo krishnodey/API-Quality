@@ -17,7 +17,7 @@ results = array(1, dim=c(10,12,2))
 
 dimnames(results)<-
   list(
-    c("Amorphous End-point", "Non-standard End-point", "CRUDy End-point", "Non-descriptive End-point", "UnversionedURI", "Pluralized Nodes", "Contextless Resources", "Non-hierarchical Nodes", "Non-pertinent Documentation","Inconsistent Documentation" ), 
+    c("Amorphous UIs", "Non-standard URIs", "CRUDy URIs", "Unversioned URIs", "Pluralized Nodes", "Non-descriptive URIs", "Contextless Resources", "Non-hierarchical Nodes", "Non-pertinent Doc","Inconsistent Doc" ), 
     colnames(P[2:13]), 
     c("P", "AP")
   )
@@ -44,7 +44,7 @@ results = array(1, dim=c(10,21,2))
 
 dimnames(results)<-
   list(
-    c("Amorphous End-point", "Non-standard End-point", "CRUDy End-point", "Non-descriptive End-point", "UnversionedURI", "Pluralized Nodes", "Contextless Resources", "Non-hierarchical Nodes", "Non-pertinent Documentation","Inconsistent Documentation" ), 
+    c("Amorphous UIs", "Non-standard URIs", "CRUDy URIs", "Unversioned URIs", "Pluralized Nodes", "Non-descriptive URIs", "Contextless Resources", "Non-hierarchical Nodes", "Non-pertinent Doc","Inconsistent Doc" ), 
     colnames(P[2:22]), 
     c("P", "AP")
   )

@@ -1,0 +1,92 @@
+ID,HTTP Method,URI,Decription+Parameters,AmorphousURI,NonStandardURI,CRUDyURI,UnversionedURI,PluralisedNodes,NonDescriptiveURI,ContextlessResource,NonHierarchicalNodes,LessCohisiveDoc,InconsistantDoc
+917   ,  PUT  ,  /v1/me/ratings/songs/{id} ,   Add a user's song rating by using the song's identifier.  id string (Required) The unique identifier for the song.,0,0,0,0,0,1,0,0,0,1
+364    , GET  ,  /admin/resources/chassis_management_modules   , Get all chassis management modules,1,0,0,1,1,1,0,0,1,0
+921   , DELETE  ,  /v1/me/ratings/playlists/{id}    ,Remove a user's playlist rating by using the playlist'ss identifier.  id string (Required) The unique identifier for the playlist.,0,0,0,0,0,1,0,1,0,0
+234   ,  POST  ,  /files/get_file_lock_batch   , Return the lock metadata for the given list of paths.,1,0,0,1,0,1,0,0,1,1
+231  ,  POST   , /files/create_folder_batch/check   ," Returns the status of an asynchronous job for create_folder_batch. If success, it returns list of result for each entry.",1,0,0,1,1,1,1,0,1,1
+886    ,GET ,   /v1/me/library/playlist-folders/{id}/{relationship} ,"   Fetch a library playlist folder's relationship by using its identifier.  id string (Required) A unique identifier for the library playlist folder. relationship string (Required) The name of the relationship you want to fetch for this resource. Possible Values: children, parent",0,0,0,0,0,1,0,0,0,0
+484    , GET ,   /capacities/{capacityId}/Workloads  ,"  Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.",0,0,0,1,0,1,0,0,0,0
+776  ,  GET ,   /shop/admin/shipping_categories/:id ,   Retrieve Shipping category,1,0,0,1,0,1,0,0,0,0
+605   ,  POST  ,  /devicetypes/<deviceTypeID>/whitelist/certificates  ,  Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.,1,1,0,1,0,1,0,0,1,0
+1409  ,  GET  ,  /jobs    ,All jobs on this GitLab instance. Returns an empty result for users without administrator access.  n/a,0,0,0,1,0,0,0,0,1,0
+1646   ,  GET ,   /v2/spaces/:id/buyers   , Returns a list of user who purchased a ticket to the requested Space. You must authenticate the request using the Access Token of the creator of the requested Space.  id REQUIRED string Unique identifier of the Space for which you want to request Tweets.,0,0,0,0,0,1,0,0,0,0
+479    , GET ,   /apps/{appId}/dashboards/{dashboardId}/tiles ,   Returns a list of tiles within the specified dashboard from the specified app.,1,0,0,1,0,1,0,0,0,0
+753  ,  DELETE   , /requests/current    ,"The Ride Request endpoint allows cancellation of the user's current trip. This endpoint behaves similarly to the DELETE /v1.2/requests/{request_id} endpoint, except you do not need to provide a request_id. If there is no trip in progress the endpoint will result in a 404 not found error. This endpoint will only work for trips requested through your app unless you have the all_trips scope.",0,0,0,1,0,0,1,0,1,0
+1569 ,   GET ,   /v2/berry-firmness/{berries}/  ,  A list of the berries with this firmness.,1,0,0,0,0,0,1,0,1,0
+45   ,  POST  ,  /datasources/bulk-delete  ,  Bulk delete multiple data sources.,0,0,1,0,0,0,0,0,1,1
+785   , DELETE ,   /shop/admin/prices/:price_id/staggered_prices/:id ,   DELETE,1,1,0,1,0,1,1,1,1,0
+1483  ,  POST  ,  /createCardRelation  ,  Creates a card relation n/a,1,0,0,1,0,0,0,0,1,0
+559 ,   GET ,   /company/<realmID>/reports/InventoryValuationSummary?<name>=<value>  ,  Query a report,1,1,0,1,0,1,1,1,1,0
+827    , POST  ,  v2/UpdateFavouriteOrder ,   Update the order favourites are displayed in n/a,1,0,0,0,1,0,0,0,1,1
+1214   ,  POST ,   /createTeamDiscussionComment  ,"  Creates a new team discussion comment.clientMutationId: A unique identifier for the client performing the mutation., teamDiscussionComment: The new comment.",1,0,0,1,1,1,0,0,0,0
+1057   , GET ,   /v18.0/{album-id}/photos   , A collection of Photos in the Album,0,0,0,0,0,0,0,0,1,0
+1195 ,   POST ,   /createEnterpriseOrganization ,"   Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.  clientMutationId: A unique identifier for the client performing the mutation., enterprise: The enterprise that owns the created organization., organization: The organization that was created.",1,0,0,1,1,1,0,0,0,0
+1242  ,  POST ,   /disablePullRequestAutoMerge  ,"  Disable auto merge on the given pull request.  actor: Identifies the actor who performed the event., clientMutationId: A unique identifier for the client performing the mutation., pullRequest: The pull request auto merge was disabled on.",1,0,0,1,1,1,0,0,0,1
+298    , DELETE  ,  /domains/{domain}/administrator ,   Clear the administrator for this domain,0,0,0,1,0,0,1,0,1,0
+288  ,  PUT ,   /domains/{domain} ,   Update a GroupWise Domain given the Domain data,0,0,0,1,0,0,1,0,1,0
+1394 ,   GET  ,  /echo  ,  Testing endpoint to validate the API with.,0,0,0,1,0,0,1,0,0,0
+1297   , POST  ,  /startRepositoryMigration ,"   Starts a GitHub Enterprise Importer (GEI) repository migration.  clientMutationId: A unique identifier for the client performing the mutation., repositoryMigration: The new repository migration.",1,0,0,1,1,0,0,0,0,0
+147   , GET ,   /environments/{environment_id}/zones?key={key}&value={value} ,"   Gets a list of all zones in the environment. Params can include the following: If key and value are specified, returns zones whose data objects contain the given key/value pair.",1,1,0,1,0,1,1,0,0,0
+782   , GET  ,  /shop/admin/prices/:price_id/staggered_prices/:id  ,  Retrieve Staggered Price,1,0,0,1,0,1,0,0,1,0
+1367   , POST  ,  /updateSponsorshipPreferences  ,"  Change visibility of your sponsorship and opt in or out of email updates from the maintainer.  clientMutationId: A unique identifier for the client performing the mutation., sponsorship: The sponsorship that was updated.",1,0,0,1,0,1,0,0,0,1
+264  ,  GET ,   /devices/smoke_co_alarms/device_id/name ,"   Display name of the device; can be any room name from a list we provide, or a custom name.",1,0,0,1,0,1,0,1,0,0
+810,    POST ,   /v2/oauth/token ,   Converting Authorization Codes To Access Tokens,1,0,0,0,1,0,1,0,1,0
+28   , GET ,   /data-feeds/{dataSourceId}/plans/ ,   Gets the list of plans under a 'Data Feed'.,1,0,0,1,0,1,0,0,0,0
+549 ,   POST  ,  /company/<realmID>/account    , Use this operation to update any of the writable fields of an existing account object. The request body must include all writable fields of the existing object as returned in a read response. Writable fields omitted from the request body are set to NULL. The ID of the object to update is specified in the request body.,1,0,0,1,1,0,0,0,0,1
+1347 ,   POST ,   /updateOrganizationAllowPrivateRepositoryForkingSetting  ,"  Sets whether private repository forks are enabled for an organization.  clientMutationId: A unique identifier for the client performing the mutation., message: A message confirming the result of updating the allow private repository forking setting., organization: The organization with the updated allow private repository forking setting.",1,0,0,1,1,1,0,1,1,1
+1125  ,  GET ,   /licenses    , Return a list of known open source licenses.,0,0,0,1,0,1,1,0,1,0
+641  ,  GET ,   /scenes ,   Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.,0,0,0,1,0,0,1,0,0,0
+192   , GET   , /codeadmin/failed/{systemKey}    ,Lists failed code service runs for specified system,1,0,0,1,0,0,1,1,1,0
+1639 ,   GET  ,  /v2/users ,   Returns a variety of information about one or more users specified by the requested IDs.,0,0,0,0,0,0,0,0,1,0
+699,    DELETE  ,  /price_rules/{price_rule_id}.json  ,  Remove an existing PriceRule,1,0,0,1,0,1,1,0,0,0
+255   , POST,    /devices/thermostats/device_id/temperature_scale ,   Fahrenheit or Celsius; used with temperature display.,1,0,0,1,0,1,1,0,1,1
+874    , GET ,   /v1/me/library/music-videos  ,  Fetch all the library music videos in alphabetical order.  n/a,0,0,0,0,0,1,0,0,1,0
+1095 ,   DELETE  ,  /{page_id}/subscribed_apps. ,   You can dissociate an Application from a Page by making a DELETE request to /{page_id}/subscribed_apps,1,0,0,1,1,1,0,0,0,0
+1320   ,  POST   , /updateDiscussion  ,"  Update a discussion.  clientMutationId: A unique identifier for the client performing the mutation., discussion: The modified discussion.",1,0,0,1,1,1,0,0,1,1
+1594  ,  GET ,   /publication/{id} ,   Lookup a publication by ID. id id ID! non-null The ID of the Publication to return.,0,0,0,1,0,0,0,0,1,0
+269  ,  GET  ,  /devices/cameras/device_id/is_public_share_enabled    ,"Users can choose to share their video and make it viewable by anyone. When public share is enabled, you can read public_share_url.",0,0,0,1,0,1,1,0,0,0
+1468 ,   GET ,   /organizations/{ids}   ,  Lookup organizations by their ID ids: [ID] The organizations IDs,0,0,0,1,0,1,0,0,1,0
+289  ,  GET ,   /domains/{domain}    , Get a specific Domain given the name,0,0,0,1,0,0,1,0,1,0
+1571    , GET ,   v2/berry-flavor/{id or name}/  ,  Flavors determine whether a Pokamon will benefit or suffer from eating a berry based on their nature.,1,1,0,0,0,0,1,0,0,0
+1287 ,    POST ,   /resolveReviewThread ,"   Marks a review thread as resolved.  clientMutationId: A unique identifier for the client performing the mutation., thread: The thread to resolve.",1,0,0,1,1,1,0,0,0,1
+1559   , GET ,   /v2/berry/{smoothness}/  ,"  The smoothness of this Berry, used in making PokÃ©blocks or Poffins.",1,0,0,0,0,1,0,0,1,0
+1223  ,  POST   , /deleteIssueComment  ,  Deletes an IssueComment object.  clientMutationId: A unique identifier for the client performing the mutation.,1,0,0,1,1,0,0,0,0,1
+657 ,   GET ,   /application_charges/{application_charge_id}.json  ,   Retrieves an application charge,1,0,0,1,0,1,0,0,1,0
+1526   , POST ,   /sendInboxEmail ,   Sends an email,1,0,0,1,1,0,0,0,1,0
+1131    ,GET ,   /node ,   Fetches an object given its ID.  id: ID of the object.,0,0,0,1,0,1,1,0,1,0
+109    , POST  ,  /bui/attmnt ,"   Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.",0,0,0,1,1,0,0,1,1,0
+1088   ,  GET ,   /v19.0/{application-id}/subscribed_domains_phishing ,   GETGraphApplicationSubscribedDomainsPhishingEdge,1,0,0,0,0,1,0,0,1,0
+58   ,  GET ,   /destinations/limits  ,  Returns a count of the maximum number of destinations you can create.,0,0,0,1,0,1,0,0,1,0
+1507    , POST ,   /deletePipeRelation ,   Deletes a pipe relation,1,0,0,1,1,1,0,0,1,1
+738 ,   PUT ,   /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} ,   Enable or disable the ability to view survey results by non autorized user via direct link.,1,1,0,1,0,1,0,0,0,0
+1396 ,   GET ,   /explainVulnerabilityPrompt/{vulnerabilityId} ,   GitLab Duo Vulnerability summary prompt for a specified vulnerability. vulnerabilityId VulnerabilityID! Vulnerability to generate a prompt for.,1,0,0,1,0,1,1,0,1,0
+174    ,GET  ,  /api/collection/{systemKey}/{collectionName} ,   fetch collection,1,0,0,1,0,1,0,1,1,0
+552  ,  GET   , /company/<realmID>/query?query=<selectStatement>   ,  Query a bill,1,0,0,1,0,1,1,0,0,0
+191  ,  GET  ,  /codeadmin/failed  ,  Lists failed code service runs for all systems that a developer can access,0,0,0,1,0,1,1,0,1,0
+1271  ,  POST  ,  /removeAssigneesFromAssignable   ," Removes assignees from an assignable object.  assignable: The item that was unassigned., clientMutationId: A unique identifier for the client performing the mutation.",1,0,0,1,0,1,0,0,0,1
+640 ,   GET ,   /scenes/<sceneID>  ,  Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.,1,0,0,1,0,0,0,0,0,0
+882  ,  GET ,   /v1/me/library/playlists  ,  Fetch one or more library playlists by using their identifiers.,0,0,0,0,0,1,1,0,1,0
+1511  ,  POST ,   /deleteTableRelation ,   Deletes a table relation,1,0,0,1,1,1,0,0,1,1
+1077  ,  GET ,   /v19.0/{application-id}/button_auto_detection_device_selection   , to turn on auto device sampling. device_id string Device id of the given app.,1,0,0,0,0,1,1,0,1,1
+65   ,  GET ,   /destinations/{destinationId}/mappings-by-priority/   , Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.,1,0,0,1,0,1,0,0,0,0
+124  ,  GET  ,  /bui/kdLinkInfo({id}) ,   It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket.,1,1,0,1,0,1,1,0,0,0
+1581 ,   POST  ,  /ParseErrorRange ,   A range of ShopifyQL parsing errors.,1,0,0,1,1,0,1,0,1,0
+957   ,  GET ,   /ping ,   Returns the literal string 'pong'.,0,0,0,1,0,0,0,0,1,0
+681   , DELETE ,   /customers/{customer_id}/addresses/{address_id}.json  ,  Removes an address from a customers address list,1,0,0,1,0,1,0,0,0,0
+1649  ,  GET ,   /v2/lists/:id/tweets ,   Returns a list of Tweets from the specified List.  id REQUIRED string The ID of the List whose Tweets you would like to retrieve.,0,0,0,0,0,1,1,1,1,0
+1418 ,   GET  ,  /namespace  ,  Find a namespace.,0,0,0,1,0,0,1,0,1,0
+697    , GET ,   /price_rules/{price_rule_id}.json  ,  Retrieves a single price rule,1,0,0,1,0,0,1,0,1,0
+240   , GET ,   /devices/thermostats/device_id/device_id ,   Nest Thermostat unique identifier.,1,0,0,1,0,1,1,0,1,0
+51    , PUT ,   /signals/derived/{derivedSignalId} ,   Updates a single derived signal.,1,0,0,1,0,0,0,1,0,0
+232   , POST   , /files/delete_batch/check   ," Returns the status of an asynchronous job for delete_batch. If success, it returns list of result for each entry.",1,0,0,1,1,1,1,0,0,1
+569   , POST,    /users/<userID>/properties  ,  Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.,1,0,0,1,0,1,0,0,0,1
+258  ,  GET  ,  /devices/thermostats/device_id/eco_temperature_high_c    ,"Maximum Eco Temperature, displayed in half degrees Celsius (0.5°C). Used when hvac_mode = eco.",1,0,0,1,0,1,1,1,1,0
+863 ,   GET ,   /v1/me/library/songs    ,Fetch one or more library songs by using their identifiers.,0,0,0,0,0,1,1,0,1,0
+343  ,  DELETE ,   /deployment/resources/addresses/<addressUUID>   ,  Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.,1,0,0,1,0,1,0,0,0,0
+924    , GET ,   /v1/me/ratings/library-albums/{id}   , Fetch a user's rating for specific content by using the content's identifier.  id string (Required) The unique identifier for the library album.,0,0,0,0,0,1,0,1,0,0
+1497 ,   POST ,   /createTableField ,   Creates a table field,1,0,0,1,1,0,0,0,1,0
+965  ,  GET ,   /paypalFinancingOptions ,   Retrieve PayPal financing options that include payment installment plans.,1,0,0,1,0,0,1,0,1,0
+670    , POST ,   /customers.json ,   Creates a customer,1,0,0,1,0,1,1,0,1,0
+726    ,GET,    /getArchive?accessKey={accessKey}&ownerId={ownerId}   , Returns the list of archive surveys.,1,1,0,1,0,1,1,0,1,0
+1302  ,  POST ,   /unarchiveRepository ,"   Unarchives a repository.  clientMutationId: A unique identifier for the client performing the mutation., repository: The repository that was unarchived.",1,0,0,1,1,0,0,0,1,1
+1234    ,POST ,   /deletePullRequestReview ,"   Deletes a pull request review.  clientMutationId: A unique identifier for the client performing the mutation., pullRequestReview: The deleted pull request review.",1,0,0,1,1,0,0,0,0,1
