@@ -246,10 +246,10 @@ with open(path, 'w', newline='') as summ_file:
         for ap, vc, mc in zip(anipatterns, val_count, m_count):
 
             pos = vc
-            neg = 91-vc
+            neg = 91-pos
             tp = mc
             fp = pos - tp
-            tn = 91 - tp
+            tn = vc
             fn = neg - tn
             accuracy = round((tp+tn)/tp+fp+tn+fn,2)
 
