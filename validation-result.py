@@ -91,7 +91,7 @@ with open(path, 'w', newline='') as summ_file:
             #print(f"{id}, {method}, {uris}, {des}, {ap1}, {ap2}, {ap3}, {ap4}, {ap5}, {ap6}, {ap7}, {ap8}, {ap9}, {ap10}")
             csv_writer.writerow(data_line)'''
 
-"""
+
 #Majority Voting
 import csv
 from collections import Counter
@@ -122,7 +122,7 @@ with open(file1, "r") as f1, open(file2, "r") as f2, open(file3, "r") as f3:
         lst3.append(ln1)
         
 print(f"{len(lst1), {len(lst2)}, {len(lst3)}}")
-path = "Validation/majority_voting_file.csv"
+path = "Validation/merged_file.csv"
 with open(path, 'w', newline='') as summ_file:
         csv_writer = csv.writer(summ_file)
         header_line = ['ID', 'HTTP Method',	'URI', 'Decription+Parameters','AmorphousURI', 'NonStandardURI',  'CRUDyURI',
@@ -161,14 +161,14 @@ with open(path, 'w', newline='') as summ_file:
                 data_line = [ar[0],ar[1], ar[2], ar[3], ap1, ap2, ap3, ap4, ap5, ap6, ap7, ap8, ap9, ap10]
                 csv_writer.writerow(data_line)
 
-"""
+
 
 #Final Table
 
 
 
 
-import csv
+'''import csv
 majority_file = "Validation/majority_voting_file.csv"
 validation_file= "Result-Database/validation_data.csv"
 
@@ -257,4 +257,4 @@ with open(path, 'w', newline='') as summ_file:
             line = [ap, pos, neg, tp, fp, tn, fn, accuracy]
             #print(f"{ap}, {vc}, {91-vc}, {mc}, {max(mc-vc, 0)},{91-mc}, {max((91-mc) - (91-vc), 0)}")
             csv_writer.writerow(line)
-    
+'''    
