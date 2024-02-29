@@ -1,0 +1,17 @@
+GET >> /movies/{id} >> findMovieById >> 
+GET >> /rawMovies/{id} >> findRawMovieById >> 
+GET >> /movies?name={name}&author={author} >> findMovie>> 
+POST >> /movies >> registerMovie >> 
+POST >> /titles >> registerTitle >> 
+POST >> /binaries/byteBuf >> registerByteBufBinary >> 
+POST >> /binaries/byteArray >> registerByteArrayBinary >> 
+DELETE >> /movies/{id} >> deleteMovie >> 
+POST >> /content/rawContentSource >> rawContentSource>> 
+POST >> /content/byteBufContent >> byteBufContent >> 
+POST >> /content/byteArrayContent >> byteArrayContent >> 
+POST >> /content/stringContent >> stringContent >> 
+POST >> /content/movieContent >> movieContent >> 
+POST >> content/movieContentBroken >> movieContentBroken>> 
+POST >> /users/{userId}/recommendations >> updateRecommendation >> 
+GET >> /users/{userId}/recommendations >> recommendationsByUserId >> 
+GET >> /recommendations?category={category}&ageGroup={ageGroup} >> recommendationsBy >> 
