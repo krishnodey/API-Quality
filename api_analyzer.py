@@ -19,27 +19,41 @@ from itertools import combinations
 from sklearn.metrics.pairwise import cosine_similarity
 from tabulate import tabulate
 import warnings
-import math
+#import math
+#import csv
+import json
     
 
 class ApiAnalyzer:
-    def __init__(self, URI):
-        self.URI = URI
+    def __init__(self, api_type, api):
+        #self.URI = URI
+        self.api_type = api_type
+        self.api_name = api
         warnings.filterwarnings("ignore", category=UserWarning)
         self.description = []
         self.nodes = []
         self.http_method = []
-        for ln in URI:
-            tmp = ln.split(">>")
+        self.id = []
+        
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r') as file:
+            lines = file.read().strip().split("\n")
+            for line in lines:
+                row = json.loads(line)
+                #print(row)
 
-            if len(tmp) == 4:
-                tmp[3] = ' '.join(tmp[3].split())
-                text = f"{tmp[2]} {tmp[3]}"
-                self.description.append(text)
-            else:
-                self.description.append(tmp[2])
-            self.nodes.append(tmp[1])
-            self.http_method.append(tmp[0])
+                #if len(line) == 7:
+                    #id, apis_type, api_name, verb, uri, des, para = line[0], line[1], line[2], line[3], line[4], line[5], line[6]
+                #else:
+                    #id, apis_type, api_name, verb, uri, des, para = line[0], line[1], line[2], line[3], line[4], line[5], ''
+            
+                if row["api_type"] == api_type and row["api_name"] == api:
+                    self.id.append(row["id"])
+                    self.description.append(row["description"] + row["parameters"])
+                    self.nodes.append(row["uri"])
+                    self.http_method.append(row["method"])
+        
+
         clean = UriCleaning()
         #splitted_nodes = clean.get_uri_nodes(line)
 
@@ -63,17 +77,12 @@ class ApiAnalyzer:
         ap_count = 0
         amorphus_result_AP = []
         amorphus_result_P = []
-        amp_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        amp_lst.append(msg)
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
         def has_consecutive_uppercase(s):
             for i in range(len(s)-1):
                 if s[i].isupper() and s[i+1].isupper():
                     return True
             return False
-
-
         def is_camel_case(s):
             s = ''.join(i for i in s if not i.isdigit())
             #print(s)
@@ -89,64 +98,75 @@ class ApiAnalyzer:
                 flag = 'True'
             return flag
         
-        for method, uris, doc in zip(self.http_method, self.nodes, self.description):
-            #break down to words
-            words = uris.strip().split("/")
-            comment = ""
-            found_AP = 0
-        
-            for word in words:
-                word = word.strip()
-                word = word.replace("<", '').replace(">", '') #replace("{", '').replace("}",'')
-                flag = 0
-                if word: 
-                    if word[0].strip() == "{" and word[-1].strip() == "}":
-                        #print("variable")
-                        continue
-                    elif any(ch.isupper() for ch in word) and is_camel_case(word) == "False":
-                        found_AP = 1
-                        comment += " [uppercase found] "
-                        flag = 1
-                    
-                    elif "%5F" in word.lower() or "%5F" in word or "_" in word:
-                        found_AP = 1
-                        comment += " [underscore found] "
-                        flag = 1
-                    elif uris.strip()[-1] == '/' or uris.strip()[-1] == '\\':
-                        found_AP = 1
-                        comment += " [trailing slash found] "
-                        flag = 1
-                    else:
-                        for extension in extensions:
-                            if extension.lower() in uris.lower() or extension.upper() in uris:
-                                found_AP = 1
-                                comment += " [extension found] "
-                                flag = 1
-                if flag == 1:
-                    break
-                        
-            if found_AP == 1:
-                ap_count = ap_count + 1
-                amorphus_result_AP.append(uris.strip() + "\t" + AP + "\t" + comment)
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t{comment}"
-            else:
-                p_count = p_count + 1
-                amorphus_result_P.append(uris.strip() + "\t" + P + "\t" + comment)
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t{comment}"
-            amp_lst.append(msg)
-            print("->", end=" ")
-            
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']
+                    words = uris.strip().split("/")
+                    comment = ""
+                    found_AP = 0
 
-        return amorphus_result_AP, amorphus_result_P, p_count, ap_count, amp_lst
+                    for word in words:
+                        word = word.strip()
+                        word = word.replace("<", '').replace(">", '') #replace("{", '').replace("}",'')
+                        flag = 0
+                        if word: 
+                            if word[0].strip() == "{" and word[-1].strip() == "}":
+                                #print("variable")
+                                continue
+                            elif any(ch.isupper() for ch in word) and is_camel_case(word) == "False":
+                                found_AP = 1
+                                comment += " [uppercase found] "
+                                flag = 1
+                            
+                            elif "%5F" in word.lower() or "%5F" in word or "_" in word:
+                                found_AP = 1
+                                comment += " [underscore found] "
+                                flag = 1
+                            elif uris.strip()[-1] == '/' or uris.strip()[-1] == '\\':
+                                found_AP = 1
+                                comment += " [trailing slash found] "
+                                flag = 1
+                            else:
+                                for extension in extensions:
+                                    if extension.lower() in uris.lower() or extension.upper() in uris:
+                                        found_AP = 1
+                                        comment += " [extension found] "
+                                        flag = 1
+                        if flag == 1:
+                            break
+                    if found_AP == 1:
+                            row['amorphous_uri'] = 1
+                            row['tidy_uri'] = 0
+                            ap_count = ap_count + 1
+                            amorphus_result_AP.append(uris.strip() + "\t" + AP + "\t" + comment)
+                    else:
+                            row['amorphous_uri'] = 0
+                            row['tidy_uri'] = 1
+                            p_count = p_count + 1
+                            comment = "Tidy Endpoint"
+                            amorphus_result_P.append(uris.strip() + "\t" + P + "\t" + comment)
+                    row['amorphous_comment'] = comment
+                    print("->", end=" ")
+
+                json_string=json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")     
+                
+        return amorphus_result_AP, amorphus_result_P, p_count, ap_count
     
+
+
+
+
     def detect_non_standard_uri(self):
         P = "Standard End-point"
         AP = "Non-standard End-point"
         standard_uri_result_AP = []
         standard_uri_result_P = []
-        standard_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        standard_lst.append(msg)
         p_count = 0
         ap_count = 0
         # Common European languages
@@ -172,7 +192,6 @@ class ApiAnalyzer:
             # Czech
             'Č', 'č', 'Ď', 'ď', 'Ě', 'ě', 'Ň', 'ň', 'Ř', 'ř', 'Š', 'š', 'Ť', 'ť', 'Ů', 'ů', 'Ž', 'ž'
         ]
-
         # Cyrillic languages
         cyrillic_languages = [
             # Russian
@@ -181,71 +200,76 @@ class ApiAnalyzer:
             # Bulgarian
             'Й', 'Ъ', 'Ь', 'ё', 'й', 'ъ', 'ь'
         ]
-
         # Greek
         greek_language = [
             'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι', 'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ', 'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω',
             'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
         ]
-
         # Arabic
         arabic_language = [
             'ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ي'
         ]
-
         # Japanese
         japanese_language = [
             'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'を', 'ん'
         ]
-
         #unknown_characters = ['!', '@', '#', '$', '~', '^', '*', '>', '<', '|', '%', '&', '+', '=', '`', '?', ',', ';', ':', '.']
 
+        #for method, uris, doc in zip(self.http_method, self.nodes, self.description):
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']
+                    comment = ""
+                    found_AP = 0
+                    uri = uri.strip()
+                    if any(c in uri.lower() for c in european_languages):
+                        found_AP = 1
+                        comment += " [european char found] "
+                    elif any(c in uri.lower() for c in cyrillic_languages):
+                        found_AP = 1
+                        comment += " [ cyrillic char found] "
+                    elif any(c in uri.lower() for c in greek_language):
+                        found_AP = 1
+                        comment += " [ greek char found] "
+                    elif any(c in uri.lower() for c in arabic_language):
+                        found_AP = 1
+                        comment += " [ arabic char found] "
+                    elif any(c in uri.lower() for c in japanese_language):
+                        found_AP = 1
+                        comment += " [ japanese char found] "
+                    elif ' ' in uri.strip() or '\t' in line.strip():
+                        found_AP = 1
+                        comment += " [blank space/tab found] "
+                    elif '--' in uri:
+                        found_AP = 1
+                        comment += " [double hyphens found] "
+                    elif any(c in uri.lower() for c in ['!', '@', '#', '$', '~', '^', '*', '>', '<']):
+                        found_AP = 1
+                        comment += " [unknown char found] "
 
+                    if found_AP == 1:
+                        row['non_standard_uri'] = 1
+                        row['standard_uri'] = 0
+                        standard_uri_result_AP.append(f"{uri.strip()}\t{AP}\t{comment}")
+                        ap_count += 1
+                    else:
+                        row['non_standard_uri'] = 0
+                        row['standard_uri'] = 1
+                        comment = "Standard Endpoint"
+                        standard_uri_result_P.append(f"{uri.strip()}\t{P}\t{comment}")
+                        p_count += 1
+                    row['non_standard_comment'] = comment
+                    print("->", end=" ")
+                
+                json_string=json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
 
-        for method, uris, doc in zip(self.http_method, self.nodes, self.description):
-            line = uris
-            comment = ""
-            found_AP = 0
-            line = line.strip()
-
-            
-            if any(c in line.lower() for c in european_languages):
-                found_AP = 1
-                comment += " [european char found] "
-            elif any(c in line.lower() for c in cyrillic_languages):
-                found_AP = 1
-                comment += " [ cyrillic char found] "
-            elif any(c in line.lower() for c in greek_language):
-                found_AP = 1
-                comment += " [ greek char found] "
-            elif any(c in line.lower() for c in arabic_language):
-                found_AP = 1
-                comment += " [ arabic char found] "
-            elif any(c in line.lower() for c in japanese_language):
-                found_AP = 1
-                comment += " [ japanese char found] "
-            elif ' ' in line.strip() or '\t' in line.strip():
-                found_AP = 1
-                comment += " [blank space/tab found] "
-            elif '--' in line:
-                found_AP = 1
-                comment += " [double hyphens found] "
-            elif any(c in line.lower() for c in ['!', '@', '#', '$', '~', '^', '*', '>', '<']):
-                found_AP = 1
-                comment += " [unknown char found] "
-
-            if found_AP == 1:
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t{comment}"
-                standard_uri_result_AP.append(f"{line.strip()}\t{AP}\t{comment}")
-                ap_count += 1
-            else:
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t{comment}"
-                standard_uri_result_P.append(f"{line.strip()}\t{P}\t{comment}")
-                p_count += 1
-            standard_lst.append(msg)
-            print("->", end=" ")
-
-        return standard_uri_result_AP, standard_uri_result_P, p_count, ap_count, standard_lst
+        return standard_uri_result_AP, standard_uri_result_P, p_count, ap_count
     
     
 
@@ -258,8 +282,7 @@ class ApiAnalyzer:
         p_count = 0
         ap_count = 0
         crudy_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        crudy_lst.append(msg)
+        
         for method, nodes, uris, doc in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
             #tmp = ur.strip().split(">>")
             #print(tmp)
@@ -303,42 +326,47 @@ class ApiAnalyzer:
         unversioned_result_AP = []
         p_count = 0
         ap_count = 0
-        version_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        version_lst.append(msg)
         #print(URI)
+        #for method, uris, doc in zip(self.http_method, self.nodes, self.description):
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']
+                    regex_list = [
+                        ".*v\d+.*",         # Matches any string containing "v" followed by digits
+                        ".*v\d+.*",         # Matches any string containing "v" followed by digits
+                        ".*v\d+.*",         # Matches any string containing "v" followed by digits
+                        ".*v\d+.*",         # Matches any string containing "v" followed by digits
+                        ".*v\d+.*",         # Matches any string containing "v" followed by digits
+                        ".*/v/.*",          # Matches any string containing "/v/"
+                        ".*api-version=.*", # Matches any string containing "api-version="
+                        "/v\d+\.\d+/",      # Matches "/v" followed by digits, a dot, and more digits
+                        "/v\d+\.\d+/"       # Matches "/v" followed by digits, a dot, and more digits
+                    ]
+                    matches = any(re.match(regex, uris) for regex in regex_list)
 
-        for method, uris, doc in zip(self.http_method, self.nodes, self.description):
-            '''regex_list = [
-                ".*v1.*", ".*v0.*", ".*v2.*", ".*v3.*", ".*v3.*",
-                ".*/v/.*", ".*api-version=.*", "/v\d+\.\d+/", "/v\d+\.\d+/"
-            ]'''
-            regex_list = [
-                ".*v\d+.*",         # Matches any string containing "v" followed by digits
-                ".*v\d+.*",         # Matches any string containing "v" followed by digits
-                ".*v\d+.*",         # Matches any string containing "v" followed by digits
-                ".*v\d+.*",         # Matches any string containing "v" followed by digits
-                ".*v\d+.*",         # Matches any string containing "v" followed by digits
-                ".*/v/.*",          # Matches any string containing "/v/"
-                ".*api-version=.*", # Matches any string containing "api-version="
-                "/v\d+\.\d+/",      # Matches "/v" followed by digits, a dot, and more digits
-                "/v\d+\.\d+/"       # Matches "/v" followed by digits, a dot, and more digits
-            ]
-
-
-            matches = any(re.match(regex, uris) for regex in regex_list)
-
-            if matches:
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t Version Found"
-                versioned_result_P.append(f"{uris.strip()} \t Version Found")
-                p_count += 1
-            else:
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t No Version Found"
-                unversioned_result_AP.append(f"{uris.strip()} \t No Version Found")
-                ap_count += 1
-            version_lst.append(msg)
-            print("->", end=" ")
-        return unversioned_result_AP, versioned_result_P , p_count, ap_count, version_lst
+                    if matches:
+                        row['unversioned_uri'] = 1
+                        row['versioned_uri'] = 0
+                        comment = "Version Found"
+                        versioned_result_P.append(f"{uris.strip()} \t {comment}")
+                        p_count += 1
+                    else:
+                        row['unversioned_uri'] = 1
+                        row['versioned_uri'] = 0
+                        comment = "No Version Found"
+                        unversioned_result_AP.append(f"{uris.strip()} \t {comment}")
+                        ap_count += 1
+                    row['unversioned_comment'] = comment
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+                
+        return unversioned_result_AP, versioned_result_P , p_count, ap_count
 
 
     def detect_pluralized_node(self):

@@ -1,18 +1,24 @@
 import csv
+import json
+
+
+
+#ceate a jsonl file of all data
 
 base_path = ['REST-APIs/', 'GraphQL-APIs/']
 i = 1
 
-write_path = 'All-Data/Alldata.csv'
+write_path = 'All-Data/Alldata.jsonl'
+out_file = open(write_path, 'w')
 
-with open(write_path, 'w', newline='') as w_file:
-    csv_writer = csv.writer(w_file)
-    header = ["ID", 'API-Type',"API-Name", "HTTP Method", "URI", "Description+Parameters"]
-    csv_writer.writerow(header)
+#with open(write_path, 'w', newline='') as w_file:
+    #csv_writer = csv.writer(w_file)
+    #header = ["ID", 'API-Type',"API-Name", "HTTP Method", "URI", "Description+Parameters"]
+    #csv_writer.writerow(header)
 
-    for base in base_path:
+for base in base_path:
         api_path = f"{base}APIList.txt"
-        with open(api_path, 'r') as file:
+        with open(api_path, 'r', encoding='utf-8') as file:
             apis = file.read().strip().split("\n")
             api_type = 'REST' if 'REST-API' in base else 'GraphQL'
             for api in apis:
@@ -26,18 +32,43 @@ with open(write_path, 'w', newline='') as w_file:
                         #print(f"{i} {line}")
                         line = line.strip().split(">>")
                         if len(line) == 4:
-                            c1 = line[0].strip()
-                            c2 = line[1].strip()
-                            line[3] = ' '.join(line[3].split())
-                            c3 = f"{line[2].strip()} {line[3].strip()}"                     
+                            c1, c2, c3, c4 = line[0].strip(), line[1].strip(), line[2].strip(), line[3].strip()
                         else:
-                            c1,c2,c3 = line[0].strip(), line[1].strip(), line[2].strip()
-                        lst = ([i, api_type, api, c1, c2, c3])
+                            c1,c2,c3, c4 = line[0].strip(), line[1].strip(), line[2].strip(), ''
 
-                        csv_writer.writerow(lst)
-                        i += 1
+                        line_dict = {"id": i,"api_type": api_type, "api_name": api,"method": c1, "uri": c2, "description": c3, 'parameters': c4}
+                        line_dict.update({"amorphous_uri": 0, "tidy_uri": 0, 'amorphous_comment': ""})
+                        line_dict.update({"crudy_uri": 0 , "verbless_uri": 0, "crudy_comment": ""})
+                        line_dict.update({"contextless_resource": 0, "contextual_resouce": 0, 'contextless_comment': ""})
+                        line_dict.update({"inconsistent_doc": 0, "consistent_doc": 0, 'inconsistent_comment': ""})
+                        line_dict.update({"less_cohesive_doc": 0, "cohesive_doc": 0, 'less_cohesive_comment': ""})
+                        line_dict.update({"non_descriptive_uri": 0, "descriptive_uri": 0, 'non_descriptive_comment': ""})
+                        line_dict.update({"non_hierarchical_nodes": 0, "hierarchical_nodes": 0, 'non_hierarchical_comment': ""})
+                        line_dict.update({"non_standard_uri": 0, "standard_uri": 0, 'non_standard_comment': ""})
+                        line_dict.update({"pluralized_nodes": 0, "singularized_nodes": 0, 'pluralized_comment': ""})
+                        line_dict.update({"unversioned_uri": 0, "versioned_uri": 0, 'unversioned_comment': ""})
+                        line_dict.update({"api_category": ""})
+                                    
 
-print("Data has been written to Alldata.csv")
+                        '''header_line = ['ID','API-Type', 'API-Name','HTTP Method','URI', 'Decription+Parameters', 
+                                       'AmorphousURI', 'TidyURI','Comment',
+                                        'NonStandardURI', 'StandarURI','Comment' ,
+                                        'CRUDyURI', 'VerblessURI', 'Comment',
+                                        'UnversionedURI', 'VersionedURI','Comment' , 
+                                        'PluralisedNodes', 'SingularNodes','Comment' , 
+                                        'NonDescriptiveURI','DescriptiveURI','Comment' , 
+                                        'ContextlessResource', 'ContextualResouce','Comment', 
+                                        'NonHierarchicalNodes', 'HierarchicalNodes', 'Comment',
+                                        'LessCohisiveDoc', 'CohisiveDoc','Comment', 
+                                        'InconsistantDoc', 'ConsistantDoc','Comment', 
+                                        "Type(Public/Private/Partner)"]'''
+    
+                        json_string=json.dumps(line_dict,ensure_ascii=False)
+                        out_file.write(json_string+"\n")
+                        i += 1     
+out_file.close()
+
+print("Data has been written to Alldata.jsonl")
 
 
 '''import csv

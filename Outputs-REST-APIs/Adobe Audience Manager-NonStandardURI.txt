@@ -3,68 +3,68 @@ Count: 0
 
 ***Patterns*** 
 Count: 65
-/models/{modelId}	Standard End-point	
-/models/{modelId}	Standard End-point	
-/models	Standard End-point	
-/models	Standard End-point	
-/models/{modelId}/processing-history	Standard End-point	
-/models/{modelId}/runs/latest/traits	Standard End-point	
-/models/{modelId}/runs/latest/stats	Standard End-point	
-/models/bulk-delete	Standard End-point	
-/models/limits	Standard End-point	
-/algorithms/{algoTypeId}	Standard End-point	
-/algorithms	Standard End-point	
-/available-data-feeds/	Standard End-point	
-/available-data-feeds/{dataSourceId}	Standard End-point	
-/available-data-feeds/{dataSourceId}/plans	Standard End-point	
-/available-data-feeds/{dataSourceId}/subscribe	Standard End-point	
-/available-data-feeds/{dataSourceId}/requests	Standard End-point	
-/data-feeds/billing-report	Standard End-point	
-/data-feeds/billing-report	Standard End-point	
-/data-feeds/usage	Standard End-point	
-/data-feeds/bulk-usage	Standard End-point	
-/destinations/segment-impressions/	Standard End-point	
-/destinations/segment-impressions/	Standard End-point	
-/data-feeds/	Standard End-point	
-/data-feeds/	Standard End-point	
-/data-feeds/{dataSourceId}	Standard End-point	
-/data-feeds/{dataSourceId}	Standard End-point	
-/data-feeds/{dataSourceId}	Standard End-point	
-/data-feeds/{dataSourceId}/plans/	Standard End-point	
-/data-feeds/{dataSourceId}/plans/	Standard End-point	
-/data-feeds/{dataSourceId}/subscriptions	Standard End-point	
-/data-feeds/{dataSourceId}/subscriptions	Standard End-point	
-/data-feeds/{dataSourceId}/requests/	Standard End-point	
-/data-feeds/{dataSourceId}/requests/	Standard End-point	
-/data-feeds/{dataSourceId}/requests/{requestId}	Standard End-point	
-/data-feeds/{dataSourceId}/requests/{requestId}	Standard End-point	
-/data-feeds/{dataSourceId}/potential-subscribers/	Standard End-point	
-/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	
-/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	
-/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	
-/datasources/	Standard End-point	
-/datasources/	Standard End-point	
-/datasources/{dataSourceId}	Standard End-point	
-/datasources/{dataSourceId}	Standard End-point	
-/datasources/{dataSourceId}	Standard End-point	
-/datasources/bulk-delete	Standard End-point	
-/datasources/configurations/available-id-types	Standard End-point	
-/datasources/configurations/marketing-cloud-visitorid-versions	Standard End-point	
-/datasources/{dataSourceId}/history/inbound	Standard End-point	
-/datasources/{dataSourceId}/history/inbound/sampling-data	Standard End-point	
-/signals/derived/{derivedSignalId}	Standard End-point	
-/signals/derived/{derivedSignalId}	Standard End-point	
-/signals/derived/{derivedSignalId}	Standard End-point	
-/signals/derived	Standard End-point	
-/signals/derived	Standard End-point	
-/signals/derived/limits	Standard End-point	
-/destinations/	Standard End-point	
-/destinations/	Standard End-point	
-/destinations/limits	Standard End-point	
-/destinations/{destinationId}/history/outbound/	Standard End-point	
-/destinations/{destinationId}	Standard End-point	
-/destinations/{destinationId}	Standard End-point	
-/destinations/{destinationId}	Standard End-point	
-/destinations/{destinationId}/bulk-create	Standard End-point	
-/destinations/{destinationId}/bulk-delete	Standard End-point	
-/destinations/{destinationId}/mappings-by-priority/	Standard End-point	
+/models/{modelId}	Standard End-point	Standard Endpoint
+/models/{modelId}	Standard End-point	Standard Endpoint
+/models	Standard End-point	Standard Endpoint
+/models	Standard End-point	Standard Endpoint
+/models/{modelId}/processing-history	Standard End-point	Standard Endpoint
+/models/{modelId}/runs/latest/traits	Standard End-point	Standard Endpoint
+/models/{modelId}/runs/latest/stats	Standard End-point	Standard Endpoint
+/models/bulk-delete	Standard End-point	Standard Endpoint
+/models/limits	Standard End-point	Standard Endpoint
+/algorithms/{algoTypeId}	Standard End-point	Standard Endpoint
+/algorithms	Standard End-point	Standard Endpoint
+/available-data-feeds/	Standard End-point	Standard Endpoint
+/available-data-feeds/{dataSourceId}	Standard End-point	Standard Endpoint
+/available-data-feeds/{dataSourceId}/plans	Standard End-point	Standard Endpoint
+/available-data-feeds/{dataSourceId}/subscribe	Standard End-point	Standard Endpoint
+/available-data-feeds/{dataSourceId}/requests	Standard End-point	Standard Endpoint
+/data-feeds/billing-report	Standard End-point	Standard Endpoint
+/data-feeds/billing-report	Standard End-point	Standard Endpoint
+/data-feeds/usage	Standard End-point	Standard Endpoint
+/data-feeds/bulk-usage	Standard End-point	Standard Endpoint
+/destinations/segment-impressions/	Standard End-point	Standard Endpoint
+/destinations/segment-impressions/	Standard End-point	Standard Endpoint
+/data-feeds/	Standard End-point	Standard Endpoint
+/data-feeds/	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/plans/	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/plans/	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/subscriptions	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/subscriptions	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/requests/	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/requests/	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/requests/{requestId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/requests/{requestId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/potential-subscribers/	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	Standard Endpoint
+/data-feeds/{dataSourceId}/plans/{planId}	Standard End-point	Standard Endpoint
+/datasources/	Standard End-point	Standard Endpoint
+/datasources/	Standard End-point	Standard Endpoint
+/datasources/{dataSourceId}	Standard End-point	Standard Endpoint
+/datasources/{dataSourceId}	Standard End-point	Standard Endpoint
+/datasources/{dataSourceId}	Standard End-point	Standard Endpoint
+/datasources/bulk-delete	Standard End-point	Standard Endpoint
+/datasources/configurations/available-id-types	Standard End-point	Standard Endpoint
+/datasources/configurations/marketing-cloud-visitorid-versions	Standard End-point	Standard Endpoint
+/datasources/{dataSourceId}/history/inbound	Standard End-point	Standard Endpoint
+/datasources/{dataSourceId}/history/inbound/sampling-data	Standard End-point	Standard Endpoint
+/signals/derived/{derivedSignalId}	Standard End-point	Standard Endpoint
+/signals/derived/{derivedSignalId}	Standard End-point	Standard Endpoint
+/signals/derived/{derivedSignalId}	Standard End-point	Standard Endpoint
+/signals/derived	Standard End-point	Standard Endpoint
+/signals/derived	Standard End-point	Standard Endpoint
+/signals/derived/limits	Standard End-point	Standard Endpoint
+/destinations/	Standard End-point	Standard Endpoint
+/destinations/	Standard End-point	Standard Endpoint
+/destinations/limits	Standard End-point	Standard Endpoint
+/destinations/{destinationId}/history/outbound/	Standard End-point	Standard Endpoint
+/destinations/{destinationId}	Standard End-point	Standard Endpoint
+/destinations/{destinationId}	Standard End-point	Standard Endpoint
+/destinations/{destinationId}	Standard End-point	Standard Endpoint
+/destinations/{destinationId}/bulk-create	Standard End-point	Standard Endpoint
+/destinations/{destinationId}/bulk-delete	Standard End-point	Standard Endpoint
+/destinations/{destinationId}/mappings-by-priority/	Standard End-point	Standard Endpoint

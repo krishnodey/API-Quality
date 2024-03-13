@@ -19,52 +19,52 @@ Count: 16
 
 ***Patterns*** 
 Count: 49
-/models/{modelId}	Tidy End-point	
-/models/{modelId}	Tidy End-point	
-/models	Tidy End-point	
-/models	Tidy End-point	
-/models/{modelId}/processing-history	Tidy End-point	
-/models/{modelId}/runs/latest/traits	Tidy End-point	
-/models/{modelId}/runs/latest/stats	Tidy End-point	
-/models/bulk-delete	Tidy End-point	
-/models/limits	Tidy End-point	
-/algorithms/{algoTypeId}	Tidy End-point	
-/algorithms	Tidy End-point	
-/available-data-feeds/{dataSourceId}	Tidy End-point	
-/available-data-feeds/{dataSourceId}/plans	Tidy End-point	
-/available-data-feeds/{dataSourceId}/subscribe	Tidy End-point	
-/available-data-feeds/{dataSourceId}/requests	Tidy End-point	
-/data-feeds/billing-report	Tidy End-point	
-/data-feeds/billing-report	Tidy End-point	
-/data-feeds/usage	Tidy End-point	
-/data-feeds/bulk-usage	Tidy End-point	
-/data-feeds/{dataSourceId}	Tidy End-point	
-/data-feeds/{dataSourceId}	Tidy End-point	
-/data-feeds/{dataSourceId}	Tidy End-point	
-/data-feeds/{dataSourceId}/subscriptions	Tidy End-point	
-/data-feeds/{dataSourceId}/subscriptions	Tidy End-point	
-/data-feeds/{dataSourceId}/requests/{requestId}	Tidy End-point	
-/data-feeds/{dataSourceId}/requests/{requestId}	Tidy End-point	
-/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	
-/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	
-/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	
-/datasources/{dataSourceId}	Tidy End-point	
-/datasources/{dataSourceId}	Tidy End-point	
-/datasources/{dataSourceId}	Tidy End-point	
-/datasources/bulk-delete	Tidy End-point	
-/datasources/configurations/available-id-types	Tidy End-point	
-/datasources/configurations/marketing-cloud-visitorid-versions	Tidy End-point	
-/datasources/{dataSourceId}/history/inbound	Tidy End-point	
-/datasources/{dataSourceId}/history/inbound/sampling-data	Tidy End-point	
-/signals/derived/{derivedSignalId}	Tidy End-point	
-/signals/derived/{derivedSignalId}	Tidy End-point	
-/signals/derived/{derivedSignalId}	Tidy End-point	
-/signals/derived	Tidy End-point	
-/signals/derived	Tidy End-point	
-/signals/derived/limits	Tidy End-point	
-/destinations/limits	Tidy End-point	
-/destinations/{destinationId}	Tidy End-point	
-/destinations/{destinationId}	Tidy End-point	
-/destinations/{destinationId}	Tidy End-point	
-/destinations/{destinationId}/bulk-create	Tidy End-point	
-/destinations/{destinationId}/bulk-delete	Tidy End-point	
+/models/{modelId}	Tidy End-point	Tidy Endpoint
+/models/{modelId}	Tidy End-point	Tidy Endpoint
+/models	Tidy End-point	Tidy Endpoint
+/models	Tidy End-point	Tidy Endpoint
+/models/{modelId}/processing-history	Tidy End-point	Tidy Endpoint
+/models/{modelId}/runs/latest/traits	Tidy End-point	Tidy Endpoint
+/models/{modelId}/runs/latest/stats	Tidy End-point	Tidy Endpoint
+/models/bulk-delete	Tidy End-point	Tidy Endpoint
+/models/limits	Tidy End-point	Tidy Endpoint
+/algorithms/{algoTypeId}	Tidy End-point	Tidy Endpoint
+/algorithms	Tidy End-point	Tidy Endpoint
+/available-data-feeds/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/available-data-feeds/{dataSourceId}/plans	Tidy End-point	Tidy Endpoint
+/available-data-feeds/{dataSourceId}/subscribe	Tidy End-point	Tidy Endpoint
+/available-data-feeds/{dataSourceId}/requests	Tidy End-point	Tidy Endpoint
+/data-feeds/billing-report	Tidy End-point	Tidy Endpoint
+/data-feeds/billing-report	Tidy End-point	Tidy Endpoint
+/data-feeds/usage	Tidy End-point	Tidy Endpoint
+/data-feeds/bulk-usage	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/subscriptions	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/subscriptions	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/requests/{requestId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/requests/{requestId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	Tidy Endpoint
+/data-feeds/{dataSourceId}/plans/{planId}	Tidy End-point	Tidy Endpoint
+/datasources/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/datasources/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/datasources/{dataSourceId}	Tidy End-point	Tidy Endpoint
+/datasources/bulk-delete	Tidy End-point	Tidy Endpoint
+/datasources/configurations/available-id-types	Tidy End-point	Tidy Endpoint
+/datasources/configurations/marketing-cloud-visitorid-versions	Tidy End-point	Tidy Endpoint
+/datasources/{dataSourceId}/history/inbound	Tidy End-point	Tidy Endpoint
+/datasources/{dataSourceId}/history/inbound/sampling-data	Tidy End-point	Tidy Endpoint
+/signals/derived/{derivedSignalId}	Tidy End-point	Tidy Endpoint
+/signals/derived/{derivedSignalId}	Tidy End-point	Tidy Endpoint
+/signals/derived/{derivedSignalId}	Tidy End-point	Tidy Endpoint
+/signals/derived	Tidy End-point	Tidy Endpoint
+/signals/derived	Tidy End-point	Tidy Endpoint
+/signals/derived/limits	Tidy End-point	Tidy Endpoint
+/destinations/limits	Tidy End-point	Tidy Endpoint
+/destinations/{destinationId}	Tidy End-point	Tidy Endpoint
+/destinations/{destinationId}	Tidy End-point	Tidy Endpoint
+/destinations/{destinationId}	Tidy End-point	Tidy Endpoint
+/destinations/{destinationId}/bulk-create	Tidy End-point	Tidy Endpoint
+/destinations/{destinationId}/bulk-delete	Tidy End-point	Tidy Endpoint

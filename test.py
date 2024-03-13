@@ -1,6 +1,7 @@
 from file_handler import FileReadWrite
 from display_options import APIChoice
 from api_analyzer import ApiAnalyzer
+import csv
 
 
 print("Select an API Type")
@@ -8,8 +9,10 @@ print("1. REST APIs\n2. GraphQL APIs")
 api= int(input())
 if api == 1:
     base_path = "REST-APIs/"
+    api_type = 'REST'
 elif api == 2:
     base_path = "GraphQL-APIs/"
+    api_type = 'GraphQL'
 else:
     print("Enter a Valid Number")
 
@@ -23,58 +26,58 @@ selected = api_obj.get_selected_choice()
 print(f"Your selected choice is: {selected}")
 
 
-
 #patterns and anti-patterns
 uri_path = base_path+selected+"/"+selected+".txt"
 uri_obj = FileReadWrite(uri_path)
-data = uri_obj.read_data()
-
-uri = []
-des = []
-for line in data:
-    line  = line.split(">>")
-    uri.append(line[1])
+#data = uri_obj.read_data()
+#print(data)
+#uri = []
+#des = []
+#for line in data:
+#    line  = line.split(">>")
+#    uri.append(line[1])
 
 #print(uri)
 
-analyzer_obj = ApiAnalyzer(data)
+analyzer_obj = ApiAnalyzer(api_type, selected)
 #analyzer_obj.detect_amorphous_uri()
 
 print("Detection of AmorphousURI:")
-result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_amorphous_uri()
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_amorphous_uri()
+#analyzer_obj.detect_amorphous_uri()
 pattern_type = "AmorphousURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
+#uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of AmorphousURI.\n")
 
 
 print("Detection of NonStandardURI:")
-result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_non_standard_uri()
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_standard_uri()
 pattern_type = "NonStandardURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
+#uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of NonStandardURI:\n")
 
 
-
+'''
 print("Detection of CRUDyURI:")
 result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_crudy_uri()
 pattern_type = "CRUDyURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
 uri_obj.write_out_data(re, selected, pattern_type, base_path)
-print("\nFinished Detection of CRUDyURI:\n")
+print("\nFinished Detection of CRUDyURI:\n")'''
 
 
 print("Detection of UnversionedURIs:")
-result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_unversioned_uris()
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_unversioned_uris()
 pattern_type = "UnversionedURIs"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
+#uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of UnversionedURIs:\n")
 
 
 
-print("Detection of PluralisedNodes:")
+'''print("Detection of PluralisedNodes:")
 result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_pluralized_node()
 pattern_type = "PluralisedNodes"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
@@ -119,6 +122,5 @@ result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_less_cohesive_do
 pattern_type = "LessCohisiveDoc"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
 uri_obj.write_out_data(re, selected, pattern_type, base_path)
-print("\nFinished Detection of LessCohisiveDocumentation:\n")
-
+print("\nFinished Detection of LessCohisiveDocumentation:\n")'''
 
