@@ -3,18 +3,18 @@ Count: 0
 
 ***Patterns*** 
 Count: 15
-/auth/login	Tidy End-point	
-/auth/token	Tidy End-point	
-/auth/revoke	Tidy End-point	
-/settings	Tidy End-point	
-/flows	Tidy End-point	
-/flows	Tidy End-point	
-/flow	Tidy End-point	
-/flow/:id	Tidy End-point	
-/flow/:id	Tidy End-point	
-/flow/:id	Tidy End-point	
-/nodes	Tidy End-point	
-/nodes	Tidy End-point	
-/nodes/:module	Tidy End-point	
-/nodes/:module	Tidy End-point	
-/nodes/:module	Tidy End-point	
+/auth/login	Tidy End-point	Tidy Endpoint
+/auth/token	Tidy End-point	Tidy Endpoint
+/auth/revoke	Tidy End-point	Tidy Endpoint
+/settings	Tidy End-point	Tidy Endpoint
+/flows	Tidy End-point	Tidy Endpoint
+/flows	Tidy End-point	Tidy Endpoint
+/flow	Tidy End-point	Tidy Endpoint
+/flow/:id	Tidy End-point	Tidy Endpoint
+/flow/:id	Tidy End-point	Tidy Endpoint
+/flow/:id	Tidy End-point	Tidy Endpoint
+/nodes	Tidy End-point	Tidy Endpoint
+/nodes	Tidy End-point	Tidy Endpoint
+/nodes/:module	Tidy End-point	Tidy Endpoint
+/nodes/:module	Tidy End-point	Tidy Endpoint
+/nodes/:module	Tidy End-point	Tidy Endpoint

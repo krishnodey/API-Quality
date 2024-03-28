@@ -17,40 +17,40 @@ Count: 14
 
 ***Patterns*** 
 Count: 37
-/v2/users/:id/bookmarks	Tidy End-point	
-/v2/users/:id/bookmarks	Tidy End-point	
-/v2/tweets/search/stream	Tidy End-point	
-/v2/tweets/search/stream/rules	Tidy End-point	
-/tweets/search/stream	Tidy End-point	
-/v2/tweets/:id/hidden	Tidy End-point	
-/v2/users/:id/likes	Tidy End-point	
-/v2/tweets/:id	Tidy End-point	
-/v2/tweets	Tidy End-point	
-/v2/tweets/:id/retweets	Tidy End-point	
-/v2/users/:id/retweets	Tidy End-point	
-/v2/tweets/search/all	Tidy End-point	
-/v2/tweets/search/recent	Tidy End-point	
-/v2/users/:id/mentions	Tidy End-point	
-/v2/users/:id/tweets	Tidy End-point	
-/v2/tweets/counts/all	Tidy End-point	
-/v2/tweets/counts/recent	Tidy End-point	
-/v2/users/:id/blocking	Tidy End-point	
-/v2/users/:id/followers	Tidy End-point	
-/v2/users/:id/following	Tidy End-point	
-/v2/users/:id/following	Tidy End-point	
-/v2/users/:id/muting	Tidy End-point	
-/v2/users/:id/muting	Tidy End-point	
-/v2/users/search	Tidy End-point	
-/v2/users	Tidy End-point	
-/v2/users/:id	Tidy End-point	
-/v2/users/by	Tidy End-point	
-/v2/users/by/username/:username	Tidy End-point	
-/v2/users/me	Tidy End-point	
-/v2/spaces/search	Tidy End-point	
-/v2/spaces/:id	Tidy End-point	
-/v2/spaces/:id/buyers	Tidy End-point	
-/v2/spaces/:id/tweets	Tidy End-point	
-/v2/lists/:id/tweets	Tidy End-point	
-/v2/lists/:id	Tidy End-point	
-/v2/lists/:id/members	Tidy End-point	
-/v2/lists/:id/members	Tidy End-point	
+/v2/users/:id/bookmarks	Tidy End-point	Tidy Endpoint
+/v2/users/:id/bookmarks	Tidy End-point	Tidy Endpoint
+/v2/tweets/search/stream	Tidy End-point	Tidy Endpoint
+/v2/tweets/search/stream/rules	Tidy End-point	Tidy Endpoint
+/tweets/search/stream	Tidy End-point	Tidy Endpoint
+/v2/tweets/:id/hidden	Tidy End-point	Tidy Endpoint
+/v2/users/:id/likes	Tidy End-point	Tidy Endpoint
+/v2/tweets/:id	Tidy End-point	Tidy Endpoint
+/v2/tweets	Tidy End-point	Tidy Endpoint
+/v2/tweets/:id/retweets	Tidy End-point	Tidy Endpoint
+/v2/users/:id/retweets	Tidy End-point	Tidy Endpoint
+/v2/tweets/search/all	Tidy End-point	Tidy Endpoint
+/v2/tweets/search/recent	Tidy End-point	Tidy Endpoint
+/v2/users/:id/mentions	Tidy End-point	Tidy Endpoint
+/v2/users/:id/tweets	Tidy End-point	Tidy Endpoint
+/v2/tweets/counts/all	Tidy End-point	Tidy Endpoint
+/v2/tweets/counts/recent	Tidy End-point	Tidy Endpoint
+/v2/users/:id/blocking	Tidy End-point	Tidy Endpoint
+/v2/users/:id/followers	Tidy End-point	Tidy Endpoint
+/v2/users/:id/following	Tidy End-point	Tidy Endpoint
+/v2/users/:id/following	Tidy End-point	Tidy Endpoint
+/v2/users/:id/muting	Tidy End-point	Tidy Endpoint
+/v2/users/:id/muting	Tidy End-point	Tidy Endpoint
+/v2/users/search	Tidy End-point	Tidy Endpoint
+/v2/users	Tidy End-point	Tidy Endpoint
+/v2/users/:id	Tidy End-point	Tidy Endpoint
+/v2/users/by	Tidy End-point	Tidy Endpoint
+/v2/users/by/username/:username	Tidy End-point	Tidy Endpoint
+/v2/users/me	Tidy End-point	Tidy Endpoint
+/v2/spaces/search	Tidy End-point	Tidy Endpoint
+/v2/spaces/:id	Tidy End-point	Tidy Endpoint
+/v2/spaces/:id/buyers	Tidy End-point	Tidy Endpoint
+/v2/spaces/:id/tweets	Tidy End-point	Tidy Endpoint
+/v2/lists/:id/tweets	Tidy End-point	Tidy Endpoint
+/v2/lists/:id	Tidy End-point	Tidy Endpoint
+/v2/lists/:id/members	Tidy End-point	Tidy Endpoint
+/v2/lists/:id/members	Tidy End-point	Tidy Endpoint

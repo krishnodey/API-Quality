@@ -48,21 +48,21 @@ class ApiAnalyzer:
                     #id, apis_type, api_name, verb, uri, des, para = line[0], line[1], line[2], line[3], line[4], line[5], ''
             
                 if row["api_type"] == api_type and row["api_name"] == api:
-                    self.id.append(row["id"])
+                    #self.id.append(row["id"])
                     self.description.append(row["description"] + row["parameters"])
-                    self.nodes.append(row["uri"])
-                    self.http_method.append(row["method"])
+                    #self.nodes.append(row["uri"])
+                    #self.http_method.append(row["method"])
         
 
-        clean = UriCleaning()
+        self.clean = UriCleaning()
         #splitted_nodes = clean.get_uri_nodes(line)
 
         self.processed_des =[]
         for des in self.description:
-            self.processed_des.append(clean.preprocess_documentation(des))
-        self.processed_nodes =[]
+            self.processed_des.append(self.clean.preprocess_documentation(des))
+        '''self.processed_nodes =[]
         for nd in self.nodes:
-            self.processed_nodes.append(clean.get_uri_nodes(nd))
+            self.processed_nodes.append(self.clean.get_uri_nodes(nd))'''
 
         #self.clean_description = extend(processed_des)
         
@@ -281,43 +281,58 @@ class ApiAnalyzer:
         crudyURIResult_P = []
         p_count = 0
         ap_count = 0
-        crudy_lst = []
+
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']
+                    method = row['method']
+                    nodes = self.clean.get_uri_nodes(uris)
         
-        for method, nodes, uris, doc in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
-            #tmp = ur.strip().split(">>")
-            #print(tmp)
+                #for method, nodes, uris, doc in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
+                    #tmp = ur.strip().split(">>")
+                    #print(tmp)
 
-            good_type = False
-            comment = ""
-            ap_found = False
-            
-            if len(nodes) < 1:
-                good_type = True
-            # Check if any CRUDy word is found in the URI
-            for node_word in nodes:
-                for crudy_word in crudyWords:
-                    if node_word.lower() == crudy_word.lower():
-                        good_type = False
-                        ap_found = True
-                        comment += f" [{crudy_word} found] "
-                        break
-                    else:
+                    good_type = False
+                    comment = ""
+                    ap_found = False
+                    
+                    if len(nodes) < 1:
                         good_type = True
+                    # Check if any CRUDy word is found in the URI
+                    for node_word in nodes:
+                        for crudy_word in crudyWords:
+                            if node_word.lower() == crudy_word.lower():
+                                good_type = False
+                                ap_found = True
+                                comment += f" [{crudy_word} found] "
+                                break
+                            else:
+                                good_type = True
 
-                if ap_found:
-                    break
+                        if ap_found:
+                            break
 
-            if not good_type:
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t{comment}"
-                ap_count = ap_count + 1
-                crudyURIResult_AP.append(f"{uris.strip()}\t{AP}\t{comment}")
-            else:
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t{comment}"
-                p_count = p_count + 1
-                crudyURIResult_P.append(f"{uris.strip()}\t{P}\t{comment}")
-            crudy_lst.append(msg)
-            print("->", end=" ")
-        return crudyURIResult_AP, crudyURIResult_P, p_count, ap_count, crudy_lst
+                    if not good_type:
+                        row['crudy_uri'] = 1
+                        row['verbless_uri'] = 0
+                        ap_count = ap_count + 1
+                        crudyURIResult_AP.append(f"{uris.strip()}\t{AP}\t{comment}")
+                    else:
+                        row['crudy_uri'] = 0
+                        row['verbless_uri'] = 1
+                        p_count = p_count + 1
+                        crudyURIResult_P.append(f"{uris.strip()}\t{P}\t{comment}")
+                    row['crudy_comment']
+                    print("->", end=" ")
+                json_string=json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return crudyURIResult_AP, crudyURIResult_P, p_count, ap_count
     
     
 
@@ -376,60 +391,78 @@ class ApiAnalyzer:
         AP = "Pluralized Nodes"
         p_count = 0
         ap_count = 0
-        plural_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        plural_lst.append(msg)
-
+    
         def is_plural(word):
             lemmatizer = WordNetLemmatizer()
             lemma = lemmatizer.lemmatize(word, pos='n')
             return word != lemma
         #print(is_plural("sources"))
 
-        for method, uris, nodes, doc in zip(self.http_method, self.nodes, self.processed_nodes, self.description):
-            
-            comment1 = " [Singular last node with POST method.] "
-            comment2 = " [Pluralized last node with POST method.] "
-            comment3 = " [Pluralized last node with PUT|DELETE method.] "
-            comment4 = " [Singular last node with PUT|DELETE method.] "
-            comment5 = "Regular methods"
+        #for method, uris, nodes, doc in zip(self.http_method, self.nodes, self.processed_nodes, self.description):
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']  
+                    method = row['method']
+                    nodes = self.clean.get_uri_nodes(uris)
+                    comment1 = "Singular last node with POST method"
+                    comment2 = "Pluralized last node with POST method"
+                    comment3 = "Pluralized last node with PUT and DELETE method"
+                    comment4 = "Singular last node with PUT and DELETE method"
+                    comment5 = "Regular methods"
 
-            #if no nodes in uri
-            #print(nodes)
-            if len(nodes) < 1: 
-                p_count += 1
-                pluralised_result_P.append(f"{method}\t{uris.strip()}\t{P}\t {comment5}")
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t {comment5}"
-                plural_lst.append(msg)
-                continue
-            last_node = nodes[-1]
+                    #if no nodes in uri
+                    #print(nodes)
+                    if len(nodes) < 1:
+                        row['pluralized_nodes'] = 0
+                        row['singularized_nodes'] = 1
+                        row['pluralized_comment'] = comment5
+                        p_count += 1
+                        pluralised_result_P.append(f"{method}\t{uris.strip()}\t{P}\t {comment5}")
+                        continue
+                    last_node = nodes[-1]
 
-            if method.strip() == "POST":
-                if is_plural(last_node):
-                    p_count += 1
-                    pluralised_result_P.append(f"{method}\t{uris.strip()}\t{P}\t{comment2}")
-                    msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t {comment2}"
-                else:
-                    ap_count += 1
-                    pluralised_result_AP.append(f"{method}\t{uris.strip()}\t{AP}\t{comment1}")
-                    msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t {comment1}"
+                    if method.strip() == "POST":
+                        if is_plural(last_node):
+                            p_count += 1
+                            row['pluralized_nodes'] = 0
+                            row['singularized_nodes'] = 1
+                            row['pluralized_comment'] = comment2
+                            pluralised_result_P.append(f"{method}\t{uris.strip()}\t{P}\t{comment2}")
+                        else:
+                            row['pluralized_nodes'] = 1
+                            row['singularized_nodes'] = 0
+                            row['pluralized_comment'] = comment1
+                            ap_count += 1
+                            pluralised_result_AP.append(f"{method}\t{uris.strip()}\t{AP}\t{comment1}")
 
-            elif method.strip() == "DELETE" or method.strip() == "PUT":
-                if is_plural(last_node):
-                    ap_count += 1
-                    pluralised_result_AP.append(f"{method}\t{uris.strip()}\t{AP}\t{comment3}")
-                    msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t {comment3}"
-                else:
-                    p_count += 1
-                    pluralised_result_P.append(f"{method}\t{uris.strip()}\t{P}\t{comment4}")
-                    msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t {comment4}"
-            else:
-                p_count += 1
-                pluralised_result_P.append(f"{method}\t{uris.strip()}\t {comment5}")
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t {comment5}"
-            plural_lst.append(msg)
-            print("->", end=" ")
-        return pluralised_result_AP, pluralised_result_P, p_count, ap_count, plural_lst
+                    elif method.strip() == "DELETE" or method.strip() == "PUT":
+                        if is_plural(last_node):
+                            row['pluralized_nodes'] = 1
+                            row['singularized_nodes'] = 0
+                            row['pluralized_comment'] = comment3
+                            ap_count += 1
+                            pluralised_result_AP.append(f"{method}\t{uris.strip()}\t{AP}\t{comment3}")
+                        else:
+                            row['pluralized_nodes'] = 0
+                            row['singularized_nodes'] = 1
+                            row['pluralized_comment'] = comment4
+                            p_count += 1
+                            pluralised_result_P.append(f"{method}\t{uris.strip()}\t{P}\t{comment4}")
+                    else:
+                        row['pluralized_nodes'] = 0
+                        row['singularized_nodes'] = 1
+                        row['pluralized_comment'] = comment5    
+                        p_count += 1
+                        pluralised_result_P.append(f"{method}\t{uris.strip()}\t {comment5}")
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+        return pluralised_result_AP, pluralised_result_P, p_count, ap_count
     
 
     def detect_non_descriptive_uri(self):
@@ -439,35 +472,48 @@ class ApiAnalyzer:
         AP = "Non-descriptive End-point"
         p_count = 0
         ap_count = 0
-        des_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        des_lst.append(msg)
 
 
-        for method, uris,nodes, doc in zip(self.http_method, self.nodes, self.processed_nodes, self.description):
+        #for method, uris,nodes, doc in zip(self.http_method, self.nodes, self.processed_nodes, self.description):
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']  
+                    #method = row['method']
+                    nodes = self.clean.get_uri_nodes(uris)
         
-            pattern = True
+                    pattern = True
 
-            for word in nodes:
-                # Perform word lookup operation
-                synsets = wn.synsets(word.strip())
-                
-                if synsets:
-                    pattern = pattern | True
-                else:
-                    pattern = pattern & False
+                    for word in nodes:
+                        # Perform word lookup operation
+                        synsets = wn.synsets(word.strip())
+                        
+                        if synsets:
+                            pattern = pattern | True
+                        else:
+                            pattern = pattern & False
 
-            if not pattern:
-                ap_count = ap_count + 1
-                non_descriptive_AP.append(f"{uris.strip()}\t {AP}")
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 1 \t 0 \t{AP}"
-            elif pattern:
-                p_count = p_count + 1
-                self_descriptive_P.append(f"{uris.strip()}\t {P}")
-                msg = f"{method.strip()} \t {uris.strip()} \t {doc.strip()} \t 0 \t 1 \t {P}"
-            des_lst.append(msg)
-            print("->", end=" ")
-        return non_descriptive_AP, self_descriptive_P, p_count, ap_count, des_lst
+                    if not pattern:
+                        row['non_descriptive_uri'] = 1
+                        row['descriptive_uri'] = 0
+                        row['non_descriptive_comment'] = AP
+                        ap_count = ap_count + 1
+                        non_descriptive_AP.append(f"{uris.strip()}\t {AP}")
+                    elif pattern:
+                        row['non_descriptive_uri'] = 0
+                        row['descriptive_uri'] = 1
+                        row['non_descriptive_comment'] = P
+                        p_count = p_count + 1
+                        self_descriptive_P.append(f"{uris.strip()}\t {P}")                    
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return non_descriptive_AP, self_descriptive_P, p_count, ap_count
     
 
     def detect_contextless(self):
@@ -477,10 +523,6 @@ class ApiAnalyzer:
         AP = "Contextless Resource Names"
         p_count = 0
         ap_count = 0
-        context_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        context_lst.append(msg)
-
         # Tokenize, remove stopwords, and lemmatize the descriptions
         nlp = spacy.load("en_core_web_lg")
         #stop_words = set(stopwords.words('english'))
@@ -498,6 +540,7 @@ class ApiAnalyzer:
             return simi
 
         # Create a dictionary and corpus for LDA modeling
+        #print(self.processed_des)
         dictionary = corpora.Dictionary(self.processed_des)
         corpus = [dictionary.doc2bow(text) for text in self.processed_des]
 
@@ -521,57 +564,77 @@ class ApiAnalyzer:
                 similarity_scores[f"Topic {idx}"] = word_similarity
             return similarity_scores
 
-        for method, combined_node, origianl_node, des in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
+        #for method, combined_node, origianl_node, des in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
             #print(f"{method}---{combined_node}---{des}")
-            if len(combined_node)<1:
-                p_count = p_count + 1
-                contextual_P.append(f"-{origianl_node}\t{P}")
-                msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
-                context_lst.append(msg)
-                continue
-            # Calculate similarity for each individual node
-            node_word_similarity = {}
-            topic_avg = []
-            for node in combined_node:
-                node_word_similarity[node] = calculate_similarity(node, topic_words)
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']  
+                    method = row['method']
+                    des = row['description']
+                    combined_node = self.clean.get_uri_nodes(uris)
+        
+                    if len(combined_node)<1:
+                        row['contextless_resource'] = 0
+                        row['contextual_resouce'] = 1
+                        row['contextless_comment'] = P
+                        p_count = p_count + 1
+                        contextual_P.append(f"-{uris}\t{P}")
+                        continue
+                    # Calculate similarity for each individual node
+                    node_word_similarity = {}
+                    topic_avg = []
+                    for node in combined_node:
+                        node_word_similarity[node] = calculate_similarity(node, topic_words)
+                    
+                    # Print the results with combined URI format and individual nodes
+                    #print(f"Node: {combined_node}")
+                    
+                    # Iterate through topics and print scores vertically
+                    for topic_idx in range(len(topic_words)):
+                        topic_name = f"Topic {topic_idx + 1}"
+                        #print(f"  {topic_name}:")
+                        tmp = 0
+                        for node, word_scores in node_word_similarity.items():
+                            score = word_scores.get(topic_name, {})
+                            #print(f"    {node}: {score}")  # Print scores for each node under the topic
+                            max_key = max(score, key = score.get)
+                            max_val = score[max_key]
+                            #print(max_val)
+                            tmp += max_val
+                        avg_tmp = tmp / len(node_word_similarity)
+                        topic_avg.append(avg_tmp)
+                    
+                        #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                    
+                    #print(f"Total Average for All Topics: {topic_avg}\n")
+                    #for avg in topic_avg:
+                    
+                    #print(max(topic_avg))
+                    if round(max(topic_avg),1) >= 0.5:
+                        row['contextless_resource'] = 0
+                        row['contextual_resouce'] = 1
+                        row['contextless_comment'] = P
+                        #print("contextual")
+                        p_count = p_count + 1
+                        contextual_P.append(f"{uris.strip()}\t {P}")
+                    else:
+                        row['contextless_resource'] = 1
+                        row['contextual_resouce'] = 0
+                        row['contextless_comment'] = AP
+                        #print("contextless")
+                        ap_count = ap_count + 1
+                        contextless_AP.append(f"{uris.strip()}\t {AP}")
             
-            # Print the results with combined URI format and individual nodes
-            #print(f"Node: {combined_node}")
-            
-            # Iterate through topics and print scores vertically
-            for topic_idx in range(len(topic_words)):
-                topic_name = f"Topic {topic_idx + 1}"
-                #print(f"  {topic_name}:")
-                tmp = 0
-                for node, word_scores in node_word_similarity.items():
-                    score = word_scores.get(topic_name, {})
-                    #print(f"    {node}: {score}")  # Print scores for each node under the topic
-                    max_key = max(score, key = score.get)
-                    max_val = score[max_key]
-                    #print(max_val)
-                    tmp += max_val
-                avg_tmp = tmp / len(node_word_similarity)
-                topic_avg.append(avg_tmp)
-                print("->", end=" ")
-                #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
-            
-            #print(f"Total Average for All Topics: {topic_avg}\n")
-            #for avg in topic_avg:
-            
-            #print(max(topic_avg))
-            if round(max(topic_avg),1) >= 0.5:
-                #print("contextual")
-                p_count = p_count + 1
-                contextual_P.append(f"{origianl_node.strip()}\t {P}")
-                msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
-            else:
-                #print("contextless")
-                ap_count = ap_count + 1
-                contextless_AP.append(f"{origianl_node.strip()}\t {AP}")
-                msg = f"{method.strip()}\t{origianl_node.strip()}\t{des.strip()} \t 1 \t 0 \t {AP}"
-            context_lst.append(msg)
-            #print("->", end=" ")
-        return contextless_AP, contextual_P, p_count, ap_count, context_lst
+                    print("->", end=" ")
+                
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+        return contextless_AP, contextual_P, p_count, ap_count
     
 
 
@@ -584,63 +647,78 @@ class ApiAnalyzer:
         non_hierarchy_result_P = []
         p_count = 0
         ap_count = 0
-        hier_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        hier_lst.append(msg)
 
-        for method, nodes, uri, doc in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
+        #for method, nodes, uri, doc in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']  
+                    #method = row['method']
+                    #des = row['description']
+                    nodes = self.clean.get_uri_nodes(uris)
+                    #reliability = LexicalResult.Reliability()
+                    result_information = ""
+                    hierarchies = 0
+                    good_type = True
+                    P_detection = False
+                    AP_detection = False
 
-            #reliability = LexicalResult.Reliability()
-            result_information = ""
-            hierarchies = 0
-            good_type = True
-            P_detection = False
-            AP_detection = False
+                    hier_matric = HierarchicalMetrics()
 
-            hier_matric = HierarchicalMetrics()
+                    if len(nodes) >= 2:
+                        for j in range(len(nodes) - 1):
+                            nodeA = nodes[j]
+                            nodeB = nodes[j + 1]
 
-            if len(nodes) >= 2:
-                for j in range(len(nodes) - 1):
-                    nodeA = nodes[j]
-                    nodeB = nodes[j + 1]
+                            if nodeA and nodeB:
+                                #print(f"{nodeA} ---- {nodeB}")
+                                relation_type = hier_matric.reversed_hierarchy(nodeA, nodeB)
 
-                    if nodeA and nodeB:
-                        #print(f"{nodeA} ---- {nodeB}")
-                        relation_type = hier_matric.reversed_hierarchy(nodeA, nodeB)
+                                if relation_type:
+                                    AP_detection = True
+                                    result_information += f"Reversed hierarchy of type {relation_type} detected between {nodeA} and {nodeB}. "
+                                    break
 
-                        if relation_type:
-                            AP_detection = True
-                            result_information += f"Reversed hierarchy of type {relation_type} detected between {nodeA} and {nodeB}. "
-                            break
+                                elif hier_matric.specialization_hierarchy(nodeA, nodeB):
+                                    P_detection = True
+                                    result_information += f"Specialization hierarchy detected between {nodeA} and {nodeB}. "
+                                    hierarchies += 1
+                                    #reliability.multiply_detection_reliability(LexicalResult.Reliability.AMBIGUOUS_DETECTION)
 
-                        elif hier_matric.specialization_hierarchy(nodeA, nodeB):
-                            P_detection = True
-                            result_information += f"Specialization hierarchy detected between {nodeA} and {nodeB}. "
-                            hierarchies += 1
-                            #reliability.multiply_detection_reliability(LexicalResult.Reliability.AMBIGUOUS_DETECTION)
+                        if P_detection or AP_detection:
+                            max_chain_length = len(self.nodes) - 1
+                            if AP_detection:
+                                if hierarchies == 0:
+                                    good_type = False
+                                    result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
+                            elif P_detection:
+                                if hierarchies >= 1:
+                                    good_type = True
+                                    result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
 
-                if P_detection or AP_detection:
-                    max_chain_length = len(self.nodes) - 1
-                    if AP_detection:
-                        if hierarchies == 0:
-                            good_type = False
-                            result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
-                    elif P_detection:
-                        if hierarchies >= 1:
-                            good_type = True
-                            result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
-
-            if not good_type:
-                ap_count = ap_count + 1
-                non_hierarchy_result_AP.append(f"{uri.strip()}\t{AP}\t{result_information}")
-                msg = f"{method.strip()} \t {uri.strip()} \t {doc.strip()} \t 1 \t 0 \t {result_information}"
-            else:
-                p_count = p_count + 1
-                non_hierarchy_result_P.append(f"{uri.strip()}\t{P}\t{result_information}")
-                msg = f"{method.strip()} \t {uri.strip()} \t {doc.strip()} \t 0 \t 1 \t {result_information}"
-            hier_lst.append(msg)
-            print("->", end=" ")
-        return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count, hier_lst
+                    if not good_type:
+                        row['non_hierarchical_nodes'] = 1
+                        row['hierarchical_nodes'] = 0
+                        row['non_hierarchical_comment'] = AP
+                        ap_count = ap_count + 1
+                        non_hierarchy_result_AP.append(f"{uris.strip()}\t{AP}\t{result_information}")
+                    
+                    else:
+                        row['non_hierarchical_nodes'] = 0
+                        row['hierarchical_nodes'] = 1
+                        row['non_hierarchical_comment'] = P
+                        p_count = p_count + 1
+                        non_hierarchy_result_P.append(f"{uris.strip()}\t{P}\t{result_information}")
+                        
+                    print("->", end=" ")
+            
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+        return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
     
 
     
@@ -654,12 +732,6 @@ class ApiAnalyzer:
         less_cohesive_P = []
         p_count = 0
         ap_count = 0
-
-        cohisive_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        cohisive_lst.append(msg)
-
-
         # Tokenize, remove stopwords, and lemmatize the descriptions
         nlp = spacy.load("en_core_web_lg")
         #stop_words = set(stopwords.words('english'))
@@ -682,83 +754,100 @@ class ApiAnalyzer:
                 similarity_scores[f"Topic {idx}"] = word_similarity
             return similarity_scores
 
-        for method, combined_node, documentation, node_uri, des in zip(self.http_method, self.processed_nodes,self.processed_des, self.nodes, self.description):
+        #for method, combined_node, documentation, node_uri, des in zip(self.http_method, self.processed_nodes,self.processed_des, self.nodes, self.description):
             #print(f"\nn {method}---{combined_node}----{documentation}-{des}")
             # Calculate similarity for each individual node
-            topics = len(combined_node)
-            #print(topics)
-            #print(combined_node)
-            #print(documentation)
-            if len(documentation)<1 or len(combined_node) < 1 :
-                p_count = p_count + 1
-                less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des}")
-                msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
-                cohisive_lst.append(msg)
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uris = row['uri']  
+                    #method = row['method']
+                    des = row['description']
+                    documentation = self.clean.preprocess_documentation(des)
+                    combined_node = self.clean.get_uri_nodes(uris)
+        
+                    topics = len(combined_node)
+                    #print(topics)
+                    #print(combined_node)
+                    #print(documentation)
+                    if len(documentation)<1 or len(combined_node) < 1 :
+                        p_count = p_count + 1
+                        less_cohesive_P.append(f"-{uris.strip()}\t{P}\t{des}")
+                        continue
+                        
+                    # Create a dictionary and corpus for LDA modeling
+                    dictionary = corpora.Dictionary([documentation])
+                    corpus = [dictionary.doc2bow(text) for text in [documentation]]
+
+                    # Train LDA model
+                    lda_model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=topics, random_state=42)
+
+                    # Get topic words from the model
+                    topic_words = []
+                    for topic_id in range(lda_model.num_topics):
+                        topic_words.append([word for word, _ in lda_model.show_topic(topic_id)])
+                    #print(topic_words)
+
+                    # Display topic words horizontally
+                    '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
+                    print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
+
+
+                    node_word_similarity = {}
+                    topic_avg = []
+                    for node in combined_node:
+                        node_word_similarity[node] = calculate_similarity(node, topic_words)
+                        
+                    
+                    # Print the results with combined URI format and individual nodes
+                    #print(f"Node: {combined_node}")
+                    
+                    # Iterate through topics and print scores vertically
+                    for topic_idx in range(len(topic_words)):
+                        topic_name = f"Topic {topic_idx + 1}"
+                        #print(f"  {topic_name}:")
+                        tmp = 0
+                        for node, word_scores in node_word_similarity.items():
+                            score = word_scores.get(topic_name, {})
+                            #print(f"    {node}: {score}")  # Print scores for each node under the topic
+                            #tmp1 = simi_average(score)
+                            #print(tmp1)
+                            max_value_key = max(score, key=score.get)
+                            max_value = score[max_value_key]
+                            #print(max_value)
+                            tmp += max_value
+                        avg_tmp = tmp / len(node_word_similarity)
+                        topic_avg.append(avg_tmp)
+                        #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                        
+                    
+                    #print(f"Total Average for All Topics: {topic_avg}\n")
+                    #for avg in topic_avg:
+                    #print(max(topic_avg))
+                    if round(max(topic_avg), 1) >= 0.5:
+                        row['less_cohesive_doc'] = 0
+                        row['cohesive_doc'] = 1
+                        row['less_cohesive_comment'] = P
+                        #print("cohisive")
+                        p_count = p_count + 1
+                        less_cohesive_P.append(f"-{uris.strip()}\t{P}\t{des.strip()}")
+                    else:
+                        row['less_cohesive_doc'] = 1
+                        row['cohesive_doc'] = 0
+                        row['less_cohesive_comment'] = AP
+                        #print("less_cohisive")
+                        ap_count = ap_count + 1
+                        less_cohesive_AP.append(f"-{uris.strip()}\t{AP}\t{des.strip()}")
+                    print("->", end=" ")
                 
-                continue
-                
-            # Create a dictionary and corpus for LDA modeling
-            dictionary = corpora.Dictionary([documentation])
-            corpus = [dictionary.doc2bow(text) for text in [documentation]]
-
-            # Train LDA model
-            lda_model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=topics, random_state=42)
-
-            # Get topic words from the model
-            topic_words = []
-            for topic_id in range(lda_model.num_topics):
-                topic_words.append([word for word, _ in lda_model.show_topic(topic_id)])
-            #print(topic_words)
-
-            # Display topic words horizontally
-            '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
-            print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
-
-
-            node_word_similarity = {}
-            topic_avg = []
-            for node in combined_node:
-                node_word_similarity[node] = calculate_similarity(node, topic_words)
-                
-            
-            # Print the results with combined URI format and individual nodes
-            #print(f"Node: {combined_node}")
-            
-            # Iterate through topics and print scores vertically
-            for topic_idx in range(len(topic_words)):
-                topic_name = f"Topic {topic_idx + 1}"
-                #print(f"  {topic_name}:")
-                tmp = 0
-                for node, word_scores in node_word_similarity.items():
-                    score = word_scores.get(topic_name, {})
-                    #print(f"    {node}: {score}")  # Print scores for each node under the topic
-                    #tmp1 = simi_average(score)
-                    #print(tmp1)
-                    max_value_key = max(score, key=score.get)
-                    max_value = score[max_value_key]
-                    #print(max_value)
-                    tmp += max_value
-                avg_tmp = tmp / len(node_word_similarity)
-                topic_avg.append(avg_tmp)
-                #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
-                print("->", end=" ")
-            
-            #print(f"Total Average for All Topics: {topic_avg}\n")
-            #for avg in topic_avg:
-            #print(max(topic_avg))
-            if round(max(topic_avg), 1) >= 0.5:
-                #print("cohisive")
-                p_count = p_count + 1
-                less_cohesive_P.append(f"-{node_uri.strip()}\t{P}\t{des.strip()}")
-                msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 0 \t 1 \t {P}"
-            else:
-                #print("less_cohisive")
-                ap_count = ap_count + 1
-                less_cohesive_AP.append(f"-{node_uri.strip()}\t{AP}\t{des.strip()}")
-                msg = f"{method.strip()}\t{node_uri.strip()}\t{des.strip()} \t 1 \t 0 \t {AP}"
-            cohisive_lst.append(msg)
-            #print("->", end=" ")
-        return less_cohesive_AP, less_cohesive_P, p_count, ap_count, cohisive_lst
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+                        
+        return less_cohesive_AP, less_cohesive_P, p_count, ap_count
     
 
 
@@ -768,12 +857,10 @@ class ApiAnalyzer:
         put = ["delete", "deletes", "creates", "finds", "create", "find", "search", "checks", "lists", "check", "list"]
         get = ["delete", "deletes", "updates", "update", "creates", "create"]
         
-        description = []
-        nodes = []
-        http_method = []
-        incos_lst = []
-        msg = 'HTTP-Method\tURI\tDescription\tAnti-Pattern\tPattern\tComment'
-        incos_lst.append(msg)
+        #description = []
+        #nodes = []
+        #http_method = []
+        
 
         
         # Tokenize, remove stopwords, and lemmatize the descriptions
@@ -796,55 +883,87 @@ class ApiAnalyzer:
         ap_count = 0
         
 
-        for h_method, uri, documentation in zip(self.http_method, self.nodes, self.description):
-            method = h_method.lower().strip()
-            words = preprocess_data(documentation)
-            
-            
-            if method == "get":
-                if any(item in get for item in words):
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
-                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
-                else:
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
-                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
-                    p_count += 1
-            elif method == "delete":
-                if any(item in delete for item in words):
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
-                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
-                else:
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
-                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
-                    p_count += 1
-            elif method == "put":
-                if any(item in put for item in words):
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
-                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
-                else:
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
-                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    p_count += 1
-            elif method == "post":
-                if any(item in post for item in words):
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 1 \t 0 \t {AP}"
-                    inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
-                else:
-                    msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
-                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    p_count += 1
-            else:
-                msg = f"{h_method.strip()}\t{uri.strip()}\t{documentation.strip()} \t 0 \t 1 \t {P}"
-                inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
-                p_count += 1
-            incos_lst.append(msg)
-            print("->", end=" ")
+        #for h_method, uri, documentation in zip(self.http_method, self.nodes, self.description):
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']  
+                    h_method = row['method']
+                    documentation = row['description']
+                    #documentation = self.clean.preprocess_documentation(des)
+                    #combined_node = self.clean.get_uri_nodes(uris)
+        
+                    method = h_method.lower().strip()
+                    words = preprocess_data(documentation)
+                    
+                    
+                    if method == "get":
+                        if any(item in get for item in words):
+                            row['inconsistent_doc'] = 1
+                            row['consistent_doc'] = 0
+                            row['inconsistent_comment'] = AP
+                            inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
+                            ap_count += 1
+                        else:
+                            row['inconsistent_doc'] = 0
+                            row['consistent_doc'] = 1
+                            row['inconsistent_comment'] = P
+                            inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
+                            p_count += 1
+                    elif method == "delete":
+                        if any(item in delete for item in words):
+                            row['inconsistent_doc'] = 1
+                            row['consistent_doc'] = 0
+                            row['inconsistent_comment'] = AP
+                            inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
+                            ap_count += 1
+                        else:
+                            row['inconsistent_doc'] = 0
+                            row['consistent_doc'] = 1
+                            row['inconsistent_comment'] = P
+                            inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
+                            p_count += 1
+                    elif method == "put":
+                        if any(item in put for item in words):
+                            row['inconsistent_doc'] = 1
+                            row['consistent_doc'] = 0
+                            row['inconsistent_comment'] = AP
+                            inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                            ap_count += 1
+                        else:
+                            row['inconsistent_doc'] = 0
+                            row['consistent_doc'] = 1
+                            row['inconsistent_comment'] = P
+                            inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                            p_count += 1
+                    elif method == "post":
+                        if any(item in post for item in words):
+                            row['inconsistent_doc'] = 1
+                            row['consistent_doc'] = 0
+                            row['inconsistent_comment'] = AP
+                            inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                            ap_count += 1
+                        else:
+                            row['inconsistent_doc'] = 0
+                            row['consistent_doc'] = 1
+                            row['inconsistent_comment'] = P
+                            inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                            p_count += 1
+                    else:
+                        row['inconsistent_doc'] = 0
+                        row['consistent_doc'] = 1
+                        row['inconsistent_comment'] = P
+                        inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
+                        p_count += 1
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
 
-        return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count, incos_lst
+        return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
 
 
 

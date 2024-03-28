@@ -10,3 +10,4 @@ Pipefy
 Pokeapi
 Shopify
 Twitter
+Intuit

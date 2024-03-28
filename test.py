@@ -1,7 +1,6 @@
 from file_handler import FileReadWrite
 from display_options import APIChoice
 from api_analyzer import ApiAnalyzer
-import csv
 
 
 print("Select an API Type")
@@ -44,10 +43,8 @@ analyzer_obj = ApiAnalyzer(api_type, selected)
 
 print("Detection of AmorphousURI:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_amorphous_uri()
-#analyzer_obj.detect_amorphous_uri()
 pattern_type = "AmorphousURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of AmorphousURI.\n")
 
 
@@ -55,72 +52,63 @@ print("Detection of NonStandardURI:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_standard_uri()
 pattern_type = "NonStandardURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of NonStandardURI:\n")
 
 
-'''
+
 print("Detection of CRUDyURI:")
-result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_crudy_uri()
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_crudy_uri()
 pattern_type = "CRUDyURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
-print("\nFinished Detection of CRUDyURI:\n")'''
+print("\nFinished Detection of CRUDyURI:\n")
 
 
 print("Detection of UnversionedURIs:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_unversioned_uris()
 pattern_type = "UnversionedURIs"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-#uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of UnversionedURIs:\n")
 
 
 
-'''print("Detection of PluralisedNodes:")
-result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_pluralized_node()
+print("Detection of PluralisedNodes:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_pluralized_node()
 pattern_type = "PluralisedNodes"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of PluralisedNodes:\n")
 
 
 print("Detection of Non-descriptive:")
-result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_non_descriptive_uri()
+result_AP, result_P, p_count, ap_count= analyzer_obj.detect_non_descriptive_uri()
 pattern_type = "NonDescriptiveURI"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of Non-descriptiveURI:\n")
 
 
 print("Detection of NonHierarchicalNodes:")
-result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_non_hierarchical_nodes()
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
 pattern_type = "NonHierarchicalNodes"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of NonHierarchicalNodes:\n")
 
 print("Detection of InconsistantDocumentation:")
-result_AP, result_P, p_count, ap_count, re= analyzer_obj.detect_inconsistent_documentations()
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations()
 pattern_type = "InconsistantDoc"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of InconsistantDocumentation:\n")
 
 
 print("Detection of ContextlessResource:")
-result_AP, result_P, p_count, ap_count, re = analyzer_obj.detect_contextless()
+result_AP, result_P, p_count, ap_count= analyzer_obj.detect_contextless()
 pattern_type = "ContextlessResource"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
 print("\nFinished Detection of ContextlessResource:\n")
 
 
 
 print("Detection of LessCohisiveDocumentation:")
-result_AP, result_P, p_count, ap_count,re = analyzer_obj.detect_less_cohesive_documentation()
+result_AP, result_P, p_count, ap_count= analyzer_obj.detect_less_cohesive_documentation()
 pattern_type = "LessCohisiveDoc"
 uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-uri_obj.write_out_data(re, selected, pattern_type, base_path)
-print("\nFinished Detection of LessCohisiveDocumentation:\n")'''
+print("\nFinished Detection of LessCohisiveDocumentation:\n")
 

@@ -3,30 +3,30 @@ Count: 0
 
 ***Patterns*** 
 Count: 27
--/v2/oauth/token	Pertinent Documentation	Converting Authorization Codes To Access Tokens n/a
--/v2/oauth/pin	Pertinent Documentation	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.  n/a
--v2/SaveMediaListEntry	Pertinent Documentation	Create or update a media list entry  n/a
--v2/UpdateMediaListEntries	Pertinent Documentation	Update multiple media list entries to the same values n/a
--v2/DeleteMediaListEntry	Pertinent Documentation	Delete a media list entry n/a
--v2/DeleteCustomList	Pertinent Documentation	Delete a custom list and remove the list entries from it n/a
--v2/SaveTextActivity	Pertinent Documentation	Create or update text activity for the currently authenticated user n/a
--v2/SaveListActivity	Pertinent Documentation	Update list activity n/a
--v2/DeleteActivity	Pertinent Documentation	Delete an activity item of the authenticated users n/a
--v2/ToggleActivityPin	Pertinent Documentation	Toggle activity to be pinned to the top of the user's activity feed n/a
--v2/ToggleActivitySubscription	Pertinent Documentation	Toggle the subscription of an activity item n/a
--v2/SaveActivityReply	Pertinent Documentation	Create or update an activity reply n/a
--v2/DeleteActivityReply	Pertinent Documentation	Delete an activity reply of the authenticated users n/a
--v2/ToggleLike	Pertinent Documentation	Add or remove a like from a likeable type. Returns all the users who liked the same model n/a
--v2/ToggleLikeV2	Pertinent Documentation	Add or remove a like from a likeable type. n/a
--v2/ToggleFollow	Pertinent Documentation	Toggle the un/following of a user n/a
--v2/ToggleFavourite	Pertinent Documentation	Favourite or unfavourite an anime, manga, character, staff member, or studio n/a
--v2/UpdateFavouriteOrder	Pertinent Documentation	Update the order favourites are displayed in n/a
--v2/SaveReview	Pertinent Documentation	Create or update a review n/a
--v2/DeleteReview	Pertinent Documentation	Delete a review n/a
--v2/RateReview	Pertinent Documentation	Rate a review n/a
--v2/SaveRecommendation	Pertinent Documentation	Recommendation a media n/a
--v2/SaveThread	Pertinent Documentation	Create or update a forum thread  n/a
--v2/DeleteThread	Pertinent Documentation	Delete a thread n/a
--v2/ToggleThreadSubscription	Pertinent Documentation	Toggle the subscription of a forum thread  n/a
--v2/SaveThreadComment	Pertinent Documentation	Create or update a thread comment n/a
--v2/DeleteThreadComment	Pertinent Documentation	Delete a thread comment n/a
+-/v2/oauth/token	Pertinent Documentation	Converting Authorization Codes To Access Tokens
+-/v2/oauth/pin	Pertinent Documentation	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
+-v2/SaveMediaListEntry	Pertinent Documentation	Create or update a media list entry
+-v2/UpdateMediaListEntries	Pertinent Documentation	Update multiple media list entries to the same values
+-v2/DeleteMediaListEntry	Pertinent Documentation	Delete a media list entry
+-v2/DeleteCustomList	Pertinent Documentation	Delete a custom list and remove the list entries from it
+-v2/SaveTextActivity	Pertinent Documentation	Create or update text activity for the currently authenticated user
+-v2/SaveListActivity	Pertinent Documentation	Update list activity
+-v2/DeleteActivity	Pertinent Documentation	Delete an activity item of the authenticated users
+-v2/ToggleActivityPin	Pertinent Documentation	Toggle activity to be pinned to the top of the user's activity feed
+-v2/ToggleActivitySubscription	Pertinent Documentation	Toggle the subscription of an activity item
+-v2/SaveActivityReply	Pertinent Documentation	Create or update an activity reply
+-v2/DeleteActivityReply	Pertinent Documentation	Delete an activity reply of the authenticated users
+-v2/ToggleLike	Pertinent Documentation	Add or remove a like from a likeable type. Returns all the users who liked the same model
+-v2/ToggleLikeV2	Pertinent Documentation	Add or remove a like from a likeable type.
+-v2/ToggleFollow	Pertinent Documentation	Toggle the un/following of a user
+-v2/ToggleFavourite	Pertinent Documentation	Favourite or unfavourite an anime, manga, character, staff member, or studio
+-v2/UpdateFavouriteOrder	Pertinent Documentation	Update the order favourites are displayed in
+-v2/SaveReview	Pertinent Documentation	Create or update a review
+-v2/DeleteReview	Pertinent Documentation	Delete a review
+-v2/RateReview	Pertinent Documentation	Rate a review
+-v2/SaveRecommendation	Pertinent Documentation	Recommendation a media
+-v2/SaveThread	Pertinent Documentation	Create or update a forum thread
+-v2/DeleteThread	Pertinent Documentation	Delete a thread
+-v2/ToggleThreadSubscription	Pertinent Documentation	Toggle the subscription of a forum thread
+-v2/SaveThreadComment	Pertinent Documentation	Create or update a thread comment
+-v2/DeleteThreadComment	Pertinent Documentation	Delete a thread comment

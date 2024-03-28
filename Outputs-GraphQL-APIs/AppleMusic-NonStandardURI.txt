@@ -3,102 +3,102 @@ Count: 0
 
 ***Patterns*** 
 Count: 99
-/v1/catalog/{storefront}/albums/{id}	Standard End-point	
-/v1/catalog/{storefront}/albums/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/albums/{id}/view/{view}	Standard End-point	
-/v1/catalog/{storefront}/albums	Standard End-point	
-/v1/catalog/{storefront}/albums	Standard End-point	
-/v1/catalog/{storefront}/albums	Standard End-point	
-/v1/me/library/albums/{id}	Standard End-point	
-/v1/me/library/albums/{id}/{relationship}	Standard End-point	
-/v1/me/library/albums	Standard End-point	
-/v1/me/library/albums	Standard End-point	
-/v1/me/library	Standard End-point	
-/v1/catalog/{storefront}/artists/{id}	Standard End-point	
-/v1/catalog/{storefront}/artists/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/artists/{id}/view/{view}	Standard End-point	
-/v1/catalog/{storefront}/artists	Standard End-point	
-/v1/me/library/artists/{id}	Standard End-point	
-/v1/me/library/artists/{id}/{relationship}	Standard End-point	
-/v1/me/library/artists	Standard End-point	
-/v1/artists/{id}	Standard End-point	
-/v1/catalog/{storefront}/songs/{id}	Standard End-point	
-/v1/catalog/{storefront}/songs/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/songs	Standard End-point	
-/v1/catalog/{storefront}/songs	Standard End-point	
-/v1/catalog/{storefront}/songs	Standard End-point	
-/v1/me/library/songs/{id}	Standard End-point	
-/v1/me/library/songs/{id}/{relationship}	Standard End-point	
-/v1/me/library/songs	Standard End-point	
-/v1/me/library/songs	Standard End-point	
-/v1/catalog/{storefront}/music-videos/{id}	Standard End-point	
-/v1/catalog/{storefront}/music-videos/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/music-videos/{id}/view/{view}	Standard End-point	
-/v1/catalog/{storefront}/music-videos	Standard End-point	
-/v1/catalog/{storefront}/music-videos	Standard End-point	
-/v1/catalog/{storefront}/music-videos	Standard End-point	
-/v1/me/library/music-videos/{id}	Standard End-point	
-/v1/me/library/music-videos/{id}/{relationship}	Standard End-point	
-/v1/me/library/music-videos	Standard End-point	
-/v1/me/library/music-videos	Standard End-point	
-/v1/catalog/{storefront}/playlists/{id}	Standard End-point	
-/v1/catalog/{storefront}/playlists/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/playlists/{id}/view/{view}	Standard End-point	
-/v1/catalog/{storefront}/playlists	Standard End-point	
-/v1/catalog/{storefront}/playlists	Standard End-point	
-/v1/me/library/playlists/{id}	Standard End-point	
-/v1/me/library/playlists/{id}/{relationship}	Standard End-point	
-/v1/me/library/playlists	Standard End-point	
-/v1/me/library/playlists	Standard End-point	
-/v1/me/library/playlist-folders	Standard End-point	
-/v1/me/library/playlist-folders/{id}	Standard End-point	
-/v1/me/library/playlist-folders/{id}/{relationship}	Standard End-point	
-/v1/me/library/playlist-folders	Standard End-point	
-/v1/me/library/playlist-folders	Standard End-point	
-/v1/me/library/playlists	Standard End-point	
-/v1/me/library/playlists/{id}/tracks	Standard End-point	
-/v1/catalog/{storefront}/stations/{id}	Standard End-point	
-/v1/catalog/{storefront}/stations/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/stations	Standard End-point	
-/v1/catalog/{storefront}/stations	Standard End-point	
-/v1/catalog/{storefront}/stations	Standard End-point	
-/v1/catalog/{storefront}/station-genres/{id}	Standard End-point	
-/v1/catalog/{storefront}/station-genres/{id}/{relationship}	Standard End-point	
-/v1/catalog/{storefront}/station-genres	Standard End-point	
-/v1/catalog/{storefront}/station-genres	Standard End-point	
-/v1/catalog/{storefront}/search	Standard End-point	
-/v1/catalog/{storefront}/search/hints	Standard End-point	
-/v1/catalog/{storefront}/search/suggestions	Standard End-point	
-/v1/me/library/search	Standard End-point	
-/v1/me/ratings/albums/{id}	Standard End-point	
-/v1/me/ratings/music-videos/{id}	Standard End-point	
-/v1/me/ratings/playlists/{id}	Standard End-point	
-/v1/me/ratings/songs/{id}	Standard End-point	
-/v1/me/ratings/stations/{id}	Standard End-point	
-/v1/me/ratings/albums	Standard End-point	
-/v1/me/ratings/music-videos	Standard End-point	
-/v1/me/ratings/playlists	Standard End-point	
-/v1/me/ratings/songs	Standard End-point	
-/v1/me/ratings/stations	Standard End-point	
-/v1/me/ratings/albums/{id}	Standard End-point	
-/v1/me/ratings/music-videos/{id}	Standard End-point	
-/v1/me/ratings/playlists/{id}	Standard End-point	
-/v1/me/ratings/songs/{id}	Standard End-point	
-/v1/me/ratings/stations/{id}	Standard End-point	
-/v1/me/ratings/albums/{id}	Standard End-point	
-/v1/me/ratings/music-videos/{id}	Standard End-point	
-/v1/me/ratings/playlists/{id}	Standard End-point	
-/v1/me/ratings/songs/{id}	Standard End-point	
-/v1/me/ratings/stations/{id}	Standard End-point	
-/v1/me/ratings/library-albums/{id}	Standard End-point	
-/v1/me/ratings/library-music-videos/{id}	Standard End-point	
-/v1/me/ratings/library-playlists/{id}	Standard End-point	
-/v1/me/ratings/library-songs/{id}	Standard End-point	
-/v1/me/ratings/library-albums	Standard End-point	
-/v1/me/ratings/library-music-videos	Standard End-point	
-/v1/me/ratings/library-playlists	Standard End-point	
-/v1/me/ratings/library-songs	Standard End-point	
-/v1/me/ratings/library-albums/{id}	Standard End-point	
-/v1/me/ratings/library-music-videos/{id}	Standard End-point	
-/v1/me/ratings/library-playlists/{id}	Standard End-point	
-/v1/me/ratings/library-songs/{id}	Standard End-point	
+/v1/catalog/{storefront}/albums/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/albums/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/albums/{id}/view/{view}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/albums	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/albums	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/albums	Standard End-point	Standard Endpoint
+/v1/me/library/albums/{id}	Standard End-point	Standard Endpoint
+/v1/me/library/albums/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/me/library/albums	Standard End-point	Standard Endpoint
+/v1/me/library/albums	Standard End-point	Standard Endpoint
+/v1/me/library	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/artists/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/artists/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/artists/{id}/view/{view}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/artists	Standard End-point	Standard Endpoint
+/v1/me/library/artists/{id}	Standard End-point	Standard Endpoint
+/v1/me/library/artists/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/me/library/artists	Standard End-point	Standard Endpoint
+/v1/artists/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/songs/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/songs/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/songs	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/songs	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/songs	Standard End-point	Standard Endpoint
+/v1/me/library/songs/{id}	Standard End-point	Standard Endpoint
+/v1/me/library/songs/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/me/library/songs	Standard End-point	Standard Endpoint
+/v1/me/library/songs	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/music-videos/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/music-videos/{id}/view/{view}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/music-videos	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/music-videos	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/music-videos	Standard End-point	Standard Endpoint
+/v1/me/library/music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/me/library/music-videos/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/me/library/music-videos	Standard End-point	Standard Endpoint
+/v1/me/library/music-videos	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/playlists/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/playlists/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/playlists/{id}/view/{view}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/playlists	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/playlists	Standard End-point	Standard Endpoint
+/v1/me/library/playlists/{id}	Standard End-point	Standard Endpoint
+/v1/me/library/playlists/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/me/library/playlists	Standard End-point	Standard Endpoint
+/v1/me/library/playlists	Standard End-point	Standard Endpoint
+/v1/me/library/playlist-folders	Standard End-point	Standard Endpoint
+/v1/me/library/playlist-folders/{id}	Standard End-point	Standard Endpoint
+/v1/me/library/playlist-folders/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/me/library/playlist-folders	Standard End-point	Standard Endpoint
+/v1/me/library/playlist-folders	Standard End-point	Standard Endpoint
+/v1/me/library/playlists	Standard End-point	Standard Endpoint
+/v1/me/library/playlists/{id}/tracks	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/stations/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/stations/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/stations	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/stations	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/stations	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/station-genres/{id}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/station-genres/{id}/{relationship}	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/station-genres	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/station-genres	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/search	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/search/hints	Standard End-point	Standard Endpoint
+/v1/catalog/{storefront}/search/suggestions	Standard End-point	Standard Endpoint
+/v1/me/library/search	Standard End-point	Standard Endpoint
+/v1/me/ratings/albums/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/playlists/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/songs/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/stations/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/albums	Standard End-point	Standard Endpoint
+/v1/me/ratings/music-videos	Standard End-point	Standard Endpoint
+/v1/me/ratings/playlists	Standard End-point	Standard Endpoint
+/v1/me/ratings/songs	Standard End-point	Standard Endpoint
+/v1/me/ratings/stations	Standard End-point	Standard Endpoint
+/v1/me/ratings/albums/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/playlists/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/songs/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/stations/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/albums/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/playlists/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/songs/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/stations/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-albums/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-playlists/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-songs/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-albums	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-music-videos	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-playlists	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-songs	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-albums/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-music-videos/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-playlists/{id}	Standard End-point	Standard Endpoint
+/v1/me/ratings/library-songs/{id}	Standard End-point	Standard Endpoint

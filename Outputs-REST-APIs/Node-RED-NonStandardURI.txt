@@ -3,18 +3,18 @@ Count: 0
 
 ***Patterns*** 
 Count: 15
-/auth/login	Standard End-point	
-/auth/token	Standard End-point	
-/auth/revoke	Standard End-point	
-/settings	Standard End-point	
-/flows	Standard End-point	
-/flows	Standard End-point	
-/flow	Standard End-point	
-/flow/:id	Standard End-point	
-/flow/:id	Standard End-point	
-/flow/:id	Standard End-point	
-/nodes	Standard End-point	
-/nodes	Standard End-point	
-/nodes/:module	Standard End-point	
-/nodes/:module	Standard End-point	
-/nodes/:module	Standard End-point	
+/auth/login	Standard End-point	Standard Endpoint
+/auth/token	Standard End-point	Standard Endpoint
+/auth/revoke	Standard End-point	Standard Endpoint
+/settings	Standard End-point	Standard Endpoint
+/flows	Standard End-point	Standard Endpoint
+/flows	Standard End-point	Standard Endpoint
+/flow	Standard End-point	Standard Endpoint
+/flow/:id	Standard End-point	Standard Endpoint
+/flow/:id	Standard End-point	Standard Endpoint
+/flow/:id	Standard End-point	Standard Endpoint
+/nodes	Standard End-point	Standard Endpoint
+/nodes	Standard End-point	Standard Endpoint
+/nodes/:module	Standard End-point	Standard Endpoint
+/nodes/:module	Standard End-point	Standard Endpoint
+/nodes/:module	Standard End-point	Standard Endpoint

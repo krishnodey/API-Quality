@@ -1,101 +1,101 @@
 ***Anti-Pattern*** 
 Count: 83
-POST 	/authorizePaymentMethod	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/authorizePayPalAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/authorizeVenmoAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/authorizeCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/captureTransaction	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/chargeUsBankAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/chargePayPalAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/chargeVenmoAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/chargeCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/vaultPaymentMethod	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/vaultUsBankAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/vaultCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/refundTransaction	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/reverseTransaction	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/reverseRefund	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/refundCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/refundUsBankAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/verifyPaymentMethod	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/verifyCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/verifyUsBankAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/deletePaymentMethodFromVault	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createClientToken	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createUniversalAccessToken	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/partialCaptureTransaction	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeCustomActionsPaymentMethod	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeCreditCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeCvv	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeNetworkToken	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeSamsungPayCard	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeUsBankAccount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizeUsBankLogin	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizePayPalOneTimePayment	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createPayPalOneTimePayment	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/tokenizePayPalBillingAgreement	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createPayPalBillingAgreement	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createCustomer	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateCustomer	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/deleteCustomer	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateCreditCardBillingAddress	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateCreditCardCardholderName	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateCreditCardExpirationDate	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/performThreeDSecureLookup	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/acceptDispute	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/finalizeDispute	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createDisputeTextEvidence	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/deleteDisputeEvidence	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createDisputeFileEvidence	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/vaultPayPalBillingAgreement	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/sandboxSettleTransaction	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createInStoreLocation	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateInStoreLocation	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/pairInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestChargeFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestAuthorizeFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestCancelFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestRefundFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestVaultFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestTextDisplayFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestItemDisplayFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestFirmwareUpdateFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestSignaturePromptFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestConfirmationPromptFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestNonPciCardDataFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestAmountPromptFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/requestTextPromptFromInStoreReader	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createVenmoPaymentContext	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/updateTransactionAmount	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/generateExchangeRateQuote	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/createNonInstantLocalPaymentContext	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/DisputeEvidence/{id}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/DisputeEvidence/{legacyId}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/InStoreContextResult/{id}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/Node/{id}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/Payment/{id}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/Payment/{legacyId}	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/PaymentContext	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/PaymentStatusEvent	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/AccountCreationStatus	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/ApplePayStatus	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/ApplicationBankAccountPurpose	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/ApplicationStatus	Pluralized Nodes	 [Singular last node with POST method.] 
-POST 	/BinRecordValue	Pluralized Nodes	 [Singular last node with POST method.] 
+POST	/authorizePaymentMethod	Pluralized Nodes	Singular last node with POST method
+POST	/authorizePayPalAccount	Pluralized Nodes	Singular last node with POST method
+POST	/authorizeVenmoAccount	Pluralized Nodes	Singular last node with POST method
+POST	/authorizeCreditCard	Pluralized Nodes	Singular last node with POST method
+POST	/captureTransaction	Pluralized Nodes	Singular last node with POST method
+POST	/chargeUsBankAccount	Pluralized Nodes	Singular last node with POST method
+POST	/chargePayPalAccount	Pluralized Nodes	Singular last node with POST method
+POST	/chargeVenmoAccount	Pluralized Nodes	Singular last node with POST method
+POST	/chargeCreditCard	Pluralized Nodes	Singular last node with POST method
+POST	/vaultPaymentMethod	Pluralized Nodes	Singular last node with POST method
+POST	/vaultUsBankAccount	Pluralized Nodes	Singular last node with POST method
+POST	/vaultCreditCard	Pluralized Nodes	Singular last node with POST method
+POST	/refundTransaction	Pluralized Nodes	Singular last node with POST method
+POST	/reverseTransaction	Pluralized Nodes	Singular last node with POST method
+POST	/reverseRefund	Pluralized Nodes	Singular last node with POST method
+POST	/refundCreditCard	Pluralized Nodes	Singular last node with POST method
+POST	/refundUsBankAccount	Pluralized Nodes	Singular last node with POST method
+POST	/verifyPaymentMethod	Pluralized Nodes	Singular last node with POST method
+POST	/verifyCreditCard	Pluralized Nodes	Singular last node with POST method
+POST	/verifyUsBankAccount	Pluralized Nodes	Singular last node with POST method
+POST	/deletePaymentMethodFromVault	Pluralized Nodes	Singular last node with POST method
+POST	/createClientToken	Pluralized Nodes	Singular last node with POST method
+POST	/createUniversalAccessToken	Pluralized Nodes	Singular last node with POST method
+POST	/partialCaptureTransaction	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeCustomActionsPaymentMethod	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeCreditCard	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeCvv	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeNetworkToken	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeSamsungPayCard	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeUsBankAccount	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizeUsBankLogin	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizePayPalOneTimePayment	Pluralized Nodes	Singular last node with POST method
+POST	/createPayPalOneTimePayment	Pluralized Nodes	Singular last node with POST method
+POST	/tokenizePayPalBillingAgreement	Pluralized Nodes	Singular last node with POST method
+POST	/createPayPalBillingAgreement	Pluralized Nodes	Singular last node with POST method
+POST	/createCustomer	Pluralized Nodes	Singular last node with POST method
+POST	/updateCustomer	Pluralized Nodes	Singular last node with POST method
+POST	/deleteCustomer	Pluralized Nodes	Singular last node with POST method
+POST	/updateCreditCardBillingAddress	Pluralized Nodes	Singular last node with POST method
+POST	/updateCreditCardCardholderName	Pluralized Nodes	Singular last node with POST method
+POST	/updateCreditCardExpirationDate	Pluralized Nodes	Singular last node with POST method
+POST	/performThreeDSecureLookup	Pluralized Nodes	Singular last node with POST method
+POST	/acceptDispute	Pluralized Nodes	Singular last node with POST method
+POST	/finalizeDispute	Pluralized Nodes	Singular last node with POST method
+POST	/createDisputeTextEvidence	Pluralized Nodes	Singular last node with POST method
+POST	/deleteDisputeEvidence	Pluralized Nodes	Singular last node with POST method
+POST	/createDisputeFileEvidence	Pluralized Nodes	Singular last node with POST method
+POST	/vaultPayPalBillingAgreement	Pluralized Nodes	Singular last node with POST method
+POST	/sandboxSettleTransaction	Pluralized Nodes	Singular last node with POST method
+POST	/createInStoreLocation	Pluralized Nodes	Singular last node with POST method
+POST	/updateInStoreLocation	Pluralized Nodes	Singular last node with POST method
+POST	/pairInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/updateInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestChargeFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestAuthorizeFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestCancelFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestRefundFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestVaultFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestTextDisplayFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestItemDisplayFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestFirmwareUpdateFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestSignaturePromptFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestConfirmationPromptFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestNonPciCardDataFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestAmountPromptFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/requestTextPromptFromInStoreReader	Pluralized Nodes	Singular last node with POST method
+POST	/createVenmoPaymentContext	Pluralized Nodes	Singular last node with POST method
+POST	/updateTransactionAmount	Pluralized Nodes	Singular last node with POST method
+POST	/generateExchangeRateQuote	Pluralized Nodes	Singular last node with POST method
+POST	/createNonInstantLocalPaymentContext	Pluralized Nodes	Singular last node with POST method
+POST	/DisputeEvidence/{id}	Pluralized Nodes	Singular last node with POST method
+POST	/DisputeEvidence/{legacyId}	Pluralized Nodes	Singular last node with POST method
+POST	/InStoreContextResult/{id}	Pluralized Nodes	Singular last node with POST method
+POST	/Node/{id}	Pluralized Nodes	Singular last node with POST method
+POST	/Payment/{id}	Pluralized Nodes	Singular last node with POST method
+POST	/Payment/{legacyId}	Pluralized Nodes	Singular last node with POST method
+POST	/PaymentContext	Pluralized Nodes	Singular last node with POST method
+POST	/PaymentStatusEvent	Pluralized Nodes	Singular last node with POST method
+POST	/AccountCreationStatus	Pluralized Nodes	Singular last node with POST method
+POST	/ApplePayStatus	Pluralized Nodes	Singular last node with POST method
+POST	/ApplicationBankAccountPurpose	Pluralized Nodes	Singular last node with POST method
+POST	/ApplicationStatus	Pluralized Nodes	Singular last node with POST method
+POST	/BinRecordValue	Pluralized Nodes	Singular last node with POST method
 
 ***Patterns*** 
 Count: 13
-GET 	/ping	 Regular methods
-GET 	/pingInStoreReader	 Regular methods
-GET 	/viewer	 Regular methods
-GET 	/clientConfiguration	 Regular methods
-GET 	/node	 Regular methods
-GET 	/idFromLegacyId	 Regular methods
-GET 	/report	 Regular methods
-GET 	/search	 Regular methods
-GET 	/paypalFinancingOptions	 Regular methods
-GET 	/inStoreLocations	 Regular methods
-POST 	/updateCustomFields	Singularized Nodes	 [Pluralized last node with POST method.] 
-POST 	/confirmMicroTransferAmounts	Singularized Nodes	 [Pluralized last node with POST method.] 
-POST 	/InStoreReaderOriginDetails	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET	/ping	 Regular methods
+GET	/pingInStoreReader	 Regular methods
+GET	/viewer	 Regular methods
+GET	/clientConfiguration	 Regular methods
+GET	/node	 Regular methods
+GET	/idFromLegacyId	 Regular methods
+GET	/report	 Regular methods
+GET	/search	 Regular methods
+GET	/paypalFinancingOptions	 Regular methods
+GET	/inStoreLocations	 Regular methods
+POST	/updateCustomFields	Singularized Nodes	Pluralized last node with POST method
+POST	/confirmMicroTransferAmounts	Singularized Nodes	Pluralized last node with POST method
+POST	/InStoreReaderOriginDetails	Singularized Nodes	Pluralized last node with POST method

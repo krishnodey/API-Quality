@@ -1,11 +1,14 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 6
 /ping	 Contextless Resource Names
+/vaultUsBankAccount	 Contextless Resource Names
+/tokenizeCvv	 Contextless Resource Names
+/tokenizeUsBankLogin	 Contextless Resource Names
 /performThreeDSecureLookup	 Contextless Resource Names
 /BinRecordValue	 Contextless Resource Names
 
 ***Patterns*** 
-Count: 93
+Count: 90
 /pingInStoreReader	 Contextual Resource Names
 /viewer	 Contextual Resource Names
 /clientConfiguration	 Contextual Resource Names
@@ -25,7 +28,6 @@ Count: 93
 /chargeVenmoAccount	 Contextual Resource Names
 /chargeCreditCard	 Contextual Resource Names
 /vaultPaymentMethod	 Contextual Resource Names
-/vaultUsBankAccount	 Contextual Resource Names
 /vaultCreditCard	 Contextual Resource Names
 /refundTransaction	 Contextual Resource Names
 /reverseTransaction	 Contextual Resource Names
@@ -43,11 +45,9 @@ Count: 93
 /partialCaptureTransaction	 Contextual Resource Names
 /tokenizeCustomActionsPaymentMethod	 Contextual Resource Names
 /tokenizeCreditCard	 Contextual Resource Names
-/tokenizeCvv	 Contextual Resource Names
 /tokenizeNetworkToken	 Contextual Resource Names
 /tokenizeSamsungPayCard	 Contextual Resource Names
 /tokenizeUsBankAccount	 Contextual Resource Names
-/tokenizeUsBankLogin	 Contextual Resource Names
 /tokenizePayPalOneTimePayment	 Contextual Resource Names
 /createPayPalOneTimePayment	 Contextual Resource Names
 /tokenizePayPalBillingAgreement	 Contextual Resource Names

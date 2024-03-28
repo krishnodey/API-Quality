@@ -10,3 +10,4 @@ https://graphql.braintreepayments.com/reference/#Mutation--captureTransaction
 https://developers.artsy.net/v2/
 https://api-docs.pipefy.com/reference/mutations/deleteTableRelation/
 https://docs.gitlab.com/ee/api/graphql/reference/#queryaimessages
+https://intuitdeveloper.github.io/intuit-api-docs/docs/schema-entities/bill/

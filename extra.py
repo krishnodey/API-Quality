@@ -257,7 +257,7 @@ file2_path = "./All-Data/Alldata.csv"
 
 compare_csv(file1_path, file2_path)'''
 
-import csv
+'''import csv
 
 databse_path = "./Result-Database/result_database.csv"
 alldata_path = "./All-Data/Alldata.csv"
@@ -267,7 +267,6 @@ with open(alldata_path, "r") as all_file, open(databse_path, 'r') as db_file:
     db = csv.reader(db_file)
     next(all)
     next(db)
-    '''
     tw = 0
     anilist = 0
     apple = 0
@@ -307,7 +306,7 @@ with open(alldata_path, "r") as all_file, open(databse_path, 'r') as db_file:
         elif row1[2] == api[11].strip():
             tw += 1
     print(f"AniList = {anilist}, AppleMusic +{apple}, Artsy = {artsy}, Braintree{brain}, Facebook = {fb}, GitHub = {github}, GitLab = {gitlab}, Instagram = {instagram}, Pipefy = {pipefy}, Pokeapi = {poke}, Shopify = {shopify},Twiter = {tw}")
-        '''
+        
     tw = 0
     anilist = 0
     apple = 0
@@ -365,4 +364,12 @@ def set_public_private(text, api):
         if text in partner_api:
             return "Public"
 
-print(set_public_private("BroadCom", "REST"))
+print(set_public_private("BroadCom", "REST"))'''
+
+
+from uri_cleaning import UriCleaning
+
+text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
+obj = UriCleaning()
+node = "device/{ID}/name.jpg"
+print(obj.get_uri_nodes(node))

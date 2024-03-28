@@ -1,0 +1,53 @@
+POST >> /fetchBill/{id} >> Read a Bill by Id >> id: ID of an existing bill
+POST >> /createBill/{id} >> >> id: ID of an existing bill
+POST >> /updateBill/{id} >> >> id: ID of an existing bill
+POST >> /updateBill/{id} >> >> id: ID of an existing bill
+POST >> /deleteBill/{id} >> >> id: ID of an existing bill
+POST >> /fetchCreditMemo/{id} >> Read an Credit Memo by Id >> id: ID of an existing Credit Memo. 
+POST >> /createCreditMemo/{id} >> >> id: ID of an existing Credit Memo
+POST >> /updateCreditMemo/{id} >> >> id: ID of an existing Credit Memo
+POST >> /deleteCreditMemo/{id} >> >> id: ID of an existing Credit Memo
+POST >> /deleteCreditMemo/{id} >> >> id: ID of an existing Credit Memo
+POST >> /createInvoiceDraft >> Mutation for defining value of field within an Invoice Draft >>
+POST >> /transactionDraft/{id} >> Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft. >>
+POST >> /createCustomer >> Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value. >> 
+POST >> /fetchCustomer/{id} >> Use queries to read customers. Apps can query the Customer entity by id or displayName. >>
+POST >> /fetchDelayedCharge/{id} >>  Read an DelayedCharge by Id >> 
+POST >> /createDelayedCharge >> >> id: ID of an existing DelayedCharge
+POST >> /deleteDelayedCharge >> >> id: ID of an existing DelayedCharge
+POST >> /fetchDelayedCredit/{id}>> Read an DelayedCredit by Id >>id: ID of an existing delayedCredit
+POST >> /createDelayedCredit/{id} >>  >>id: ID of an existing delayedCredit
+POST >> /updateDelayedCredit/{id} >> >>id: ID of an existing delayedCredit
+POST >> /deleteDelayedCredit/{id} >>  >>id: ID of an existing delayedCredit
+POST >> /verificationOfEmployment >> Verification of Employment >>
+POST >> /verificationOfIncome >> Verification of Income >>
+POST >> /socialServiceVerification >> Social Service Verification >>
+POST >> /fetchEstimate/{id} >> Read an Estimate by Id >> id: ID of an existing estimate
+POST >> /createEstimate/{id}>> >> id: ID of an existing estimate
+POST >> /deleteEstimate/{id} >>  id: ID of an existing estimate
+POST >> /createEstimateDraft >> Estimate Draft >> 
+POST >> /fetchExpense >> Read an Expense by Id >> id: ID of an existing expense
+POST >> /createExpense/{id} >> >> id: ID of an existing expense
+POST >> /updateExpense/{id} >> >> id: ID of an existing expense
+POST >> /deleteExpense/{id} >> >> id: ID of an existing expense
+POST >> /fetchInvoice/{id} >> Read an invoice by Id >> id: ID of an existing invoice
+POST >> /createInvoice/{id} >> >> id: ID of an existing invoice
+POST >> /updateInvoice/{id} >> >> id: ID of an existing invoice
+POST >> /deleteInvoice/{id} >> >> id: ID of an existing invoice
+POST >> /createInvoiceDraft >> Invoice Draft >> 
+POST >> /fetchInvoicePayment/{id} >> Read an InvoicePayment by Id >> id: ID of an existing payemt invoice
+POST >> /createInvoicePayment/{id} >> >> id: ID of an existing payemt invoice
+POST >> /updateInvoicePayment/{id} >> >> id: ID of an existing payemt invoice
+POST >> /deleteInvoicePayment/{id} >> >> id: ID of an existing payemt invoice
+
+
+
+
+
+
+
+
+
+
+
+

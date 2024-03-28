@@ -1,7 +1,7 @@
 ***Anti-Pattern*** 
 Count: 2
-/data-feeds/{dataSourceId}/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 64
-/data-feeds/{dataSourceId}/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of 64
+/data-feeds/{dataSourceId}/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of -1
+/data-feeds/{dataSourceId}/requests/{requestId}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between requests and request. 0 hierarchical relations were detected out of -1
 
 ***Patterns*** 
 Count: 63
