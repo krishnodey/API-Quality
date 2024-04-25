@@ -1,0 +1,63 @@
+GET >> /applications/APPLICATION_ID/archiveData >> Returns success when a job has been enqueued to archive this application’s device data for a given day
+GET >> /applications/APPLICATION_ID/backfillArchiveData >> Returns success when a job has been enqueued to backfill all current data to it’s archive
+DELETE >> /applications/APPLICATION_ID >> Deletes an application
+GET >> /applications/APPLICATION_ID >> Retrieves information on an application
+POST >> /applications/APPLICATION_ID/mqttPublishMessage >> Publishes the given message to the given MQTT topic
+GET >> /applications/APPLICATION_ID/mqttSubscriptionStream >> Attach to a real time stream of state messages for the given MQTT topic using Server Sent Events (SSE)
+PATCH >> /applications/APPLICATION_ID >> Updates information about an application
+GET >> /applications/APPLICATION_ID/payloadCounts >> Returns payload counts for the time range specified for this application
+GET >> /applications/APPLICATION_ID/search >> Search across an application’s resources by target identifier
+DELETE >> /applications/APPLICATION_ID/tokens/API_TOKEN_ID >> Deletes an API Token
+GET >> /applications/APPLICATION_ID/tokens/API_TOKEN_ID >> Retrieves information on an API token
+PATCH >> /applications/APPLICATION_ID/tokens/API_TOKEN_ID >> Updates information about an API token
+GET >> /applications/APPLICATION_ID/tokens >> Returns the API tokens for an application
+POST >> /applications/APPLICATION_ID/tokens >> Create a new API token for an application
+DELETE >> /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID >> Deletes an applicationKey
+GET >> /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID >> Retrieves information on an applicationKey
+PATCH >> /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID >> Updates information about an applicationKey
+GET >> /applications/APPLICATION_ID/keys >> Returns the applicationKeys for an application
+POST >> /applications/APPLICATION_ID/keys >> Create a new applicationKey for an application
+GET >> /applications >> Returns the applications the current user has permission to see
+POST >> /applications >> Create a new application
+GET >> /orgs/ORG_ID/audit-logs/AUDIT_LOG_ID >> Retrieves information on an audit log
+GET >> /orgs/ORG_ID/audit-logs >> Returns the audit logs for the organization
+POST >> /auth/device >> Authenticates a device using the provided credentials.
+POST >> /auth/solutionUser >> Authenticates a solution user using the provided credentials.
+POST >> /auth/user >> Authenticates a user using the provided credentials.
+POST >> /auth/user/github >> Authenticates a user via GitHub OAuth.
+DELETE >> /dashboards/DASHBOARD_ID >> Deletes a dashboard
+GET >> /dashboards/DASHBOARD_ID >> Retrieves information on a dashboard
+PATCH >> /dashboards/DASHBOARD_ID >> Updates information about a dashboard
+POST >> /dashboards/DASHBOARD_ID >> Sends a snapshot of a dashboard
+POST >> /dashboards/DASHBOARD_ID/validateContext >> Validates a context object against the dashboard’s context configuration
+GET >> /dashboards >> Returns the dashboards the current user has permission to see
+POST >> /dashboards >> Create a new dashboard
+POST >> /applications/APPLICATION_ID/data/export >> Creates a csv file from a query of devices and attributes over a time range.
+POST >> /applications/APPLICATION_ID/data/last-value-query >> Returns the last known data for the given attribute
+POST >> /applications/APPLICATION_ID/data/time-series-query >> Returns the data for the given query
+POST >> /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column >> Adds a new column to this data table
+DELETE >> /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID >> Deletes a data table
+GET >> /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID >> Retrieves information on a data table
+PATCH >> /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID >> Updates information about a data table
+DELETE >> /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column >> Removes a column from this data table
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID/commandStream >> Attach to a real time stream of command messages to this device using Server Sent Events (SSE)
+DELETE >> /applications/APPLICATION_ID/devices/DEVICE_ID >> Deletes a device
+POST >> /applications/APPLICATION_ID/devices/DEVICE_ID/export >> Creates a device data export. Defaults to all data.
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID >> Retrieves information on a device
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID/command >> Retrieve the last known commands(s) sent to the device
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID/compositeState >> Retrieve the composite last complete state of the device
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID/logs >> Retrieve the recent log entries about the device
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID/state >> Retrieve the last known state(s) of the device
+DELETE >> /applications/APPLICATION_ID/devices/DEVICE_ID/data >> Removes all device data for the specified time range. Defaults to all data.
+POST >> /applications/APPLICATION_ID/devices/DEVICE_ID/setConnectionStatus >> Set the current connection status of the device
+GET >> /applications/APPLICATION_ID/devices/DEVICE_ID/stateStream >> Attach to a real time stream of state messages from this device using Server Sent Events (SSE)
+PATCH >> /applications/APPLICATION_ID/experience/bootstrap >> Bootstraps the experience for this application with standard endpoints and views
+DELETE >> /applications/APPLICATION_ID/experience >> Deletes multiple parts of an experience including users, groups, slugs, domains, versions, endpoints, views, and workflows
+POST >> /applications/APPLICATION_ID/devices/export >> Creates an export of all device metadata.
+GET >> /applications/APPLICATION_ID/devices >> Returns the devices for an application
+POST >> /applications/APPLICATION_ID/devices >> Create a new device for an application
+POST >> /applications/APPLICATION_ID/devices/command >> Send a command to multiple devices
+GET >> /applications/APPLICATION_ID/edge/deployments >> Returns the edge deployments for an application
+POST >> /applications/APPLICATION_ID/edge/deployments/release >> Deploy an edge workflow version to one or more edge devices. Version can be blank, if removal is desired.
+POST >> /applications/APPLICATION_ID/edge/deployments/remove >> Remove all edge deployments from a device, remove all edge deployments of a workflow, or remove a specific workflow from a specific device
+POST >> /applications/APPLICATION_ID/edge/deployments/replace >> Replace deployments of an edge workflow version with a new version. New version can be blank, if removal is desired.

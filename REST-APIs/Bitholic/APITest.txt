@@ -1,0 +1,6 @@
+/balances
+/order/{pairs}
+/cancel/{pairs}
+/openOrders
+/tradeHistories
+/balanceHistories

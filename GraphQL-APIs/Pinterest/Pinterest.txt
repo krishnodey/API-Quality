@@ -1,0 +1,23 @@
+GET >> /v5//pins >> View, create, update, or delete information about Pins.
+POST >> /v5//pins >> Create a Pin on a board or board section owned by the "operation user_account".
+GET >> /v5/pins/{pin_id} >> Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account. >> pin_id required string Unique identifier of a Pin.
+DELETE >> /v5/pins/{pin_id} >> Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account. >> pin_id required string Unique identifier of a Pin.
+PATCH >> /v5/pins/{pin_id} >> Update a pin owned by the "operating user_account". >> pin_id required string Unique identifier of a Pin.
+GET >> /v5/pins/{pin_id}/analytics >> Get analytics for a Pin owned by the "operation user_account" - or on a group board that has been shared with this account. >> pin_id required string Unique identifier of a Pin.
+POST >> /v5/pins/{pin_id}/save>> Save a Pin on a board or board section owned by the "operation user_account". >> pin_id required string Unique identifier of a Pin.
+GET >> /v5/boards >> View, create, update, or delete information about boards.
+POST >> /v5/boards >>Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET >> /v5/boards/{board_id} >> Get a board owned by the operation user_account - or a group board that has been shared with this account. >> board_id required string Unique identifier of a board.
+PATCH >> /v5/boards/{board_id} >> Update a board owned by the "operating user_account". >> board_id Unique identifier of a board.
+DELETE >> /v5/boards/{board_id} >>Delete a board owned by the "operation user_account". >> board_id Unique identifier of a board.
+GET >> /v5/boards/{board_id}/pins >> Get a list of the Pins on a board owned by the "operation user_account" - or on a group board that has been shared with this account. >> board_id Unique identifier of a board.
+GET >> /v5/boards/{board_id}/sections >> Get a list of all board sections from a board owned by the "operation user_account" - or a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account". >> board_id Unique identifier of a board.
+PATCH >> /v5/boards/{board_id}/sections >> Update a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account". >> board_id Unique identifier of a board.
+DELETE >> /v5/boards/{board_id}/sections/{section_id} >> Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account". >> board_id required string Unique identifier of a board. section_id required string Unique identifier of a board section.
+GET >> /v5/boards/{board_id}/sections/{section_id}/pins >> Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account". >> board_id required string Unique identifier of a board. section_id required string Unique identifier of a board section.
+GET >> /v5/media >> List media uploads filtered by given parameters.
+POST >> /v5/media >> Register your intent to upload media
+GET >> /v5/media/{media_id} >> Get details for a registered media upload, including its current status.>> media_id required string Media identifier
+ 
+
+

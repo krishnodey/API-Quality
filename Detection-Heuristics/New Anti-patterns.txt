@@ -1,0 +1,19 @@
+1) PATCH instead of PUT
+2) Use pagination, filtering and sorting when fetching collections of records
+
+https://medium.com/@liams_o/15-fundamental-tips-on-rest-api-design-9a05bcd42920
+
+3)  Know When to use Parameters vs. Query Parameters
+
+https://www.getambassador.io/blog/7-rest-api-design-best-practices
+
+4) Name Collections with Plural Nouns
+5) Use SSL for Security
+6) Endpoints should be verbless (not jsut crudy verbs)
+
+https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/
+
+7) Doucment should be singular/noun, Collections and store should be pluarl, Controller should be a verb.
+Book
+
+ 

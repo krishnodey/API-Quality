@@ -1,0 +1,20 @@
+PUT >> /devices >> Creates a new device associated to the user.
+DELETE >> /devices/{id} >> Removes a device associated to the user.
+GET >> /devices/{id}/events >> GET device events.
+GET >> /devices/{id}/properties >> GET device properties.
+GET >> /devices >> Returns the list of devices associated to the user.
+GET >> /devices/{id} >> Returns the device requested by the user.
+DELETE >> /devices/{id} >> Removes a device associated to the user
+GET >> /devices/{id}/properties/{pid} >> GET device properties values in a range of time
+PUT >> /devices/{id}/properties >> Update device properties last values
+PUT >> /devices/{id}/certs >> Creates a new cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+DELETE >> /devices/{id}/certs/{cid} >> Removes a cert associated to a device
+GET >> /devices/{id}/certs >> Returns the list of certs associated to the device
+GET >> /devices/{id}/certs/{cid} >> Returns the cert requested by the user
+POST >> /devices/{id}/certs/{cid} >> Updates a cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+POST >> /devices/{id}/pass >> Check if the password matches.
+PUT >> /things/{id}/properties >> Creates a new property associated to a thing
+PUT >> /things/{id}/properties/{pid}/publish >> Publish a property value to MQTT
+POST >> /series/batch_query >> Returns the batch of time-series data
+POST >> /series/batch_query_raw >> Returns the batch of time-series data raw
+POST >> /series/batch_query_raw/lastvalue >> Returns the batch of time-series data raw

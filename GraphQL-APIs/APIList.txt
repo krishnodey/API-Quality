@@ -11,3 +11,7 @@ Pokeapi
 Shopify
 Twitter
 Intuit
+Pinterest
+Hygraph
+Netflix
+UberEats

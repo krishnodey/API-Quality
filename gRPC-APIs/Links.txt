@@ -1,3 +1,0 @@
-https://github.com/Netflix/ribbon
-https://www.dropbox.com/developers/documentation/http/overview
-https://developer.uber.com/docs/

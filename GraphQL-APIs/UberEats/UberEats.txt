@@ -36,9 +36,3 @@ GET >> /v1/eats/store/{store_id}/status >> This Get Restaurant Status endpoint r
 POST >> /v1/eats/store/{store_id}/status >> This Set Restaurant Status endpoint sets the online status of a restaurant. >> store_id	string	Unique identifier representing a store.
 GET >> /v1/eats/stores/{store_id}/holiday-hours >> This endpoint allows a developer to retrieve the holiday hours for a given restaurant. Holiday hours are exceptions to the normal operating hours of a restaurant that are applied each day. Results are sorted by day, returned chronologically. >> store_id	string	Unique identifying string for a restaurant on Uber Eats, provided by Uber.
 POST >> /v1/eats/stores/{store_id}/holiday-hours >> This endpoint allows a developer to set the holiday hours for a given restaurant. Holiday hours are exceptions to the normal operating hours of a restaurant that are applied each day. >>
-
-
-
-
-
-

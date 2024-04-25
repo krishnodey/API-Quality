@@ -1,0 +1,6 @@
+GET >> /balances >> Get current balances.
+POST >> /order/{pairs} >> Register your order.
+POST >> /cancel/{pairs} >> Cancel the registered order.
+GET >> /openOrders >> Get your open orders.
+GET >> /tradeHistories >> Get your completed order.
+GET >> /balanceHistories >> Get your balance History.

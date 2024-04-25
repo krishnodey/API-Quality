@@ -1,0 +1,5 @@
+POST >> /getEditions >> Returns all returns all editions in the Guardian API. Editions are the different front main pages of the Guardian site we have. At current we have editions for the United Kingdom, the United States and Australia.
+POST >> /getSections >> Returns all sections in the Guardian API.
+POST >> /getSingleItem >> Returns all the data we have for a given single item id. Here the term 'item' refers to either a piece of content, a tag, or a section. The item endpoint matches the paths on theguardian.com.
+POST >> /getTags >> Returns all tags in the Guardian API. All Guardian content is manually categorised using these tags, of which there are more than 50,000.
+POST >> /searchContent >> You can find all parts of the content in the API

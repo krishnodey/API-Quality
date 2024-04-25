@@ -1,0 +1,11 @@
+DELETE >> /applications/{app_id} >> Delete Application. deletes the application with the given identifier (app_id) Request: ApplicationIdentifier Response: Empty
+DELETE >> /applications/{app_id}/devices/{dev_id} >> Delete Device deletes the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Empty
+GET >> /applications/{app_id}/devices/{dev_id} >> Get Device returns the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Device
+GET >> /applications/{app_id}/devices >> Get DevicesForApplication returns all devices that belong to the application with the given identifier (app_id) Request: ApplicationIdentifier Response: DeviceList
+POST >> /applications >> Applications should first be registered to the Handler with the RegisterApplication method Request: ApplicationIdentifier Response: Empty
+PUT >> /applications/{app_id} >> Set Application updates the settings for the application. All fields must be supplied. Request: Application Response: Empty
+POST >> /applications/{app_id} >> Set Application updates the settings for the application. All fields must be supplied. Request: Application Response: Empty
+PUT >> /applications/{app_id}/devices/{dev_id} >> Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+POST >> /applications/{app_id}/devices >> Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+PUT >> /applications/{app_id}/devices >> Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+POST >> /applications/{app_id}/devices/{dev_id} >> Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty

@@ -1,21 +1,37 @@
 Adobe Audience Manager
+Amazon AWS Core IoT
 Apple App Store Connect
+Arduino IoT Cloud
+Bitholic
 BroadCom
 Cisco Flare
 ClearBlade
 Dropbox
+Droplit.io
+Facebook
 Google Nest
 GroupWise
-IBM Cloud Pak System
+Guardian
 IBM Watson IoT
+IBM Cloud Pak System
 Instagram
 Linkedin
+LiveAgent
+Losant
+Microsoft Azure IoT Hub
+Microsoft Partner Center
 Microsoft Power BI
 Node-RED
 Oracle Cloud Marketplace Publisher
+Prolateral Core Infrastructure
 QuickBooks Online
 Samsung ARTIK Cloud
 Shopify
+Sonos
+StackOverflow
 SurveyJS
+The Things Network
+Twitter
 Uber
 WM3 Multishop
+YouTube

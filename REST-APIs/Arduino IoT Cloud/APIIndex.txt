@@ -1,0 +1,13 @@
+/devices
+/devices/{id}
+/devices/{id}/certs
+/devices/{id}/certs/{cid}
+/devices/{id}/events
+/devices/{id}/pass
+/devices/{id}/properties
+/devices/{id}/properties/{pid}
+/series/batch_query
+/series/batch_query_raw
+/series/batch_query_raw/lastvalue
+/things/{id}/properties
+/things/{id}/properties/{pid}/publish

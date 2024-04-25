@@ -1,0 +1,21 @@
+GET >> /accounts/[account_id]/addons?apikey=[value] >> Get all account add-ons with validity info
+POST >> /accounts/[account_id]/addons >> Add addon to account
+GET >> /accounts?apikey=[value] >> Get accounts info for reseller
+GET >> /accounts/[account_id]?apikey=[value] >> Get account info
+POST >> /accounts >> Create new account
+GET >> /accounts/[account_id]/status?apikey=[value] >> Get account status
+PUT >> /accounts/[account_id]/status >> Change account status (suspend, unsuspend or terminate)
+PUT >> /accounts/[account_id]/variation >> Change account variation
+GET >> /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] >> Check account domain before signup
+GET >> /signupcheck/email?productid=[value]&email=[value]&apikey=[value] >> Check email validity before signup
+GET >> /variations?apikey=[value] >> Get all reseller variations
+GET >> /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] >> Get account attribute
+PUT >> /accounts/[account_id]/attributes/[attribute_name] >> Change account attribute
+DELETE >> /accounts/[account_id]/users/[userid]?apikey=[value] >> Remove user from account
+GET >> /accounts/[account_id]/users?apikey=[value] >> Get users list from account
+GET >> /licenses/[license_code]/addons?apikey=[value] >> Get all license add-ons with validity info
+POST >> /licenses/[license_code]/addons >> Add addon to license
+PUT >> /licenses/[license_code]/addons/[addon_license]/validity >> Change addon validity on owned license
+GET >> /licenses?apikey=[value] >> Get all licenses info for reseller
+GET >> /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] >> Get license attribute
+PUT >> /licenses/[license_code]/attributes/[attribute_name] >> Change license attribute
