@@ -127,3 +127,40 @@ NON-DESCRIPTIVE-RESOURCE(Request-URI)
         retrun 'Descriptive-URI' antipattern
     endif
     retrun 'Non-Descriptive-URI' antipattern
+
+
+11. Use of query and path parameters in uris
+
+Non-SPF-URI(Request-URI)
+    keywords <- [sort, page, pageSize, type]
+    if "?" and keywords not in Request-URI:
+        return 'Non-Filtering-URI' antipattern
+    endif
+
+
+12. Doucment should be singular/noun, Collections and store should be pluarl, Controller should be a verb.
+
+Improper-POS(Request-URI)
+    Nodes <- Split(Request-URI)
+    Documnet, Collections, Store, Controller <- CatagorizeNodes(Nodes)
+    if Doucment is not singular:
+        return 'antipattern'
+    elseif Collections and Store not pluarl:
+        retrun 'antipattern'
+    elseif Controller not Verb:
+        retrun antipattern
+    endif
+
+13. Tunneling of Parameters (When to use Parameters vs. Query Parameters)
+
+PARAMETERS_TUNNELING(Request-URI, Documentation):
+    Documentation <- REMOVE-STOP-WORDS (Documentation)
+    Tokens <- LEMMATISE-TOKENISE (Documentation)
+    Intention <- Extract-Intention(API-Documentation)
+    if Intention is Sorting or Filtering or Pagination and "?" in Request_URI:
+        return 'pattern'
+    elseif Intention is Delete or Update and "?" not in Request-URI:
+        return 'pattern'
+    else:
+        return Parameters_Tunneling'antipattern'
+    

@@ -1,19 +1,31 @@
-1) PATCH instead of PUT
-2) Use pagination, filtering and sorting when fetching collections of records
+1) PATCH instead of PUT [a]
+2) Use pagination, filtering and sorting when fetching collections of records (SPF) [book, a, b]
+We should protect our REST endpoints with some SPF factor. Sorting, Pagination, and Filtering (SPF) are important aspects of API design. 
+Clients will often try to fetch a large amount of data, we will look for a way to lower the (network) shipping costs using three techniques will reduce data loading time, make responses easier to handle, enable smoother UX, and reduce network traffic.
+The way to support Filtering, Pagination, and Sorting is to utilize the query component of a URI:
+GET /desserts?type=cake&seller-id=1234
+GET /desserts?page=5&pageSize=25
+GET /desserts?sort=asc(type)
 
-https://medium.com/@liams_o/15-fundamental-tips-on-rest-api-design-9a05bcd42920
+3)  Know When to use Parameters vs. Query Parameters (Tunneling of Parameters) [d]
+Web APIs often require you to work with additional information passed in the endpoint from the client. Understanding when to use path parameters (e.g., /api/books/{id}) versus query parameters (e.g., /api/books?category=fiction) is essential, especially for API consumers.
+Path parameters are typically used to identify or retrieve a specific resource. Query parameters are more suitable for sorting the request data. You can also use it for filtering and pagination.
 
-3)  Know When to use Parameters vs. Query Parameters
 
-https://www.getambassador.io/blog/7-rest-api-design-best-practices
 
-4) Name Collections with Plural Nouns
-5) Use SSL for Security
-6) Endpoints should be verbless (not jsut crudy verbs)
 
-https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/
+
+6) Endpoints should be verbless (not jsut crudy verbs)-- Update CRUDY Verb [c]
+
 
 7) Doucment should be singular/noun, Collections and store should be pluarl, Controller should be a verb.
-Book
+[Book, b]
+
+
+
+a. https://medium.com/@liams_o/15-fundamental-tips-on-rest-api-design-9a05bcd42920
+b. https://leapwise.co/blog/31-tip-that-make-our-rest-apis-easy-to-use/
+c. https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/
+d. https://www.getambassador.io/blog/7-rest-api-design-best-practices
 
  
