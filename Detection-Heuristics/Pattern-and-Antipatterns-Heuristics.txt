@@ -137,19 +137,18 @@ Non-FILTERING-URI(Request-URI)
         return 'Non-Filtering-URI' antipattern
     endif
 
-12. Tunneling of Parameters (When to use Parameters vs. Query Parameters)
+12. Parameters-Tunneling (When to use Parameters vs. Query Parameters)
 
 PARAMETERS_TUNNELING(Request-URI, Documentation):
     Documentation <- REMOVE-STOP-WORDS (Documentation)
     Tokens <- LEMMATISE-TOKENISE (Documentation)
     Intention <- Extract-Intention(API-Documentation)
     if Intention is Sorting or Filtering or Pagination and "?" in Request_URI:
-        return 'pattern'
+        return 'Parameter Adherence' pattern
     elseif Intention is Delete or Update and "?" not in Request-URI:
-        return 'pattern'
+        return 'Parameter Adherence' pattern
     else:
-        return Parameters_Tunneling'antipattern'
-
+        return Parameters-Tunneling'antipattern'
 
 
 13. Verb-Endpoints vs Noun-Endpoints
@@ -157,9 +156,9 @@ PARAMETERS_TUNNELING(Request-URI, Documentation):
 VERB-URI(Request-URI, HTTP-Verb):
     Verbs <- POS-Tagging(Request-URI)
     if Verbs is not NULL:
-        return 'Verb Endpoints' antipattern
+        return 'Verb-Endpoints' antipattern
     end if
-    return 'Noun Endpoints' pattern
+    return 'Noun-Endpoints' pattern
 
 
 
