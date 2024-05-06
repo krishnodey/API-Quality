@@ -129,29 +129,15 @@ NON-DESCRIPTIVE-RESOURCE(Request-URI)
     retrun 'Non-Descriptive-URI' antipattern
 
 
-11. Use of query and path parameters in uris
+11. Non-Filtering-URI (Use of query and path parameters in uris)
 
-Non-SPF-URI(Request-URI)
+Non-FILTERING-URI(Request-URI)
     keywords <- [sort, page, pageSize, type]
     if "?" and keywords not in Request-URI:
         return 'Non-Filtering-URI' antipattern
     endif
 
-
-12. Doucment should be singular/noun, Collections and store should be pluarl, Controller should be a verb.
-
-Improper-POS(Request-URI)
-    Nodes <- Split(Request-URI)
-    Documnet, Collections, Store, Controller <- CatagorizeNodes(Nodes)
-    if Doucment is not singular:
-        return 'antipattern'
-    elseif Collections and Store not pluarl:
-        retrun 'antipattern'
-    elseif Controller not Verb:
-        retrun antipattern
-    endif
-
-13. Tunneling of Parameters (When to use Parameters vs. Query Parameters)
+12. Tunneling of Parameters (When to use Parameters vs. Query Parameters)
 
 PARAMETERS_TUNNELING(Request-URI, Documentation):
     Documentation <- REMOVE-STOP-WORDS (Documentation)
@@ -163,4 +149,32 @@ PARAMETERS_TUNNELING(Request-URI, Documentation):
         return 'pattern'
     else:
         return Parameters_Tunneling'antipattern'
-    
+
+
+
+13. Verb-Endpoints vs Noun-Endpoints
+
+VERB-URI(Request-URI, HTTP-Verb):
+    Verbs <- POS-Tagging(Request-URI)
+    if Verbs is not NULL:
+        return 'Verb Endpoints' antipattern
+    end if
+    return 'Noun Endpoints' pattern
+
+
+
+14. Improper-Noun vs Proper-Noun (Doucment should be singular noun and Collections should be plural)
+
+Improper-Noun(Request-URI)
+    Nodes <- Split(Request-URI)
+    Documnet, Collections, Store, Controller <- CatagorizeNodes(Nodes)
+    if Doucment is not singular:
+        return 'antipattern'
+    elseif Collections and Store not pluarl:
+        retrun 'antipattern'
+    elseif Controller not Verb:
+        retrun antipattern
+    endif
+
+
+
