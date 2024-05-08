@@ -1,4 +1,4 @@
-1) Non-Filerting-URI vs Filerting-URI [book, a, b]
+1) Filerting-Endpoint vs Non-Filerting-Endpoint [book, a, b]
 records. The endpoints should always be protected with some SPF factor. Users often attempt to fetch a large amount of data, and SPF helps limit the number of collections that can be fetched from a list of items. Additionally, SPF allows API consumers to filter collections according to their needs, reducing data loading time, making responses easier to handle, enabling smoother user experiences, and reducing network traffic. A URI that allows sorting, pagination, and filtering is a Filtering-URI, while one that doesn't is a Non-Filtering-URI.
 
 Pattern:
@@ -10,7 +10,7 @@ Anti-pattern:
 GET /file/photos
 GET /profile/album/photos
 
-2)  Parameter Tunneling vs  Parameter Adherence [d]
+2)  Parameter Adherence vs  Parameter Tunneling [d]
 Web APIs often require clients to provide additional information (parameters) with the endpoint. Typically, two types of parameters are used with API endpoints: path parameters and query parameters. Path parameters are used to identify or retrieve a specific resource, while query parameters are more suitable for sorting, filtering, and pagination of the request data. Understanding when to use path parameters (e.g., /api/books/{id}) versus query parameters (e.g., /api/books?category=fiction) is essential, especially for API consumers. Path parameters can be used for deleting or updating book information using the endpoint /api/books/{id}, where "id" represents the path parameter, and its value is the unique book identifier. On the other hand, query parameters can be used to retrieve all books belonging to a certain category. We can specify the filter using /api/books?category=fiction, where the query parameter is "category," and its value is "fiction." Tunneling of parameters would occur if path parameters are used for sorting, filtering, and pagination, or if query parameters are used for identifying resources.
 
 Pattern:
@@ -19,7 +19,7 @@ GET /desserts?type=cake&seller-id=1234 Return all the resource types cakes with 
 Anti-Pattern:
 GET /desserts?page=5&pageSize=25 Update the resource desserts
 
-3) Verb-Endpoints vs Noun-Endpoints
+3) Noun-Endpoint vs Verb-Endpoint
 API endpoint paths should not include any verbs; instead, they should use nouns, signifying their purpose. This is because fundamental CRUD (Create, Read, Update, Delete) activities can already be carried out using HTTP methods in verb forms like GET, POST, PUT, PATCH, and DELETE. HTTP verbs should handle what endpoints do, for example, GET retrieves data, POST creates data, PUT updates data, and DELETE removes data.
 
 Pattern:
@@ -30,7 +30,7 @@ Anti-Pattern:
 GET /getPosts
 POST /createPost
 
-4) Improper-Noun vs Proper-Noun [Book, b]
+4) Proper-Noun vs Improper-Noun [Book, b]
 
 Resource archetypes are the basic building blocks of API endpoints. It helps us to convey the typical structures and functionalities present in API designs. Two of the most commonly used resource archetypes are Document and collection. The Document archetype usually includes fields filled with values that describe a resource. On the other hand, a Collection resource is a list of document resources. 
 The endpoint /recipes/desserts/apple-pie represents a Document archetype, describing a specific recipe for an apple-pie dessert. On the other, the endpoints /recipes and /recipes/desserts represent Collection archetypes, listing all available recipes and dessert recipes, respectively. 

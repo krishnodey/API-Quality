@@ -129,51 +129,48 @@ NON-DESCRIPTIVE-RESOURCE(Request-URI)
     retrun 'Non-Descriptive-URI' antipattern
 
 
-11. Non-Filtering-URI (Use of query and path parameters in uris)
+11. Filtering Endpoint vs Non-Filtering Endpoint (Use of query and path parameters in uris)
 
-Non-FILTERING-URI(Request-URI)
+NON-FILTERING-Endpoint(Request-URI)
     keywords <- [sort, page, pageSize, type]
     if "?" and keywords not in Request-URI:
-        return 'Non-Filtering-URI' antipattern
+        return 'Non-Filtering-Endpoint' antipattern
     endif
+    return 'Filtering-Endpoint' antipattern
 
-12. Parameters-Tunneling (When to use Parameters vs. Query Parameters)
+12. Parameters Adherence vs Parameters Tunneling (When to use Parameters vs. Query Parameters)
 
-PARAMETERS_TUNNELING(Request-URI, Documentation):
-    Documentation <- REMOVE-STOP-WORDS (Documentation)
-    Tokens <- LEMMATISE-TOKENISE (Documentation)
+PARAMETERS_TUNNELING(Request-URI, API-Documentation):
     Intention <- Extract-Intention(API-Documentation)
     if Intention is Sorting or Filtering or Pagination and "?" in Request_URI:
         return 'Parameter Adherence' pattern
-    elseif Intention is Delete or Update and "?" not in Request-URI:
+    elseif Intention is "Delete" or "Update" and "?" not in Request-URI:
         return 'Parameter Adherence' pattern
     else:
-        return Parameters-Tunneling'antipattern'
-
-
-13. Verb-Endpoints vs Noun-Endpoints
-
-VERB-URI(Request-URI, HTTP-Verb):
-    Verbs <- POS-Tagging(Request-URI)
-    if Verbs is not NULL:
-        return 'Verb-Endpoints' antipattern
-    end if
-    return 'Noun-Endpoints' pattern
-
-
-
-14. Improper-Noun vs Proper-Noun (Doucment should be singular noun and Collections should be plural)
-
-Improper-Noun(Request-URI)
-    Nodes <- Split(Request-URI)
-    Documnet, Collections, Store, Controller <- CatagorizeNodes(Nodes)
-    if Doucment is not singular:
-        return 'antipattern'
-    elseif Collections and Store not pluarl:
-        retrun 'antipattern'
-    elseif Controller not Verb:
-        retrun antipattern
+        return 'Parameters Tunneling' antipattern
     endif
 
 
+13. Verb Endpoints vs Noun Endpoints
+
+VERB-ENDPOINT(Request-URI):
+    Verbs <- POS-Tagging(Request-URI)
+    if Verbs is not NULL:
+        return 'Verb Endpoint' antipattern
+    end if
+    return 'Noun Endpoint' pattern
+
+
+14. Proper Noun vs Improper Noun (Doucment should be singular noun and Collections should be plural)
+
+IMPROPER_NOUN(Request-URI)
+    Nodes <- Split(Request-URI)
+    Document, Collections <- CatagorizeNodes(Nodes)
+    if Document is singular:
+        return 'Proper Noun' pattern
+    elseif Collections is pluarl:
+        return 'Proper Noun' pattern
+    else 
+        return 'Improper Noun' antipattern
+    endif
 
