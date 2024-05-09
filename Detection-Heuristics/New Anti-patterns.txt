@@ -19,9 +19,8 @@ GET /desserts?type=cake&seller-id=1234 Return all the resource types cakes with 
 Anti-Pattern:
 GET /desserts?page=5&pageSize=25 Update the resource desserts
 
-3) Noun-Endpoint vs Verb-Endpoint
-API endpoint paths should not include any verbs; instead, they should use nouns, signifying their purpose. This is because fundamental CRUD (Create, Read, Update, Delete) activities can already be carried out using HTTP methods in verb forms like GET, POST, PUT, PATCH, and DELETE. HTTP verbs should handle what endpoints do, for example, GET retrieves data, POST creates data, PUT updates data, and DELETE removes data.
-
+3) Noun-Oriented Endpoint vs Verb-Oriented Endpoint [c]
+API endpoint paths should not include any verbs; instead, they should use nouns, signifying their purpose. This is because fundamental CRUD (Create, Read, Update, Delete) activities can already be carried out using HTTP methods in verb forms like GET, POST, PUT, PATCH, and DELETE. HTTP verbs should handle what endpoints do, for example, GET retrieves data, POST creates data, PUT updates data, and DELETE removes data. Using verbs in endpoint could result in conflicts with the HTTP Verb. 
 Pattern:
 GET /posts
 POST /books
@@ -30,8 +29,7 @@ Anti-Pattern:
 GET /getPosts
 POST /createPost
 
-4) Proper-Noun vs Improper-Noun [Book, b]
-
+4) Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names [Book, b]
 Resource archetypes are the basic building blocks of API endpoints. It helps us to convey the typical structures and functionalities present in API designs. Two of the most commonly used resource archetypes are Document and collection. The Document archetype usually includes fields filled with values that describe a resource. On the other hand, a Collection resource is a list of document resources. 
 The endpoint /recipes/desserts/apple-pie represents a Document archetype, describing a specific recipe for an apple-pie dessert. On the other, the endpoints /recipes and /recipes/desserts represent Collection archetypes, listing all available recipes and dessert recipes, respectively. 
 Document names should consistently use singular nouns, while collection names should consistently use plural nouns to prevent potential conflicts. Adhering to these rules helps avoid improper noun anti-patterns in URIs.

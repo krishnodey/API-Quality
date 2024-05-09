@@ -129,14 +129,15 @@ NON-DESCRIPTIVE-RESOURCE(Request-URI)
     retrun 'Non-Descriptive-URI' antipattern
 
 
-11. Filtering Endpoint vs Non-Filtering Endpoint (Use of query and path parameters in uris)
+11. Filtering Endpoint vs Non Filtering Endpoint (Use of query and path parameters in uris)
 
-NON-FILTERING-Endpoint(Request-URI)
-    keywords <- [sort, page, pageSize, type]
-    if "?" and keywords not in Request-URI:
-        return 'Non-Filtering-Endpoint' antipattern
+NON-FILTERING-ENDPOINT(Request-URI)
+    Keywords <- [sort, page, pageSize, type]
+    if "?" and Keywords not in Request-URI:
+        return 'Non Filtering Endpoint' antipattern
     endif
-    return 'Filtering-Endpoint' antipattern
+    return 'Filtering Endpoint' antipattern
+
 
 12. Parameters Adherence vs Parameters Tunneling (When to use Parameters vs. Query Parameters)
 
@@ -151,9 +152,9 @@ PARAMETERS_TUNNELING(Request-URI, API-Documentation):
     endif
 
 
-13. Verb Endpoints vs Noun Endpoints
+13. Verb-Oriented Endpoint vs Noun-Oriented Endpoint
 
-VERB-ENDPOINT(Request-URI):
+VERB-ORIENTED-ENDPOINT(Request-URI):
     Verbs <- POS-Tagging(Request-URI)
     if Verbs is not NULL:
         return 'Verb Endpoint' antipattern
@@ -161,16 +162,15 @@ VERB-ENDPOINT(Request-URI):
     return 'Noun Endpoint' pattern
 
 
-14. Proper Noun vs Improper Noun (Doucment should be singular noun and Collections should be plural)
+14. Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
 IMPROPER_NOUN(Request-URI)
     Nodes <- Split(Request-URI)
     Document, Collections <- CatagorizeNodes(Nodes)
     if Document is singular:
         return 'Proper Noun' pattern
-    elseif Collections is pluarl:
+    elseif Collections is plural:
         return 'Proper Noun' pattern
     else 
         return 'Improper Noun' antipattern
     endif
-
