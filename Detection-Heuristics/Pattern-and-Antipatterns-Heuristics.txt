@@ -117,29 +117,32 @@ UNVERSIONED-ENDPOINT(Request-Endpoint):
     return 'Unversioned Endpoint' antipattern 
 
 
-
-
 11. Non Filtering vs Filtering Endpoint (Use of query and path parameters in Endpoints)
 
 NON-FILTERING-ENDPOINT(HTTP-Method, Request-Endpoint)
-    Keywords <- [sort, page, pageSize, type, ....]
-    if HTTP-Method = "GET" and "?" and Keywords in Request-Endpoint:
-        return 'Filtering Endpoint' pattern
+    Intention <- Extract-Intention(API-Documentation)
+    if Inention is "Fetch" or "Return" Reosurces and Query-Parameter not in Request-Endpoint:
+        return 'Non-Filtering Endpoint' pattern
+    elseif Inention is "Fetch" or "Return" Reosurces and Query-Parameter in Request-Endpoint: 
+        return 'Filtering Endpoint' antipattern
     endif
-    return 'Non Filtering Endpoint' antipattern
+    return "Regular Endpoint" 
 
 
-12. Parameters Tunneling vs Parameters Adherence (When to use Parameters vs. Query Parameters)
+12. Parameters Tunneling vs Parameters Adherence (When to use Path-Parameters vs. Query-Parameters)
 
 PARAMETERS-TUNNELING(Request-Endpoint, API-Documentation):
     Intention <- Extract-Intention(API-Documentation)
-    if Intention is Sorting or Filtering or Pagination and "?" in Request_Endpoint:
-        return 'Parameter Adherence' pattern
-    elseif Intention is "Delete" or "Update" and "?" not in Request-Endpoint:
-        return 'Parameter Adherence' pattern
+    if Parameter Є Request-Endpoint: 
+        if Query-Parameter Є Request-Endpoint and Intention is "Sorting" or "Filtering" or "Pagination":
+            return 'Parameter Adherence' pattern
+        elseif Path-Parameter Є Request-Endpoint and Intention is "Delete" or "Update":
+            return 'Parameter Adherence' pattern
+        endif
+        return 'Parameters Tunneling' antipattern
     endif
-    return 'Parameters Tunneling' antipattern
-    
+    return 'Regular Endpoints' pattern
+        
 
 
 13. Verb-Oriented vs Noun-Oriented Endpoint
@@ -156,7 +159,7 @@ VERB-ORIENTED-ENDPOINT(Request-Endpoint):
 
 IMPROPER_NOUN(Request-Endpoint)
     Nodes <- Split(Request-Endpoint)
-    Document, Collections <- CatagorizeNodes(Nodes)
+    Document, Collections <- CatagorizeNodes(Nodes) #based on the positions of the nodes.# 
     if Document is singular:
         return 'Consistent Resource Archetype' pattern
     elseif Collections is plural:
