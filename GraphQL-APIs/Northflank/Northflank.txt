@@ -1,0 +1,47 @@
+GET >> /v1/projects >> Lists projects for the authenticated user or team. >>
+POST >> /v1/projects >> Creates a new project. >>
+PUT >> /v1/projects << Create or update project >> 
+PATCH >> /v1/projects/{projectId}>> Updates a project. >> 
+GET >> /v1/projects/{projectId} >> Get information about the given project >>
+DELETE >> /v1/projects/{projectId} >> Delete the given project. Fails if the project isn't empty. >> 
+GET >> /v1/projects/{projectId}/services >> Gets a list of services belonging to the project >>
+POST >> /v1/projects/{projectId}/services/build >> Creates a new build service.>>
+PUT >> /v1/projects/{projectId}/services/build >> Creates or updates a build service. >> 
+PATCH >> /v1/projects/{projectId}/services/build/{serviceId} >> Updates a build service. >>
+POST >> /v1/projects/{projectId}/services/combined >> Creates a new combined service. >>
+PUT >> /v1/projects/{projectId}/services/combined >> Creates or updates a combined service. >>
+PATCH >> /v1/projects/{projectId}/services/combined/{serviceId} >> Updates a combined service. >> 
+POST >> /v1/projects/{projectId}/services/deployment >> Creates a new deployment service.>>
+PUT >> /v1/projects/{projectId}/services/deployment >> Creates or updates a deployment service. >>
+PATCH >> /v1/projects/{projectId}/services/deployment/{serviceId} >> Updates a deployment service.
+GET >> /v1/projects/{projectId}/services/{serviceId} >> Gets information about the given service. >> 
+DELETE >> /v1/projects/{projectId}/services/{serviceId} >> Deletes the given service.>>
+GET >> /v1/projects/{projectId}/services/{serviceId}/branches >> Gets information about the branches of the given service. >> 
+GET >> /v1/projects/{projectId}/services/{serviceId}/build >> Lists the builds for the service
+POST >> /v1/projects/{projectId}/services/{serviceId}/build  >> Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
+GET >> /v1/projects/{projectId}/services/{serviceId}/build-arguments >> Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed. >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/build-arguments >> Sets the build arguments for the given service. >> 
+GET >> /v1/projects/{projectId}/services/{serviceId}/build-arguments/details >> Get details about the build arguments accessible by the given service. >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/build-logs >> Get logs for a service build >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/build-metrics >> Get metrics for a service build >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/build-options >> Updates the build options for a given service.>>
+POST >> /v1/projects/{projectId}/services/{serviceId}/build-source >> Updates the version control source for a given build or combined service.>>
+GET >> /v1/projects/{projectId}/services/{serviceId}/build/{buildId} >> Gets information about a build for the service >>
+DELETE >> /v1/projects/{projectId}/services/{serviceId}/build/{buildId} >> Aborts the given service build >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/containers >> Gets a list of containers for the given service. >>
+GET  >> /v1/projects/{projectId}/services/{serviceId}/deployment >> Gets information about the deployment of the given service. >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/deployment >> Updates the deployment settings of the given service. >> 
+GET >> /v1/projects/{projectId}/services/{serviceId}/health-checks >> Lists the health checks for the given service. >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/health-checks >> Updates health checks for the given service. >> 
+GET >> /v1/projects/{projectId}/services/{serviceId}/logs >> Get logs for a service >> 
+GET >> /v1/projects/{projectId}/services/{serviceId}/metrics >> Get metrics for a service >> 
+POST >> /v1/projects/{projectId}/services/{serviceId}/pause >> Pause the given service. >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/ports >> Lists the ports for the given service. >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/ports >> Updates the list of ports for the given service. >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/pull-requests >> Gets information about the pull-requests of the given service. >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/restart >> Restarts the given service. >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/resume >> Resumes the given service. Optionally takes several arguments to override resumed settings. >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/runtime-environment >> 
+POST >> /v1/projects/{projectId}/services/{serviceId}/runtime-environment >>  Sets the runtime environment for the given service. >>
+GET >> /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details >> Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read' >>
+POST >> /v1/projects/{projectId}/services/{serviceId}/scale >> Modifies the scaling settings for the given service. >> 

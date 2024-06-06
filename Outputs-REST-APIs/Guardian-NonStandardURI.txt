@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 5
+/getEditions	Standard End-point	Standard Endpoint
+/getSections	Standard End-point	Standard Endpoint
+/getSingleItem	Standard End-point	Standard Endpoint
+/getTags	Standard End-point	Standard Endpoint
+/searchContent	Standard End-point	Standard Endpoint

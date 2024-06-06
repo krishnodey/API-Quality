@@ -1,0 +1,25 @@
+GET >> /channelContent/{id} >> ChannelContent represents the various possible contents of channels by content type.>> id	ID!	The identifier of the content.
+GET >> /channelGroup/{id} >> ChannelGroup represents a grouping of Channels. >> 
+GET >> /channelMembers/{userId} >> ChannelMembers represent all members assigned to any Channel on the plan. >> userId	String	The unique identifier for the User
+GET >> /channelProgress >> ChannelProgress represents consumption of channel content by any user, regardless of whether they are a channel member or not. >>
+GET >> /channels >> Channels represent collections of content like Courses, Paths, Projects, Guides, Interactive Courses, External Links, Labs, etc. >>
+POST >> /addChannel >> Create a new Channel. >> 
+POST >> /addChannelGroups >> Add one or more Channel Groups. >>
+POST >> /addChannelMembers >> Assign a User to an existing Channel. >>
+POST >> /addChannelsToChannelGroups >> Add one or more Channels to one or more Channel Groups. Note: Adding a Channel that is already on a Channel Group will return success as true and will not duplicate the Channel. >>
+POST >> /addTeamsToChannels >> Assign Teams to existing Channels. >>
+POST >> /archiveChannel >> Archive a Channel. >>
+DELETE >> /deleteChannelGroup >> Delete one or more Channel Groups. >>
+DELETE >> /deleteChannelGroupChannels >> Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error >>
+POST >> /editChannel >> Modify Channel details. All edits require both channelId and actorUserId. >>
+DELETE >> /removeChannelContent >> Remove Content from an existing Channel. >> 
+DELETE >> /removeChannelMember >> Remove a member or contributor from an existing Channel. >>
+PUT >> /updateChannelGroups >> Update one or more Channel Groups. >>
+GET >> /contentCatalog >> ContentCatalog represents an aggregate of all of the content types
+GET >> /courseCatalog >> CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data. >>
+GET >> /labCatalog >> LabCatalog represents a list of labs available at Pluralsight. >>
+GET >> /marketTaxonomy >> marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy. >>
+GET >> /pathCatalog >> Path Catalog represents a list of available Paths on Pluralsight.com. >>
+GET >> /programCatalog >> programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance. >>
+GET >> /projectCatalog >> ProjectCatalog represents a list of available Projects on Pluralsight.com. >> 
+GET >> /tags >> Tags represent one or more technology concepts associated with a piece of content. >>

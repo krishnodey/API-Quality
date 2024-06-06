@@ -17,3 +17,13 @@ https://hygraph.com/docs/api-reference/basics/authorization Public API
 https://github.com/Netflix/ribbon
 https://www.dropbox.com/developers/documentation/http/overview
 https://developer.uber.com/docs/
+
+
+https://docs.developer.yelp.com/docs/overview (Public)
+https://developer.nytimes.com/docs/most-popular-product/1/overview (Public)
+https://developer.swapcard.com/organizer/content-api/graphql-event-api-schema/queries/sponsors
+https://screencloud.github.io/signage-next-graphql-docs/graphql-reference/query/allAppCategories
+https://developers.satispay.com/reference/keyid
+https://developers.salsify.com/reference/add-a-product
+https://developer.pluralsight.com/schema/channel/channelContent
+https://northflank.com/docs/v1/api/projects/list-projects

@@ -14,4 +14,12 @@ Intuit
 Pinterest
 Hygraph
 Netflix
+Yelp Fusion
+NY Times Article Search
+Swapcard
+ScreenCloud
+Satispay
+Salsify
+Pluralsight
+Northflank
 UberEats

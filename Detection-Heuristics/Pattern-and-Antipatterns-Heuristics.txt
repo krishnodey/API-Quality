@@ -1,41 +1,36 @@
 
-1. Tidy vs. Amorphous (done)
+1. Amorphous vs. Tidy
 
-AMORPHOUS-URI(Request-URI):
-    if uppercase or underscore or trailing_slash or File-Extensions Є Request-URI 
-        retrun 'Amorphous URI' antipattern
+AMORPHOUS-ENDPOINT(Request-Endpoint):
+    if uppercase or underscore or trailing_slash or File-Extensions Є Request-Endpoint 
+        retrun 'Amorphous Endpoint' antipattern
     end if
-    retrun 'Tidy URI' pattern
-
-
+    retrun 'Tidy Endpoint' pattern
 
 2. ContextLess and Contextual
 
-CONTEXTLESS-RESOURCE (Request-URI, API-Documentation) 
+CONTEXTLESS-RESOURCE (Request-Endpoint, API-Documentation) 
     TopicsModel <- EXTRACT-TOPICS (API-Documentation) 
-    URINodes <- EXTRACT-URI-NODES (Request-URI)
-    Similarity-Value <- CALCULATE-COSINE-SIMILARITY-SCORE (URINodes, TopicsModel) 
+    EndpointNodes <- EXTRACT-Endpoint-NODES (Request-Endpoint)
+    Similarity-Value <- CALCULATE-COSINE-SIMILARITY-SCORE (EndpointNodes, TopicsModel) 
     if Similarity-Value < threshold
         return 'ContextLess Resource Names' antipattern
     end if
     return 'Contextual Resource Names' pattern
 
 
+3. CRUDY Verb vs Verbless Endpoint
 
-3. Versioned vs unversioned
-
-UNVERSIONED-URI(Request-URI):
-    if Version-Information Є Request-URI
-        retrun 'Versioned URI' pattern
+CRUDy-ENDPOINT(Request-Endpoint, HTTP-Verb):
+    if Crudywords Є Request-Endpoint 
+        return 'CRUDY Endpoint' antipattern
     end if
-    return 'Unversioned URI' antipattern 
+    return 'Vebrless Endpoint' pattern
     
 
+4. Inconsistent vs Consistent Documentation
 
-
-4. Inconsistent Documentation
-
-INCONSISTENT-DOCUMENTATION(HTTP-Method, Request-URI, Documentation) 
+INCONSISTENT-DOCUMENTATION(HTTP-Method, Request-Endpoint, Documentation) 
     Documentation <- REMOVE-STOP-WORDS (Documentation)
     Tokens <- TOKENISE (Documentation)
     if HTTP-Method = 'POST' and SYNONYMS (Delete or Update or Get) Є Tokens
@@ -50,72 +45,10 @@ INCONSISTENT-DOCUMENTATION(HTTP-Method, Request-URI, Documentation)
     return "Consistent Documentation" pattern
     
 
+5. Non-descriptive vs. Descriptive Endpoint
 
-5. Pertinent vs Non-pertinent Documentation (Not complete)
-
-NON-PERTINENT-DOCUMENTATION(Request-URI, Documentation):
-    Documentation <- REMOVE-STOP-WORDS (Documentation)
-    Tokens <- LEMMATISE-TOKENISE (Documentation)
-    TopicsModel <- EXTRACT-TOPICS (API-Documentation)
-    URINodes <- EXTRACT-URI-NODES (Request-URI)
-    Similarity-Value <- CALCULATE-COSINE-SIMILARITY-SCORE (URINodes, TopicsModel)
-    if Similarity-Value < threshold
-        retrun 'Non-Pertinent Documentation' (Anti-Pattern)
-    endif
-    retrun "Pertinent Documentation" (Pattern)
-
-
-
-6. Pluralised vs Singularised
-
-
-PLURALISED-NODES(Request-URI, HTTP-Mehtod)   
-    Last-Node <- Extract-Last-Node(Request-URI)
-    if HTTP-Method = 'PUT' or 'DELETE' and Last-Node is Singular
-        return 'Singularized Nodes' pattern
-    else if HTTP-Method = 'POST' and Last-Node is Plural
-        retrun 'Singularized Nodes' pattern
-    end if
-    return 'Pluralized Nodes' antipattern
-
-
-7. Hierarchical Nodes vs Non-hierarchical Nodes (Not complete)
-
-NonHierarchicalNodes(Request-URI):   
-    Nodes <- Split(Request-URI)     
-    Relationship_Type <- Hierarchical-Metrics(Nodes)
-    if Relationship_Type not in Reversed-Hierarchy
-	    return 'Hierarchical' pattern
-    end if
-    retunr 'Non-Hierarchical' pattern
-                       
-
-8. CRUDY Verb vs Verbless
-
-CRUDy-URI(Request-URI, HTTP-Verb):
-    if Crudywords Є Request-URI 
-        return 'CRUDY URI' antipattern
-    end if
-    return 'Vebrless URI' pattern
-   
-    
-
-
-9. Standard vs Non-Standard
-
-NON-STANDARD-RESOURCE(Request-URI):
-    if Non-English-Characters or Space or Double-Hyphens or Unknown-Characters Є Rquest-URI
-        retrun 'Non-Standard URI' antipattern
-    end if
-    retrun 'Standard URI' pattern
-   
-
-    
-
-10. Non descriptive URI
-
-NON-DESCRIPTIVE-RESOURCE(Request-URI)
-    Nodes <- Break-Down-Compound-Words(Request-URI)
+NON-DESCRIPTIVE-RESOURCE(Request-Endpoint)
+    Nodes <- Break-Down-Compound-Words(Request-Endpoint)
     Nodes <- Abbribriate-Acronyms(Nodes)
     hasValidWord = False
     For each word in nodes:
@@ -124,53 +57,119 @@ NON-DESCRIPTIVE-RESOURCE(Request-URI)
         else 
             hasValidWord = hasValidWord or False
     if hasValidWord:
-        retrun 'Descriptive-URI' antipattern
+        retrun 'Descriptive-Endpoint' antipattern
     endif
-    retrun 'Non-Descriptive-URI' antipattern
+    retrun 'Non-Descriptive-Endpoint' pattern
 
 
-11. Filtering Endpoint vs Non Filtering Endpoint (Use of query and path parameters in uris)
 
-NON-FILTERING-ENDPOINT(Request-URI)
-    Keywords <- [sort, page, pageSize, type]
-    if "?" and Keywords not in Request-URI:
-        return 'Non Filtering Endpoint' antipattern
+6. Non-hierarchical vs Hierarchical Nodes (Not complete)
+
+NonHierarchicalNodes(Request-Endpoint):   
+    Nodes <- Split(Request-Endpoint)     
+    Relationship_Type <- Hierarchical-Metrics(Nodes)
+    if Relationship_Type not in Reversed-Hierarchy
+	    return 'Hierarchical' pattern
+    end if
+    retunr 'Non-Hierarchical' pattern
+                       
+
+
+7. Non-pertinent vs Pertinent Documentation
+
+NON-PERTINENT-DOCUMENTATION(Request-Endpoint, Documentation):
+    Documentation <- REMOVE-STOP-WORDS (Documentation)
+    Tokens <- LEMMATISE-TOKENISE (Documentation)
+    TopicsModel <- EXTRACT-TOPICS (API-Documentation)
+    EndpointNodes <- EXTRACT-Endpoint-NODES (Request-Endpoint)
+    Similarity-Value <- CALCULATE-COSINE-SIMILARITY-SCORE (EndpointNodes, TopicsModel)
+    if Similarity-Value < threshold
+        retrun 'Non-Pertinent Documentation' (Anti-Pattern)
     endif
-    return 'Filtering Endpoint' antipattern
+    retrun "Pertinent Documentation" (Pattern)
+
+8. Non-Standard vs Standard
+
+NON-STANDARD-RESOURCE(Request-Endpoint):
+    if Non-English-Characters or Space or Double-Hyphens or Unknown-Characters Є Rquest-Endpoint
+        retrun 'Non-Standard Endpoint' antipattern
+    end if
+    retrun 'Standard Endpoint' pattern
+
+9. Pluralized vs Singularized
+
+PLURALIZED-NODES(Request-Endpoint, HTTP-Mehtod)   
+    Last-Node <- Extract-Last-Node(Request-Endpoint)
+    if HTTP-Method = 'PUT' or 'DELETE' and Last-Node is Singular
+        return 'Singularized Nodes' pattern
+    else if HTTP-Method = 'POST' and Last-Node is Plural
+        retrun 'Singularized Nodes' pattern
+    end if
+    return 'Pluralized Nodes' antipattern
+   
+
+10. Versioned vs unversioned
+
+UNVERSIONED-ENDPOINT(Request-Endpoint):
+    if Version-Information Є Request-Endpoint
+        retrun 'Versioned Endpoint' pattern
+    end if
+    return 'Unversioned Endpoint' antipattern 
 
 
-12. Parameters Adherence vs Parameters Tunneling (When to use Parameters vs. Query Parameters)
 
-PARAMETERS_TUNNELING(Request-URI, API-Documentation):
+
+11. Non Filtering vs Filtering Endpoint (Use of query and path parameters in Endpoints)
+
+NON-FILTERING-ENDPOINT(HTTP-Method, Request-Endpoint)
+    Keywords <- [sort, page, pageSize, type, ....]
+    if HTTP-Method = "GET" and "?" and Keywords in Request-Endpoint:
+        return 'Filtering Endpoint' pattern
+    endif
+    return 'Non Filtering Endpoint' antipattern
+
+
+12. Parameters Tunneling vs Parameters Adherence (When to use Parameters vs. Query Parameters)
+
+PARAMETERS-TUNNELING(Request-Endpoint, API-Documentation):
     Intention <- Extract-Intention(API-Documentation)
-    if Intention is Sorting or Filtering or Pagination and "?" in Request_URI:
+    if Intention is Sorting or Filtering or Pagination and "?" in Request_Endpoint:
         return 'Parameter Adherence' pattern
-    elseif Intention is "Delete" or "Update" and "?" not in Request-URI:
+    elseif Intention is "Delete" or "Update" and "?" not in Request-Endpoint:
         return 'Parameter Adherence' pattern
-    else:
-        return 'Parameters Tunneling' antipattern
     endif
+    return 'Parameters Tunneling' antipattern
+    
 
 
-13. Verb-Oriented Endpoint vs Noun-Oriented Endpoint
+13. Verb-Oriented vs Noun-Oriented Endpoint
 
-VERB-ORIENTED-ENDPOINT(Request-URI):
-    Verbs <- POS-Tagging(Request-URI)
+VERB-ORIENTED-ENDPOINT(Request-Endpoint):
+    Verbs <- POS-Tagging(Request-Endpoint)
     if Verbs is not NULL:
         return 'Verb Endpoint' antipattern
     end if
     return 'Noun Endpoint' pattern
 
 
-14. Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
+14. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
-IMPROPER_NOUN(Request-URI)
-    Nodes <- Split(Request-URI)
+IMPROPER_NOUN(Request-Endpoint)
+    Nodes <- Split(Request-Endpoint)
     Document, Collections <- CatagorizeNodes(Nodes)
     if Document is singular:
-        return 'Proper Noun' pattern
+        return 'Consistent Resource Archetype' pattern
     elseif Collections is plural:
-        return 'Proper Noun' pattern
-    else 
-        return 'Improper Noun' antipattern
+        return 'Consistent Resource Archetype' pattern
     endif
+    return 'Inconsistent Resource Archetype' antipattern
+    
+
+15. Identifier Ambiguity vs Identifier Annotation
+
+IDENTIFIER_AMBIGUITY(Request-Endpoint)
+	Indentifier -> Extract_Identifiers(Request-Endpoint)
+	if Indentifier enclosed in "{}" or "<>" or starts with ":":
+		return  "Identifier Annotation" pattern
+	endif
+	return "Identifier Ambiguity" antipattern

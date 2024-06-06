@@ -1,0 +1,46 @@
+POST >> /v1/orgs/{org_id}/products/ >> Create Product >>
+POST >> /v1/orgs/{org_id}/products >> Bulk Create Products >>
+GET >> /v1/orgs/{org_id}/products/{salsify:id} >> Read Product Record >> 
+GET >> /v1/orgs/{org_id}/products >> Bulk Read Products >> 
+PUT >> /v1/orgs/{org_id}/products/{product_id} >> Update Product >>
+PUT >> /v1/orgs/{org_id}/products >> Bulk Update Products >> 
+PUT >> /v1/orgs/{org_id}/products/_upsert >> Bulk Upsert Products >> 
+DELETE >> /v1/orgs/{org_id}/products/{product_id} >> Delete Product >>
+DELETE >> /v1/orgs/{org_id}/products >> Bulk Delete Products
+POST >> /v1/orgs/{org_id}/records/ >> Create Record >>
+POST >> /v1/orgs/{org_id}/records >> Bulk Create Records >>
+GET >> /v1/orgs/{org_id}/records/{salsify:id} >> Read Record >>
+GET >> /v1/orgs/{org_id}/records >> Bulk Read Records >> 
+GET >> /v1/orgs/{org_id}/record_types >> Read Record Types >> 
+PUT >> /orgs/{org_id}/records/{record_id} >> Update Record >> 
+PUT >> /v1/orgs/{org_id}/records >> Bulk Update Records >> 
+PUT >> /v1/orgs/{org_id}/records/_upsert >> Bulk Upsert Records >> 
+DELETE >> /v1/orgs/{org_id}/records/{product_id} >> Delete Record >> 
+DELETE >> /v1/orgs/{org_id}/records >> Bulk Delete Records >> 
+POST >> /v1/orgs/{org_id}/properties >> Create New Property >> 
+POST >> /v1/orgs/{org_id}/properties >> Bulk Create New Properties >> 
+GET >> /v1/orgs/{org_ID}/properties/{salsify:id} >> Read Property >> 
+PUT >> /v1/orgs/{org_id}/properties/{salsify:id} >> Update Property >> 
+PUT >> /v1/orgs/{organization_id}/properties/_upsert >> Bulk Upsert Properties >> 
+DELETE >> /v1/orgs/{org_id}/properties/{salsify:id} >> Delete Property
+DELETE >> /v1/orgs/{org_id}/properties >> Bulk Delete Properties >> 
+POST >> /orgs/{org_id}/imports/upload_mounts >> Create a Mount Point >>
+POST >> /orgs/{org_id}/imports >> Creating a JSON Import from a Mount Point >>
+POST >> /orgs/{org_id}/imports >> Creating a JSON Import from FTP >> 
+PUT >> /orgs/{org_id}/imports/{import_id} >> Updating an Import to Point at a New Mount Point >>
+POST >> /orgs/{org_id}/imports/{import_id}/runs >> Starting an Import Run >>
+GET >> /orgs/{org_id}/imports/runs/{import_run_id} >> Getting the Status of an Import Run >> 
+POST >> /orgs/{org_id}/export_runs >> Start Export Run >>
+GET >> /orgs/{org_id}/export_runs/{export_id} >> Get Export Status >>
+POST >> /v1/orgs/{organization_id}/digital_assets >> Create a Digital Asset & Metadata >>
+POST >> /v1/orgs/{org_id}/digital_assets >> Create Multiple Digital Assets 
+GET >> /v1/orgs/{org_id}/digital_assets/{asset_id} >> Read Digital Asset Metadata >> 
+GET >> /v1/orgs/{org_id}/digital_assets >> Bulk Read Digital Assets >>
+POST >> /v1/orgs/<org_ID>/digital_assets/refresh >> Refresh Digital Assets >> 
+PUT >> /v1/orgs/{org_id}/digital_assets/{salsify:id} >> Update Digital Asset Metadata >>
+PUT >>  /v1/orgs/{org_id}/digital_assets >> Update Multiple Digital Assets >>
+PUT >> /v1/orgs/{organization_id}/digital_assets/_upsert >> Bulk Upsert Digital Assets >> 
+DELETE >> /v1/orgs/{org_id}/digital_assets >> Delete Digital Assets >>
+DELETE >>  /v1/orgs/{org_id}/digital_assets >> Delete Multiple Digital Assets >>
+PUT >>  /v1/orgs/{org_id}/lists/{list_id}/members >> Add List Members >>
+DELETE >> /v1/orgs/{org_id}/lists/{list_id}/members >> Delete List Members >>

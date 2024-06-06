@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 1
+/searchContent	CRUDy End-point	 [search found] 
+
+***Patterns*** 
+Count: 4
+/getEditions	Verbless End-point	
+/getSections	Verbless End-point	
+/getSingleItem	Verbless End-point	
+/getTags	Verbless End-point	

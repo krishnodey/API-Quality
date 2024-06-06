@@ -1,0 +1,33 @@
+POST >> /createEventDocument/{eventId} >> Create swapcard event document >> A Swapcard event id
+POST >> /createEventGroup/{eventId}>> Create a new group on the event >>  
+POST >> /createEventPlanningLink/{eventId} >>  Create swapcard event planning link>> 
+POST >> /createEventSponsor/{eventId} >>Create swapcard event sponsor >> 
+POST >> /createExhibitorLinkRelation>> Create a relation between two exhibitors in an exhibitor link>> 
+POST >> /createExhibitorLink>> Create an exhibitor link in an event>> 
+POST >> /createFieldDefinition>> Create a new field definition in an event, which is required for custom fields. >> 
+POST >> /createProduct >> Create a new product in an event.>> 
+POST >> /createPushNotification >> Create a push notification >> 
+POST >> /createRole >> Create a role >> 
+POST >> /deleteEventExhibitors/{eventId}>> Deprecated, use updateExhibitor with withEvent.data set to null instead >> A Swapcard event id
+POST >> /deleteEventNotifications/{eventId} >> Delete a swapcard event notification>> A Swapcard event id
+POST >> /deleteExhibitorLinkRelation >> Delete a relation between two exhibitors in an exhibitor link >> 
+POST >> /deleteExhibitorLink >> Delete an exhibitor link and all its relations. >> 
+POST >> /deleteFieldDefinitions>> Delete field definitions from an event. All values associated will be removed as well. >>  
+POST >> /deletePlanningViews >> Delete views from a planning.>> 
+POST >> /deleteProducts >> Delete one or more products from a event, and return product IDs successfully deleted.>> 
+POST >> /deleteRoles>> Delete one or more roles.>> 
+POST >> /deleteSelectFieldValues>>Delete values from a select field definition. >> 
+POST >> /setSelectFieldValue>> Create or update a value for a select field definition.>> 
+POST >> /updateEventPerson >> Update an existing person in an event.>> 
+POST >> /updateExhibitorMemberRoles >>Update a role >> 
+POST >> /updateExhibitor>>Update an exhibitor. >> 
+POST >> /updateFieldDefinition>> Update an existing field definition.>> 
+POST >> /updateProduct>> Update an existing product.>> 
+POST >> /updateProducts>>Update an existing product. >> 
+POST >> /updateRole >> Update a role >> 
+POST >> updateTicketType>> Update an existing ticket type.>> 
+POST >> updateUserTerm>> Update an existing user term.>> 
+POST >> /upsertEventNotification>> Upsert a notification for an event >> 
+
+
+
