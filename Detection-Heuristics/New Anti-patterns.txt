@@ -1,7 +1,6 @@
 1) Filerting-Endpoint vs Non-Filerting-Endpoint [book, a, b]
-The endpoints should always be restricted with SPF (Sorting, Pagination, and Filerting) factors. 
-Users often attempt to fetch a large amount of data, and SPF helps limit the number of collections that can be fetched from a list of items. Additionally, SPF allows API consumers to filter collections according to their needs, reducing data loading time, making responses easier to handle, enabling smoother user experiences, and reducing network traffic. An Endpoint that allows SPF factors is known as Filtering-Endpoint pattern, while Endpoints without SPF is known as  Non-Filtering-Endpoint antipattern.
 
+The endpoints should always be restricted with SPF (Sorting, Pagination, and Filerting) factors. Users often attempt to fetch a large amount of data, and SPF helps limit the number of collections that can be fetched from a list of items. Additionally, SPF allows API consumers to filter collections according to their needs, reducing data loading time, making responses easier to handle, enabling smoother user experiences, and reducing network traffic. An Endpoint that allows SPF factors is known as a Filtering-Endpoint pattern, while Endpoints without SPF are known as a Non-Filtering-Endpoint antipattern.
 Pattern: (from Cisco Flare)
 /environments?latitude={latitude}&longitude={longitude} Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
 
@@ -22,7 +21,7 @@ Anti-Pattern:
 
 
 3) Noun-Oriented Endpoint vs Verb-Oriented Endpoint [c]
-API endpoint paths should not include any verbs; instead, they should use nouns, signifying their purpose. This is because fundamental CRUD (Create, Read, Update, Delete) activities can already be carried out using HTTP methods in verb forms like GET, POST, PUT, PATCH, and DELETE. HTTP verbs should handle what endpoints do, for example, GET retrieves data, POST creates data, PUT updates data, and DELETE removes data. Using verbs in endpoint could result in conflicts with the HTTP Verb. 
+API endpoint paths should not include any verbs; instead, they should use nouns, signifying their purpose. This is because fundamental CRUD (Create, Read, Update, Delete) activities can already be carried out using HTTP methods in verb forms like GET, POST, PUT, PATCH, and DELETE. HTTP verbs should handle what endpoints do, for example, GET retrieves data, POST creates data, PUT updates data, and DELETE removes data. Using verbs in the endpoint could result in conflicts with the HTTP Verb. 
 
 Pattern:
 GET /Coustomer/{id}
@@ -48,7 +47,7 @@ Anti-Pattern:
 GET /recipe/dessert/apple-pies
 
 5) Identifier Annotation vs Identifier Ambiguity
-Path parameter or resource identifier should be enclosed in curly braces, angle brackets or followed by colon sign. Using such symbols in endpoint design is referred as Identifier Annotation pattern, which improves endpoint readability and understandability. In contrast, absence of curly braces, angle brackets or colon to represent resource indetifier would result in Identifier Ambiguity antipattern. 
+Path parameters or resource identifiers should be enclosed in curly braces, angle brackets, or followed by a colon sign. Using such symbols in endpoint design is referred as Identifier Annotation pattern, which improves endpoint readability and understandability. In contrast, the absence of curly braces, angle brackets, or colon to represent resource identifiers would result in an Identifier Ambiguity antipattern. 
 
 Pattern:
 /v2/lists/:id/members
@@ -60,9 +59,23 @@ Anti-Pattern:
 /idFromLegacyId
 
 
+6) Flat vs Structured Endpoint 
+
+Forward slash (/) must be used to separate nodes of an endpoint and indicate a hierarchical relationship.  Using forward slash to break down complex resource names improves readability and understandability. [e]
+
+Pattern: 
+/requests/{request_id}/receipt
+/requests/{request_id}/map
+
+Anti-Pattern:
+/requestFirmwareUpdateFromInStoreReader
+/requestItemDisplayFromInStoreReader
+
+
 a. https://medium.com/@liams_o/15-fundamental-tips-on-rest-api-design-9a05bcd42920
 b. https://leapwise.co/blog/31-tip-that-make-our-rest-apis-easy-to-use/
 c. https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/
 d. https://www.getambassador.io/blog/7-rest-api-design-best-practices
+e. API Design Rulebook
 
  

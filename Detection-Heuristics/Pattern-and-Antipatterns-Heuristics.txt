@@ -176,3 +176,17 @@ IDENTIFIER_AMBIGUITY(Request-Endpoint)
 		return  "Identifier Annotation" pattern
 	endif
 	return "Identifier Ambiguity" antipattern
+
+
+16. Flat vs Structured Endpoint
+FLAT_ENDPOINT(Request-Endpoint) 
+    Nodes <- Split(Request-Endpoint) on "/"
+    for each Node in Nodes:
+        SplittedNodes <- Split(Node) on "uppercase"
+        if SplittedNodes > 2: 
+            retunr "Flat Endpoint" antipattern
+        endif
+    endfor
+    retrun "Structured Endpoint" pattern    
+
+

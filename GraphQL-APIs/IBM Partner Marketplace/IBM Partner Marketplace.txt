@@ -1,0 +1,48 @@
+POST >> /entitlements >> Get Entitlements for Customers >>
+POST >> /subscriptions/{subscriptionId}/users >> Add user to a subscription >> 
+POST >> /subscriptions >> Create subscription > 
+GET >> /subscriptions/{subscriptionId} >> Get subscription >> 
+GET >> /subscriptions >> Get subscriptions >>
+GET >> /subscriptions/{subscriptionId}/users/{userId} >> Get user for subscription >>
+GET >> /subscriptions/{subscriptionId}/users >> Get users for a subscription >> 
+DELETE >> /subscriptions/{subscriptionId}/users/{userId} >> Remove a user from a subscription >> 
+DELETE >> /subscriptions/{subscriptionId} >> Remove subscription >> 
+PUT >> /subscriptions/{subscriptionId} >> Update Subscription >> 
+PUT >> /subscriptions/{subscriptionId}/users/{userId} >> Update user in a subscription >> 
+PUT >> /orders/{orderReferenceNumber} >> Cancel renewal order >>
+POST >> /orders >> Create renewal order
+GET >> /orders >> Get all legacy orders >> 
+GET >> /orders/{orderReferenceNumber} >> Get legacy order >> 
+POST >> /orders >> Create Order >> 
+GET >> /billing/invoices >> Get all invoices >> 
+GET >> /orders/{orderReferenceNumber} >> Get an Order >> 
+GET >> /billing/{orderReferenceNumber}/billed >> Fetch billing details for a submitted order >> 
+POST >> /orders/estimates/price >> Get price estimate for the given order. >> 
+GET >> /billing/{orderReferenceNumber}/usage/ibmcloud/resourceinstances >>  Get Resource Instance Usage Details >> 
+GET >> /billing/{orderReferenceNumber}/usage/ibmcloud >> Get Usage Details >> 
+PUT >> /orders/{orderReferenceNumber} >>  Use this API to update, upgrade, buy more or cancel an existing order. >>
+POST >> /orders/validate/partnerIdentifier >> Validate Partner Identifer >> 
+GET >> /catalog/products/{id} >> Get a product by product ID. >> The ID of the product
+GET >> /catalog/reseller/products/{id} >> Get a reseller product by ID. >> The ID of the product
+GET >> /catalog/locales >> Get all possible locales for products. >> 
+GET >> /catalog/service-types >> Get all possible service types for products. >> 
+GET >> /catalog/topics >> Get all possible topics for products. >> 
+GET >> /catalog/products >> Get the products for a given locale. >> 
+GET >> /catalog/reseller/products >> Get products which can be used by resellers to place orders. >>
+PUT >> /quotes/agreementnumber/{agreementnumber}/changerenewtype >> Change Renew type of an IBM agreement number. >>
+GET >> /catalog/category-topics  >> Get all possible category topics for products. >> 
+GET >> /catalog/reseller/products/{id}/plans/{planId}/config >> Get configuration for a given plan and product id. >>
+GET >> /catalog/categories >> Get all possible categories for products. >>
+GET >>  /catalog/locales >> Get all possible locales for products. >> 
+GET >> /catalog/service-types > Get all possible service types for products. >>
+GET >> /catalog/topics >> Get all possible topics for products. >>
+GET >> /catalog/products >> Get the products for a given locale. >>
+GET >> /catalog/reseller/products >> Get products which can be used by resellers to place orders. >>
+PUT >> /quotes/agreementnumber/{agreementnumber}/changerenewtype >> Change Renew type of an IBM agreement number. >>
+POST >> /quotes/orders >> Create order from Quote. >>
+GET >> /quotes >> Get All quotesCopied >> 
+GET >> /quotes/billing/{agreementnumber}/billed >> Get billed usage data for an agreement number >>
+GET >> /quotes/{sapQuoteNumber}>> Get details of Quote >> 
+GET >> /quotes/agreementnumber/{agreementnumber}/lineitems >> Get line items for an agreement number
+GET >> /quotes/orders/{orderReferenceNumber} >> Get Quote order
+PUT >>  /quotes/agreementnumber/{agreementnumber} >> Update agreement >> 

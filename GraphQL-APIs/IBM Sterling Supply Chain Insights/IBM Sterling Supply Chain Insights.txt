@@ -1,0 +1,26 @@
+POST >> /application >> Creates a new application and returns the location of the created resource. >> 
+DELETE >> /application/{id} >> Deletes an existing application. >> The path name for an application ID.
+GET >> /application >> Returns any existing application that match your query. >>
+GET >> /application/{id} >> Returns the application that matches your query. >> The path name for an application ID.
+PUT >> /application/{id} >> Updates an existing application and returns a 200 message if the call is successful. >> The path name for an application ID.
+POST >> /billofmaterial >> Creates a new bill of material and returns the location of the created resource. >>
+POST >> /billofmaterial/bulk >> Retrieve and modify bill of material records in bulk. >> 
+DELETE >> /billofmaterial/{id} >> Deletes an existing bill of material. >>  The path name for a bill of material ID.
+GET >> /billofmaterial >> Returns any existing bills of material that match your query. >>
+GET >> /billofmaterial/{id} >> Retrieves the details of a bill of material that matches the ID. >> The path name for a bill of material ID.
+PATCH >> /billofmaterial/{id} >> Updates an existing bill of material and returns a 200 message if the call is successful. >> The path name for a bill of material ID.
+PUT >> /billofmaterial/{id} >> Updates an existing bill of material and returns a 200 message if the call is successful. >>
+POST >> /carriers >> Creates a new carrier and returns the location of the created resource. >> 
+POST >> /carriers/bulk >> Retrieve and modify carrier records in bulk. >> 
+DELETE >> /carriers/{id} >> Deletes an existing carrier. >> The path name for a carrier ID.
+GET >> /carriers/{id} >> Retrieves the details of a carrier that matches the ID. >> The path name for a carrier ID.
+GET >> /carriers >> Returns any existing carrier records that match your query. >> 
+PATCH >> /carriers/{id} >> Updates an existing carrier and returns a 200 message if the call is successful. >> The path name for a carrier ID.
+PUT >> /carriers/{id} >> Updates an existing carrier and returns a 200 message if the call is successful.>> The path name for a carrier ID.
+POST >> /customers >> Creates a new customer and returns the location of the created resource. >>
+POST >> /customers/bulk >> Retrieve and modify customer records in bulk. >> 
+DELETE >> /customers/{id} >> Deletes an existing customer. >> The path name for a carrier ID.
+GET >> /customers/{id} >> Retrieves the details of a customer that matches the ID. >> The path name for a carrier ID.
+GET >> /customers >> Returns any existing customers that match your query. >> 
+PATCH >> /customers/{id} >> Updates parts of existing customer records and returns a 200 message if the call is successful. >>
+PUT >> /customers/{id} >> Updates an existing customer and returns a 200 message if the call is successful. >> 

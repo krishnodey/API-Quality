@@ -1,0 +1,7 @@
+GET >> /connection-check >> Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned. >> 
+GET >> /connection-check >> Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned. >> 
+POST >> /anomaly-detection/timeseries/multivariate/batch >> Detect anomalies on multivariate time series >> 
+POST >> /anomaly-detection/timeseries/univariate/batch >> Detect anomalies on univariate time series  >>
+POST >> /anomaly-detection/timeseries/semi-supervised/model >> Discover anomaly model using semi-supervised approach  >>
+POST >> /anomaly-detection/timeseries/mixture-based/model >> Discover mixture model based anomaly  >>
+POST >> /anomaly-detection/timeseries/regression-based/model >> Discover regression based anomaly model using AutoRegression  >>
