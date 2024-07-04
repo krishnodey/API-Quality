@@ -1,0 +1,30 @@
+POST >> /authentication/local/new >> Create a user >> 
+POST >> /authentication/local >> Login Request >>
+POST >> /authentication/local/resent-verification >> Resend Verification >> 
+POST >> /authentication/forgot-password >> Forgot Password >> 
+POST >> /authentication/reset-password >> Reset Password >> 
+POST >> /authentication/local/change-password >> Change Password >> 
+POST >> /authentication/local/change-email >> Change Email >> 
+GET >> /authentication/verify-email/:verificationToken >> Verify Email >> 
+GET >> /authentication/verify-change-email/:verificationToken >> Verify Change Email >> 
+POST >> /authentication/logout >> Logout Request >>
+GET >> /authentication/apple >> Authenticate with Apple  >>
+GET >> /authentication/bitbucket >> Authenticate with Bitbucket >>
+GET >> /authentication/facebook >> Authenticate with Facebook >>
+GET >> /authentication/figma >> Authenticate with Figma >> 
+GET >> /authentication/init/github >> Authenticate with GitHub >>
+GET >> /authentication/init/gitlab >> Authenticate with GitLab >> 
+GET >> /authentication/init/google >> Authenticate with Google >> 
+GET >> /authentication/linkedin >> Authenticate with LinkedIn >>
+GET >> /authentication/init/microsoft >> Authenticate with Microsoft >>
+GET >> /authentication/init/reddit >> Authenticate with Reddit >>
+GET >> /authentication/init/slack >> Authenticate with Slack >>
+GET >> /authentication/init/twitch >>Authenticate with Twitch
+GET >> /authentication/init/twitter >>Authenticate with Twitter
+PUT >> /authentication/twoFa/enable >> Enable two factor authentication with phone method >>
+POST >> /authentication/twoFa/enable/verify >> Verify two factor authentication code >>
+POST >> /authentication/twoFa/authorize >> Login with two factor authentication >>
+POST >> /authentication/twoFa/verify >> Verify two factor authentication code >> 
+GET >> /authentication/twoFa/generate >> Generate backup codes >>
+POST >> /authentication/twoFa/recover >> Recover two factor authentication >>
+PUT >> /authentication/twoFa/disable >> Disable two factor authentication >> 

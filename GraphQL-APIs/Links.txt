@@ -32,3 +32,6 @@ https://developer.ibm.com/apis/catalog/ai4industry--anomaly-detection-product/ap
 https://developer.ibm.com/apis/catalog/scinsights--supply-chain-insights/api/API--scinsights--ibm-sterling-supply-chain-insights-with-watson#IframeAppService.operation.create (more can be colleted)
 https://developer.ibm.com/apis/catalog/inventoryvis--inventory-visibility/api/API--inventoryvis--node-safety-stock-rule-apis#getRule (More can be collected)
 https://developer.ibm.com/apis/catalog/marketplace--ibm-marketplace/api/API--marketplace--entitlements
+
+https://developers.dailymotion.com/api/reporting-api/reference/
+https://getconduit.dev/docs/modules/authentication/tutorials/captcha
