@@ -121,41 +121,34 @@ UNVERSIONED-ENDPOINT(Request-Endpoint):
 
 NON-FILTERING-ENDPOINT(HTTP-Method, Request-Endpoint)
     Intention <- Extract-Intention(API-Documentation)
-    if Inention is "Fetch" or "Return" Reosurces and Query-Parameter not in Request-Endpoint:
-        return 'Non-Filtering Endpoint' pattern
-    elseif Inention is "Fetch" or "Return" Reosurces and Query-Parameter in Request-Endpoint: 
-        return 'Filtering Endpoint' antipattern
+    FetchIntention <- "Fetch" or "Return" in Intention
+    HasParam <- Parameter in Request-Endpoint
+    if (FetchIntention and not HasParam) or (not FetchIntention and HasParam):
+        return 'Non-Filtering Endpoint' antipattern
+    elseif FetchIntention and HasParam:
+        return 'Filtering Endpoint' pattern
+    else:
+        return 'Regular Endpoint' 
     endif
-    return "Regular Endpoint" 
 
 
 12. Parameters Tunneling vs Parameters Adherence (When to use Path-Parameters vs. Query-Parameters)
-
+    
 PARAMETERS-TUNNELING(Request-Endpoint, API-Documentation):
     Intention <- Extract-Intention(API-Documentation)
-    if Parameter Є Request-Endpoint: 
-        if Query-Parameter Є Request-Endpoint and Intention is "Sorting" or "Filtering" or "Pagination":
+    if Parameter in Request-Endpoint:
+        if Query-Parameter in Request-Endpoint and Intention in ["Sorting", "Filtering", "Pagination"]:
             return 'Parameter Adherence' pattern
-        elseif Path-Parameter Є Request-Endpoint and Intention is "Delete" or "Update":
+        elif Path-Parameter in Request-Endpoint and Intention in ["Delete", "Update"]:
             return 'Parameter Adherence' pattern
+        else:
+            return 'Parameters Tunneling' antipattern
         endif
-        return 'Parameters Tunneling' antipattern
     endif
-    return 'Regular Endpoints' pattern
-        
+    return 'Regular Endpoint' pattern
 
 
-13. Verb-Oriented vs Noun-Oriented Endpoint
-
-VERB-ORIENTED-ENDPOINT(Request-Endpoint):
-    Verbs <- POS-Tagging(Request-Endpoint)
-    if Verbs is not NULL:
-        return 'Verb Endpoint' antipattern
-    end if
-    return 'Noun Endpoint' pattern
-
-
-14. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
+13. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
 IMPROPER_NOUN(Request-Endpoint)
     Nodes <- Split(Request-Endpoint)
@@ -168,7 +161,7 @@ IMPROPER_NOUN(Request-Endpoint)
     return 'Inconsistent Resource Archetype' antipattern
     
 
-15. Identifier Ambiguity vs Identifier Annotation
+14. Identifier Ambiguity vs Identifier Annotation
 
 IDENTIFIER_AMBIGUITY(Request-Endpoint)
 	Indentifier -> Extract_Identifiers(Request-Endpoint)
@@ -178,13 +171,13 @@ IDENTIFIER_AMBIGUITY(Request-Endpoint)
 	return "Identifier Ambiguity" antipattern
 
 
-16. Flat vs Structured Endpoint
+15. Flat vs Structured Endpoint
 FLAT_ENDPOINT(Request-Endpoint) 
     Nodes <- Split(Request-Endpoint) on "/"
     for each Node in Nodes:
-        SplittedNodes <- Split(Node) on "uppercase"
+        SplittedNodes <- Split(Node)
         if SplittedNodes > 2: 
-            retunr "Flat Endpoint" antipattern
+            return "Flat Endpoint" antipattern
         endif
     endfor
     retrun "Structured Endpoint" pattern    

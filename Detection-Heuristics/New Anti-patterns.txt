@@ -1,6 +1,7 @@
 1) Filerting-Endpoint vs Non-Filerting-Endpoint [book, a, b]
 
-The endpoints should always be restricted with SPF (Sorting, Pagination, and Filerting) factors. Users often attempt to fetch a large amount of data, and SPF helps limit the number of collections that can be fetched from a list of items. Additionally, SPF allows API consumers to filter collections according to their needs, reducing data loading time, making responses easier to handle, enabling smoother user experiences, and reducing network traffic. An Endpoint that allows SPF factors is known as a Filtering-Endpoint pattern, while Endpoints without SPF are known as a Non-Filtering-Endpoint antipattern.
+Endpoints should always incorporate SPF (Sorting, Pagination, and Filtering) factors. Users often try to fetch large amounts of data, and SPF helps limit the number of collections that can be retrieved from a list of resources. Further, SPF allows API consumers to filter collections according to their needs. This reduces data loading time, makes responses easier to handle, and reduces network traffic. An endpoint that incorporates SPF factors is known as a Filtering-Endpoint pattern, while an endpoint that does not incorporate SPF factors is known as a Non-Filtering-Endpoint antipattern.
+
 Pattern: (from Cisco Flare)
 /environments?latitude={latitude}&longitude={longitude} Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
 
@@ -9,8 +10,10 @@ Pattern: (from Cisco Flare)
 Anti-pattern:
 /environments List environments. Gets a list of all environments.
 
+
 2)  Parameter Adherence vs  Parameter Tunneling [d]
-Web APIs often require clients to provide additional information (parameters) with the endpoint. Typically, two types of parameters are used with API endpoints: path parameters and query parameters. Path parameters are used to identify or retrieve a specific resource, while query parameters are used for sorting, filtering, and pagination of the request data. Understanding when to use path parameters (e.g., /api/books/{id}) versus query parameters (e.g., /api/books?category=fiction) is essential, especially for API consumers. Path parameters can be used for deleting or updating book information using the endpoint /api/books/{id}, where "id" represents the path parameter, and its value is the unique book identifier. On the other hand, query parameters can be used to retrieve all books belonging to a certain category. We can specify the filter using /api/books?category=fiction, where the query parameter is "category," and its value is "fiction." Tunneling of parameters would occur if path parameters are used for sorting, filtering, and pagination, or if query parameters are used for identifying resources.
+
+Web APIs often have path parameters and query parameters to file specific resources. Path parameters (e.g., /api/books/{id})  are used to identify or retrieve a specific resource, while query parameters (e.g., /api/books?category=fiction) are used for sorting, filtering, and pagination of the request data. Path parameters should be used to identify resources (e.g. delete, update, create, etc). In contrast, query parameters should be used for sorting, filtering, and pagination of resources. Parameter Tunneling antipattern occurs if path parameters are used for sorting, filtering, and pagination, or query parameters are used for identifying resources. Consistent use of path and query parameters would result in a Parameter Adherence pattern.
 
 Pattern:
 /desserts?type=cake&seller-id=1234   Return all the resource types cakes with seller-id of 11234 
@@ -20,25 +23,10 @@ Anti-Pattern:
 /desserts?page=5&pageSize=25 Update the resource desserts
 
 
-3) Noun-Oriented Endpoint vs Verb-Oriented Endpoint [c]
-API endpoint paths should not include any verbs; instead, they should use nouns, signifying their purpose. This is because fundamental CRUD (Create, Read, Update, Delete) activities can already be carried out using HTTP methods in verb forms like GET, POST, PUT, PATCH, and DELETE. HTTP verbs should handle what endpoints do, for example, GET retrieves data, POST creates data, PUT updates data, and DELETE removes data. Using verbs in the endpoint could result in conflicts with the HTTP Verb. 
 
-Pattern:
-GET /Coustomer/{id}
+3) Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names [Book, b]
 
-Anti-Pattern:
-POST /createCustomer
-
-4) Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names [Book, b]
-Resource archetypes are the basic building blocks of API endpoints. It helps us to convey the typical structures 
-and functionalities present in API designs. Two of the most commonly used resource archetypes are Document and 
-collection. The Document archetype usually includes fields filled with values that describe a resource. 
-On the other hand, a Collection resource is a list of document resources. The endpoint /recipes/desserts/apple-pie
-represents a Document archetype, describing a specific recipe for an apple-pie dessert. On the other, 
-the endpoints /recipes and /recipes/desserts represent Collection archetypes, listing all available recipes and 
-dessert recipes, respectively. Document names should consistently use singular nouns, while collection names 
-should consistently use plural nouns to prevent potential conflicts. Adhering to these rules helps avoid 
-improper noun anti-patterns in URIs.
+Resource archetypes are the basic building blocks of API endpoints. Two of the most commonly used resource archetypes are Document and Collection. The Document archetype usually includes fields filled with values that describe a resource, while a Collection resource is a list of document resources. To maintain clarity, singular nouns should be used for naming Documents, while plural nouns should be used for naming Collections. Adhering to these rules results in the Consistent Resource Archetype Names pattern. In contrast, the Inconsistent Resource Archetype Names antipattern occurs if plural nouns are used for naming documents or singular nouns are used for naming collections.
 
 Pattern:
 GET /recipes/desserts/apple-pie
@@ -46,8 +34,9 @@ GET /recipes/desserts/apple-pie
 Anti-Pattern: 
 GET /recipe/dessert/apple-pies
 
-5) Identifier Annotation vs Identifier Ambiguity
-Path parameters or resource identifiers should be enclosed in curly braces, angle brackets, or followed by a colon sign. Using such symbols in endpoint design is referred as Identifier Annotation pattern, which improves endpoint readability and understandability. In contrast, the absence of curly braces, angle brackets, or colon to represent resource identifiers would result in an Identifier Ambiguity antipattern. 
+4) Identifier Annotation vs Identifier Ambiguity
+
+Path parameters or resource identifiers used in endpoints should be enclosed in curly braces, angle brackets, or followed by a colon sign. Using such symbols in endpoint design is referred to as Identifier Annotation pattern, which improves endpoint readability and understandability. In contrast, the absence of curly braces, angle brackets, or colon to represent resource identifiers would result in an Identifier Ambiguity antipattern.
 
 Pattern:
 /v2/lists/:id/members
@@ -59,9 +48,9 @@ Anti-Pattern:
 /idFromLegacyId
 
 
-6) Flat vs Structured Endpoint 
+5) Flat vs Structured Endpoint [e]
 
-Forward slash (/) must be used to separate nodes of an endpoint and indicate a hierarchical relationship.  Using forward slash to break down complex resource names improves readability and understandability. [e]
+Forward slash (/) must be used to separate nodes of an endpoint and indicate a hierarchical relationship. A structured Endpoint pattern occurs when forward slashes are used to break down complex resource names to improve the readability and understandability of the endpoint. In contrast, a Flat Endpoint antipattern occurs when complex or large resource names are not broken down with forward slashes.
 
 Pattern: 
 /requests/{request_id}/receipt

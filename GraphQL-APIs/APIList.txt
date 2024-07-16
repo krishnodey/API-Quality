@@ -22,10 +22,11 @@ Satispay
 Salsify
 Pluralsight
 Northflank
-UberEats
 IBM Anomaly Detection
 IBM Sterling Supply Chain Insights
 IBM Sterling Inventory Visibility
 IBM Partner Marketplace
 DailyMotion
 Conduit
+DueDil
+UberEats
