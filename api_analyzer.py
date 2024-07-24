@@ -22,6 +22,7 @@ import warnings
 #import math
 #import csv
 import json
+import inflect 
     
 
 class ApiAnalyzer:
@@ -721,9 +722,6 @@ class ApiAnalyzer:
         return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
     
 
-    
-
-
 
     def detect_less_cohesive_documentation(self):    
         P="Pertinent Documentation"
@@ -966,6 +964,391 @@ class ApiAnalyzer:
         return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
 
 
+    def detect_non_filtering_endpoint(self):
+        P = "Filtering Endpoint"
+        AP = "Non-Filtering Endpoint"
+
+        non_filtering_endpoint_AP = []
+        filtering_endpoint_P = []
+        p_count = 0
+        ap_count = 0
+        
+        def extract_intention(api_documentation):
+            fetch_keywords = ["fetch", "return", "get", "retrieve", "list", "update", "delete"]
+            update_keywords = ["update", "modify", "change", "edit"]
+            create_keywords = ["create", "add", "post", "insert"]
+            delete_keywords = ["delete", "remove", "destroy"]
+
+            intention = ""
+            api_doc_lower = api_documentation.lower()
+
+            for word in fetch_keywords:
+                if word in api_doc_lower:
+                    intention = "Fetch"
+                    break
+            if not intention:
+                for word in update_keywords:
+                    if word in api_doc_lower:
+                        intention = "Update"
+                        break
+            if not intention:
+                for word in create_keywords:
+                    if word in api_doc_lower:
+                        intention = "Create"
+                        break
+            if not intention:
+                for word in delete_keywords:
+                    if word in api_doc_lower:
+                        intention = "Delete"
+                        break
+            return intention
+        
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']  
+                    h_method = row['method']
+                    documentation = row['description']
+                    #documentation = self.clean.preprocess_documentation(des)
+                    #combined_node = self.clean.get_uri_nodes(uris)
+        
+                    #method = h_method.lower().strip()
+                    #words = preprocess_data(documentation)
+        
+        
+                    # Extract intention from API documentation
+                    Intention = extract_intention(documentation)
+
+                    # Check if intention includes "Fetch" or "Return"
+                    FetchIntention = "Fetch" in Intention or "Return" in Intention
+
+                    # Check if parameter exists in request endpoint
+                    has_param = '?' in uri or '{' in uri or '}' in uri or ':' in uri or '<' in uri or '>' in uri
+
+                    # Determine endpoint type based on conditions
+                    if (FetchIntention and not has_param) or (not FetchIntention and has_param):
+                        row['non-filtering_endpoint'] = 1 
+                        row['filtering_endpoint'] = 0
+                        row['non-filtering_comment'] = AP
+                        #return 'Non-Filtering Endpoint'  # Antipattern
+                        non_filtering_endpoint_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                        ap_count += 1
+                    elif (FetchIntention and has_param) or (not FetchIntention and not has_param):
+                        #return 'Filtering Endpoint'  # Pattern
+                        row['non-filtering_endpoint'] = 0 
+                        row['filtering_endpoint'] = 1
+                        row['non-filtering_comment'] = P
+                        filtering_endpoint_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                        p_count += 1
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return non_filtering_endpoint_AP, filtering_endpoint_P, p_count, ap_count
+
+
+    def detect_parameters_tunneling(self):
+        P = "Parameter Adherence"
+        AP = "Parameter Tunneling"
+
+        parameter_tunneling_AP = []
+        parameter_adherence_P = []
+        p_count = 0
+        ap_count = 0
+        
+        def extract_intention(api_documentation):
+            fetch_keywords = ["fetch", "return", "get", "retrieve", "list"]
+            update_keywords = ["update", "modify", "change", "edit"]
+            create_keywords = ["create", "add", "post", "insert"]
+            delete_keywords = ["delete", "remove", "destroy"]
+            spf_keywords = ['sort', 'pagination', 'filter', 'paginate', 'filtering', 'rearrange']
+
+            intention = ""
+            api_doc_lower = api_documentation.lower()
+
+            for word in fetch_keywords:
+                if word in api_doc_lower:
+                    intention = "Fetch"
+                    break
+            if not intention:
+                for word in update_keywords:
+                    if word in api_doc_lower:
+                        intention = "Update"
+                        break
+            if not intention:
+                for word in create_keywords:
+                    if word in api_doc_lower:
+                        intention = "Create"
+                        break
+            if not intention:
+                for word in delete_keywords:
+                    if word in api_doc_lower:
+                        intention = "Delete"
+                        break
+            if not intention:
+                for word in spf_keywords:
+                    if word in api_doc_lower:
+                        intention = 'spf'
+
+            return intention
+        
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']  
+                    h_method = row['method']
+                    documentation = row['description']
+                    #documentation = self.clean.preprocess_documentation(des)
+                    #combined_node = self.clean.get_uri_nodes(uris)
+        
+                    #method = h_method.lower().strip()
+                    #words = preprocess_data(documentation)
+        
+        
+                    intention = extract_intention(documentation)
+                    query_param = '?' in uri
+                    path_param = ('{' in uri and '}' in uri) or ('<' in uri and '>' in uri) or ':' in uri
+
+                    sort_intention = False
+                    identify_intention = False
+
+                    if intention == "spf":
+                        sort_intention = True
+                    elif intention in ["Delete", "Update", "Fetch", "Delete", "Create"]:
+                        identify_intention = True
+
+                    if (query_param and sort_intention) or (path_param and identify_intention):
+                        #return 'Parameter Adherence pattern'
+                        row['parameter_tunneling'] = 0 
+                        row['parameter_adherence'] = 1
+                        row['parameter_tunneling_comment'] = P
+                        parameter_adherence_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                        p_count += 1
+                    elif (query_param and identify_intention) or (path_param and sort_intention):
+                        row['parameter_tunneling'] = 1
+                        row['parameter_adherence'] = 0
+                        row['parameter_tunneling_comment'] = AP                        
+                        parameter_tunneling_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                        ap_count += 1
+                        #return 'Parameters Tunneling antipattern'
+                    elif (intention and not (query_param or path_param)) or (not intention and (query_param or path_param)):
+                        #return 'Parameters Tunneling antipattern'
+                        row['parameter_tunneling'] = 1
+                        row['parameter_adherence'] = 0
+                        row['parameter_tunneling_comment'] = AP                        
+                        parameter_tunneling_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                        ap_count += 1
+                    else:
+                        row['parameter_tunneling'] = 0
+                        row['parameter_adherence'] = 1
+                        row['parameter_tunneling_comment'] = 'Regular Endpoints'                        
+                        parameter_adherence_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                        ap_count += 1
+                    #return 'No specific pattern detected'
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return parameter_tunneling_AP, parameter_adherence_P, p_count, ap_count
+
+
+
+    def detect_incosistent_resource_archetype(self):
+        #import inflect
+        #import re
+
+        p = inflect.engine()
+        def is_plural(noun):
+            return p.singular_noun(noun) is not False
+        def is_singular(noun):
+            return not is_plural(noun)
+        P = "Cosistent Resource Archetype"
+        AP1 = "Singular Nouns Found in Consecutive Nodes"
+        AP2 = "Plural Nouns Found in Consecutive Nodes"
+        AP3 = "Controller is not a Verb"
+
+        incosistent_resource_archetype_AP = []
+        cosistent_resource_archetype_P = []
+        p_count = 0
+        ap_count = 0
+        
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']  
+                    h_method = row['method']
+                    documentation = row['description']
+                    #documentation = self.clean.preprocess_documentation(des)
+                    #combined_node = self.clean.get_uri_nodes(uris)
+        
+                    #method = h_method.lower().strip()
+                    #words = preprocess_data(documentation)
+
+                    verbs = ["get", "post", "put", "delete", "update", "create", "fetch", "remove", "add", "edit", "patch"]
+                    nodes = [node for node in uri.split('/') if node.isalpha()]
+
+                    # Check for singular/plural pattern violations
+                    for i in range(len(nodes) - 1):
+                        if (not is_plural(nodes[i]) and not is_plural(nodes[i + 1])): # both singular
+                            #return ['Inconsistent Resource Archetype Names antipattern', 'Violation: collection and store archetypes are not plural']
+                            row['inconsistent_archetype'] = 1
+                            row['consistent_archetype'] = 0
+                            row['inconsistent_archetype_comment'] = AP1
+                            incosistent_resource_archetype_AP.append(f"{h_method.strip()}\t{uri}\t{AP1}\t{documentation.strip()}")
+                            ap_count += 1
+                        if (is_plural(nodes[i]) and is_plural(nodes[i + 1])): # both plural
+                            #return ['Inconsistent Resource Archetype Names antipattern', 'Document is not singular']
+                            row['inconsistent_archetype'] = 1
+                            row['consistent_archetype'] = 0
+                            row['inconsistent_archetype_comment'] = AP2
+                            incosistent_resource_archetype_AP.append(f"{h_method.strip()}\t{uri}\t{AP2}\t{documentation.strip()}")
+                            ap_count += 1
+
+                    # Analyze the last path segment for Controller
+                    if len(nodes) > 2:
+                        last_segment = nodes[-1]
+                        first_word = re.split(r'[-_]', last_segment)[0]
+                        if first_word[:-1].lower() in verbs:
+                            if h_method.upper() not in ['GET', 'POST']:
+                                #return ['Consistent Resource Archetype Names pattern', 'A controller action must be of type GET or POST']
+                                row['inconsistent_archetype'] = 1
+                                row['consistent_archetype'] = 0
+                                row['inconsistent_archetype_comment'] = AP3
+                                incosistent_resource_archetype_AP.append(f"{h_method.strip()}\t{uri}\t{AP3}\t{documentation.strip()}")
+                                ap_count += 1
+                            
+                    if row['inconsistent_archetype'] != 1:
+                        #return 'Consistent Resource Archetype'
+                        row['inconsistent_archetype'] = 0
+                        row['consistent_archetype'] = 1
+                        row['inconsistent_archetype_comment'] = P
+                        cosistent_resource_archetype_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                        p_count += 1
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return incosistent_resource_archetype_AP, cosistent_resource_archetype_P, p_count, ap_count
+    
+    def detect_identifier_ambiguity(self):
+        P = "[Identifier is Enclosed in {} or <> or Starts with :]"
+        P2 = "[Regular Endpoints]"
+        AP = "[Identifier is Not Enclosed in {} or <> or does not Start with :]"
+
+        identifier_ambiguity_AP = []
+        identifier_annotation_P = []
+        p_count = 0
+        ap_count = 0
+        
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']  
+                    h_method = row['method']
+                    documentation = row['description']
+                    #documentation = self.clean.preprocess_documentation(des)
+                    #combined_node = self.clean.get_uri_nodes(uris)
+        
+                    #method = h_method.lower().strip()
+                    #words = preprocess_data(documentation)
+
+
+                    parts = uri.split('/')
+                    identifiers = [part for part in parts if part and not part.isdigit()]
+
+                    for identifier in identifiers:
+                        if (identifier.startswith("{") and identifier.endswith("}")) or (identifier.startswith("<") and identifier.endswith(">")) or identifier.startswith(":"):
+                            #return "Identifier Annotation pattern"
+                            row['identifier_ambiguity'] = 0
+                            row['identifier_annotation'] = 1
+                            row['identifier_ambiguity_comment'] = P
+                            identifier_annotation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                            p_count += 1
+
+                    if row['identifier_annotation'] != 1:
+                        if "{" in uri or "}" in uri or "<" in uri or ">" in uri or ":" in uri:
+                            #return "Identifier Ambiguity antipattern" 
+                            row['identifier_ambiguity'] = 1
+                            row['identifier_annotation'] = 0
+                            row['identifier_ambiguity_comment'] = AP
+                            identifier_ambiguity_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                            ap_count += 1
+                        else:
+                            row['identifier_ambiguity'] = 0
+                            row['identifier_annotation'] = 1
+                            row['identifier_ambiguity_comment'] = P2
+                            identifier_annotation_P.append(f"{h_method.strip()}\t{uri}\t{P2}\t{documentation.strip()}")
+                            p_count += 1
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return identifier_ambiguity_AP, identifier_annotation_P, p_count, ap_count
 
     
+    def detect_flat_endpoint(self):
 
+        P = "Structed Endpoint"
+        AP = "Complex Words Present in Endpoint"
+
+        flat_endpoint_AP = []
+        structed_endpoint_P = []
+        p_count = 0
+        ap_count = 0
+        
+        path = 'All-Data\Alldata.jsonl'
+        with open(path, 'r+') as file:
+            lines = file.read().strip().split("\n")
+            file.seek(0)
+            for line in lines:
+                row = json.loads(line)
+                if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
+                    uri = row['uri']  
+                    h_method = row['method']
+                    documentation = row['description']
+                    #documentation = self.clean.preprocess_documentation(des)
+                    #combined_node = self.clean.get_uri_nodes(uris)
+        
+                    #method = h_method.lower().strip()
+                    #words = preprocess_data(documentation)
+
+                    nodes = uri.split('/')
+                    #print(nodes)
+                    for node in nodes:
+                        splitted_nodes = re.split(r'(?=[A-Z])|_', node)
+                        #print(splitted_nodes)
+                        if len(splitted_nodes) > 3:
+                            #return "Flat Endpoint antipattern"
+                            row['flat_endpoint'] = 1
+                            row['structured_endpoint'] = 0
+                            row['flat_endpoint_comment'] = AP
+                            flat_endpoint_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                            ap_count += 1
+                    if row['flat_endpoint'] != 1:
+                        #return "Structured Endpoint pattern"
+                        row['flat_endpoint'] = 0
+                        row['structured_endpoint'] = 1
+                        row['flat_endpoint_comment'] = P
+                        structed_endpoint_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                        p_count += 1
+                    print("->", end=" ")
+                json_string = json.dumps(row, ensure_ascii=False)
+                file.write(json_string+"\n")
+
+        return flat_endpoint_AP, structed_endpoint_P, p_count, ap_count

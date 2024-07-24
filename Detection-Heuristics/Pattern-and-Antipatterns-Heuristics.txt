@@ -127,8 +127,6 @@ NON-FILTERING-ENDPOINT(HTTP-Method, Request-Endpoint)
         return 'Non-Filtering Endpoint' antipattern
     elseif FetchIntention and HasParam:
         return 'Filtering Endpoint' pattern
-    else:
-        return 'Regular Endpoint' 
     endif
 
 
@@ -136,17 +134,21 @@ NON-FILTERING-ENDPOINT(HTTP-Method, Request-Endpoint)
     
 PARAMETERS-TUNNELING(Request-Endpoint, API-Documentation):
     Intention <- Extract-Intention(API-Documentation)
-    if Parameter in Request-Endpoint:
-        if Query-Parameter in Request-Endpoint and Intention in ["Sorting", "Filtering", "Pagination"]:
-            return 'Parameter Adherence' pattern
-        elif Path-Parameter in Request-Endpoint and Intention in ["Delete", "Update"]:
-            return 'Parameter Adherence' pattern
-        else:
-            return 'Parameters Tunneling' antipattern
-        endif
-    endif
-    return 'Regular Endpoint' pattern
+    HasQueryParam <- Query Parameter in Request-Endpoint
+    HasPathParam <- Path Parameter in Request-Endpoint
+    SortIntention <- Intention in ["Sorting", "Filtering", "Pagination"]
+    IdentifyIntention <- Intention in ["Delete", "Update", 'Get', 'Fetch', 'Return']
 
+    if HasQueryParam and SortIntention:
+        return 'Parameter Adherence' pattern
+    elseif HasPathParam and IdentifyIntention:
+        return 'Parameter Adherence' pattern
+    elseif (HasQueryParam and IdentifyIntention) or (HasPathPram and SortIntention) :
+        return 'Parameters Tunneling' antipattern
+    elseif (Intention and not HasParam) or (not Intention and HasParam))
+        return 'Parameters Tunneling' antipattern
+    endif
+    
 
 13. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
@@ -155,7 +157,9 @@ IMPROPER_NOUN(Request-Endpoint)
     Document, Collections <- CatagorizeNodes(Nodes) #based on the positions of the nodes.# 
     if Document is singular:
         return 'Consistent Resource Archetype' pattern
-    elseif Collections is plural:
+    elseif Collections or Stores are plural:
+        return 'Consistent Resource Archetype' pattern
+    elseif Controller is Verb:  
         return 'Consistent Resource Archetype' pattern
     endif
     return 'Inconsistent Resource Archetype' antipattern

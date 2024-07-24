@@ -1,6 +1,6 @@
 ***Anti-Pattern*** 
 Count: 1
-POST	/v1/me/library	Pluralized Nodes	 [Singular last node with POST method.] 
+POST	/v1/me/library	Pluralized Nodes	Singular last node with POST method
 
 ***Patterns*** 
 Count: 98
@@ -54,9 +54,9 @@ GET	/v1/me/library/playlist-folders	 Regular methods
 GET	/v1/me/library/playlist-folders/{id}	 Regular methods
 GET	/v1/me/library/playlist-folders/{id}/{relationship}	 Regular methods
 GET	/v1/me/library/playlist-folders	 Regular methods
-POST	/v1/me/library/playlist-folders	Singularized Nodes	 [Pluralized last node with POST method.] 
-POST	/v1/me/library/playlists	Singularized Nodes	 [Pluralized last node with POST method.] 
-POST	/v1/me/library/playlists/{id}/tracks	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST	/v1/me/library/playlist-folders	Singularized Nodes	Pluralized last node with POST method
+POST	/v1/me/library/playlists	Singularized Nodes	Pluralized last node with POST method
+POST	/v1/me/library/playlists/{id}/tracks	Singularized Nodes	Pluralized last node with POST method
 GET	/v1/catalog/{storefront}/stations/{id}	 Regular methods
 GET	/v1/catalog/{storefront}/stations/{id}/{relationship}	 Regular methods
 GET	/v1/catalog/{storefront}/stations	 Regular methods
@@ -80,16 +80,16 @@ GET	/v1/me/ratings/music-videos	 Regular methods
 GET	/v1/me/ratings/playlists	 Regular methods
 GET	/v1/me/ratings/songs	 Regular methods
 GET	/v1/me/ratings/stations	 Regular methods
-PUT	/v1/me/ratings/albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/stations/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-DELETE	/v1/me/ratings/albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-DELETE	/v1/me/ratings/music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-DELETE	/v1/me/ratings/playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-DELETE	/v1/me/ratings/songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-DELETE	/v1/me/ratings/stations/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT	/v1/me/ratings/albums/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/music-videos/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/playlists/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/songs/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/stations/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE	/v1/me/ratings/albums/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE	/v1/me/ratings/music-videos/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE	/v1/me/ratings/playlists/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE	/v1/me/ratings/songs/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE	/v1/me/ratings/stations/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
 GET	/v1/me/ratings/library-albums/{id}	 Regular methods
 GET	/v1/me/ratings/library-music-videos/{id}	 Regular methods
 GET	/v1/me/ratings/library-playlists/{id}	 Regular methods
@@ -98,7 +98,7 @@ GET	/v1/me/ratings/library-albums	 Regular methods
 GET	/v1/me/ratings/library-music-videos	 Regular methods
 GET	/v1/me/ratings/library-playlists	 Regular methods
 GET	/v1/me/ratings/library-songs	 Regular methods
-PUT	/v1/me/ratings/library-albums/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/library-music-videos/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/library-playlists/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
-PUT	/v1/me/ratings/library-songs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT	/v1/me/ratings/library-albums/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/library-music-videos/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/library-playlists/{id}	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT	/v1/me/ratings/library-songs/{id}	Singularized Nodes	Singular last node with PUT and DELETE method

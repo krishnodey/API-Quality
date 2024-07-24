@@ -1,0 +1,20 @@
+***Anti-Pattern*** 
+Count: 9
+GET	/auth/login	Identifier Ambiguity	Get the active authentication scheme
+POST	/auth/token	Identifier Ambiguity	Exchange credentials for access token
+POST	/auth/revoke	Identifier Ambiguity	Revoke an access token
+GET	/settings	Identifier Ambiguity	Get the runtime settings
+GET	/flows	Identifier Ambiguity	Get the active flow configuration
+POST	/flows	Identifier Ambiguity	Set the active flow configuration
+POST	/flow	Identifier Ambiguity	Add a flow to the active configuration
+GET	/nodes	Identifier Ambiguity	Get a list of the installed nodes
+POST	/nodes	Identifier Ambiguity	Install a new node module
+
+***Patterns*** 
+Count: 6
+GET	/flow/:id	Identifier Annotation	Get an individual flow configuration
+PUT	/flow/:id	Identifier Annotation	Update an individual flow configuration
+DELETE	/flow/:id	Identifier Annotation	Delete an individual flow configuration
+GET	/nodes/:module	Identifier Annotation	Get a node module’s information
+PUT	/nodes/:module	Identifier Annotation	Enable/Disable a node module
+DELETE	/nodes/:module	Identifier Annotation	Remove a node module

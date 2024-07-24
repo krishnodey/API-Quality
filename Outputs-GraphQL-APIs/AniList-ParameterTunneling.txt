@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 27
+POST	v2/SaveMediaListEntry	Parameter Tunneling	Create or update a media list entry
+POST	v2/UpdateMediaListEntries	Parameter Tunneling	Update multiple media list entries to the same values
+POST	v2/DeleteMediaListEntry	Parameter Tunneling	Delete a media list entry
+POST	v2/DeleteCustomList	Parameter Tunneling	Delete a custom list and remove the list entries from it
+POST	v2/SaveTextActivity	Parameter Tunneling	Create or update text activity for the currently authenticated user
+POST	v2/SaveListActivity	Parameter Tunneling	Update list activity
+POST	v2/DeleteActivity	Parameter Tunneling	Delete an activity item of the authenticated users
+POST	v2/SaveActivityReply	Parameter Tunneling	Create or update an activity reply
+POST	v2/DeleteActivityReply	Parameter Tunneling	Delete an activity reply of the authenticated users
+POST	v2/ToggleLike	Parameter Tunneling	Add or remove a like from a likeable type. Returns all the users who liked the same model
+POST	v2/ToggleLikeV2	Parameter Tunneling	Add or remove a like from a likeable type.
+POST	v2/UpdateFavouriteOrder	Parameter Tunneling	Update the order favourites are displayed in
+POST	v2/SaveReview	Parameter Tunneling	Create or update a review
+POST	v2/DeleteReview	Parameter Tunneling	Delete a review
+POST	v2/SaveThread	Parameter Tunneling	Create or update a forum thread
+POST	v2/DeleteThread	Parameter Tunneling	Delete a thread
+POST	v2/SaveThreadComment	Parameter Tunneling	Create or update a thread comment
+POST	v2/DeleteThreadComment	Parameter Tunneling	Delete a thread comment
+
+***Patterns*** 
+Count: 0
+POST	/v2/oauth/token	Parameter Adherence	Converting Authorization Codes To Access Tokens
+POST	/v2/oauth/pin	Parameter Adherence	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
+POST	v2/ToggleActivityPin	Parameter Adherence	Toggle activity to be pinned to the top of the user's activity feed
+POST	v2/ToggleActivitySubscription	Parameter Adherence	Toggle the subscription of an activity item
+POST	v2/ToggleFollow	Parameter Adherence	Toggle the un/following of a user
+POST	v2/ToggleFavourite	Parameter Adherence	Favourite or unfavourite an anime, manga, character, staff member, or studio
+POST	v2/RateReview	Parameter Adherence	Rate a review
+POST	v2/SaveRecommendation	Parameter Adherence	Recommendation a media
+POST	v2/ToggleThreadSubscription	Parameter Adherence	Toggle the subscription of a forum thread

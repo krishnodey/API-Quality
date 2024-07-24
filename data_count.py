@@ -18,7 +18,7 @@ out_file = open(write_path, 'w')
 
 for base in base_path:
         api_path = f"{base}APIList.txt"
-        with open(api_path, 'r', encoding='utf-8') as file:
+        with open(api_path, 'r', encoding="iso-8859-1") as file:
             apis = file.read().strip().split("\n")
             api_type = 'REST' if 'REST-API' in base else 'GraphQL'
             for api in apis:
@@ -47,6 +47,11 @@ for base in base_path:
                         line_dict.update({"non_standard_uri": 0, "standard_uri": 0, 'non_standard_comment': ""})
                         line_dict.update({"pluralized_nodes": 0, "singularized_nodes": 0, 'pluralized_comment': ""})
                         line_dict.update({"unversioned_uri": 0, "versioned_uri": 0, 'unversioned_comment': ""})
+                        line_dict.update({"non-filtering_endpoint": 0, "filtering_endpoint": 0, 'non-filtering_comment': ""})
+                        line_dict.update({"parameter_tunneling": 0, "parameter_adherence": 0, 'parameter_tunneling_comment': ""})
+                        line_dict.update({"inconsistent_archetype": 0, "consistent_archetype": 0, 'inconsistent_archetype_comment': ""})
+                        line_dict.update({"identifier_ambiguity": 0, "identifier_annotation": 0, 'identifier_ambiguity_comment': ""})
+                        line_dict.update({"flat_endpoint": 0, "structured_endpoint": 0, 'flat_denpoint_comment': ""})
                         line_dict.update({"api_category": ""})
                                     
 
@@ -60,7 +65,7 @@ for base in base_path:
                                         'ContextlessResource', 'ContextualResouce','Comment', 
                                         'NonHierarchicalNodes', 'HierarchicalNodes', 'Comment',
                                         'LessCohisiveDoc', 'CohisiveDoc','Comment', 
-                                        'InconsistantDoc', 'ConsistantDoc','Comment', 
+                                        'InconsistentDoc', 'ConsistantDoc','Comment', 
                                         "Type(Public/Private/Partner)"]'''
     
                         json_string=json.dumps(line_dict,ensure_ascii=False)
