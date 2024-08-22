@@ -1,0 +1,49 @@
+***Anti-Pattern*** 
+Count: 6
+v1/eats/stores/{store_id}/pos_data	Amorphous End-point	 [underscore found] 
+v1/eats/stores/{store_id}/pos_data	Amorphous End-point	 [underscore found] 
+/v1/eats/stores/{store_id}/pos_data	Amorphous End-point	 [underscore found] 
+/v1/eats/stores/{store_id}/pos_data	Amorphous End-point	 [underscore found] 
+/v1/eats/orders/{order_id}/accept_pos_order	Amorphous End-point	 [underscore found] 
+/v1/eats/orders/{order_id}/deny_pos_order	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 38
+/oauth/v2/token	Tidy End-point	Tidy Endpoint
+/v1/delivery/stores	Tidy End-point	Tidy Endpoint
+/v1/delivery/store/{store_id}	Tidy End-point	Tidy Endpoint
+/v1/delivery/store/{store_id}	Tidy End-point	Tidy Endpoint
+/v1/delivery/store/{store_id}/status	Tidy End-point	Tidy Endpoint
+/v1/delivery/store/{store_id}/update-store-status	Tidy End-point	Tidy Endpoint
+/v1/delivery/store/{store_id}/update-store-prep-time	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}	Tidy End-point	Tidy Endpoint
+/v1/delivery/store/{store_id}/orders	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/accept	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/deny	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/cancel	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/ready	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/adjust-price	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/update-ready-time	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/resolve-fulfillment-issues	Tidy End-point	Tidy Endpoint
+/v1/delivery/order/{order_id}/delivery-partner-feedback	Tidy End-point	Tidy Endpoint
+/v1/delivery/stores/{store_id}/promotion	Tidy End-point	Tidy Endpoint
+/v1/delivery/promotions/{promotion_id}/revoke	Tidy End-point	Tidy Endpoint
+v1/delivery/promotions/{promotion_id}	Tidy End-point	Tidy Endpoint
+/v1/delivery/stores/{store_id}/promotions	Tidy End-point	Tidy Endpoint
+/v2/eats/stores/{store_id}/menus	Tidy End-point	Tidy Endpoint
+/v2/eats/stores/{store_id}/menus	Tidy End-point	Tidy Endpoint
+/v2/eats/stores/{store_id}/menus/items/{item_id}	Tidy End-point	Tidy Endpoint
+/v1/eats/report	Tidy End-point	Tidy Endpoint
+/v1/eats/byoc/restaurants/orders/event/location	Tidy End-point	Tidy Endpoint
+/v2/eats/order/{order_id}	Tidy End-point	Tidy Endpoint
+/v1/eats/stores/{store_id}/created-orders	Tidy End-point	Tidy Endpoint
+/v1/eats/stores/{store_id}/canceled-orders	Tidy End-point	Tidy Endpoint
+/v1/eats/orders/{order_id}/cancel	Tidy End-point	Tidy Endpoint
+/v2/eats/orders/{order_id}/cart	Tidy End-point	Tidy Endpoint
+/v1/eats/orders/{order_id}/restaurantdelivery/status	Tidy End-point	Tidy Endpoint
+/v1/eats/stores/{store_id}	Tidy End-point	Tidy Endpoint
+/v1/eats/stores	Tidy End-point	Tidy Endpoint
+/v1/eats/store/{store_id}/status	Tidy End-point	Tidy Endpoint
+/v1/eats/store/{store_id}/status	Tidy End-point	Tidy Endpoint
+/v1/eats/stores/{store_id}/holiday-hours	Tidy End-point	Tidy Endpoint
+/v1/eats/stores/{store_id}/holiday-hours	Tidy End-point	Tidy Endpoint

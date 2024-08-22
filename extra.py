@@ -367,9 +367,101 @@ def set_public_private(text, api):
 print(set_public_private("BroadCom", "REST"))'''
 
 
-from uri_cleaning import UriCleaning
+# from uri_cleaning import UriCleaning
 
-text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
-obj = UriCleaning()
-node = "device/{ID}/name.jpg"
-print(obj.get_uri_nodes(node))
+# text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
+# obj = UriCleaning()
+# node = "device/{ID}/name.jpg"
+# print(obj.get_uri_nodes(node))
+
+# import json
+# from uri_cleaning import UriCleaning
+# import os
+
+
+# input_file = "All-Data\input_data.jsonl"
+# processed_file = "All-Data\processed_data.jsonl"
+# metadata_file = "All-Data\metadata.jsonl"
+
+# process = UriCleaning()
+
+# # Load or initialize metadata
+# if os.path.exists(metadata_file):
+#     with open(metadata_file, 'r') as file:
+#         metadata = json.load(file)
+# else:
+#     metadata = {}
+# # Get the current modification time of the input file
+# current_mod_time = os.path.getmtime(input_file)
+
+# # Check if re-processing is needed
+# if metadata.get("last_mod_time") != current_mod_time:
+#     print("Input file has changed, re-processing data...")
+    
+#     # Load and process the input data
+#     with open(input_file, 'r') as file, open(processed_file, 'w') as process_file:
+#         #input_data = json.load(file)
+#         lines = file.read().strip().split("\n")
+#         for line in lines:
+#             row = json.loads(line)
+#             #print(row)
+#             row['uri'] = process.get_uri_nodes(row['uri'])
+#             row['description'] = process.preprocess_documentation(row['description'])
+#             row['parameters'] = process.preprocess_documentation(row['parameters'])
+#             #json.dump(f"{row}\n", process_file)
+#             json_string=json.dumps(row, ensure_ascii=False)
+#             process_file.write(json_string+"\n")
+    
+#     # Update and save metadata
+#     metadata["last_mod_time"] = current_mod_time
+#     with open(metadata_file, 'w') as file:
+#         json.dump(metadata, file)
+# else:
+#     print("No changes detected, loading cached processed data...")
+#     # with open(processed_file, 'r') as file:
+#     #     processed_data = json.load(file)
+
+# # Further processing with `processed_data`
+# #print(processed_data)
+
+# with open("GraphQL-APIs\\UberEats\\UberEats.txt", 'r') as file:
+#     data = file.read()
+#     print(data)
+
+##############################################
+######### Merge all Ouput Jsonl Files#########
+##############################################
+import os
+
+base_path = ["REST-APIs", "GraphQL-APIs"]
+#base_path = ["REST-APIs"]
+
+output_file = 'All-data\\output_data.jsonl'
+# Combine JSONL files
+with open(output_file, 'w') as outfile:
+    for api in base_path:
+        print(f"Merging {api}")
+        api_path = f"{api.strip()}/APIList.txt"
+        file_obj = FileReadWrite(api_path)
+        content = file_obj.read_file()
+        name_list = content.split('\n')
+        api_type = "REST" if "REST-APIs" in api else "GraphQL"
+        
+        for api_name in name_list:
+            file_path = f"All-Data\\temp\\{api_type}\\{api_name}.jsonl"
+            print(file_path)
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as infile:
+                    for line in infile:
+                        outfile.write(line)  # Write each line to the output file
+            else:
+                print(f"File {file_path} does not exist and will be skipped.")
+# for api_name in name_list:
+    #     print(f"\nDetecting ----> {api_name}\n")
+    #     path = api+"//"+api_name+"//"+api_name+".txt"
+    #     run(api_name, path, api, api_type)
+    #     elapsed_time = time.time() - start_time
+    #     print(f"\nDetection Complete ----> {api_name}. Time taken: {elapsed_time:.2f} seconds\n")
+    #     total_time += elapsed_time
+    #     #break
+    # print("Total Detection Time------->",total_time/60," Minutes")

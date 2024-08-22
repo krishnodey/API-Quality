@@ -12,7 +12,7 @@ https://api-docs.pipefy.com/reference/mutations/deleteTableRelation/
 https://docs.gitlab.com/ee/api/graphql/reference/#queryaimessages
 https://intuitdeveloper.github.io/intuit-api-docs/docs/schema-entities/bill/
 https://developers.pinterest.com/
-https://hygraph.com/docs/api-reference/basics/authorization Public API
+https://hygraph.com/docs/api-reference/basics/authorization (Public API)
 
 https://github.com/Netflix/ribbon
 https://www.dropbox.com/developers/documentation/http/overview

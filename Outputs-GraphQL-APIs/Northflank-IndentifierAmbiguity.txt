@@ -1,0 +1,88 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 83
+GET	 /v1/projects 	[Regular Endpoints]	Lists projects for the authenticated user or team.
+POST	 /v1/projects 	[Regular Endpoints]	Creates a new project.
+PUT	 /v1/projects 	[Regular Endpoints]	Create or update project
+PATCH	 /v1/projects/{projectId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a project.
+GET	 /v1/projects/{projectId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get information about the given project
+DELETE	 /v1/projects/{projectId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete the given project. Fails if the project isn't empty.
+GET	 /v1/projects/{projectId}/services 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of services belonging to the project
+POST	 /v1/projects/{projectId}/services/build 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new build service.
+PUT	 /v1/projects/{projectId}/services/build 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates or updates a build service.
+PATCH	 /v1/projects/{projectId}/services/build/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a build service.
+PATCH	 /v1/projects/{projectId}/services/build/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a build service.
+POST	 /v1/projects/{projectId}/services/combined 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new combined service.
+PUT	 /v1/projects/{projectId}/services/combined 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates or updates a combined service.
+PATCH	 /v1/projects/{projectId}/services/combined/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a combined service.
+PATCH	 /v1/projects/{projectId}/services/combined/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a combined service.
+POST	 /v1/projects/{projectId}/services/deployment 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new deployment service.
+PUT	 /v1/projects/{projectId}/services/deployment 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates or updates a deployment service.
+PATCH	 /v1/projects/{projectId}/services/deployment/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a deployment service.
+PATCH	 /v1/projects/{projectId}/services/deployment/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a deployment service.
+GET	 /v1/projects/{projectId}/services/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the branches of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the branches of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build 	[Identifier is Enclosed in {} or <> or Starts with :]	Lists the builds for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/build 	[Identifier is Enclosed in {} or <> or Starts with :]	Lists the builds for the service
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	[Identifier is Enclosed in {} or <> or Starts with :]	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	[Identifier is Enclosed in {} or <> or Starts with :]	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the build arguments for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the build arguments for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	[Identifier is Enclosed in {} or <> or Starts with :]	Get details about the build arguments accessible by the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	[Identifier is Enclosed in {} or <> or Starts with :]	Get details about the build arguments accessible by the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	[Identifier is Enclosed in {} or <> or Starts with :]	Get logs for a service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	[Identifier is Enclosed in {} or <> or Starts with :]	Get logs for a service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get metrics for a service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get metrics for a service build
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the build options for a given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the build options for a given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the version control source for a given build or combined service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the version control source for a given build or combined service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about a build for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about a build for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about a build for the service
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Aborts the given service build
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Aborts the given service build
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Aborts the given service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of containers for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of containers for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the deployment of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the deployment of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the deployment settings of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the deployment settings of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	[Identifier is Enclosed in {} or <> or Starts with :]	Lists the health checks for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	[Identifier is Enclosed in {} or <> or Starts with :]	Lists the health checks for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates health checks for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates health checks for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	[Identifier is Enclosed in {} or <> or Starts with :]	Get logs for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	[Identifier is Enclosed in {} or <> or Starts with :]	Get logs for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get metrics for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get metrics for a service
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	[Identifier is Enclosed in {} or <> or Starts with :]	Pause the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	[Identifier is Enclosed in {} or <> or Starts with :]	Pause the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	[Identifier is Enclosed in {} or <> or Starts with :]	Lists the ports for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	[Identifier is Enclosed in {} or <> or Starts with :]	Lists the ports for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the list of ports for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the list of ports for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the pull-requests of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets information about the pull-requests of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	[Identifier is Enclosed in {} or <> or Starts with :]	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	[Identifier is Enclosed in {} or <> or Starts with :]	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	[Identifier is Enclosed in {} or <> or Starts with :]	Resumes the given service. Optionally takes several arguments to override resumed settings.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	[Identifier is Enclosed in {} or <> or Starts with :]	Resumes the given service. Optionally takes several arguments to override resumed settings.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	[Identifier is Enclosed in {} or <> or Starts with :]	
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the runtime environment for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the runtime environment for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	[Identifier is Enclosed in {} or <> or Starts with :]	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	[Identifier is Enclosed in {} or <> or Starts with :]	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies the scaling settings for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies the scaling settings for the given service.

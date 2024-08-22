@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 1
+GET	 /outmails/{id}/logs/{messageId} 	Plural Nouns Found in Consecutive Nodes	Returns the detailed history from the logfiles for a specified Outmail account and message id.
+
+***Patterns*** 
+Count: 26
+GET	 /clients 	Cosistent Resource Archetype	Allows API to search all Client accessible to the current Client - including Partners & EndUsers. The use of the search parameter allows most fields to be searched on, including combination searches.
+GET	 /clients/count 	Cosistent Resource Archetype	Allows API to count all Client accessible to the current Client - including Partners & EndUsers.
+GET	 /clients/{id} 	Cosistent Resource Archetype	Returns a single Client record by ID.
+GET	 /clients/self 	Cosistent Resource Archetype	Returns your own Client record.
+PATCH	 /clients/{id}/enabled 	Cosistent Resource Archetype	This endpoint PATCH allows a client to be disabled. Disabling a client suspends all of their services and prevents login. No further Partner Credits will consumed by those services.
+GET	 /live_services 	Cosistent Resource Archetype	Fetch a list of client resources that are owned by the authenicating user. This list (if not filtered) will include the authenticated Partner and all of their clients.
+GET	 /live_services/count 	Cosistent Resource Archetype	Allows API to count all liveservices accessible to the currently authenticated Client.
+GET	 /live_services/{id} 	Cosistent Resource Archetype	Returns a single LiveService record specified by the internal ID. This record contains the cross-product, generic information on the service, along with the type of the service, and API endpoint URLs for the resource which describes the service-specific information (e.g. usernames, domains, etc.
+PATCH	 /live_services/{id}/suspension 	Cosistent Resource Archetype	Partners may specify the following values for the suspended field: suspend = 0 implies an un-suspension of services, with the service being enabled. suspend != 0 implies a Partner suspension of the account. While suspended, no Credits will be consumed and the service will be disabled and not usable.
+GET	 /live_services/service_names 	Cosistent Resource Archetype	Returns a list of the authenticated partner's available services. The along with the information that is required to us POST requests to Rest endpoints to create new services.
+GET	 /backup_dns/{id}/records 	Cosistent Resource Archetype	Allows API to search all BackupZoneRecords accessible to the current Client - including Partners & EndUsers. The use of the ?search= parameter allows all fields to be searched on, including combination searches.
+GET	 /backup_dns/{id}/records/{backupZoneId} 	Cosistent Resource Archetype	Returns a single BackupZoneRecord by ID.
+GET	 /backup_dns 	Cosistent Resource Archetype	Allows API to search all BackupZone accessible to the current Client - including Partners & EndUsers. The use of the ?search= parameter allows all fields to be searched on, including combination searches.
+GET	 /backup_dns/count 	Cosistent Resource Archetype	Allows API to count all BackupZones accessible to the current Client - including Partners & EndUsers. The use of the ?search= parameter allows all fields to be searched on, including combination searches.
+GET	 /backup_dns/{id} 	Cosistent Resource Archetype	Returns a single BackupZone record by ID.
+GET	 /master_dns/{id}/records 	Cosistent Resource Archetype	Allows API to search all DnsRecords accessible to the current Client - including Partners & EndUsers. The use of the ?search= parameter allows all fields to be searched on, including combination searches.
+GET	 /master_dns/{id}/records/{dnsId} 	Cosistent Resource Archetype	Returns a single Dns Record by ID.
+GET	 /master_dns/count 	Cosistent Resource Archetype	Allows API to count all NamedDomains accessible to the current Client - including Partners & EndUsers. The use of the ?search= parameter allows all fields to be searched on, including combination searches.
+GET	 /outmails/{id}/logs 	Cosistent Resource Archetype	For the specified Outmail Id, fetch the list of messages for which detailed logs are available. Range of dates required (within the last 7 days) can be specified using the query parametrs start=YYYY-MM-DD and ?end=YYYY-MM-DD. By default the last 24hours are returned.
+GET	 /outmails/{id}/summary 	Cosistent Resource Archetype	Retrieve summarised info for the specified Outmail record The use of the start and end parameter allows date range to be specified. You can also specify a groupBy parameter, or allow it to automatically select.
+GET	 /outmails/count 	Cosistent Resource Archetype	Allows API to count all Outmail accessible to the current Client - including Partners & EndUsers.
+PATCH	 /outmails/{id}/enabled 	Cosistent Resource Archetype	Enable (turn on) or Disable (turn off) a specified Outmail service. While the service is disabled, it cannot be used, but PartnerCredits will still be consumed.
+GET	 /outmails/{id}/quota 	Cosistent Resource Archetype	Returns the quota info for an outmail record - a snapshot over the last hour. The quota control in Outmail is provided by 'leaky bucket' throttling, where a full 'bucket' would empty over a 7-day period - i.e. an initially fully-used quota would recover completely over 7 days if unused.
+PATCH	 /clients/{id}/generate_api_key 	Cosistent Resource Archetype	Generate or re-generate an API Key for the specified Partner.
+PATCH	 /clients/{id}/promote 	Cosistent Resource Archetype	Convert an existing Client account into a Partner.
+PATCH	 /clients/{id}/token 	Cosistent Resource Archetype	Convert an existing Client account into a Partner.

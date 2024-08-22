@@ -1,0 +1,11 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 6
+GET	 /balances 	Structed Endpoint	Get current balances.
+POST	 /order/{pairs} 	Structed Endpoint	Register your order.
+POST	 /cancel/{pairs} 	Structed Endpoint	Cancel the registered order.
+GET	 /openOrders 	Structed Endpoint	Get your open orders.
+GET	 /tradeHistories 	Structed Endpoint	Get your completed order.
+GET	 /balanceHistories 	Structed Endpoint	Get your balance History.

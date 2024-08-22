@@ -1,0 +1,102 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 97
+GET	 /auditactivity/v{version}/auditrecords/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the audit record for the provided Id.
+GET	 /auditactivity/v{version}/auditrecords?auditRequest.startDate={auditRequest.startDate} 	[Regular Endpoints]	Gets the audit records between a given date range If the number of records is more than a page full, a continuation token will be returned and the continuation token can be used to get the next set of audit records. This service only supports AuditRecord retrieval for the last 90 days and a maximum window of 30 days.
+POST	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Create DeviceBatches
+POST	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Create DeviceBatches
+POST	 /customers/{customer_id}/policies 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Policies
+DELETE	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete DeviceBatches
+DELETE	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete DeviceBatches
+DELETE	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete DeviceBatches
+GET	 /customers/{customer_id}/batchJobStatus/{batchUploadTracking_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get BatchJobStatus
+GET	 /customers/{customer_id}/batchJobStatus/{batchUploadTracking_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get BatchJobStatus
+GET	 /customers/{customer_id}/deviceBatches 	[Identifier is Enclosed in {} or <> or Starts with :]	Get DeviceBatches
+GET	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Devices
+GET	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Devices
+PUT	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update DeviceBatches
+PUT	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update DeviceBatches
+PUT	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update DeviceBatches
+PATCH	 /customers/{customer_id}/DevicePolicyUpdates 	[Identifier is Enclosed in {} or <> or Starts with :]	Update Device Policy
+POST	 /customers/{customer_id}/deviceBatches 	[Identifier is Enclosed in {} or <> or Starts with :]	Uploaded Customer Devices
+POST	 /roles/{role_id}/usermembers 	[Identifier is Enclosed in {} or <> or Starts with :]	Adds a new user member to the specified role.
+DELETE	 /roles/{role_id}/usermembers/{member_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Removes the specified user member from the specified role.
+DELETE	 /roles/{role_id}/usermembers/{member_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Removes the specified user member from the specified role.
+GET	 /roles 	[Regular Endpoints]	Gets all the roles available.
+GET	 /profiles/billing 	[Regular Endpoints]	Gets the billing profile.
+GET	 /profiles/legalbusiness 	[Regular Endpoints]	Gets the legal business profile.
+GET	 /profiles/mpn 	[Regular Endpoints]	Gets the MPN profile.
+GET	 /profiles/organization 	[Regular Endpoints]	Gets the organization profile.
+GET	 /profiles/partnernetworkprofile 	[Regular Endpoints]	Gets the Microsoft partner network profile.
+GET	 /profiles/support 	[Regular Endpoints]	Gets the partner support profile.
+GET	 /roles/{role_id}/usermembers 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a segment of a role's user members capped to a specific size.
+PUT	 /profiles/billing 	[Regular Endpoints]	Updates the billing profile.
+PUT	 /profiles/legalbusiness 	[Regular Endpoints]	Updates the legal business profile.
+PUT	 /profiles/organization 	[Regular Endpoints]	Updates the organization profile.
+PUT	 /profiles/support 	[Regular Endpoints]	Updates the partner support profile.
+GET	 /invoices 	[Regular Endpoints]	Gets the invoices for the partner.
+GET	 /customers/{customer_id}/servicecosts/{billing_period}/lineitems 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the service costs line items incurred by the customer's subscriptions.
+GET	 /customers/{customer_id}/servicecosts/{billing_period}/lineitems 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the service costs line items incurred by the customer's subscriptions.
+GET	 /customers/{customer_id}/servicecosts/{billing_period} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the service costs incurred by the customer's subscriptions.
+GET	 /customers/{customer_id}/servicecosts/{billing_period} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the service costs incurred by the customer's subscriptions.
+GET	 /invoices/estimates/links 	[Regular Endpoints]	Gets the estimate links for unbilled recon for first, third party non usaged based and third party daily rated usage.
+GET	 /invoices/{invoice_id}/lineitems 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets line items for GTM scenarios. First and Third party unbilled daily rated usage for current and previous months. First and Third party billed daily rated usage for an invoceid. First and Third party unbilled recon for current and previous months.
+GET	 /invoices/summary 	[Regular Endpoints]	Retrieves the reseller's current account balance.
+GET	 /invoices/{invoice_id}/documents/statement 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the invoice statement as a PDF file.
+GET	 /invoices/summaries 	[Regular Endpoints]	Retrieves the reseller's current account balance per currency.
+GET	 /applicationmfaadoptionstatus 	[Regular Endpoints]	Gets the application MFA adoption status details for a partner.
+GET	 /nonMfaCompliantPartnerPrincipals 	[Regular Endpoints]	Gets the the first 10,000 most recent records of calling partner's users that are not MFA compliant (i.e.., that have signed into partner center without MFA or have made requests to the Partner Center API using a non-MFA bearer token) in the last 7 days.
+GET	 /partnerRequests 	[Regular Endpoints]	Gets the first 10,000 most recent partner center requests made by the calling partner's users in the last 7 days.
+HEAD	 /domains/{domain} 	[Identifier is Enclosed in {} or <> or Starts with :]	Determine if the domain is available.
+POST	 /validations/address 	[Regular Endpoints]	Determine if the address is valid.
+POST	 /customers/{customer_id}/transfers/{transfer_id}/accept 	[Identifier is Enclosed in {} or <> or Starts with :]	Accept a transfer of subscriptions for a customer
+POST	 /customers/{customer_id}/transfers/{transfer_id}/accept 	[Identifier is Enclosed in {} or <> or Starts with :]	Accept a transfer of subscriptions for a customer
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/activate 	[Identifier is Enclosed in {} or <> or Starts with :]	Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/activate 	[Identifier is Enclosed in {} or <> or Starts with :]	Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
+POST	 /extensions/product/checkinventory 	[Regular Endpoints]	Retrieves inventory validation results for the provided country.
+POST	 /customers/{customer_id}/carts/{cart_id}/checkout 	[Identifier is Enclosed in {} or <> or Starts with :]	Checks out an existing cart.
+POST	 /customers/{customer_id}/carts/{cart_id}/checkout 	[Identifier is Enclosed in {} or <> or Starts with :]	Checks out an existing cart.
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/conversions 	[Identifier is Enclosed in {} or <> or Starts with :]	Converts a trial subscription to the target conversion.
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/conversions 	[Identifier is Enclosed in {} or <> or Starts with :]	Converts a trial subscription to the target conversion.
+POST	 /customers/{customer_id}/transfers 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new transfer entity.
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/transitions 	[Identifier is Enclosed in {} or <> or Starts with :]	Post the transition request for a subscription.
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/transitions 	[Identifier is Enclosed in {} or <> or Starts with :]	Post the transition request for a subscription.
+GET	 /products/{productId}/skus/{skuId}/availabilities/{availabilityId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves an availability for the requested context.
+GET	 /products/{productId}/skus/{skuId}/availabilities/{availabilityId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves an availability for the requested context.
+GET	 /products/{productId}/skus/{skuId}/availabilities/{availabilityId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves an availability for the requested context.
+GET	 /customers/{customer_id}/orders/{order_id}/lineitems/{line_item_number}/activationlinks 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the activation links from the specific line item of the order.
+GET	 /customers/{customer_id}/orders/{order_id}/lineitems/{line_item_number}/activationlinks 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the activation links from the specific line item of the order.
+GET	 /customers/{customer_id}/orders/{order_id}/lineitems/{line_item_number}/activationlinks 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the activation links from the specific line item of the order.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/conversions 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the target conversions for a trial subscription.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/conversions 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the target conversions for a trial subscription.
+GET	 /customers/{customer_id}/orders/{order_id}/provisioningstatus 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a collection of order line item provisioning status for an order.
+GET	 /customers/{customer_id}/orders/{order_id}/provisioningstatus 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a collection of order line item provisioning status for an order.
+POST	 /customers/{customer_id}/verifieddomain 	[Identifier is Enclosed in {} or <> or Starts with :]	Add verified domain.
+GET	 /validations/checkdomainavailability/{domain_prefix} 	[Identifier is Enclosed in {} or <> or Starts with :]	Determine if the domain is available.
+POST	 /customers/{customer_id}/qualifications 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates the customer's qualifications.
+POST	 /customers/{customer_id}/directoryroles/{role_id}/usermembers 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Directory Role
+POST	 /customers/{customer_id}/directoryroles/{role_id}/usermembers 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Directory Role
+POST	 /SelfServePolicy 	[Regular Endpoints]	Create self serve policy
+GET	 /customers/{customer_id}/agreements 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the agreement confirmations provided by a partner on behalf of a customer.
+GET	 /customers/{customer_id}/profiles/billing 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a customer's billing profile.
+GET	 /customers/{customer_id}/profiles/company 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a customer's company profile.
+GET	 /customers/{customer_id}/serviceincidents/office 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves all office service health incidents for a partner by their active directory tenant identifier.
+GET	 /customers/{customer_id}/qualifications 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieve the customer's qualifications.
+GET	 /customers/{customer_id}/users/{user_id}/licenses 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Licenses
+GET	 /customers/{customer_id}/users/{user_id}/licenses 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Licenses
+GET	 /relationships 	[Regular Endpoints]	Retrieves a segment of a partner's resellers. Optional filtering of partner relationships can also be applied. Resellers can only be filtered by a string which their name. Full search is not supported currently. Resellers can be filtered using a {Microsoft.Partner.Core.Query.Filters.FieldFilterOperation.StartsWith} filter operation and specifying: Name (Value added reseller name) as the filter field.
+PUT	 /customers/{customer_id}/profiles/billing 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a customer's billing profile.
+POST	 /productUpgrades 	[Regular Endpoints]	Creates a product upgrade entity to upgrade the customer from legacy azure subscriptions to azure plans.
+GET	 /customers/{customer_id}/usagebudget 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the budget set for a given customer.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the list of entitlements of a subscription identifier for the customer of a partner by their active directory tenant identifier.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the list of entitlements of a subscription identifier for the customer of a partner by their active directory tenant identifier.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/usagerecords/resources 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the monthly Azure resource usage records of a subscription.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/usagerecords/resources 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the monthly Azure resource usage records of a subscription.
+POST	 /productUpgrades/eligibility 	[Regular Endpoints]	Retrieves the eligibility for product upgrades.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/meterusagerecords 	[Identifier is Enclosed in {} or <> or Starts with :]	Get meter usage record resources.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/meterusagerecords 	[Identifier is Enclosed in {} or <> or Starts with :]	Get meter usage record resources.
+GET	 /customers/{customer_id}/subscriptions/usagerecords 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves usage records for all the subscriptions of a given customer for the current billing period.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/usagesummary 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the usage summary for all resources in a given customer's subscription for the current billing period.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/usagesummary 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the usage summary for all resources in a given customer's subscription for the current billing period.

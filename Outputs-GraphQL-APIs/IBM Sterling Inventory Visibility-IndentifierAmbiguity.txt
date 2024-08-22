@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 55
+GET	 /inventory/{tenant}/v1/node-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get rule details with the given ruleId.
+GET	 /inventory/{tenant}/v1/node-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get rule details with the given ruleId.
+DELETE	 /inventory/{tenant}/v1/node-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete rule with the given ruleId.
+DELETE	 /inventory/{tenant}/v1/node-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete rule with the given ruleId.
+PUT	 /inventory/{tenant}/v1/node-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update or create rule with the given ruleId.
+PUT	 /inventory/{tenant}/v1/node-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update or create rule with the given ruleId.
+POST	 /inventory/{tenant}/v1/node-safetystock/rules 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a new rule with auto-generated ruleId.
+POST	 /inventory/{tenant}/v1/node-safetystock/rules/search 	[Identifier is Enclosed in {} or <> or Starts with :]	Find the rules that satisfy the input filters.
+GET	 /inventory/{tenant}/v1/node-safetystock/rules/attributes 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of all default and custom condition attributes.
+GET	 /inventory/{tenant}/v1/node-safetystock/defaultAction 	[Identifier is Enclosed in {} or <> or Starts with :]	Get default action for purpose.
+PUT	 /inventory/{tenant}/v1/node-safetystock/defaultAction 	[Identifier is Enclosed in {} or <> or Starts with :]	Update default action for purpose.
+DELETE	 /inventory/{tenant}/v1/network-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete rule with the given ruleId.
+DELETE	 /inventory/{tenant}/v1/network-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete rule with the given ruleId.
+PUT	 /inventory/{tenant}/v1/network-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update or create rule with the given ruleId.
+PUT	 /inventory/{tenant}/v1/network-safetystock/rules/{ruleId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update or create rule with the given ruleId.
+POST	 /inventory/{tenant}/v1/network-safetystock/rules 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a new rule with auto-generated ruleId.
+POST	 /inventory/{tenant}/v1/network-safetystock/rules/search 	[Identifier is Enclosed in {} or <> or Starts with :]	Find the rules that satisfy the input filters.
+GET	 /inventory/{tenant}/v1/network-safetystock/rules/attributes 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of all default and custom condition attributes.
+GET	 /inventory/{tenant}/v1/network-safetystock/defaultAction 	[Identifier is Enclosed in {} or <> or Starts with :]	Get default action for purpose.
+PUT	 /inventory/{tenant}/v1/network-safetystock/defaultAction 	[Identifier is Enclosed in {} or <> or Starts with :]	Update default action for purpose.
+POST	 /{tenantId}/v2/availability/network 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Network Availability by date V2
+GET	 /{tenantId}/v2/availability/{itemId}/network/{distributionGroupId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Network Availability Product by date V2
+GET	 /{tenantId}/v2/availability/{itemId}/network/{distributionGroupId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Network Availability Product by date V2
+GET	 /{tenantId}/v2/availability/{itemId}/network/{distributionGroupId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Network Availability Product by date V2
+POST	 /{tenantId}/v2/availability/node 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Node Availability by date V2
+POST	 /{tenantId}/v2/availability/{itemId}/node 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Node Availability Product by date V2
+POST	 /{tenantId}/v2/availability/{itemId}/node 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Node Availability Product by date V2
+POST	 /{tenantId}/v2/availability/{itemId}/node/detail 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Detailed Node Availability by date V2
+POST	 /{tenantId}/v2/availability/{itemId}/node/detail 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Detailed Node Availability by date V2
+POST	 /{tenantId}/v2/availability/node/availableSupplies 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Node available supplies by date V2
+GET	 /{tenantId}/v1/demands 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Demands
+POST	/{tenantId}/v1/demands 	[Identifier is Enclosed in {} or <> or Starts with :]	Adjust Demand
+PUT	/{tenantId}/v1/demands 	[Identifier is Enclosed in {} or <> or Starts with :]	Sync Demand
+POST	 /{tenantId}/v2/demands/search-requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Search Demands
+POST	 /{tenantId}/v2/demands/aggregate-requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Search Aggregate Demands
+GET	 /{tenantId}/v1/configuration/demand_types 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Demand Types
+GET	 /{tenantId}/v1/configuration/demand_types/{demandType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Demand Type Details
+GET	 /{tenantId}/v1/configuration/demand_types/{demandType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Demand Type Details
+PUT	 /{tenantId}/v1/configuration/demand_types/{demandType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Extended Demand Type
+PUT	 /{tenantId}/v1/configuration/demand_types/{demandType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Extended Demand Type
+DELETE	 /{tenantId}/v1/configuration/demand_types/{demandType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Extended Demand Type
+DELETE	 /{tenantId}/v1/configuration/demand_types/{demandType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Extended Demand Type
+GET	 /{tenantId}/v1/supplies 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Supplies
+POST	 /{tenantId}/v1/supplies 	[Identifier is Enclosed in {} or <> or Starts with :]	Adjust Supply
+PUT	 /{tenantId}/v1/supplies 	[Identifier is Enclosed in {} or <> or Starts with :]	Sync Supply
+POST	 /{tenantId}/v2/supplies/search-requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Search Supplies
+POST	 /{tenantId}/v2/supplies/aggregate-requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Search Aggregate Supplies
+GET	 /{tenantId}/v1/supplies/history 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Supply History
+GET	 /{tenantId}/v1/configuration/supply_types 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Supply Types
+GET	 /{tenantId}/v1/configuration/supply_types/{supplyType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Supply Type Details
+GET	 /{tenantId}/v1/configuration/supply_types/{supplyType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Supply Type Details
+PUT	 /{tenantId}/v1/configuration/supply_types/{supplyType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Extended Supply Type
+PUT	 /{tenantId}/v1/configuration/supply_types/{supplyType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create Extended Supply Type
+DELETE	 /{tenantId}/v1/configuration/supply_types/{supplyType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Extended Supply Type
+DELETE	 /{tenantId}/v1/configuration/supply_types/{supplyType} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Extended Supply Type

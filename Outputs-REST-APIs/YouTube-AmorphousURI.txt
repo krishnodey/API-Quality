@@ -1,0 +1,55 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 50
+/activities	Tidy End-point	Tidy Endpoint
+/captions	Tidy End-point	Tidy Endpoint
+/captions/id	Tidy End-point	Tidy Endpoint
+/captions	Tidy End-point	Tidy Endpoint
+/captions	Tidy End-point	Tidy Endpoint
+/captions	Tidy End-point	Tidy Endpoint
+/channelBanners/insert	Tidy End-point	Tidy Endpoint
+/channelSections	Tidy End-point	Tidy Endpoint
+/channelSections	Tidy End-point	Tidy Endpoint
+/channelSections	Tidy End-point	Tidy Endpoint
+/channelSections	Tidy End-point	Tidy Endpoint
+/channels	Tidy End-point	Tidy Endpoint
+/channels	Tidy End-point	Tidy Endpoint
+/commentThreads	Tidy End-point	Tidy Endpoint
+/commentThreads	Tidy End-point	Tidy Endpoint
+/comments	Tidy End-point	Tidy Endpoint
+/comments/setModerationStatus	Tidy End-point	Tidy Endpoint
+/comments	Tidy End-point	Tidy Endpoint
+/comments/markAsSpam	Tidy End-point	Tidy Endpoint
+/comments	Tidy End-point	Tidy Endpoint
+/comments	Tidy End-point	Tidy Endpoint
+/guideCategories	Tidy End-point	Tidy Endpoint
+/i18nLanguages	Tidy End-point	Tidy Endpoint
+/i18nRegions	Tidy End-point	Tidy Endpoint
+/members	Tidy End-point	Tidy Endpoint
+/membershipsLevels	Tidy End-point	Tidy Endpoint
+/playlistItems	Tidy End-point	Tidy Endpoint
+/playlistItems	Tidy End-point	Tidy Endpoint
+/playlistItems	Tidy End-point	Tidy Endpoint
+/playlistItems	Tidy End-point	Tidy Endpoint
+/playlists	Tidy End-point	Tidy Endpoint
+/playlists	Tidy End-point	Tidy Endpoint
+/playlists	Tidy End-point	Tidy Endpoint
+/playlists	Tidy End-point	Tidy Endpoint
+/search	Tidy End-point	Tidy Endpoint
+/subscriptions	Tidy End-point	Tidy Endpoint
+/subscriptions	Tidy End-point	Tidy Endpoint
+/subscriptions	Tidy End-point	Tidy Endpoint
+/thumbnails/set	Tidy End-point	Tidy Endpoint
+/videoAbuseReportReasons	Tidy End-point	Tidy Endpoint
+/videoCategories	Tidy End-point	Tidy Endpoint
+/videos	Tidy End-point	Tidy Endpoint
+/videos	Tidy End-point	Tidy Endpoint
+/videos	Tidy End-point	Tidy Endpoint
+/videos	Tidy End-point	Tidy Endpoint
+/videos/rate	Tidy End-point	Tidy Endpoint
+/videos/getRating	Tidy End-point	Tidy Endpoint
+/videos/reportAbuse	Tidy End-point	Tidy Endpoint
+/watermarks/set	Tidy End-point	Tidy Endpoint
+/watermarks/unset	Tidy End-point	Tidy Endpoint

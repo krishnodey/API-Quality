@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 7
+PUT	 /devices 	Parameter Tunneling	Creates a new device associated to the user.
+GET	 /devices 	Parameter Tunneling	Returns the list of devices associated to the user.
+POST	 /devices/{id}/pass 	Parameter Tunneling	Check if the password matches.
+PUT	 /things/{id}/properties/{pid}/publish 	Parameter Tunneling	Publish a property value to MQTT
+POST	 /series/batch_query 	Parameter Tunneling	Returns the batch of time-series data
+POST	 /series/batch_query_raw 	Parameter Tunneling	Returns the batch of time-series data raw
+POST	 /series/batch_query_raw/lastvalue 	Parameter Tunneling	Returns the batch of time-series data raw
+
+***Patterns*** 
+Count: 13
+DELETE	 /devices/{id} 	Parameter Adherence	Removes a device associated to the user.
+GET	 /devices/{id}/events 	Parameter Adherence	GET device events.
+GET	 /devices/{id}/properties 	Parameter Adherence	GET device properties.
+GET	 /devices/{id} 	Parameter Adherence	Returns the device requested by the user.
+DELETE	 /devices/{id} 	Parameter Adherence	Removes a device associated to the user
+GET	 /devices/{id}/properties/{pid} 	Parameter Adherence	GET device properties values in a range of time
+PUT	 /devices/{id}/properties 	Parameter Adherence	Update device properties last values
+PUT	 /devices/{id}/certs 	Parameter Adherence	Creates a new cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+DELETE	 /devices/{id}/certs/{cid} 	Parameter Adherence	Removes a cert associated to a device
+GET	 /devices/{id}/certs 	Parameter Adherence	Returns the list of certs associated to the device
+GET	 /devices/{id}/certs/{cid} 	Parameter Adherence	Returns the cert requested by the user
+POST	 /devices/{id}/certs/{cid} 	Parameter Adherence	Updates a cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+PUT	 /things/{id}/properties 	Parameter Adherence	Creates a new property associated to a thing

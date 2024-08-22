@@ -1,0 +1,53 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 48
+/entitlements	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}/users	Tidy End-point	Tidy Endpoint
+/subscriptions	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}	Tidy End-point	Tidy Endpoint
+/subscriptions	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}/users/{userId}	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}/users	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}/users/{userId}	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}	Tidy End-point	Tidy Endpoint
+/subscriptions/{subscriptionId}/users/{userId}	Tidy End-point	Tidy Endpoint
+/orders/{orderReferenceNumber}	Tidy End-point	Tidy Endpoint
+/orders	Tidy End-point	Tidy Endpoint
+/orders	Tidy End-point	Tidy Endpoint
+/orders/{orderReferenceNumber}	Tidy End-point	Tidy Endpoint
+/orders	Tidy End-point	Tidy Endpoint
+/billing/invoices	Tidy End-point	Tidy Endpoint
+/orders/{orderReferenceNumber}	Tidy End-point	Tidy Endpoint
+/billing/{orderReferenceNumber}/billed	Tidy End-point	Tidy Endpoint
+/orders/estimates/price	Tidy End-point	Tidy Endpoint
+/billing/{orderReferenceNumber}/usage/ibmcloud/resourceinstances	Tidy End-point	Tidy Endpoint
+/billing/{orderReferenceNumber}/usage/ibmcloud	Tidy End-point	Tidy Endpoint
+/orders/{orderReferenceNumber}	Tidy End-point	Tidy Endpoint
+/orders/validate/partnerIdentifier	Tidy End-point	Tidy Endpoint
+/catalog/products/{id}	Tidy End-point	Tidy Endpoint
+/catalog/reseller/products/{id}	Tidy End-point	Tidy Endpoint
+/catalog/locales	Tidy End-point	Tidy Endpoint
+/catalog/service-types	Tidy End-point	Tidy Endpoint
+/catalog/topics	Tidy End-point	Tidy Endpoint
+/catalog/products	Tidy End-point	Tidy Endpoint
+/catalog/reseller/products	Tidy End-point	Tidy Endpoint
+/quotes/agreementnumber/{agreementnumber}/changerenewtype	Tidy End-point	Tidy Endpoint
+/catalog/category-topics	Tidy End-point	Tidy Endpoint
+/catalog/reseller/products/{id}/plans/{planId}/config	Tidy End-point	Tidy Endpoint
+/catalog/categories	Tidy End-point	Tidy Endpoint
+/catalog/locales	Tidy End-point	Tidy Endpoint
+/catalog/service-types > Get all possible service types for products.	Tidy End-point	Tidy Endpoint
+/catalog/topics	Tidy End-point	Tidy Endpoint
+/catalog/products	Tidy End-point	Tidy Endpoint
+/catalog/reseller/products	Tidy End-point	Tidy Endpoint
+/quotes/agreementnumber/{agreementnumber}/changerenewtype	Tidy End-point	Tidy Endpoint
+/quotes/orders	Tidy End-point	Tidy Endpoint
+/quotes	Tidy End-point	Tidy Endpoint
+/quotes/billing/{agreementnumber}/billed	Tidy End-point	Tidy Endpoint
+/quotes/{sapQuoteNumber}	Tidy End-point	Tidy Endpoint
+/quotes/agreementnumber/{agreementnumber}/lineitems	Tidy End-point	Tidy Endpoint
+/quotes/orders/{orderReferenceNumber}	Tidy End-point	Tidy Endpoint
+/quotes/agreementnumber/{agreementnumber}	Tidy End-point	Tidy Endpoint

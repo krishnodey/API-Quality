@@ -8,7 +8,7 @@ Pattern: (from Cisco Flare)
 /environments?key={key}&value={value} Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
 
 Anti-pattern:
-/environments List environments. Gets a list of all environments.
+/environments  Gets a list of all environments.
 
 
 2)  Parameter Adherence vs  Parameter Tunneling [d]

@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+GET	 /appCategories 	Structed Endpoint	filter by attribute platforms
+GET	 /appCategories/{id} 	Structed Endpoint	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations 	Structed Endpoint	filter by attribute platform
+GET	 /appEncryptionDeclarations/{id} 	Structed Endpoint	the fields to include for returned resources of type appEncryptionDeclarations
+GET	 /appInfoLocalizations/{id} 	Structed Endpoint	the fields to include for returned resources of type appInfoLocalizations
+GET	 /appInfos/{id} 	Structed Endpoint	the fields to include for returned resources of type appInfos
+GET	 /appPreOrders/{id} 	Structed Endpoint	the fields to include for returned resources of type appPreOrders
+GET	 /appPreviewSets/{id} 	Structed Endpoint	the fields to include for returned resources of type appPreviews
+GET	 /appPreviews/{id} 	Structed Endpoint	the fields to include for returned resources of type appPreviews
+GET	 /appPricePoints 	Structed Endpoint	filter by id(s) of related priceTier
+GET	 /appPricePoints/{id} 	Structed Endpoint	the fields to include for returned resources of type appPricePoints
+GET	 /appPriceTiers 	Structed Endpoint	filter by id(s)
+GET	 /appPriceTiers/{id} 	Structed Endpoint	the fields to include for returned resources of type appPriceTiers
+GET	 /appPrices/{id} 	Structed Endpoint	the fields to include for returned resources of type appPrices
+GET	 /appScreenshotSets/{id} 	Structed Endpoint	the fields to include for returned resources of type appScreenshotSets
+GET	 /appScreenshots/{id} 	Structed Endpoint	the fields to include for returned resources of type appScreenshots
+GET	 /appStoreReviewAttachments/{id} 	Structed Endpoint	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewDetails/{id} 	Structed Endpoint	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreVersionLocalizations/{id} 	Structed Endpoint	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersions/{id} 	Structed Endpoint	the fields to include for returned resources of type appStoreVersions
+GET	 /apps 	Structed Endpoint	filter by attribute 'appStoreVersions.appStoreState
+GET	 /betaAppLocalizations 	Structed Endpoint	filter by attribute locale
+GET	 /endUserLicenseAgreements/{id} 	Structed Endpoint	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /financeReports 	Structed Endpoint	filter by attribute regionCode
+GET	 /preReleaseVersions 	Structed Endpoint	filter by attribute builds.expired
+GET	 /routingAppCoverages/{id} 	Structed Endpoint	the fields to include for returned resources of type routingAppCoverages
+GET	 /salesReports 	Structed Endpoint	filter by attribute frequency
+GET	 /appCategories/{id}/subcategories 	Structed Endpoint	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations/{id}/app 	Structed Endpoint	the fields to include for returned resources of type apps
+GET	 /appInfos/{id}/ageRatingDeclaration 	Structed Endpoint	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/appInfoLocalizations 	Structed Endpoint	filter by attribute locale
+GET	 /appInfos/{id}/primaryCategory 	Structed Endpoint	the fields to include for returned resources of type appCategories

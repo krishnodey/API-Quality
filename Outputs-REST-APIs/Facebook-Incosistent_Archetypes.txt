@@ -1,0 +1,70 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 65
+GET	 /{album-id}/comments 	Cosistent Resource Archetype	Comments for this object
+GET	 /{album-id}/likes 	Cosistent Resource Archetype	Likes for this object
+GET	 /{album-id}/photos 	Cosistent Resource Archetype	Get a list of Photos on an Album.
+GET	 /{album-id}/picture 	Cosistent Resource Archetype	none
+GET	 /{application-id}/accounts 	Cosistent Resource Archetype	Get a list of test users on an app.
+POST	 /{application_id}/activities 	Cosistent Resource Archetype	You can use a user access token or app access token to log events to this endpoint.
+GET	 /{application-id}/aem_conversion_configs 	Cosistent Resource Archetype	ApplicationAEMConversionConfigs
+POST	 /{application_id}/app_indexing 	Cosistent Resource Archetype	You can make a POST request to app_indexing edge from the following paths: /{application_id}/app_indexing When posting to this edge, an Application will be created.
+GET	 /{application-id}/app_installed_groups 	Cosistent Resource Archetype	List of groups the application is installed in
+GET	 /{application-id}/appassets 	Cosistent Resource Archetype	An Edge to the CanvasAppAsset
+POST	 /{application_id}/assets 	Cosistent Resource Archetype	You can make a POST request to assets edge from the following paths: /{application_id}/assets When posting to this edge, no Graph object will be created.
+GET	 /v11.0/{application-id}/authorized_adaccounts 	Cosistent Resource Archetype	none
+GET	 /{application-id}/button_auto_detection_device_selection 	Cosistent Resource Archetype	ApplicationButtonAutoDetectionDeviceSelection
+POST	 /{application_id}/codeless_event_mappings 	Cosistent Resource Archetype	You can make a POST request to codeless_event_mappings edge from the following paths: /{application_id}/codeless_event_mappings When posting to this edge, an Application will be created.
+POST	 /{application_id}/leaderboards_reset 	Cosistent Resource Archetype	You can make a POST request to leaderboards_reset edge from the following paths: /{application_id}/leaderboards_reset When posting to this edge, no Graph object will be created.
+POST	 /{application_id}/page_activities 	Cosistent Resource Archetype	You can make a POST request to page_activities edge from the following paths: /{application_id}/page_activities When posting to this edge, an Application will be created.
+POST	 /{application_id}/payment_currencies 	Cosistent Resource Archetype	You can make a POST request to payment_currencies edge from the following paths: /{application_id}/payment_currencies When posting to this edge, no Graph object will be created.
+GET	 /{application-id}/products 	Cosistent Resource Archetype	Get information on products associated with this app
+POST	 /{application_id}/user_properties 	Cosistent Resource Archetype	You can make a POST request to user_properties edge from the following paths: /{application_id}/user_properties When posting to this edge, no Graph object will be created.
+GET	 /{canvas-id} 	Cosistent Resource Archetype	A canvas document
+POST	 /{page_id}/canvases 	Cosistent Resource Archetype	You can make a POST request to canvases edge from the following paths: /{page_id}/canvases When posting to this edge, a Canvas will be created.
+POST	 /{object-id}/private_replies 	Cosistent Resource Archetype	Private replies to posts or comments are allowed within 7 days of the creation date of the user post or comment.
+GET	 /{conversation-id}/messages 	Cosistent Resource Archetype	The messages in a conversation between a person and a page.
+GET	 /{destination-id}/augmented_realities_metadata 	Cosistent Resource Archetype	Edge to mediator between the dynamic item and AR that holds metadata about the AR
+GET	 /{destination-id}/videos_metadata 	Cosistent Resource Archetype	Edge to mediator between the dynamic item and video that holds metadata about the video
+GET	 /{group-id}/admins 	Cosistent Resource Archetype	An Admin of the Group can get a list of other Group Admins.
+GET	 /{group-id}/albums 	Cosistent Resource Archetype	Returns an array of Albums on the Group.
+GET	 /{group-id}/docs 	Cosistent Resource Archetype	Returns a list of Group Docs.
+GET	 /{group-id}/events 	Cosistent Resource Archetype	Returns a list of Facebook Events.
+GET	 /{group-id}/feed 	Cosistent Resource Archetype	Returns an array of Posts on the Group.
+POST	 /{event_id}/live_videos 	Cosistent Resource Archetype	You can make a POST request to live_videos edge from the following paths: /{event_id}/live_videos When posting to this edge, a LiveVideo will be created.
+GET	 /{user-id}/outbox 	Cosistent Resource Archetype	Items in a person's Facebook Messages outbox.
+GET	 /{user-id}/scores 	Cosistent Resource Archetype	The scores this person has received from Facebook Games that they've played. Related Guides Scores API for Games.
+GET	 /{app-id}/achievements 	Cosistent Resource Archetype	The list of Games achievement types that have been registered by this app.
+GET	 /{app-id}/groups 	Cosistent Resource Archetype	Groups that belong to this app.
+GET	 /{object-id}/insights/{metric-name} 	Cosistent Resource Archetype	Facebook Insights is a product available to all Pages and Apps on Facebook, and any domains claimed by a site developer using the Insights dashboard. This object represents a single Insights metric that is tied to another particular Graph API object (Page, Post, etc.). This object is returned by the following edges: /{page-id}/insights /{domain-id}/insights /{post-id}/insights (Page posts only)* Insights are only generated for a Facebook Page that has more than 30 people that like it. App Insights are now returned by a separate /app/app_insights edge and will no longer work with this edge in v2.1. *Note: The Graph API object {post-id} needs to be specified in the same format returned by the API call to fetch a list of page posts - do not attempt to split or combine other IDs to form a post ID.
+GET	 /{app-id}/picture 	Cosistent Resource Archetype	An app's profile picture.
+GET	 /{app-id}/roles 	Cosistent Resource Archetype	The developer roles defined for a Facebook app.
+GET	 /{app-id}/scores 	Cosistent Resource Archetype	Scores from this Facebook game for a user and their friends.
+GET	 /{app-id}/staticresources 	Cosistent Resource Archetype	Usage statistics for any static resources used by a Facebook Canvas app.
+GET	 /{app-id}/subscriptions 	Cosistent Resource Archetype	The Webhooks update objects and fields that this app has subscribed to. Related Guides Receiving API Updates in Real Time with Webhooks.
+GET	 /{app-id}/translations 	Cosistent Resource Archetype	The strings from this app that were translated using our translations tools.
+GET	 /app-link-host 	Cosistent Resource Archetype	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links. Please see our main App Links documentation to learn more.
+GET	 /{conversation-id}/messages 	Cosistent Resource Archetype	The messages in a conversation between a person and a page.
+GET	 /debug_token 	Cosistent Resource Archetype	This endpoint returns metadata about a given access token. This includes data such as the user for which the token was issued, whether the token is still valid, when it expires, and what permissions the app has for the given user. This may be used to programatically debug issues with large sets of access tokens.
+GET	 /{event-id}/feed 	Cosistent Resource Archetype	The feed of posts including status updates and links published to this Event's wall.
+GET	 /{group-id}/admins 	Cosistent Resource Archetype	The admins of a group. This edge is only available to app and game groups.
+GET	 /{group-id}/albums 	Cosistent Resource Archetype	The photo albums created for a group.
+GET	 /{group-id}/events 	Cosistent Resource Archetype	All events that belong to a group.
+GET	 /{group-id}/feed 	Cosistent Resource Archetype	The feed of posts including status updates and links published to this group.
+GET	 /{group-id}/files 	Cosistent Resource Archetype	The files uploaded to this group.
+GET	 /{group-id}/members 	Cosistent Resource Archetype	The members of a group.
+GET	 /{object-id}/insights/{metric-name} 	Cosistent Resource Archetype	Facebook Insights is a product available to all Pages and Apps on Facebook, and any domains claimed by a site developer using the Insights dashboard. This object represents a single Insights metric that is tied to another particular Graph API object (Page, Post, etc.). This object is returned by the following edges: /{page-id}/insights /{domain-id}/insights /{post-id}/insights (Page posts only)* Insights are only generated for a Facebook Page that has more than 30 people that like it. App Insights are now returned by a separate /app/app_insights edge and will no longer work with this edge in v2.1. *Note: The Graph API object {post-id} needs to be specified in the same format returned by the API call to fetch a list of page posts - do not attempt to split or combine other IDs to form a post ID.
+GET	 /{object-id}/likes 	Cosistent Resource Archetype	This reference describes the /likes edge that is common to multiple Graph API nodes. The structure and operations are the same for each node.
+GET	 /{milestone-id}/photos 	Cosistent Resource Archetype	The photos attached to a milestone on a Facebook Page. Related Guides Adding Milestones to Pages using the Graph API.
+GET	 /{object-id}/comments 	Cosistent Resource Archetype	This reference describes the /comments edge that is common to multiple Graph API nodes. The structure and operations are the same for each node. Note that it is possible for comment objects to have a /comments edge, which is called 'comment replies'. The structure is the same for these, but attention should be paid to the modifiers for these edges.
+GET	 /{page-id}/conversations 	Cosistent Resource Archetype	The Facebook Messages conversations that this Page is involved in.
+GET	 /{page-id}/feed 	Cosistent Resource Archetype	The feed of posts (including status updates) and links published by this page, or by others on this page. There are other edges which provide more specific sets of posts: /{page-id}/posts shows only the posts that were published by this page. /{page-id}/tagged shows the posts to this page. It will also show all public posts in which the page has been tagged. /{page-id}/promotable_posts shows only the posts that can be boosted (includes unpublished and scheduled posts). All of these derivative edges share the exact same reading structure, however /feed should be used for all publishing purposes. They all have an upper boundary for the limit parameter of 100 posts. Specifying any higher limit will throw an error. Related Guides Publishing using the Graph API.
+GET	 /{page-id}/locations 	Cosistent Resource Archetype	List of Pages that represent different locations of a parent business Page. For example pages for each restaurant in a chain of restaurants.
+GET	 /{page-id}/notifications 	Cosistent Resource Archetype	A Page's unread Facebook notifications.
+GET	 /{payment-id}/dispute 	Cosistent Resource Archetype	Used to settle any payment disputes.
+GET	 /{payment-id}/refunds 	Cosistent Resource Archetype	Used to issue any payment refunds.
+GET	 /{object-id}/sharedposts 	Cosistent Resource Archetype	The /sharedposts edge that is common to multiple Graph API nodes. The structure and operations are the same for each node. This edge represents any posts where the original object was shared on Facebook.
+GET	 /{user-id}/feed 	Cosistent Resource Archetype	The feed of posts (including status updates) and links published by this person, or by others on this person's profile. There are other edges which provide filtered versions of this edge: /{user-id}/posts shows only the posts that were published by this person. /{user-id}/tagged shows only the posts that this person was tagged in. All of these derivative edges share the exact same reading structure, however /feed should be used for all publishing purposes. Related Guides Publishing using the Graph API.
+GET	 /{user-id}/friends 	Cosistent Resource Archetype	A person's friends.

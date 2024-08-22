@@ -1,0 +1,57 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 52
+GET	 /account/ 	Structed Endpoint	Get a user's authentication status. To generate a user token from the Droplit portal, navigate to the Security tab, then select Users. Select the desired user, then, under Actions, select Generate token. That token is the user token to be included in the request.
+POST	 /account/logoff 	Structed Endpoint	Log a user out of the Droplit system.
+PUT	 /account/ 	Structed Endpoint	Update a user's account.
+GET	 /ecosystems/:id/assets 	Structed Endpoint	Get Assets
+GET	 /ecosystems/:id/assets/:name 	Structed Endpoint	Get an Asset. Get a specific asset accessible by an ecosystem.
+PUT	 /ecosystems/:id/assets/:name 	Structed Endpoint	Create/Update Asset. Create a new asset, or update an existing one.
+DELETE	 /ecosystems/:id/assets/:name 	Structed Endpoint	Delete Asset. Remove an existing asset.
+POST	 /auth/shortcode/create 	Structed Endpoint	Create Shortcode. Generate a shortcode that will be consumed for authentication.
+POST	 /auth/shortcode/consume 	Structed Endpoint	Consume Shortcode. Read and validate a provided shortcode.
+GET	 /clients/ 	Structed Endpoint	List clients in an ecosystem.
+POST	 /clients/ 	Structed Endpoint	Create a client. Create a client. An account token or server token may be used to run this endpoint.
+GET	 /clients/:id 	Structed Endpoint	Create a client. Create a client. An account token or server token may be used to run this endpoint.
+PUT	 /clients/:id 	Structed Endpoint	Update a client. Update a client. An account token or server token may be used to run this endpoint.
+DELETE	 /clients/:id 	Structed Endpoint	Delete a client. Delete a client. An account token or server token may be used to run this endpoint.
+GET	 /clients/:id/tokens 	Structed Endpoint	List client tokens. List client tokens. An account token or server token may be used to run this endpoint.
+POST	 /clients/:id/tokens 	Structed Endpoint	Create a client token. Create a client token. An account token or server token may be used to run this endpoint.
+GET	 /clients/:id/tokens/:tokenId 	Structed Endpoint	Get a client token. Get a client token. An account token or server token may be used to run this endpoint.
+PUT	 /clients/:id/tokens/:tokenId 	Structed Endpoint	Update a client token. Update a client token. An account token or server token may be used to run this endpoint.
+DELETE	 /clients/:id/tokens/:tokenId 	Structed Endpoint	Delete a client token. Delete a client token. An account token or server token may be used to run this endpoint.
+POST	 /clients/:id/tokens/:tokenId/regenerate 	Structed Endpoint	Regenerate a client token. Regenerate a client token. An account token or server token may be used to run this endpoint.
+GET	 /conduits/ 	Structed Endpoint	List conduits. Get a list of all the conduits installed within an ecosystem.
+GET	 /conduits/:id 	Structed Endpoint	Get a conduit. Get a specific conduit.
+PUT	 /conduits/:id 	Structed Endpoint	Update a conduit. Update a conduit's parameters.
+DELETE	 /conduits/:id 	Structed Endpoint	Delete a conduit. Delete a specific conduit.
+POST	 /conduits/:id/conduit-activations 	Structed Endpoint	Activate a conduit. Authenticate through a third party to activate a conduit.
+GET	 /conduits/:id/conduit-activations 	Structed Endpoint	List a conduit's activations. Get a list of all of a conduit's activations.
+GET	 /conduits/:id/conduit-activations/:activationId 	Structed Endpoint	Get a conduit's activation. Get a specific conduit activation.
+DELETE	 /conduits/:id/conduit-activations/:activationId 	Structed Endpoint	Remove a conduit's activation. Deactivate a specific instance of a conduit's activation. Upon deletion, a temporary delete session will be created for the newly removed conduit activation. This delete session may be used to undelete the removed activation via the Deleted API.
+POST	 /conduits/:id/conduit-activations/:activationId/reactivate 	Structed Endpoint	Reactivate a conduit. Reactivate a particular conduit activation.
+GET	 /conduits/:id/conduit-activations/:activationId/local-devices 	Structed Endpoint	List local devices. Get all of the local devices operating through a conduit activation.
+GET	 /conduits/:id/conduit-activations/:activationId/local-devices/:localId 	Structed Endpoint	Get a local device. Get the data of a specific local device operating through a conduit activation.
+POST	 /conduits/:id/tokens 	Structed Endpoint	Create a token. Creat a conduit token.
+GET	 /conduits/:id/tokens 	Structed Endpoint	List tokens. Get a conduit's tokens.
+GET	 /conduits/:id/tokens/:tokenId 	Structed Endpoint	Get a token. Get a specific token from a conduit.
+DELETE	 /conduits/:id/tokens/:tokenId 	Structed Endpoint	Delete a token. Delete a conduit's token. Upon deletion, a temporary delete session will be created for the newly removed token. This delete session may be used to undelete the removed token via the Deleted API.
+GET	 /deleted 	Structed Endpoint	List All. List all of the delete sessions available to the holder of the passed authorization token.
+GET	 /deleted/:sessionId. 	Structed Endpoint	Get Info for Session. Get information regarding a specific delete session.
+DELETE	 /deleted/:sessionId 	Structed Endpoint	Permanently Delete Records. Permanently deletes the record by deleting the delete session. When a record is deleted, a delete session is created that enables that record to be restored. By deleting that delete session, recovery of the record becomes impossible. An account token or server token may be used to run this endpoint.
+GET	 /deleted/:sessionId/records 	Structed Endpoint	Get All Deleted Records. Gets all the resources part of a specific delete session.
+POST	 /deleted/:sessionId/undelete 	Structed Endpoint	Undelete a Record. Place the deleted resource, along with all of its records, back into its previous parent container.
+GET	 /devices/ 	Structed Endpoint	List devices. Get all the devices in an environment. An account token, server token, or user token may be used to run this endpoint.
+POST	 /devices/ 	Structed Endpoint	Create a device. An account token, server token, or user token may be used to run this endpoint.
+GET	 /devices/:id 	Structed Endpoint	Get a device. List the information of a particular device. An account token, server token, or user token may be used to run this endpoint.
+PUT	 /devices/:id 	Structed Endpoint	Update a device. Update a device. An account token, server token, or user token may be used to run this endpoint.
+DELETE	 /devices/:id 	Structed Endpoint	Delete a device. Delete a device. An account token, server token, or user token may be used to run this endpoint.
+GET	 /devices/:id/history 	Structed Endpoint	View the action history of a device. An account token, server token, or user token may be used to run this endpoint.
+GET	 /devices/:id/services 	Structed Endpoint	List the service properties of a device. List the service properties of a device. This endpoint lists the defined service properties of a device. Defined properties are those that have been assigned a value. If a device implements a service class, properties of that service class which are not set will not be returned. To list all properties of a device, including those that are not defined, get the properties of each service class implemented by the device. An account token, server token, or user token may be used to run this endpoint.
+GET	 /devices/:id/services/:selector 	Structed Endpoint	Get a device service property. Get a device service property. This endpoint retrieves the specified service selector property from all devices in the environment on which the property is defined. All properties of a specific service class can be retrieved, by using the name of the service class as the path selector, or a specific property can be retrieved, by using the name of the service class followed by the property name. When specific property names are used, only one property can be retrieved at a time. For example, use ï¿½LightColorï¿½ to retrieve all properties of the LightColor service class, among all devices that implement that class. Use ï¿½LightColor.hueï¿½ to retrieve all values of LightColor.hue among the devices which implement it. Each property retrieved is contained in its own JSON object within the response array. If desired, the ï¿½refreshï¿½ parameter can be used to make sure that service selectors are specified properly. If this parameter is specified, the endpoint will explicitly reject service selectors that do not exist. By default, the endpoint ignores malformed service selectors, and in those cases returns an empty array of property information. An account token, server token, or user token may be used to run this endpoint.
+PUT	 /devices/:id/services/:selector 	Structed Endpoint	Update Service Property. Call a device service method. An account token, server token, or user token may be used to run this endpoint. If there are any webhooks in the ecosystem listening for Set service notifications, their response, an example of which may be seen on the Webhooks v2 page, will include both the user's account type and ID.
+PUT	 /devices/:id/services 	Structed Endpoint	Update Multiple Service Properties. Alter the service properties of a device. An account token, server token, or user token may be used to run this endpoint. If there are any webhooks in the ecosystem listening for Set service notifications, their response, an example of which may be seen on the Webhooks v2 page, will include both the user's account type and ID.
+DELETE	 /devices/:id/services/:selector 	Structed Endpoint	Delete a device service property. Delete a device service property. This endpoint can delete an individual service property, or all the properties of a particular service. To delete a particular property, specify the selector as the fully qualified name of the property, as ï¿½SERVICE-NAME.PROPERTY.ï¿½ To delete all the properties associated with a service, specify the service name without attaching a property name. An account token, server token, or user token may be used to run this endpoint.
+POST	 /devices/:id/services/:selector 	Structed Endpoint	Call Service Method. Call a device service method. An account token, server token, or user token may be used to run this endpoint.

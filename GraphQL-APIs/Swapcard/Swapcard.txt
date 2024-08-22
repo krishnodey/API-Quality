@@ -28,6 +28,3 @@ POST >> /updateRole >> Update a role >>
 POST >> updateTicketType>> Update an existing ticket type.>> 
 POST >> updateUserTerm>> Update an existing user term.>> 
 POST >> /upsertEventNotification>> Upsert a notification for an event >> 
-
-
-

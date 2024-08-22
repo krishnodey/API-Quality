@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 2
+DELETE	 /deployment/resources/virtual data center./<virtual data center.UID> 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
+GET	 /deployment/resources/groups/group<UUID>?showNested=true 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Retrieving nested and parent groups
+
+***Patterns*** 
+Count: 32
+POST	 /deployment/resources/instances 	[Regular Endpoints]	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
+POST	 /deployment/resources/vm_configurations 	[Regular Endpoints]	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/vdcs/{uuid}/vm_configurations 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/volume_configurations 	[Regular Endpoints]	Create a new volume configuration.
+POST	 /deployment/resources/vdcs/{uuid}/volume_configurations 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a new volume configuration.
+POST	 /deployment/resources/subnets 	[Regular Endpoints]	Create a new subnet.
+DELETE	 /deployment/resources/subnets/<subnetUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a subnet.
+POST	 /deployment/resources/addresses 	[Regular Endpoints]	Create a new address.
+POST	 /deployment/resources/subnet/<subnetUUID>/addresses 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/subnet/<subnetUUID>/addresses 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/addresses/<addressUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
+DELETE	 /deployment/resources/addresses/<addressUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
+POST	 /deployment/resources/credentials 	[Regular Endpoints]	Creating a new credential
+DELETE	 /deployment/resources/credentials/<credentialUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deleting a credential
+DELETE	 /deployment/resources/images/<imageID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deleting images from the system
+POST	 /deployment/resources/groups 	[Regular Endpoints]	Creating a group
+PUT	 /deployment/resources/groups/<groupUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Updating a group
+GET	 /deployment/resources/groups?isMaster=true 	[Regular Endpoints]	Retrieving master groups
+PUT	 /deployment/resources/instances/<instanceUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Stopping, starting, or and restarting virtual machines
+GET	 /deployment/resources/instances 	[Regular Endpoints]	Viewing currently deployed virtual machines
+DELETE	 /deployment/resources/instances/<instanceUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deleting currently deployed virtual machines
+GET	 /deployment/resources/addresses 	[Regular Endpoints]	Getting a new address
+POST	 /deployment/resources/volumes 	[Regular Endpoints]	Creating a volume
+DELETE	 /deployment/resources/volumes/<volumeUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deleting a volume
+POST	 /deployment/resources/volumes 	[Regular Endpoints]	Attaching or detaching volumes
+PUT	 /deployment/resources/instances/<instanceUUID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Storing a previously deployed virtual machine
+GET	 /deployment/resources/instance_snapshots 	[Regular Endpoints]	Retrieving a list of snapshots
+GET	 /deployment/resources/acls 	[Regular Endpoints]	Get all acls
+POST	 /audit/resources/audit_config 	[Regular Endpoints]	Create an audit configuration
+POST	 /admin/resources/backup 	[Regular Endpoints]	Initiate a backup operation
+GET	 /admin/resources/backup_subcomponents/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get information on a specified volume group
+GET	 /admin/resources/chassis_management_modules 	[Regular Endpoints]	Get all chassis management modules

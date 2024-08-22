@@ -1,0 +1,75 @@
+***Anti-Pattern*** 
+Count: 2
+GET	 /auditactivity/v{version}/auditrecords?auditRequest.startDate={auditRequest.startDate} 	Complex Words Present in Endpoint	Gets the audit records between a given date range If the number of records is more than a page full, a continuation token will be returned and the continuation token can be used to get the next set of audit records. This service only supports AuditRecord retrieval for the last 90 days and a maximum window of 30 days.
+GET	 /nonMfaCompliantPartnerPrincipals 	Complex Words Present in Endpoint	Gets the the first 10,000 most recent records of calling partner's users that are not MFA compliant (i.e.., that have signed into partner center without MFA or have made requests to the Partner Center API using a non-MFA bearer token) in the last 7 days.
+
+***Patterns*** 
+Count: 68
+GET	 /auditactivity/v{version}/auditrecords/{id} 	Structed Endpoint	Gets the audit record for the provided Id.
+POST	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices 	Structed Endpoint	Create DeviceBatches
+POST	 /customers/{customer_id}/policies 	Structed Endpoint	Create Policies
+DELETE	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	Structed Endpoint	Delete DeviceBatches
+GET	 /customers/{customer_id}/batchJobStatus/{batchUploadTracking_id} 	Structed Endpoint	Get BatchJobStatus
+GET	 /customers/{customer_id}/deviceBatches 	Structed Endpoint	Get DeviceBatches
+GET	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices 	Structed Endpoint	Get Devices
+PUT	 /customers/{customer_id}/deviceBatches/{deviceBatch_id}/devices/{device_id} 	Structed Endpoint	Update DeviceBatches
+PATCH	 /customers/{customer_id}/DevicePolicyUpdates 	Structed Endpoint	Update Device Policy
+POST	 /customers/{customer_id}/deviceBatches 	Structed Endpoint	Uploaded Customer Devices
+POST	 /roles/{role_id}/usermembers 	Structed Endpoint	Adds a new user member to the specified role.
+DELETE	 /roles/{role_id}/usermembers/{member_id} 	Structed Endpoint	Removes the specified user member from the specified role.
+GET	 /roles 	Structed Endpoint	Gets all the roles available.
+GET	 /profiles/billing 	Structed Endpoint	Gets the billing profile.
+GET	 /profiles/legalbusiness 	Structed Endpoint	Gets the legal business profile.
+GET	 /profiles/mpn 	Structed Endpoint	Gets the MPN profile.
+GET	 /profiles/organization 	Structed Endpoint	Gets the organization profile.
+GET	 /profiles/partnernetworkprofile 	Structed Endpoint	Gets the Microsoft partner network profile.
+GET	 /profiles/support 	Structed Endpoint	Gets the partner support profile.
+GET	 /roles/{role_id}/usermembers 	Structed Endpoint	Gets a segment of a role's user members capped to a specific size.
+PUT	 /profiles/billing 	Structed Endpoint	Updates the billing profile.
+PUT	 /profiles/legalbusiness 	Structed Endpoint	Updates the legal business profile.
+PUT	 /profiles/organization 	Structed Endpoint	Updates the organization profile.
+PUT	 /profiles/support 	Structed Endpoint	Updates the partner support profile.
+GET	 /invoices 	Structed Endpoint	Gets the invoices for the partner.
+GET	 /customers/{customer_id}/servicecosts/{billing_period}/lineitems 	Structed Endpoint	Retrieves the service costs line items incurred by the customer's subscriptions.
+GET	 /customers/{customer_id}/servicecosts/{billing_period} 	Structed Endpoint	Retrieves the service costs incurred by the customer's subscriptions.
+GET	 /invoices/estimates/links 	Structed Endpoint	Gets the estimate links for unbilled recon for first, third party non usaged based and third party daily rated usage.
+GET	 /invoices/{invoice_id}/lineitems 	Structed Endpoint	Gets line items for GTM scenarios. First and Third party unbilled daily rated usage for current and previous months. First and Third party billed daily rated usage for an invoceid. First and Third party unbilled recon for current and previous months.
+GET	 /invoices/summary 	Structed Endpoint	Retrieves the reseller's current account balance.
+GET	 /invoices/{invoice_id}/documents/statement 	Structed Endpoint	Gets the invoice statement as a PDF file.
+GET	 /invoices/summaries 	Structed Endpoint	Retrieves the reseller's current account balance per currency.
+GET	 /applicationmfaadoptionstatus 	Structed Endpoint	Gets the application MFA adoption status details for a partner.
+GET	 /partnerRequests 	Structed Endpoint	Gets the first 10,000 most recent partner center requests made by the calling partner's users in the last 7 days.
+HEAD	 /domains/{domain} 	Structed Endpoint	Determine if the domain is available.
+POST	 /validations/address 	Structed Endpoint	Determine if the address is valid.
+POST	 /customers/{customer_id}/transfers/{transfer_id}/accept 	Structed Endpoint	Accept a transfer of subscriptions for a customer
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/activate 	Structed Endpoint	Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
+POST	 /extensions/product/checkinventory 	Structed Endpoint	Retrieves inventory validation results for the provided country.
+POST	 /customers/{customer_id}/carts/{cart_id}/checkout 	Structed Endpoint	Checks out an existing cart.
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/conversions 	Structed Endpoint	Converts a trial subscription to the target conversion.
+POST	 /customers/{customer_id}/transfers 	Structed Endpoint	Creates a new transfer entity.
+POST	 /customers/{customer_id}/subscriptions/{subscription_id}/transitions 	Structed Endpoint	Post the transition request for a subscription.
+GET	 /products/{productId}/skus/{skuId}/availabilities/{availabilityId} 	Structed Endpoint	Retrieves an availability for the requested context.
+GET	 /customers/{customer_id}/orders/{order_id}/lineitems/{line_item_number}/activationlinks 	Structed Endpoint	Gets the activation links from the specific line item of the order.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/conversions 	Structed Endpoint	Gets the target conversions for a trial subscription.
+GET	 /customers/{customer_id}/orders/{order_id}/provisioningstatus 	Structed Endpoint	Gets a collection of order line item provisioning status for an order.
+POST	 /customers/{customer_id}/verifieddomain 	Structed Endpoint	Add verified domain.
+GET	 /validations/checkdomainavailability/{domain_prefix} 	Structed Endpoint	Determine if the domain is available.
+POST	 /customers/{customer_id}/qualifications 	Structed Endpoint	Creates the customer's qualifications.
+POST	 /customers/{customer_id}/directoryroles/{role_id}/usermembers 	Structed Endpoint	Create Directory Role
+POST	 /SelfServePolicy 	Structed Endpoint	Create self serve policy
+GET	 /customers/{customer_id}/agreements 	Structed Endpoint	Gets the agreement confirmations provided by a partner on behalf of a customer.
+GET	 /customers/{customer_id}/profiles/billing 	Structed Endpoint	Retrieves a customer's billing profile.
+GET	 /customers/{customer_id}/profiles/company 	Structed Endpoint	Retrieves a customer's company profile.
+GET	 /customers/{customer_id}/serviceincidents/office 	Structed Endpoint	Retrieves all office service health incidents for a partner by their active directory tenant identifier.
+GET	 /customers/{customer_id}/qualifications 	Structed Endpoint	Retrieve the customer's qualifications.
+GET	 /customers/{customer_id}/users/{user_id}/licenses 	Structed Endpoint	Get Licenses
+GET	 /relationships 	Structed Endpoint	Retrieves a segment of a partner's resellers. Optional filtering of partner relationships can also be applied. Resellers can only be filtered by a string which their name. Full search is not supported currently. Resellers can be filtered using a {Microsoft.Partner.Core.Query.Filters.FieldFilterOperation.StartsWith} filter operation and specifying: Name (Value added reseller name) as the filter field.
+PUT	 /customers/{customer_id}/profiles/billing 	Structed Endpoint	Updates a customer's billing profile.
+POST	 /productUpgrades 	Structed Endpoint	Creates a product upgrade entity to upgrade the customer from legacy azure subscriptions to azure plans.
+GET	 /customers/{customer_id}/usagebudget 	Structed Endpoint	Retrieves the budget set for a given customer.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements 	Structed Endpoint	Retrieves the list of entitlements of a subscription identifier for the customer of a partner by their active directory tenant identifier.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/usagerecords/resources 	Structed Endpoint	Retrieves the monthly Azure resource usage records of a subscription.
+POST	 /productUpgrades/eligibility 	Structed Endpoint	Retrieves the eligibility for product upgrades.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/meterusagerecords 	Structed Endpoint	Get meter usage record resources.
+GET	 /customers/{customer_id}/subscriptions/usagerecords 	Structed Endpoint	Retrieves usage records for all the subscriptions of a given customer for the current billing period.
+GET	 /customers/{customer_id}/subscriptions/{subscription_id}/usagesummary 	Structed Endpoint	Retrieves the usage summary for all resources in a given customer's subscription for the current billing period.

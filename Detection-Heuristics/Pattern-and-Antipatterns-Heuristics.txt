@@ -152,9 +152,9 @@ PARAMETERS-TUNNELING(Request-Endpoint, API-Documentation):
 
 13. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
-IMPROPER_NOUN(Request-Endpoint)
+INCONSISTENT_ARCHETYPE(Request-Endpoint)
     Nodes <- Split(Request-Endpoint)
-    Document, Collections <- CatagorizeNodes(Nodes) #based on the positions of the nodes.# 
+    Document, Collections <- CatagorizeNodes(Nodes)
     if Document is singular:
         return 'Consistent Resource Archetype' pattern
     elseif Collections or Stores are plural:

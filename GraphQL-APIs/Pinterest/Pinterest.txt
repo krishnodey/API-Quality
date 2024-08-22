@@ -18,6 +18,3 @@ GET >> /v5/boards/{board_id}/sections/{section_id}/pins >> Get a list of the Pin
 GET >> /v5/media >> List media uploads filtered by given parameters.
 POST >> /v5/media >> Register your intent to upload media
 GET >> /v5/media/{media_id} >> Get details for a registered media upload, including its current status.>> media_id required string Media identifier
- 
-
-

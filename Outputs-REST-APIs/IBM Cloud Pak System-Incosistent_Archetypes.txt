@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 13
+POST	 /deployment/resources/vdcs/{uuid}/vm_configurations 	Plural Nouns Found in Consecutive Nodes	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/vdcs/{uuid}/volume_configurations 	Plural Nouns Found in Consecutive Nodes	Create a new volume configuration.
+DELETE	 /deployment/resources/subnets/<subnetUUID> 	Plural Nouns Found in Consecutive Nodes	Delete a subnet.
+PUT	 /deployment/resources/addresses/<addressUUID> 	Plural Nouns Found in Consecutive Nodes	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
+DELETE	 /deployment/resources/addresses/<addressUUID> 	Plural Nouns Found in Consecutive Nodes	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
+DELETE	 /deployment/resources/credentials/<credentialUUID> 	Plural Nouns Found in Consecutive Nodes	Deleting a credential
+DELETE	 /deployment/resources/images/<imageID> 	Plural Nouns Found in Consecutive Nodes	Deleting images from the system
+PUT	 /deployment/resources/groups/<groupUUID> 	Plural Nouns Found in Consecutive Nodes	Updating a group
+GET	 /deployment/resources/groups/group<UUID>?showNested=true 	Plural Nouns Found in Consecutive Nodes	Retrieving nested and parent groups
+PUT	 /deployment/resources/instances/<instanceUUID> 	Plural Nouns Found in Consecutive Nodes	Stopping, starting, or and restarting virtual machines
+DELETE	 /deployment/resources/instances/<instanceUUID> 	Plural Nouns Found in Consecutive Nodes	Deleting currently deployed virtual machines
+DELETE	 /deployment/resources/volumes/<volumeUUID> 	Plural Nouns Found in Consecutive Nodes	Deleting a volume
+PUT	 /deployment/resources/instances/<instanceUUID> 	Plural Nouns Found in Consecutive Nodes	Storing a previously deployed virtual machine
+
+***Patterns*** 
+Count: 21
+POST	 /deployment/resources/instances 	Cosistent Resource Archetype	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
+DELETE	 /deployment/resources/virtual data center./<virtual data center.UID> 	Cosistent Resource Archetype	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
+POST	 /deployment/resources/vm_configurations 	Cosistent Resource Archetype	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/volume_configurations 	Cosistent Resource Archetype	Create a new volume configuration.
+POST	 /deployment/resources/subnets 	Cosistent Resource Archetype	Create a new subnet.
+POST	 /deployment/resources/addresses 	Cosistent Resource Archetype	Create a new address.
+POST	 /deployment/resources/subnet/<subnetUUID>/addresses 	Cosistent Resource Archetype	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/subnet/<subnetUUID>/addresses 	Cosistent Resource Archetype	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+POST	 /deployment/resources/credentials 	Cosistent Resource Archetype	Creating a new credential
+POST	 /deployment/resources/groups 	Cosistent Resource Archetype	Creating a group
+GET	 /deployment/resources/groups?isMaster=true 	Cosistent Resource Archetype	Retrieving master groups
+GET	 /deployment/resources/instances 	Cosistent Resource Archetype	Viewing currently deployed virtual machines
+GET	 /deployment/resources/addresses 	Cosistent Resource Archetype	Getting a new address
+POST	 /deployment/resources/volumes 	Cosistent Resource Archetype	Creating a volume
+POST	 /deployment/resources/volumes 	Cosistent Resource Archetype	Attaching or detaching volumes
+GET	 /deployment/resources/instance_snapshots 	Cosistent Resource Archetype	Retrieving a list of snapshots
+GET	 /deployment/resources/acls 	Cosistent Resource Archetype	Get all acls
+POST	 /audit/resources/audit_config 	Cosistent Resource Archetype	Create an audit configuration
+POST	 /admin/resources/backup 	Cosistent Resource Archetype	Initiate a backup operation
+GET	 /admin/resources/backup_subcomponents/{id} 	Cosistent Resource Archetype	Get information on a specified volume group
+GET	 /admin/resources/chassis_management_modules 	Cosistent Resource Archetype	Get all chassis management modules

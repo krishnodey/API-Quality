@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 30
+POST	 /authentication/local/new 	[Regular Endpoints]	Create a user
+POST	 /authentication/local 	[Regular Endpoints]	Login Request
+POST	 /authentication/local/resent-verification 	[Regular Endpoints]	Resend Verification
+POST	 /authentication/forgot-password 	[Regular Endpoints]	Forgot Password
+POST	 /authentication/reset-password 	[Regular Endpoints]	Reset Password
+POST	 /authentication/local/change-password 	[Regular Endpoints]	Change Password
+POST	 /authentication/local/change-email 	[Regular Endpoints]	Change Email
+GET	 /authentication/verify-email/:verificationToken 	[Identifier is Enclosed in {} or <> or Starts with :]	Verify Email
+GET	 /authentication/verify-change-email/:verificationToken 	[Identifier is Enclosed in {} or <> or Starts with :]	Verify Change Email
+POST	 /authentication/logout 	[Regular Endpoints]	Logout Request
+GET	 /authentication/apple 	[Regular Endpoints]	Authenticate with Apple
+GET	 /authentication/bitbucket 	[Regular Endpoints]	Authenticate with Bitbucket
+GET	 /authentication/facebook 	[Regular Endpoints]	Authenticate with Facebook
+GET	 /authentication/figma 	[Regular Endpoints]	Authenticate with Figma
+GET	 /authentication/init/github 	[Regular Endpoints]	Authenticate with GitHub
+GET	 /authentication/init/gitlab 	[Regular Endpoints]	Authenticate with GitLab
+GET	 /authentication/init/google 	[Regular Endpoints]	Authenticate with Google
+GET	 /authentication/linkedin 	[Regular Endpoints]	Authenticate with LinkedIn
+GET	 /authentication/init/microsoft 	[Regular Endpoints]	Authenticate with Microsoft
+GET	 /authentication/init/reddit 	[Regular Endpoints]	Authenticate with Reddit
+GET	 /authentication/init/slack 	[Regular Endpoints]	Authenticate with Slack
+GET	 /authentication/init/twitch 	[Regular Endpoints]	Authenticate with Twitch
+GET	 /authentication/init/twitter 	[Regular Endpoints]	Authenticate with Twitter
+PUT	 /authentication/twoFa/enable 	[Regular Endpoints]	Enable two factor authentication with phone method
+POST	 /authentication/twoFa/enable/verify 	[Regular Endpoints]	Verify two factor authentication code
+POST	 /authentication/twoFa/authorize 	[Regular Endpoints]	Login with two factor authentication
+POST	 /authentication/twoFa/verify 	[Regular Endpoints]	Verify two factor authentication code
+GET	 /authentication/twoFa/generate 	[Regular Endpoints]	Generate backup codes
+POST	 /authentication/twoFa/recover 	[Regular Endpoints]	Recover two factor authentication
+PUT	 /authentication/twoFa/disable 	[Regular Endpoints]	Disable two factor authentication

@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 24
+GET	 /api/user/info 	Parameter Tunneling	Returns information about a logged in user
+PUT	 /api/user/info 	Parameter Tunneling	Updates a logged in users information
+PUT	 /api/user/pass 	Parameter Tunneling	Changes a logged in users password
+GET	 /api/user 	Parameter Tunneling	Gets list of users
+POST	 /api/v/2/devices/{SystemKey}/auth 	Parameter Tunneling	Authenticates a device into the system
+POST	 /api/code/{systemKey}/{serviceName} 	Parameter Tunneling	Calls/executes ClearCode service
+GET	 /codeadmin/failed 	Parameter Tunneling	Lists failed code service runs for all systems that a developer can access
+POST	 /codeadmin/failed/{systemKey} 	Parameter Tunneling	Retry failed code services
+POST	 /api/message/{systemKey}/publish 	Parameter Tunneling	Publishes a message to a topic
+POST	 /admin/systemmanagement 	Parameter Tunneling	Creates a new system in a developers account
+GET	 /admin/systemmanagement 	Parameter Tunneling	Gets a systems info
+PUT	 /admin/systemmanagement 	Parameter Tunneling	Updates a systems info
+DELETE	 /admin/systemmanagement 	Parameter Tunneling	Deletes a system
+POST	 /admin/collectionmanagement 	Parameter Tunneling	Creates a new collection or connection in a system
+PUT	 /admin/collectionmanagement 	Parameter Tunneling	Updates an existing connection in a system
+PUT	 /admin/collectionmanagement 	Parameter Tunneling	Creates a column within an existing collection
+
+***Patterns*** 
+Count: 21
+POST	 /api/user/reg 	Parameter Adherence	Register user
+POST	 /api/user/auth 	Parameter Adherence	Authenticates a user into the system
+POST	 /api/user/anon 	Parameter Adherence	Authenticates anonymous users into the system
+POST	 /api/user/checkauth 	Parameter Adherence	Checks if user is authenticated
+POST	 /api/user/logout 	Parameter Adherence	Logs out a user
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Parameter Adherence	Update a device's state or custom attributes only
+GET	 /api/collection/{systemKey}/{collectionName} 	Parameter Adherence	fetch collection
+PUT	 /api/collection/{systemKey}/{collectionName} 	Parameter Adherence	Item update
+POST	 /api/collection/{systemKey}/{collectionName} 	Parameter Adherence	Item create
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Parameter Adherence	Item delete
+GET	 /api/data/{collectionID} 	Parameter Adherence	fetch collection
+PUT	 /api/data/{collectionID} 	Parameter Adherence	Item update
+POST	 /api/data/{collectionID} 	Parameter Adherence	Item create
+DELETE	 /api/data/{collectionID} 	Parameter Adherence	Item delete
+GET	 /api/data/{collectionid}/columns 	Parameter Adherence	get column key names
+GET	 /codeadmin/v/2/library/{systemKey} 	Parameter Adherence	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Parameter Adherence	Gets the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Parameter Adherence	Updates the libraries for a system
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Parameter Adherence	Creates libraries for a system
+DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Parameter Adherence	Deletes a libraries for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Parameter Adherence	Gets all versions of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Parameter Adherence	Gets a specific version of a library for a system
+GET	 /codeadmin/failed/{systemKey} 	Parameter Adherence	Lists failed code service runs for specified system
+DELETE	 /codeadmin/failed/{systemKey} 	Parameter Adherence	Delete failed code service run from list
+GET	 /api/message/{systemKey} 	Parameter Adherence	Retrieve message history
+DELETE	 /api/message/{systemKey} 	Parameter Adherence	Delete message history
+POST	 /admin/reg 	Parameter Adherence	Registers a new developer account with the CB platform
+POST	 /admin/auth 	Parameter Adherence	Authorizes a CB Developer account
+POST	 /admin/logout 	Parameter Adherence	Logs a CB developer out of their session

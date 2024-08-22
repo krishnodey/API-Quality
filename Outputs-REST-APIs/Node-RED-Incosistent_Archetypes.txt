@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 10
-GET	/auth/login	Parameter Tunneling	Get the active authentication scheme
-POST	/auth/token	Parameter Tunneling	Exchange credentials for access token
-GET	/settings	Parameter Tunneling	Get the runtime settings
-GET	/flows	Parameter Tunneling	Get the active flow configuration
-POST	/flow	Parameter Tunneling	Add a flow to the active configuration
-GET	/nodes	Parameter Tunneling	Get a list of the installed nodes
-PUT	/nodes/:module	Parameter Tunneling	Enable/Disable a node module
+Count: 0
 
 ***Patterns*** 
-Count: 5
-POST	/auth/revoke	Parameter Adherence	Revoke an access token
-POST	/flows	Parameter Adherence	Set the active flow configuration
-GET	/flow/:id	Parameter Adherence	Get an individual flow configuration
-PUT	/flow/:id	Parameter Adherence	Update an individual flow configuration
-DELETE	/flow/:id	Parameter Adherence	Delete an individual flow configuration
-POST	/nodes	Parameter Adherence	Install a new node module
-GET	/nodes/:module	Parameter Adherence	Get a node module’s information
-DELETE	/nodes/:module	Parameter Adherence	Remove a node module
+Count: 15
+GET	 /auth/login 	Cosistent Resource Archetype	Get the active authentication scheme
+POST	 /auth/token 	Cosistent Resource Archetype	Exchange credentials for access token
+POST	 /auth/revoke 	Cosistent Resource Archetype	Revoke an access token
+GET	 /settings 	Cosistent Resource Archetype	Get the runtime settings
+GET	 /flows 	Cosistent Resource Archetype	Get the active flow configuration
+POST	 /flows 	Cosistent Resource Archetype	Set the active flow configuration
+POST	 /flow 	Cosistent Resource Archetype	Add a flow to the active configuration
+GET	 /flow/:id 	Cosistent Resource Archetype	Get an individual flow configuration
+PUT	 /flow/:id 	Cosistent Resource Archetype	Update an individual flow configuration
+DELETE	 /flow/:id 	Cosistent Resource Archetype	Delete an individual flow configuration
+GET	 /nodes 	Cosistent Resource Archetype	Get a list of the installed nodes
+POST	 /nodes 	Cosistent Resource Archetype	Install a new node module
+GET	 /nodes/:module 	Cosistent Resource Archetype	Get a node module’s information
+PUT	 /nodes/:module 	Cosistent Resource Archetype	Enable/Disable a node module
+DELETE	 /nodes/:module 	Cosistent Resource Archetype	Remove a node module

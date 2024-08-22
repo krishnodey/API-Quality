@@ -1,0 +1,31 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 26
+POST	 /application 	Structed Endpoint	Creates a new application and returns the location of the created resource.
+DELETE	 /application/{id} 	Structed Endpoint	Deletes an existing application.
+GET	 /application 	Structed Endpoint	Returns any existing application that match your query.
+GET	 /application/{id} 	Structed Endpoint	Returns the application that matches your query.
+PUT	 /application/{id} 	Structed Endpoint	Updates an existing application and returns a 200 message if the call is successful.
+POST	 /billofmaterial 	Structed Endpoint	Creates a new bill of material and returns the location of the created resource.
+POST	 /billofmaterial/bulk 	Structed Endpoint	Retrieve and modify bill of material records in bulk.
+DELETE	 /billofmaterial/{id} 	Structed Endpoint	Deletes an existing bill of material.
+GET	 /billofmaterial 	Structed Endpoint	Returns any existing bills of material that match your query.
+GET	 /billofmaterial/{id} 	Structed Endpoint	Retrieves the details of a bill of material that matches the ID.
+PATCH	 /billofmaterial/{id} 	Structed Endpoint	Updates an existing bill of material and returns a 200 message if the call is successful.
+PUT	 /billofmaterial/{id} 	Structed Endpoint	Updates an existing bill of material and returns a 200 message if the call is successful.
+POST	 /carriers 	Structed Endpoint	Creates a new carrier and returns the location of the created resource.
+POST	 /carriers/bulk 	Structed Endpoint	Retrieve and modify carrier records in bulk.
+DELETE	 /carriers/{id} 	Structed Endpoint	Deletes an existing carrier.
+GET	 /carriers/{id} 	Structed Endpoint	Retrieves the details of a carrier that matches the ID.
+GET	 /carriers 	Structed Endpoint	Returns any existing carrier records that match your query.
+PATCH	 /carriers/{id} 	Structed Endpoint	Updates an existing carrier and returns a 200 message if the call is successful.
+PUT	 /carriers/{id} 	Structed Endpoint	Updates an existing carrier and returns a 200 message if the call is successful.
+POST	 /customers 	Structed Endpoint	Creates a new customer and returns the location of the created resource.
+POST	 /customers/bulk 	Structed Endpoint	Retrieve and modify customer records in bulk.
+DELETE	 /customers/{id} 	Structed Endpoint	Deletes an existing customer.
+GET	 /customers/{id} 	Structed Endpoint	Retrieves the details of a customer that matches the ID.
+GET	 /customers 	Structed Endpoint	Returns any existing customers that match your query.
+PATCH	 /customers/{id} 	Structed Endpoint	Updates parts of existing customer records and returns a 200 message if the call is successful.
+PUT	 /customers/{id} 	Structed Endpoint	Updates an existing customer and returns a 200 message if the call is successful.

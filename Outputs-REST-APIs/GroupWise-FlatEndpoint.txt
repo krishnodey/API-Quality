@@ -1,0 +1,61 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 56
+GET	 /list/{type} 	Structed Endpoint	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /list/{type}/{base} 	Structed Endpoint	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /application 	Structed Endpoint	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
+GET	 /async?state 	Structed Endpoint	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
+GET	 /async/{id} 	Structed Endpoint	Get a particular asynchronous job status
+DELETE	 /async/{id} 	Structed Endpoint	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
+GET	 /diagnostics/attributes?locale 	Structed Endpoint	Return a map of attribute id to names.
+GET	 /diagnostics/index 	Structed Endpoint	Returns the list of available indices to query
+GET	 /diagnostics/index/{index}?attrs 	Structed Endpoint	Reads objects from the specified index
+GET	 /diagnostics/object/{id} 	Structed Endpoint	Dump an object from the domain database identified by it's DRN and record type.
+GET	 /domains 	Structed Endpoint	Get a list of Domains for this system.
+POST	 /domains 	Structed Endpoint	Create a domain given the data. Note: The "rebuild" resource should be used to create the related database file (wpdomain.db) afterwards.
+DELETE	 /domains/{domain} 	Structed Endpoint	Delete a specific Domain given the domain name
+PUT	 /domains/{domain} 	Structed Endpoint	Update a GroupWise Domain given the Domain data
+GET	 /domains/{domain} 	Structed Endpoint	Get a specific Domain given the name
+GET	 /domains/{domain}/addressbook/fields 	Structed Endpoint	Returns the address book fields available for adding to a view. Note that this excludes admin defined fields which can only be added to a view if they have been properly mapped to a directory attribute.
+GET	 /domains/{domain}/addressbook/labels 	Structed Endpoint	Get the address book labels defined for the domain
+PUT	 /domains/{domain}/addressbook/labels/{field} 	Structed Endpoint	Set the address book label for the given field
+DELETE	 /domains/{domain}/addressbook/labels/{field} 	Structed Endpoint	Delete the address book label for the given field
+GET	 /domains/{domain}/addressbook/view 	Structed Endpoint	Returns the address book view defined for the domain
+PUT	 /domains/{domain}/addressbook/view 	Structed Endpoint	Returns the address book view defined for the domain
+GET	 /domains/{domain}/administrator 	Structed Endpoint	Return the administrator for this domain
+PUT	 /domains/{domain}/administrator 	Structed Endpoint	Set the administrator for this domain
+DELETE	 /domains/{domain}/administrator 	Structed Endpoint	Clear the administrator for this domain
+GET	 /domains/{domain}/clientoptions?attrs 	Structed Endpoint	Get the Client Options under a specific Domain
+PUT	 /domains/{domain}/clientoptions?attrs 	Structed Endpoint	Update the Client Options under a specific Domain
+GET	 /domains/{domain}/customaddresses 	Structed Endpoint	Get all Custom Addresses under a specific Domain
+GET	 /domains/{domain}/customaddresses/test?testAddress 	Structed Endpoint	Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string
+GET	 /domains/{domain}/gatewaysubdirs 	Structed Endpoint	List the gateway sub-directories for the domain.
+GET	 /domains/{domain}/info 	Structed Endpoint	Retrieve statistical information about the objects contained in this domain
+GET	 /domains/{domain}/links?direction 	Structed Endpoint	List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound).
+GET	 /domains/{domain}/links/{link} 	Structed Endpoint	Get the domain link between domainName and linkName
+PUT	 /domains/{domain}/links/{link} 	Structed Endpoint	Update the domain link between domainName and linkName
+POST	 /domains/{domain}/rebuild 	Structed Endpoint	Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service.
+GET	 /domains/{domain}/refaccesscontrols 	Structed Endpoint	Get the Access Control List for the domain
+PUT	 /domains/{domain}/refaccesscontrols 	Structed Endpoint	Update the Access Control List for the domain
+GET	 /domains/attributes 	Structed Endpoint	Get all available Domain Attributes
+GET	 /domains/{domain}/gateways 	Structed Endpoint	Performs a query to find all the Gateways for this GroupWise system.
+POST	 /domains/{domain}/gateways 	Structed Endpoint	Create an Gateway given the Gateway data
+DELETE	 /domains/{domain}/gateways/{gateway} 	Structed Endpoint	Delete a specific Gateway given the name
+PUT	 /domains/{domain}/gateways/{gateway} 	Structed Endpoint	Update a Gateway given the data
+GET	 /domains/{domain}/gateways/{gateway} 	Structed Endpoint	Get a specific Gateway given the name
+GET	 /domains/{domain}/gateways/{gateway}/administrators 	Structed Endpoint	Performs a query to find all the administrators for this gateway
+POST	 /domains/{domain}/gateways/{gateway}/administrators 	Structed Endpoint	Adds a new administrator to this gateway.
+DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Structed Endpoint	Remove an administrator member from this gateway
+PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Structed Endpoint	Remove an administrator member from this gateway
+GET	 /domains/{domain}/gateways/{gateway}/aliases 	Structed Endpoint	Performs a query to find all the aliases for this gateway
+GET	 /domains/{domain}/gateways/{gateway}/classofservice 	Structed Endpoint	List the classes of service for a specific gateway
+POST	 /domains/{domain}/gateways/{gateway}/classofservice 	Structed Endpoint	Create a Gwia Class of Service for the specified gateway
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Structed Endpoint	Get a specific Gateway given the name
+PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Structed Endpoint	Update a specific Class of Service given the name
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Structed Endpoint	Delete a specific Class of Service given the name
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	Structed Endpoint	List the members for a specific class of service
+POST	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	Structed Endpoint	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	Structed Endpoint	Remove a member from this class of service by id
+POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	Structed Endpoint	Recover the Access Control database for the specified gateway. This command will recover the database in place.

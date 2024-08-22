@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 25
+POST	 /deployment/resources/vm_configurations 	Parameter Tunneling	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/volume_configurations 	Parameter Tunneling	Create a new volume configuration.
+POST	 /deployment/resources/subnets 	Parameter Tunneling	Create a new subnet.
+POST	 /deployment/resources/addresses 	Parameter Tunneling	Create a new address.
+DELETE	 /deployment/resources/credentials/<credentialUUID> 	Parameter Tunneling	Deleting a credential
+DELETE	 /deployment/resources/images/<imageID> 	Parameter Tunneling	Deleting images from the system
+PUT	 /deployment/resources/groups/<groupUUID> 	Parameter Tunneling	Updating a group
+GET	 /deployment/resources/groups?isMaster=true 	Parameter Tunneling	Retrieving master groups
+GET	 /deployment/resources/groups/group<UUID>?showNested=true 	Parameter Tunneling	Retrieving nested and parent groups
+PUT	 /deployment/resources/instances/<instanceUUID> 	Parameter Tunneling	Stopping, starting, or and restarting virtual machines
+DELETE	 /deployment/resources/instances/<instanceUUID> 	Parameter Tunneling	Deleting currently deployed virtual machines
+GET	 /deployment/resources/addresses 	Parameter Tunneling	Getting a new address
+DELETE	 /deployment/resources/volumes/<volumeUUID> 	Parameter Tunneling	Deleting a volume
+PUT	 /deployment/resources/instances/<instanceUUID> 	Parameter Tunneling	Storing a previously deployed virtual machine
+GET	 /deployment/resources/instance_snapshots 	Parameter Tunneling	Retrieving a list of snapshots
+GET	 /deployment/resources/acls 	Parameter Tunneling	Get all acls
+POST	 /audit/resources/audit_config 	Parameter Tunneling	Create an audit configuration
+GET	 /admin/resources/chassis_management_modules 	Parameter Tunneling	Get all chassis management modules
+
+***Patterns*** 
+Count: 9
+POST	 /deployment/resources/instances 	Parameter Adherence	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
+DELETE	 /deployment/resources/virtual data center./<virtual data center.UID> 	Parameter Adherence	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
+POST	 /deployment/resources/vdcs/{uuid}/vm_configurations 	Parameter Adherence	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/vdcs/{uuid}/volume_configurations 	Parameter Adherence	Create a new volume configuration.
+DELETE	 /deployment/resources/subnets/<subnetUUID> 	Parameter Adherence	Delete a subnet.
+POST	 /deployment/resources/subnet/<subnetUUID>/addresses 	Parameter Adherence	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/subnet/<subnetUUID>/addresses 	Parameter Adherence	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/addresses/<addressUUID> 	Parameter Adherence	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
+DELETE	 /deployment/resources/addresses/<addressUUID> 	Parameter Adherence	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
+POST	 /deployment/resources/credentials 	Parameter Adherence	Creating a new credential
+POST	 /deployment/resources/groups 	Parameter Adherence	Creating a group
+GET	 /deployment/resources/instances 	Parameter Adherence	Viewing currently deployed virtual machines
+POST	 /deployment/resources/volumes 	Parameter Adherence	Creating a volume
+POST	 /deployment/resources/volumes 	Parameter Adherence	Attaching or detaching volumes
+POST	 /admin/resources/backup 	Parameter Adherence	Initiate a backup operation
+GET	 /admin/resources/backup_subcomponents/{id} 	Parameter Adherence	Get information on a specified volume group

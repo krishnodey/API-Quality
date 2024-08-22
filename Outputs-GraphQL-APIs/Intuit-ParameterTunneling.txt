@@ -1,0 +1,46 @@
+***Anti-Pattern*** 
+Count: 38
+POST	 /fetchBill/{id} 	Parameter Tunneling	Read a Bill by Id
+POST	 /createBill/{id} 	Parameter Tunneling	
+POST	 /updateBill/{id} 	Parameter Tunneling	
+POST	 /updateBill/{id} 	Parameter Tunneling	
+POST	 /deleteBill/{id} 	Parameter Tunneling	
+POST	 /createCreditMemo/{id} 	Parameter Tunneling	
+POST	 /updateCreditMemo/{id} 	Parameter Tunneling	
+POST	 /deleteCreditMemo/{id} 	Parameter Tunneling	
+POST	 /deleteCreditMemo/{id} 	Parameter Tunneling	
+POST	 /createCustomer 	Parameter Tunneling	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
+POST	 /fetchCustomer/{id} 	Parameter Tunneling	Use queries to read customers. Apps can query the Customer entity by id or displayName.
+POST	 /fetchDelayedCharge/{id} 	Parameter Tunneling	Read an DelayedCharge by Id
+POST	 /createDelayedCredit/{id} 	Parameter Tunneling	
+POST	 /updateDelayedCredit/{id} 	Parameter Tunneling	
+POST	 /deleteDelayedCredit/{id} 	Parameter Tunneling	
+POST	 /fetchEstimate/{id} 	Parameter Tunneling	Read an Estimate by Id
+POST	 /createEstimate/{id}	Parameter Tunneling	
+POST	 /deleteEstimate/{id} 	Parameter Tunneling	id: ID of an existing estimate
+POST	 /createExpense/{id} 	Parameter Tunneling	
+POST	 /updateExpense/{id} 	Parameter Tunneling	
+POST	 /deleteExpense/{id} 	Parameter Tunneling	
+POST	 /fetchInvoice/{id} 	Parameter Tunneling	Read an invoice by Id
+POST	 /createInvoice/{id} 	Parameter Tunneling	
+POST	 /updateInvoice/{id} 	Parameter Tunneling	
+POST	 /deleteInvoice/{id} 	Parameter Tunneling	
+POST	 /fetchInvoicePayment/{id} 	Parameter Tunneling	Read an InvoicePayment by Id
+POST	 /createInvoicePayment/{id} 	Parameter Tunneling	
+POST	 /updateInvoicePayment/{id} 	Parameter Tunneling	
+POST	 /deleteInvoicePayment/{id} 	Parameter Tunneling	
+
+***Patterns*** 
+Count: 3
+POST	 /fetchCreditMemo/{id} 	Parameter Adherence	Read an Credit Memo by Id
+POST	 /createInvoiceDraft 	Parameter Adherence	Mutation for defining value of field within an Invoice Draft
+POST	 /transactionDraft/{id} 	Parameter Adherence	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
+POST	 /createDelayedCharge 	Parameter Adherence	
+POST	 /deleteDelayedCharge 	Parameter Adherence	
+POST	 /fetchDelayedCredit/{id}	Parameter Adherence	Read an DelayedCredit by Id
+POST	 /verificationOfEmployment 	Parameter Adherence	Verification of Employment
+POST	 /verificationOfIncome 	Parameter Adherence	Verification of Income
+POST	 /socialServiceVerification 	Parameter Adherence	Social Service Verification
+POST	 /createEstimateDraft 	Parameter Adherence	Estimate Draft
+POST	 /fetchExpense 	Parameter Adherence	Read an Expense by Id
+POST	 /createInvoiceDraft 	Parameter Adherence	Invoice Draft

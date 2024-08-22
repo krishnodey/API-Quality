@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 45
+POST	 /api/user/reg 	Structed Endpoint	Register user
+POST	 /api/user/auth 	Structed Endpoint	Authenticates a user into the system
+POST	 /api/user/anon 	Structed Endpoint	Authenticates anonymous users into the system
+POST	 /api/user/checkauth 	Structed Endpoint	Checks if user is authenticated
+POST	 /api/user/logout 	Structed Endpoint	Logs out a user
+GET	 /api/user/info 	Structed Endpoint	Returns information about a logged in user
+PUT	 /api/user/info 	Structed Endpoint	Updates a logged in users information
+PUT	 /api/user/pass 	Structed Endpoint	Changes a logged in users password
+GET	 /api/user 	Structed Endpoint	Gets list of users
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Structed Endpoint	Update a device's state or custom attributes only
+POST	 /api/v/2/devices/{SystemKey}/auth 	Structed Endpoint	Authenticates a device into the system
+GET	 /api/collection/{systemKey}/{collectionName} 	Structed Endpoint	fetch collection
+PUT	 /api/collection/{systemKey}/{collectionName} 	Structed Endpoint	Item update
+POST	 /api/collection/{systemKey}/{collectionName} 	Structed Endpoint	Item create
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Structed Endpoint	Item delete
+GET	 /api/data/{collectionID} 	Structed Endpoint	fetch collection
+PUT	 /api/data/{collectionID} 	Structed Endpoint	Item update
+POST	 /api/data/{collectionID} 	Structed Endpoint	Item create
+DELETE	 /api/data/{collectionID} 	Structed Endpoint	Item delete
+GET	 /api/data/{collectionid}/columns 	Structed Endpoint	get column key names
+POST	 /api/code/{systemKey}/{serviceName} 	Structed Endpoint	Calls/executes ClearCode service
+GET	 /codeadmin/v/2/library/{systemKey} 	Structed Endpoint	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Structed Endpoint	Gets the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Structed Endpoint	Updates the libraries for a system
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Structed Endpoint	Creates libraries for a system
+DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Structed Endpoint	Deletes a libraries for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Structed Endpoint	Gets all versions of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Structed Endpoint	Gets a specific version of a library for a system
+GET	 /codeadmin/failed 	Structed Endpoint	Lists failed code service runs for all systems that a developer can access
+GET	 /codeadmin/failed/{systemKey} 	Structed Endpoint	Lists failed code service runs for specified system
+POST	 /codeadmin/failed/{systemKey} 	Structed Endpoint	Retry failed code services
+DELETE	 /codeadmin/failed/{systemKey} 	Structed Endpoint	Delete failed code service run from list
+GET	 /api/message/{systemKey} 	Structed Endpoint	Retrieve message history
+POST	 /api/message/{systemKey}/publish 	Structed Endpoint	Publishes a message to a topic
+DELETE	 /api/message/{systemKey} 	Structed Endpoint	Delete message history
+POST	 /admin/reg 	Structed Endpoint	Registers a new developer account with the CB platform
+POST	 /admin/auth 	Structed Endpoint	Authorizes a CB Developer account
+POST	 /admin/logout 	Structed Endpoint	Logs a CB developer out of their session
+POST	 /admin/systemmanagement 	Structed Endpoint	Creates a new system in a developers account
+GET	 /admin/systemmanagement 	Structed Endpoint	Gets a systems info
+PUT	 /admin/systemmanagement 	Structed Endpoint	Updates a systems info
+DELETE	 /admin/systemmanagement 	Structed Endpoint	Deletes a system
+POST	 /admin/collectionmanagement 	Structed Endpoint	Creates a new collection or connection in a system
+PUT	 /admin/collectionmanagement 	Structed Endpoint	Updates an existing connection in a system
+PUT	 /admin/collectionmanagement 	Structed Endpoint	Creates a column within an existing collection

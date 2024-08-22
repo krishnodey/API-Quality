@@ -1,0 +1,51 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 46
+POST	 /v1/orgs/{org_id}/products/ 	Structed Endpoint	Create Product
+POST	 /v1/orgs/{org_id}/products 	Structed Endpoint	Bulk Create Products
+GET	 /v1/orgs/{org_id}/products/{salsify:id} 	Structed Endpoint	Read Product Record
+GET	 /v1/orgs/{org_id}/products 	Structed Endpoint	Bulk Read Products
+PUT	 /v1/orgs/{org_id}/products/{product_id} 	Structed Endpoint	Update Product
+PUT	 /v1/orgs/{org_id}/products 	Structed Endpoint	Bulk Update Products
+PUT	 /v1/orgs/{org_id}/products/_upsert 	Structed Endpoint	Bulk Upsert Products
+DELETE	 /v1/orgs/{org_id}/products/{product_id} 	Structed Endpoint	Delete Product
+DELETE	 /v1/orgs/{org_id}/products 	Structed Endpoint	Bulk Delete Products
+POST	 /v1/orgs/{org_id}/records/ 	Structed Endpoint	Create Record
+POST	 /v1/orgs/{org_id}/records 	Structed Endpoint	Bulk Create Records
+GET	 /v1/orgs/{org_id}/records/{salsify:id} 	Structed Endpoint	Read Record
+GET	 /v1/orgs/{org_id}/records 	Structed Endpoint	Bulk Read Records
+GET	 /v1/orgs/{org_id}/record_types 	Structed Endpoint	Read Record Types
+PUT	 /orgs/{org_id}/records/{record_id} 	Structed Endpoint	Update Record
+PUT	 /v1/orgs/{org_id}/records 	Structed Endpoint	Bulk Update Records
+PUT	 /v1/orgs/{org_id}/records/_upsert 	Structed Endpoint	Bulk Upsert Records
+DELETE	 /v1/orgs/{org_id}/records/{product_id} 	Structed Endpoint	Delete Record
+DELETE	 /v1/orgs/{org_id}/records 	Structed Endpoint	Bulk Delete Records
+POST	 /v1/orgs/{org_id}/properties 	Structed Endpoint	Create New Property
+POST	 /v1/orgs/{org_id}/properties 	Structed Endpoint	Bulk Create New Properties
+GET	 /v1/orgs/{org_ID}/properties/{salsify:id} 	Structed Endpoint	Read Property
+PUT	 /v1/orgs/{org_id}/properties/{salsify:id} 	Structed Endpoint	Update Property
+PUT	 /v1/orgs/{organization_id}/properties/_upsert 	Structed Endpoint	Bulk Upsert Properties
+DELETE	 /v1/orgs/{org_id}/properties/{salsify:id} 	Structed Endpoint	Delete Property
+DELETE	 /v1/orgs/{org_id}/properties 	Structed Endpoint	Bulk Delete Properties
+POST	 /orgs/{org_id}/imports/upload_mounts 	Structed Endpoint	Create a Mount Point
+POST	 /orgs/{org_id}/imports 	Structed Endpoint	Creating a JSON Import from a Mount Point
+POST	 /orgs/{org_id}/imports 	Structed Endpoint	Creating a JSON Import from FTP
+PUT	 /orgs/{org_id}/imports/{import_id} 	Structed Endpoint	Updating an Import to Point at a New Mount Point
+POST	 /orgs/{org_id}/imports/{import_id}/runs 	Structed Endpoint	Starting an Import Run
+GET	 /orgs/{org_id}/imports/runs/{import_run_id} 	Structed Endpoint	Getting the Status of an Import Run
+POST	 /orgs/{org_id}/export_runs 	Structed Endpoint	Start Export Run
+GET	 /orgs/{org_id}/export_runs/{export_id} 	Structed Endpoint	Get Export Status
+POST	 /v1/orgs/{organization_id}/digital_assets 	Structed Endpoint	Create a Digital Asset & Metadata
+POST	 /v1/orgs/{org_id}/digital_assets 	Structed Endpoint	Create Multiple Digital Assets
+GET	 /v1/orgs/{org_id}/digital_assets/{asset_id} 	Structed Endpoint	Read Digital Asset Metadata
+GET	 /v1/orgs/{org_id}/digital_assets 	Structed Endpoint	Bulk Read Digital Assets
+POST	 /v1/orgs/<org_ID>/digital_assets/refresh 	Structed Endpoint	Refresh Digital Assets
+PUT	 /v1/orgs/{org_id}/digital_assets/{salsify:id} 	Structed Endpoint	Update Digital Asset Metadata
+PUT	  /v1/orgs/{org_id}/digital_assets 	Structed Endpoint	Update Multiple Digital Assets
+PUT	 /v1/orgs/{organization_id}/digital_assets/_upsert 	Structed Endpoint	Bulk Upsert Digital Assets
+DELETE	 /v1/orgs/{org_id}/digital_assets 	Structed Endpoint	Delete Digital Assets
+DELETE	  /v1/orgs/{org_id}/digital_assets 	Structed Endpoint	Delete Multiple Digital Assets
+PUT	  /v1/orgs/{org_id}/lists/{list_id}/members 	Structed Endpoint	Add List Members
+DELETE	 /v1/orgs/{org_id}/lists/{list_id}/members 	Structed Endpoint	Delete List Members

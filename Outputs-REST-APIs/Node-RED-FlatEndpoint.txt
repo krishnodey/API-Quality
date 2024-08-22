@@ -3,18 +3,18 @@ Count: 0
 
 ***Patterns*** 
 Count: 15
-GET	/auth/login	Structed Endpoint	Get the active authentication scheme
-POST	/auth/token	Structed Endpoint	Exchange credentials for access token
-POST	/auth/revoke	Structed Endpoint	Revoke an access token
-GET	/settings	Structed Endpoint	Get the runtime settings
-GET	/flows	Structed Endpoint	Get the active flow configuration
-POST	/flows	Structed Endpoint	Set the active flow configuration
-POST	/flow	Structed Endpoint	Add a flow to the active configuration
-GET	/flow/:id	Structed Endpoint	Get an individual flow configuration
-PUT	/flow/:id	Structed Endpoint	Update an individual flow configuration
-DELETE	/flow/:id	Structed Endpoint	Delete an individual flow configuration
-GET	/nodes	Structed Endpoint	Get a list of the installed nodes
-POST	/nodes	Structed Endpoint	Install a new node module
-GET	/nodes/:module	Structed Endpoint	Get a node module’s information
-PUT	/nodes/:module	Structed Endpoint	Enable/Disable a node module
-DELETE	/nodes/:module	Structed Endpoint	Remove a node module
+GET	 /auth/login 	Structed Endpoint	Get the active authentication scheme
+POST	 /auth/token 	Structed Endpoint	Exchange credentials for access token
+POST	 /auth/revoke 	Structed Endpoint	Revoke an access token
+GET	 /settings 	Structed Endpoint	Get the runtime settings
+GET	 /flows 	Structed Endpoint	Get the active flow configuration
+POST	 /flows 	Structed Endpoint	Set the active flow configuration
+POST	 /flow 	Structed Endpoint	Add a flow to the active configuration
+GET	 /flow/:id 	Structed Endpoint	Get an individual flow configuration
+PUT	 /flow/:id 	Structed Endpoint	Update an individual flow configuration
+DELETE	 /flow/:id 	Structed Endpoint	Delete an individual flow configuration
+GET	 /nodes 	Structed Endpoint	Get a list of the installed nodes
+POST	 /nodes 	Structed Endpoint	Install a new node module
+GET	 /nodes/:module 	Structed Endpoint	Get a node module’s information
+PUT	 /nodes/:module 	Structed Endpoint	Enable/Disable a node module
+DELETE	 /nodes/:module 	Structed Endpoint	Remove a node module

@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+GET	/v2/count/	Cosistent Resource Archetype	The total number of resources available from this API.
+GET	/v2/next/	Cosistent Resource Archetype	The URL for the next page in the list.
+GET	/v2/previous/	Cosistent Resource Archetype	The URL for the previous page in the list.
+GET	/v2/results/	Cosistent Resource Archetype	A list of named API resources.
+GET	 /v2/berry/{id or name}/	Cosistent Resource Archetype	Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by PokÃ©mon.
+GET	 /v2/berry/{id}/	Cosistent Resource Archetype	The identifier for this resource.
+GET	 /v2/berry/{name}/	Cosistent Resource Archetype	The name for this resource.
+GET	 /v2/berry/{growth_time}/	Cosistent Resource Archetype	Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked.
+GET	 /v2/berry/{max_harvest}/	Cosistent Resource Archetype	The maximum number of these berries that can grow on one tree in Generation IV.
+GET	 /v2/berry/{natural_gift_power}/	Cosistent Resource Archetype	The power of the move "Natural Gift" when used with this Berry.
+GET	 /v2/berry/{size}/	Cosistent Resource Archetype	The size of this Berry, in millimeters.
+GET	 /v2/berry/{smoothness}/	Cosistent Resource Archetype	The smoothness of this Berry, used in making PokÃ©blocks or Poffins.
+GET	 /v2/berry/{soil_dryness}/	Cosistent Resource Archetype	The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly.
+GET	 /v2/berry/{firmness}/	Cosistent Resource Archetype	The firmness of this berry, used in making PokÃ©blocks or Poffins.
+GET	 /v2/berry/{flavors}/	Cosistent Resource Archetype	A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.
+GET	 /v2/berry/{items}/	Cosistent Resource Archetype	Berries are actually items. This is a reference to the item specific data for this berry.
+GET	 /v2/berry/{natural_gift_type}/	Cosistent Resource Archetype	The type inherited by "Natural Gift" when used with this Berry.
+GET	 /v2/berry/{potency}/	Cosistent Resource Archetype	How powerful the referenced flavor is for this berry.
+GET	/v2/berry-firmness/{id}/	Cosistent Resource Archetype	The identifier for this resource.
+GET	/v2/berry-firmness/{id or name}/	Cosistent Resource Archetype	Berries can be soft or hard.
+GET	/v2/berry-firmness/{name}/	Cosistent Resource Archetype	The name for this resource.
+GET	/v2/berry-firmness/{berries}/	Cosistent Resource Archetype	A list of the berries with this firmness.
+GET	/v2/berry-firmness/{names}/	Cosistent Resource Archetype	The name of this resource listed in different languages.
+GET	v2/berry-flavor/{id or name}/	Cosistent Resource Archetype	Flavors determine whether a PokÃ©mon will benefit or suffer from eating a berry based on their nature.

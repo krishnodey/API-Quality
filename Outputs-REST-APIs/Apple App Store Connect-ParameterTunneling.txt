@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 10
+GET	 /appCategories 	Parameter Tunneling	filter by attribute platforms
+GET	 /appEncryptionDeclarations 	Parameter Tunneling	filter by attribute platform
+GET	 /appPricePoints 	Parameter Tunneling	filter by id(s) of related priceTier
+GET	 /appPriceTiers 	Parameter Tunneling	filter by id(s)
+GET	 /apps 	Parameter Tunneling	filter by attribute 'appStoreVersions.appStoreState
+GET	 /betaAppLocalizations 	Parameter Tunneling	filter by attribute locale
+GET	 /financeReports 	Parameter Tunneling	filter by attribute regionCode
+GET	 /preReleaseVersions 	Parameter Tunneling	filter by attribute builds.expired
+GET	 /salesReports 	Parameter Tunneling	filter by attribute frequency
+GET	 /appInfos/{id}/appInfoLocalizations 	Parameter Tunneling	filter by attribute locale
+
+***Patterns*** 
+Count: 22
+GET	 /appCategories/{id} 	Parameter Adherence	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations/{id} 	Parameter Adherence	the fields to include for returned resources of type appEncryptionDeclarations
+GET	 /appInfoLocalizations/{id} 	Parameter Adherence	the fields to include for returned resources of type appInfoLocalizations
+GET	 /appInfos/{id} 	Parameter Adherence	the fields to include for returned resources of type appInfos
+GET	 /appPreOrders/{id} 	Parameter Adherence	the fields to include for returned resources of type appPreOrders
+GET	 /appPreviewSets/{id} 	Parameter Adherence	the fields to include for returned resources of type appPreviews
+GET	 /appPreviews/{id} 	Parameter Adherence	the fields to include for returned resources of type appPreviews
+GET	 /appPricePoints/{id} 	Parameter Adherence	the fields to include for returned resources of type appPricePoints
+GET	 /appPriceTiers/{id} 	Parameter Adherence	the fields to include for returned resources of type appPriceTiers
+GET	 /appPrices/{id} 	Parameter Adherence	the fields to include for returned resources of type appPrices
+GET	 /appScreenshotSets/{id} 	Parameter Adherence	the fields to include for returned resources of type appScreenshotSets
+GET	 /appScreenshots/{id} 	Parameter Adherence	the fields to include for returned resources of type appScreenshots
+GET	 /appStoreReviewAttachments/{id} 	Parameter Adherence	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewDetails/{id} 	Parameter Adherence	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreVersionLocalizations/{id} 	Parameter Adherence	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersions/{id} 	Parameter Adherence	the fields to include for returned resources of type appStoreVersions
+GET	 /endUserLicenseAgreements/{id} 	Parameter Adherence	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /routingAppCoverages/{id} 	Parameter Adherence	the fields to include for returned resources of type routingAppCoverages
+GET	 /appCategories/{id}/subcategories 	Parameter Adherence	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations/{id}/app 	Parameter Adherence	the fields to include for returned resources of type apps
+GET	 /appInfos/{id}/ageRatingDeclaration 	Parameter Adherence	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/primaryCategory 	Parameter Adherence	the fields to include for returned resources of type appCategories

@@ -1,0 +1,12 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 7
+GET	 /connection-check 	Cosistent Resource Archetype	Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned.
+GET	 /connection-check 	Cosistent Resource Archetype	Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned.
+POST	 /anomaly-detection/timeseries/multivariate/batch 	Cosistent Resource Archetype	Detect anomalies on multivariate time series
+POST	 /anomaly-detection/timeseries/univariate/batch 	Cosistent Resource Archetype	Detect anomalies on univariate time series
+POST	 /anomaly-detection/timeseries/semi-supervised/model 	Cosistent Resource Archetype	Discover anomaly model using semi-supervised approach
+POST	 /anomaly-detection/timeseries/mixture-based/model 	Cosistent Resource Archetype	Discover mixture model based anomaly
+POST	 /anomaly-detection/timeseries/regression-based/model 	Cosistent Resource Archetype	Discover regression based anomaly model using AutoRegression

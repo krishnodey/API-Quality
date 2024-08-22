@@ -1,0 +1,52 @@
+***Anti-Pattern*** 
+Count: 12
+GET	 /v1/projects 	Parameter Tunneling	Lists projects for the authenticated user or team.
+POST	 /v1/projects 	Parameter Tunneling	Creates a new project.
+PUT	 /v1/projects 	Parameter Tunneling	Create or update project
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Parameter Tunneling	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Parameter Tunneling	Sets the build arguments for the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Parameter Tunneling	Aborts the given service build
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Parameter Tunneling	Pause the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Parameter Tunneling	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Parameter Tunneling	Resumes the given service. Optionally takes several arguments to override resumed settings.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Parameter Tunneling	
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Parameter Tunneling	Sets the runtime environment for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Parameter Tunneling	Modifies the scaling settings for the given service.
+
+***Patterns*** 
+Count: 35
+PATCH	 /v1/projects/{projectId}	Parameter Adherence	Updates a project.
+GET	 /v1/projects/{projectId} 	Parameter Adherence	Get information about the given project
+DELETE	 /v1/projects/{projectId} 	Parameter Adherence	Delete the given project. Fails if the project isn't empty.
+GET	 /v1/projects/{projectId}/services 	Parameter Adherence	Gets a list of services belonging to the project
+POST	 /v1/projects/{projectId}/services/build 	Parameter Adherence	Creates a new build service.
+PUT	 /v1/projects/{projectId}/services/build 	Parameter Adherence	Creates or updates a build service.
+PATCH	 /v1/projects/{projectId}/services/build/{serviceId} 	Parameter Adherence	Updates a build service.
+POST	 /v1/projects/{projectId}/services/combined 	Parameter Adherence	Creates a new combined service.
+PUT	 /v1/projects/{projectId}/services/combined 	Parameter Adherence	Creates or updates a combined service.
+PATCH	 /v1/projects/{projectId}/services/combined/{serviceId} 	Parameter Adherence	Updates a combined service.
+POST	 /v1/projects/{projectId}/services/deployment 	Parameter Adherence	Creates a new deployment service.
+PUT	 /v1/projects/{projectId}/services/deployment 	Parameter Adherence	Creates or updates a deployment service.
+PATCH	 /v1/projects/{projectId}/services/deployment/{serviceId} 	Parameter Adherence	Updates a deployment service.
+GET	 /v1/projects/{projectId}/services/{serviceId} 	Parameter Adherence	Gets information about the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId} 	Parameter Adherence	Deletes the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	Parameter Adherence	Gets information about the branches of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build 	Parameter Adherence	Lists the builds for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Parameter Adherence	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	Parameter Adherence	Get details about the build arguments accessible by the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	Parameter Adherence	Get logs for a service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	Parameter Adherence	Get metrics for a service build
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	Parameter Adherence	Updates the build options for a given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	Parameter Adherence	Updates the version control source for a given build or combined service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Parameter Adherence	Gets information about a build for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	Parameter Adherence	Gets a list of containers for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Parameter Adherence	Gets information about the deployment of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Parameter Adherence	Updates the deployment settings of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Parameter Adherence	Lists the health checks for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Parameter Adherence	Updates health checks for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	Parameter Adherence	Get logs for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	Parameter Adherence	Get metrics for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	Parameter Adherence	Lists the ports for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	Parameter Adherence	Updates the list of ports for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	Parameter Adherence	Gets information about the pull-requests of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	Parameter Adherence	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'

@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 3
+/series/batch_query	Amorphous End-point	 [underscore found] 
+/series/batch_query_raw	Amorphous End-point	 [underscore found] 
+/series/batch_query_raw/lastvalue	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 17
+/devices	Tidy End-point	Tidy Endpoint
+/devices/{id}	Tidy End-point	Tidy Endpoint
+/devices/{id}/events	Tidy End-point	Tidy Endpoint
+/devices/{id}/properties	Tidy End-point	Tidy Endpoint
+/devices	Tidy End-point	Tidy Endpoint
+/devices/{id}	Tidy End-point	Tidy Endpoint
+/devices/{id}	Tidy End-point	Tidy Endpoint
+/devices/{id}/properties/{pid}	Tidy End-point	Tidy Endpoint
+/devices/{id}/properties	Tidy End-point	Tidy Endpoint
+/devices/{id}/certs	Tidy End-point	Tidy Endpoint
+/devices/{id}/certs/{cid}	Tidy End-point	Tidy Endpoint
+/devices/{id}/certs	Tidy End-point	Tidy Endpoint
+/devices/{id}/certs/{cid}	Tidy End-point	Tidy Endpoint
+/devices/{id}/certs/{cid}	Tidy End-point	Tidy Endpoint
+/devices/{id}/pass	Tidy End-point	Tidy Endpoint
+/things/{id}/properties	Tidy End-point	Tidy Endpoint
+/things/{id}/properties/{pid}/publish	Tidy End-point	Tidy Endpoint

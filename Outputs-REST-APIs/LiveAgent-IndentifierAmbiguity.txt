@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 13
+GET	 /accounts/[account_id]/addons?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get all account add-ons with validity info
+GET	 /accounts?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get accounts info for reseller
+GET	 /accounts/[account_id]?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get account info
+GET	 /accounts/[account_id]/status?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get account status
+GET	 /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Check account domain before signup
+GET	 /signupcheck/email?productid=[value]&email=[value]&apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Check email validity before signup
+GET	 /variations?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get all reseller variations
+GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get account attribute
+DELETE	 /accounts/[account_id]/users/[userid]?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Remove user from account
+GET	 /accounts/[account_id]/users?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get users list from account
+GET	 /licenses/[license_code]/addons?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get all license add-ons with validity info
+GET	 /licenses?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get all licenses info for reseller
+GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Get license attribute
+
+***Patterns*** 
+Count: 8
+POST	 /accounts/[account_id]/addons 	[Regular Endpoints]	Add addon to account
+POST	 /accounts 	[Regular Endpoints]	Create new account
+PUT	 /accounts/[account_id]/status 	[Regular Endpoints]	Change account status (suspend, unsuspend or terminate)
+PUT	 /accounts/[account_id]/variation 	[Regular Endpoints]	Change account variation
+PUT	 /accounts/[account_id]/attributes/[attribute_name] 	[Regular Endpoints]	Change account attribute
+POST	 /licenses/[license_code]/addons 	[Regular Endpoints]	Add addon to license
+PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	[Regular Endpoints]	Change addon validity on owned license
+PUT	 /licenses/[license_code]/attributes/[attribute_name] 	[Regular Endpoints]	Change license attribute

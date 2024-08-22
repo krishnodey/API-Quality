@@ -1,0 +1,261 @@
+***Anti-Pattern*** 
+Count: 256
+GET	 /licenses 	Parameter Tunneling	Return a list of known open source licenses.
+GET	 /marketplaceCategories 	Parameter Tunneling	Get alphabetically sorted list of Marketplace categories.
+GET	 /marketplaceListing 	Parameter Tunneling	Look up a single Marketplace listing.
+GET	 /marketplaceListings 	Parameter Tunneling	Look up Marketplace listings.
+GET	 /meta 	Parameter Tunneling	Return information about the GitHub instance.
+GET	 /node 	Parameter Tunneling	Fetches an object given its ID.
+GET	 /nodes 	Parameter Tunneling	Lookup nodes by a list of IDs.
+GET	 /search 	Parameter Tunneling	Perform a search across resources, returning a maximum of 1,000 results.
+GET	 /securityAdvisory 	Parameter Tunneling	Fetch a Security Advisory by its GHSA ID.
+POST	 /addAssigneesToAssignable 	Parameter Tunneling	Adds assignees to an assignable object.
+POST	 /addComment 	Parameter Tunneling	Adds a comment to an Issue or Pull Request.
+POST	 /addDiscussionComment 	Parameter Tunneling	Adds a comment to a Discussion, possibly as a reply to another comment.
+POST	 /addEnterpriseOrganizationMember 	Parameter Tunneling	Adds enterprise members to an organization within the enterprise.
+POST	 /addEnterpriseSupportEntitlement 	Parameter Tunneling	Adds a support entitlement to an enterprise member.
+POST	 /addLabelsToLabelable 	Parameter Tunneling	Adds labels to a labelable object.
+POST	 /addProjectCard 	Parameter Tunneling	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
+POST	 /addProjectColumn 	Parameter Tunneling	Adds a column to a Project.
+POST	 /addProjectV2DraftIssue 	Parameter Tunneling	Creates a new draft issue and add it to a Project.
+POST	 /addPullRequestReview 	Parameter Tunneling	Adds a review to a Pull Request.
+POST	 /addPullRequestReviewComment 	Parameter Tunneling	Adds a comment to a review.
+POST	 /addPullRequestReviewThread 	Parameter Tunneling	Adds a new thread to a pending Pull Request Review.
+POST	 /addPullRequestReviewThreadReply 	Parameter Tunneling	Adds a reply to an existing Pull Request Review Thread.
+POST	 /addReaction 	Parameter Tunneling	Adds a reaction to a subject.
+POST	 /addStar 	Parameter Tunneling	Adds a star to a Starrable.
+POST	 /addUpvote 	Parameter Tunneling	Add an upvote to a discussion or discussion comment.
+POST	 /addVerifiableDomain 	Parameter Tunneling	Adds a verifiable domain to an owning account.
+POST	 /changeUserStatus 	Parameter Tunneling	Update your status on GitHub.
+POST	 /cloneProject 	Parameter Tunneling	Creates a new project by cloning configuration from an existing project.
+POST	 /cloneTemplateRepository 	Parameter Tunneling	Create a new repository with the same files and directory structure as a template repository.
+POST	 /convertProjectCardNoteToIssue 	Parameter Tunneling	Convert a project note card to one associated with a newly created issue.
+POST	 /createBranchProtectionRule 	Parameter Tunneling	Create a new branch protection rule.
+POST	 /createCheckRun 	Parameter Tunneling	Create a check run.
+POST	 /createCheckSuite 	Parameter Tunneling	Create a check suite.
+POST	 /createCommitOnBranch 	Parameter Tunneling	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
+POST	 /createDeployment 	Parameter Tunneling	Creates a new deployment event.
+POST	 /createDeploymentStatus 	Parameter Tunneling	Create a deployment status.
+POST	 /createDiscussion 	Parameter Tunneling	Create a discussion.
+POST	 /createEnterpriseOrganization 	Parameter Tunneling	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
+POST	 /createEnvironment 	Parameter Tunneling	Creates an environment or simply returns it if already exists.
+POST	 /createIpAllowListEntry 	Parameter Tunneling	Creates a new IP allow list entry.
+POST	 /createIssue 	Parameter Tunneling	Creates a new issue.
+POST	 /createLabel 	Parameter Tunneling	Creates a new label.
+POST	 /createLinkedBranch 	Parameter Tunneling	Create a branch linked to an issue.
+POST	 /createMigrationSource 	Parameter Tunneling	Creates a GitHub Enterprise Importer (GEI) migration source.
+POST	 /createProject 	Parameter Tunneling	Creates a new project.
+POST	 /createProjectV2 	Parameter Tunneling	Creates a new project.
+POST	 /createProjectV2Field 	Parameter Tunneling	Create a new project field.
+POST	 /createPullRequest 	Parameter Tunneling	Create a new pull request.
+POST	 /createRef 	Parameter Tunneling	Create a new Git Ref.
+POST	 /createRepository 	Parameter Tunneling	Create a new repository.
+POST	 /createRepositoryRuleset 	Parameter Tunneling	Create a repository ruleset.
+POST	 /createSponsorsListing 	Parameter Tunneling	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
+POST	 /createSponsorsTier 	Parameter Tunneling	Create a new payment tier for your GitHub Sponsors profile.
+POST	 /createTeamDiscussion 	Parameter Tunneling	Creates a new team discussion.
+POST	 /createTeamDiscussionComment 	Parameter Tunneling	Creates a new team discussion comment.
+POST	 /deleteBranchProtectionRule 	Parameter Tunneling	Delete a branch protection rule.
+POST	 /deleteDeployment 	Parameter Tunneling	Deletes a deployment.
+POST	 /deleteDiscussion 	Parameter Tunneling	Delete a discussion and all of its replies.
+POST	 /deleteDiscussionComment 	Parameter Tunneling	Delete a discussion comment. If it has replies, wipe it instead.
+POST	 /deleteEnvironment 	Parameter Tunneling	Deletes an environment.
+POST	 /deleteIpAllowListEntry 	Parameter Tunneling	Deletes an IP allow list entry.
+POST	 /deleteIssue 	Parameter Tunneling	Deletes an Issue object.
+POST	 /deleteIssueComment 	Parameter Tunneling	Deletes an IssueComment object.
+POST	 /deleteLabel 	Parameter Tunneling	Deletes a label.
+POST	 /deletePackageVersion 	Parameter Tunneling	Delete a package version.
+POST	 /deleteProject 	Parameter Tunneling	Deletes a project.
+POST	 /deleteProjectCard 	Parameter Tunneling	Deletes a project card.
+POST	 /deleteProjectColumn 	Parameter Tunneling	Deletes a project column.
+POST	 /deleteProjectV2 	Parameter Tunneling	Delete a project.
+POST	 /deleteProjectV2Field 	Parameter Tunneling	Delete a project field.
+POST	 /deleteProjectV2Item 	Parameter Tunneling	Deletes an item from a Project.
+POST	 /deleteProjectV2Workflow 	Parameter Tunneling	Deletes a project workflow.
+POST	 /deletePullRequestReview 	Parameter Tunneling	Deletes a pull request review.
+POST	 /deletePullRequestReviewComment 	Parameter Tunneling	Deletes a pull request review comment.
+POST	 /deleteRef 	Parameter Tunneling	Delete a Git Ref.
+POST	 /deleteRepositoryRuleset 	Parameter Tunneling	Delete a repository ruleset.
+POST	 /deleteTeamDiscussion 	Parameter Tunneling	Deletes a team discussion.
+POST	 /deleteTeamDiscussionComment 	Parameter Tunneling	Deletes a team discussion comment.
+POST	 /deleteVerifiableDomain 	Parameter Tunneling	Deletes a verifiable domain.
+POST	 /dequeuePullRequest 	Parameter Tunneling	Remove a pull request from the merge queue.
+POST	 /enqueuePullRequest 	Parameter Tunneling	Add a pull request to the merge queue.
+POST	 /importProject 	Parameter Tunneling	Creates a new project by importing columns and a list of issues/PRs.
+POST	 /linkRepositoryToProject 	Parameter Tunneling	Creates a repository link for a project.
+POST	 /removeAssigneesFromAssignable 	Parameter Tunneling	Removes assignees from an assignable object.
+POST	 /removeEnterpriseAdmin 	Parameter Tunneling	Removes an administrator from the enterprise.
+POST	 /removeEnterpriseIdentityProvider 	Parameter Tunneling	Removes the identity provider from an enterprise.
+POST	 /removeEnterpriseMember 	Parameter Tunneling	Removes a user from all organizations within the enterprise.
+POST	 /removeEnterpriseOrganization 	Parameter Tunneling	Removes an organization from the enterprise.
+POST	 /removeEnterpriseSupportEntitlement 	Parameter Tunneling	Removes a support entitlement from an enterprise member.
+POST	 /removeLabelsFromLabelable 	Parameter Tunneling	Removes labels from a Labelable object.
+POST	 /removeOutsideCollaborator 	Parameter Tunneling	Removes outside collaborator from all repositories in an organization.
+POST	 /removeReaction 	Parameter Tunneling	Removes a reaction from a subject.
+POST	 /removeStar 	Parameter Tunneling	Removes a star from a Starrable.
+POST	 /removeUpvote 	Parameter Tunneling	Remove an upvote to a discussion or discussion comment.
+POST	 /revertPullRequest 	Parameter Tunneling	Create a pull request that reverts the changes from a merged pull request.
+POST	 /setEnterpriseIdentityProvider 	Parameter Tunneling	Creates or updates the identity provider for an enterprise.
+POST	 /unlinkRepositoryFromProject 	Parameter Tunneling	Deletes a repository link from a project.
+POST	 /updateBranchProtectionRule 	Parameter Tunneling	Update a branch protection rule.
+POST	 /updateCheckRun 	Parameter Tunneling	Update a check run.
+POST	 /updateDiscussion 	Parameter Tunneling	Update a discussion.
+POST	 /updateDiscussionComment 	Parameter Tunneling	Update the contents of a comment on a Discussion.
+POST	 /updateEnterpriseAdministratorRole 	Parameter Tunneling	Updates the role of an enterprise administrator.
+POST	 /updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Parameter Tunneling	Sets whether organization members with admin permissions on a repository can change repository visibility.
+POST	 /updateEnterpriseMembersCanCreateRepositoriesSetting 	Parameter Tunneling	Sets the members can create repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteIssuesSetting 	Parameter Tunneling	Sets the members can delete issues setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteRepositoriesSetting 	Parameter Tunneling	Sets the members can delete repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Parameter Tunneling	Sets the members can update protected branches setting for an enterprise.
+POST	 /updateEnterpriseOwnerOrganizationRole 	Parameter Tunneling	Updates the role of an enterprise owner with an organization.
+POST	 /updateEnterpriseProfile 	Parameter Tunneling	Updates an enterprise's profile.
+POST	 /updateEnvironment 	Parameter Tunneling	Updates an environment.
+POST	 /updateIpAllowListEnabledSetting 	Parameter Tunneling	Sets whether an IP allow list is enabled on an owner.
+POST	 /updateIpAllowListEntry 	Parameter Tunneling	Updates an IP allow list entry.
+POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Parameter Tunneling	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
+POST	 /updateIssue 	Parameter Tunneling	Updates an Issue.
+POST	 /updateIssueComment 	Parameter Tunneling	Updates an IssueComment object.
+POST	 /updateLabel 	Parameter Tunneling	Updates an existing label.
+POST	 /updateNotificationRestrictionSetting 	Parameter Tunneling	Update the setting to restrict notifications to only verified or approved domains available to an owner.
+POST	 /updateProject 	Parameter Tunneling	Updates an existing project.
+POST	 /updateProjectCard 	Parameter Tunneling	Updates an existing project card.
+POST	 /updateProjectColumn 	Parameter Tunneling	Updates an existing project column.
+POST	 /updateProjectV2 	Parameter Tunneling	Updates an existing project (beta).
+POST	 /updateProjectV2Collaborators 	Parameter Tunneling	Update the collaborators on a team or a project.
+POST	 /updateProjectV2DraftIssue 	Parameter Tunneling	Updates a draft issue within a Project.
+POST	 /updateProjectV2ItemFieldValue 	Parameter Tunneling	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
+POST	 /updateProjectV2ItemPosition 	Parameter Tunneling	This mutation updates the position of the item in the project, where the position represents the priority of an item.
+POST	 /updatePullRequest 	Parameter Tunneling	Update a pull request.
+POST	 /updatePullRequestReview 	Parameter Tunneling	Updates the body of a pull request review.
+POST	 /updatePullRequestReviewComment 	Parameter Tunneling	Updates a pull request review comment.
+POST	 /updateRef 	Parameter Tunneling	Update a Git Ref.
+POST	 /updateRefs 	Parameter Tunneling	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
+POST	 /updateRepository 	Parameter Tunneling	Update information about a repository.
+POST	 /updateRepositoryRuleset 	Parameter Tunneling	Update a repository ruleset.
+POST	 /updateSponsorshipPreferences 	Parameter Tunneling	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
+POST	 /updateSubscription 	Parameter Tunneling	Updates the state for subscribable subjects.
+POST	 /updateTeamDiscussion 	Parameter Tunneling	Updates a team discussion.
+POST	 /updateTeamDiscussionComment 	Parameter Tunneling	Updates a discussion comment.
+POST	 /updateTeamReviewAssignment 	Parameter Tunneling	Updates team review assignment.
+POST	 /updateTeamsRepository 	Parameter Tunneling	Update team repository.
+
+***Patterns*** 
+Count: 0
+GET	 /codeOfConduct 	Parameter Adherence	Look up a code of conduct by its key.
+GET	 /codesOfConduct 	Parameter Adherence	Look up a code of conduct by its key.
+GET	 /enterprise 	Parameter Adherence	Look up an enterprise by URL slug.
+GET	 /enterpriseAdministratorInvitation 	Parameter Adherence	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
+GET	 /enterpriseAdministratorInvitationByToken 	Parameter Adherence	Look up a pending enterprise administrator invitation by invitation token.
+GET	 /license 	Parameter Adherence	Look up an open source license by its key.
+GET	 /marketplaceCategory 	Parameter Adherence	Look up a Marketplace category by its slug.
+GET	 /organization 	Parameter Adherence	Lookup a organization by login.
+GET	 /rateLimit 	Parameter Adherence	The client's rate limit information.
+GET	 /relay 	Parameter Adherence	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
+GET	 /repository 	Parameter Adherence	Lookup a given repository by the owner and repository name.
+GET	 /repositoryOwner 	Parameter Adherence	Lookup a repository owner (ie. either a User or an Organization) by login.
+GET	 /resource 	Parameter Adherence	Lookup resource by a URL.
+GET	 /securityAdvisories 	Parameter Adherence	GitHub Security Advisories.
+GET	 /securityVulnerabilities 	Parameter Adherence	Software Vulnerabilities documented by GitHub Security Advisories.
+GET	 /sponsorables 	Parameter Adherence	Users and organizations who can be sponsored via GitHub Sponsors.
+GET	 /topic 	Parameter Adherence	Look up a topic by name.
+GET	 /user 	Parameter Adherence	Lookup a user by login.
+GET	 /viewer 	Parameter Adherence	The currently authenticated user.
+POST	 /abortQueuedMigrations 	Parameter Adherence	Clear all of a customer's queued migrations.
+POST	 /abortRepositoryMigration 	Parameter Adherence	Abort a repository migration queued or in progress.
+POST	 /acceptEnterpriseAdministratorInvitation 	Parameter Adherence	Accepts a pending invitation for a user to become an administrator of an enterprise.
+POST	 /acceptTopicSuggestion 	Parameter Adherence	Applies a suggested topic to the repository.
+POST	 /addDiscussionPollVote 	Parameter Adherence	Vote for an option in a discussion poll.
+POST	 /addProjectV2ItemById 	Parameter Adherence	Links an existing content instance to a Project.
+POST	 /approveDeployments 	Parameter Adherence	Approve all pending deployments under one or more environments.
+POST	 /approveVerifiableDomain 	Parameter Adherence	Approve a verifiable domain for notification delivery.
+POST	 /archiveProjectV2Item 	Parameter Adherence	Archives a ProjectV2Item.
+POST	 /archiveRepository 	Parameter Adherence	Marks a repository as archived.
+POST	 /cancelEnterpriseAdminInvitation 	Parameter Adherence	Cancels a pending invitation for an administrator to join an enterprise.
+POST	 /cancelSponsorship 	Parameter Adherence	Cancel an active sponsorship.
+POST	 /clearLabelsFromLabelable 	Parameter Adherence	Clears all labels from a labelable object.
+POST	 /clearProjectV2ItemFieldValue 	Parameter Adherence	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
+POST	 /closeDiscussion 	Parameter Adherence	Close a discussion.
+POST	 /closeIssue 	Parameter Adherence	Close an issue.
+POST	 /closePullRequest 	Parameter Adherence	Close a pull request.
+POST	 /convertPullRequestToDraft 	Parameter Adherence	Converts a pull request to draft.
+POST	 /copyProjectV2 	Parameter Adherence	Copy a project.
+POST	 /createAttributionInvitation 	Parameter Adherence	Invites a user to claim reattributable data.
+POST	 /createSponsorship 	Parameter Adherence	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
+POST	 /createSponsorships 	Parameter Adherence	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+POST	 /declineTopicSuggestion 	Parameter Adherence	Rejects a suggested topic for the repository.
+POST	 /deleteLinkedBranch 	Parameter Adherence	Unlink a branch from an issue.
+POST	 /disablePullRequestAutoMerge 	Parameter Adherence	Disable auto merge on the given pull request.
+POST	 /dismissPullRequestReview 	Parameter Adherence	Dismisses an approved or rejected pull request review.
+POST	 /dismissRepositoryVulnerabilityAlert 	Parameter Adherence	Dismisses the Dependabot alert.
+POST	 /enablePullRequestAutoMerge 	Parameter Adherence	Enable the default auto-merge on a pull request.
+POST	 /followOrganization 	Parameter Adherence	Follow an organization.
+POST	 /followUser 	Parameter Adherence	Follow a user.
+POST	 /grantEnterpriseOrganizationsMigratorRole 	Parameter Adherence	Grant the migrator role to a user for all organizations under an enterprise account.
+POST	 /grantMigratorRole 	Parameter Adherence	Grant the migrator role to a user or a team.
+POST	 /inviteEnterpriseAdmin 	Parameter Adherence	Invite someone to become an administrator of the enterprise.
+POST	 /linkProjectV2ToRepository 	Parameter Adherence	Links a project to a repository.
+POST	 /linkProjectV2ToTeam 	Parameter Adherence	Links a project to a team.
+POST	 /lockLockable 	Parameter Adherence	Lock a lockable object.
+POST	 /markDiscussionCommentAsAnswer 	Parameter Adherence	Mark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /markFileAsViewed 	Parameter Adherence	Mark a pull request file as viewed.
+POST	 /markProjectV2AsTemplate 	Parameter Adherence	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
+POST	 /markPullRequestReadyForReview 	Parameter Adherence	Marks a pull request ready for review.
+POST	 /mergeBranch 	Parameter Adherence	Merge a head into a branch.
+POST	 /mergePullRequest 	Parameter Adherence	Merge a pull request.
+POST	 /minimizeComment 	Parameter Adherence	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /moveProjectCard 	Parameter Adherence	Moves a project card to another place.
+POST	 /moveProjectColumn 	Parameter Adherence	Moves a project column to another place.
+POST	 /pinIssue 	Parameter Adherence	Pin an issue to a repository.
+POST	 /publishSponsorsTier 	Parameter Adherence	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
+POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Parameter Adherence	Regenerates the identity provider recovery codes for an enterprise.
+POST	 /regenerateVerifiableDomainToken 	Parameter Adherence	Regenerates a verifiable domain's verification token.
+POST	 /rejectDeployments 	Parameter Adherence	Reject all pending deployments under one or more environments.
+POST	 /reopenDiscussion 	Parameter Adherence	Reopen a discussion.
+POST	 /reopenIssue 	Parameter Adherence	Reopen a issue.
+POST	 /reopenPullRequest 	Parameter Adherence	Reopen a pull request.
+POST	 /requestReviews 	Parameter Adherence	Set review requests on a pull request.
+POST	 /rerequestCheckSuite 	Parameter Adherence	Rerequests an existing check suite.
+POST	 /resolveReviewThread 	Parameter Adherence	Marks a review thread as resolved.
+POST	 /retireSponsorsTier 	Parameter Adherence	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+POST	 /revokeEnterpriseOrganizationsMigratorRole 	Parameter Adherence	Revoke the migrator role to a user for all organizations under an enterprise account.
+POST	 /revokeMigratorRole 	Parameter Adherence	Revoke the migrator role from a user or a team.
+POST	 /setOrganizationInteractionLimit 	Parameter Adherence	Set an organization level interaction limit for an organization's public repositories.
+POST	 /setRepositoryInteractionLimit 	Parameter Adherence	Sets an interaction limit setting for a repository.
+POST	 /setUserInteractionLimit 	Parameter Adherence	Set a user level interaction limit for an user's public repositories.
+POST	 /startOrganizationMigration 	Parameter Adherence	Starts a GitHub Enterprise Importer organization migration.
+POST	 /startRepositoryMigration 	Parameter Adherence	Starts a GitHub Enterprise Importer (GEI) repository migration.
+POST	 /submitPullRequestReview 	Parameter Adherence	Submits a pending pull request review.
+POST	 /transferEnterpriseOrganization 	Parameter Adherence	Transfer an organization from one enterprise to another enterprise.
+POST	 /transferIssue 	Parameter Adherence	Transfer an issue to a different repository.
+POST	 /unarchiveProjectV2Item 	Parameter Adherence	Unarchives a ProjectV2Item.
+POST	 /unarchiveRepository 	Parameter Adherence	Unarchives a repository.
+POST	 /unfollowOrganization 	Parameter Adherence	Unfollow an organization.
+POST	 /unfollowUser 	Parameter Adherence	Unfollow a user.
+POST	 /unlinkProjectV2FromRepository 	Parameter Adherence	Unlinks a project from a repository.
+POST	 /unlinkProjectV2FromTeam 	Parameter Adherence	Unlinks a project to a team.
+POST	 /unlockLockable 	Parameter Adherence	Unlock a lockable object.
+POST	 /unmarkDiscussionCommentAsAnswer 	Parameter Adherence	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /unmarkFileAsViewed 	Parameter Adherence	Unmark a pull request file as viewed.
+POST	 /unmarkIssueAsDuplicate 	Parameter Adherence	Unmark an issue as a duplicate of another issue.
+POST	 /unmarkProjectV2AsTemplate 	Parameter Adherence	Unmark a project as a template.
+POST	 /unminimizeComment 	Parameter Adherence	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /unpinIssue 	Parameter Adherence	Unpin a pinned issue from a repository.
+POST	 /unresolveReviewThread 	Parameter Adherence	Marks a review thread as unresolved.
+POST	 /unsubscribeFromNotifications 	Parameter Adherence	Unsubscribes from notifications.
+POST	 /updateCheckSuitePreferences 	Parameter Adherence	Modifies the settings of an existing check suite.
+POST	 /updateEnterpriseAllowPrivateRepositoryForkingSetting 	Parameter Adherence	Sets whether private repository forks are enabled for an enterprise.
+POST	 /updateEnterpriseDefaultRepositoryPermissionSetting 	Parameter Adherence	Sets the base repository permission for organizations in an enterprise.
+POST	 /updateEnterpriseMembersCanInviteCollaboratorsSetting 	Parameter Adherence	Sets whether members can invite collaborators are enabled for an enterprise.
+POST	 /updateEnterpriseMembersCanMakePurchasesSetting 	Parameter Adherence	Sets whether or not an organization owner can make purchases.
+POST	 /updateEnterpriseMembersCanViewDependencyInsightsSetting 	Parameter Adherence	Sets the members can view dependency insights for an enterprise.
+POST	 /updateEnterpriseOrganizationProjectsSetting 	Parameter Adherence	Sets whether organization projects are enabled for an enterprise.
+POST	 /updateEnterpriseRepositoryProjectsSetting 	Parameter Adherence	Sets whether repository projects are enabled for a enterprise.
+POST	 /updateEnterpriseTeamDiscussionsSetting 	Parameter Adherence	Sets whether team discussions are enabled for an enterprise.
+POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Parameter Adherence	Sets whether two factor authentication is required for all users in an enterprise.
+POST	 /updateOrganizationAllowPrivateRepositoryForkingSetting 	Parameter Adherence	Sets whether private repository forks are enabled for an organization.
+POST	 /updateOrganizationWebCommitSignoffSetting 	Parameter Adherence	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+POST	 /updatePatreonSponsorability 	Parameter Adherence	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
+POST	 /updatePullRequestBranch 	Parameter Adherence	Merge or Rebase HEAD from upstream branch into pull request branch.
+POST	 /updateRepositoryWebCommitSignoffSetting 	Parameter Adherence	Sets whether contributors are required to sign off on web-based commits for a repository.
+POST	 /updateTopics 	Parameter Adherence	Replaces the repository's topics with the given topics.
+POST	 /verifyVerifiableDomain 	Parameter Adherence	Verify that a verifiable domain has the expected DNS record.

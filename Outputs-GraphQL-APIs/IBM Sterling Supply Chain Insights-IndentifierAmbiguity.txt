@@ -1,0 +1,31 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 26
+POST	 /application 	[Regular Endpoints]	Creates a new application and returns the location of the created resource.
+DELETE	 /application/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an existing application.
+GET	 /application 	[Regular Endpoints]	Returns any existing application that match your query.
+GET	 /application/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the application that matches your query.
+PUT	 /application/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing application and returns a 200 message if the call is successful.
+POST	 /billofmaterial 	[Regular Endpoints]	Creates a new bill of material and returns the location of the created resource.
+POST	 /billofmaterial/bulk 	[Regular Endpoints]	Retrieve and modify bill of material records in bulk.
+DELETE	 /billofmaterial/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an existing bill of material.
+GET	 /billofmaterial 	[Regular Endpoints]	Returns any existing bills of material that match your query.
+GET	 /billofmaterial/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the details of a bill of material that matches the ID.
+PATCH	 /billofmaterial/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing bill of material and returns a 200 message if the call is successful.
+PUT	 /billofmaterial/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing bill of material and returns a 200 message if the call is successful.
+POST	 /carriers 	[Regular Endpoints]	Creates a new carrier and returns the location of the created resource.
+POST	 /carriers/bulk 	[Regular Endpoints]	Retrieve and modify carrier records in bulk.
+DELETE	 /carriers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an existing carrier.
+GET	 /carriers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the details of a carrier that matches the ID.
+GET	 /carriers 	[Regular Endpoints]	Returns any existing carrier records that match your query.
+PATCH	 /carriers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing carrier and returns a 200 message if the call is successful.
+PUT	 /carriers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing carrier and returns a 200 message if the call is successful.
+POST	 /customers 	[Regular Endpoints]	Creates a new customer and returns the location of the created resource.
+POST	 /customers/bulk 	[Regular Endpoints]	Retrieve and modify customer records in bulk.
+DELETE	 /customers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an existing customer.
+GET	 /customers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves the details of a customer that matches the ID.
+GET	 /customers 	[Regular Endpoints]	Returns any existing customers that match your query.
+PATCH	 /customers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates parts of existing customer records and returns a 200 message if the call is successful.
+PUT	 /customers/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing customer and returns a 200 message if the call is successful.

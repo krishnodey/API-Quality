@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 24
+POST	 /createExhibitorLinkRelation	Parameter Tunneling	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLink	Parameter Tunneling	Create an exhibitor link in an event
+POST	 /createFieldDefinition	Parameter Tunneling	Create a new field definition in an event, which is required for custom fields.
+POST	 /createProduct 	Parameter Tunneling	Create a new product in an event.
+POST	 /createPushNotification 	Parameter Tunneling	Create a push notification
+POST	 /createRole 	Parameter Tunneling	Create a role
+POST	 /deleteExhibitorLinkRelation 	Parameter Tunneling	Delete a relation between two exhibitors in an exhibitor link
+POST	 /deleteExhibitorLink 	Parameter Tunneling	Delete an exhibitor link and all its relations.
+POST	 /deleteFieldDefinitions	Parameter Tunneling	Delete field definitions from an event. All values associated will be removed as well.
+POST	 /deletePlanningViews 	Parameter Tunneling	Delete views from a planning.
+POST	 /deleteProducts 	Parameter Tunneling	Delete one or more products from a event, and return product IDs successfully deleted.
+POST	 /deleteRoles	Parameter Tunneling	Delete one or more roles.
+POST	 /deleteSelectFieldValues	Parameter Tunneling	Delete values from a select field definition.
+POST	 /setSelectFieldValue	Parameter Tunneling	Create or update a value for a select field definition.
+POST	 /updateEventPerson 	Parameter Tunneling	Update an existing person in an event.
+POST	 /updateExhibitorMemberRoles 	Parameter Tunneling	Update a role
+POST	 /updateExhibitor	Parameter Tunneling	Update an exhibitor.
+POST	 /updateFieldDefinition	Parameter Tunneling	Update an existing field definition.
+POST	 /updateProduct	Parameter Tunneling	Update an existing product.
+POST	 /updateProducts	Parameter Tunneling	Update an existing product.
+POST	 /updateRole 	Parameter Tunneling	Update a role
+POST	 updateTicketType	Parameter Tunneling	Update an existing ticket type.
+POST	 updateUserTerm	Parameter Tunneling	Update an existing user term.
+
+***Patterns*** 
+Count: 6
+POST	 /createEventDocument/{eventId} 	Parameter Adherence	Create swapcard event document
+POST	 /createEventGroup/{eventId}	Parameter Adherence	Create a new group on the event
+POST	 /createEventPlanningLink/{eventId} 	Parameter Adherence	Create swapcard event planning link
+POST	 /createEventSponsor/{eventId} 	Parameter Adherence	Create swapcard event sponsor
+POST	 /deleteEventExhibitors/{eventId}	Parameter Adherence	Deprecated, use updateExhibitor with withEvent.data set to null instead
+POST	 /deleteEventNotifications/{eventId} 	Parameter Adherence	Delete a swapcard event notification
+POST	 /upsertEventNotification	Parameter Adherence	Upsert a notification for an event

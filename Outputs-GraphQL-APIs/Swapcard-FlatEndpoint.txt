@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 30
+POST	 /createEventDocument/{eventId} 	Structed Endpoint	Create swapcard event document
+POST	 /createEventGroup/{eventId}	Structed Endpoint	Create a new group on the event
+POST	 /createEventPlanningLink/{eventId} 	Structed Endpoint	Create swapcard event planning link
+POST	 /createEventSponsor/{eventId} 	Structed Endpoint	Create swapcard event sponsor
+POST	 /createExhibitorLinkRelation	Structed Endpoint	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLink	Structed Endpoint	Create an exhibitor link in an event
+POST	 /createFieldDefinition	Structed Endpoint	Create a new field definition in an event, which is required for custom fields.
+POST	 /createProduct 	Structed Endpoint	Create a new product in an event.
+POST	 /createPushNotification 	Structed Endpoint	Create a push notification
+POST	 /createRole 	Structed Endpoint	Create a role
+POST	 /deleteEventExhibitors/{eventId}	Structed Endpoint	Deprecated, use updateExhibitor with withEvent.data set to null instead
+POST	 /deleteEventNotifications/{eventId} 	Structed Endpoint	Delete a swapcard event notification
+POST	 /deleteExhibitorLinkRelation 	Structed Endpoint	Delete a relation between two exhibitors in an exhibitor link
+POST	 /deleteExhibitorLink 	Structed Endpoint	Delete an exhibitor link and all its relations.
+POST	 /deleteFieldDefinitions	Structed Endpoint	Delete field definitions from an event. All values associated will be removed as well.
+POST	 /deletePlanningViews 	Structed Endpoint	Delete views from a planning.
+POST	 /deleteProducts 	Structed Endpoint	Delete one or more products from a event, and return product IDs successfully deleted.
+POST	 /deleteRoles	Structed Endpoint	Delete one or more roles.
+POST	 /deleteSelectFieldValues	Structed Endpoint	Delete values from a select field definition.
+POST	 /setSelectFieldValue	Structed Endpoint	Create or update a value for a select field definition.
+POST	 /updateEventPerson 	Structed Endpoint	Update an existing person in an event.
+POST	 /updateExhibitorMemberRoles 	Structed Endpoint	Update a role
+POST	 /updateExhibitor	Structed Endpoint	Update an exhibitor.
+POST	 /updateFieldDefinition	Structed Endpoint	Update an existing field definition.
+POST	 /updateProduct	Structed Endpoint	Update an existing product.
+POST	 /updateProducts	Structed Endpoint	Update an existing product.
+POST	 /updateRole 	Structed Endpoint	Update a role
+POST	 updateTicketType	Structed Endpoint	Update an existing ticket type.
+POST	 updateUserTerm	Structed Endpoint	Update an existing user term.
+POST	 /upsertEventNotification	Structed Endpoint	Upsert a notification for an event

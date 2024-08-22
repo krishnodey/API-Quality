@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 55
+GET	 /abuseReport/{id} 	Cosistent Resource Archetype	Find an abuse report.
+GET	 /abuseReportLabels 	Cosistent Resource Archetype	Abuse report labels.
+GET	 /addOnPurchase/{id} 	Cosistent Resource Archetype	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
+GET	 /aiMessages 	Cosistent Resource Archetype	Find GitLab Duo Chat messages.
+GET	 /auditEventDefinitions 	Cosistent Resource Archetype	Definitions for all audit events available on the instance.
+GET	 /auditEventsInstanceAmazonS3Configurations 	Cosistent Resource Archetype	Instance-level Amazon S3 configurations for audit events.
+GET	 /boardList/{id} 	Cosistent Resource Archetype	Find an issue board list.
+GET	 /ciCatalogResource/{id}	Cosistent Resource Archetype	A single CI/CD Catalog resource visible to an authorized user.
+GET	 /ciCatalogResources/{projectPath}	Cosistent Resource Archetype	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
+GET	 /ciConfig/{projectPath} 	Cosistent Resource Archetype	Linted and processed contents of a CI config. Should not be requested more than once per request
+GET	 /ciMinutesUsage/{namespaceId} 	Cosistent Resource Archetype	Compute usage data for a namespace.
+GET	 /ciPipelineStage/{id} 	Cosistent Resource Archetype	Stage belonging to a CI pipeline.
+GET	 /ciQueueingHistory 	Cosistent Resource Archetype	Time it took for ci job to be picked up by runner in percentiles.
+GET	 /ciVariables 	Cosistent Resource Archetype	List of the instanceâ€™s CI/CD variables.
+GET	 /containerRepository/{id} 	Cosistent Resource Archetype	Find a container repository.
+GET	 /currentLicense 	Cosistent Resource Archetype	Fields related to the current license.
+GET	 /currentUser 	Cosistent Resource Archetype	Get information about current user.
+GET	 /designManagement 	Cosistent Resource Archetype	Fields related to design management.
+GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Cosistent Resource Archetype	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
+GET	 /echo 	Cosistent Resource Archetype	Testing endpoint to validate the API with.
+GET	 /epicBoardList/{id} 	Cosistent Resource Archetype	Returns EpicList.
+GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Cosistent Resource Archetype	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
+GET	 /frecentGroups 	Cosistent Resource Archetype	A userâ€™s frecently visited groups.
+GET	 /frecentProjects 	Cosistent Resource Archetype	A userâ€™s frecently visited projects.
+GET	 /geoNode 	Cosistent Resource Archetype	Find a Geo node
+GET	 /gitpodEnabled 	Cosistent Resource Archetype	Whether Gitpod is enabled in application settings.
+GET	 /group 	Cosistent Resource Archetype	Find a group
+GET	 groups 	Cosistent Resource Archetype	Find groups.
+GET	 /instanceExternalAuditEventDestinations 	Cosistent Resource Archetype	Instance level external audit event destinations.
+GET	 /instanceGoogleCloudLoggingConfigurations 	Cosistent Resource Archetype	Instance level google cloud logging configurations.
+GET	 /instanceSecurityDashboard 	Cosistent Resource Archetype	Fields related to Instance Security Dashboard.
+GET	 /issue/{id} 	Cosistent Resource Archetype	Find an issue.
+GET	 /issues/{assigneeId} 	Cosistent Resource Archetype	Find issues visible to the current user. At least one filter must be provided.
+GET	 /iteration/{id} 	Cosistent Resource Archetype	Find an iteration.
+GET	 /jobs 	Cosistent Resource Archetype	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
+GET	 /licenseHistoryEntries 	Cosistent Resource Archetype	Fields related to entries in the license history.
+GET	 /memberRole/{id} 	Cosistent Resource Archetype	Finds a single custom role.
+GET	 /memberRolePermissions 	Cosistent Resource Archetype	List of all customizable permissions.
+GET	 /memberRoles/{id} 	Cosistent Resource Archetype	Member roles available for the instance.
+GET	 /mergeRequest/{id} 	Cosistent Resource Archetype	Find a merge request.
+GET	 /metadata 	Cosistent Resource Archetype	Metadata about GitLab.
+GET	 /milestone/{id} 	Cosistent Resource Archetype	Find a milestone.
+GET	 /mlModel/{id} 	Cosistent Resource Archetype	Find machine learning models.
+GET	 /namespace 	Cosistent Resource Archetype	Find a namespace.
+GET	 /note/{id} 	Cosistent Resource Archetype	Find a note.
+GET	 /organization/{id} 	Cosistent Resource Archetype	Find an organization.
+GET	 /organizations 	Cosistent Resource Archetype	List organizations.
+GET	 /package/{id} 	Cosistent Resource Archetype	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
+GET	 /project/{fullPath} 	Cosistent Resource Archetype	Find a project.
+GET	 /projects/{ids} 	Cosistent Resource Archetype	Find projects visible to the current user.
+GET	 /queryComplexity 	Cosistent Resource Archetype	Information about the complexity of the GraphQL query.
+GET	 /runner/{id} 	Cosistent Resource Archetype	Find a runner.
+GET	 /runnerSetup 	Cosistent Resource Archetype	Runner setup instructions.
+GET	 /runners/{creatorId}  	Cosistent Resource Archetype	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.
+GET	 /selfManagedAddOnEligibleUsers 	Cosistent Resource Archetype	Users within the self-managed instance who are eligible for add-ons

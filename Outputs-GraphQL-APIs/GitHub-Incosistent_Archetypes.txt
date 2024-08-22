@@ -1,0 +1,261 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 256
+GET	 /codeOfConduct 	Cosistent Resource Archetype	Look up a code of conduct by its key.
+GET	 /codesOfConduct 	Cosistent Resource Archetype	Look up a code of conduct by its key.
+GET	 /enterprise 	Cosistent Resource Archetype	Look up an enterprise by URL slug.
+GET	 /enterpriseAdministratorInvitation 	Cosistent Resource Archetype	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
+GET	 /enterpriseAdministratorInvitationByToken 	Cosistent Resource Archetype	Look up a pending enterprise administrator invitation by invitation token.
+GET	 /license 	Cosistent Resource Archetype	Look up an open source license by its key.
+GET	 /licenses 	Cosistent Resource Archetype	Return a list of known open source licenses.
+GET	 /marketplaceCategories 	Cosistent Resource Archetype	Get alphabetically sorted list of Marketplace categories.
+GET	 /marketplaceCategory 	Cosistent Resource Archetype	Look up a Marketplace category by its slug.
+GET	 /marketplaceListing 	Cosistent Resource Archetype	Look up a single Marketplace listing.
+GET	 /marketplaceListings 	Cosistent Resource Archetype	Look up Marketplace listings.
+GET	 /meta 	Cosistent Resource Archetype	Return information about the GitHub instance.
+GET	 /node 	Cosistent Resource Archetype	Fetches an object given its ID.
+GET	 /nodes 	Cosistent Resource Archetype	Lookup nodes by a list of IDs.
+GET	 /organization 	Cosistent Resource Archetype	Lookup a organization by login.
+GET	 /rateLimit 	Cosistent Resource Archetype	The client's rate limit information.
+GET	 /relay 	Cosistent Resource Archetype	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
+GET	 /repository 	Cosistent Resource Archetype	Lookup a given repository by the owner and repository name.
+GET	 /repositoryOwner 	Cosistent Resource Archetype	Lookup a repository owner (ie. either a User or an Organization) by login.
+GET	 /resource 	Cosistent Resource Archetype	Lookup resource by a URL.
+GET	 /search 	Cosistent Resource Archetype	Perform a search across resources, returning a maximum of 1,000 results.
+GET	 /securityAdvisories 	Cosistent Resource Archetype	GitHub Security Advisories.
+GET	 /securityAdvisory 	Cosistent Resource Archetype	Fetch a Security Advisory by its GHSA ID.
+GET	 /securityVulnerabilities 	Cosistent Resource Archetype	Software Vulnerabilities documented by GitHub Security Advisories.
+GET	 /sponsorables 	Cosistent Resource Archetype	Users and organizations who can be sponsored via GitHub Sponsors.
+GET	 /topic 	Cosistent Resource Archetype	Look up a topic by name.
+GET	 /user 	Cosistent Resource Archetype	Lookup a user by login.
+GET	 /viewer 	Cosistent Resource Archetype	The currently authenticated user.
+POST	 /abortQueuedMigrations 	Cosistent Resource Archetype	Clear all of a customer's queued migrations.
+POST	 /abortRepositoryMigration 	Cosistent Resource Archetype	Abort a repository migration queued or in progress.
+POST	 /acceptEnterpriseAdministratorInvitation 	Cosistent Resource Archetype	Accepts a pending invitation for a user to become an administrator of an enterprise.
+POST	 /acceptTopicSuggestion 	Cosistent Resource Archetype	Applies a suggested topic to the repository.
+POST	 /addAssigneesToAssignable 	Cosistent Resource Archetype	Adds assignees to an assignable object.
+POST	 /addComment 	Cosistent Resource Archetype	Adds a comment to an Issue or Pull Request.
+POST	 /addDiscussionComment 	Cosistent Resource Archetype	Adds a comment to a Discussion, possibly as a reply to another comment.
+POST	 /addDiscussionPollVote 	Cosistent Resource Archetype	Vote for an option in a discussion poll.
+POST	 /addEnterpriseOrganizationMember 	Cosistent Resource Archetype	Adds enterprise members to an organization within the enterprise.
+POST	 /addEnterpriseSupportEntitlement 	Cosistent Resource Archetype	Adds a support entitlement to an enterprise member.
+POST	 /addLabelsToLabelable 	Cosistent Resource Archetype	Adds labels to a labelable object.
+POST	 /addProjectCard 	Cosistent Resource Archetype	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
+POST	 /addProjectColumn 	Cosistent Resource Archetype	Adds a column to a Project.
+POST	 /addProjectV2DraftIssue 	Cosistent Resource Archetype	Creates a new draft issue and add it to a Project.
+POST	 /addProjectV2ItemById 	Cosistent Resource Archetype	Links an existing content instance to a Project.
+POST	 /addPullRequestReview 	Cosistent Resource Archetype	Adds a review to a Pull Request.
+POST	 /addPullRequestReviewComment 	Cosistent Resource Archetype	Adds a comment to a review.
+POST	 /addPullRequestReviewThread 	Cosistent Resource Archetype	Adds a new thread to a pending Pull Request Review.
+POST	 /addPullRequestReviewThreadReply 	Cosistent Resource Archetype	Adds a reply to an existing Pull Request Review Thread.
+POST	 /addReaction 	Cosistent Resource Archetype	Adds a reaction to a subject.
+POST	 /addStar 	Cosistent Resource Archetype	Adds a star to a Starrable.
+POST	 /addUpvote 	Cosistent Resource Archetype	Add an upvote to a discussion or discussion comment.
+POST	 /addVerifiableDomain 	Cosistent Resource Archetype	Adds a verifiable domain to an owning account.
+POST	 /approveDeployments 	Cosistent Resource Archetype	Approve all pending deployments under one or more environments.
+POST	 /approveVerifiableDomain 	Cosistent Resource Archetype	Approve a verifiable domain for notification delivery.
+POST	 /archiveProjectV2Item 	Cosistent Resource Archetype	Archives a ProjectV2Item.
+POST	 /archiveRepository 	Cosistent Resource Archetype	Marks a repository as archived.
+POST	 /cancelEnterpriseAdminInvitation 	Cosistent Resource Archetype	Cancels a pending invitation for an administrator to join an enterprise.
+POST	 /cancelSponsorship 	Cosistent Resource Archetype	Cancel an active sponsorship.
+POST	 /changeUserStatus 	Cosistent Resource Archetype	Update your status on GitHub.
+POST	 /clearLabelsFromLabelable 	Cosistent Resource Archetype	Clears all labels from a labelable object.
+POST	 /clearProjectV2ItemFieldValue 	Cosistent Resource Archetype	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
+POST	 /cloneProject 	Cosistent Resource Archetype	Creates a new project by cloning configuration from an existing project.
+POST	 /cloneTemplateRepository 	Cosistent Resource Archetype	Create a new repository with the same files and directory structure as a template repository.
+POST	 /closeDiscussion 	Cosistent Resource Archetype	Close a discussion.
+POST	 /closeIssue 	Cosistent Resource Archetype	Close an issue.
+POST	 /closePullRequest 	Cosistent Resource Archetype	Close a pull request.
+POST	 /convertProjectCardNoteToIssue 	Cosistent Resource Archetype	Convert a project note card to one associated with a newly created issue.
+POST	 /convertPullRequestToDraft 	Cosistent Resource Archetype	Converts a pull request to draft.
+POST	 /copyProjectV2 	Cosistent Resource Archetype	Copy a project.
+POST	 /createAttributionInvitation 	Cosistent Resource Archetype	Invites a user to claim reattributable data.
+POST	 /createBranchProtectionRule 	Cosistent Resource Archetype	Create a new branch protection rule.
+POST	 /createCheckRun 	Cosistent Resource Archetype	Create a check run.
+POST	 /createCheckSuite 	Cosistent Resource Archetype	Create a check suite.
+POST	 /createCommitOnBranch 	Cosistent Resource Archetype	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
+POST	 /createDeployment 	Cosistent Resource Archetype	Creates a new deployment event.
+POST	 /createDeploymentStatus 	Cosistent Resource Archetype	Create a deployment status.
+POST	 /createDiscussion 	Cosistent Resource Archetype	Create a discussion.
+POST	 /createEnterpriseOrganization 	Cosistent Resource Archetype	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
+POST	 /createEnvironment 	Cosistent Resource Archetype	Creates an environment or simply returns it if already exists.
+POST	 /createIpAllowListEntry 	Cosistent Resource Archetype	Creates a new IP allow list entry.
+POST	 /createIssue 	Cosistent Resource Archetype	Creates a new issue.
+POST	 /createLabel 	Cosistent Resource Archetype	Creates a new label.
+POST	 /createLinkedBranch 	Cosistent Resource Archetype	Create a branch linked to an issue.
+POST	 /createMigrationSource 	Cosistent Resource Archetype	Creates a GitHub Enterprise Importer (GEI) migration source.
+POST	 /createProject 	Cosistent Resource Archetype	Creates a new project.
+POST	 /createProjectV2 	Cosistent Resource Archetype	Creates a new project.
+POST	 /createProjectV2Field 	Cosistent Resource Archetype	Create a new project field.
+POST	 /createPullRequest 	Cosistent Resource Archetype	Create a new pull request.
+POST	 /createRef 	Cosistent Resource Archetype	Create a new Git Ref.
+POST	 /createRepository 	Cosistent Resource Archetype	Create a new repository.
+POST	 /createRepositoryRuleset 	Cosistent Resource Archetype	Create a repository ruleset.
+POST	 /createSponsorsListing 	Cosistent Resource Archetype	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
+POST	 /createSponsorsTier 	Cosistent Resource Archetype	Create a new payment tier for your GitHub Sponsors profile.
+POST	 /createSponsorship 	Cosistent Resource Archetype	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
+POST	 /createSponsorships 	Cosistent Resource Archetype	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+POST	 /createTeamDiscussion 	Cosistent Resource Archetype	Creates a new team discussion.
+POST	 /createTeamDiscussionComment 	Cosistent Resource Archetype	Creates a new team discussion comment.
+POST	 /declineTopicSuggestion 	Cosistent Resource Archetype	Rejects a suggested topic for the repository.
+POST	 /deleteBranchProtectionRule 	Cosistent Resource Archetype	Delete a branch protection rule.
+POST	 /deleteDeployment 	Cosistent Resource Archetype	Deletes a deployment.
+POST	 /deleteDiscussion 	Cosistent Resource Archetype	Delete a discussion and all of its replies.
+POST	 /deleteDiscussionComment 	Cosistent Resource Archetype	Delete a discussion comment. If it has replies, wipe it instead.
+POST	 /deleteEnvironment 	Cosistent Resource Archetype	Deletes an environment.
+POST	 /deleteIpAllowListEntry 	Cosistent Resource Archetype	Deletes an IP allow list entry.
+POST	 /deleteIssue 	Cosistent Resource Archetype	Deletes an Issue object.
+POST	 /deleteIssueComment 	Cosistent Resource Archetype	Deletes an IssueComment object.
+POST	 /deleteLabel 	Cosistent Resource Archetype	Deletes a label.
+POST	 /deleteLinkedBranch 	Cosistent Resource Archetype	Unlink a branch from an issue.
+POST	 /deletePackageVersion 	Cosistent Resource Archetype	Delete a package version.
+POST	 /deleteProject 	Cosistent Resource Archetype	Deletes a project.
+POST	 /deleteProjectCard 	Cosistent Resource Archetype	Deletes a project card.
+POST	 /deleteProjectColumn 	Cosistent Resource Archetype	Deletes a project column.
+POST	 /deleteProjectV2 	Cosistent Resource Archetype	Delete a project.
+POST	 /deleteProjectV2Field 	Cosistent Resource Archetype	Delete a project field.
+POST	 /deleteProjectV2Item 	Cosistent Resource Archetype	Deletes an item from a Project.
+POST	 /deleteProjectV2Workflow 	Cosistent Resource Archetype	Deletes a project workflow.
+POST	 /deletePullRequestReview 	Cosistent Resource Archetype	Deletes a pull request review.
+POST	 /deletePullRequestReviewComment 	Cosistent Resource Archetype	Deletes a pull request review comment.
+POST	 /deleteRef 	Cosistent Resource Archetype	Delete a Git Ref.
+POST	 /deleteRepositoryRuleset 	Cosistent Resource Archetype	Delete a repository ruleset.
+POST	 /deleteTeamDiscussion 	Cosistent Resource Archetype	Deletes a team discussion.
+POST	 /deleteTeamDiscussionComment 	Cosistent Resource Archetype	Deletes a team discussion comment.
+POST	 /deleteVerifiableDomain 	Cosistent Resource Archetype	Deletes a verifiable domain.
+POST	 /dequeuePullRequest 	Cosistent Resource Archetype	Remove a pull request from the merge queue.
+POST	 /disablePullRequestAutoMerge 	Cosistent Resource Archetype	Disable auto merge on the given pull request.
+POST	 /dismissPullRequestReview 	Cosistent Resource Archetype	Dismisses an approved or rejected pull request review.
+POST	 /dismissRepositoryVulnerabilityAlert 	Cosistent Resource Archetype	Dismisses the Dependabot alert.
+POST	 /enablePullRequestAutoMerge 	Cosistent Resource Archetype	Enable the default auto-merge on a pull request.
+POST	 /enqueuePullRequest 	Cosistent Resource Archetype	Add a pull request to the merge queue.
+POST	 /followOrganization 	Cosistent Resource Archetype	Follow an organization.
+POST	 /followUser 	Cosistent Resource Archetype	Follow a user.
+POST	 /grantEnterpriseOrganizationsMigratorRole 	Cosistent Resource Archetype	Grant the migrator role to a user for all organizations under an enterprise account.
+POST	 /grantMigratorRole 	Cosistent Resource Archetype	Grant the migrator role to a user or a team.
+POST	 /importProject 	Cosistent Resource Archetype	Creates a new project by importing columns and a list of issues/PRs.
+POST	 /inviteEnterpriseAdmin 	Cosistent Resource Archetype	Invite someone to become an administrator of the enterprise.
+POST	 /linkProjectV2ToRepository 	Cosistent Resource Archetype	Links a project to a repository.
+POST	 /linkProjectV2ToTeam 	Cosistent Resource Archetype	Links a project to a team.
+POST	 /linkRepositoryToProject 	Cosistent Resource Archetype	Creates a repository link for a project.
+POST	 /lockLockable 	Cosistent Resource Archetype	Lock a lockable object.
+POST	 /markDiscussionCommentAsAnswer 	Cosistent Resource Archetype	Mark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /markFileAsViewed 	Cosistent Resource Archetype	Mark a pull request file as viewed.
+POST	 /markProjectV2AsTemplate 	Cosistent Resource Archetype	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
+POST	 /markPullRequestReadyForReview 	Cosistent Resource Archetype	Marks a pull request ready for review.
+POST	 /mergeBranch 	Cosistent Resource Archetype	Merge a head into a branch.
+POST	 /mergePullRequest 	Cosistent Resource Archetype	Merge a pull request.
+POST	 /minimizeComment 	Cosistent Resource Archetype	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /moveProjectCard 	Cosistent Resource Archetype	Moves a project card to another place.
+POST	 /moveProjectColumn 	Cosistent Resource Archetype	Moves a project column to another place.
+POST	 /pinIssue 	Cosistent Resource Archetype	Pin an issue to a repository.
+POST	 /publishSponsorsTier 	Cosistent Resource Archetype	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
+POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Cosistent Resource Archetype	Regenerates the identity provider recovery codes for an enterprise.
+POST	 /regenerateVerifiableDomainToken 	Cosistent Resource Archetype	Regenerates a verifiable domain's verification token.
+POST	 /rejectDeployments 	Cosistent Resource Archetype	Reject all pending deployments under one or more environments.
+POST	 /removeAssigneesFromAssignable 	Cosistent Resource Archetype	Removes assignees from an assignable object.
+POST	 /removeEnterpriseAdmin 	Cosistent Resource Archetype	Removes an administrator from the enterprise.
+POST	 /removeEnterpriseIdentityProvider 	Cosistent Resource Archetype	Removes the identity provider from an enterprise.
+POST	 /removeEnterpriseMember 	Cosistent Resource Archetype	Removes a user from all organizations within the enterprise.
+POST	 /removeEnterpriseOrganization 	Cosistent Resource Archetype	Removes an organization from the enterprise.
+POST	 /removeEnterpriseSupportEntitlement 	Cosistent Resource Archetype	Removes a support entitlement from an enterprise member.
+POST	 /removeLabelsFromLabelable 	Cosistent Resource Archetype	Removes labels from a Labelable object.
+POST	 /removeOutsideCollaborator 	Cosistent Resource Archetype	Removes outside collaborator from all repositories in an organization.
+POST	 /removeReaction 	Cosistent Resource Archetype	Removes a reaction from a subject.
+POST	 /removeStar 	Cosistent Resource Archetype	Removes a star from a Starrable.
+POST	 /removeUpvote 	Cosistent Resource Archetype	Remove an upvote to a discussion or discussion comment.
+POST	 /reopenDiscussion 	Cosistent Resource Archetype	Reopen a discussion.
+POST	 /reopenIssue 	Cosistent Resource Archetype	Reopen a issue.
+POST	 /reopenPullRequest 	Cosistent Resource Archetype	Reopen a pull request.
+POST	 /requestReviews 	Cosistent Resource Archetype	Set review requests on a pull request.
+POST	 /rerequestCheckSuite 	Cosistent Resource Archetype	Rerequests an existing check suite.
+POST	 /resolveReviewThread 	Cosistent Resource Archetype	Marks a review thread as resolved.
+POST	 /retireSponsorsTier 	Cosistent Resource Archetype	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+POST	 /revertPullRequest 	Cosistent Resource Archetype	Create a pull request that reverts the changes from a merged pull request.
+POST	 /revokeEnterpriseOrganizationsMigratorRole 	Cosistent Resource Archetype	Revoke the migrator role to a user for all organizations under an enterprise account.
+POST	 /revokeMigratorRole 	Cosistent Resource Archetype	Revoke the migrator role from a user or a team.
+POST	 /setEnterpriseIdentityProvider 	Cosistent Resource Archetype	Creates or updates the identity provider for an enterprise.
+POST	 /setOrganizationInteractionLimit 	Cosistent Resource Archetype	Set an organization level interaction limit for an organization's public repositories.
+POST	 /setRepositoryInteractionLimit 	Cosistent Resource Archetype	Sets an interaction limit setting for a repository.
+POST	 /setUserInteractionLimit 	Cosistent Resource Archetype	Set a user level interaction limit for an user's public repositories.
+POST	 /startOrganizationMigration 	Cosistent Resource Archetype	Starts a GitHub Enterprise Importer organization migration.
+POST	 /startRepositoryMigration 	Cosistent Resource Archetype	Starts a GitHub Enterprise Importer (GEI) repository migration.
+POST	 /submitPullRequestReview 	Cosistent Resource Archetype	Submits a pending pull request review.
+POST	 /transferEnterpriseOrganization 	Cosistent Resource Archetype	Transfer an organization from one enterprise to another enterprise.
+POST	 /transferIssue 	Cosistent Resource Archetype	Transfer an issue to a different repository.
+POST	 /unarchiveProjectV2Item 	Cosistent Resource Archetype	Unarchives a ProjectV2Item.
+POST	 /unarchiveRepository 	Cosistent Resource Archetype	Unarchives a repository.
+POST	 /unfollowOrganization 	Cosistent Resource Archetype	Unfollow an organization.
+POST	 /unfollowUser 	Cosistent Resource Archetype	Unfollow a user.
+POST	 /unlinkProjectV2FromRepository 	Cosistent Resource Archetype	Unlinks a project from a repository.
+POST	 /unlinkProjectV2FromTeam 	Cosistent Resource Archetype	Unlinks a project to a team.
+POST	 /unlinkRepositoryFromProject 	Cosistent Resource Archetype	Deletes a repository link from a project.
+POST	 /unlockLockable 	Cosistent Resource Archetype	Unlock a lockable object.
+POST	 /unmarkDiscussionCommentAsAnswer 	Cosistent Resource Archetype	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /unmarkFileAsViewed 	Cosistent Resource Archetype	Unmark a pull request file as viewed.
+POST	 /unmarkIssueAsDuplicate 	Cosistent Resource Archetype	Unmark an issue as a duplicate of another issue.
+POST	 /unmarkProjectV2AsTemplate 	Cosistent Resource Archetype	Unmark a project as a template.
+POST	 /unminimizeComment 	Cosistent Resource Archetype	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /unpinIssue 	Cosistent Resource Archetype	Unpin a pinned issue from a repository.
+POST	 /unresolveReviewThread 	Cosistent Resource Archetype	Marks a review thread as unresolved.
+POST	 /unsubscribeFromNotifications 	Cosistent Resource Archetype	Unsubscribes from notifications.
+POST	 /updateBranchProtectionRule 	Cosistent Resource Archetype	Update a branch protection rule.
+POST	 /updateCheckRun 	Cosistent Resource Archetype	Update a check run.
+POST	 /updateCheckSuitePreferences 	Cosistent Resource Archetype	Modifies the settings of an existing check suite.
+POST	 /updateDiscussion 	Cosistent Resource Archetype	Update a discussion.
+POST	 /updateDiscussionComment 	Cosistent Resource Archetype	Update the contents of a comment on a Discussion.
+POST	 /updateEnterpriseAdministratorRole 	Cosistent Resource Archetype	Updates the role of an enterprise administrator.
+POST	 /updateEnterpriseAllowPrivateRepositoryForkingSetting 	Cosistent Resource Archetype	Sets whether private repository forks are enabled for an enterprise.
+POST	 /updateEnterpriseDefaultRepositoryPermissionSetting 	Cosistent Resource Archetype	Sets the base repository permission for organizations in an enterprise.
+POST	 /updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Cosistent Resource Archetype	Sets whether organization members with admin permissions on a repository can change repository visibility.
+POST	 /updateEnterpriseMembersCanCreateRepositoriesSetting 	Cosistent Resource Archetype	Sets the members can create repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteIssuesSetting 	Cosistent Resource Archetype	Sets the members can delete issues setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteRepositoriesSetting 	Cosistent Resource Archetype	Sets the members can delete repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanInviteCollaboratorsSetting 	Cosistent Resource Archetype	Sets whether members can invite collaborators are enabled for an enterprise.
+POST	 /updateEnterpriseMembersCanMakePurchasesSetting 	Cosistent Resource Archetype	Sets whether or not an organization owner can make purchases.
+POST	 /updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Cosistent Resource Archetype	Sets the members can update protected branches setting for an enterprise.
+POST	 /updateEnterpriseMembersCanViewDependencyInsightsSetting 	Cosistent Resource Archetype	Sets the members can view dependency insights for an enterprise.
+POST	 /updateEnterpriseOrganizationProjectsSetting 	Cosistent Resource Archetype	Sets whether organization projects are enabled for an enterprise.
+POST	 /updateEnterpriseOwnerOrganizationRole 	Cosistent Resource Archetype	Updates the role of an enterprise owner with an organization.
+POST	 /updateEnterpriseProfile 	Cosistent Resource Archetype	Updates an enterprise's profile.
+POST	 /updateEnterpriseRepositoryProjectsSetting 	Cosistent Resource Archetype	Sets whether repository projects are enabled for a enterprise.
+POST	 /updateEnterpriseTeamDiscussionsSetting 	Cosistent Resource Archetype	Sets whether team discussions are enabled for an enterprise.
+POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Cosistent Resource Archetype	Sets whether two factor authentication is required for all users in an enterprise.
+POST	 /updateEnvironment 	Cosistent Resource Archetype	Updates an environment.
+POST	 /updateIpAllowListEnabledSetting 	Cosistent Resource Archetype	Sets whether an IP allow list is enabled on an owner.
+POST	 /updateIpAllowListEntry 	Cosistent Resource Archetype	Updates an IP allow list entry.
+POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Cosistent Resource Archetype	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
+POST	 /updateIssue 	Cosistent Resource Archetype	Updates an Issue.
+POST	 /updateIssueComment 	Cosistent Resource Archetype	Updates an IssueComment object.
+POST	 /updateLabel 	Cosistent Resource Archetype	Updates an existing label.
+POST	 /updateNotificationRestrictionSetting 	Cosistent Resource Archetype	Update the setting to restrict notifications to only verified or approved domains available to an owner.
+POST	 /updateOrganizationAllowPrivateRepositoryForkingSetting 	Cosistent Resource Archetype	Sets whether private repository forks are enabled for an organization.
+POST	 /updateOrganizationWebCommitSignoffSetting 	Cosistent Resource Archetype	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+POST	 /updatePatreonSponsorability 	Cosistent Resource Archetype	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
+POST	 /updateProject 	Cosistent Resource Archetype	Updates an existing project.
+POST	 /updateProjectCard 	Cosistent Resource Archetype	Updates an existing project card.
+POST	 /updateProjectColumn 	Cosistent Resource Archetype	Updates an existing project column.
+POST	 /updateProjectV2 	Cosistent Resource Archetype	Updates an existing project (beta).
+POST	 /updateProjectV2Collaborators 	Cosistent Resource Archetype	Update the collaborators on a team or a project.
+POST	 /updateProjectV2DraftIssue 	Cosistent Resource Archetype	Updates a draft issue within a Project.
+POST	 /updateProjectV2ItemFieldValue 	Cosistent Resource Archetype	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
+POST	 /updateProjectV2ItemPosition 	Cosistent Resource Archetype	This mutation updates the position of the item in the project, where the position represents the priority of an item.
+POST	 /updatePullRequest 	Cosistent Resource Archetype	Update a pull request.
+POST	 /updatePullRequestBranch 	Cosistent Resource Archetype	Merge or Rebase HEAD from upstream branch into pull request branch.
+POST	 /updatePullRequestReview 	Cosistent Resource Archetype	Updates the body of a pull request review.
+POST	 /updatePullRequestReviewComment 	Cosistent Resource Archetype	Updates a pull request review comment.
+POST	 /updateRef 	Cosistent Resource Archetype	Update a Git Ref.
+POST	 /updateRefs 	Cosistent Resource Archetype	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
+POST	 /updateRepository 	Cosistent Resource Archetype	Update information about a repository.
+POST	 /updateRepositoryRuleset 	Cosistent Resource Archetype	Update a repository ruleset.
+POST	 /updateRepositoryWebCommitSignoffSetting 	Cosistent Resource Archetype	Sets whether contributors are required to sign off on web-based commits for a repository.
+POST	 /updateSponsorshipPreferences 	Cosistent Resource Archetype	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
+POST	 /updateSubscription 	Cosistent Resource Archetype	Updates the state for subscribable subjects.
+POST	 /updateTeamDiscussion 	Cosistent Resource Archetype	Updates a team discussion.
+POST	 /updateTeamDiscussionComment 	Cosistent Resource Archetype	Updates a discussion comment.
+POST	 /updateTeamReviewAssignment 	Cosistent Resource Archetype	Updates team review assignment.
+POST	 /updateTeamsRepository 	Cosistent Resource Archetype	Update team repository.
+POST	 /updateTopics 	Cosistent Resource Archetype	Replaces the repository's topics with the given topics.
+POST	 /verifyVerifiableDomain 	Cosistent Resource Archetype	Verify that a verifiable domain has the expected DNS record.

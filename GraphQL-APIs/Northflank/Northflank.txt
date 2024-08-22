@@ -1,6 +1,6 @@
 GET >> /v1/projects >> Lists projects for the authenticated user or team. >>
 POST >> /v1/projects >> Creates a new project. >>
-PUT >> /v1/projects << Create or update project >> 
+PUT >> /v1/projects >> Create or update project >> 
 PATCH >> /v1/projects/{projectId}>> Updates a project. >> 
 GET >> /v1/projects/{projectId} >> Get information about the given project >>
 DELETE >> /v1/projects/{projectId} >> Delete the given project. Fails if the project isn't empty. >> 

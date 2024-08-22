@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 18
+GET	 /v3/events/awesome-event 	Cosistent Resource Archetype	Authenticate API calls with the API Key To authenticate API calls with the API Key, set the Authorization HTTP header value as Bearer API_KEY.
+GET	 /oauth2/authorize 	Cosistent Resource Archetype	Your application must redirect the business userâ€™s browser to Yelp's authorization URL. This will be in the form of a GET request and you must provide the necessary GET parameters.
+POST	 /oauth2/token 	Cosistent Resource Archetype	Refreshing an access token Use the refresh token from step 1 to request a new access token by calling the get access token with your refresh token. The endpoint will return a new access token.
+GET	 /v3/businesses/search?sort_by=best_match&limit=20 	Cosistent Resource Archetype	This endpoint returns up to 1000 businesses with some basic information based on the provided search criteria.
+GET	 /v3/businesses/search/phone 	Cosistent Resource Archetype	Search for businesses by phone number.
+GET	/v3/businesses/matches	 Find the Yelp business that matches an exact input location. Use this to match business data from other sources with Yelp businesses. 	Cosistent Resource Archetype	
+GET		/v3/businesses/{id}		Cosistent Resource Archetype	Get rich business data, such as name, address, phone number, photos, Yelp rating, price levels and hours of operation.
+GET	 /v3/transactions/{transaction_type}/search	Search for businesses which support food delivery transactions. 	Cosistent Resource Archetype	transaction_type string required Type of transaction supported by the business
+GET	 /v3/businesses/engagement	Get engagement metrics information for the provided businesses. 	Cosistent Resource Archetype	
+GET		/v3/businesses/{business_id_or_alias}/service_offerings		Cosistent Resource Archetype	Get active and eligible service offerings for a business.
+GET	 /v3/businesses/business_id_or_alias/reviews?limit=20&sort_by=yelp_sort 	Cosistent Resource Archetype	Get up to three review excerpts for a business.
+GET	 /v3/businesses/business_id_or_alias/review_highlights?count=3 	Cosistent Resource Archetype	Get a business's review highlights.
+GET	 /v3/events?limit=3&sort_by=desc&sort_on=popularity		Cosistent Resource Archetype	Get events that match search criteria.
+GET	 /v3/events/event_id 	Cosistent Resource Archetype	Get the detailed information of a Yelp event. Get the event ID from /events or /events/featured.
+GET	 /v3/events/featured 	Cosistent Resource Archetype	Get the featured event for a given location. Featured events are chosen by Yelp's community managers.
+GET	 /v3/categories 	Cosistent Resource Archetype	Get all Yelp business categories across all locales.
+GET	 /v3/categories/alias 	Cosistent Resource Archetype	Get detailed information about the Yelp category specified by a Yelp category alias. The alias for each category can be found either by using the /v3/categories endpoint, or the category list. Miscellaneous
+GET	 /v3/autocomplete 	Cosistent Resource Archetype	Provide autocomplete suggestions for businesses, search keywords and categories.

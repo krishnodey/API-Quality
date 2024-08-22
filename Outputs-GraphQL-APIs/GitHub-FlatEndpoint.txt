@@ -1,0 +1,261 @@
+***Anti-Pattern*** 
+Count: 51
+GET	 /enterpriseAdministratorInvitationByToken 	Complex Words Present in Endpoint	Look up a pending enterprise administrator invitation by invitation token.
+POST	 /addProjectV2DraftIssue 	Complex Words Present in Endpoint	Creates a new draft issue and add it to a Project.
+POST	 /addProjectV2ItemById 	Complex Words Present in Endpoint	Links an existing content instance to a Project.
+POST	 /addPullRequestReviewComment 	Complex Words Present in Endpoint	Adds a comment to a review.
+POST	 /addPullRequestReviewThread 	Complex Words Present in Endpoint	Adds a new thread to a pending Pull Request Review.
+POST	 /addPullRequestReviewThreadReply 	Complex Words Present in Endpoint	Adds a reply to an existing Pull Request Review Thread.
+POST	 /clearProjectV2ItemFieldValue 	Complex Words Present in Endpoint	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
+POST	 /convertProjectCardNoteToIssue 	Complex Words Present in Endpoint	Convert a project note card to one associated with a newly created issue.
+POST	 /convertPullRequestToDraft 	Complex Words Present in Endpoint	Converts a pull request to draft.
+POST	 /createIpAllowListEntry 	Complex Words Present in Endpoint	Creates a new IP allow list entry.
+POST	 /deleteIpAllowListEntry 	Complex Words Present in Endpoint	Deletes an IP allow list entry.
+POST	 /deletePullRequestReviewComment 	Complex Words Present in Endpoint	Deletes a pull request review comment.
+POST	 /disablePullRequestAutoMerge 	Complex Words Present in Endpoint	Disable auto merge on the given pull request.
+POST	 /enablePullRequestAutoMerge 	Complex Words Present in Endpoint	Enable the default auto-merge on a pull request.
+POST	 /grantEnterpriseOrganizationsMigratorRole 	Complex Words Present in Endpoint	Grant the migrator role to a user for all organizations under an enterprise account.
+POST	 /linkProjectV2ToRepository 	Complex Words Present in Endpoint	Links a project to a repository.
+POST	 /linkProjectV2ToTeam 	Complex Words Present in Endpoint	Links a project to a team.
+POST	 /markDiscussionCommentAsAnswer 	Complex Words Present in Endpoint	Mark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /markProjectV2AsTemplate 	Complex Words Present in Endpoint	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
+POST	 /markPullRequestReadyForReview 	Complex Words Present in Endpoint	Marks a pull request ready for review.
+POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Complex Words Present in Endpoint	Regenerates the identity provider recovery codes for an enterprise.
+POST	 /revokeEnterpriseOrganizationsMigratorRole 	Complex Words Present in Endpoint	Revoke the migrator role to a user for all organizations under an enterprise account.
+POST	 /unlinkProjectV2FromRepository 	Complex Words Present in Endpoint	Unlinks a project from a repository.
+POST	 /unlinkProjectV2FromTeam 	Complex Words Present in Endpoint	Unlinks a project to a team.
+POST	 /unmarkDiscussionCommentAsAnswer 	Complex Words Present in Endpoint	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /unmarkProjectV2AsTemplate 	Complex Words Present in Endpoint	Unmark a project as a template.
+POST	 /updateEnterpriseAllowPrivateRepositoryForkingSetting 	Complex Words Present in Endpoint	Sets whether private repository forks are enabled for an enterprise.
+POST	 /updateEnterpriseDefaultRepositoryPermissionSetting 	Complex Words Present in Endpoint	Sets the base repository permission for organizations in an enterprise.
+POST	 /updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Complex Words Present in Endpoint	Sets whether organization members with admin permissions on a repository can change repository visibility.
+POST	 /updateEnterpriseMembersCanCreateRepositoriesSetting 	Complex Words Present in Endpoint	Sets the members can create repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteIssuesSetting 	Complex Words Present in Endpoint	Sets the members can delete issues setting for an enterprise.
+POST	 /updateEnterpriseMembersCanDeleteRepositoriesSetting 	Complex Words Present in Endpoint	Sets the members can delete repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanInviteCollaboratorsSetting 	Complex Words Present in Endpoint	Sets whether members can invite collaborators are enabled for an enterprise.
+POST	 /updateEnterpriseMembersCanMakePurchasesSetting 	Complex Words Present in Endpoint	Sets whether or not an organization owner can make purchases.
+POST	 /updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Complex Words Present in Endpoint	Sets the members can update protected branches setting for an enterprise.
+POST	 /updateEnterpriseMembersCanViewDependencyInsightsSetting 	Complex Words Present in Endpoint	Sets the members can view dependency insights for an enterprise.
+POST	 /updateEnterpriseOrganizationProjectsSetting 	Complex Words Present in Endpoint	Sets whether organization projects are enabled for an enterprise.
+POST	 /updateEnterpriseOwnerOrganizationRole 	Complex Words Present in Endpoint	Updates the role of an enterprise owner with an organization.
+POST	 /updateEnterpriseRepositoryProjectsSetting 	Complex Words Present in Endpoint	Sets whether repository projects are enabled for a enterprise.
+POST	 /updateEnterpriseTeamDiscussionsSetting 	Complex Words Present in Endpoint	Sets whether team discussions are enabled for an enterprise.
+POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Complex Words Present in Endpoint	Sets whether two factor authentication is required for all users in an enterprise.
+POST	 /updateIpAllowListEnabledSetting 	Complex Words Present in Endpoint	Sets whether an IP allow list is enabled on an owner.
+POST	 /updateIpAllowListEntry 	Complex Words Present in Endpoint	Updates an IP allow list entry.
+POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Complex Words Present in Endpoint	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
+POST	 /updateOrganizationAllowPrivateRepositoryForkingSetting 	Complex Words Present in Endpoint	Sets whether private repository forks are enabled for an organization.
+POST	 /updateOrganizationWebCommitSignoffSetting 	Complex Words Present in Endpoint	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+POST	 /updateProjectV2DraftIssue 	Complex Words Present in Endpoint	Updates a draft issue within a Project.
+POST	 /updateProjectV2ItemFieldValue 	Complex Words Present in Endpoint	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
+POST	 /updateProjectV2ItemPosition 	Complex Words Present in Endpoint	This mutation updates the position of the item in the project, where the position represents the priority of an item.
+POST	 /updatePullRequestReviewComment 	Complex Words Present in Endpoint	Updates a pull request review comment.
+POST	 /updateRepositoryWebCommitSignoffSetting 	Complex Words Present in Endpoint	Sets whether contributors are required to sign off on web-based commits for a repository.
+
+***Patterns*** 
+Count: 205
+GET	 /codeOfConduct 	Structed Endpoint	Look up a code of conduct by its key.
+GET	 /codesOfConduct 	Structed Endpoint	Look up a code of conduct by its key.
+GET	 /enterprise 	Structed Endpoint	Look up an enterprise by URL slug.
+GET	 /enterpriseAdministratorInvitation 	Structed Endpoint	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
+GET	 /license 	Structed Endpoint	Look up an open source license by its key.
+GET	 /licenses 	Structed Endpoint	Return a list of known open source licenses.
+GET	 /marketplaceCategories 	Structed Endpoint	Get alphabetically sorted list of Marketplace categories.
+GET	 /marketplaceCategory 	Structed Endpoint	Look up a Marketplace category by its slug.
+GET	 /marketplaceListing 	Structed Endpoint	Look up a single Marketplace listing.
+GET	 /marketplaceListings 	Structed Endpoint	Look up Marketplace listings.
+GET	 /meta 	Structed Endpoint	Return information about the GitHub instance.
+GET	 /node 	Structed Endpoint	Fetches an object given its ID.
+GET	 /nodes 	Structed Endpoint	Lookup nodes by a list of IDs.
+GET	 /organization 	Structed Endpoint	Lookup a organization by login.
+GET	 /rateLimit 	Structed Endpoint	The client's rate limit information.
+GET	 /relay 	Structed Endpoint	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
+GET	 /repository 	Structed Endpoint	Lookup a given repository by the owner and repository name.
+GET	 /repositoryOwner 	Structed Endpoint	Lookup a repository owner (ie. either a User or an Organization) by login.
+GET	 /resource 	Structed Endpoint	Lookup resource by a URL.
+GET	 /search 	Structed Endpoint	Perform a search across resources, returning a maximum of 1,000 results.
+GET	 /securityAdvisories 	Structed Endpoint	GitHub Security Advisories.
+GET	 /securityAdvisory 	Structed Endpoint	Fetch a Security Advisory by its GHSA ID.
+GET	 /securityVulnerabilities 	Structed Endpoint	Software Vulnerabilities documented by GitHub Security Advisories.
+GET	 /sponsorables 	Structed Endpoint	Users and organizations who can be sponsored via GitHub Sponsors.
+GET	 /topic 	Structed Endpoint	Look up a topic by name.
+GET	 /user 	Structed Endpoint	Lookup a user by login.
+GET	 /viewer 	Structed Endpoint	The currently authenticated user.
+POST	 /abortQueuedMigrations 	Structed Endpoint	Clear all of a customer's queued migrations.
+POST	 /abortRepositoryMigration 	Structed Endpoint	Abort a repository migration queued or in progress.
+POST	 /acceptEnterpriseAdministratorInvitation 	Structed Endpoint	Accepts a pending invitation for a user to become an administrator of an enterprise.
+POST	 /acceptTopicSuggestion 	Structed Endpoint	Applies a suggested topic to the repository.
+POST	 /addAssigneesToAssignable 	Structed Endpoint	Adds assignees to an assignable object.
+POST	 /addComment 	Structed Endpoint	Adds a comment to an Issue or Pull Request.
+POST	 /addDiscussionComment 	Structed Endpoint	Adds a comment to a Discussion, possibly as a reply to another comment.
+POST	 /addDiscussionPollVote 	Structed Endpoint	Vote for an option in a discussion poll.
+POST	 /addEnterpriseOrganizationMember 	Structed Endpoint	Adds enterprise members to an organization within the enterprise.
+POST	 /addEnterpriseSupportEntitlement 	Structed Endpoint	Adds a support entitlement to an enterprise member.
+POST	 /addLabelsToLabelable 	Structed Endpoint	Adds labels to a labelable object.
+POST	 /addProjectCard 	Structed Endpoint	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
+POST	 /addProjectColumn 	Structed Endpoint	Adds a column to a Project.
+POST	 /addPullRequestReview 	Structed Endpoint	Adds a review to a Pull Request.
+POST	 /addReaction 	Structed Endpoint	Adds a reaction to a subject.
+POST	 /addStar 	Structed Endpoint	Adds a star to a Starrable.
+POST	 /addUpvote 	Structed Endpoint	Add an upvote to a discussion or discussion comment.
+POST	 /addVerifiableDomain 	Structed Endpoint	Adds a verifiable domain to an owning account.
+POST	 /approveDeployments 	Structed Endpoint	Approve all pending deployments under one or more environments.
+POST	 /approveVerifiableDomain 	Structed Endpoint	Approve a verifiable domain for notification delivery.
+POST	 /archiveProjectV2Item 	Structed Endpoint	Archives a ProjectV2Item.
+POST	 /archiveRepository 	Structed Endpoint	Marks a repository as archived.
+POST	 /cancelEnterpriseAdminInvitation 	Structed Endpoint	Cancels a pending invitation for an administrator to join an enterprise.
+POST	 /cancelSponsorship 	Structed Endpoint	Cancel an active sponsorship.
+POST	 /changeUserStatus 	Structed Endpoint	Update your status on GitHub.
+POST	 /clearLabelsFromLabelable 	Structed Endpoint	Clears all labels from a labelable object.
+POST	 /cloneProject 	Structed Endpoint	Creates a new project by cloning configuration from an existing project.
+POST	 /cloneTemplateRepository 	Structed Endpoint	Create a new repository with the same files and directory structure as a template repository.
+POST	 /closeDiscussion 	Structed Endpoint	Close a discussion.
+POST	 /closeIssue 	Structed Endpoint	Close an issue.
+POST	 /closePullRequest 	Structed Endpoint	Close a pull request.
+POST	 /copyProjectV2 	Structed Endpoint	Copy a project.
+POST	 /createAttributionInvitation 	Structed Endpoint	Invites a user to claim reattributable data.
+POST	 /createBranchProtectionRule 	Structed Endpoint	Create a new branch protection rule.
+POST	 /createCheckRun 	Structed Endpoint	Create a check run.
+POST	 /createCheckSuite 	Structed Endpoint	Create a check suite.
+POST	 /createCommitOnBranch 	Structed Endpoint	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
+POST	 /createDeployment 	Structed Endpoint	Creates a new deployment event.
+POST	 /createDeploymentStatus 	Structed Endpoint	Create a deployment status.
+POST	 /createDiscussion 	Structed Endpoint	Create a discussion.
+POST	 /createEnterpriseOrganization 	Structed Endpoint	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
+POST	 /createEnvironment 	Structed Endpoint	Creates an environment or simply returns it if already exists.
+POST	 /createIssue 	Structed Endpoint	Creates a new issue.
+POST	 /createLabel 	Structed Endpoint	Creates a new label.
+POST	 /createLinkedBranch 	Structed Endpoint	Create a branch linked to an issue.
+POST	 /createMigrationSource 	Structed Endpoint	Creates a GitHub Enterprise Importer (GEI) migration source.
+POST	 /createProject 	Structed Endpoint	Creates a new project.
+POST	 /createProjectV2 	Structed Endpoint	Creates a new project.
+POST	 /createProjectV2Field 	Structed Endpoint	Create a new project field.
+POST	 /createPullRequest 	Structed Endpoint	Create a new pull request.
+POST	 /createRef 	Structed Endpoint	Create a new Git Ref.
+POST	 /createRepository 	Structed Endpoint	Create a new repository.
+POST	 /createRepositoryRuleset 	Structed Endpoint	Create a repository ruleset.
+POST	 /createSponsorsListing 	Structed Endpoint	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
+POST	 /createSponsorsTier 	Structed Endpoint	Create a new payment tier for your GitHub Sponsors profile.
+POST	 /createSponsorship 	Structed Endpoint	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
+POST	 /createSponsorships 	Structed Endpoint	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+POST	 /createTeamDiscussion 	Structed Endpoint	Creates a new team discussion.
+POST	 /createTeamDiscussionComment 	Structed Endpoint	Creates a new team discussion comment.
+POST	 /declineTopicSuggestion 	Structed Endpoint	Rejects a suggested topic for the repository.
+POST	 /deleteBranchProtectionRule 	Structed Endpoint	Delete a branch protection rule.
+POST	 /deleteDeployment 	Structed Endpoint	Deletes a deployment.
+POST	 /deleteDiscussion 	Structed Endpoint	Delete a discussion and all of its replies.
+POST	 /deleteDiscussionComment 	Structed Endpoint	Delete a discussion comment. If it has replies, wipe it instead.
+POST	 /deleteEnvironment 	Structed Endpoint	Deletes an environment.
+POST	 /deleteIssue 	Structed Endpoint	Deletes an Issue object.
+POST	 /deleteIssueComment 	Structed Endpoint	Deletes an IssueComment object.
+POST	 /deleteLabel 	Structed Endpoint	Deletes a label.
+POST	 /deleteLinkedBranch 	Structed Endpoint	Unlink a branch from an issue.
+POST	 /deletePackageVersion 	Structed Endpoint	Delete a package version.
+POST	 /deleteProject 	Structed Endpoint	Deletes a project.
+POST	 /deleteProjectCard 	Structed Endpoint	Deletes a project card.
+POST	 /deleteProjectColumn 	Structed Endpoint	Deletes a project column.
+POST	 /deleteProjectV2 	Structed Endpoint	Delete a project.
+POST	 /deleteProjectV2Field 	Structed Endpoint	Delete a project field.
+POST	 /deleteProjectV2Item 	Structed Endpoint	Deletes an item from a Project.
+POST	 /deleteProjectV2Workflow 	Structed Endpoint	Deletes a project workflow.
+POST	 /deletePullRequestReview 	Structed Endpoint	Deletes a pull request review.
+POST	 /deleteRef 	Structed Endpoint	Delete a Git Ref.
+POST	 /deleteRepositoryRuleset 	Structed Endpoint	Delete a repository ruleset.
+POST	 /deleteTeamDiscussion 	Structed Endpoint	Deletes a team discussion.
+POST	 /deleteTeamDiscussionComment 	Structed Endpoint	Deletes a team discussion comment.
+POST	 /deleteVerifiableDomain 	Structed Endpoint	Deletes a verifiable domain.
+POST	 /dequeuePullRequest 	Structed Endpoint	Remove a pull request from the merge queue.
+POST	 /dismissPullRequestReview 	Structed Endpoint	Dismisses an approved or rejected pull request review.
+POST	 /dismissRepositoryVulnerabilityAlert 	Structed Endpoint	Dismisses the Dependabot alert.
+POST	 /enqueuePullRequest 	Structed Endpoint	Add a pull request to the merge queue.
+POST	 /followOrganization 	Structed Endpoint	Follow an organization.
+POST	 /followUser 	Structed Endpoint	Follow a user.
+POST	 /grantMigratorRole 	Structed Endpoint	Grant the migrator role to a user or a team.
+POST	 /importProject 	Structed Endpoint	Creates a new project by importing columns and a list of issues/PRs.
+POST	 /inviteEnterpriseAdmin 	Structed Endpoint	Invite someone to become an administrator of the enterprise.
+POST	 /linkRepositoryToProject 	Structed Endpoint	Creates a repository link for a project.
+POST	 /lockLockable 	Structed Endpoint	Lock a lockable object.
+POST	 /markFileAsViewed 	Structed Endpoint	Mark a pull request file as viewed.
+POST	 /mergeBranch 	Structed Endpoint	Merge a head into a branch.
+POST	 /mergePullRequest 	Structed Endpoint	Merge a pull request.
+POST	 /minimizeComment 	Structed Endpoint	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /moveProjectCard 	Structed Endpoint	Moves a project card to another place.
+POST	 /moveProjectColumn 	Structed Endpoint	Moves a project column to another place.
+POST	 /pinIssue 	Structed Endpoint	Pin an issue to a repository.
+POST	 /publishSponsorsTier 	Structed Endpoint	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
+POST	 /regenerateVerifiableDomainToken 	Structed Endpoint	Regenerates a verifiable domain's verification token.
+POST	 /rejectDeployments 	Structed Endpoint	Reject all pending deployments under one or more environments.
+POST	 /removeAssigneesFromAssignable 	Structed Endpoint	Removes assignees from an assignable object.
+POST	 /removeEnterpriseAdmin 	Structed Endpoint	Removes an administrator from the enterprise.
+POST	 /removeEnterpriseIdentityProvider 	Structed Endpoint	Removes the identity provider from an enterprise.
+POST	 /removeEnterpriseMember 	Structed Endpoint	Removes a user from all organizations within the enterprise.
+POST	 /removeEnterpriseOrganization 	Structed Endpoint	Removes an organization from the enterprise.
+POST	 /removeEnterpriseSupportEntitlement 	Structed Endpoint	Removes a support entitlement from an enterprise member.
+POST	 /removeLabelsFromLabelable 	Structed Endpoint	Removes labels from a Labelable object.
+POST	 /removeOutsideCollaborator 	Structed Endpoint	Removes outside collaborator from all repositories in an organization.
+POST	 /removeReaction 	Structed Endpoint	Removes a reaction from a subject.
+POST	 /removeStar 	Structed Endpoint	Removes a star from a Starrable.
+POST	 /removeUpvote 	Structed Endpoint	Remove an upvote to a discussion or discussion comment.
+POST	 /reopenDiscussion 	Structed Endpoint	Reopen a discussion.
+POST	 /reopenIssue 	Structed Endpoint	Reopen a issue.
+POST	 /reopenPullRequest 	Structed Endpoint	Reopen a pull request.
+POST	 /requestReviews 	Structed Endpoint	Set review requests on a pull request.
+POST	 /rerequestCheckSuite 	Structed Endpoint	Rerequests an existing check suite.
+POST	 /resolveReviewThread 	Structed Endpoint	Marks a review thread as resolved.
+POST	 /retireSponsorsTier 	Structed Endpoint	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+POST	 /revertPullRequest 	Structed Endpoint	Create a pull request that reverts the changes from a merged pull request.
+POST	 /revokeMigratorRole 	Structed Endpoint	Revoke the migrator role from a user or a team.
+POST	 /setEnterpriseIdentityProvider 	Structed Endpoint	Creates or updates the identity provider for an enterprise.
+POST	 /setOrganizationInteractionLimit 	Structed Endpoint	Set an organization level interaction limit for an organization's public repositories.
+POST	 /setRepositoryInteractionLimit 	Structed Endpoint	Sets an interaction limit setting for a repository.
+POST	 /setUserInteractionLimit 	Structed Endpoint	Set a user level interaction limit for an user's public repositories.
+POST	 /startOrganizationMigration 	Structed Endpoint	Starts a GitHub Enterprise Importer organization migration.
+POST	 /startRepositoryMigration 	Structed Endpoint	Starts a GitHub Enterprise Importer (GEI) repository migration.
+POST	 /submitPullRequestReview 	Structed Endpoint	Submits a pending pull request review.
+POST	 /transferEnterpriseOrganization 	Structed Endpoint	Transfer an organization from one enterprise to another enterprise.
+POST	 /transferIssue 	Structed Endpoint	Transfer an issue to a different repository.
+POST	 /unarchiveProjectV2Item 	Structed Endpoint	Unarchives a ProjectV2Item.
+POST	 /unarchiveRepository 	Structed Endpoint	Unarchives a repository.
+POST	 /unfollowOrganization 	Structed Endpoint	Unfollow an organization.
+POST	 /unfollowUser 	Structed Endpoint	Unfollow a user.
+POST	 /unlinkRepositoryFromProject 	Structed Endpoint	Deletes a repository link from a project.
+POST	 /unlockLockable 	Structed Endpoint	Unlock a lockable object.
+POST	 /unmarkFileAsViewed 	Structed Endpoint	Unmark a pull request file as viewed.
+POST	 /unmarkIssueAsDuplicate 	Structed Endpoint	Unmark an issue as a duplicate of another issue.
+POST	 /unminimizeComment 	Structed Endpoint	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /unpinIssue 	Structed Endpoint	Unpin a pinned issue from a repository.
+POST	 /unresolveReviewThread 	Structed Endpoint	Marks a review thread as unresolved.
+POST	 /unsubscribeFromNotifications 	Structed Endpoint	Unsubscribes from notifications.
+POST	 /updateBranchProtectionRule 	Structed Endpoint	Update a branch protection rule.
+POST	 /updateCheckRun 	Structed Endpoint	Update a check run.
+POST	 /updateCheckSuitePreferences 	Structed Endpoint	Modifies the settings of an existing check suite.
+POST	 /updateDiscussion 	Structed Endpoint	Update a discussion.
+POST	 /updateDiscussionComment 	Structed Endpoint	Update the contents of a comment on a Discussion.
+POST	 /updateEnterpriseAdministratorRole 	Structed Endpoint	Updates the role of an enterprise administrator.
+POST	 /updateEnterpriseProfile 	Structed Endpoint	Updates an enterprise's profile.
+POST	 /updateEnvironment 	Structed Endpoint	Updates an environment.
+POST	 /updateIssue 	Structed Endpoint	Updates an Issue.
+POST	 /updateIssueComment 	Structed Endpoint	Updates an IssueComment object.
+POST	 /updateLabel 	Structed Endpoint	Updates an existing label.
+POST	 /updateNotificationRestrictionSetting 	Structed Endpoint	Update the setting to restrict notifications to only verified or approved domains available to an owner.
+POST	 /updatePatreonSponsorability 	Structed Endpoint	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
+POST	 /updateProject 	Structed Endpoint	Updates an existing project.
+POST	 /updateProjectCard 	Structed Endpoint	Updates an existing project card.
+POST	 /updateProjectColumn 	Structed Endpoint	Updates an existing project column.
+POST	 /updateProjectV2 	Structed Endpoint	Updates an existing project (beta).
+POST	 /updateProjectV2Collaborators 	Structed Endpoint	Update the collaborators on a team or a project.
+POST	 /updatePullRequest 	Structed Endpoint	Update a pull request.
+POST	 /updatePullRequestBranch 	Structed Endpoint	Merge or Rebase HEAD from upstream branch into pull request branch.
+POST	 /updatePullRequestReview 	Structed Endpoint	Updates the body of a pull request review.
+POST	 /updateRef 	Structed Endpoint	Update a Git Ref.
+POST	 /updateRefs 	Structed Endpoint	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
+POST	 /updateRepository 	Structed Endpoint	Update information about a repository.
+POST	 /updateRepositoryRuleset 	Structed Endpoint	Update a repository ruleset.
+POST	 /updateSponsorshipPreferences 	Structed Endpoint	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
+POST	 /updateSubscription 	Structed Endpoint	Updates the state for subscribable subjects.
+POST	 /updateTeamDiscussion 	Structed Endpoint	Updates a team discussion.
+POST	 /updateTeamDiscussionComment 	Structed Endpoint	Updates a discussion comment.
+POST	 /updateTeamReviewAssignment 	Structed Endpoint	Updates team review assignment.
+POST	 /updateTeamsRepository 	Structed Endpoint	Update team repository.
+POST	 /updateTopics 	Structed Endpoint	Replaces the repository's topics with the given topics.
+POST	 /verifyVerifiableDomain 	Structed Endpoint	Verify that a verifiable domain has the expected DNS record.

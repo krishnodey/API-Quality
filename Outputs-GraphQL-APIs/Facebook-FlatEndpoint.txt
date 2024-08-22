@@ -1,0 +1,71 @@
+***Anti-Pattern*** 
+Count: 2
+GET	 /v19.0/{application-id}/button_auto_detection_device_selection	Complex Words Present in Endpoint	to turn on auto device sampling.
+GET	 /v19.0/{cpas-advertiser-partnership-recommendation-id} 	Complex Words Present in Endpoint	Returns a recommendation of a single retailer for a specific brand. This endpoint returns a retailer-brand pair and an advertiser who can advertise on behalf of the producer.
+
+***Patterns*** 
+Count: 64
+GET	/v18.0/{album-id} 	Structed Endpoint	Get Fields and Edges on an Album.
+POST	 /{group_id}/albums	Structed Endpoint	When posting to this edge, an Album will be created.
+GET	/v18.0/{album-id}/comments	Structed Endpoint	Represents a collection of Comments on the Album.
+GET	/v18.0/{album-id}/likes 	Structed Endpoint	A collection of Profiles who like the Album.
+GET	 /v18.0/{album-id}/photos 	Structed Endpoint	A collection of Photos in the Album
+POST	 /{album_id}/photos 	Structed Endpoint	When posting to this edge, a Photo will be created.
+GET	/v18.0/{album-id}/picture 	Structed Endpoint	A link to the Album cover photo.
+GET	/v18.0/{app-link-host-id} 	Structed Endpoint	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links.
+POST	/app/app_link_hosts	Structed Endpoint	create app link hosts using the
+DELET	/v18.0/{app-link-host-id}	Structed Endpoint	delete app links using this edge
+POST	/v18.0/{app-link-host-id}	Structed Endpoint	update app links using this edge
+GET	/v18.0/{application-id} 	Structed Endpoint	Get information about a Facebook app.
+POST	 /{business_id}/owned_apps 	Structed Endpoint	When posting to this edge, an Application will be created.
+GET	 /v18.0/{application-id}/accounts 	Structed Endpoint	Represents a collection of test users on an app.
+POST	 /{application_id}/accounts 	Structed Endpoint	When posting to this edge, a TestAccount will be created.
+GET	/v18.0/{application-id}/ad_placement_groups 	Structed Endpoint	Ad placement groups for publishing ads on this app
+GET	 /v18.0/{application-id}/adnetworkanalytics_results	Structed Endpoint	Obtain the results of an async Audience Network query for this publisher entity
+GE	/v18.0/{application-id}/aem_attribution	Structed Endpoint	aem_attribution
+GET	/v18.0/{application-id}/aem_conversion_configs	Structed Endpoint	The aggregated event measurement conversion value configs for this app
+GET	/v18.0/{application-id}/aem_conversion_filter	Structed Endpoint	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
+GET	 /v19.0/{application-id}/agencies 	Structed Endpoint	The businesses which are not owner but can advertise for this app
+GET	 /v19.0/{application-id}/app_event_types	Structed Endpoint	Info about App Events logged for the app
+GET	 /v19.0/{application-id}/app_installed_groups	Structed Endpoint	List of facebook groups the app is installed in
+GET	 /v19.0/{application-id}/appassets 	Structed Endpoint	An Edge to the CanvasAppAsset
+GET	/v19.0/{application-id}/cloudbridge_settings	Structed Endpoint	ApplicationCloudbridgeSettings
+GET	 /v19.0/{application-id}/da_checks	Structed Endpoint	A list of results after running Dynamic Ads checks on this app.
+GET	 /v19.0/{application-id}/events 	Structed Endpoint	Retrieves events created on your page on behalf of your app
+GET	/v19.0/{application-id}/ios_skadnetwork_conversion_config	Structed Endpoint	ApplicationiosSkadnetworkConversionConfig
+GET	 /v19.0/{application-id}/mobile_sdk_gk 	Structed Endpoint	Gatekeeper for Mobile SDK
+GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Structed Endpoint	List of digital store objects for this app monetized via Audience Network
+GET	 /v19.0/{application-id}/permissions 	Structed Endpoint	The status of permissions that are have been submitted for Login Review
+GET	 /v19.0/{application-id}/products 	Structed Endpoint	In-app-purchaseable products associated with this app
+GET	 /v19.0/{application-id}/purchases	Structed Endpoint	In-app-purchaseable products of this app owned by the user
+GET	 /v19.0/{application-id}/subscribed_domains 	Structed Endpoint	GETGraphApplicationSubscribedDomainsEdge
+GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Structed Endpoint	GETGraphApplicationSubscribedDomainsPhishingEdge
+POST	 /{application_id}/app_indexing 	Structed Endpoint	When posting to this edge, an Application will be created.
+POST	 /{application_id}/codeless_event_mappings 	Structed Endpoint	When posting to this edge, an Application will be created.
+POST	 /{application_id}/page_activities 	Structed Endpoint	When posting to this edge, an Application will be created.
+POST	 /{business_id}/client_apps	Structed Endpoint	When posting to this edge, an Application will be created.
+POST	 /{application_id}/mmp_auditing	Structed Endpoint	When posting to this edge, an Application will be created.
+POST	 /act_{ad_account_id}/subscribed_apps 	Structed Endpoint	You can update an Application by making a POST request to /act_{ad_account_id}/subscribed_apps.
+DELETE	  /{page_id}/subscribed_apps. 	Structed Endpoint	You can dissociate an Application from a Page by making a DELETE request to /{page_id}/subscribed_apps.
+DELETE	 /act_{ad_account_id}/subscribed_apps 	Structed Endpoint	You can dissociate an Application from an AdAccount by making a DELETE request to /act_{ad_account_id}/subscribed_apps.
+POST	 /{application_id}/activities 	Structed Endpoint	Application activities are events from your app.You can use a user access token or app access token to log events to this endpoint.
+GET	 /v19.0/{application-id}/ad_placement_groups 	Structed Endpoint	Application Ad Placement Groups
+GET	 /v19.0/{application-id}/adnetworkanalytics_results 	Structed Endpoint	Application Adnetworkanalytics Results
+GET	 /v19.0/{application-id}/model_asset 	Structed Endpoint	Application Model Asset
+GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Structed Endpoint	Application Monetized Digital Store Objects
+GET	 /v19.0/{application-id}/permissions 	Structed Endpoint	Application Permissions
+GET	 /v19.0/{app-id}/picture 	Structed Endpoint	An app's profile picture.
+GET	 /v19.0/{application-id}/products 	Structed Endpoint	product_ids list<string> List of product ids (e.g. 'golden_gem') to retrieve info about
+GET	 /v19.0/{application-id}/purchases 	Structed Endpoint	Application Purchases
+GET	 /v19.0/{app-id}/roles 	Structed Endpoint	The developer roles defined for a Facebook app.
+GET	 /v19.0/{app-id}/scores 	Structed Endpoint	Scores from this Facebook game for a user and their friends.
+DELETE	 /v19.0/{app-id}/scores 	Structed Endpoint	You can delete all scores from your app using this edge. To delete individual scores, use the /{user-id}/scores edge.
+GET	 /v19.0/{application-id}/subscribed_domains 	Structed Endpoint	Application Subscribed Domains
+GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Structed Endpoint	Application Subscribed Domains Phishing
+POST	 /v19.0/{app-id}/subscriptions 	Structed Endpoint	You can create new Webhooks subscriptions using this edge
+DELETE	 /v19.0/{app-id}/subscriptions	Structed Endpoint	You can delete all or per-object subscriptions using this operation:
+POST	 /v19.0/{app-id}/translations 	Structed Endpoint	You can specify new strings to be translated for your app using this edge:
+GET	 /v19.0/branded_content_search 	Structed Endpoint	Returns branded content based on your search. By default we only return content that is currently available on Facebook or Instagram, and content that was created on or after August 17, 2023.
+GET	/v19.0/{canvas-id} 	Structed Endpoint	A canvas document
+GET	 /v19.0/{canvas-id}/preview 	Structed Endpoint	Get preview HTML embed element
+GET	 /v19.0/{canvas-id}/previews 	Structed Endpoint	Get preview notifications for the canvas. Sends a Canvas preview notification to specified page admin ids.

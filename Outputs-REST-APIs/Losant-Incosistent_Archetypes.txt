@@ -1,0 +1,69 @@
+***Anti-Pattern*** 
+Count: 23
+DELETE	 /applications/APPLICATION_ID/tokens/API_TOKEN_ID 	Plural Nouns Found in Consecutive Nodes	Deletes an API Token
+GET	 /applications/APPLICATION_ID/tokens/API_TOKEN_ID 	Plural Nouns Found in Consecutive Nodes	Retrieves information on an API token
+PATCH	 /applications/APPLICATION_ID/tokens/API_TOKEN_ID 	Plural Nouns Found in Consecutive Nodes	Updates information about an API token
+DELETE	 /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID 	Plural Nouns Found in Consecutive Nodes	Deletes an applicationKey
+GET	 /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID 	Plural Nouns Found in Consecutive Nodes	Retrieves information on an applicationKey
+PATCH	 /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID 	Plural Nouns Found in Consecutive Nodes	Updates information about an applicationKey
+POST	 /auth/user/github 	Singular Nouns Found in Consecutive Nodes	Authenticates a user via GitHub OAuth.
+POST	 /applications/APPLICATION_ID/data/export 	Plural Nouns Found in Consecutive Nodes	Creates a csv file from a query of devices and attributes over a time range.
+POST	 /applications/APPLICATION_ID/data/last-value-query 	Plural Nouns Found in Consecutive Nodes	Returns the last known data for the given attribute
+POST	 /applications/APPLICATION_ID/data/time-series-query 	Plural Nouns Found in Consecutive Nodes	Returns the data for the given query
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/commandStream 	Plural Nouns Found in Consecutive Nodes	Attach to a real time stream of command messages to this device using Server Sent Events (SSE)
+DELETE	 /applications/APPLICATION_ID/devices/DEVICE_ID 	Plural Nouns Found in Consecutive Nodes	Deletes a device
+POST	 /applications/APPLICATION_ID/devices/DEVICE_ID/export 	Plural Nouns Found in Consecutive Nodes	Creates a device data export. Defaults to all data.
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID 	Plural Nouns Found in Consecutive Nodes	Retrieves information on a device
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/command 	Plural Nouns Found in Consecutive Nodes	Retrieve the last known commands(s) sent to the device
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/compositeState 	Plural Nouns Found in Consecutive Nodes	Retrieve the composite last complete state of the device
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/logs 	Plural Nouns Found in Consecutive Nodes	Retrieve the recent log entries about the device
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/state 	Plural Nouns Found in Consecutive Nodes	Retrieve the last known state(s) of the device
+DELETE	 /applications/APPLICATION_ID/devices/DEVICE_ID/data 	Plural Nouns Found in Consecutive Nodes	Removes all device data for the specified time range. Defaults to all data.
+POST	 /applications/APPLICATION_ID/devices/DEVICE_ID/setConnectionStatus 	Plural Nouns Found in Consecutive Nodes	Set the current connection status of the device
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/stateStream 	Plural Nouns Found in Consecutive Nodes	Attach to a real time stream of state messages from this device using Server Sent Events (SSE)
+POST	 /applications/APPLICATION_ID/devices/export 	Plural Nouns Found in Consecutive Nodes	Creates an export of all device metadata.
+POST	 /applications/APPLICATION_ID/devices/command 	Plural Nouns Found in Consecutive Nodes	Send a command to multiple devices
+
+***Patterns*** 
+Count: 41
+GET	 /applications/APPLICATION_ID/archiveData 	Cosistent Resource Archetype	Returns success when a job has been enqueued to archive this application’s device data for a given day
+GET	 /applications/APPLICATION_ID/backfillArchiveData 	Cosistent Resource Archetype	Returns success when a job has been enqueued to backfill all current data to it’s archive
+DELETE	 /applications/APPLICATION_ID 	Cosistent Resource Archetype	Deletes an application
+GET	 /applications/APPLICATION_ID 	Cosistent Resource Archetype	Retrieves information on an application
+POST	 /applications/APPLICATION_ID/mqttPublishMessage 	Cosistent Resource Archetype	Publishes the given message to the given MQTT topic
+GET	 /applications/APPLICATION_ID/mqttSubscriptionStream 	Cosistent Resource Archetype	Attach to a real time stream of state messages for the given MQTT topic using Server Sent Events (SSE)
+PATCH	 /applications/APPLICATION_ID 	Cosistent Resource Archetype	Updates information about an application
+GET	 /applications/APPLICATION_ID/payloadCounts 	Cosistent Resource Archetype	Returns payload counts for the time range specified for this application
+GET	 /applications/APPLICATION_ID/search 	Cosistent Resource Archetype	Search across an application’s resources by target identifier
+GET	 /applications/APPLICATION_ID/tokens 	Cosistent Resource Archetype	Returns the API tokens for an application
+POST	 /applications/APPLICATION_ID/tokens 	Cosistent Resource Archetype	Create a new API token for an application
+GET	 /applications/APPLICATION_ID/keys 	Cosistent Resource Archetype	Returns the applicationKeys for an application
+POST	 /applications/APPLICATION_ID/keys 	Cosistent Resource Archetype	Create a new applicationKey for an application
+GET	 /applications 	Cosistent Resource Archetype	Returns the applications the current user has permission to see
+POST	 /applications 	Cosistent Resource Archetype	Create a new application
+GET	 /orgs/ORG_ID/audit-logs/AUDIT_LOG_ID 	Cosistent Resource Archetype	Retrieves information on an audit log
+GET	 /orgs/ORG_ID/audit-logs 	Cosistent Resource Archetype	Returns the audit logs for the organization
+POST	 /auth/device 	Cosistent Resource Archetype	Authenticates a device using the provided credentials.
+POST	 /auth/solutionUser 	Cosistent Resource Archetype	Authenticates a solution user using the provided credentials.
+POST	 /auth/user 	Cosistent Resource Archetype	Authenticates a user using the provided credentials.
+POST	 /auth/user/github 	Cosistent Resource Archetype	Authenticates a user via GitHub OAuth.
+DELETE	 /dashboards/DASHBOARD_ID 	Cosistent Resource Archetype	Deletes a dashboard
+GET	 /dashboards/DASHBOARD_ID 	Cosistent Resource Archetype	Retrieves information on a dashboard
+PATCH	 /dashboards/DASHBOARD_ID 	Cosistent Resource Archetype	Updates information about a dashboard
+POST	 /dashboards/DASHBOARD_ID 	Cosistent Resource Archetype	Sends a snapshot of a dashboard
+POST	 /dashboards/DASHBOARD_ID/validateContext 	Cosistent Resource Archetype	Validates a context object against the dashboard’s context configuration
+GET	 /dashboards 	Cosistent Resource Archetype	Returns the dashboards the current user has permission to see
+POST	 /dashboards 	Cosistent Resource Archetype	Create a new dashboard
+POST	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column 	Cosistent Resource Archetype	Adds a new column to this data table
+DELETE	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID 	Cosistent Resource Archetype	Deletes a data table
+GET	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID 	Cosistent Resource Archetype	Retrieves information on a data table
+PATCH	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID 	Cosistent Resource Archetype	Updates information about a data table
+DELETE	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column 	Cosistent Resource Archetype	Removes a column from this data table
+PATCH	 /applications/APPLICATION_ID/experience/bootstrap 	Cosistent Resource Archetype	Bootstraps the experience for this application with standard endpoints and views
+DELETE	 /applications/APPLICATION_ID/experience 	Cosistent Resource Archetype	Deletes multiple parts of an experience including users, groups, slugs, domains, versions, endpoints, views, and workflows
+GET	 /applications/APPLICATION_ID/devices 	Cosistent Resource Archetype	Returns the devices for an application
+POST	 /applications/APPLICATION_ID/devices 	Cosistent Resource Archetype	Create a new device for an application
+GET	 /applications/APPLICATION_ID/edge/deployments 	Cosistent Resource Archetype	Returns the edge deployments for an application
+POST	 /applications/APPLICATION_ID/edge/deployments/release 	Cosistent Resource Archetype	Deploy an edge workflow version to one or more edge devices. Version can be blank, if removal is desired.
+POST	 /applications/APPLICATION_ID/edge/deployments/remove 	Cosistent Resource Archetype	Remove all edge deployments from a device, remove all edge deployments of a workflow, or remove a specific workflow from a specific device
+POST	 /applications/APPLICATION_ID/edge/deployments/replace 	Cosistent Resource Archetype	Replace deployments of an edge workflow version with a new version. New version can be blank, if removal is desired.

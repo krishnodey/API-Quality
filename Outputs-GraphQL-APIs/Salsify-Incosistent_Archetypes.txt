@@ -1,0 +1,52 @@
+***Anti-Pattern*** 
+Count: 21
+POST	 /v1/orgs/{org_id}/products/ 	Plural Nouns Found in Consecutive Nodes	Create Product
+GET	 /v1/orgs/{org_id}/products/{salsify:id} 	Plural Nouns Found in Consecutive Nodes	Read Product Record
+PUT	 /v1/orgs/{org_id}/products/{product_id} 	Plural Nouns Found in Consecutive Nodes	Update Product
+PUT	 /v1/orgs/{org_id}/products/_upsert 	Plural Nouns Found in Consecutive Nodes	Bulk Upsert Products
+DELETE	 /v1/orgs/{org_id}/products/{product_id} 	Plural Nouns Found in Consecutive Nodes	Delete Product
+POST	 /v1/orgs/{org_id}/records/ 	Plural Nouns Found in Consecutive Nodes	Create Record
+GET	 /v1/orgs/{org_id}/records/{salsify:id} 	Plural Nouns Found in Consecutive Nodes	Read Record
+PUT	 /orgs/{org_id}/records/{record_id} 	Plural Nouns Found in Consecutive Nodes	Update Record
+PUT	 /v1/orgs/{org_id}/records/_upsert 	Plural Nouns Found in Consecutive Nodes	Bulk Upsert Records
+DELETE	 /v1/orgs/{org_id}/records/{product_id} 	Plural Nouns Found in Consecutive Nodes	Delete Record
+GET	 /v1/orgs/{org_ID}/properties/{salsify:id} 	Plural Nouns Found in Consecutive Nodes	Read Property
+PUT	 /v1/orgs/{org_id}/properties/{salsify:id} 	Plural Nouns Found in Consecutive Nodes	Update Property
+PUT	 /v1/orgs/{organization_id}/properties/_upsert 	Plural Nouns Found in Consecutive Nodes	Bulk Upsert Properties
+DELETE	 /v1/orgs/{org_id}/properties/{salsify:id} 	Plural Nouns Found in Consecutive Nodes	Delete Property
+POST	 /orgs/{org_id}/imports/upload_mounts 	Plural Nouns Found in Consecutive Nodes	Create a Mount Point
+PUT	 /orgs/{org_id}/imports/{import_id} 	Plural Nouns Found in Consecutive Nodes	Updating an Import to Point at a New Mount Point
+POST	 /orgs/{org_id}/imports/{import_id}/runs 	Plural Nouns Found in Consecutive Nodes	Starting an Import Run
+GET	 /orgs/{org_id}/imports/runs/{import_run_id} 	Plural Nouns Found in Consecutive Nodes	Getting the Status of an Import Run
+GET	 /orgs/{org_id}/imports/runs/{import_run_id} 	Plural Nouns Found in Consecutive Nodes	Getting the Status of an Import Run
+PUT	  /v1/orgs/{org_id}/lists/{list_id}/members 	Plural Nouns Found in Consecutive Nodes	Add List Members
+DELETE	 /v1/orgs/{org_id}/lists/{list_id}/members 	Plural Nouns Found in Consecutive Nodes	Delete List Members
+
+***Patterns*** 
+Count: 26
+POST	 /v1/orgs/{org_id}/products 	Cosistent Resource Archetype	Bulk Create Products
+GET	 /v1/orgs/{org_id}/products 	Cosistent Resource Archetype	Bulk Read Products
+PUT	 /v1/orgs/{org_id}/products 	Cosistent Resource Archetype	Bulk Update Products
+DELETE	 /v1/orgs/{org_id}/products 	Cosistent Resource Archetype	Bulk Delete Products
+POST	 /v1/orgs/{org_id}/records 	Cosistent Resource Archetype	Bulk Create Records
+GET	 /v1/orgs/{org_id}/records 	Cosistent Resource Archetype	Bulk Read Records
+GET	 /v1/orgs/{org_id}/record_types 	Cosistent Resource Archetype	Read Record Types
+PUT	 /v1/orgs/{org_id}/records 	Cosistent Resource Archetype	Bulk Update Records
+DELETE	 /v1/orgs/{org_id}/records 	Cosistent Resource Archetype	Bulk Delete Records
+POST	 /v1/orgs/{org_id}/properties 	Cosistent Resource Archetype	Create New Property
+POST	 /v1/orgs/{org_id}/properties 	Cosistent Resource Archetype	Bulk Create New Properties
+DELETE	 /v1/orgs/{org_id}/properties 	Cosistent Resource Archetype	Bulk Delete Properties
+POST	 /orgs/{org_id}/imports 	Cosistent Resource Archetype	Creating a JSON Import from a Mount Point
+POST	 /orgs/{org_id}/imports 	Cosistent Resource Archetype	Creating a JSON Import from FTP
+POST	 /orgs/{org_id}/export_runs 	Cosistent Resource Archetype	Start Export Run
+GET	 /orgs/{org_id}/export_runs/{export_id} 	Cosistent Resource Archetype	Get Export Status
+POST	 /v1/orgs/{organization_id}/digital_assets 	Cosistent Resource Archetype	Create a Digital Asset & Metadata
+POST	 /v1/orgs/{org_id}/digital_assets 	Cosistent Resource Archetype	Create Multiple Digital Assets
+GET	 /v1/orgs/{org_id}/digital_assets/{asset_id} 	Cosistent Resource Archetype	Read Digital Asset Metadata
+GET	 /v1/orgs/{org_id}/digital_assets 	Cosistent Resource Archetype	Bulk Read Digital Assets
+POST	 /v1/orgs/<org_ID>/digital_assets/refresh 	Cosistent Resource Archetype	Refresh Digital Assets
+PUT	 /v1/orgs/{org_id}/digital_assets/{salsify:id} 	Cosistent Resource Archetype	Update Digital Asset Metadata
+PUT	  /v1/orgs/{org_id}/digital_assets 	Cosistent Resource Archetype	Update Multiple Digital Assets
+PUT	 /v1/orgs/{organization_id}/digital_assets/_upsert 	Cosistent Resource Archetype	Bulk Upsert Digital Assets
+DELETE	 /v1/orgs/{org_id}/digital_assets 	Cosistent Resource Archetype	Delete Digital Assets
+DELETE	  /v1/orgs/{org_id}/digital_assets 	Cosistent Resource Archetype	Delete Multiple Digital Assets

@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 5
+GET	 /devices/{id}/properties/{pid} 	Plural Nouns Found in Consecutive Nodes	GET device properties values in a range of time
+DELETE	 /devices/{id}/certs/{cid} 	Plural Nouns Found in Consecutive Nodes	Removes a cert associated to a device
+GET	 /devices/{id}/certs/{cid} 	Plural Nouns Found in Consecutive Nodes	Returns the cert requested by the user
+POST	 /devices/{id}/certs/{cid} 	Plural Nouns Found in Consecutive Nodes	Updates a cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+PUT	 /things/{id}/properties/{pid}/publish 	Plural Nouns Found in Consecutive Nodes	Publish a property value to MQTT
+
+***Patterns*** 
+Count: 15
+PUT	 /devices 	Cosistent Resource Archetype	Creates a new device associated to the user.
+DELETE	 /devices/{id} 	Cosistent Resource Archetype	Removes a device associated to the user.
+GET	 /devices/{id}/events 	Cosistent Resource Archetype	GET device events.
+GET	 /devices/{id}/properties 	Cosistent Resource Archetype	GET device properties.
+GET	 /devices 	Cosistent Resource Archetype	Returns the list of devices associated to the user.
+GET	 /devices/{id} 	Cosistent Resource Archetype	Returns the device requested by the user.
+DELETE	 /devices/{id} 	Cosistent Resource Archetype	Removes a device associated to the user
+PUT	 /devices/{id}/properties 	Cosistent Resource Archetype	Update device properties last values
+PUT	 /devices/{id}/certs 	Cosistent Resource Archetype	Creates a new cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+GET	 /devices/{id}/certs 	Cosistent Resource Archetype	Returns the list of certs associated to the device
+POST	 /devices/{id}/pass 	Cosistent Resource Archetype	Check if the password matches.
+PUT	 /things/{id}/properties 	Cosistent Resource Archetype	Creates a new property associated to a thing
+POST	 /series/batch_query 	Cosistent Resource Archetype	Returns the batch of time-series data
+POST	 /series/batch_query_raw 	Cosistent Resource Archetype	Returns the batch of time-series data raw
+POST	 /series/batch_query_raw/lastvalue 	Cosistent Resource Archetype	Returns the batch of time-series data raw

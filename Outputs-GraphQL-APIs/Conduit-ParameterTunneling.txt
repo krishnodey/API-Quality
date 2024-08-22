@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 29
+POST	 /authentication/local/new 	Parameter Tunneling	Create a user
+POST	 /authentication/local/change-password 	Parameter Tunneling	Change Password
+POST	 /authentication/local/change-email 	Parameter Tunneling	Change Email
+GET	 /authentication/verify-email/:verificationToken 	Parameter Tunneling	Verify Email
+
+***Patterns*** 
+Count: 1
+POST	 /authentication/local 	Parameter Adherence	Login Request
+POST	 /authentication/local/resent-verification 	Parameter Adherence	Resend Verification
+POST	 /authentication/forgot-password 	Parameter Adherence	Forgot Password
+POST	 /authentication/reset-password 	Parameter Adherence	Reset Password
+GET	 /authentication/verify-change-email/:verificationToken 	Parameter Adherence	Verify Change Email
+POST	 /authentication/logout 	Parameter Adherence	Logout Request
+GET	 /authentication/apple 	Parameter Adherence	Authenticate with Apple
+GET	 /authentication/bitbucket 	Parameter Adherence	Authenticate with Bitbucket
+GET	 /authentication/facebook 	Parameter Adherence	Authenticate with Facebook
+GET	 /authentication/figma 	Parameter Adherence	Authenticate with Figma
+GET	 /authentication/init/github 	Parameter Adherence	Authenticate with GitHub
+GET	 /authentication/init/gitlab 	Parameter Adherence	Authenticate with GitLab
+GET	 /authentication/init/google 	Parameter Adherence	Authenticate with Google
+GET	 /authentication/linkedin 	Parameter Adherence	Authenticate with LinkedIn
+GET	 /authentication/init/microsoft 	Parameter Adherence	Authenticate with Microsoft
+GET	 /authentication/init/reddit 	Parameter Adherence	Authenticate with Reddit
+GET	 /authentication/init/slack 	Parameter Adherence	Authenticate with Slack
+GET	 /authentication/init/twitch 	Parameter Adherence	Authenticate with Twitch
+GET	 /authentication/init/twitter 	Parameter Adherence	Authenticate with Twitter
+PUT	 /authentication/twoFa/enable 	Parameter Adherence	Enable two factor authentication with phone method
+POST	 /authentication/twoFa/enable/verify 	Parameter Adherence	Verify two factor authentication code
+POST	 /authentication/twoFa/authorize 	Parameter Adherence	Login with two factor authentication
+POST	 /authentication/twoFa/verify 	Parameter Adherence	Verify two factor authentication code
+GET	 /authentication/twoFa/generate 	Parameter Adherence	Generate backup codes
+POST	 /authentication/twoFa/recover 	Parameter Adherence	Recover two factor authentication
+PUT	 /authentication/twoFa/disable 	Parameter Adherence	Disable two factor authentication

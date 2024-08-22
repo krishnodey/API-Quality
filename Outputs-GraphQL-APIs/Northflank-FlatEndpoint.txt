@@ -1,0 +1,52 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 47
+GET	 /v1/projects 	Structed Endpoint	Lists projects for the authenticated user or team.
+POST	 /v1/projects 	Structed Endpoint	Creates a new project.
+PUT	 /v1/projects 	Structed Endpoint	Create or update project
+PATCH	 /v1/projects/{projectId}	Structed Endpoint	Updates a project.
+GET	 /v1/projects/{projectId} 	Structed Endpoint	Get information about the given project
+DELETE	 /v1/projects/{projectId} 	Structed Endpoint	Delete the given project. Fails if the project isn't empty.
+GET	 /v1/projects/{projectId}/services 	Structed Endpoint	Gets a list of services belonging to the project
+POST	 /v1/projects/{projectId}/services/build 	Structed Endpoint	Creates a new build service.
+PUT	 /v1/projects/{projectId}/services/build 	Structed Endpoint	Creates or updates a build service.
+PATCH	 /v1/projects/{projectId}/services/build/{serviceId} 	Structed Endpoint	Updates a build service.
+POST	 /v1/projects/{projectId}/services/combined 	Structed Endpoint	Creates a new combined service.
+PUT	 /v1/projects/{projectId}/services/combined 	Structed Endpoint	Creates or updates a combined service.
+PATCH	 /v1/projects/{projectId}/services/combined/{serviceId} 	Structed Endpoint	Updates a combined service.
+POST	 /v1/projects/{projectId}/services/deployment 	Structed Endpoint	Creates a new deployment service.
+PUT	 /v1/projects/{projectId}/services/deployment 	Structed Endpoint	Creates or updates a deployment service.
+PATCH	 /v1/projects/{projectId}/services/deployment/{serviceId} 	Structed Endpoint	Updates a deployment service.
+GET	 /v1/projects/{projectId}/services/{serviceId} 	Structed Endpoint	Gets information about the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId} 	Structed Endpoint	Deletes the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	Structed Endpoint	Gets information about the branches of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build 	Structed Endpoint	Lists the builds for the service
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Structed Endpoint	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Structed Endpoint	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Structed Endpoint	Sets the build arguments for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	Structed Endpoint	Get details about the build arguments accessible by the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	Structed Endpoint	Get logs for a service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	Structed Endpoint	Get metrics for a service build
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	Structed Endpoint	Updates the build options for a given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	Structed Endpoint	Updates the version control source for a given build or combined service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Structed Endpoint	Gets information about a build for the service
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Structed Endpoint	Aborts the given service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	Structed Endpoint	Gets a list of containers for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Structed Endpoint	Gets information about the deployment of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Structed Endpoint	Updates the deployment settings of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Structed Endpoint	Lists the health checks for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Structed Endpoint	Updates health checks for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	Structed Endpoint	Get logs for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	Structed Endpoint	Get metrics for a service
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Structed Endpoint	Pause the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	Structed Endpoint	Lists the ports for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	Structed Endpoint	Updates the list of ports for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	Structed Endpoint	Gets information about the pull-requests of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Structed Endpoint	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Structed Endpoint	Resumes the given service. Optionally takes several arguments to override resumed settings.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Structed Endpoint	
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Structed Endpoint	Sets the runtime environment for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	Structed Endpoint	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Structed Endpoint	Modifies the scaling settings for the given service.

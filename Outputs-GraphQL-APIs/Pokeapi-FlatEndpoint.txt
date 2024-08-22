@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+GET	/v2/count/	Structed Endpoint	The total number of resources available from this API.
+GET	/v2/next/	Structed Endpoint	The URL for the next page in the list.
+GET	/v2/previous/	Structed Endpoint	The URL for the previous page in the list.
+GET	/v2/results/	Structed Endpoint	A list of named API resources.
+GET	 /v2/berry/{id or name}/	Structed Endpoint	Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by PokÃ©mon.
+GET	 /v2/berry/{id}/	Structed Endpoint	The identifier for this resource.
+GET	 /v2/berry/{name}/	Structed Endpoint	The name for this resource.
+GET	 /v2/berry/{growth_time}/	Structed Endpoint	Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked.
+GET	 /v2/berry/{max_harvest}/	Structed Endpoint	The maximum number of these berries that can grow on one tree in Generation IV.
+GET	 /v2/berry/{natural_gift_power}/	Structed Endpoint	The power of the move "Natural Gift" when used with this Berry.
+GET	 /v2/berry/{size}/	Structed Endpoint	The size of this Berry, in millimeters.
+GET	 /v2/berry/{smoothness}/	Structed Endpoint	The smoothness of this Berry, used in making PokÃ©blocks or Poffins.
+GET	 /v2/berry/{soil_dryness}/	Structed Endpoint	The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly.
+GET	 /v2/berry/{firmness}/	Structed Endpoint	The firmness of this berry, used in making PokÃ©blocks or Poffins.
+GET	 /v2/berry/{flavors}/	Structed Endpoint	A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.
+GET	 /v2/berry/{items}/	Structed Endpoint	Berries are actually items. This is a reference to the item specific data for this berry.
+GET	 /v2/berry/{natural_gift_type}/	Structed Endpoint	The type inherited by "Natural Gift" when used with this Berry.
+GET	 /v2/berry/{potency}/	Structed Endpoint	How powerful the referenced flavor is for this berry.
+GET	/v2/berry-firmness/{id}/	Structed Endpoint	The identifier for this resource.
+GET	/v2/berry-firmness/{id or name}/	Structed Endpoint	Berries can be soft or hard.
+GET	/v2/berry-firmness/{name}/	Structed Endpoint	The name for this resource.
+GET	/v2/berry-firmness/{berries}/	Structed Endpoint	A list of the berries with this firmness.
+GET	/v2/berry-firmness/{names}/	Structed Endpoint	The name of this resource listed in different languages.
+GET	v2/berry-flavor/{id or name}/	Structed Endpoint	Flavors determine whether a PokÃ©mon will benefit or suffer from eating a berry based on their nature.

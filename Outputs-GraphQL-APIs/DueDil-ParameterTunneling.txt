@@ -1,0 +1,36 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 31
+POST	 /v4/search/companies.{format} 	Parameter Adherence	Find companies based on search criteria.
+POST	 /v4/search/charities.{format} 	Parameter Adherence	Find charities based on search criteria.
+POST	 /v4/search/keywords.{format} 	Parameter Adherence	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
+POST	 /v4/search/regions.{format} 	Parameter Adherence	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.
+GET	 /v4/company/{countryCode}/{companyId}.{format} 	Parameter Adherence	Get key information for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Parameter Adherence	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Parameter Adherence	Get industries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Parameter Adherence	Get addresses for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Parameter Adherence	Get officers and their appointments for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Parameter Adherence	Get company financial filings for a given company.
+GET	 /v4/officer/{officerId}.{format} 	Parameter Adherence	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
+GET	 /v4/charity/{countryCode}/{charityId}.{format} 	Parameter Adherence	Get key information for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Parameter Adherence	Get trustees for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Parameter Adherence	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Parameter Adherence	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Parameter Adherence	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Parameter Adherence	Get geographic areas of activity for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Parameter Adherence	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Parameter Adherence	Get classifiers for a given charity.
+GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Parameter Adherence	Get shareholders and their shareholdings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Parameter Adherence	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Parameter Adherence	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Parameter Adherence	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Parameter Adherence	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Parameter Adherence	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Parameter Adherence	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Parameter Adherence	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Parameter Adherence	Get charges for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Parameter Adherence	Get persons of significant control (PoSC) for a given company.
+GET	 /v4/officer/{officerId}/related-officers.{format} 	Parameter Adherence	Get all related officers for a given officer
+GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Parameter Adherence	Get subsidiaries for a given charity.

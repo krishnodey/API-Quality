@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 25
+GET	 /channelContent/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	ChannelContent represents the various possible contents of channels by content type.
+GET	 /channelGroup/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	ChannelGroup represents a grouping of Channels.
+GET	 /channelMembers/{userId} 	[Identifier is Enclosed in {} or <> or Starts with :]	ChannelMembers represent all members assigned to any Channel on the plan.
+GET	 /channelProgress 	[Regular Endpoints]	ChannelProgress represents consumption of channel content by any user, regardless of whether they are a channel member or not.
+GET	 /channels 	[Regular Endpoints]	Channels represent collections of content like Courses, Paths, Projects, Guides, Interactive Courses, External Links, Labs, etc.
+POST	 /addChannel 	[Regular Endpoints]	Create a new Channel.
+POST	 /addChannelGroups 	[Regular Endpoints]	Add one or more Channel Groups.
+POST	 /addChannelMembers 	[Regular Endpoints]	Assign a User to an existing Channel.
+POST	 /addChannelsToChannelGroups 	[Regular Endpoints]	Add one or more Channels to one or more Channel Groups. Note: Adding a Channel that is already on a Channel Group will return success as true and will not duplicate the Channel.
+POST	 /addTeamsToChannels 	[Regular Endpoints]	Assign Teams to existing Channels.
+POST	 /archiveChannel 	[Regular Endpoints]	Archive a Channel.
+DELETE	 /deleteChannelGroup 	[Regular Endpoints]	Delete one or more Channel Groups.
+DELETE	 /deleteChannelGroupChannels 	[Regular Endpoints]	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
+POST	 /editChannel 	[Regular Endpoints]	Modify Channel details. All edits require both channelId and actorUserId.
+DELETE	 /removeChannelContent 	[Regular Endpoints]	Remove Content from an existing Channel.
+DELETE	 /removeChannelMember 	[Regular Endpoints]	Remove a member or contributor from an existing Channel.
+PUT	 /updateChannelGroups 	[Regular Endpoints]	Update one or more Channel Groups.
+GET	 /contentCatalog 	[Regular Endpoints]	ContentCatalog represents an aggregate of all of the content types
+GET	 /courseCatalog 	[Regular Endpoints]	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
+GET	 /labCatalog 	[Regular Endpoints]	LabCatalog represents a list of labs available at Pluralsight.
+GET	 /marketTaxonomy 	[Regular Endpoints]	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
+GET	 /pathCatalog 	[Regular Endpoints]	Path Catalog represents a list of available Paths on Pluralsight.com.
+GET	 /programCatalog 	[Regular Endpoints]	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
+GET	 /projectCatalog 	[Regular Endpoints]	ProjectCatalog represents a list of available Projects on Pluralsight.com.
+GET	 /tags 	[Regular Endpoints]	Tags represent one or more technology concepts associated with a piece of content.

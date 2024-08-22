@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 1
+GET	 /bui/getBopSID 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Returns BOP session ID, which can be used to download file.
+
+***Patterns*** 
+Count: 39
+POST	 /api/getAccess 	[Regular Endpoints]	Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct.
+GET	 /bui/getBUIAllConfig 	[Regular Endpoints]	Returns all the configuration properties for Service Point App.
+GET	 /bui/getAllowedStatus 	[Regular Endpoints]	Returns the list of available Statuses based on allowed Status transition.
+GET	 /bui/getMyTicketDetails({persid}) 	[Regular Endpoints]	Returns ticket details along with extra attributes provided in the $attrList parameter.
+GET	 /bui/getTicketsCustomData({persid}) 	[Regular Endpoints]	Returns tickets summary attributes configured at SDM.
+GET	 /bui/getDefaultCategories 	[Regular Endpoints]	Returns the default list of categories for cr factory defined in Service Desk which is configurable.
+GET	 /bui/attrInfo 	[Regular Endpoints]	Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page.
+GET	 /bui/attrCtrl 	[Regular Endpoints]	Returns all dependent attributes for the provided ticket attribute ($attrname parameter)
+POST	 /bui/addLogComment 	[Regular Endpoints]	Add log comment to the ticket
+POST	 /bui/changeStatus/{factory}({persid}) 	[Regular Endpoints]	Returns updated status value of the provided ticket persistent id.
+GET	 /bui/allFeeds({persid}) 	[Regular Endpoints]	Returns Activity Log Information for the provided ticket
+POST	 /bui/attmnt 	[Regular Endpoints]	Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.
+GET	 /bui/attmnt({persid})/$value 	[Regular Endpoints]	Returns an attachment as binary data.
+PUT	 /bui/updateStatusForNotification 	[Regular Endpoints]	Marks the notification status as READ for the given notification persistent id
+PUT	 /bui/updateStatusForAllNotification 	[Regular Endpoints]	Marks all the notifications based on the $filter value provided as READ.
+GET	 /bui/getMyResources 	[Regular Endpoints]	Returns all the resources(Assets) the user is having access to
+GET	 /bui/getMyActiveChatSession 	[Regular Endpoints]	Gets the active chat session details for the logged-in Service Point user.
+GET	 /bui/checkActiveSessions 	[Regular Endpoints]	Checks if the logged-in Service Point user has an active chat session.
+POST	 /bui/createChatThread 	[Regular Endpoints]	Creates an activity log entry for initiating a chat session
+GET	 /bui/getChatHistory/{roomName} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the chat history for the logged-in ServicePoint user for the passed-in ticket id (here roomName is the ticket persistent id).
+GET	 /bui/getDocument({id}) 	[Regular Endpoints]	Returns a Knowledge Document and updates the documents hits count if $updateHits parameter is true
+GET	 /bui/getKDAttachments({id}) 	[Regular Endpoints]	Returns all Knowledge Document attachments for the provided document id.
+GET	 /bui/getKDComments({id}) 	[Regular Endpoints]	Returns Knowledge Document comments for the provided document id.
+POST	 /bui/addKDComment({id}) 	[Regular Endpoints]	Add a comment to an Existing Knowledge Document
+POST	 /bui/rateDocument({id}) 	[Regular Endpoints]	Rate an Existing Knowledge Document
+GET	 /bui/kdLinkInfo({id}) 	[Regular Endpoints]	It tells whether the KD article attached to the ticket is an accepted solution for the problem mentioned in the ticket.
+POST	 /bui/unLinkSolution({id}) 	[Regular Endpoints]	Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket
+GET	 /bui/helpAbout 	[Regular Endpoints]	Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned
+GET	 /bui/getEEMAuth 	[Regular Endpoints]	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests)
+GET	 /bui/{factory}({persid}) 	[Regular Endpoints]	Returns the object details specified by the persistent id of the mentioned factory
+PUT	 /bui/{factory}({persid}) 	[Regular Endpoints]	Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory.
+GET	 /bui/{factory} 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the objects based on the parameters for the mentioned factory
+POST	 /bui/{factory} 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.)
+GET	 /gs/mytkt_active 	[Regular Endpoints]	Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
+GET	 /gs/mytkt_inactive 	[Regular Endpoints]	Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
+GET	 /getServiceRequest 	[Regular Endpoints]	Returns service requests of logged in user, if Service Catalog is integrated.
+GET	 /pcatSearch 	[Regular Endpoints]	Returns relevant categories(and offerings if Service Catalog is integrated) based on configured parameters in Service Point configuration.
+GET	 /getOfferings 	[Regular Endpoints]	Returns featured offerings for the loggedin users domain, if Service Catalog is integrated.
+GET	 /suggestedSolutions 	[Regular Endpoints]	Returns all probable solutions for the provided search string.

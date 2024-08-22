@@ -1,1 +1,4 @@
 https://dev.coursera.com/docs/coursera-for-business-api-product/1/overview
+
+
+https://platform.openai.com/docs/api-reference/introduction

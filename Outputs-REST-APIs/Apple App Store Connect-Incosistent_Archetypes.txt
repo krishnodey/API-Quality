@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+GET	 /appCategories 	Cosistent Resource Archetype	filter by attribute platforms
+GET	 /appCategories/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations 	Cosistent Resource Archetype	filter by attribute platform
+GET	 /appEncryptionDeclarations/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appEncryptionDeclarations
+GET	 /appInfoLocalizations/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appInfoLocalizations
+GET	 /appInfos/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appInfos
+GET	 /appPreOrders/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPreOrders
+GET	 /appPreviewSets/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPreviews
+GET	 /appPreviews/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPreviews
+GET	 /appPricePoints 	Cosistent Resource Archetype	filter by id(s) of related priceTier
+GET	 /appPricePoints/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPricePoints
+GET	 /appPriceTiers 	Cosistent Resource Archetype	filter by id(s)
+GET	 /appPriceTiers/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPriceTiers
+GET	 /appPrices/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPrices
+GET	 /appScreenshotSets/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appScreenshotSets
+GET	 /appScreenshots/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appScreenshots
+GET	 /appStoreReviewAttachments/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewDetails/{id} 	Cosistent Resource Archetype	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreVersionLocalizations/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersions/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appStoreVersions
+GET	 /apps 	Cosistent Resource Archetype	filter by attribute 'appStoreVersions.appStoreState
+GET	 /betaAppLocalizations 	Cosistent Resource Archetype	filter by attribute locale
+GET	 /endUserLicenseAgreements/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /financeReports 	Cosistent Resource Archetype	filter by attribute regionCode
+GET	 /preReleaseVersions 	Cosistent Resource Archetype	filter by attribute builds.expired
+GET	 /routingAppCoverages/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type routingAppCoverages
+GET	 /salesReports 	Cosistent Resource Archetype	filter by attribute frequency
+GET	 /appCategories/{id}/subcategories 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations/{id}/app 	Cosistent Resource Archetype	the fields to include for returned resources of type apps
+GET	 /appInfos/{id}/ageRatingDeclaration 	Cosistent Resource Archetype	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/appInfoLocalizations 	Cosistent Resource Archetype	filter by attribute locale
+GET	 /appInfos/{id}/primaryCategory 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories

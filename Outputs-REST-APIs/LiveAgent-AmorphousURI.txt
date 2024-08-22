@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 15
+/accounts/[account_id]/addons?apikey=[value]	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/addons	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]?apikey=[value]	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/status?apikey=[value]	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/status	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/variation	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/attributes/[attribute_name]?apikey=[value]	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/attributes/[attribute_name]	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/users/[userid]?apikey=[value]	Amorphous End-point	 [underscore found] 
+/accounts/[account_id]/users?apikey=[value]	Amorphous End-point	 [underscore found] 
+/licenses/[license_code]/addons?apikey=[value]	Amorphous End-point	 [underscore found] 
+/licenses/[license_code]/addons	Amorphous End-point	 [underscore found] 
+/licenses/[license_code]/addons/[addon_license]/validity	Amorphous End-point	 [underscore found] 
+/licenses/[license_code]/attributes/[attribute_name]?apikey=[value]	Amorphous End-point	 [underscore found] 
+/licenses/[license_code]/attributes/[attribute_name]	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 6
+/accounts?apikey=[value]	Tidy End-point	Tidy Endpoint
+/accounts	Tidy End-point	Tidy Endpoint
+/signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value]	Tidy End-point	Tidy Endpoint
+/signupcheck/email?productid=[value]&email=[value]&apikey=[value]	Tidy End-point	Tidy Endpoint
+/variations?apikey=[value]	Tidy End-point	Tidy Endpoint
+/licenses?apikey=[value]	Tidy End-point	Tidy Endpoint

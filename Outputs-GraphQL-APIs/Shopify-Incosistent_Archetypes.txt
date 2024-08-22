@@ -1,0 +1,38 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 33
+POST	 /delegateAccessTokenCreate	Cosistent Resource Archetype	creating a delegate access token.
+POST	 /storefrontAccessTokenCreate	Cosistent Resource Archetype	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
+POST	 /storefrontAccessTokenDelete	Cosistent Resource Archetype	Deletes a storefront access token.
+POST	 /AccessScope	Cosistent Resource Archetype	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
+POST	 /DelegateAccessToken	Cosistent Resource Archetype	A token that delegates a set of scopes from the original permission.
+POST	 /StorefrontAccessToken	Cosistent Resource Archetype	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
+GET	 /shopifyqlQuery	Cosistent Resource Archetype	Returns the results of a ShopifyQL query
+POST	 /ErrorPosition 	Cosistent Resource Archetype	Error position information in a ShopifyQL parsing error.
+POST	 /ParseError 	Cosistent Resource Archetype	A ShopifyQL parsing error.
+POST	 /ParseErrorRange	Cosistent Resource Archetype	A range of ShopifyQL parsing errors.
+POST	 /PolarisVizDataPoint	Cosistent Resource Archetype	A PolarisViz data point structure for ShopifyQL query.
+POST	 /PolarisVizDataSeries	Cosistent Resource Archetype	The data series used for PolarisViz visualization.
+POST	 /PolarisVizResponse 	Cosistent Resource Archetype	A PolarisViz response to a ShopifyQL query.
+POST	 /TableData 	Cosistent Resource Archetype	The result in a tabular format with schema information and formatted and unformatted row data.
+POST	 /TableDataColumn 	Cosistent Resource Archetype	A nested array representation of the data. An index in an array represents a row number.
+POST	 /TableResponse 	Cosistent Resource Archetype	The default table response structure for a ShopifyQL query.
+GET	 /query/{id} 	Cosistent Resource Archetype	Lookup an App by ID or return the currently authenticated App.
+GET	 /appByHandle 	Cosistent Resource Archetype	Fetches app by handle. Returns null if the app doesn't exist.
+GET	 /appByKey 	Cosistent Resource Archetype	Fetches an app by its client ID. Returns null if the app doesn't exist.
+GET	 /appInstallation/{id} 	Cosistent Resource Archetype	Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App.
+GET	 /appInstallations 	Cosistent Resource Archetype	A list of app installations. To use this query, you need to contact Shopify Support to grant your custom app the read_apps access scope. Public apps can't be granted this access scope.
+GET	 /currentAppInstallation 	Cosistent Resource Archetype	Return the AppInstallation for the currently authenticated App.
+GET	 /publication/{id} 	Cosistent Resource Archetype	Lookup a publication by ID.
+GET	 /publications 	Cosistent Resource Archetype	List of publications.
+POST	 /publicationCreate 	Cosistent Resource Archetype	Creates a publication.
+POST	 /publicationDelete{id} 	Cosistent Resource Archetype	Deletes a publication.
+POST	 /publicationUpdate	Cosistent Resource Archetype	Updates a publication.
+POST	 /AppFeedback 	Cosistent Resource Archetype	Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store.
+POST	 /AppInstallation 	Cosistent Resource Archetype	Represents an installed application on a shop.
+POST	 /FailedRequirement 	Cosistent Resource Archetype	Requirements that must be met before an app can be installed.
+POST	 /Link 	Cosistent Resource Archetype	A link to direct users to.
+POST	 /Publication 	Cosistent Resource Archetype	A publication is a group of products and collections that is published to an app.
+POST	 /ResourceFeedback	Cosistent Resource Archetype	Represents feedback from apps about a resource, and the steps required to set up the apps on the shop.

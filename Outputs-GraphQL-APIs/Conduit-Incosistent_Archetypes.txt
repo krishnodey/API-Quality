@@ -1,0 +1,55 @@
+***Anti-Pattern*** 
+Count: 20
+POST	 /authentication/local/new 	Singular Nouns Found in Consecutive Nodes	Create a user
+POST	 /authentication/local/resent-verification 	Singular Nouns Found in Consecutive Nodes	Resend Verification
+POST	 /authentication/local/change-password 	Singular Nouns Found in Consecutive Nodes	Change Password
+POST	 /authentication/local/change-email 	Singular Nouns Found in Consecutive Nodes	Change Email
+GET	 /authentication/init/github 	Singular Nouns Found in Consecutive Nodes	Authenticate with GitHub
+GET	 /authentication/init/gitlab 	Singular Nouns Found in Consecutive Nodes	Authenticate with GitLab
+GET	 /authentication/init/google 	Singular Nouns Found in Consecutive Nodes	Authenticate with Google
+GET	 /authentication/init/microsoft 	Singular Nouns Found in Consecutive Nodes	Authenticate with Microsoft
+GET	 /authentication/init/reddit 	Singular Nouns Found in Consecutive Nodes	Authenticate with Reddit
+GET	 /authentication/init/slack 	Singular Nouns Found in Consecutive Nodes	Authenticate with Slack
+GET	 /authentication/init/twitch 	Singular Nouns Found in Consecutive Nodes	Authenticate with Twitch
+GET	 /authentication/init/twitter 	Singular Nouns Found in Consecutive Nodes	Authenticate with Twitter
+PUT	 /authentication/twoFa/enable 	Singular Nouns Found in Consecutive Nodes	Enable two factor authentication with phone method
+POST	 /authentication/twoFa/enable/verify 	Singular Nouns Found in Consecutive Nodes	Verify two factor authentication code
+POST	 /authentication/twoFa/enable/verify 	Singular Nouns Found in Consecutive Nodes	Verify two factor authentication code
+POST	 /authentication/twoFa/authorize 	Singular Nouns Found in Consecutive Nodes	Login with two factor authentication
+POST	 /authentication/twoFa/verify 	Singular Nouns Found in Consecutive Nodes	Verify two factor authentication code
+GET	 /authentication/twoFa/generate 	Singular Nouns Found in Consecutive Nodes	Generate backup codes
+POST	 /authentication/twoFa/recover 	Singular Nouns Found in Consecutive Nodes	Recover two factor authentication
+PUT	 /authentication/twoFa/disable 	Singular Nouns Found in Consecutive Nodes	Disable two factor authentication
+
+***Patterns*** 
+Count: 30
+POST	 /authentication/local/new 	Cosistent Resource Archetype	Create a user
+POST	 /authentication/local 	Cosistent Resource Archetype	Login Request
+POST	 /authentication/local/resent-verification 	Cosistent Resource Archetype	Resend Verification
+POST	 /authentication/forgot-password 	Cosistent Resource Archetype	Forgot Password
+POST	 /authentication/reset-password 	Cosistent Resource Archetype	Reset Password
+POST	 /authentication/local/change-password 	Cosistent Resource Archetype	Change Password
+POST	 /authentication/local/change-email 	Cosistent Resource Archetype	Change Email
+GET	 /authentication/verify-email/:verificationToken 	Cosistent Resource Archetype	Verify Email
+GET	 /authentication/verify-change-email/:verificationToken 	Cosistent Resource Archetype	Verify Change Email
+POST	 /authentication/logout 	Cosistent Resource Archetype	Logout Request
+GET	 /authentication/apple 	Cosistent Resource Archetype	Authenticate with Apple
+GET	 /authentication/bitbucket 	Cosistent Resource Archetype	Authenticate with Bitbucket
+GET	 /authentication/facebook 	Cosistent Resource Archetype	Authenticate with Facebook
+GET	 /authentication/figma 	Cosistent Resource Archetype	Authenticate with Figma
+GET	 /authentication/init/github 	Cosistent Resource Archetype	Authenticate with GitHub
+GET	 /authentication/init/gitlab 	Cosistent Resource Archetype	Authenticate with GitLab
+GET	 /authentication/init/google 	Cosistent Resource Archetype	Authenticate with Google
+GET	 /authentication/linkedin 	Cosistent Resource Archetype	Authenticate with LinkedIn
+GET	 /authentication/init/microsoft 	Cosistent Resource Archetype	Authenticate with Microsoft
+GET	 /authentication/init/reddit 	Cosistent Resource Archetype	Authenticate with Reddit
+GET	 /authentication/init/slack 	Cosistent Resource Archetype	Authenticate with Slack
+GET	 /authentication/init/twitch 	Cosistent Resource Archetype	Authenticate with Twitch
+GET	 /authentication/init/twitter 	Cosistent Resource Archetype	Authenticate with Twitter
+PUT	 /authentication/twoFa/enable 	Cosistent Resource Archetype	Enable two factor authentication with phone method
+POST	 /authentication/twoFa/enable/verify 	Cosistent Resource Archetype	Verify two factor authentication code
+POST	 /authentication/twoFa/authorize 	Cosistent Resource Archetype	Login with two factor authentication
+POST	 /authentication/twoFa/verify 	Cosistent Resource Archetype	Verify two factor authentication code
+GET	 /authentication/twoFa/generate 	Cosistent Resource Archetype	Generate backup codes
+POST	 /authentication/twoFa/recover 	Cosistent Resource Archetype	Recover two factor authentication
+PUT	 /authentication/twoFa/disable 	Cosistent Resource Archetype	Disable two factor authentication

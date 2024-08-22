@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 14
+/live_services	Amorphous End-point	 [underscore found] 
+/live_services/count	Amorphous End-point	 [underscore found] 
+/live_services/{id}	Amorphous End-point	 [underscore found] 
+/live_services/{id}/suspension	Amorphous End-point	 [underscore found] 
+/live_services/service_names	Amorphous End-point	 [underscore found] 
+/backup_dns/{id}/records	Amorphous End-point	 [underscore found] 
+/backup_dns/{id}/records/{backupZoneId}	Amorphous End-point	 [underscore found] 
+/backup_dns	Amorphous End-point	 [underscore found] 
+/backup_dns/count	Amorphous End-point	 [underscore found] 
+/backup_dns/{id}	Amorphous End-point	 [underscore found] 
+/master_dns/{id}/records	Amorphous End-point	 [underscore found] 
+/master_dns/{id}/records/{dnsId}	Amorphous End-point	 [underscore found] 
+/master_dns/count	Amorphous End-point	 [underscore found] 
+/clients/{id}/generate_api_key	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 13
+/clients	Tidy End-point	Tidy Endpoint
+/clients/count	Tidy End-point	Tidy Endpoint
+/clients/{id}	Tidy End-point	Tidy Endpoint
+/clients/self	Tidy End-point	Tidy Endpoint
+/clients/{id}/enabled	Tidy End-point	Tidy Endpoint
+/outmails/{id}/logs	Tidy End-point	Tidy Endpoint
+/outmails/{id}/logs/{messageId}	Tidy End-point	Tidy Endpoint
+/outmails/{id}/summary	Tidy End-point	Tidy Endpoint
+/outmails/count	Tidy End-point	Tidy Endpoint
+/outmails/{id}/enabled	Tidy End-point	Tidy Endpoint
+/outmails/{id}/quota	Tidy End-point	Tidy Endpoint
+/clients/{id}/promote	Tidy End-point	Tidy Endpoint
+/clients/{id}/token	Tidy End-point	Tidy Endpoint

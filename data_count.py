@@ -73,7 +73,7 @@ for base in base_path:
                         i += 1     
 out_file.close()
 
-print("Data has been written to Alldata.jsonl")
+print("Data has been written to output_data.jsonl")
 
 
 '''import csv

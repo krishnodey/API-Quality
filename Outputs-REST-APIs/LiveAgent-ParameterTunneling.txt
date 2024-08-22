@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 21
+GET	 /accounts/[account_id]/addons?apikey=[value] 	Parameter Tunneling	Get all account add-ons with validity info
+POST	 /accounts/[account_id]/addons 	Parameter Tunneling	Add addon to account
+GET	 /accounts?apikey=[value] 	Parameter Tunneling	Get accounts info for reseller
+GET	 /accounts/[account_id]?apikey=[value] 	Parameter Tunneling	Get account info
+POST	 /accounts 	Parameter Tunneling	Create new account
+GET	 /accounts/[account_id]/status?apikey=[value] 	Parameter Tunneling	Get account status
+PUT	 /accounts/[account_id]/status 	Parameter Tunneling	Change account status (suspend, unsuspend or terminate)
+PUT	 /accounts/[account_id]/variation 	Parameter Tunneling	Change account variation
+GET	 /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] 	Parameter Tunneling	Check account domain before signup
+GET	 /signupcheck/email?productid=[value]&email=[value]&apikey=[value] 	Parameter Tunneling	Check email validity before signup
+GET	 /variations?apikey=[value] 	Parameter Tunneling	Get all reseller variations
+GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	Parameter Tunneling	Get account attribute
+PUT	 /accounts/[account_id]/attributes/[attribute_name] 	Parameter Tunneling	Change account attribute
+DELETE	 /accounts/[account_id]/users/[userid]?apikey=[value] 	Parameter Tunneling	Remove user from account
+GET	 /accounts/[account_id]/users?apikey=[value] 	Parameter Tunneling	Get users list from account
+GET	 /licenses/[license_code]/addons?apikey=[value] 	Parameter Tunneling	Get all license add-ons with validity info
+POST	 /licenses/[license_code]/addons 	Parameter Tunneling	Add addon to license
+PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Parameter Tunneling	Change addon validity on owned license
+GET	 /licenses?apikey=[value] 	Parameter Tunneling	Get all licenses info for reseller
+GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	Parameter Tunneling	Get license attribute
+PUT	 /licenses/[license_code]/attributes/[attribute_name] 	Parameter Tunneling	Change license attribute
+
+***Patterns*** 
+Count: 0

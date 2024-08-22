@@ -1,0 +1,46 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 41
+POST	 /fetchBill/{id} 	Cosistent Resource Archetype	Read a Bill by Id
+POST	 /createBill/{id} 	Cosistent Resource Archetype	
+POST	 /updateBill/{id} 	Cosistent Resource Archetype	
+POST	 /updateBill/{id} 	Cosistent Resource Archetype	
+POST	 /deleteBill/{id} 	Cosistent Resource Archetype	
+POST	 /fetchCreditMemo/{id} 	Cosistent Resource Archetype	Read an Credit Memo by Id
+POST	 /createCreditMemo/{id} 	Cosistent Resource Archetype	
+POST	 /updateCreditMemo/{id} 	Cosistent Resource Archetype	
+POST	 /deleteCreditMemo/{id} 	Cosistent Resource Archetype	
+POST	 /deleteCreditMemo/{id} 	Cosistent Resource Archetype	
+POST	 /createInvoiceDraft 	Cosistent Resource Archetype	Mutation for defining value of field within an Invoice Draft
+POST	 /transactionDraft/{id} 	Cosistent Resource Archetype	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
+POST	 /createCustomer 	Cosistent Resource Archetype	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
+POST	 /fetchCustomer/{id} 	Cosistent Resource Archetype	Use queries to read customers. Apps can query the Customer entity by id or displayName.
+POST	 /fetchDelayedCharge/{id} 	Cosistent Resource Archetype	Read an DelayedCharge by Id
+POST	 /createDelayedCharge 	Cosistent Resource Archetype	
+POST	 /deleteDelayedCharge 	Cosistent Resource Archetype	
+POST	 /fetchDelayedCredit/{id}	Cosistent Resource Archetype	Read an DelayedCredit by Id
+POST	 /createDelayedCredit/{id} 	Cosistent Resource Archetype	
+POST	 /updateDelayedCredit/{id} 	Cosistent Resource Archetype	
+POST	 /deleteDelayedCredit/{id} 	Cosistent Resource Archetype	
+POST	 /verificationOfEmployment 	Cosistent Resource Archetype	Verification of Employment
+POST	 /verificationOfIncome 	Cosistent Resource Archetype	Verification of Income
+POST	 /socialServiceVerification 	Cosistent Resource Archetype	Social Service Verification
+POST	 /fetchEstimate/{id} 	Cosistent Resource Archetype	Read an Estimate by Id
+POST	 /createEstimate/{id}	Cosistent Resource Archetype	
+POST	 /deleteEstimate/{id} 	Cosistent Resource Archetype	id: ID of an existing estimate
+POST	 /createEstimateDraft 	Cosistent Resource Archetype	Estimate Draft
+POST	 /fetchExpense 	Cosistent Resource Archetype	Read an Expense by Id
+POST	 /createExpense/{id} 	Cosistent Resource Archetype	
+POST	 /updateExpense/{id} 	Cosistent Resource Archetype	
+POST	 /deleteExpense/{id} 	Cosistent Resource Archetype	
+POST	 /fetchInvoice/{id} 	Cosistent Resource Archetype	Read an invoice by Id
+POST	 /createInvoice/{id} 	Cosistent Resource Archetype	
+POST	 /updateInvoice/{id} 	Cosistent Resource Archetype	
+POST	 /deleteInvoice/{id} 	Cosistent Resource Archetype	
+POST	 /createInvoiceDraft 	Cosistent Resource Archetype	Invoice Draft
+POST	 /fetchInvoicePayment/{id} 	Cosistent Resource Archetype	Read an InvoicePayment by Id
+POST	 /createInvoicePayment/{id} 	Cosistent Resource Archetype	
+POST	 /updateInvoicePayment/{id} 	Cosistent Resource Archetype	
+POST	 /deleteInvoicePayment/{id} 	Cosistent Resource Archetype	

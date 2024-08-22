@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 13
+GET	 /subscriptions/{subscriptionId}/users/{userId} 	Plural Nouns Found in Consecutive Nodes	Get user for subscription
+DELETE	 /subscriptions/{subscriptionId}/users/{userId} 	Plural Nouns Found in Consecutive Nodes	Remove a user from a subscription
+PUT	 /subscriptions/{subscriptionId}/users/{userId} 	Plural Nouns Found in Consecutive Nodes	Update user in a subscription
+POST	 /orders/estimates/price 	Plural Nouns Found in Consecutive Nodes	Get price estimate for the given order.
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud/resourceinstances 	Singular Nouns Found in Consecutive Nodes	Get Resource Instance Usage Details
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud/resourceinstances 	Singular Nouns Found in Consecutive Nodes	Get Resource Instance Usage Details
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud 	Singular Nouns Found in Consecutive Nodes	Get Usage Details
+GET	 /catalog/reseller/products/{id} 	Singular Nouns Found in Consecutive Nodes	Get a reseller product by ID.
+GET	 /catalog/reseller/products 	Singular Nouns Found in Consecutive Nodes	Get products which can be used by resellers to place orders.
+GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Singular Nouns Found in Consecutive Nodes	Get configuration for a given plan and product id.
+GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Plural Nouns Found in Consecutive Nodes	Get configuration for a given plan and product id.
+GET	 /catalog/reseller/products 	Singular Nouns Found in Consecutive Nodes	Get products which can be used by resellers to place orders.
+GET	 /quotes/orders/{orderReferenceNumber} 	Plural Nouns Found in Consecutive Nodes	Get Quote order
+
+***Patterns*** 
+Count: 42
+POST	 /entitlements 	Cosistent Resource Archetype	Get Entitlements for Customers
+POST	 /subscriptions/{subscriptionId}/users 	Cosistent Resource Archetype	Add user to a subscription
+POST	 /subscriptions 	Cosistent Resource Archetype	Create subscription >
+GET	 /subscriptions/{subscriptionId} 	Cosistent Resource Archetype	Get subscription
+GET	 /subscriptions 	Cosistent Resource Archetype	Get subscriptions
+GET	 /subscriptions/{subscriptionId}/users 	Cosistent Resource Archetype	Get users for a subscription
+DELETE	 /subscriptions/{subscriptionId} 	Cosistent Resource Archetype	Remove subscription
+PUT	 /subscriptions/{subscriptionId} 	Cosistent Resource Archetype	Update Subscription
+PUT	 /orders/{orderReferenceNumber} 	Cosistent Resource Archetype	Cancel renewal order
+POST	 /orders 	Cosistent Resource Archetype	Create renewal order
+GET	 /orders 	Cosistent Resource Archetype	Get all legacy orders
+GET	 /orders/{orderReferenceNumber} 	Cosistent Resource Archetype	Get legacy order
+POST	 /orders 	Cosistent Resource Archetype	Create Order
+GET	 /billing/invoices 	Cosistent Resource Archetype	Get all invoices
+GET	 /orders/{orderReferenceNumber} 	Cosistent Resource Archetype	Get an Order
+GET	 /billing/{orderReferenceNumber}/billed 	Cosistent Resource Archetype	Fetch billing details for a submitted order
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud/resourceinstances 	Cosistent Resource Archetype	Get Resource Instance Usage Details
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud 	Cosistent Resource Archetype	Get Usage Details
+PUT	 /orders/{orderReferenceNumber} 	Cosistent Resource Archetype	Use this API to update, upgrade, buy more or cancel an existing order.
+POST	 /orders/validate/partnerIdentifier 	Cosistent Resource Archetype	Validate Partner Identifer
+GET	 /catalog/products/{id} 	Cosistent Resource Archetype	Get a product by product ID.
+GET	 /catalog/reseller/products/{id} 	Cosistent Resource Archetype	Get a reseller product by ID.
+GET	 /catalog/locales 	Cosistent Resource Archetype	Get all possible locales for products.
+GET	 /catalog/service-types 	Cosistent Resource Archetype	Get all possible service types for products.
+GET	 /catalog/topics 	Cosistent Resource Archetype	Get all possible topics for products.
+GET	 /catalog/products 	Cosistent Resource Archetype	Get the products for a given locale.
+GET	 /catalog/reseller/products 	Cosistent Resource Archetype	Get products which can be used by resellers to place orders.
+PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Cosistent Resource Archetype	Change Renew type of an IBM agreement number.
+GET	 /catalog/category-topics  	Cosistent Resource Archetype	Get all possible category topics for products.
+GET	 /catalog/categories 	Cosistent Resource Archetype	Get all possible categories for products.
+GET	  /catalog/locales 	Cosistent Resource Archetype	Get all possible locales for products.
+GET	 /catalog/service-types > Get all possible service types for products. 	Cosistent Resource Archetype	
+GET	 /catalog/topics 	Cosistent Resource Archetype	Get all possible topics for products.
+GET	 /catalog/products 	Cosistent Resource Archetype	Get the products for a given locale.
+GET	 /catalog/reseller/products 	Cosistent Resource Archetype	Get products which can be used by resellers to place orders.
+PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Cosistent Resource Archetype	Change Renew type of an IBM agreement number.
+POST	 /quotes/orders 	Cosistent Resource Archetype	Create order from Quote.
+GET	 /quotes 	Cosistent Resource Archetype	Get All quotesCopied
+GET	 /quotes/billing/{agreementnumber}/billed 	Cosistent Resource Archetype	Get billed usage data for an agreement number
+GET	 /quotes/{sapQuoteNumber}	Cosistent Resource Archetype	Get details of Quote
+GET	 /quotes/agreementnumber/{agreementnumber}/lineitems 	Cosistent Resource Archetype	Get line items for an agreement number
+PUT	  /quotes/agreementnumber/{agreementnumber} 	Cosistent Resource Archetype	Update agreement

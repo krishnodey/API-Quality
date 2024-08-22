@@ -1,0 +1,92 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 87
+GET	 /list/{type} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /list/{type}/{base} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /list/{type}/{base} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /application 	[Regular Endpoints]	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
+GET	 /async?state 	[Regular Endpoints]	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
+GET	 /async/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a particular asynchronous job status
+DELETE	 /async/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
+GET	 /diagnostics/attributes?locale 	[Regular Endpoints]	Return a map of attribute id to names.
+GET	 /diagnostics/index 	[Regular Endpoints]	Returns the list of available indices to query
+GET	 /diagnostics/index/{index}?attrs 	[Identifier is Enclosed in {} or <> or Starts with :]	Reads objects from the specified index
+GET	 /diagnostics/object/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Dump an object from the domain database identified by it's DRN and record type.
+GET	 /domains 	[Regular Endpoints]	Get a list of Domains for this system.
+POST	 /domains 	[Regular Endpoints]	Create a domain given the data. Note: The "rebuild" resource should be used to create the related database file (wpdomain.db) afterwards.
+DELETE	 /domains/{domain} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific Domain given the domain name
+PUT	 /domains/{domain} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a GroupWise Domain given the Domain data
+GET	 /domains/{domain} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific Domain given the name
+GET	 /domains/{domain}/addressbook/fields 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the address book fields available for adding to a view. Note that this excludes admin defined fields which can only be added to a view if they have been properly mapped to a directory attribute.
+GET	 /domains/{domain}/addressbook/labels 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the address book labels defined for the domain
+PUT	 /domains/{domain}/addressbook/labels/{field} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set the address book label for the given field
+PUT	 /domains/{domain}/addressbook/labels/{field} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set the address book label for the given field
+DELETE	 /domains/{domain}/addressbook/labels/{field} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete the address book label for the given field
+DELETE	 /domains/{domain}/addressbook/labels/{field} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete the address book label for the given field
+GET	 /domains/{domain}/addressbook/view 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the address book view defined for the domain
+PUT	 /domains/{domain}/addressbook/view 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the address book view defined for the domain
+GET	 /domains/{domain}/administrator 	[Identifier is Enclosed in {} or <> or Starts with :]	Return the administrator for this domain
+PUT	 /domains/{domain}/administrator 	[Identifier is Enclosed in {} or <> or Starts with :]	Set the administrator for this domain
+DELETE	 /domains/{domain}/administrator 	[Identifier is Enclosed in {} or <> or Starts with :]	Clear the administrator for this domain
+GET	 /domains/{domain}/clientoptions?attrs 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Client Options under a specific Domain
+PUT	 /domains/{domain}/clientoptions?attrs 	[Identifier is Enclosed in {} or <> or Starts with :]	Update the Client Options under a specific Domain
+GET	 /domains/{domain}/customaddresses 	[Identifier is Enclosed in {} or <> or Starts with :]	Get all Custom Addresses under a specific Domain
+GET	 /domains/{domain}/customaddresses/test?testAddress 	[Identifier is Enclosed in {} or <> or Starts with :]	Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string
+GET	 /domains/{domain}/gatewaysubdirs 	[Identifier is Enclosed in {} or <> or Starts with :]	List the gateway sub-directories for the domain.
+GET	 /domains/{domain}/info 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieve statistical information about the objects contained in this domain
+GET	 /domains/{domain}/links?direction 	[Identifier is Enclosed in {} or <> or Starts with :]	List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound).
+GET	 /domains/{domain}/links/{link} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the domain link between domainName and linkName
+GET	 /domains/{domain}/links/{link} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the domain link between domainName and linkName
+PUT	 /domains/{domain}/links/{link} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update the domain link between domainName and linkName
+PUT	 /domains/{domain}/links/{link} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update the domain link between domainName and linkName
+POST	 /domains/{domain}/rebuild 	[Identifier is Enclosed in {} or <> or Starts with :]	Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service.
+GET	 /domains/{domain}/refaccesscontrols 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Access Control List for the domain
+PUT	 /domains/{domain}/refaccesscontrols 	[Identifier is Enclosed in {} or <> or Starts with :]	Update the Access Control List for the domain
+GET	 /domains/attributes 	[Regular Endpoints]	Get all available Domain Attributes
+GET	 /domains/{domain}/gateways 	[Identifier is Enclosed in {} or <> or Starts with :]	Performs a query to find all the Gateways for this GroupWise system.
+POST	 /domains/{domain}/gateways 	[Identifier is Enclosed in {} or <> or Starts with :]	Create an Gateway given the Gateway data
+DELETE	 /domains/{domain}/gateways/{gateway} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific Gateway given the name
+DELETE	 /domains/{domain}/gateways/{gateway} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific Gateway given the name
+PUT	 /domains/{domain}/gateways/{gateway} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a Gateway given the data
+PUT	 /domains/{domain}/gateways/{gateway} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a Gateway given the data
+GET	 /domains/{domain}/gateways/{gateway} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific Gateway given the name
+GET	 /domains/{domain}/gateways/{gateway} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific Gateway given the name
+GET	 /domains/{domain}/gateways/{gateway}/administrators 	[Identifier is Enclosed in {} or <> or Starts with :]	Performs a query to find all the administrators for this gateway
+GET	 /domains/{domain}/gateways/{gateway}/administrators 	[Identifier is Enclosed in {} or <> or Starts with :]	Performs a query to find all the administrators for this gateway
+POST	 /domains/{domain}/gateways/{gateway}/administrators 	[Identifier is Enclosed in {} or <> or Starts with :]	Adds a new administrator to this gateway.
+POST	 /domains/{domain}/gateways/{gateway}/administrators 	[Identifier is Enclosed in {} or <> or Starts with :]	Adds a new administrator to this gateway.
+DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an administrator member from this gateway
+DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an administrator member from this gateway
+DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an administrator member from this gateway
+PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an administrator member from this gateway
+PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an administrator member from this gateway
+PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an administrator member from this gateway
+GET	 /domains/{domain}/gateways/{gateway}/aliases 	[Identifier is Enclosed in {} or <> or Starts with :]	Performs a query to find all the aliases for this gateway
+GET	 /domains/{domain}/gateways/{gateway}/aliases 	[Identifier is Enclosed in {} or <> or Starts with :]	Performs a query to find all the aliases for this gateway
+GET	 /domains/{domain}/gateways/{gateway}/classofservice 	[Identifier is Enclosed in {} or <> or Starts with :]	List the classes of service for a specific gateway
+GET	 /domains/{domain}/gateways/{gateway}/classofservice 	[Identifier is Enclosed in {} or <> or Starts with :]	List the classes of service for a specific gateway
+POST	 /domains/{domain}/gateways/{gateway}/classofservice 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a Gwia Class of Service for the specified gateway
+POST	 /domains/{domain}/gateways/{gateway}/classofservice 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a Gwia Class of Service for the specified gateway
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific Gateway given the name
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific Gateway given the name
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific Gateway given the name
+PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a specific Class of Service given the name
+PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a specific Class of Service given the name
+PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a specific Class of Service given the name
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific Class of Service given the name
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific Class of Service given the name
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific Class of Service given the name
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	[Identifier is Enclosed in {} or <> or Starts with :]	List the members for a specific class of service
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	[Identifier is Enclosed in {} or <> or Starts with :]	List the members for a specific class of service
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	[Identifier is Enclosed in {} or <> or Starts with :]	List the members for a specific class of service
+POST	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	[Identifier is Enclosed in {} or <> or Starts with :]	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+POST	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	[Identifier is Enclosed in {} or <> or Starts with :]	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+POST	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	[Identifier is Enclosed in {} or <> or Starts with :]	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove a member from this class of service by id
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove a member from this class of service by id
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove a member from this class of service by id
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove a member from this class of service by id
+POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	[Identifier is Enclosed in {} or <> or Starts with :]	Recover the Access Control database for the specified gateway. This command will recover the database in place.
+POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	[Identifier is Enclosed in {} or <> or Starts with :]	Recover the Access Control database for the specified gateway. This command will recover the database in place.

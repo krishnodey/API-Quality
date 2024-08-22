@@ -1,0 +1,52 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 47
+/v1/projects	Standard End-point	Standard Endpoint
+/v1/projects	Standard End-point	Standard Endpoint
+/v1/projects	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/build	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/build	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/build/{serviceId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/combined	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/combined	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/combined/{serviceId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/deployment	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/deployment	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/deployment/{serviceId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/branches	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-arguments	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-arguments	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-arguments/details	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-logs	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-metrics	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-options	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build-source	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build/{buildId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/build/{buildId}	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/containers	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/deployment	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/deployment	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/health-checks	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/health-checks	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/logs	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/metrics	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/pause	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/ports	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/ports	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/pull-requests	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/restart	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/resume	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/runtime-environment	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/runtime-environment	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/runtime-environment/details	Standard End-point	Standard Endpoint
+/v1/projects/{projectId}/services/{serviceId}/scale	Standard End-point	Standard Endpoint

@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 9
+GET	 /people/(id:{profile ID})?projection=(id,firstName,lastName) 	Complex Words Present in Endpoint	By default, only the Lite Profile Fields are returned for a profile request. See the Profile Fields document for a full list of supported fields. To request more or less fields, you must have additional permissions that are only granted to select partners. Please refer to the field projections on proper syntax.
+POST	 /salesAnalyticsExportJobs?action=exportSeatData 	Complex Words Present in Endpoint	Export data about seat holders. For example, seat holder name, seat status, Social Selling Index scores, total connections. A new SalesAnalyticsExportJob with jobId and status as ENQUEUED will be returned.
+POST	 /salesAnalyticsExportJobs?action=exportActivityOutcomeData 	Complex Words Present in Endpoint	Export results of performed activities. For example InMails accepted and rejected. A new SalesAnalyticsExportJob with jobId and status as ENQUEUED will be returned.
+POST	 /salesAnalyticsExportJobs?action=exportActivityData 	Complex Words Present in Endpoint	Export activities performed by seat holders. For example, saving leads, performing searches, and sending InMail. A new SalesAnalyticsExportJob with jobId and status as ENQUEUED will be returned.
+GET	 /salesAccessTokens?q=viewerAndDeveloperApp 	Complex Words Present in Endpoint	This resource returns a Sales Access Token to be used in Sales Navigator Display Services iframe for creating authenticated iframe session.
+GET	 /salesNavigatorProfileAssociations?ids=List((instanceId:foo,partner:bar,recordId:foo),(instanceId:foo,partner:bar,recordId:bar)) 	Complex Words Present in Endpoint	Batch fetches the corresponding match when provided with multiple SalesNavigatorProfileAssociationKeys.
+POST	 /crmDataValidationExportJobs?crmInstanceId={crmInstanceId} 	Complex Words Present in Endpoint	Allows creation of CRM data validation export jobs.
+GET	 /crmDataValidationExportJobs/{jobId}?crmInstanceId={crmInstanceId} 	Complex Words Present in Endpoint	Get the CRM data validation export based on the export job id.
+GET	 /crmDataValidationExportJobs/{jobId}?crmInstanceId={crmInstanceId} 	Complex Words Present in Endpoint	Get the CRM data validation export based on the export job id.
+
+***Patterns*** 
+Count: 5
+GET	 /me 	Structed Endpoint	To identify and retrieve the current member's profile based on the access token
+GET	 /people/(id:{person ID}) 	Structed Endpoint	To retrieve another member's profile, you will need access to the Person ID, available only via certain limited access APIs and subject to member privacy settings.
+GET	 /salesContracts?q=contractsByMember 	Structed Endpoint	Find all contracts where user has an active seat.
+GET	 /salesAnalyticsExportJobs/{jobId}?contract={contractUrn} 	Structed Endpoint	Fetches the SalesAnalyticsExportJob object corresponding to the job id with the latest status
+GET	 /salesNavigatorProfileAssociations/(instanceId:foo,partner:bar,recordId:baz) 	Structed Endpoint	Fetches the corresponding match when provided with a SalesNavigatorProfileAssociationKey.

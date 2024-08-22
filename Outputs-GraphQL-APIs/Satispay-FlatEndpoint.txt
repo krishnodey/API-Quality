@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 18
+POST	 /v1/authentication_keys 	Structed Endpoint	Obtain the KeyId. API to retrieve the KeyId
+POST	 /wally-services/protocol/tests/signature 	Structed Endpoint	Test the Authentication
+POST	 /v1/payments  	Structed Endpoint	Create payment
+GET	 /v1/payments/{id} 	Structed Endpoint	Get payment details
+GET	 /v1/payments 	Structed Endpoint	Get shop-payments list
+PUT	 /v1/payments/{id} 	Structed Endpoint	Update payment
+GET	 /v1/daily_closure/{daily_closure_date} 	Structed Endpoint	Retrieve daily closure
+POST	 /v1/pre_authorized_payment_tokens 	Structed Endpoint	Create authorization
+GET	 /v1/pre_authorized_payment_tokens/{id} 	Structed Endpoint	Get authorization
+PUT	 /v1/pre_authorized_payment_tokens/id 	Structed Endpoint	Update authorization
+POST	 /v1/mqtt_certificates 	Structed Endpoint	Create mqtt certificates
+POST	 /v1/sessions 	Structed Endpoint	Open session
+POST	 /v1/sessions/{id}/events 	Structed Endpoint	Create session event
+GET	 /v1/sessions/{id} 	Structed Endpoint	Get session details
+PATCH	 /v1/sessions/{id} 	Structed Endpoint	Update session >
+POST	 /v1/reports 	Structed Endpoint	Create new report
+GET	 /v1/reports 	Structed Endpoint	Get list of reports
+GET	 /v1/reports/{report_id} 	Structed Endpoint	Retrieve a Report

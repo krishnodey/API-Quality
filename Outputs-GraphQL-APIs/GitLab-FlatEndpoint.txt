@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 4
+GET	 /auditEventsInstanceAmazonS3Configurations 	Complex Words Present in Endpoint	Instance-level Amazon S3 configurations for audit events.
+GET	 /instanceExternalAuditEventDestinations 	Complex Words Present in Endpoint	Instance level external audit event destinations.
+GET	 /instanceGoogleCloudLoggingConfigurations 	Complex Words Present in Endpoint	Instance level google cloud logging configurations.
+GET	 /selfManagedAddOnEligibleUsers 	Complex Words Present in Endpoint	Users within the self-managed instance who are eligible for add-ons
+
+***Patterns*** 
+Count: 51
+GET	 /abuseReport/{id} 	Structed Endpoint	Find an abuse report.
+GET	 /abuseReportLabels 	Structed Endpoint	Abuse report labels.
+GET	 /addOnPurchase/{id} 	Structed Endpoint	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
+GET	 /aiMessages 	Structed Endpoint	Find GitLab Duo Chat messages.
+GET	 /auditEventDefinitions 	Structed Endpoint	Definitions for all audit events available on the instance.
+GET	 /boardList/{id} 	Structed Endpoint	Find an issue board list.
+GET	 /ciCatalogResource/{id}	Structed Endpoint	A single CI/CD Catalog resource visible to an authorized user.
+GET	 /ciCatalogResources/{projectPath}	Structed Endpoint	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
+GET	 /ciConfig/{projectPath} 	Structed Endpoint	Linted and processed contents of a CI config. Should not be requested more than once per request
+GET	 /ciMinutesUsage/{namespaceId} 	Structed Endpoint	Compute usage data for a namespace.
+GET	 /ciPipelineStage/{id} 	Structed Endpoint	Stage belonging to a CI pipeline.
+GET	 /ciQueueingHistory 	Structed Endpoint	Time it took for ci job to be picked up by runner in percentiles.
+GET	 /ciVariables 	Structed Endpoint	List of the instanceâ€™s CI/CD variables.
+GET	 /containerRepository/{id} 	Structed Endpoint	Find a container repository.
+GET	 /currentLicense 	Structed Endpoint	Fields related to the current license.
+GET	 /currentUser 	Structed Endpoint	Get information about current user.
+GET	 /designManagement 	Structed Endpoint	Fields related to design management.
+GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Structed Endpoint	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
+GET	 /echo 	Structed Endpoint	Testing endpoint to validate the API with.
+GET	 /epicBoardList/{id} 	Structed Endpoint	Returns EpicList.
+GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Structed Endpoint	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
+GET	 /frecentGroups 	Structed Endpoint	A userâ€™s frecently visited groups.
+GET	 /frecentProjects 	Structed Endpoint	A userâ€™s frecently visited projects.
+GET	 /geoNode 	Structed Endpoint	Find a Geo node
+GET	 /gitpodEnabled 	Structed Endpoint	Whether Gitpod is enabled in application settings.
+GET	 /group 	Structed Endpoint	Find a group
+GET	 groups 	Structed Endpoint	Find groups.
+GET	 /instanceSecurityDashboard 	Structed Endpoint	Fields related to Instance Security Dashboard.
+GET	 /issue/{id} 	Structed Endpoint	Find an issue.
+GET	 /issues/{assigneeId} 	Structed Endpoint	Find issues visible to the current user. At least one filter must be provided.
+GET	 /iteration/{id} 	Structed Endpoint	Find an iteration.
+GET	 /jobs 	Structed Endpoint	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
+GET	 /licenseHistoryEntries 	Structed Endpoint	Fields related to entries in the license history.
+GET	 /memberRole/{id} 	Structed Endpoint	Finds a single custom role.
+GET	 /memberRolePermissions 	Structed Endpoint	List of all customizable permissions.
+GET	 /memberRoles/{id} 	Structed Endpoint	Member roles available for the instance.
+GET	 /mergeRequest/{id} 	Structed Endpoint	Find a merge request.
+GET	 /metadata 	Structed Endpoint	Metadata about GitLab.
+GET	 /milestone/{id} 	Structed Endpoint	Find a milestone.
+GET	 /mlModel/{id} 	Structed Endpoint	Find machine learning models.
+GET	 /namespace 	Structed Endpoint	Find a namespace.
+GET	 /note/{id} 	Structed Endpoint	Find a note.
+GET	 /organization/{id} 	Structed Endpoint	Find an organization.
+GET	 /organizations 	Structed Endpoint	List organizations.
+GET	 /package/{id} 	Structed Endpoint	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
+GET	 /project/{fullPath} 	Structed Endpoint	Find a project.
+GET	 /projects/{ids} 	Structed Endpoint	Find projects visible to the current user.
+GET	 /queryComplexity 	Structed Endpoint	Information about the complexity of the GraphQL query.
+GET	 /runner/{id} 	Structed Endpoint	Find a runner.
+GET	 /runnerSetup 	Structed Endpoint	Runner setup instructions.
+GET	 /runners/{creatorId}  	Structed Endpoint	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.

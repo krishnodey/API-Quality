@@ -1,0 +1,22 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 17
+/movies/{id}	Tidy End-point	Tidy Endpoint
+/rawMovies/{id}	Tidy End-point	Tidy Endpoint
+/movies?name={name}&author={author}	Tidy End-point	Tidy Endpoint
+/movies	Tidy End-point	Tidy Endpoint
+/titles	Tidy End-point	Tidy Endpoint
+/binaries/byteBuf	Tidy End-point	Tidy Endpoint
+/binaries/byteArray	Tidy End-point	Tidy Endpoint
+/movies/{id}	Tidy End-point	Tidy Endpoint
+/content/rawContentSource	Tidy End-point	Tidy Endpoint
+/content/byteBufContent	Tidy End-point	Tidy Endpoint
+/content/byteArrayContent	Tidy End-point	Tidy Endpoint
+/content/stringContent	Tidy End-point	Tidy Endpoint
+/content/movieContent	Tidy End-point	Tidy Endpoint
+content/movieContentBroken	Tidy End-point	Tidy Endpoint
+/users/{userId}/recommendations	Tidy End-point	Tidy Endpoint
+/users/{userId}/recommendations	Tidy End-point	Tidy Endpoint
+/recommendations?category={category}&ageGroup={ageGroup}	Tidy End-point	Tidy Endpoint

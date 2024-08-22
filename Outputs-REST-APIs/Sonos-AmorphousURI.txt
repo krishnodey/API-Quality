@@ -1,0 +1,54 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 49
+/login/v3/oauth/access	Tidy End-point	Tidy Endpoint
+/login/v3/oauth/access	Tidy End-point	Tidy Endpoint
+/players/{playerId}/audioClip/{id}	Tidy End-point	Tidy Endpoint
+/players/{playerId}/audioClip	Tidy End-point	Tidy Endpoint
+/players/{playerId}/audioClip/subscription	Tidy End-point	Tidy Endpoint
+/players/{playerId}/audioClip/subscription	Tidy End-point	Tidy Endpoint
+/households/{householdId}/favorites	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/favorites	Tidy End-point	Tidy Endpoint
+/households/{householdId}/favorites/subscription	Tidy End-point	Tidy Endpoint
+/households/{householdId}/favorites/subscription	Tidy End-point	Tidy Endpoint
+/households/{householdId}/groups	Tidy End-point	Tidy Endpoint
+/households/{householdId}/groups/createGroup	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groups/modifyGroupMembers	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groups/setGroupMembers	Tidy End-point	Tidy Endpoint
+/households/{householdId}/groups/subscription	Tidy End-point	Tidy Endpoint
+/households/{householdId}/groups/subscription	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groupVolume	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groupVolume	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groupVolume/relative	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groupVolume/mute	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groupVolume/subscription	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/groupVolume/subscription	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playlists	Tidy End-point	Tidy Endpoint
+/households/{householdId}/playlists	Tidy End-point	Tidy Endpoint
+/players/{playerId}/playerVolume/mute	Tidy End-point	Tidy Endpoint
+/players/{playerId}/playerVolume/relative	Tidy End-point	Tidy Endpoint
+/playbackSessions/{sessionId}/playbackSession/skipToItem	Tidy End-point	Tidy Endpoint
+/playbackSessions/{sessionId}/playbackSession/refreshCloudQueue	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playbackSession/joinOrCreate	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playbackSession/join	Tidy End-point	Tidy Endpoint
+groups/{groupId}/playbackMetadata	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/subscription	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/togglePlayPause	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/subscription	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/skipToPreviousTrack	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/skipToNextTrack	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/playMode	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/seekRelative	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/seek	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/pause	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/play	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback/lineIn	Tidy End-point	Tidy Endpoint
+/groups/{groupId}/playback	Tidy End-point	Tidy Endpoint
+/households/{householdId}/musicServiceAccounts/match	Tidy End-point	Tidy Endpoint
+/households	Tidy End-point	Tidy Endpoint
+/players/{playerId}/homeTheater/tvPowerState	Tidy End-point	Tidy Endpoint
+/players/{playerId}/homeTheater/options	Tidy End-point	Tidy Endpoint
+/players/{playerId}/homeTheater	Tidy End-point	Tidy Endpoint
+/players/{playerId}/homeTheater/options	Tidy End-point	Tidy Endpoint

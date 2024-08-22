@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 30
+POST	 /authentication/local/new 	Structed Endpoint	Create a user
+POST	 /authentication/local 	Structed Endpoint	Login Request
+POST	 /authentication/local/resent-verification 	Structed Endpoint	Resend Verification
+POST	 /authentication/forgot-password 	Structed Endpoint	Forgot Password
+POST	 /authentication/reset-password 	Structed Endpoint	Reset Password
+POST	 /authentication/local/change-password 	Structed Endpoint	Change Password
+POST	 /authentication/local/change-email 	Structed Endpoint	Change Email
+GET	 /authentication/verify-email/:verificationToken 	Structed Endpoint	Verify Email
+GET	 /authentication/verify-change-email/:verificationToken 	Structed Endpoint	Verify Change Email
+POST	 /authentication/logout 	Structed Endpoint	Logout Request
+GET	 /authentication/apple 	Structed Endpoint	Authenticate with Apple
+GET	 /authentication/bitbucket 	Structed Endpoint	Authenticate with Bitbucket
+GET	 /authentication/facebook 	Structed Endpoint	Authenticate with Facebook
+GET	 /authentication/figma 	Structed Endpoint	Authenticate with Figma
+GET	 /authentication/init/github 	Structed Endpoint	Authenticate with GitHub
+GET	 /authentication/init/gitlab 	Structed Endpoint	Authenticate with GitLab
+GET	 /authentication/init/google 	Structed Endpoint	Authenticate with Google
+GET	 /authentication/linkedin 	Structed Endpoint	Authenticate with LinkedIn
+GET	 /authentication/init/microsoft 	Structed Endpoint	Authenticate with Microsoft
+GET	 /authentication/init/reddit 	Structed Endpoint	Authenticate with Reddit
+GET	 /authentication/init/slack 	Structed Endpoint	Authenticate with Slack
+GET	 /authentication/init/twitch 	Structed Endpoint	Authenticate with Twitch
+GET	 /authentication/init/twitter 	Structed Endpoint	Authenticate with Twitter
+PUT	 /authentication/twoFa/enable 	Structed Endpoint	Enable two factor authentication with phone method
+POST	 /authentication/twoFa/enable/verify 	Structed Endpoint	Verify two factor authentication code
+POST	 /authentication/twoFa/authorize 	Structed Endpoint	Login with two factor authentication
+POST	 /authentication/twoFa/verify 	Structed Endpoint	Verify two factor authentication code
+GET	 /authentication/twoFa/generate 	Structed Endpoint	Generate backup codes
+POST	 /authentication/twoFa/recover 	Structed Endpoint	Recover two factor authentication
+PUT	 /authentication/twoFa/disable 	Structed Endpoint	Disable two factor authentication

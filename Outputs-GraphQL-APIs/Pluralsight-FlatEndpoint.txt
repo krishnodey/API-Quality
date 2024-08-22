@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 1
+POST	 /addChannelsToChannelGroups 	Complex Words Present in Endpoint	Add one or more Channels to one or more Channel Groups. Note: Adding a Channel that is already on a Channel Group will return success as true and will not duplicate the Channel.
+
+***Patterns*** 
+Count: 24
+GET	 /channelContent/{id} 	Structed Endpoint	ChannelContent represents the various possible contents of channels by content type.
+GET	 /channelGroup/{id} 	Structed Endpoint	ChannelGroup represents a grouping of Channels.
+GET	 /channelMembers/{userId} 	Structed Endpoint	ChannelMembers represent all members assigned to any Channel on the plan.
+GET	 /channelProgress 	Structed Endpoint	ChannelProgress represents consumption of channel content by any user, regardless of whether they are a channel member or not.
+GET	 /channels 	Structed Endpoint	Channels represent collections of content like Courses, Paths, Projects, Guides, Interactive Courses, External Links, Labs, etc.
+POST	 /addChannel 	Structed Endpoint	Create a new Channel.
+POST	 /addChannelGroups 	Structed Endpoint	Add one or more Channel Groups.
+POST	 /addChannelMembers 	Structed Endpoint	Assign a User to an existing Channel.
+POST	 /addTeamsToChannels 	Structed Endpoint	Assign Teams to existing Channels.
+POST	 /archiveChannel 	Structed Endpoint	Archive a Channel.
+DELETE	 /deleteChannelGroup 	Structed Endpoint	Delete one or more Channel Groups.
+DELETE	 /deleteChannelGroupChannels 	Structed Endpoint	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
+POST	 /editChannel 	Structed Endpoint	Modify Channel details. All edits require both channelId and actorUserId.
+DELETE	 /removeChannelContent 	Structed Endpoint	Remove Content from an existing Channel.
+DELETE	 /removeChannelMember 	Structed Endpoint	Remove a member or contributor from an existing Channel.
+PUT	 /updateChannelGroups 	Structed Endpoint	Update one or more Channel Groups.
+GET	 /contentCatalog 	Structed Endpoint	ContentCatalog represents an aggregate of all of the content types
+GET	 /courseCatalog 	Structed Endpoint	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
+GET	 /labCatalog 	Structed Endpoint	LabCatalog represents a list of labs available at Pluralsight.
+GET	 /marketTaxonomy 	Structed Endpoint	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
+GET	 /pathCatalog 	Structed Endpoint	Path Catalog represents a list of available Paths on Pluralsight.com.
+GET	 /programCatalog 	Structed Endpoint	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
+GET	 /projectCatalog 	Structed Endpoint	ProjectCatalog represents a list of available Projects on Pluralsight.com.
+GET	 /tags 	Structed Endpoint	Tags represent one or more technology concepts associated with a piece of content.

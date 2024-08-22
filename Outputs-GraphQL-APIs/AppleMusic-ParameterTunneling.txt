@@ -1,0 +1,104 @@
+***Anti-Pattern*** 
+Count: 26
+GET	 /v1/me/library/albums 	Parameter Tunneling	Fetch one or more library albums by using their identifiers.
+GET	 /v1/me/library/albums 	Parameter Tunneling	Fetch all the library albums in alphabetical order.
+POST	 /v1/me/library 	Parameter Tunneling	Add a catalog resource to a userâ€™s iCloud Music Library.
+GET	 /v1/me/library/artists 	Parameter Tunneling	Fetch one or more library artists by using their identifiers.
+GET	 /v1/artists/{id} 	Parameter Tunneling	A resource object that represents the artist of an album where an artist can be one or more people.
+GET	 /v1/me/library/songs 	Parameter Tunneling	Fetch one or more library songs by using their identifiers.
+GET	 /v1/me/library/songs 	Parameter Tunneling	Fetch all the library songs in alphabetical order.
+GET	 /v1/me/library/music-videos 	Parameter Tunneling	Fetch one or more library music videos by using their identifiers.
+GET	 /v1/me/library/music-videos 	Parameter Tunneling	Fetch all the library music videos in alphabetical order.
+GET	 /v1/me/library/playlists 	Parameter Tunneling	Fetch one or more library playlists by using their identifiers.
+GET	 /v1/me/library/playlists 	Parameter Tunneling	Fetch all the library playlists in alphabetical order.
+GET	 /v1/me/library/playlist-folders 	Parameter Tunneling	Fetch the root library playlists folder for the user.
+GET	 /v1/me/library/playlist-folders 	Parameter Tunneling	Fetch one or more library playlist folders by using their identifiers.
+POST	 /v1/me/library/playlist-folders 	Parameter Tunneling	Create a new playlist folder in a userâ€™s library.
+POST	 /v1/me/library/playlists 	Parameter Tunneling	Create a new playlist in a userâ€™s library.
+GET	 /v1/catalog/{storefront}/search 	Parameter Tunneling	Search the catalog by using a query.
+GET	 /v1/me/ratings/albums 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more albums by using the albums' identifiers.
+GET	 /v1/me/ratings/music-videos 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more music videos by using the music videos' identifiers.
+GET	 /v1/me/ratings/playlists 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more playlists by using the playlists' identifiers.
+GET	 /v1/me/ratings/songs 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more songs by using the songs' identifiers.
+GET	 /v1/me/ratings/stations 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more stations by using the stations' identifiers.
+GET	 /v1/me/ratings/library-albums 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more pieces of content by using the contentsâ€™ identifiers.
+GET	 /v1/me/ratings/library-music-videos 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more library music videos by using the library music videos' identifiers.
+GET	 /v1/me/ratings/library-playlists 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more library playlists by using the library playlists' identifiers.
+GET	 /v1/me/ratings/library-songs 	Parameter Tunneling	Fetch the userâ€™s ratings for one or more library songs by using the library songs' identifiers.
+
+***Patterns*** 
+Count: 73
+GET	 /v1/catalog/{storefront}/albums/{id} 	Parameter Adherence	Fetch an album by using its identifier.
+GET	 /v1/catalog/{storefront}/albums/{id}/{relationship} 	Parameter Adherence	Fetch an albumâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/albums/{id}/view/{view}	Parameter Adherence	Fetch related resources for a single albumâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/albums 	Parameter Adherence	Fetch one or more albums by using their identifiers.
+GET	 /v1/catalog/{storefront}/albums 	Parameter Adherence	Fetch one or more albums by using their UPC values.
+GET	 /v1/catalog/{storefront}/albums  	Parameter Adherence	Fetch the equivalent, available content in the storefront for the provided albumsâ€™ identifiers.
+GET	 /v1/me/library/albums/{id} 	Parameter Adherence	Fetch a library album by using its identifier.
+GET	 /v1/me/library/albums/{id}/{relationship} 	Parameter Adherence	Fetch a library albumâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/artists/{id} 	Parameter Adherence	Fetch an artist by using the artistâ€™s identifier.id string (Required) The unique identifier for the artist. storefront string (Required) An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the id attributes of Storefront objects.
+GET	 /v1/catalog/{storefront}/artists/{id}/{relationship} 	Parameter Adherence	Fetch an artistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/artists/{id}/view/{view} 	Parameter Adherence	Fetch related resources for a single artistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/artists 	Parameter Adherence	Fetch one or more artists by using their identifiers.
+GET	 /v1/me/library/artists/{id} 	Parameter Adherence	Fetch a library artist by using its identifier.
+GET	 /v1/me/library/artists/{id}/{relationship}	Parameter Adherence	Fetch a library artistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/songs/{id}	Parameter Adherence	Fetch a song by using its identifier.
+GET	 /v1/catalog/{storefront}/songs/{id}/{relationship} 	Parameter Adherence	Fetch a songâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/songs 	Parameter Adherence	Fetch one or more songs by using their identifiers.
+GET	 /v1/catalog/{storefront}/songs 	Parameter Adherence	Fetch one or more songs by using their International Standard Recording Code (ISRC) values.
+GET	 /v1/catalog/{storefront}/songs 	Parameter Adherence	Fetch the equivalent, available content in the storefront for the provided songsâ€™ identifiers.
+GET	 /v1/me/library/songs/{id} 	Parameter Adherence	Fetch a library song by using its identifier.
+GET	 /v1/me/library/songs/{id}/{relationship}	Parameter Adherence	Fetch a library songâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id} 	Parameter Adherence	Fetch a music video by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/{relationship} 	Parameter Adherence	Fetch a music videoâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Parameter Adherence	Fetch related resources for a single music videoâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/music-videos	Parameter Adherence	Fetch one or more music videos by using their identifiers.
+GET	 /v1/catalog/{storefront}/music-videos	Parameter Adherence	Fetch one or more music videos by using their International Standard Recording Code (ISRC) values.
+GET	 /v1/catalog/{storefront}/music-videos 	Parameter Adherence	Fetch the equivalent, available content in the storefront for the provided music videosâ€™ identifiers.
+GET	 /v1/me/library/music-videos/{id} 	Parameter Adherence	Fetch a library music video by using its identifier.
+GET	 /v1/me/library/music-videos/{id}/{relationship} 	Parameter Adherence	Fetch a library music videoâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id} 	Parameter Adherence	Fetch a playlist by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id}/{relationship}	Parameter Adherence	Fetch a playlistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id}/view/{view} 	Parameter Adherence	Fetch related resources for a single playlistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/playlists 	Parameter Adherence	Fetch one or more playlists by using their identifiers.
+GET	 /v1/catalog/{storefront}/playlists 	Parameter Adherence	Fetch one or more Charts Playlists by using their Storefront value.
+GET	 /v1/me/library/playlists/{id} 	Parameter Adherence	Fetch a library playlist by using its identifier.
+GET	 /v1/me/library/playlists/{id}/{relationship} 	Parameter Adherence	Fetch a library playlistâ€™s relationship by using its identifier.
+GET	 /v1/me/library/playlist-folders/{id} 	Parameter Adherence	Fetch a library playlist folder by using its identifier.
+GET	 /v1/me/library/playlist-folders/{id}/{relationship} 	Parameter Adherence	Fetch a library playlist folderâ€™s relationship by using its identifier.
+POST	 /v1/me/library/playlists/{id}/tracks 	Parameter Adherence	Add new tracks to the end of a library playlist.
+GET	 /v1/catalog/{storefront}/stations/{id} 	Parameter Adherence	Fetch a station by using its identifier.
+GET	 /v1/catalog/{storefront}/stations/{id}/{relationship} 	Parameter Adherence	Fetch a station's relationship using its identifier.
+GET	 /v1/catalog/{storefront}/stations 	Parameter Adherence	Fetch one or more stations by using their identifiers.
+GET	 /v1/catalog/{storefront}/stations 	Parameter Adherence	Fetch the Apple Music live radio stations for the storefront.
+GET	 /v1/catalog/{storefront}/stations 	Parameter Adherence	Fetch the current userâ€™s personal Apple Music station.
+GET	 /v1/catalog/{storefront}/station-genres/{id} 	Parameter Adherence	Fetch a station genre by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres/{id}/{relationship}	Parameter Adherence	Fetch a station genreâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres 	Parameter Adherence	Fetch one or more station genres by using their identifiers.
+GET	 /v1/catalog/{storefront}/station-genres 	Parameter Adherence	Fetch all station genres for a given storefront.
+GET	 /v1/catalog/{storefront}/search/hints 	Parameter Adherence	Fetch the search term results for a hint.
+GET	 /v1/catalog/{storefront}/search/suggestions 	Parameter Adherence	Fetch the search suggestions for a provided term input.
+GET	 /v1/me/library/search 	Parameter Adherence	Search the library by using a query.
+GET	 /v1/me/ratings/albums/{id} 	Parameter Adherence	Fetch a userâ€™s rating for an album by using the userâ€™s identifier.
+GET	 /v1/me/ratings/music-videos/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a music video by using the videoâ€™s identifier.
+GET	 /v1/me/ratings/playlists/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a playlist by using the playlistâ€™s identifier.
+GET	 /v1/me/ratings/songs/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a song by using the songâ€™s identifier.
+GET	 /v1/me/ratings/stations/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a station by using the stationâ€™s identifier.
+PUT	 /v1/me/ratings/albums/{id} 	Parameter Adherence	Add a userâ€™s album rating by using the albumâ€™s identifier.
+PUT	 /v1/me/ratings/music-videos/{id} 	Parameter Adherence	Add a userâ€™s music video rating by using the music videoâ€™s identifier.
+PUT	 /v1/me/ratings/playlists/{id} 	Parameter Adherence	Add a userâ€™s playlist rating by using the playlistâ€™s identifier.
+PUT	 /v1/me/ratings/songs/{id} 	Parameter Adherence	Add a userâ€™s song rating by using the songâ€™s identifier.
+PUT	 /v1/me/ratings/stations/{id} 	Parameter Adherence	Add a userâ€™s station rating by using the stationâ€™s identifier.
+DELETE	 /v1/me/ratings/albums/{id} 	Parameter Adherence	Remove a userâ€™s album rating by using the albumâ€™s identifier.
+DELETE	 /v1/me/ratings/music-videos/{id} 	Parameter Adherence	Remove a userâ€™s music video rating by using the music videoâ€™s identifier.
+DELETE	 /v1/me/ratings/playlists/{id} 	Parameter Adherence	Remove a userâ€™s playlist rating by using the playlistâ€™s identifier.
+DELETE	 /v1/me/ratings/songs/{id} 	Parameter Adherence	Remove a userâ€™s song rating by using the songâ€™s identifier.
+DELETE	 /v1/me/ratings/stations/{id} 	Parameter Adherence	Remove a userâ€™s station rating by using the stationâ€™s identifier.
+GET	 /v1/me/ratings/library-albums/{id} 	Parameter Adherence	Fetch a userâ€™s rating for specific content by using the contentâ€™s identifier.
+GET	 /v1/me/ratings/library-music-videos/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a library music video by using the music videoâ€™s library identifier.
+GET	 /v1/me/ratings/library-playlists/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a library playlist by using the playlistâ€™s library identifier.
+GET	 /v1/me/ratings/library-songs/{id} 	Parameter Adherence	Fetch a userâ€™s rating for a library song by using the songâ€™s library identifier.
+PUT	 /v1/me/ratings/library-albums/{id} 	Parameter Adherence	Add a userâ€™s content rating by using the contentâ€™s identifier.
+PUT	 /v1/me/ratings/library-music-videos/{id} 	Parameter Adherence	Add a userâ€™s library music video rating by using the library music videoâ€™s identifier.
+PUT	 /v1/me/ratings/library-playlists/{id} 	Parameter Adherence	Add a userâ€™s library playlist rating by using the library playlistâ€™s identifier.
+PUT	 /v1/me/ratings/library-songs/{id} 	Parameter Adherence	Add a userâ€™s library song rating by using the library songâ€™s identifier.

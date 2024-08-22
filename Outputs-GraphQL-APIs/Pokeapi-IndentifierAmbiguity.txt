@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+GET	/v2/count/	[Regular Endpoints]	The total number of resources available from this API.
+GET	/v2/next/	[Regular Endpoints]	The URL for the next page in the list.
+GET	/v2/previous/	[Regular Endpoints]	The URL for the previous page in the list.
+GET	/v2/results/	[Regular Endpoints]	A list of named API resources.
+GET	 /v2/berry/{id or name}/	[Identifier is Enclosed in {} or <> or Starts with :]	Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by PokÃ©mon.
+GET	 /v2/berry/{id}/	[Identifier is Enclosed in {} or <> or Starts with :]	The identifier for this resource.
+GET	 /v2/berry/{name}/	[Identifier is Enclosed in {} or <> or Starts with :]	The name for this resource.
+GET	 /v2/berry/{growth_time}/	[Identifier is Enclosed in {} or <> or Starts with :]	Time it takes the tree to grow one stage, in hours. Berry trees go through four of these growth stages before they can be picked.
+GET	 /v2/berry/{max_harvest}/	[Identifier is Enclosed in {} or <> or Starts with :]	The maximum number of these berries that can grow on one tree in Generation IV.
+GET	 /v2/berry/{natural_gift_power}/	[Identifier is Enclosed in {} or <> or Starts with :]	The power of the move "Natural Gift" when used with this Berry.
+GET	 /v2/berry/{size}/	[Identifier is Enclosed in {} or <> or Starts with :]	The size of this Berry, in millimeters.
+GET	 /v2/berry/{smoothness}/	[Identifier is Enclosed in {} or <> or Starts with :]	The smoothness of this Berry, used in making PokÃ©blocks or Poffins.
+GET	 /v2/berry/{soil_dryness}/	[Identifier is Enclosed in {} or <> or Starts with :]	The speed at which this Berry dries out the soil as it grows. A higher rate means the soil dries more quickly.
+GET	 /v2/berry/{firmness}/	[Identifier is Enclosed in {} or <> or Starts with :]	The firmness of this berry, used in making PokÃ©blocks or Poffins.
+GET	 /v2/berry/{flavors}/	[Identifier is Enclosed in {} or <> or Starts with :]	A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry.
+GET	 /v2/berry/{items}/	[Identifier is Enclosed in {} or <> or Starts with :]	Berries are actually items. This is a reference to the item specific data for this berry.
+GET	 /v2/berry/{natural_gift_type}/	[Identifier is Enclosed in {} or <> or Starts with :]	The type inherited by "Natural Gift" when used with this Berry.
+GET	 /v2/berry/{potency}/	[Identifier is Enclosed in {} or <> or Starts with :]	How powerful the referenced flavor is for this berry.
+GET	/v2/berry-firmness/{id}/	[Identifier is Enclosed in {} or <> or Starts with :]	The identifier for this resource.
+GET	/v2/berry-firmness/{id or name}/	[Identifier is Enclosed in {} or <> or Starts with :]	Berries can be soft or hard.
+GET	/v2/berry-firmness/{name}/	[Identifier is Enclosed in {} or <> or Starts with :]	The name for this resource.
+GET	/v2/berry-firmness/{berries}/	[Identifier is Enclosed in {} or <> or Starts with :]	A list of the berries with this firmness.
+GET	/v2/berry-firmness/{names}/	[Identifier is Enclosed in {} or <> or Starts with :]	The name of this resource listed in different languages.
+GET	v2/berry-flavor/{id or name}/	[Identifier is Enclosed in {} or <> or Starts with :]	Flavors determine whether a PokÃ©mon will benefit or suffer from eating a berry based on their nature.

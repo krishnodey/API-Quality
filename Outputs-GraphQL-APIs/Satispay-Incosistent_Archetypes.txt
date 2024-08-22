@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 18
+POST	 /v1/authentication_keys 	Cosistent Resource Archetype	Obtain the KeyId. API to retrieve the KeyId
+POST	 /wally-services/protocol/tests/signature 	Cosistent Resource Archetype	Test the Authentication
+POST	 /v1/payments  	Cosistent Resource Archetype	Create payment
+GET	 /v1/payments/{id} 	Cosistent Resource Archetype	Get payment details
+GET	 /v1/payments 	Cosistent Resource Archetype	Get shop-payments list
+PUT	 /v1/payments/{id} 	Cosistent Resource Archetype	Update payment
+GET	 /v1/daily_closure/{daily_closure_date} 	Cosistent Resource Archetype	Retrieve daily closure
+POST	 /v1/pre_authorized_payment_tokens 	Cosistent Resource Archetype	Create authorization
+GET	 /v1/pre_authorized_payment_tokens/{id} 	Cosistent Resource Archetype	Get authorization
+PUT	 /v1/pre_authorized_payment_tokens/id 	Cosistent Resource Archetype	Update authorization
+POST	 /v1/mqtt_certificates 	Cosistent Resource Archetype	Create mqtt certificates
+POST	 /v1/sessions 	Cosistent Resource Archetype	Open session
+POST	 /v1/sessions/{id}/events 	Cosistent Resource Archetype	Create session event
+GET	 /v1/sessions/{id} 	Cosistent Resource Archetype	Get session details
+PATCH	 /v1/sessions/{id} 	Cosistent Resource Archetype	Update session >
+POST	 /v1/reports 	Cosistent Resource Archetype	Create new report
+GET	 /v1/reports 	Cosistent Resource Archetype	Get list of reports
+GET	 /v1/reports/{report_id} 	Cosistent Resource Archetype	Retrieve a Report

@@ -1,0 +1,24 @@
+***Anti-Pattern*** 
+Count: 1
+POST	 /{ig-media-id}?comment_enabled={comment_enabled} 	Complex Words Present in Endpoint	Enables or disables comments on a media object.
+
+***Patterns*** 
+Count: 18
+GET	 /{ig-comment-id}?fields={fields} 	Structed Endpoint	Reading a Comment
+POST	 /{ig-comment-id}?hide={hide} 	Structed Endpoint	Hiding/Unhiding a Comment
+DELETE	 /{ig-comment-id} 	Structed Endpoint	Deleting a Comment
+GET	 /oauth/authorize 	Structed Endpoint	Get the Authorization Window.
+POST	 /oauth/access_token 	Structed Endpoint	Exchange an Authorization Code for a short-lived Instagram User Access Token.
+GET	 /access_token 	Structed Endpoint	Exchange a short-lived Instagram User Access Token for a long-lived Instagram User Access Token.
+GET	 /refresh_access_token 	Structed Endpoint	Refresh a long-lived Instagram User Access Token.
+GET	 /{media-id} 	Structed Endpoint	Get fields and edges on an image, video, or album.
+GET	 /{media-id}/children 	Structed Endpoint	Get a list of images and videos on an album.
+GET	 /{user-id}/media 	Structed Endpoint	Get a list of images, videos, or albums on a User.
+GET	 /me 	Structed Endpoint	Get fields and edges on a User.
+GET	 /{user-id} 	Structed Endpoint	Get fields and edges on a User.
+GET	 /{ig-hashtag-id} 	Structed Endpoint	Returns Fields and Edges on an IG Hashtag.
+GET	 /{ig-media-id}?fields={fields} 	Structed Endpoint	Gets Fields and Edges on an IG Media.
+POST	 /{ig-media-id}/comments?message={message} 	Structed Endpoint	Creates an IG Comment on an IG Media object.
+GET	 /{ig-media-id}/comments 	Structed Endpoint	Returns a list of IG Comments on an IG Media object.
+GET	 /{ig-user-id}?fields={fields} 	Structed Endpoint	Get fields and edges on an Instagram Business or Creator Account.
+GET	 /{page-id}?fields=instagram_business_account 	Structed Endpoint	Returns the IG User connected to the Facebook Page.

@@ -1,0 +1,95 @@
+***Anti-Pattern*** 
+Count: 3
+POST	 /createPresignedUrlForPipePdfTemplate 	Complex Words Present in Endpoint	Returns a temporary S3 presigned url to upload a pdf template image
+POST	 /createTableRecordInRestrictedTable 	Complex Words Present in Endpoint	Creates a record in a private table
+POST	 /setTableRecordFieldValue	Complex Words Present in Endpoint	Sets record field value
+
+***Patterns*** 
+Count: 87
+GET	 /allCards 	Structed Endpoint	Fetches all pipe cards based on arguments
+GET	 /autoFillFields 	Structed Endpoint	Lookup the values that will automatically fill the child-card's start form fields
+GET	 /card 	Structed Endpoint	Lookup a card by its ID
+GET	 /cards	Structed Endpoint	Fetches a group of cards based on arguments
+GET	 /cardsImportations/{pipeId}	Structed Endpoint	Lookup the cards importer history by the pipe ID
+GET	 /findCards/{pipeId} 	Structed Endpoint	Fetch cards based on fields' inputs
+GET	 /findCards/{tableId}	Structed Endpoint	Fetch records based on fields' inputs
+GET	 /inbox_emails/card_id 	Structed Endpoint	Lookup the card's emails by its ID
+GET	 /me 	Structed Endpoint	Returns informations of the current authenticated user
+GET	 /organization/{id} 	Structed Endpoint	Lookup an organization by its ID
+GET	 /organizations/{ids} 	Structed Endpoint	Lookup organizations by their ID
+GET	 /phase/{id} 	Structed Endpoint	Lookup a phase by its ID
+GET	 /pipe/{id} 	Structed Endpoint	Lookup a pipe by its ID
+GET	 /pipeReportExport/{id}	Structed Endpoint	Lookup a pipe report export by its ID
+GET	 /pipe/{ids} 	Structed Endpoint	Lookup a pipe by their ID
+GET	 /pipe_relations/{id} 	Structed Endpoint	Lookup pipe relations by their ID
+GET	 /pipe_templates 	Structed Endpoint	Lookup all pipe templates available on Pipefy
+GET	 /recordsImportations/{tableID} 	Structed Endpoint	Lookup the records importer history by the table ID
+GET	 /table/{id}	Structed Endpoint	Lookup a database table by its ID
+GET	 /table/{ids}	Structed Endpoint	Lookup a database tables by their ID
+GET	 /table_record/{id} 	Structed Endpoint	Lookup a record by its ID
+GET	 /table_records/{table_id} 	Structed Endpoint	Fetches a group of records based on arguments
+GET	 /table_relations/{ids} 	Structed Endpoint	Lookup table relations by their ID
+POST	 /clonePipes 	Structed Endpoint	Clones a pipe
+POST	 /createCard  	Structed Endpoint	Creates a card
+POST	 /createCardRelation 	Structed Endpoint	Creates a card relation
+POST	 /createComment	Structed Endpoint	Creates a comment
+POST	 /createFieldCondition	Structed Endpoint	Creates a field condition
+POST	 /createInboxEmail 	Structed Endpoint	Creates an email
+POST	 /createLabel 	Structed Endpoint	Creates a label
+POST	 /createOrganization	Structed Endpoint	Creates an organization
+POST	 /createOrganizationWebhook 	Structed Endpoint	Creates an organization-level webhook
+POST	 /createPhase 	Structed Endpoint	Creates a phase
+POST	 /createPhaseField 	Structed Endpoint	Creates a phase field
+POST	/createPipe 	Structed Endpoint	Creates a pipe
+POST	/createPipeRelation 	Structed Endpoint	Creates a pipe relation
+POST	 /createPresignedUrl 	Structed Endpoint	Returns a temporary S3 presigned url to upload a file
+POST	 /createTable 	Structed Endpoint	Creates a table
+POST	 /createTableField 	Structed Endpoint	Creates a table field
+POST	 /createTableRecord 	Structed Endpoint	Creates a record
+POST	 /deleteFieldCondition 	Structed Endpoint	Deletes a field condition
+POST	 /deleteInboxEmail 	Structed Endpoint	Deletes an email
+POST	 /deleteLabel 	Structed Endpoint	Deletes a label
+POST	 /deleteOrganization 	Structed Endpoint	Deletes an organization
+POST	 /deleteOrganizationWebhook 	Structed Endpoint	Deletes a webhook
+POST	 /deletePhaseField 	Structed Endpoint	Deletes a phase field
+POST	 /deletePipe 	Structed Endpoint	Deletes a pipe
+POST	 /deletePipeRelation 	Structed Endpoint	Deletes a pipe relation
+POST	 /deleteTable 	Structed Endpoint	Deletes a table
+POST	 /deleteTableField 	Structed Endpoint	Deletes a table field
+POST	 /deleteTableRecord 	Structed Endpoint	Deletes a record
+POST	 /deleteTableRelation 	Structed Endpoint	Deletes a table relation
+POST	 /deleteWebhook 	Structed Endpoint	Deletes a webhook (pipe or table level)
+POST	 /exportPipeReport	Structed Endpoint	Exports a pipe report
+POST	 /createTableRelation 	Structed Endpoint	Creates a table relation
+POST	 /createWebhook 	Structed Endpoint	Creates a webhook at a pipe or table level
+POST	 /deleteCard 	Structed Endpoint	Deletes a card
+POST	 /deleteComment 	Structed Endpoint	Deletes a comment
+POST	 /deletePipe	Structed Endpoint	Deletes a pipe
+POST	 /interfaceEmbedCreat	Structed Endpoint	Create a new Interface
+POST	 /inviteMembers 	Structed Endpoint	Invites new members for the organization
+POST	 /moveCardToPhase 	Structed Endpoint	Moves a card to another phase
+POST	 /recordsImporter 	Structed Endpoint	Create new records from a xlsx file
+POST	 /removeUserFromOrg 	Structed Endpoint	Remove a user from an organization
+POST	 /removeUserFromPipe 	Structed Endpoint	Removes a user from pipe
+POST	 /removeUserFromTable 	Structed Endpoint	Removes a user from table
+POST	 /sendInboxEmail 	Structed Endpoint	Sends an email
+POST	 /setFieldConditionOrder 	Structed Endpoint	Sets field condition order
+POST	 /setRole 	Structed Endpoint	Sets the role of a user
+POST	 /setRoles 	Structed Endpoint	Sets role of multiple users
+POST	 /setSummaryAttributes 	Structed Endpoint	Sets summary attributes
+POST	 /setTableFieldOrder	Structed Endpoint	Sets table field order
+POST	 /updateCard 	Structed Endpoint	Updates an existing card
+POST	 /updateCardField 	Structed Endpoint	Updates an existing card field
+POST	 /updateComment	Structed Endpoint	Updates an existing comment
+POST	 /updateFieldsValues 	Structed Endpoint	Update one or many values of fields inside a Card or Table record.
+POST	 /updateLabel 	Structed Endpoint	Updates an existing label
+POST	 /updateOrganization 	Structed Endpoint	Updates an existing organization
+POST	 /updateOrganizationWebhook 	Structed Endpoint	Updates an existing organization-level webhook
+POST	 /updatePhase	Structed Endpoint	Updates an existing phase
+POST	 /updatePhaseField 	Structed Endpoint	Updates an existing phase field
+POST	 /updatePipe 	Structed Endpoint	Updates an existing pipe
+POST	 /updatePipeRelation 	Structed Endpoint	Updates an existing pipe relation
+POST	 /updateTable 	Structed Endpoint	Updates an existing table
+POST	 /updateTableField 	Structed Endpoint	Updates an existing table field
+POST	 /updateTableRecord 	Structed Endpoint	Updates an existing record
+POST	 /updateWebhook	Structed Endpoint	Updates an existing webhook (pipe or table level)

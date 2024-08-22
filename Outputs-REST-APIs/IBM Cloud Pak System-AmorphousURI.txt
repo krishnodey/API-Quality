@@ -25,15 +25,15 @@ Count: 22
 
 ***Patterns*** 
 Count: 12
-/deployment/resources/instances	Tidy End-point	
-/deployment/resources/subnets	Tidy End-point	
-/deployment/resources/addresses	Tidy End-point	
-/deployment/resources/credentials	Tidy End-point	
-/deployment/resources/groups	Tidy End-point	
-/deployment/resources/groups?isMaster=true	Tidy End-point	
-/deployment/resources/instances	Tidy End-point	
-/deployment/resources/addresses	Tidy End-point	
-/deployment/resources/volumes	Tidy End-point	
-/deployment/resources/volumes	Tidy End-point	
-/deployment/resources/acls	Tidy End-point	
-/admin/resources/backup	Tidy End-point	
+/deployment/resources/instances	Tidy End-point	Tidy Endpoint
+/deployment/resources/subnets	Tidy End-point	Tidy Endpoint
+/deployment/resources/addresses	Tidy End-point	Tidy Endpoint
+/deployment/resources/credentials	Tidy End-point	Tidy Endpoint
+/deployment/resources/groups	Tidy End-point	Tidy Endpoint
+/deployment/resources/groups?isMaster=true	Tidy End-point	Tidy Endpoint
+/deployment/resources/instances	Tidy End-point	Tidy Endpoint
+/deployment/resources/addresses	Tidy End-point	Tidy Endpoint
+/deployment/resources/volumes	Tidy End-point	Tidy Endpoint
+/deployment/resources/volumes	Tidy End-point	Tidy Endpoint
+/deployment/resources/acls	Tidy End-point	Tidy Endpoint
+/admin/resources/backup	Tidy End-point	Tidy Endpoint

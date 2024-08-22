@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 20
+/v5//pins	Tidy End-point	Tidy Endpoint
+/v5//pins	Tidy End-point	Tidy Endpoint
+/v5/pins/{pin_id}	Tidy End-point	Tidy Endpoint
+/v5/pins/{pin_id}	Tidy End-point	Tidy Endpoint
+/v5/pins/{pin_id}	Tidy End-point	Tidy Endpoint
+/v5/pins/{pin_id}/analytics	Tidy End-point	Tidy Endpoint
+/v5/pins/{pin_id}/save	Tidy End-point	Tidy Endpoint
+/v5/boards	Tidy End-point	Tidy Endpoint
+/v5/boards	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}/pins	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}/sections	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}/sections	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}/sections/{section_id}	Tidy End-point	Tidy Endpoint
+/v5/boards/{board_id}/sections/{section_id}/pins	Tidy End-point	Tidy Endpoint
+/v5/media	Tidy End-point	Tidy Endpoint
+/v5/media	Tidy End-point	Tidy Endpoint
+/v5/media/{media_id}	Tidy End-point	Tidy Endpoint

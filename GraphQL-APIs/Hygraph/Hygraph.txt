@@ -10,7 +10,3 @@ DELETE >> /v2/models/{model_id} >> For each of the content models you have creat
 GET >> /v2/post/{id} >>  For each of the content models you have created, you can choose to update, or delete from the schema editor. Deleting a model will also delete all of the content entries.The post query is what you would use to fetch one entry from the CMS. You can fetch an individual entry by id, or any unique non-localized field defined in your content type.
 GET >> /v2/posts/{id} >> The posts query is what you should use to fetch multiple entries from the CMS.
 GET >> /v2/posts/{id}/comments/{id} >> Imagine posts have a one to many relation with comments. With GraphQL you can query the related comments in the same request. Here we will get all posts, and their comments.
-
-
-
-

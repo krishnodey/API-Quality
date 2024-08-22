@@ -1,0 +1,92 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 87
+GET	 /users/self 	[Regular Endpoints]	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
+GET	 /users/<userID>/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
+POST	 /users/<userID>/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+PUT	 /users/<userID>/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+DELETE	 /users/<userID>/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
+GET	 /users/<userID>/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns all devices owned by a user and/or shared devices on the user's account.
+GET	 /users/<userID>/devicetypes 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the device types owned by a user.
+GET	 /users/<userID>/rules 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+GET	 /users/<userID>/scenes 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+GET	 /users/<userID>/trials 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the trials of a participant or administrator.
+GET	 /devices/<deviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a specific shared or owned device. Required permissions: READ on the device.
+POST	 /devices 	[Regular Endpoints]	Adds a device.
+PUT	 /devices/<deviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies a device's parameters.
+DELETE	 /devices/<deviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a device.
+GET	 /devices/<deviceID>/tokens 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the access token of a device.
+PUT	 /devices/<deviceID>/tokens 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new access token for a device.
+DELETE	 /devices/<deviceID>/tokens 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes the access token of a device.
+POST	 /devices/<deviceID>/providerauth 	[Identifier is Enclosed in {} or <> or Starts with :]	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
+DELETE	 /devices/<deviceID>/providerauth 	[Identifier is Enclosed in {} or <> or Starts with :]	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
+GET	 /devices/<deviceID>/status 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns current status of a device.
+GET	 /devices/status 	[Regular Endpoints]	Returns a list of device statuses.
+PUT	 /devices/<deviceID>/status 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies current status of a device.
+GET	 /devices/<deviceID>/certificate 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns fields for a device's certificates.
+GET	 /devices/<deviceID>/shares 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
+GET	 /devices/<deviceID>/shares/<shareID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+GET	 /devices/<deviceID>/shares/<shareID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+POST	 /devices/<deviceID>/shares 	[Identifier is Enclosed in {} or <> or Starts with :]	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
+GET	 /users/<userID>/shares 	[Identifier is Enclosed in {} or <> or Starts with :]	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
+GET	 /devicetypes/<deviceTypeID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the device type of a device.
+GET	 /devicetypes/<deviceTypeID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of device types.
+GET	 /devicetypes/<deviceTypeID>/manifests/latest/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+GET	 /devicetypes/<deviceTypeID>/manifests/<version>/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+GET	 /devicetypes/<deviceTypeID>/manifests/<version>/properties 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+GET	 /devicetypes/<deviceTypeID>/availablemanifestversions 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the available Manifest versions for a device type.
+POST	 /devicetypes/<deviceTypeId>/whitelist 	[Identifier is Enclosed in {} or <> or Starts with :]	Uploads an Approved List as a CSV file.
+GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the status of an uploaded CSV.
+GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the status of an uploaded CSV.
+GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the rows that were rejected in an uploaded CSV.
+GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the rows that were rejected in an uploaded CSV.
+GET	 /devicetypes/<deviceTypeId>/whitelist 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the Approved List for a device type.
+DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a specified device from a device type's Approved List.
+DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a specified device from a device type's Approved List.
+PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	[Identifier is Enclosed in {} or <> or Starts with :]	Enables or disables a device type's Approved List.
+POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	[Identifier is Enclosed in {} or <> or Starts with :]	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
+DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an Approved List certificate for a device type.
+DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an Approved List certificate for a device type.
+GET	 /devicetypes/<deviceTypeID>/whitelist/status 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the enabled/disabled status of an Approved List.
+GET	 /devicetypes/<deviceTypeID>/whitelist/certificates 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns details of an Approved List certificate.
+GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a specified vendor device ID.
+GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a specified vendor device ID.
+POST	 /messages 	[Regular Endpoints]	Sends a message.
+GET	 /messages 	[Regular Endpoints]	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
+POST	 /actions 	[Regular Endpoints]	Sends an Action to the specified device.
+GET	 /actions 	[Regular Endpoints]	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
+GET	 /messages/last 	[Regular Endpoints]	Returns the most recent normalized messages from a device or devices.
+GET	 /messages/analytics/aggregates 	[Regular Endpoints]	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
+GET	 /messages/analytics/histogram 	[Regular Endpoints]	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
+GET	 /messages/presence 	[Regular Endpoints]	Returns presence of normalized messages.
+GET	 /messages/snapshots 	[Regular Endpoints]	Returns last received value for all Manifest fields (aka device state) of a device or devices.
+GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	[Identifier is Enclosed in {} or <> or Starts with :]	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
+GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
+GET	 /pricing/devices/<deviceID>/pricingtiers 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
+POST	 /messages/export 	[Regular Endpoints]	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
+GET	 /messages/export/<exportID>/status 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the status of the messages export.
+GET	 /messages/export/<exportID>/result 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the result of the export query. The result call returns the response in tgz format.
+GET	 /messages/export/history 	[Regular Endpoints]	Returns a list of export queries that have been performed.
+POST	 /subscriptions 	[Regular Endpoints]	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
+GET	 /subscriptions 	[Regular Endpoints]	Returns all subscriptions for the current application. This call accepts application tokens as the access token.
+GET	 /subscriptions/<subscriptionID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a subscription. This call accepts application and user tokens as the access token.
+POST	 /subscriptions/<subscriptionID>/validate 	[Identifier is Enclosed in {} or <> or Starts with :]	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
+GET	 /notifications/<notificationID>/messages 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
+GET	 /rules/<ruleID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+POST	 /rules 	[Regular Endpoints]	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+PUT	 /rules/<ruleID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+DELETE	 /rules/<ruleID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+GET	 /rules/<ruleID>/executions 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+POST	 /rules/<ruleID>/actions 	[Identifier is Enclosed in {} or <> or Starts with :]	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
+GET	 /rules/<ruleID>/actions 	[Identifier is Enclosed in {} or <> or Starts with :]	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
+POST	 /scenes 	[Regular Endpoints]	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
+PUT	 /scenes/<sceneID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
+GET	 /scenes/<sceneID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+GET	 /scenes 	[Regular Endpoints]	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+DELETE	 /scenes/<sceneID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST	 /scenes/<sceneID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST	 /ml/models 	[Regular Endpoints]	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
+POST	 /ml/models/<modelID>/predict 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the predicted output for a machine learning model.
+GET	 /ml/models/<modelID> 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a model.

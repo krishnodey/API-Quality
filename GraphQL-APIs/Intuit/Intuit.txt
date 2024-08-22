@@ -39,15 +39,3 @@ POST >> /fetchInvoicePayment/{id} >> Read an InvoicePayment by Id >> id: ID of a
 POST >> /createInvoicePayment/{id} >> >> id: ID of an existing payemt invoice
 POST >> /updateInvoicePayment/{id} >> >> id: ID of an existing payemt invoice
 POST >> /deleteInvoicePayment/{id} >> >> id: ID of an existing payemt invoice
-
-
-
-
-
-
-
-
-
-
-
-

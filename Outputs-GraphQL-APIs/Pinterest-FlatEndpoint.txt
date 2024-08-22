@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 20
+GET	 /v5//pins 	Structed Endpoint	View, create, update, or delete information about Pins.
+POST	 /v5//pins 	Structed Endpoint	Create a Pin on a board or board section owned by the "operation user_account".
+GET	 /v5/pins/{pin_id} 	Structed Endpoint	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
+DELETE	 /v5/pins/{pin_id} 	Structed Endpoint	Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account.
+PATCH	 /v5/pins/{pin_id} 	Structed Endpoint	Update a pin owned by the "operating user_account".
+GET	 /v5/pins/{pin_id}/analytics 	Structed Endpoint	Get analytics for a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
+POST	 /v5/pins/{pin_id}/save	Structed Endpoint	Save a Pin on a board or board section owned by the "operation user_account".
+GET	 /v5/boards 	Structed Endpoint	View, create, update, or delete information about boards.
+POST	 /v5/boards 	Structed Endpoint	Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/boards/{board_id} 	Structed Endpoint	Get a board owned by the operation user_account - or a group board that has been shared with this account.
+PATCH	 /v5/boards/{board_id} 	Structed Endpoint	Update a board owned by the "operating user_account".
+DELETE	 /v5/boards/{board_id} 	Structed Endpoint	Delete a board owned by the "operation user_account".
+GET	 /v5/boards/{board_id}/pins 	Structed Endpoint	Get a list of the Pins on a board owned by the "operation user_account" - or on a group board that has been shared with this account.
+GET	 /v5/boards/{board_id}/sections 	Structed Endpoint	Get a list of all board sections from a board owned by the "operation user_account" - or a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+PATCH	 /v5/boards/{board_id}/sections 	Structed Endpoint	Update a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+DELETE	 /v5/boards/{board_id}/sections/{section_id} 	Structed Endpoint	Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Structed Endpoint	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/media 	Structed Endpoint	List media uploads filtered by given parameters.
+POST	 /v5/media 	Structed Endpoint	Register your intent to upload media
+GET	 /v5/media/{media_id} 	Structed Endpoint	Get details for a registered media upload, including its current status.

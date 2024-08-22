@@ -28,4 +28,4 @@ GET >> /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} >> Get 
 GET >> /v4/company/{countryCode}/{companyId}/charges.{format} >> Get charges for a given company. >> 
 GET >> /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} >> Get persons of significant control (PoSC) for a given company. >> 
 GET >> /v4/officer/{officerId}/related-officers.{format} >> Get all related officers for a given officer >> 
-GET >> /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}>> et subsidiaries for a given charity. >> 
+GET >> /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}>> Get subsidiaries for a given charity. >> 

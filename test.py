@@ -8,10 +8,10 @@ print("1. REST APIs\n2. GraphQL APIs")
 api= int(input())
 if api == 1:
     base_path = "REST-APIs/"
-    api_type = 'REST'
+    api_type = "REST"
 elif api == 2:
     base_path = "GraphQL-APIs/"
-    api_type = 'GraphQL'
+    api_type = "GraphQL"
 else:
     print("Enter a Valid Number")
 
@@ -19,7 +19,6 @@ else:
 apilist_path = base_path + 'APIList.txt'
 print(apilist_path)
 api_obj = APIChoice(apilist_path)
-#api_choice.display_choices()
 api_obj.select_choice()
 selected = api_obj.get_selected_choice()
 print(f"Your selected choice is: {selected}")
@@ -28,18 +27,9 @@ print(f"Your selected choice is: {selected}")
 #patterns and anti-patterns
 uri_path = base_path+selected+"/"+selected+".txt"
 uri_obj = FileReadWrite(uri_path)
-#data = uri_obj.read_data()
-#print(data)
-#uri = []
-#des = []
-#for line in data:
-#    line  = line.split(">>")
-#    uri.append(line[1])
-
-#print(uri)
 
 analyzer_obj = ApiAnalyzer(api_type, selected)
-#analyzer_obj.detect_amorphous_uri()
+
 
 print("Detection of AmorphousURI:")
 result_AP, result_P, p_count, ap_count = analyzer_obj.detect_amorphous_uri()

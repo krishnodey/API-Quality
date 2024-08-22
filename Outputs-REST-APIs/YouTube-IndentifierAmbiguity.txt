@@ -1,0 +1,55 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 50
+GET	 /activities 	[Regular Endpoints]	Returns a list of channel activity events that match the request criteria. For example, you can retrieve events associated with a particular channel or with the user's own channel.
+DELETE	 /captions 	[Regular Endpoints]	Deletes the specified caption track.
+GET	 /captions/id 	[Regular Endpoints]	Downloads a caption track. The caption track is returned in its original format unless the request specifies a value for the tfmt parameter and in its original language unless the request specifies a value for the tlang parameter.
+POST	 /captions 	[Regular Endpoints]	Uploads a caption track.
+GET	 /captions 	[Regular Endpoints]	Returns a list of caption tracks that are associated with a specified video. Note that the API response does not contain the actual captions and that the captions.download method provides the ability to retrieve a caption track.
+PUT	 /captions 	[Regular Endpoints]	Updates a caption track. When updating a caption track, you can change the track's draft status, upload a new caption file for the track, or both.
+POST	 /channelBanners/insert 	[Regular Endpoints]	Uploads a channel banner image to YouTube. This method represents the first two steps in a three-step process to update the banner image for a channel: Call the channelBanners.insert method to upload the binary image data to YouTube. The image must have a 16:9 aspect ratio and be at least 2048x1152 pixels. We recommend uploading a 2560px by 1440px image. Extract the url property's value from the response that the API returns for step 1. Call the channels.update method to update the channel's branding settings. Set the brandingSettings.image.bannerExternalUrl property's value to the URL obtained in step 2.
+DELETE	 /channelSections 	[Regular Endpoints]	Deletes a channel section.
+POST	 /channelSections 	[Regular Endpoints]	Adds a channel section to the authenticated user's channel. A channel can create a maximum of 10 shelves.
+GET	 /channelSections 	[Regular Endpoints]	Returns a list of channelSection resources that match the API request criteria.
+PUT	 /channelSections 	[Regular Endpoints]	Updates a channel section.
+GET	 /channels 	[Regular Endpoints]	Returns a collection of zero or more channel resources that match the request criteria.
+PUT	 /channels 	[Regular Endpoints]	Updates a channel's metadata. Note that this method currently only supports updates to the channel resource's brandingSettings and invideoPromotion objects and their child properties.
+GET	 /commentThreads 	[Regular Endpoints]	Returns a list of comment threads that match the API request parameters.
+POST	 /commentThreads 	[Regular Endpoints]	Creates a new top-level comment. To add a reply to an existing comment, use the comments.insert method instead.
+GET	 /comments 	[Regular Endpoints]	Returns a list of comments that match the API request parameters.
+POST	 /comments/setModerationStatus 	[Regular Endpoints]	Sets the moderation status of one or more comments. The API request must be authorized by the owner of the channel or video associated with the comments.
+POST	 /comments 	[Regular Endpoints]	Creates a reply to an existing comment. Note: To create a top-level comment, use the commentThreads.insert method.
+POST	 /comments/markAsSpam 	[Regular Endpoints]	Expresses the caller's opinion that one or more comments should be flagged as spam.
+DELETE	 /comments 	[Regular Endpoints]	Deletes a comment.
+PUT	 /comments 	[Regular Endpoints]	Modifies a comment.
+GET	 /guideCategories 	[Regular Endpoints]	Returns a list of categories that can be associated with YouTube channels.
+GET	 /i18nLanguages 	[Regular Endpoints]	Returns a list of application languages that the YouTube website supports.
+GET	 /i18nRegions 	[Regular Endpoints]	Returns a list of content regions that the YouTube website supports.
+GET	 /members 	[Regular Endpoints]	Lists members (formerly known as "sponsors") for a channel. The API request must be authorized by the channel owner.
+GET	 /membershipsLevels 	[Regular Endpoints]	Returns a collection of zero or more membershipsLevel resources owned by the channel that authorized the API request. Levels are returned in implicit display order.
+DELETE	 /playlistItems 	[Regular Endpoints]	Deletes a playlist item.
+POST	 /playlistItems 	[Regular Endpoints]	Adds a resource to a playlist.
+GET	 /playlistItems 	[Regular Endpoints]	Returns a collection of playlist items that match the API request parameters. You can retrieve all of the playlist items in a specified playlist or retrieve one or more playlist items by their unique IDs.
+PUT	 /playlistItems 	[Regular Endpoints]	Modifies a playlist item. For example, you could update the item's position in the playlist.
+DELETE	 /playlists 	[Regular Endpoints]	Deletes a playlist.
+GET	 /playlists 	[Regular Endpoints]	Returns a collection of playlists that match the API request parameters. For example, you can retrieve all playlists that the authenticated user owns, or you can retrieve one or more playlists by their unique IDs.
+POST	 /playlists 	[Regular Endpoints]	Creates a playlist.
+PUT	 /playlists 	[Regular Endpoints]	Modifies a playlist. For example, you could change a playlist's title, description, or privacy status.
+GET	 /search 	[Regular Endpoints]	Returns a collection of search results that match the query parameters specified in the API request. By default, a search result set identifies matching video, channel, and playlist resources, but you can also configure queries to only retrieve a specific type of resource.
+DELETE	 /subscriptions 	[Regular Endpoints]	Deletes a subscription.
+POST	 /subscriptions 	[Regular Endpoints]	Adds a subscription for the authenticated user's channel.
+GET	 /subscriptions 	[Regular Endpoints]	Returns subscription resources that match the API request criteria.
+POST	 /thumbnails/set 	[Regular Endpoints]	Uploads a custom video thumbnail to YouTube and sets it for a video.
+GET	 /videoAbuseReportReasons 	[Regular Endpoints]	Retrieve a list of reasons that can be used to report abusive videos.
+GET	 /videoCategories 	[Regular Endpoints]	Returns a list of categories that can be associated with YouTube videos.
+POST	 /videos 	[Regular Endpoints]	Uploads a video to YouTube and optionally sets the video's metadata.
+GET	 /videos 	[Regular Endpoints]	Returns a list of videos that match the API request parameters.
+DELETE	 /videos 	[Regular Endpoints]	Deletes a YouTube video.
+PUT	 /videos 	[Regular Endpoints]	Updates a video's metadata.
+POST	 /videos/rate 	[Regular Endpoints]	Add a like or dislike rating to a video or remove a rating from a video.
+GET	 /videos/getRating 	[Regular Endpoints]	Retrieves the ratings that the authorized user gave to a list of specified videos.
+POST	 /videos/reportAbuse 	[Regular Endpoints]	Report a video for containing abusive content.
+POST	 /watermarks/set 	[Regular Endpoints]	Uploads a watermark image to YouTube and sets it for a channel.
+POST	 /watermarks/unset 	[Regular Endpoints]	Deletes a channel's watermark image.

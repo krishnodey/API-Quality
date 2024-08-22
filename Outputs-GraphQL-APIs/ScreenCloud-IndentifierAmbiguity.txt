@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+GET	 /v2.10.0/allAppCategories 	[Regular Endpoints]	Get list of app's categories.
+GET	 /v2.10.0/allAppInstalls 	[Regular Endpoints]	Reads and enables pagination through a set of AppInstall.
+GET	 /v2.10.0/allAppInstances 	[Regular Endpoints]	Reads and enables pagination through a set of AppInstance.
+GET	 /v2.10.0/allAppVersions 	[Regular Endpoints]	Reads and enables pagination through a set of AppVersion.
+GET	 /v2.10.0/allAssociations 	[Regular Endpoints]	Reads and enables pagination through a set of Association.
+GET	 /v2.10.0/allBillingAddonPlans 	[Regular Endpoints]	Reads and enables pagination through a set of BillingAddonPlan.
+GET	 /v2.10.0/allBillingAddonSubscriptionFutures 	[Regular Endpoints]	Reads and enables pagination through a set of BillingAddonSubscriptionFuture.
+GET	 /v2.10.0/allBillingAddonSubscriptions 	[Regular Endpoints]	Reads and enables pagination through a set of BillingAddonSubscription.
+GET	 /v2.10.0/allBillingAddons 	[Regular Endpoints]	Reads and enables pagination through a set of BillingAddon.
+GET	 /v2.10.0/allBillingAddresses 	[Regular Endpoints]	Reads and enables pagination through a set of BillingAddress.
+GET	 /v2.10.0/allBillingCustomers 	[Regular Endpoints]	Reads and enables pagination through a set of BillingCustomer.
+GET	 /v2.10.0/allBillingDistributors 	[Regular Endpoints]	Reads and enables pagination through a set of BillingDistributor.
+GET	 /v2.10.0/allBillingHierarchies 	[Regular Endpoints]	Reads and enables pagination through a set of BillingHierarchy.
+GET	 /v2.10.0/allBillingPaymentSources  	[Regular Endpoints]	Reads and enables pagination through a set of BillingPaymentSource.
+GET	 /v2.10.0/allBillingPlans 	[Regular Endpoints]	Reads and enables pagination through a set of BillingPlan.
+GET	 /v2.10.0/allBillingRenewalFutures 	[Regular Endpoints]	Reads and enables pagination through a set of BillingRenewalFuture.
+GET	 /v2.10.0/allBillingRenewals 	[Regular Endpoints]	Reads and enables pagination through a set of BillingRenewal.
+GET	 /v2.10.0/allBillingResellers 	[Regular Endpoints]	Reads and enables pagination through a set of BillingReseller.
+GET	 /v2.10.0/allBillingSubscriptionFutures 	[Regular Endpoints]	Reads and enables pagination through a set of BillingSubscriptionFuture.
+GET	 /v2.10.0/allBillingSubscriptions 	[Regular Endpoints]	Reads and enables pagination through a set of BillingSubscription.
+GET	 /v2.10.0/allCasts 	[Regular Endpoints]	Reads and enables pagination through a set of Cast.
+GET	 /v2.10.0/allChannels 	[Regular Endpoints]	Reads and enables pagination through a set of Channel.
+GET	 /v2.10.0/allCommonAppInstanceTemplates 	[Regular Endpoints]	Reads and enables pagination through a set of CommonAppInstanceTemplate.
+GET	 /v2.10.0/allCommonFonts 	[Regular Endpoints]	Reads and enables pagination through a set of CommonFont.
+GET	 /v2.10.0/allCommonLayouts 	[Regular Endpoints]	Reads and enables pagination through a set of CommonLayout.
+GET	 /v2.10.0/allCommonPermissionSets 	[Regular Endpoints]	Reads and enables pagination through a set of CommonPermissionSet.
+GET	 /v2.10.0/allCredentials 	[Regular Endpoints]	Reads and enables pagination through a set of Credential.
+GET	 /v2.10.0/allEmbedViewLogs 	[Regular Endpoints]	Get embed view logs
+GET	 /v2.10.0/allEmbedViewLogsByContentTypeAndContentId 	[Regular Endpoints]	Get embed view logs by content type and content id
+GET	 /v2.10.0/allEmbeds 	[Regular Endpoints]	Reads and enables pagination through a set of Embed.
+GET	 /v2.10.0/allFavorites 	[Regular Endpoints]	Reads and enables pagination through a set of Favorite.
+GET	 /v2.10.0/allFeatureFlagOrgs 	[Regular Endpoints]	Reads and enables pagination through a set of FeatureFlagOrg.

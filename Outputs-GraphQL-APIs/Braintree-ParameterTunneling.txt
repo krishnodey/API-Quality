@@ -1,0 +1,101 @@
+***Anti-Pattern*** 
+Count: 96
+GET	 /ping 	Parameter Tunneling	Returns the literal string 'pong'.
+GET	 /pingInStoreReader 	Parameter Tunneling	Triggers a beep on a connected Reader and returns the Reader information or an error if unable to ping the device.
+GET	 /node 	Parameter Tunneling	Fetch any object that extends the Node interface using its ID.
+GET	 /idFromLegacyId 	Parameter Tunneling	Get a GraphQL ID from a legacy ID that was returned from an SDK or a legacyId field. Does not verify existence except for payment methods.
+GET	 /paypalFinancingOptions 	Parameter Tunneling	Retrieve PayPal financing options that include payment installment plans.
+GET	 /inStoreLocations 	Parameter Tunneling	Retrieve a paginated list of all in-store locations.
+POST	 /authorizePaymentMethod 	Parameter Tunneling	Authorize an eligible payment method and return a payload that includes details of the resulting transaction.
+POST	 /authorizePayPalAccount 	Parameter Tunneling	Authorize an eligible PayPal account and return a payload that includes details of the resulting transaction.
+POST	 /authorizeVenmoAccount 	Parameter Tunneling	Authorize an eligible Venmo account and return a payload that includes details of the resulting transaction.
+POST	 /authorizeCreditCard 	Parameter Tunneling	Authorize a credit card of any origin and return a payload that includes details of the resulting transaction.
+POST	 /captureTransaction 	Parameter Tunneling	Capture an authorized transaction and return a payload that includes details of the transaction.
+POST	 /chargeUsBankAccount 	Parameter Tunneling	Charge a US bank account and return a payload that includes details of the resulting transaction. See https://developers.braintreepayments.com/guides/ach/configuration for information on eligibility and setup.
+POST	 /chargePayPalAccount 	Parameter Tunneling	Charge a PayPal account and return a payload that includes details of the resulting transaction.
+POST	 /chargeVenmoAccount 	Parameter Tunneling	Charge a Venmo account and return a payload that includes details of the resulting transaction. See https://articles.braintreepayments.com/guides/payment-methods/venmo for information on eligibility and setup.
+POST	 /chargeCreditCard 	Parameter Tunneling	Charge a credit card of any origin and return a payload that includes details of the resulting transaction.
+POST	 /vaultPaymentMethod 	Parameter Tunneling	Vault payment information from a single-use payment method and return a payload that includes a new multi-use payment method. When vaulting a credit card, by default, this mutation will also verify that card before vaulting.
+POST	 /vaultUsBankAccount 	Parameter Tunneling	Vault payment information from a single-use US bank account payment method and return a payload that includes a new multi-use payment method.
+POST	 /vaultCreditCard 	Parameter Tunneling	Vault payment information from a single-use credit card and return a payload that includes a new multi-use payment method. By default, this mutation will also verify the card before vaulting.
+POST	 /refundTransaction 	Parameter Tunneling	Refund a settled transaction and return a payload that includes details of the refund.
+POST	 /reverseTransaction 	Parameter Tunneling	Reverse a transaction and return a payload that includes either the voided transaction or a refund.
+POST	 /reverseRefund 	Parameter Tunneling	Reverse a refund and return a payload that includes voided refund.
+POST	 /refundCreditCard	Parameter Tunneling	Create a detached refund (unassociated with any previous Braintree payment) to a credit card and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration.
+POST	 /refundUsBankAccount	Parameter Tunneling	Create a detached refund (unassociated with any previous Braintree payment) to a US Bank Account and return a payload that includes details of the refund. We have previously referred to this as issuing a "detached credit," and it is disallowed by default. See the documentation for more information regarding eligibility and configuration.
+POST	 /updateCustomFields 	Parameter Tunneling	Update custom fields on a transaction or refund. Custom fields are defined in the Control Panel.
+POST	 /verifyCreditCard 	Parameter Tunneling	Run a verification on a multi-use credit card payment method.
+POST	 /deletePaymentMethodFromVault 	Parameter Tunneling	Delete a multi-use payment method from the vault.
+POST	 /createClientToken 	Parameter Tunneling	Create a client token that can be used to initialize a client in order to tokenize payment information.
+POST	 /createUniversalAccessToken 	Parameter Tunneling	Create a PayPal access token that can be used to make additional API calls or initialize a client.
+POST	 /partialCaptureTransaction 	Parameter Tunneling	Partially capture funds from a transaction that was successfully authorized and return a payload that includes a new transaction with information about the capture. This is available for Venmo and PayPal transactions.
+POST	 /tokenizeCustomActionsPaymentMethod 	Parameter Tunneling	Tokenize Custom Actions fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeCreditCard 	Parameter Tunneling	Tokenize credit card fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeCvv 	Parameter Tunneling	Tokenize a credit card's CVV and return a payload that includes a single-use payment method.
+POST	 /tokenizeNetworkToken 	Parameter Tunneling	Tokenize a network tokenized payment instrument and return a payload that includes a single-use payment method.
+POST	 /tokenizeSamsungPayCard 	Parameter Tunneling	Tokenize Samsung Pay card fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeUsBankAccount 	Parameter Tunneling	Tokenize US bank account fields and return a payload that includes a single-use payment method.
+POST	 /tokenizeUsBankLogin 	Parameter Tunneling	Tokenize US bank login fields and return a payload that includes a single-use payment method.
+POST	 /tokenizePayPalOneTimePayment 	Parameter Tunneling	Tokenize PayPal One-Time Payment and return a payload that includes a single-use payment method.
+POST	 /tokenizePayPalBillingAgreement 	Parameter Tunneling	Tokenize PayPal account and return a payload that includes a single-use payment method.
+POST	 /createCustomer 	Parameter Tunneling	Create a customer for storing individual customer information and/or grouping transactions and multi-use payment methods.
+POST	 /updateCustomer 	Parameter Tunneling	Update a customer's information.
+POST	 /deleteCustomer 	Parameter Tunneling	Delete a customer, breaking association between any of the customer's transactions. Will not delete if the customer has existing payment methods.
+POST	 /updateCreditCardBillingAddress 	Parameter Tunneling	Set a new billing address for a multi-use credit card payment method. By default, this mutation will also verify the card with the new billing address before updating.
+POST	 /updateCreditCardCardholderName 	Parameter Tunneling	Set a new cardholder name for a multi-use credit card payment method. By default, this mutation will also verify the card with the new cardholder name before updating.
+POST	 /updateCreditCardExpirationDate 	Parameter Tunneling	Set a new expiration date for a multi-use credit card payment method. By default, this mutation will also verify the card with the new expiration date before updating.
+POST	 /performThreeDSecureLookup 	Parameter Tunneling	Attempt to perform 3D Secure Authentication on credit card payment method. This may consume the payment method and return a new single-use payment method.
+POST	 /acceptDispute 	Parameter Tunneling	Accepts a dispute and returns a payload that includes the dispute that was accepted. Only disputes with a status of OPEN can be accepted.
+POST	 /finalizeDispute 	Parameter Tunneling	Finalizes a dispute and returns a payload that includes the dispute that was finalized. Only disputes with a status of OPEN can be finalized.
+POST	 /createDisputeTextEvidence 	Parameter Tunneling	Creates text evidence to a dispute and returns a payload that includes the evidence that was created. Only disputes with a status of OPEN can have text evidence created for them.
+POST	 /deleteDisputeEvidence 	Parameter Tunneling	Deletes evidence from a dispute.
+POST	 /vaultPayPalBillingAgreement 	Parameter Tunneling	Vault an existing PayPal Billing Agreement that was not created through Braintree. Only use this mutation if you need to import PayPal Billing Agreements from an existing PayPal integration into your Braintree account.
+POST	 /createInStoreLocation 	Parameter Tunneling	Creates a new In-Store Location to associate Readers.
+POST	 /updateInStoreLocation 	Parameter Tunneling	Updates an In-Store Location.
+POST	 /updateInStoreReader 	Parameter Tunneling	Updates an In-Store Reader.
+POST	 /requestFirmwareUpdateFromInStoreReader 	Parameter Tunneling	Request an in-store reader to update to the latest version of software.
+POST	 /createVenmoPaymentContext 	Parameter Tunneling	Create a Venmo payment context.
+POST	 /updateTransactionAmount 	Parameter Tunneling	Updates the authorization amount of the transaction.
+POST	 /generateExchangeRateQuote 	Parameter Tunneling	Generate a customized currency exchange rate quote for items on a merchant's page. This allows merchants to advertise products in their customer's currency. Your account must be enabled to use this feature.
+POST	 /createNonInstantLocalPaymentContext 	Parameter Tunneling	Creates a non-instant local payment context. Your account must be enabled to use this feature.
+POST	 /DisputeEvidence/{id} 	Parameter Tunneling	Evidence provided by a merchant to respond to a dispute.
+POST	 /DisputeEvidence/{legacyId} 	Parameter Tunneling	Evidence provided by a merchant to respond to a dispute.
+POST	 /InStoreContextResult/{id} 	Parameter Tunneling	Reference object for an in-store request.
+POST	 /InStoreReaderOriginDetails 	Parameter Tunneling	Additional information about the payment method supplied by an in-store payment reader.
+POST	 /Node/{id} 	Parameter Tunneling	Relay compatible Node interface.
+POST	 /Payment/{id} 	Parameter Tunneling	A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).
+POST	 /Payment/{legacyId} 	Parameter Tunneling	A merchant-initiated movement of money between the merchant and a customer, by way of a payment method. Payments can represent money moving either from a customer to the merchant by charging a payment method (a Transaction), or from the merchant back to a customer by refunding a previous transaction (a Refund).
+
+***Patterns*** 
+Count: 0
+GET	 /viewer 	Parameter Adherence	The currently authenticated viewer.
+GET	 /clientConfiguration 	Parameter Adherence	The client-side environment and payment method configuration.
+GET	 /report 	Parameter Adherence	A collection of the available reports. Each field on the Report type is a different report that can be queried with its own input parameters.
+GET	 /search 	Parameter Adherence	A collection of the available searches. Each field on the Search type is a different search that can be queried with its own input parameters.
+POST	 /verifyPaymentMethod	Parameter Adherence	Run a verification on a multi-use payment method.
+POST	 /verifyUsBankAccount 	Parameter Adherence	Run a verification on a multi-use US bank account payment method.
+POST	 /confirmMicroTransferAmounts	Parameter Adherence	Confirm micro-transfer amounts initiated by vaultUsBankAccount or verifyUsBankAccount, completing the verification process for a US Bank Account via micro-transfer.
+POST	 /createPayPalOneTimePayment 	Parameter Adherence	Set up a PayPal One-Time Payment for approval by a PayPal user. See documentation for more information. Your account must be enabled for this feature.
+POST	 /createPayPalBillingAgreement 	Parameter Adherence	Set up a PayPal Billing Agreement Token for approval by a PayPal user.
+POST	 /createDisputeFileEvidence 	Parameter Adherence	Uploads an evidence file and associates it with a dispute. Note:: file upload requires a special request format. See the 'Uploading Files' integration guide for instructions on how to perform this mutation.
+POST	 /sandboxSettleTransaction 	Parameter Adherence	Force a transaction to settle in the sandbox environment. Generates an error elsewhere.
+POST	 /pairInStoreReader 	Parameter Adherence	Pairs a Reader to an account and In-Store Location.
+POST	 /requestChargeFromInStoreReader 	Parameter Adherence	Request an in-store reader to begin the charge flow.
+POST	 /requestAuthorizeFromInStoreReader 	Parameter Adherence	Request an in-store reader to begin the authorize flow. Only supported on payment application versions >= 5.1.0.
+POST	 /requestCancelFromInStoreReader 	Parameter Adherence	Request an in-store reader to cancel the charge flow.
+POST	 /requestRefundFromInStoreReader 	Parameter Adherence	Request an in-store reader to start an unreferenced refund flow.
+POST	 /requestVaultFromInStoreReader	Parameter Adherence	Request an in-store reader to vault a payment method.
+POST	 /requestTextDisplayFromInStoreReader 	Parameter Adherence	Request an in-store reader to display text.
+POST	 /requestItemDisplayFromInStoreReader 	Parameter Adherence	Request an in-store reader to display line items.
+POST	 /requestSignaturePromptFromInStoreReader 	Parameter Adherence	Request an in-store reader to display a signature prompt. Only supported on payment application versions >= 3.3.0.
+POST	 /requestConfirmationPromptFromInStoreReader	Parameter Adherence	Request an in-store reader to display a confirmation prompt. Only supported on payment application versions >= 3.3.0.
+POST	 /requestNonPciCardDataFromInStoreReader 	Parameter Adherence	Request an in-store reader to collect non PCI-scoped card data. Only supported on payment application versions >= 5.2.0.
+POST	 /requestAmountPromptFromInStoreReader 	Parameter Adherence	Request an in-store reader to display an amount prompt. Only supported on payment application versions >= 5.2.0.
+POST	 /requestTextPromptFromInStoreReader 	Parameter Adherence	Request an in-store reader to display a text prompt. Only supported on payment application versions >= 5.2.0.
+POST	 /PaymentContext 	Parameter Adherence	Context associated with a transaction.
+POST	 /PaymentStatusEvent 	Parameter Adherence	Status event in the lifecycle of a payment.
+POST	 /AccountCreationStatus 	Parameter Adherence	The status of the business account creation request.
+POST	 /ApplePayStatus 	Parameter Adherence	The environment being used for Apple Pay.
+POST	 /ApplicationBankAccountPurpose 	Parameter Adherence	The purpose of the merchant application bank account.
+POST	 /ApplicationStatus 	Parameter Adherence	The status of a merchant account application.
+POST	 /BinRecordValue 	Parameter Adherence	A boolean-like value that includes UNKNOWN in the case where the information isn't available.

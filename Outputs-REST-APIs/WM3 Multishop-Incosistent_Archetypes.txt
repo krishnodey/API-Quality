@@ -1,0 +1,113 @@
+***Anti-Pattern*** 
+Count: 57
+GET	 /shop/admin/prices?customer_id=:customer_id 	Singular Nouns Found in Consecutive Nodes	Retrieve Customer Prices
+POST	 /shop/admin/customers/:customer_id/prices 	Singular Nouns Found in Consecutive Nodes	Create Customer Price
+DELETE	 /shop/admin/customers/:customer_id/prices/:variant_id 	Singular Nouns Found in Consecutive Nodes	DELETE
+DELETE	 /shop/admin/customers/:customer_id/prices/:variant_id 	Plural Nouns Found in Consecutive Nodes	DELETE
+GET	 /shop/admin/price_lists 	Singular Nouns Found in Consecutive Nodes	Retrieve Price lists
+GET	 /shop/admin/price_lists/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Price list
+POST	 /shop/admin/price_lists 	Singular Nouns Found in Consecutive Nodes	Create Price list
+PUT	 /shop/admin/price_lists/:id 	Singular Nouns Found in Consecutive Nodes	Update Price list
+GET	 /shop/admin/products 	Singular Nouns Found in Consecutive Nodes	Retrieve Products
+GET	 /shop/admin/products/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Product
+POST	 /shop/admin/products 	Singular Nouns Found in Consecutive Nodes	Create Product
+POST	 /shop/admin/products 	Singular Nouns Found in Consecutive Nodes	Create multiple Products
+PUT	 /shop/admin/products/:idUpdate Product 	Singular Nouns Found in Consecutive Nodes	
+GET	 /shop/admin/properties 	Singular Nouns Found in Consecutive Nodes	Retrieve Properties
+GET	 /shop/admin/properties/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Property
+PUT	 /shop/admin/properties/:id 	Singular Nouns Found in Consecutive Nodes	Update Property
+GET	 /shop/admin/properties/:property_id/property_values 	Singular Nouns Found in Consecutive Nodes	Retrieve Property values
+GET	 /shop/admin/properties/:property_id/property_values/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Property value
+POST	 /shop/admin/properties/:property_id/property_values 	Singular Nouns Found in Consecutive Nodes	Create Property value
+PUT	 /shop/admin/properties/:property_id/property_values/:id 	Singular Nouns Found in Consecutive Nodes	Update Property value
+GET	 /shop/admin/shipping_categories 	Singular Nouns Found in Consecutive Nodes	Retrieve Shipping categories
+GET	 /shop/admin/shipping_categories/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Shipping category
+POST	 /shop/admin/shipping_categories 	Singular Nouns Found in Consecutive Nodes	Create Shipping category
+PUT	 /shop/admin/shipping_categories/:id 	Singular Nouns Found in Consecutive Nodes	Update Shipping Category
+GET	 /shop/admin/shipping_methods 	Singular Nouns Found in Consecutive Nodes	Retrieve Shipping methods
+GET	 /shop/admin/shipping_methods/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Shipping method
+GET	 /shop/admin/prices/:price_id/staggered_prices 	Singular Nouns Found in Consecutive Nodes	Retrieve Staggered prices
+GET	 /shop/admin/prices/:price_id/staggered_prices/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Staggered Price
+POST	 /shop/admin/prices/:price_id/staggered_prices 	Singular Nouns Found in Consecutive Nodes	Create Staggered Price
+PUT	 /shop/admin/prices/:price_id/staggered_prices/:id 	Singular Nouns Found in Consecutive Nodes	Update Staggered Price
+DELETE	 /shop/admin/prices/:price_id/staggered_prices/:id 	Singular Nouns Found in Consecutive Nodes	DELETE
+GET	 /shop/admin/stock_items 	Singular Nouns Found in Consecutive Nodes	Retrieve Stock items
+GET	 /shop/admin/stock_items/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Stock Item
+GET	 /shop/admin/variants/:variant_id/stock_item 	Singular Nouns Found in Consecutive Nodes	Retrieve Stock Item
+PUT	 /shop/admin/stock_items/:id 	Singular Nouns Found in Consecutive Nodes	Update Stock Item
+PUT	 /shop/admin/variants/:variant_id/stock_item 	Singular Nouns Found in Consecutive Nodes	Update Stock Item
+POST	 /shop/admin/stock_items/:id/movement 	Singular Nouns Found in Consecutive Nodes	Create Stock Item movement
+POST	 /shop/admin/variants/:variant_id/stock_item/movement 	Singular Nouns Found in Consecutive Nodes	Create Stock Item movement
+GET	 /shop/admin/tax_categories 	Singular Nouns Found in Consecutive Nodes	Retrieve Tax categories
+PUT	 /shop/admin/tax_categories/:id 	Singular Nouns Found in Consecutive Nodes	Update Tax Category
+GET	 /shop/admin/tax_rates 	Singular Nouns Found in Consecutive Nodes	Retrieve Tax rates
+GET	 /shop/admin/tax_rates/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Tax rate
+PUT	 /shop/admin/tax_rates/:id 	Singular Nouns Found in Consecutive Nodes	Update Tax rate
+GET	 /shop/admin/tax_zones 	Singular Nouns Found in Consecutive Nodes	Retrieve Tax zones
+GET	 /shop/admin/tax_zones/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Tax zone
+POST	 /shop/admin/tax_zones 	Singular Nouns Found in Consecutive Nodes	Create Tax zone
+PUT	 /shop/admin/tax_zones/:id 	Singular Nouns Found in Consecutive Nodes	Update Tax zone
+GET	 /shop/admin/variants 	Singular Nouns Found in Consecutive Nodes	Retrieve Variants
+GET	 /shop/admin/products/:product_id/variants 	Singular Nouns Found in Consecutive Nodes	Retrieve Variants
+GET	 /shop/admin/variants/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Variant
+GET	 /shop/admin/products/:product_id/variants/:id 	Singular Nouns Found in Consecutive Nodes	Retrieve Variant
+GET	 /shop/admin/products/:product_id/variants/:id 	Plural Nouns Found in Consecutive Nodes	Retrieve Variant
+POST	 /shop/admin/products/:product_id/variants 	Singular Nouns Found in Consecutive Nodes	Create Variant
+PUT	 /shop/admin/variants/:id 	Singular Nouns Found in Consecutive Nodes	Update Variant
+PUT	 /shop/admin/products/:product_id/variants/:id 	Singular Nouns Found in Consecutive Nodes	Update Variant
+PUT	 /shop/admin/products/:product_id/variants/:id 	Plural Nouns Found in Consecutive Nodes	Update Variant
+POST	 /shop/admin/variants/update_stock 	Singular Nouns Found in Consecutive Nodes	Update Variants stock
+
+***Patterns*** 
+Count: 51
+GET	 /shop/admin/prices?customer_id=:customer_id 	Cosistent Resource Archetype	Retrieve Customer Prices
+POST	 /shop/admin/customers/:customer_id/prices 	Cosistent Resource Archetype	Create Customer Price
+GET	 /shop/admin/price_lists 	Cosistent Resource Archetype	Retrieve Price lists
+GET	 /shop/admin/price_lists/:id 	Cosistent Resource Archetype	Retrieve Price list
+POST	 /shop/admin/price_lists 	Cosistent Resource Archetype	Create Price list
+PUT	 /shop/admin/price_lists/:id 	Cosistent Resource Archetype	Update Price list
+GET	 /shop/admin/products 	Cosistent Resource Archetype	Retrieve Products
+GET	 /shop/admin/products/:id 	Cosistent Resource Archetype	Retrieve Product
+POST	 /shop/admin/products 	Cosistent Resource Archetype	Create Product
+POST	 /shop/admin/products 	Cosistent Resource Archetype	Create multiple Products
+PUT	 /shop/admin/products/:idUpdate Product 	Cosistent Resource Archetype	
+GET	 /shop/admin/properties 	Cosistent Resource Archetype	Retrieve Properties
+GET	 /shop/admin/properties/:id 	Cosistent Resource Archetype	Retrieve Property
+PUT	 /shop/admin/properties/:id 	Cosistent Resource Archetype	Update Property
+GET	 /shop/admin/properties/:property_id/property_values 	Cosistent Resource Archetype	Retrieve Property values
+GET	 /shop/admin/properties/:property_id/property_values/:id 	Cosistent Resource Archetype	Retrieve Property value
+POST	 /shop/admin/properties/:property_id/property_values 	Cosistent Resource Archetype	Create Property value
+PUT	 /shop/admin/properties/:property_id/property_values/:id 	Cosistent Resource Archetype	Update Property value
+GET	 /shop/admin/shipping_categories 	Cosistent Resource Archetype	Retrieve Shipping categories
+GET	 /shop/admin/shipping_categories/:id 	Cosistent Resource Archetype	Retrieve Shipping category
+POST	 /shop/admin/shipping_categories 	Cosistent Resource Archetype	Create Shipping category
+PUT	 /shop/admin/shipping_categories/:id 	Cosistent Resource Archetype	Update Shipping Category
+GET	 /shop/admin/shipping_methods 	Cosistent Resource Archetype	Retrieve Shipping methods
+GET	 /shop/admin/shipping_methods/:id 	Cosistent Resource Archetype	Retrieve Shipping method
+GET	 /shop/admin/prices/:price_id/staggered_prices 	Cosistent Resource Archetype	Retrieve Staggered prices
+GET	 /shop/admin/prices/:price_id/staggered_prices/:id 	Cosistent Resource Archetype	Retrieve Staggered Price
+POST	 /shop/admin/prices/:price_id/staggered_prices 	Cosistent Resource Archetype	Create Staggered Price
+PUT	 /shop/admin/prices/:price_id/staggered_prices/:id 	Cosistent Resource Archetype	Update Staggered Price
+DELETE	 /shop/admin/prices/:price_id/staggered_prices/:id 	Cosistent Resource Archetype	DELETE
+GET	 /shop/admin/stock_items 	Cosistent Resource Archetype	Retrieve Stock items
+GET	 /shop/admin/stock_items/:id 	Cosistent Resource Archetype	Retrieve Stock Item
+GET	 /shop/admin/variants/:variant_id/stock_item 	Cosistent Resource Archetype	Retrieve Stock Item
+PUT	 /shop/admin/stock_items/:id 	Cosistent Resource Archetype	Update Stock Item
+PUT	 /shop/admin/variants/:variant_id/stock_item 	Cosistent Resource Archetype	Update Stock Item
+POST	 /shop/admin/stock_items/:id/movement 	Cosistent Resource Archetype	Create Stock Item movement
+POST	 /shop/admin/variants/:variant_id/stock_item/movement 	Cosistent Resource Archetype	Create Stock Item movement
+GET	 /shop/admin/tax_categories 	Cosistent Resource Archetype	Retrieve Tax categories
+PUT	 /shop/admin/tax_categories/:id 	Cosistent Resource Archetype	Update Tax Category
+GET	 /shop/admin/tax_rates 	Cosistent Resource Archetype	Retrieve Tax rates
+GET	 /shop/admin/tax_rates/:id 	Cosistent Resource Archetype	Retrieve Tax rate
+PUT	 /shop/admin/tax_rates/:id 	Cosistent Resource Archetype	Update Tax rate
+GET	 /shop/admin/tax_zones 	Cosistent Resource Archetype	Retrieve Tax zones
+GET	 /shop/admin/tax_zones/:id 	Cosistent Resource Archetype	Retrieve Tax zone
+POST	 /shop/admin/tax_zones 	Cosistent Resource Archetype	Create Tax zone
+PUT	 /shop/admin/tax_zones/:id 	Cosistent Resource Archetype	Update Tax zone
+GET	 /shop/admin/variants 	Cosistent Resource Archetype	Retrieve Variants
+GET	 /shop/admin/products/:product_id/variants 	Cosistent Resource Archetype	Retrieve Variants
+GET	 /shop/admin/variants/:id 	Cosistent Resource Archetype	Retrieve Variant
+POST	 /shop/admin/products/:product_id/variants 	Cosistent Resource Archetype	Create Variant
+PUT	 /shop/admin/variants/:id 	Cosistent Resource Archetype	Update Variant
+POST	 /shop/admin/variants/update_stock 	Cosistent Resource Archetype	Update Variants stock

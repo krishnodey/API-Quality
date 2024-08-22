@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 3
+GET	 /v2.10.0/allBillingAddonSubscriptionFutures 	Complex Words Present in Endpoint	Reads and enables pagination through a set of BillingAddonSubscriptionFuture.
+GET	 /v2.10.0/allCommonAppInstanceTemplates 	Complex Words Present in Endpoint	Reads and enables pagination through a set of CommonAppInstanceTemplate.
+GET	 /v2.10.0/allEmbedViewLogsByContentTypeAndContentId 	Complex Words Present in Endpoint	Get embed view logs by content type and content id
+
+***Patterns*** 
+Count: 29
+GET	 /v2.10.0/allAppCategories 	Structed Endpoint	Get list of app's categories.
+GET	 /v2.10.0/allAppInstalls 	Structed Endpoint	Reads and enables pagination through a set of AppInstall.
+GET	 /v2.10.0/allAppInstances 	Structed Endpoint	Reads and enables pagination through a set of AppInstance.
+GET	 /v2.10.0/allAppVersions 	Structed Endpoint	Reads and enables pagination through a set of AppVersion.
+GET	 /v2.10.0/allAssociations 	Structed Endpoint	Reads and enables pagination through a set of Association.
+GET	 /v2.10.0/allBillingAddonPlans 	Structed Endpoint	Reads and enables pagination through a set of BillingAddonPlan.
+GET	 /v2.10.0/allBillingAddonSubscriptions 	Structed Endpoint	Reads and enables pagination through a set of BillingAddonSubscription.
+GET	 /v2.10.0/allBillingAddons 	Structed Endpoint	Reads and enables pagination through a set of BillingAddon.
+GET	 /v2.10.0/allBillingAddresses 	Structed Endpoint	Reads and enables pagination through a set of BillingAddress.
+GET	 /v2.10.0/allBillingCustomers 	Structed Endpoint	Reads and enables pagination through a set of BillingCustomer.
+GET	 /v2.10.0/allBillingDistributors 	Structed Endpoint	Reads and enables pagination through a set of BillingDistributor.
+GET	 /v2.10.0/allBillingHierarchies 	Structed Endpoint	Reads and enables pagination through a set of BillingHierarchy.
+GET	 /v2.10.0/allBillingPaymentSources  	Structed Endpoint	Reads and enables pagination through a set of BillingPaymentSource.
+GET	 /v2.10.0/allBillingPlans 	Structed Endpoint	Reads and enables pagination through a set of BillingPlan.
+GET	 /v2.10.0/allBillingRenewalFutures 	Structed Endpoint	Reads and enables pagination through a set of BillingRenewalFuture.
+GET	 /v2.10.0/allBillingRenewals 	Structed Endpoint	Reads and enables pagination through a set of BillingRenewal.
+GET	 /v2.10.0/allBillingResellers 	Structed Endpoint	Reads and enables pagination through a set of BillingReseller.
+GET	 /v2.10.0/allBillingSubscriptionFutures 	Structed Endpoint	Reads and enables pagination through a set of BillingSubscriptionFuture.
+GET	 /v2.10.0/allBillingSubscriptions 	Structed Endpoint	Reads and enables pagination through a set of BillingSubscription.
+GET	 /v2.10.0/allCasts 	Structed Endpoint	Reads and enables pagination through a set of Cast.
+GET	 /v2.10.0/allChannels 	Structed Endpoint	Reads and enables pagination through a set of Channel.
+GET	 /v2.10.0/allCommonFonts 	Structed Endpoint	Reads and enables pagination through a set of CommonFont.
+GET	 /v2.10.0/allCommonLayouts 	Structed Endpoint	Reads and enables pagination through a set of CommonLayout.
+GET	 /v2.10.0/allCommonPermissionSets 	Structed Endpoint	Reads and enables pagination through a set of CommonPermissionSet.
+GET	 /v2.10.0/allCredentials 	Structed Endpoint	Reads and enables pagination through a set of Credential.
+GET	 /v2.10.0/allEmbedViewLogs 	Structed Endpoint	Get embed view logs
+GET	 /v2.10.0/allEmbeds 	Structed Endpoint	Reads and enables pagination through a set of Embed.
+GET	 /v2.10.0/allFavorites 	Structed Endpoint	Reads and enables pagination through a set of Favorite.
+GET	 /v2.10.0/allFeatureFlagOrgs 	Structed Endpoint	Reads and enables pagination through a set of FeatureFlagOrg.

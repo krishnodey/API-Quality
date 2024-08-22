@@ -1,0 +1,22 @@
+***Anti-Pattern*** 
+Count: 12
+GET	 /users/{userId}/recommendations 	Parameter Tunneling	recommendationsByUserId
+GET	 /recommendations?category={category}&ageGroup={ageGroup} 	Parameter Tunneling	recommendationsBy
+
+***Patterns*** 
+Count: 5
+GET	 /movies/{id} 	Parameter Adherence	findMovieById
+GET	 /rawMovies/{id} 	Parameter Adherence	findRawMovieById
+GET	 /movies?name={name}&author={author} 	Parameter Adherence	findMovie
+POST	 /movies 	Parameter Adherence	registerMovie
+POST	 /titles 	Parameter Adherence	registerTitle
+POST	 /binaries/byteBuf 	Parameter Adherence	registerByteBufBinary
+POST	 /binaries/byteArray 	Parameter Adherence	registerByteArrayBinary
+DELETE	 /movies/{id} 	Parameter Adherence	deleteMovie
+POST	 /content/rawContentSource 	Parameter Adherence	rawContentSource
+POST	 /content/byteBufContent 	Parameter Adherence	byteBufContent
+POST	 /content/byteArrayContent 	Parameter Adherence	byteArrayContent
+POST	 /content/stringContent 	Parameter Adherence	stringContent
+POST	 /content/movieContent 	Parameter Adherence	movieContent
+POST	 content/movieContentBroken 	Parameter Adherence	movieContentBroken
+POST	 /users/{userId}/recommendations 	Parameter Adherence	updateRecommendation

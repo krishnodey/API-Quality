@@ -7,7 +7,7 @@ BroadCom
 Cisco Flare
 ClearBlade
 Dropbox
-Droplit.io
+Droplit-io
 Facebook
 Google Nest
 GroupWise
@@ -35,3 +35,4 @@ Twitter
 Uber
 WM3 Multishop
 YouTube
+OpenAI
