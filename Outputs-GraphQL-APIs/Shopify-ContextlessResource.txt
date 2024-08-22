@@ -1,0 +1,38 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 33
+/delegateAccessTokenCreate	 Contextual Resource Names
+/storefrontAccessTokenCreate	 Contextual Resource Names
+/storefrontAccessTokenDelete	 Contextual Resource Names
+/AccessScope	 Contextual Resource Names
+/DelegateAccessToken	 Contextual Resource Names
+/StorefrontAccessToken	 Contextual Resource Names
+/shopifyqlQuery	 Contextual Resource Names
+/ErrorPosition	 Contextual Resource Names
+/ParseError	 Contextual Resource Names
+/ParseErrorRange	 Contextual Resource Names
+/PolarisVizDataPoint	 Contextual Resource Names
+/PolarisVizDataSeries	 Contextual Resource Names
+/PolarisVizResponse	 Contextual Resource Names
+/TableData	 Contextual Resource Names
+/TableDataColumn	 Contextual Resource Names
+/TableResponse	 Contextual Resource Names
+/query/{id}	 Contextual Resource Names
+/appByHandle	 Contextual Resource Names
+/appByKey	 Contextual Resource Names
+/appInstallation/{id}	 Contextual Resource Names
+/appInstallations	 Contextual Resource Names
+/currentAppInstallation	 Contextual Resource Names
+/publication/{id}	 Contextual Resource Names
+/publications	 Contextual Resource Names
+/publicationCreate	 Contextual Resource Names
+/publicationDelete{id}	 Contextual Resource Names
+/publicationUpdate	 Contextual Resource Names
+/AppFeedback	 Contextual Resource Names
+/AppInstallation	 Contextual Resource Names
+/FailedRequirement	 Contextual Resource Names
+/Link	 Contextual Resource Names
+/Publication	 Contextual Resource Names
+/ResourceFeedback	 Contextual Resource Names

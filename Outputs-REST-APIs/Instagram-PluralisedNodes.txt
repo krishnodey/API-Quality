@@ -1,0 +1,24 @@
+***Anti-Pattern*** 
+Count: 3
+POST 	/{ig-comment-id}?hide={hide}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/oauth/access_token	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/{ig-media-id}?comment_enabled={comment_enabled}	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 16
+GET 	/{ig-comment-id}?fields={fields}	 Regular methods
+DELETE 	/{ig-comment-id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/oauth/authorize	 Regular methods
+GET 	/access_token	 Regular methods
+GET 	/refresh_access_token	 Regular methods
+GET 	/{media-id}	 Regular methods
+GET 	/{media-id}/children	 Regular methods
+GET 	/{user-id}/media	 Regular methods
+GET 	/me	Singularized Nodes	 Regular methods
+GET 	/{user-id}	 Regular methods
+GET 	/{ig-hashtag-id}	 Regular methods
+GET 	/{ig-media-id}?fields={fields}	 Regular methods
+POST 	/{ig-media-id}/comments?message={message}	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/{ig-media-id}/comments	 Regular methods
+GET 	/{ig-user-id}?fields={fields}	 Regular methods
+GET 	/{page-id}?fields=instagram_business_account	 Regular methods

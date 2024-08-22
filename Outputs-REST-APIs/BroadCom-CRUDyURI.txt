@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 4
+/bui/updateStatusForNotification	CRUDy End-point	 [update found] 
+/bui/updateStatusForAllNotification	CRUDy End-point	 [update found] 
+/bui/createChatThread	CRUDy End-point	 [create found] 
+/pcatSearch	CRUDy End-point	 [search found] 
+
+***Patterns*** 
+Count: 36
+/api/getAccess	Verbless End-point	
+/bui/getBUIAllConfig	Verbless End-point	
+/bui/getAllowedStatus	Verbless End-point	
+/bui/getMyTicketDetails({persid})	Verbless End-point	
+/bui/getTicketsCustomData({persid})	Verbless End-point	
+/bui/getDefaultCategories	Verbless End-point	
+/bui/attrInfo	Verbless End-point	
+/bui/attrCtrl	Verbless End-point	
+/bui/addLogComment	Verbless End-point	
+/bui/changeStatus/{factory}({persid})	Verbless End-point	
+/bui/allFeeds({persid})	Verbless End-point	
+/bui/attmnt	Verbless End-point	
+/bui/getBopSID	Verbless End-point	
+/bui/attmnt({persid})/$value	Verbless End-point	
+/bui/getMyResources	Verbless End-point	
+/bui/getMyActiveChatSession	Verbless End-point	
+/bui/checkActiveSessions	Verbless End-point	
+/bui/getChatHistory/{roomName}	Verbless End-point	
+/bui/getDocument({id})	Verbless End-point	
+/bui/getKDAttachments({id})	Verbless End-point	
+/bui/getKDComments({id})	Verbless End-point	
+/bui/addKDComment({id})	Verbless End-point	
+/bui/rateDocument({id})	Verbless End-point	
+/bui/kdLinkInfo({id})	Verbless End-point	
+/bui/unLinkSolution({id})	Verbless End-point	
+/bui/helpAbout	Verbless End-point	
+/bui/getEEMAuth	Verbless End-point	
+/bui/{factory}({persid})	Verbless End-point	
+/bui/{factory}({persid})	Verbless End-point	
+/bui/{factory}	Verbless End-point	
+/bui/{factory}	Verbless End-point	
+/gs/mytkt_active	Verbless End-point	
+/gs/mytkt_inactive	Verbless End-point	
+/getServiceRequest	Verbless End-point	
+/getOfferings	Verbless End-point	
+/suggestedSolutions	Verbless End-point	

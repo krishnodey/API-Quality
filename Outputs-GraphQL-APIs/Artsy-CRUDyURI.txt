@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 1
+v2/search?q=Andy+Warhol	CRUDy End-point	 [search found] 
+
+***Patterns*** 
+Count: 20
+v2/applications/{id}	Verbless End-point	
+v2/artists/{id}	Verbless End-point	
+v2/artworks/{id}	Verbless End-point	
+v2/bidders/{id}	Verbless End-point	
+v2/bidder_positions/{id}	Verbless End-point	
+v2/bids/{id}	Verbless End-point	
+v2/collection_items/{id}	Verbless End-point	
+v2/collections?user_id=USER_ID&private=true	Verbless End-point	
+v2/edition/{id}	Verbless End-point	
+v2/fairs/{id}	Verbless End-point	
+v2/genes/{id}	Verbless End-point	
+v2/images/{id}	Verbless End-point	
+v2/partners/{id}	Verbless End-point	
+v2/profiles/{id}	Verbless End-point	
+v2/sales	Verbless End-point	
+v2/shows/{id}	Verbless End-point	
+v2/status	Verbless End-point	
+v2/user_details/{id}	Verbless End-point	
+v2/users/{id}	Verbless End-point	
+v2/current_user	Verbless End-point	

@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 14
+/oauth/authorize	Standard End-point	
+/oauth/token	Standard End-point	
+/history	Standard End-point	
+/payment-methods	Standard End-point	
+/products	Standard End-point	
+/products/{product_id}	Standard End-point	
+/estimates/price	Standard End-point	
+/estimates/time	Standard End-point	
+/requests/estimate	Standard End-point	
+/requests/current	Standard End-point	
+/requests/current	Standard End-point	
+/requests/current	Standard End-point	
+/requests/{request_id}/receipt	Standard End-point	
+/requests/{request_id}/map	Standard End-point	

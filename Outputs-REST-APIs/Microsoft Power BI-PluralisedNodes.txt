@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 4
+POST 	/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/admin/workspaces/getInfo	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/AssignToCapacity	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/groups/{groupId}/AssignToCapacity	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 30
+POST 	/admin/tenantKeys	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/admin/apps?$top={$top}	 Regular methods
+GET 	/admin/apps/{appId}/users	 Regular methods
+POST 	/admin/capacities/AssignWorkspaces	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/admin/capacities/UnassignWorkspaces	Singularized Nodes	 [Pluralized last node with POST method.] 
+GET 	/admin/dashboards	 Regular methods
+GET 	/admin/groups/{groupId}/dashboards	 Regular methods
+GET 	/admin/dataflows/{dataflowId}/export	 Regular methods
+GET 	/admin/dataflows/{dataflowId}/datasources	 Regular methods
+GET 	/admin/groups/{groupId}/dataflows	 Regular methods
+GET 	/admin/dataflows/{dataflowId}/users	 Regular methods
+GET 	/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	 Regular methods
+GET 	/admin/groups/{groupId}/datasets	 Regular methods
+GET 	/admin/groups/{groupId}/datasets/upstreamDataflows	 Regular methods
+GET 	/admin/datasets/{datasetId}/datasources	 Regular methods
+GET 	/admin/capacities	 Regular methods
+POST 	/admin/groups/{groupId}/users	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/admin/pipelines/{pipelineId}/users/{identifier}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/admin/workspaces/modified	 Regular methods
+GET 	/apps/{appId}	 Regular methods
+GET 	/apps/{appId}/dashboards/{dashboardId}	 Regular methods
+GET 	/apps/{appId}/reports/{reportId}	 Regular methods
+GET 	/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	 Regular methods
+GET 	/apps/{appId}/dashboards/{dashboardId}/tiles	 Regular methods
+GET 	/availableFeatures	 Regular methods
+GET 	/capacities	 Regular methods
+GET 	/capacities/{capacityId}/refreshables/{refreshableId}	 Regular methods
+GET 	/capacities/{capacityId}/Workloads/{workloadName}	 Regular methods
+GET 	/capacities/{capacityId}/Workloads	 Regular methods
+POST 	/groups/{groupId}/dashboards	Singularized Nodes	 [Pluralized last node with POST method.] 

@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+/setResultSummaryState?accessKey={accessKey}	Standard End-point	
+/getResultSummaryState/{id}?accessKey={accessKey}	Standard End-point	
+/getPublicResultSummaryState/{id}	Standard End-point	
+/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	Standard End-point	
+/getSurveyPublicResults/{id}?from={from}&till={till}	Standard End-point	
+/generateAccessKey?accessKey={accessKey}	Standard End-point	
+/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Standard End-point	
+/getActive?accessKey={accessKey}&ownerId={ownerId}	Standard End-point	
+/getArchive?accessKey={accessKey}&ownerId={ownerId}	Standard End-point	
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Standard End-point	
+/archive/{id}?accessKey={accessKey}	Standard End-point	
+/restore/{id}?accessKey={accessKey}	Standard End-point	
+/delete/{id}?accessKey={accessKey}	Standard End-point	
+/changeName/{id}?accessKey={accessKey}&name={name}	Standard End-point	
+/changeJson?accessKey={accessKey}	Standard End-point	
+/publish/{id}?accessKey={accessKey}	Standard End-point	
+/unPublish/{id}?accessKey={accessKey}	Standard End-point	
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Standard End-point	
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Standard End-point	
+/getIsResultPublic/{id}?accessKey={accessKey}	Standard End-point	
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Standard End-point	
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Standard End-point	
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Standard End-point	
+/deleteAllResults/{id}?accessKey={accessKey}	Standard End-point	

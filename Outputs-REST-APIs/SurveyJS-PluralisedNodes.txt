@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 2
+POST 	/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 22
+PUT 	/setResultSummaryState?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/getResultSummaryState/{id}?accessKey={accessKey}	 Regular methods
+GET 	/getPublicResultSummaryState/{id}	 Regular methods
+GET 	/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	 Regular methods
+GET 	/getSurveyPublicResults/{id}?from={from}&till={till}	 Regular methods
+GET 	/generateAccessKey?accessKey={accessKey}	 Regular methods
+GET 	/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	 Regular methods
+GET 	/getActive?accessKey={accessKey}&ownerId={ownerId}	 Regular methods
+GET 	/getArchive?accessKey={accessKey}&ownerId={ownerId}	 Regular methods
+PUT 	/archive/{id}?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/restore/{id}?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/delete/{id}?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/changeName/{id}?accessKey={accessKey}&name={name}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/changeJson?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/publish/{id}?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/unPublish/{id}?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/getIsResultPublic/{id}?accessKey={accessKey}	 Regular methods
+PUT 	/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/deleteAllResults/{id}?accessKey={accessKey}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

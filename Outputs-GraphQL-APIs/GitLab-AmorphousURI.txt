@@ -4,57 +4,57 @@ Count: 1
 
 ***Patterns*** 
 Count: 54
-/abuseReport/{id}	Tidy End-point	Tidy Endpoint
-/abuseReportLabels	Tidy End-point	Tidy Endpoint
-/addOnPurchase/{id}	Tidy End-point	Tidy Endpoint
-/aiMessages	Tidy End-point	Tidy Endpoint
-/auditEventDefinitions	Tidy End-point	Tidy Endpoint
-/boardList/{id}	Tidy End-point	Tidy Endpoint
-/ciCatalogResource/{id}	Tidy End-point	Tidy Endpoint
-/ciCatalogResources/{projectPath}	Tidy End-point	Tidy Endpoint
-/ciConfig/{projectPath}	Tidy End-point	Tidy Endpoint
-/ciMinutesUsage/{namespaceId}	Tidy End-point	Tidy Endpoint
-/ciPipelineStage/{id}	Tidy End-point	Tidy Endpoint
-/ciQueueingHistory	Tidy End-point	Tidy Endpoint
-/ciVariables	Tidy End-point	Tidy Endpoint
-/containerRepository/{id}	Tidy End-point	Tidy Endpoint
-/currentLicense	Tidy End-point	Tidy Endpoint
-/currentUser	Tidy End-point	Tidy Endpoint
-/designManagement	Tidy End-point	Tidy Endpoint
-/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	Tidy End-point	Tidy Endpoint
-/echo	Tidy End-point	Tidy Endpoint
-/epicBoardList/{id}	Tidy End-point	Tidy Endpoint
-/explainVulnerabilityPrompt/{vulnerabilityId}	Tidy End-point	Tidy Endpoint
-/frecentGroups	Tidy End-point	Tidy Endpoint
-/frecentProjects	Tidy End-point	Tidy Endpoint
-/geoNode	Tidy End-point	Tidy Endpoint
-/gitpodEnabled	Tidy End-point	Tidy Endpoint
-/group	Tidy End-point	Tidy Endpoint
-groups	Tidy End-point	Tidy Endpoint
-/instanceExternalAuditEventDestinations	Tidy End-point	Tidy Endpoint
-/instanceGoogleCloudLoggingConfigurations	Tidy End-point	Tidy Endpoint
-/instanceSecurityDashboard	Tidy End-point	Tidy Endpoint
-/issue/{id}	Tidy End-point	Tidy Endpoint
-/issues/{assigneeId}	Tidy End-point	Tidy Endpoint
-/iteration/{id}	Tidy End-point	Tidy Endpoint
-/jobs	Tidy End-point	Tidy Endpoint
-/licenseHistoryEntries	Tidy End-point	Tidy Endpoint
-/memberRole/{id}	Tidy End-point	Tidy Endpoint
-/memberRolePermissions	Tidy End-point	Tidy Endpoint
-/memberRoles/{id}	Tidy End-point	Tidy Endpoint
-/mergeRequest/{id}	Tidy End-point	Tidy Endpoint
-/metadata	Tidy End-point	Tidy Endpoint
-/milestone/{id}	Tidy End-point	Tidy Endpoint
-/mlModel/{id}	Tidy End-point	Tidy Endpoint
-/namespace	Tidy End-point	Tidy Endpoint
-/note/{id}	Tidy End-point	Tidy Endpoint
-/organization/{id}	Tidy End-point	Tidy Endpoint
-/organizations	Tidy End-point	Tidy Endpoint
-/package/{id}	Tidy End-point	Tidy Endpoint
-/project/{fullPath}	Tidy End-point	Tidy Endpoint
-/projects/{ids}	Tidy End-point	Tidy Endpoint
-/queryComplexity	Tidy End-point	Tidy Endpoint
-/runner/{id}	Tidy End-point	Tidy Endpoint
-/runnerSetup	Tidy End-point	Tidy Endpoint
-/runners/{creatorId}	Tidy End-point	Tidy Endpoint
-/selfManagedAddOnEligibleUsers	Tidy End-point	Tidy Endpoint
+/abuseReport/{id}	Tidy End-point	
+/abuseReportLabels	Tidy End-point	
+/addOnPurchase/{id}	Tidy End-point	
+/aiMessages	Tidy End-point	
+/auditEventDefinitions	Tidy End-point	
+/boardList/{id}	Tidy End-point	
+/ciCatalogResource/{id}	Tidy End-point	
+/ciCatalogResources/{projectPath}	Tidy End-point	
+/ciConfig/{projectPath}	Tidy End-point	
+/ciMinutesUsage/{namespaceId}	Tidy End-point	
+/ciPipelineStage/{id}	Tidy End-point	
+/ciQueueingHistory	Tidy End-point	
+/ciVariables	Tidy End-point	
+/containerRepository/{id}	Tidy End-point	
+/currentLicense	Tidy End-point	
+/currentUser	Tidy End-point	
+/designManagement	Tidy End-point	
+/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	Tidy End-point	
+/echo	Tidy End-point	
+/epicBoardList/{id}	Tidy End-point	
+/explainVulnerabilityPrompt/{vulnerabilityId}	Tidy End-point	
+/frecentGroups	Tidy End-point	
+/frecentProjects	Tidy End-point	
+/geoNode	Tidy End-point	
+/gitpodEnabled	Tidy End-point	
+/group	Tidy End-point	
+groups	Tidy End-point	
+/instanceExternalAuditEventDestinations	Tidy End-point	
+/instanceGoogleCloudLoggingConfigurations	Tidy End-point	
+/instanceSecurityDashboard	Tidy End-point	
+/issue/{id}	Tidy End-point	
+/issues/{assigneeId}	Tidy End-point	
+/iteration/{id}	Tidy End-point	
+/jobs	Tidy End-point	
+/licenseHistoryEntries	Tidy End-point	
+/memberRole/{id}	Tidy End-point	
+/memberRolePermissions	Tidy End-point	
+/memberRoles/{id}	Tidy End-point	
+/mergeRequest/{id}	Tidy End-point	
+/metadata	Tidy End-point	
+/milestone/{id}	Tidy End-point	
+/mlModel/{id}	Tidy End-point	
+/namespace	Tidy End-point	
+/note/{id}	Tidy End-point	
+/organization/{id}	Tidy End-point	
+/organizations	Tidy End-point	
+/package/{id}	Tidy End-point	
+/project/{fullPath}	Tidy End-point	
+/projects/{ids}	Tidy End-point	
+/queryComplexity	Tidy End-point	
+/runner/{id}	Tidy End-point	
+/runnerSetup	Tidy End-point	
+/runners/{creatorId}	Tidy End-point	
+/selfManagedAddOnEligibleUsers	Tidy End-point	

@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+/appCategories	Standard End-point	
+/appCategories/{id}	Standard End-point	
+/appEncryptionDeclarations	Standard End-point	
+/appEncryptionDeclarations/{id}	Standard End-point	
+/appInfoLocalizations/{id}	Standard End-point	
+/appInfos/{id}	Standard End-point	
+/appPreOrders/{id}	Standard End-point	
+/appPreviewSets/{id}	Standard End-point	
+/appPreviews/{id}	Standard End-point	
+/appPricePoints	Standard End-point	
+/appPricePoints/{id}	Standard End-point	
+/appPriceTiers	Standard End-point	
+/appPriceTiers/{id}	Standard End-point	
+/appPrices/{id}	Standard End-point	
+/appScreenshotSets/{id}	Standard End-point	
+/appScreenshots/{id}	Standard End-point	
+/appStoreReviewAttachments/{id}	Standard End-point	
+/appStoreReviewDetails/{id}	Standard End-point	
+/appStoreVersionLocalizations/{id}	Standard End-point	
+/appStoreVersions/{id}	Standard End-point	
+/apps	Standard End-point	
+/betaAppLocalizations	Standard End-point	
+/endUserLicenseAgreements/{id}	Standard End-point	
+/financeReports	Standard End-point	
+/preReleaseVersions	Standard End-point	
+/routingAppCoverages/{id}	Standard End-point	
+/salesReports	Standard End-point	
+/appCategories/{id}/subcategories	Standard End-point	
+/appEncryptionDeclarations/{id}/app	Standard End-point	
+/appInfos/{id}/ageRatingDeclaration	Standard End-point	
+/appInfos/{id}/appInfoLocalizations	Standard End-point	
+/appInfos/{id}/primaryCategory	Standard End-point	

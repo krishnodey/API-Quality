@@ -1,0 +1,38 @@
+***Anti-Pattern*** 
+Count: 6
+POST	 /storefrontAccessTokenDelete	Inconsistent Documentation	Deletes a storefront access token.  n/a
+POST	 /PolarisVizDataPoint	Inconsistent Documentation	A PolarisViz data point structure for ShopifyQL query. n/a
+POST	 /PolarisVizResponse 	Inconsistent Documentation	A PolarisViz response to a ShopifyQL query. n/a
+POST	 /TableResponse 	Inconsistent Documentation	The default table response structure for a ShopifyQL query.  n/a
+POST	 /publicationDelete{id} 	Inconsistent Documentation	Deletes a publication. id ID! required The ID of the publication to delete.
+POST	 /publicationUpdate	Inconsistent Documentation	Updates a publication.  id ID! required The ID of the publication to update.
+
+***Patterns*** 
+Count: 27
+POST	 /delegateAccessTokenCreate	Consistent Documentation	creating a delegate access token. n/a
+POST	 /storefrontAccessTokenCreate	Consistent Documentation	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop. n/a
+POST	 /AccessScope	Consistent Documentation	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications. n/a
+POST	 /DelegateAccessToken	Consistent Documentation	A token that delegates a set of scopes from the original permission. n/a
+POST	 /StorefrontAccessToken	Consistent Documentation	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop. n/a
+GET	 /shopifyqlQuery	Consistent Documentation	Returns the results of a ShopifyQL query  n/a
+POST	 /ErrorPosition 	Consistent Documentation	Error position information in a ShopifyQL parsing error.  n/a
+POST	 /ParseError 	Consistent Documentation	A ShopifyQL parsing error. n/a
+POST	 /ParseErrorRange	Consistent Documentation	A range of ShopifyQL parsing errors. n/a
+POST	 /PolarisVizDataSeries	Consistent Documentation	The data series used for PolarisViz visualization. n/a
+POST	 /TableData 	Consistent Documentation	The result in a tabular format with schema information and formatted and unformatted row data. n/a
+POST	 /TableDataColumn 	Consistent Documentation	A nested array representation of the data. An index in an array represents a row number. n/a
+GET	 /query/{id} 	Consistent Documentation	Lookup an App by ID or return the currently authenticated App.  id ID The ID to lookup the App by.
+GET	 /appByHandle 	Consistent Documentation	Fetches app by handle. Returns null if the app doesn't exist.
+GET	 /appByKey 	Consistent Documentation	Fetches an app by its client ID. Returns null if the app doesn't exist.
+GET	 /appInstallation/{id} 	Consistent Documentation	Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App. id ID ID used to lookup AppInstallation.
+GET	 /appInstallations 	Consistent Documentation	A list of app installations. To use this query, you need to contact Shopify Support to grant your custom app the read_apps access scope. Public apps can't be granted this access scope.
+GET	 /currentAppInstallation 	Consistent Documentation	Return the AppInstallation for the currently authenticated App.
+GET	 /publication/{id} 	Consistent Documentation	Lookup a publication by ID. id id ID! non-null The ID of the Publication to return.
+GET	 /publications 	Consistent Documentation	List of publications.
+POST	 /publicationCreate 	Consistent Documentation	Creates a publication.
+POST	 /AppFeedback 	Consistent Documentation	Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store.
+POST	 /AppInstallation 	Consistent Documentation	Represents an installed application on a shop.
+POST	 /FailedRequirement 	Consistent Documentation	Requirements that must be met before an app can be installed.
+POST	 /Link 	Consistent Documentation	A link to direct users to.
+POST	 /Publication 	Consistent Documentation	A publication is a group of products and collections that is published to an app.
+POST	 /ResourceFeedback	Consistent Documentation	Represents feedback from apps about a resource, and the steps required to set up the apps on the shop.

@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 5
+/getEditions	Hierarchical Nodes	
+/getSections	Hierarchical Nodes	
+/getSingleItem	Hierarchical Nodes	
+/getTags	Hierarchical Nodes	
+/searchContent	Hierarchical Nodes	

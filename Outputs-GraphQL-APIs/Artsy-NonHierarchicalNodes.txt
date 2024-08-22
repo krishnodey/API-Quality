@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+v2/applications/{id}	Hierarchical Nodes	
+v2/artists/{id}	Hierarchical Nodes	
+v2/artworks/{id}	Hierarchical Nodes	
+v2/bidders/{id}	Hierarchical Nodes	
+v2/bidder_positions/{id}	Hierarchical Nodes	
+v2/bids/{id}	Hierarchical Nodes	
+v2/collection_items/{id}	Hierarchical Nodes	
+v2/collections?user_id=USER_ID&private=true	Hierarchical Nodes	
+v2/edition/{id}	Hierarchical Nodes	
+v2/fairs/{id}	Hierarchical Nodes	
+v2/genes/{id}	Hierarchical Nodes	
+v2/images/{id}	Hierarchical Nodes	
+v2/partners/{id}	Hierarchical Nodes	
+v2/profiles/{id}	Hierarchical Nodes	
+v2/sales	Hierarchical Nodes	
+v2/search?q=Andy+Warhol	Hierarchical Nodes	
+v2/shows/{id}	Hierarchical Nodes	
+v2/status	Hierarchical Nodes	
+v2/user_details/{id}	Hierarchical Nodes	
+v2/users/{id}	Hierarchical Nodes	
+v2/current_user	Hierarchical Nodes	

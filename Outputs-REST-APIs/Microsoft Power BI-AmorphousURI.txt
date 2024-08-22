@@ -5,35 +5,35 @@ Count: 2
 
 ***Patterns*** 
 Count: 32
-/admin/tenantKeys	Tidy End-point	Tidy Endpoint
-/admin/apps?$top={$top}	Tidy End-point	Tidy Endpoint
-/admin/apps/{appId}/users	Tidy End-point	Tidy Endpoint
-/admin/capacities/AssignWorkspaces	Tidy End-point	Tidy Endpoint
-/admin/capacities/UnassignWorkspaces	Tidy End-point	Tidy Endpoint
-/admin/dashboards	Tidy End-point	Tidy Endpoint
-/admin/groups/{groupId}/dashboards	Tidy End-point	Tidy Endpoint
-/admin/dataflows/{dataflowId}/export	Tidy End-point	Tidy Endpoint
-/admin/dataflows/{dataflowId}/datasources	Tidy End-point	Tidy Endpoint
-/admin/groups/{groupId}/dataflows	Tidy End-point	Tidy Endpoint
-/admin/dataflows/{dataflowId}/users	Tidy End-point	Tidy Endpoint
-/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	Tidy End-point	Tidy Endpoint
-/admin/groups/{groupId}/datasets	Tidy End-point	Tidy Endpoint
-/admin/groups/{groupId}/datasets/upstreamDataflows	Tidy End-point	Tidy Endpoint
-/admin/datasets/{datasetId}/datasources	Tidy End-point	Tidy Endpoint
-/admin/capacities	Tidy End-point	Tidy Endpoint
-/admin/groups/{groupId}/users	Tidy End-point	Tidy Endpoint
-/admin/pipelines/{pipelineId}/users/{identifier}	Tidy End-point	Tidy Endpoint
-/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Tidy End-point	Tidy Endpoint
-/admin/workspaces/modified	Tidy End-point	Tidy Endpoint
-/admin/workspaces/getInfo	Tidy End-point	Tidy Endpoint
-/apps/{appId}	Tidy End-point	Tidy Endpoint
-/apps/{appId}/dashboards/{dashboardId}	Tidy End-point	Tidy Endpoint
-/apps/{appId}/reports/{reportId}	Tidy End-point	Tidy Endpoint
-/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	Tidy End-point	Tidy Endpoint
-/apps/{appId}/dashboards/{dashboardId}/tiles	Tidy End-point	Tidy Endpoint
-/availableFeatures	Tidy End-point	Tidy Endpoint
-/capacities	Tidy End-point	Tidy Endpoint
-/capacities/{capacityId}/refreshables/{refreshableId}	Tidy End-point	Tidy Endpoint
-/AssignToCapacity	Tidy End-point	Tidy Endpoint
-/groups/{groupId}/AssignToCapacity	Tidy End-point	Tidy Endpoint
-/groups/{groupId}/dashboards	Tidy End-point	Tidy Endpoint
+/admin/tenantKeys	Tidy End-point	
+/admin/apps?$top={$top}	Tidy End-point	
+/admin/apps/{appId}/users	Tidy End-point	
+/admin/capacities/AssignWorkspaces	Tidy End-point	
+/admin/capacities/UnassignWorkspaces	Tidy End-point	
+/admin/dashboards	Tidy End-point	
+/admin/groups/{groupId}/dashboards	Tidy End-point	
+/admin/dataflows/{dataflowId}/export	Tidy End-point	
+/admin/dataflows/{dataflowId}/datasources	Tidy End-point	
+/admin/groups/{groupId}/dataflows	Tidy End-point	
+/admin/dataflows/{dataflowId}/users	Tidy End-point	
+/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	Tidy End-point	
+/admin/groups/{groupId}/datasets	Tidy End-point	
+/admin/groups/{groupId}/datasets/upstreamDataflows	Tidy End-point	
+/admin/datasets/{datasetId}/datasources	Tidy End-point	
+/admin/capacities	Tidy End-point	
+/admin/groups/{groupId}/users	Tidy End-point	
+/admin/pipelines/{pipelineId}/users/{identifier}	Tidy End-point	
+/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Tidy End-point	
+/admin/workspaces/modified	Tidy End-point	
+/admin/workspaces/getInfo	Tidy End-point	
+/apps/{appId}	Tidy End-point	
+/apps/{appId}/dashboards/{dashboardId}	Tidy End-point	
+/apps/{appId}/reports/{reportId}	Tidy End-point	
+/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	Tidy End-point	
+/apps/{appId}/dashboards/{dashboardId}/tiles	Tidy End-point	
+/availableFeatures	Tidy End-point	
+/capacities	Tidy End-point	
+/capacities/{capacityId}/refreshables/{refreshableId}	Tidy End-point	
+/AssignToCapacity	Tidy End-point	
+/groups/{groupId}/AssignToCapacity	Tidy End-point	
+/groups/{groupId}/dashboards	Tidy End-point	

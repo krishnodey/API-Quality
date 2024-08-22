@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 17
+POST	v2/SaveMediaListEntry	Non-Filtering Endpoint	Create or update a media list entry
+POST	v2/UpdateMediaListEntries	Non-Filtering Endpoint	Update multiple media list entries to the same values
+POST	v2/DeleteMediaListEntry	Non-Filtering Endpoint	Delete a media list entry
+POST	v2/DeleteCustomList	Non-Filtering Endpoint	Delete a custom list and remove the list entries from it
+POST	v2/SaveTextActivity	Non-Filtering Endpoint	Create or update text activity for the currently authenticated user
+POST	v2/SaveListActivity	Non-Filtering Endpoint	Update list activity
+POST	v2/DeleteActivity	Non-Filtering Endpoint	Delete an activity item of the authenticated users
+POST	v2/SaveActivityReply	Non-Filtering Endpoint	Create or update an activity reply
+POST	v2/DeleteActivityReply	Non-Filtering Endpoint	Delete an activity reply of the authenticated users
+POST	v2/ToggleLike	Non-Filtering Endpoint	Add or remove a like from a likeable type. Returns all the users who liked the same model
+POST	v2/UpdateFavouriteOrder	Non-Filtering Endpoint	Update the order favourites are displayed in
+POST	v2/SaveReview	Non-Filtering Endpoint	Create or update a review
+POST	v2/DeleteReview	Non-Filtering Endpoint	Delete a review
+POST	v2/SaveThread	Non-Filtering Endpoint	Create or update a forum thread
+POST	v2/DeleteThread	Non-Filtering Endpoint	Delete a thread
+POST	v2/SaveThreadComment	Non-Filtering Endpoint	Create or update a thread comment
+POST	v2/DeleteThreadComment	Non-Filtering Endpoint	Delete a thread comment
+
+***Patterns*** 
+Count: 10
+POST	/v2/oauth/token	Filtering Endpoint	Converting Authorization Codes To Access Tokens
+POST	/v2/oauth/pin	Filtering Endpoint	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
+POST	v2/ToggleActivityPin	Filtering Endpoint	Toggle activity to be pinned to the top of the user's activity feed
+POST	v2/ToggleActivitySubscription	Filtering Endpoint	Toggle the subscription of an activity item
+POST	v2/ToggleLikeV2	Filtering Endpoint	Add or remove a like from a likeable type.
+POST	v2/ToggleFollow	Filtering Endpoint	Toggle the un/following of a user
+POST	v2/ToggleFavourite	Filtering Endpoint	Favourite or unfavourite an anime, manga, character, staff member, or studio
+POST	v2/RateReview	Filtering Endpoint	Rate a review
+POST	v2/SaveRecommendation	Filtering Endpoint	Recommendation a media
+POST	v2/ToggleThreadSubscription	Filtering Endpoint	Toggle the subscription of a forum thread

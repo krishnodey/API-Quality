@@ -1,79 +1,37 @@
 ***Anti-Pattern*** 
-Count: 62
-/2/account/set_profile_photo	Amorphous End-point	 [underscore found] 
-/2/contacts/delete_manual_contacts	Amorphous End-point	 [underscore found] 
-/2/contacts/delete_manual_contacts_batch	Amorphous End-point	 [underscore found] 
-/2/file_properties/properties/add	Amorphous End-point	 [underscore found] 
-/2/file_properties/properties/overwrite	Amorphous End-point	 [underscore found] 
-/2/file_properties/properties/remove	Amorphous End-point	 [underscore found] 
-/2/file_properties/properties/search	Amorphous End-point	 [underscore found] 
-/2/file_properties/properties/search/continue	Amorphous End-point	 [underscore found] 
-/2/file_properties/properties/update	Amorphous End-point	 [underscore found] 
-/2/file_properties/templates/add_for_user	Amorphous End-point	 [underscore found] 
-/2/file_properties/templates/get_for_user	Amorphous End-point	 [underscore found] 
-/2/file_properties/templates/list_for_user	Amorphous End-point	 [underscore found] 
-/2/file_properties/templates/remove_for_user	Amorphous End-point	 [underscore found] 
-/2/file_properties/templates/update_for_user	Amorphous End-point	 [underscore found] 
-/2/file_requests/count	Amorphous End-point	 [underscore found] 
-/2/file_requests/create	Amorphous End-point	 [underscore found] 
-/2/file_requests/delete	Amorphous End-point	 [underscore found] 
-/2/file_requests/delete_all_closed	Amorphous End-point	 [underscore found] 
-/2/file_requests/get	Amorphous End-point	 [underscore found] 
-/2/file_requests/list_v2	Amorphous End-point	 [underscore found] 
-/2/file_requests/list/continue	Amorphous End-point	 [underscore found] 
-/2/file_requests/update	Amorphous End-point	 [underscore found] 
-/2/files/copy_v2	Amorphous End-point	 [underscore found] 
-/2/files/copy_batch_v2	Amorphous End-point	 [underscore found] 
-/2/files/copy_batch/check_v2	Amorphous End-point	 [underscore found] 
-/2/files/copy_reference/get	Amorphous End-point	 [underscore found] 
-/2/files/copy_reference/save	Amorphous End-point	 [underscore found] 
-/2/files/create_folder_v2	Amorphous End-point	 [underscore found] 
-/2/files/create_folder_batch	Amorphous End-point	 [underscore found] 
-/2/files/create_folder_batch/check	Amorphous End-point	 [underscore found] 
-/2/files/delete_v2	Amorphous End-point	 [underscore found] 
-/2/files/delete_batch	Amorphous End-point	 [underscore found] 
-/2/files/delete_batch/check	Amorphous End-point	 [underscore found] 
-/2/files/download_zip	Amorphous End-point	 [underscore found] 
-/2/files/get_file_lock_batch	Amorphous End-point	 [underscore found] 
-/2/files/get_metadata	Amorphous End-point	 [underscore found] 
-/2/files/get_preview	Amorphous End-point	 [underscore found] 
-/2/files/get_temporary_link	Amorphous End-point	 [underscore found] 
-/2/files/get_temporary_upload_link	Amorphous End-point	 [underscore found] 
-/2/files/get_thumbnail_v2	Amorphous End-point	 [underscore found] 
-/2/files/get_thumbnail_batch	Amorphous End-point	 [underscore found] 
-/2/files/list_folder	Amorphous End-point	 [underscore found] 
-/2/files/list_folder/continue	Amorphous End-point	 [underscore found] 
-/2/files/list_folder/get_latest_cursor	Amorphous End-point	 [underscore found] 
-/2/files/list_folder/longpoll	Amorphous End-point	 [underscore found] 
-/2/files/list_revisions	Amorphous End-point	 [underscore found] 
-/2/files/lock_file_batch	Amorphous End-point	 [underscore found] 
-/2/files/move_v2	Amorphous End-point	 [underscore found] 
-/2/files/move_batch_v2	Amorphous End-point	 [underscore found] 
-/2/files/move_batch/check_v2	Amorphous End-point	 [underscore found] 
-/2/files/permanently_delete	Amorphous End-point	 [underscore found] 
-/2/files/save_url	Amorphous End-point	 [underscore found] 
-/2/files/save_url/check_job_status	Amorphous End-point	 [underscore found] 
-/2/files/search_v2	Amorphous End-point	 [underscore found] 
-/2/files/search/continue_v2	Amorphous End-point	 [underscore found] 
-/2/files/unlock_file_batch	Amorphous End-point	 [underscore found] 
-/2/files/upload_session/append_v2	Amorphous End-point	 [underscore found] 
-/2/files/upload_session/finish	Amorphous End-point	 [underscore found] 
-/2/files/upload_session/finish_batch_v2	Amorphous End-point	 [underscore found] 
-/2/files/upload_session/finish_batch/check	Amorphous End-point	 [underscore found] 
-/2/files/upload_session/start	Amorphous End-point	 [underscore found] 
-/2/files/upload_session/start_batch	Amorphous End-point	 [underscore found] 
+Count: 29
+/account/set_profile_photo	Amorphous End-point	 [underscore found] 
+/auth/token/from_oauth1	Amorphous End-point	 [underscore found] 
+/contacts/delete_manual_contacts	Amorphous End-point	 [underscore found] 
+/contacts/delete_manual_contacts_batch	Amorphous End-point	 [underscore found] 
+/file_properties/properties/add	Amorphous End-point	 [underscore found] 
+/file_properties/properties/overwrite	Amorphous End-point	 [underscore found] 
+/file_properties/properties/search/continue	Amorphous End-point	 [underscore found] 
+/file_properties/templates/remove_for_user	Amorphous End-point	 [underscore found] 
+/file_properties/templates/update_for_user	Amorphous End-point	 [underscore found] 
+/file_properties/properties/update	Amorphous End-point	 [underscore found] 
+/file_requests/count	Amorphous End-point	 [underscore found] 
+/file_requests/create	Amorphous End-point	 [underscore found] 
+/file_requests/delete	Amorphous End-point	 [underscore found] 
+/file_requests/delete_all_closed	Amorphous End-point	 [underscore found] 
+/file_requests/list/continue	Amorphous End-point	 [underscore found] 
+/files/copy_batch_v2	Amorphous End-point	 [underscore found] 
+/files/copy_batch/check_v2	Amorphous End-point	 [underscore found] 
+/files/copy_reference/get	Amorphous End-point	 [underscore found] 
+/files/copy_reference/save	Amorphous End-point	 [underscore found] 
+/files/create_folder_batch	Amorphous End-point	 [underscore found] 
+/files/create_folder_batch/check	Amorphous End-point	 [underscore found] 
+/files/delete_batch/check	Amorphous End-point	 [underscore found] 
+/files/download_zip	Amorphous End-point	 [underscore found] 
+/files/get_file_lock_batch	Amorphous End-point	 [underscore found] 
+/files/get_temporary_upload_link	Amorphous End-point	 [underscore found] 
+/files/list_folder/get_latest_cursor	Amorphous End-point	 [underscore found] 
+/files/move_batch/check_v2	Amorphous End-point	 [underscore found] 
+/files/save_url/check_job_status	Amorphous End-point	 [underscore found] 
+/files/upload_session/append_v2	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 12
-/2/auth/token/revoke	Tidy End-point	Tidy Endpoint
-/2/check/app	Tidy End-point	Tidy Endpoint
-/2/check/user	Tidy End-point	Tidy Endpoint
-/2/files/download	Tidy End-point	Tidy Endpoint
-/2/files/export	Tidy End-point	Tidy Endpoint
-/2/files/paper/create	Tidy End-point	Tidy Endpoint
-/2/files/paper/update	Tidy End-point	Tidy Endpoint
-/2/files/restore	Tidy End-point	Tidy Endpoint
-/2/files/tags/add	Tidy End-point	Tidy Endpoint
-/2/files/tags/get	Tidy End-point	Tidy Endpoint
-/2/files/tags/remove	Tidy End-point	Tidy Endpoint
-/2/files/upload	Tidy End-point	Tidy Endpoint
+Count: 3
+/auth/token/revoke	Tidy End-point	
+/check/app	Tidy End-point	
+/check/user	Tidy End-point	

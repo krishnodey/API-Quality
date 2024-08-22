@@ -1,0 +1,61 @@
+***Anti-Pattern*** 
+Count: 2
+-/async/{id}	Non-pertinent Documentation	Get a particular asynchronous job status
+-/async/{id}	Non-pertinent Documentation	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
+
+***Patterns*** 
+Count: 54
+-/list/{type}	Pertinent Documentation	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+-/list/{type}/{base}	Pertinent Documentation	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+-/application	Pertinent Documentation	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
+-/async?state	Pertinent Documentation	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
+-/diagnostics/attributes?locale	Pertinent Documentation	Return a map of attribute id to names.
+-/diagnostics/index	Pertinent Documentation	Returns the list of available indices to query
+-/diagnostics/index/{index}?attrs	Pertinent Documentation	Reads objects from the specified index
+-/diagnostics/object/{id}	Pertinent Documentation	Dump an object from the domain database identified by it's DRN and record type.
+-/domains	Pertinent Documentation	Get a list of Domains for this system.
+-/domains	Pertinent Documentation	Create a domain given the data. Note: The "rebuild" resource should be used to create the related database file (wpdomain.db) afterwards.
+-/domains/{domain}	Pertinent Documentation	Delete a specific Domain given the domain name
+-/domains/{domain}	Pertinent Documentation	Update a GroupWise Domain given the Domain data
+-/domains/{domain}	Pertinent Documentation	Get a specific Domain given the name
+-/domains/{domain}/addressbook/fields	Pertinent Documentation	Returns the address book fields available for adding to a view. Note that this excludes admin defined fields which can only be added to a view if they have been properly mapped to a directory attribute.
+-/domains/{domain}/addressbook/labels	Pertinent Documentation	Get the address book labels defined for the domain
+-/domains/{domain}/addressbook/labels/{field}	Pertinent Documentation	Set the address book label for the given field
+-/domains/{domain}/addressbook/labels/{field}	Pertinent Documentation	Delete the address book label for the given field
+-/domains/{domain}/addressbook/view	Pertinent Documentation	Returns the address book view defined for the domain
+-/domains/{domain}/addressbook/view	Pertinent Documentation	Returns the address book view defined for the domain
+-/domains/{domain}/administrator	Pertinent Documentation	Return the administrator for this domain
+-/domains/{domain}/administrator	Pertinent Documentation	Set the administrator for this domain
+-/domains/{domain}/administrator	Pertinent Documentation	Clear the administrator for this domain
+-/domains/{domain}/clientoptions?attrs	Pertinent Documentation	Get the Client Options under a specific Domain
+-/domains/{domain}/clientoptions?attrs	Pertinent Documentation	Update the Client Options under a specific Domain
+-/domains/{domain}/customaddresses	Pertinent Documentation	Get all Custom Addresses under a specific Domain
+-/domains/{domain}/customaddresses/test?testAddress	Pertinent Documentation	Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string
+-/domains/{domain}/gatewaysubdirs	Pertinent Documentation	List the gateway sub-directories for the domain.
+-/domains/{domain}/info	Pertinent Documentation	Retrieve statistical information about the objects contained in this domain
+-/domains/{domain}/links?direction	Pertinent Documentation	List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound).
+-/domains/{domain}/links/{link}	Pertinent Documentation	Get the domain link between domainName and linkName
+-/domains/{domain}/links/{link}	Pertinent Documentation	Update the domain link between domainName and linkName
+-/domains/{domain}/rebuild	Pertinent Documentation	Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service.
+-/domains/{domain}/refaccesscontrols	Pertinent Documentation	Get the Access Control List for the domain
+-/domains/{domain}/refaccesscontrols	Pertinent Documentation	Update the Access Control List for the domain
+-/domains/attributes	Pertinent Documentation	Get all available Domain Attributes
+-/domains/{domain}/gateways	Pertinent Documentation	Performs a query to find all the Gateways for this GroupWise system.
+-/domains/{domain}/gateways	Pertinent Documentation	Create an Gateway given the Gateway data
+-/domains/{domain}/gateways/{gateway}	Pertinent Documentation	Delete a specific Gateway given the name
+-/domains/{domain}/gateways/{gateway}	Pertinent Documentation	Update a Gateway given the data
+-/domains/{domain}/gateways/{gateway}	Pertinent Documentation	Get a specific Gateway given the name
+-/domains/{domain}/gateways/{gateway}/administrators	Pertinent Documentation	Performs a query to find all the administrators for this gateway
+-/domains/{domain}/gateways/{gateway}/administrators	Pertinent Documentation	Adds a new administrator to this gateway.
+-/domains/{domain}/gateways/{gateway}/administrators/{id}	Pertinent Documentation	Remove an administrator member from this gateway
+-/domains/{domain}/gateways/{gateway}/administrators/{id}	Pertinent Documentation	Remove an administrator member from this gateway
+-/domains/{domain}/gateways/{gateway}/aliases	Pertinent Documentation	Performs a query to find all the aliases for this gateway
+-/domains/{domain}/gateways/{gateway}/classofservice	Pertinent Documentation	List the classes of service for a specific gateway
+-/domains/{domain}/gateways/{gateway}/classofservice	Pertinent Documentation	Create a Gwia Class of Service for the specified gateway
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Pertinent Documentation	Get a specific Gateway given the name
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Pertinent Documentation	Update a specific Class of Service given the name
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Pertinent Documentation	Delete a specific Class of Service given the name
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Pertinent Documentation	List the members for a specific class of service
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Pertinent Documentation	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Pertinent Documentation	Remove a member from this class of service by id
+-/domains/{domain}/gateways/{gateway}/recoverDb	Pertinent Documentation	Recover the Access Control database for the specified gateway. This command will recover the database in place.

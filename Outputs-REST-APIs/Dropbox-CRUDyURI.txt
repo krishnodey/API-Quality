@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 17
+/contacts/delete_manual_contacts	CRUDy End-point	 [delete found] 
+/contacts/delete_manual_contacts_batch	CRUDy End-point	 [delete found] 
+/file_properties/properties/search/continue	CRUDy End-point	 [search found] 
+/file_properties/templates/remove_for_user	CRUDy End-point	 [remove found] 
+/file_properties/templates/update_for_user	CRUDy End-point	 [update found] 
+/file_properties/properties/update	CRUDy End-point	 [update found] 
+/file_requests/create	CRUDy End-point	 [create found] 
+/file_requests/delete	CRUDy End-point	 [delete found] 
+/file_requests/delete_all_closed	CRUDy End-point	 [delete found] 
+/files/copy_batch_v2	CRUDy End-point	 [copy found] 
+/files/copy_batch/check_v2	CRUDy End-point	 [copy found] 
+/files/copy_reference/get	CRUDy End-point	 [copy found] 
+/files/copy_reference/save	CRUDy End-point	 [copy found] 
+/files/create_folder_batch	CRUDy End-point	 [create found] 
+/files/create_folder_batch/check	CRUDy End-point	 [create found] 
+/files/delete_batch/check	CRUDy End-point	 [delete found] 
+/files/move_batch/check_v2	CRUDy End-point	 [move found] 
+
+***Patterns*** 
+Count: 15
+/account/set_profile_photo	Verbless End-point	
+/auth/token/from_oauth1	Verbless End-point	
+/auth/token/revoke	Verbless End-point	
+/check/app	Verbless End-point	
+/check/user	Verbless End-point	
+/file_properties/properties/add	Verbless End-point	
+/file_properties/properties/overwrite	Verbless End-point	
+/file_requests/count	Verbless End-point	
+/file_requests/list/continue	Verbless End-point	
+/files/download_zip	Verbless End-point	
+/files/get_file_lock_batch	Verbless End-point	
+/files/get_temporary_upload_link	Verbless End-point	
+/files/list_folder/get_latest_cursor	Verbless End-point	
+/files/save_url/check_job_status	Verbless End-point	
+/files/upload_session/append_v2	Verbless End-point	

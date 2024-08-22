@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+v2/applications/{id}	Standard End-point	Standard Endpoint
+v2/artists/{id}	Standard End-point	Standard Endpoint
+v2/artworks/{id}	Standard End-point	Standard Endpoint
+v2/bidders/{id}	Standard End-point	Standard Endpoint
+v2/bidder_positions/{id}	Standard End-point	Standard Endpoint
+v2/bids/{id}	Standard End-point	Standard Endpoint
+v2/collection_items/{id}	Standard End-point	Standard Endpoint
+v2/collections?user_id=USER_ID&private=true	Standard End-point	Standard Endpoint
+v2/edition/{id}	Standard End-point	Standard Endpoint
+v2/fairs/{id}	Standard End-point	Standard Endpoint
+v2/genes/{id}	Standard End-point	Standard Endpoint
+v2/images/{id}	Standard End-point	Standard Endpoint
+v2/partners/{id}	Standard End-point	Standard Endpoint
+v2/profiles/{id}	Standard End-point	Standard Endpoint
+v2/sales	Standard End-point	Standard Endpoint
+v2/search?q=Andy+Warhol	Standard End-point	Standard Endpoint
+v2/shows/{id}	Standard End-point	Standard Endpoint
+v2/status	Standard End-point	Standard Endpoint
+v2/user_details/{id}	Standard End-point	Standard Endpoint
+v2/users/{id}	Standard End-point	Standard Endpoint
+v2/current_user	Standard End-point	Standard Endpoint
