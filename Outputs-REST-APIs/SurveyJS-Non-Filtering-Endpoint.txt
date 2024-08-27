@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 12
+PUT	 /setResultSummaryState?accessKey={accessKey} 	Non-Filtering Endpoint	Change the result summary state.
+GET	 /generateAccessKey?accessKey={accessKey} 	Non-Filtering Endpoint	Generates a new access key. The old access key becomes invalid.
+POST	 /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	Non-Filtering Endpoint	Create a new survey.
+PUT	 /restore/{id}?accessKey={accessKey} 	Non-Filtering Endpoint	Restore an archive survey by it's id.
+PUT	 /changeName/{id}?accessKey={accessKey}&name={name} 	Non-Filtering Endpoint	Change the survey name.
+PUT	 /changeJson?accessKey={accessKey} 	Non-Filtering Endpoint	Change the survey json.
+PUT	 /publish/{id}?accessKey={accessKey} 	Non-Filtering Endpoint	Publishing the survey.
+PUT	 /unPublish/{id}?accessKey={accessKey} 	Non-Filtering Endpoint	Disable publishing the survey.
+PUT	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Non-Filtering Endpoint	Enable or disable using cookies of the publishing survey.
+POST	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Non-Filtering Endpoint	Enable or disable using cookies of the publishing survey.
+PUT	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Non-Filtering Endpoint	Enable or disable the ability to view survey results by non autorized user via direct link.
+PUT	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	Non-Filtering Endpoint	Enable or disable the ability to view survey results by non autorized user via direct link.
+
+***Patterns*** 
+Count: 12
+GET	 /getResultSummaryState/{id}?accessKey={accessKey} 	Filtering Endpoint	Returns the result summary state.
+GET	 /getPublicResultSummaryState/{id} 	Filtering Endpoint	Returns public result summary state.
+GET	 /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	Filtering Endpoint	Returns survey results.
+GET	 /getSurveyPublicResults/{id}?from={from}&till={till} 	Filtering Endpoint	Returns survey public results.
+GET	 /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	Filtering Endpoint	Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json).
+GET	 /getActive?accessKey={accessKey}&ownerId={ownerId} 	Filtering Endpoint	Returns the list of active surveys.
+GET	 /getArchive?accessKey={accessKey}&ownerId={ownerId} 	Filtering Endpoint	Returns the list of archive surveys.
+PUT	 /archive/{id}?accessKey={accessKey} 	Filtering Endpoint	Archive the survey by it's id. All survey results will be still accessible. You have to delete a survey to remove the access to it's results.
+DELETE	 /delete/{id}?accessKey={accessKey} 	Filtering Endpoint	Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible.
+GET	 /getIsResultPublic/{id}?accessKey={accessKey} 	Filtering Endpoint	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
+DELETE	 /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	Filtering Endpoint	Delete the survey result. Use it to delete spam or test results.
+DELETE	 /deleteAllResults/{id}?accessKey={accessKey} 	Filtering Endpoint	Delete all survey results. Use it to delete all tested results before running survey.

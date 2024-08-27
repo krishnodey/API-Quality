@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 1
+GET	 /appInfos/{id}/appInfoLocalizations 	Non-Filtering Endpoint	filter by attribute locale
+
+***Patterns*** 
+Count: 31
+GET	 /appCategories 	Filtering Endpoint	filter by attribute platforms
+GET	 /appCategories/{id} 	Filtering Endpoint	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations 	Filtering Endpoint	filter by attribute platform
+GET	 /appEncryptionDeclarations/{id} 	Filtering Endpoint	the fields to include for returned resources of type appEncryptionDeclarations
+GET	 /appInfoLocalizations/{id} 	Filtering Endpoint	the fields to include for returned resources of type appInfoLocalizations
+GET	 /appInfos/{id} 	Filtering Endpoint	the fields to include for returned resources of type appInfos
+GET	 /appPreOrders/{id} 	Filtering Endpoint	the fields to include for returned resources of type appPreOrders
+GET	 /appPreviewSets/{id} 	Filtering Endpoint	the fields to include for returned resources of type appPreviews
+GET	 /appPreviews/{id} 	Filtering Endpoint	the fields to include for returned resources of type appPreviews
+GET	 /appPricePoints 	Filtering Endpoint	filter by id(s) of related priceTier
+GET	 /appPricePoints/{id} 	Filtering Endpoint	the fields to include for returned resources of type appPricePoints
+GET	 /appPriceTiers 	Filtering Endpoint	filter by id(s)
+GET	 /appPriceTiers/{id} 	Filtering Endpoint	the fields to include for returned resources of type appPriceTiers
+GET	 /appPrices/{id} 	Filtering Endpoint	the fields to include for returned resources of type appPrices
+GET	 /appScreenshotSets/{id} 	Filtering Endpoint	the fields to include for returned resources of type appScreenshotSets
+GET	 /appScreenshots/{id} 	Filtering Endpoint	the fields to include for returned resources of type appScreenshots
+GET	 /appStoreReviewAttachments/{id} 	Filtering Endpoint	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewDetails/{id} 	Filtering Endpoint	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreVersionLocalizations/{id} 	Filtering Endpoint	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersions/{id} 	Filtering Endpoint	the fields to include for returned resources of type appStoreVersions
+GET	 /apps 	Filtering Endpoint	filter by attribute 'appStoreVersions.appStoreState
+GET	 /betaAppLocalizations 	Filtering Endpoint	filter by attribute locale
+GET	 /endUserLicenseAgreements/{id} 	Filtering Endpoint	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /financeReports 	Filtering Endpoint	filter by attribute regionCode
+GET	 /preReleaseVersions 	Filtering Endpoint	filter by attribute builds.expired
+GET	 /routingAppCoverages/{id} 	Filtering Endpoint	the fields to include for returned resources of type routingAppCoverages
+GET	 /salesReports 	Filtering Endpoint	filter by attribute frequency
+GET	 /appCategories/{id}/subcategories 	Filtering Endpoint	the fields to include for returned resources of type appCategories
+GET	 /appEncryptionDeclarations/{id}/app 	Filtering Endpoint	the fields to include for returned resources of type apps
+GET	 /appInfos/{id}/ageRatingDeclaration 	Filtering Endpoint	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/primaryCategory 	Filtering Endpoint	the fields to include for returned resources of type appCategories

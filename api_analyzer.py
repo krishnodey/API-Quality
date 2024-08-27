@@ -23,6 +23,7 @@ import warnings
 #import csv
 import json
 import inflect 
+import os
 
     
 
@@ -37,23 +38,50 @@ class ApiAnalyzer:
         self.descriptions = []
         self.parameters = []
         
-
+        
+        self.clean = UriCleaning()
+        self.processed_des =[]
+        self.processed_nodes =[]
 
         input_file = f"{api_type}-APIs\{api}\{api}.txt"
-        
-        with open(input_file, "r") as file:
-            for line in file:
-                #print(line)
-                line  = line.split(">>")
-                if len(line) == 4:
-                    verb, uri, des, para = line[0], line[1], line[2], line[3]
-                else:
-                    verb, uri, des, para = line[0], line[1], line[2], ''
-                self.http_verb.append(verb)
-                self.uris.append(uri)
-                self.descriptions.append(des.strip())
-                self.parameters.append(para.strip())
-                
+        process_file = f"{api_type}-APIs\{api}\Processed_{api}.txt"
+
+        if os.path.exists(process_file):
+            with open(process_file, "r") as file:
+                lines = file.read().strip().split("\n")
+                for line in lines:
+                    row = json.loads(line)
+                    self.http_verb.append(row['http_verb'])
+                    self.uris.append(row['uri'])
+                    self.processed_nodes.append(row['processed_uri'])
+                    self.descriptions.append(row['description'])
+                    self.parameters.append(row['parameter'])
+                    self.processed_des.append(row['processed_des_para'])
+        else:     
+            with open(input_file, "r") as file, open(process_file, "w") as pro_file:
+                for line in file:
+                    #print(line)
+                    line  = line.split(">>")
+                    if len(line) == 4:
+                        verb, uri, des, para = line[0], line[1], line[2], line[3]
+                    else:
+                        verb, uri, des, para = line[0], line[1], line[2], ''
+                    self.http_verb.append(verb)
+                    self.uris.append(uri)
+                    self.descriptions.append(des.strip())
+                    self.parameters.append(para.strip())
+
+                    pro_nodes = self.clean.get_uri_nodes(uri)
+                    pro_des = self.clean.preprocess_documentation(f"{des} {para}")
+                    self.processed_nodes.append(pro_nodes)
+                    self.processed_des.append(pro_des)
+
+                    line_dict = {"http_verb": verb, "uri": uri, "processed_uri": pro_nodes, "description": des, "parameter": para, "processed_des_para": pro_des}
+                    json_string=json.dumps(line_dict,ensure_ascii=False)
+                    pro_file.write(json_string+"\n")
+                        
+
+                    
                 
         #print(self.uris)
     
@@ -1193,10 +1221,7 @@ class ApiAnalyzer:
                         incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP1}\t{documentation.strip()}")
                         ap_count += 1
                     if (is_plural(nodes[i]) and is_plural(nodes[i + 1])): # both plural
-                        #return ['Inconsistent Resource Archetype Names antipattern', 'Document is not singular']
-                        # row['inconsistent_archetype'] = 1
-                        # row['consistent_archetype'] = 0
-                        # row['inconsistent_archetype_comment'] = AP2
+                        #return ['Inconsistent Resource Archetype Names antipattern', 'Document is not singular'
                         flag = 1
                         row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP2})
                         incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP2}\t{documentation.strip()}")
@@ -1206,22 +1231,14 @@ class ApiAnalyzer:
                 if len(nodes) > 2:
                     last_segment = nodes[-1]
                     first_word = re.split(r'[-_]', last_segment)[0]
-                    if first_word[:-1].lower() in verbs:
+                    if first_word.lower() in verbs:
                         if method.upper() not in ['GET', 'POST']:
-                            #return ['Consistent Resource Archetype Names pattern', 'A controller action must be of type GET or POST']
-                            # row['inconsistent_archetype'] = 1
-                            # row['consistent_archetype'] = 0
-                            # row['inconsistent_archetype_comment'] = AP3
                             flag = 1
                             row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP1})
                             incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP3}\t{documentation.strip()}")
                             ap_count += 1
                         
                 if flag != 1:
-                    #return 'Consistent Resource Archetype'
-                    # row['inconsistent_archetype'] = 0
-                    # row['consistent_archetype'] = 1
-                    # row['inconsistent_archetype_comment'] = P
                     row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": AP1})
                     cosistent_resource_archetype_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1

@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 11
+GET	 /channelContent/{id} 	Non-Filtering Endpoint	ChannelContent represents the various possible contents of channels by content type.
+GET	 /channelGroup/{id} 	Non-Filtering Endpoint	ChannelGroup represents a grouping of Channels.
+GET	 /channelMembers/{userId} 	Non-Filtering Endpoint	ChannelMembers represent all members assigned to any Channel on the plan.
+POST	 /addChannelsToChannelGroups 	Non-Filtering Endpoint	Add one or more Channels to one or more Channel Groups. Note: Adding a Channel that is already on a Channel Group will return success as true and will not duplicate the Channel.
+DELETE	 /deleteChannelGroup 	Non-Filtering Endpoint	Delete one or more Channel Groups.
+DELETE	 /deleteChannelGroupChannels 	Non-Filtering Endpoint	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
+PUT	 /updateChannelGroups 	Non-Filtering Endpoint	Update one or more Channel Groups.
+GET	 /courseCatalog 	Non-Filtering Endpoint	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
+GET	 /labCatalog 	Non-Filtering Endpoint	LabCatalog represents a list of labs available at Pluralsight.
+GET	 /pathCatalog 	Non-Filtering Endpoint	Path Catalog represents a list of available Paths on Pluralsight.com.
+GET	 /projectCatalog 	Non-Filtering Endpoint	ProjectCatalog represents a list of available Projects on Pluralsight.com.
+
+***Patterns*** 
+Count: 14
+GET	 /channelProgress 	Filtering Endpoint	ChannelProgress represents consumption of channel content by any user, regardless of whether they are a channel member or not.
+GET	 /channels 	Filtering Endpoint	Channels represent collections of content like Courses, Paths, Projects, Guides, Interactive Courses, External Links, Labs, etc.
+POST	 /addChannel 	Filtering Endpoint	Create a new Channel.
+POST	 /addChannelGroups 	Filtering Endpoint	Add one or more Channel Groups.
+POST	 /addChannelMembers 	Filtering Endpoint	Assign a User to an existing Channel.
+POST	 /addTeamsToChannels 	Filtering Endpoint	Assign Teams to existing Channels.
+POST	 /archiveChannel 	Filtering Endpoint	Archive a Channel.
+POST	 /editChannel 	Filtering Endpoint	Modify Channel details. All edits require both channelId and actorUserId.
+DELETE	 /removeChannelContent 	Filtering Endpoint	Remove Content from an existing Channel.
+DELETE	 /removeChannelMember 	Filtering Endpoint	Remove a member or contributor from an existing Channel.
+GET	 /contentCatalog 	Filtering Endpoint	ContentCatalog represents an aggregate of all of the content types
+GET	 /marketTaxonomy 	Filtering Endpoint	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
+GET	 /programCatalog 	Filtering Endpoint	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
+GET	 /tags 	Filtering Endpoint	Tags represent one or more technology concepts associated with a piece of content.

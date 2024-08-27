@@ -1,0 +1,62 @@
+***Anti-Pattern*** 
+Count: 25
+GET	 /bulk/devices 	Non-Filtering Endpoint	List devices. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'.
+POST	 /bulk/devices/add 	Non-Filtering Endpoint	Register multiple new devices. Register multiple new devices, each request can contain a maximum of 512 kB. The response body will contain the generated authentication tokens for all devices. You must make sure to record these tokens when processing the response. We are not able to retrieve lost authentication tokens.
+POST	 /bulk/devices/remove 	Non-Filtering Endpoint	Delete multiple devices. Delete multiple devices, each request can contain a maximum of 512 kB.
+GET	 /device/types 	Non-Filtering Endpoint	List device types. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'):
+POST	 /device/types/{typeId}/devices 	Non-Filtering Endpoint	Add device. Adds a device.
+DELETE	 /device/types/{typeId}/devices/{deviceId} 	Non-Filtering Endpoint	Remove device. Removes a device.
+GET	 /logs/connection 	Non-Filtering Endpoint	List device connection log events. List connection log events for a device to aid in diagnosing connectivity problems. The entries record successful connection, unsuccessful connection attempts, intentional disconnection and server-initiated disconnection.
+GET	 /usage/data-traffic 	Non-Filtering Endpoint	Retrieve the amount of data used. Retrieve the amount of data used.
+GET	 /service-status 	Non-Filtering Endpoint	Retrieve the status of services for an organization. Retrieve the organization-specific status of each of the services offered by Watson IoT Platform.
+DELETE	 /device/types/{typeId}/devices/{deviceId}/diag/logs 	Non-Filtering Endpoint	Clear diagnostic log. Clears the diagnostic log for the device.
+GET	 /mgmt/requests 	Non-Filtering Endpoint	List device management requests. Gets a list of device management requests, which can be in progress or recently completed. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'):
+POST	 /mgmt/requests 	Non-Filtering Endpoint	Initiate a device management request. Initiates a device management request, such as reboot. The request will fail if any of the devices participating in the request are inactive, disabled, blocked by a separate on-going firmware download/update request, or do not support the requested operation.
+DELETE	 /mgmt/requests/{requestId} 	Non-Filtering Endpoint	Clear device management request status. Clears the status of a device management request. You can use this operation to clear the status for a completed request…
+POST	 /mgmt/requests/{requestId}/cancel 	Non-Filtering Endpoint	Cancel device management request. Cancel a device management request. You can use this operation to clear the status for an in-progress request which may never complete due to a problem. This will set all in-progress device statuses to cancelled, clear the current operation for all in-progress devices, and mark the request as complete.
+POST	 /mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId}/cancel 	Non-Filtering Endpoint	Cancel device management request for an individual device. Cancels a device management request for an individual device. You can use this operation to clear the status for an in-progress request which may never complete due to a problem. This will set the device status to cancelled and clear the current operation for the device.
+GET	 /mgmt/custom/bundle 	Non-Filtering Endpoint	Get list of registered device management extensions
+GET	 /config/lec 	Non-Filtering Endpoint	Retrieve the Last Event Cache configuration for your organization. Retrieves the current configuration for the Last Event Cache (LEC) feature for your organization. You can use this endpoint to determine whether or not the LEC feature is currently enabled, along with how many days cached device events will persist for before being removed from the cache.
+PUT	 /config/lec 	Non-Filtering Endpoint	Update the Last Event Cache configuration for your organization. Updates the current configuration for the Last Event Cache (LEC) feature for your organization. You can use this endpoint to control whether or not the LEC feature is currently enabled, along with how many days cached device events will persist for before being removed from the cache.
+POST	 /application/types/{typeId}/devices/{deviceId}/events/{eventName} 	Non-Filtering Endpoint	Send device event. Send an event from an application simulating a device.
+POST	 /application/types/{typeId}/devices/{deviceId}/commands/{commandId} 	Non-Filtering Endpoint	Publish Command. Send a command from an application
+POST	 /device/types/{typeId}/devices/{deviceId}/events/{eventName} 	Non-Filtering Endpoint	Send device event. Send an event from a device.
+POST	 /device/types/{typeId}/devices/{deviceId}/commands/{commandId}/request 	Non-Filtering Endpoint	Receive command. Receive command for a device
+GET	 /s2s/services 	Non-Filtering Endpoint	Get all services. The services endpoint returns the list of all of the services that the Watson IoT Platform can connect to. The list can include a mixture of services that are either bound or unbound where: Bound services are services that the Watson IoT Platform has been configured to connect to. This can include other services in the same Bluemix space as the Watson IoT Platform or external services. Unbound services are other services in the same Bluemix space as the Watson IoT Platform service that the platform has not yet been configured to connect to. The Watson IoT Platform Dashboard UI must be used to bind to these services.
+POST	 /s2s/services 	Non-Filtering Endpoint	Create a new service. Create a new external service. The service must include all of the details required to connect and authenticate to the external service in the credentials property. The structure of the credentials property will depend on the type of the target service.
+GET	 /event/types 	Non-Filtering Endpoint	Query active event types. Event types are used to model the events that are published to the Watson IoT Platform. An event type must be created in an organization before more complex processing can be performed on the native event. The /event/types endpoint returns the list of all of the active event types that have been defined for the organization in the Watson IoT Platform. Various query parameters can be used to filter, sort and page through the list of active event types that are returned.
+
+***Patterns*** 
+Count: 32
+POST	 /device/types 	Filtering Endpoint	Create device type.
+GET	 /device/types/{typeId} 	Filtering Endpoint	Get device type. Gets device type details.
+PUT	 /device/types/{typeId} 	Filtering Endpoint	Update device type. Updates a device type.
+DELETE	 /device/types/{typeId} 	Filtering Endpoint	Delete device type. Deletes a device type.
+GET	 /device/types/{typeId}/devices 	Filtering Endpoint	List devices. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-').
+GET	 /device/types/{typeId}/devices/{deviceId} 	Filtering Endpoint	Get device. Gets device details.
+PUT	 /device/types/{typeId}/devices/{deviceId} 	Filtering Endpoint	Update device. Updates a device.
+GET	 /device/types/{typeId}/devices/{deviceId}/devices 	Filtering Endpoint	Get devices that are connected through the gateway specified by id {deviceId}. Gets information on devices that are connected through the specified gateway (typeId, deviceId) to Watson IoT Platform.
+GET	 /device/types/{typeId}/devices/{deviceId}/edgestatus 	Filtering Endpoint	Return the status of containers from an edge node. Return the status of containers from an edge node.
+GET	 /device/types/{typeId}/devices/{deviceId}/edgestatus/{serviceId} 	Filtering Endpoint	Return the status of containers from an edge node filtering by service. Return the status of containers from an edge node filtering by service.
+GET	 /device/types/{typeId}/devices/{deviceId}/diag/logs 	Filtering Endpoint	Get all device diagnostic logs. Gets diagnostic logs for a device.
+POST	 /device/types/{typeId}/devices/{deviceId}/diag/logs 	Filtering Endpoint	Add device diagnostic log information. Adds an entry in the log of diagnostic information for the device. If no date is supplied, the entry is added with the current date and time. The 10 most recent entries will be retained until either the device is deleted or the clear logs API is called.
+GET	 /device/types/{typeId}/devices/{deviceId}/diag/logs/{logId} 	Filtering Endpoint	Get device diagnostic log. Gets diagnostic log for a device.
+DELETE	 /device/types/{typeId}/devices/{deviceId}/diag/logs/{logId} 	Filtering Endpoint	Delete diagnostic log. Delete this diagnostic log for the device.
+GET	 /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	Filtering Endpoint	Get device diagnostic error codes. Gets diagnostic error codes for a device.
+POST	 /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	Filtering Endpoint	Add diagnostic error code for a device. Adds an error code to the list of error codes for the device. The 10 most recent entries will be retained until either the device is deleted or the clear error codes API is called.
+DELETE	 /device/types/{typeId}/devices/{deviceId}/diag/errorCodes 	Filtering Endpoint	Clear error codes. Clears the list of error codes for the device. The list is replaced with a single error code of zero.
+GET	 /mgmt/requests/{requestId} 	Filtering Endpoint	Get device management request. Gets details of a device management request.
+GET	 /mgmt/requests/{requestId}/deviceStatus 	Filtering Endpoint	Get list of device management request device statuses. Gets a list of device management request device statuses for a particular request. Sorting can be performed on any of the following properties (sort order can be reversed by prefixing the property name with '-'):
+GET	 /mgmt/requests/{requestId}/deviceStatus/{deviceType}/{deviceId} 	Filtering Endpoint	Get individual device management request device status. Get an individual device management request device status.
+POST	 /mgmt/custom/bundle 	Filtering Endpoint	Add a device management extension
+GET	 /mgmt/custom/bundle/{bundleId} 	Filtering Endpoint	Get a specific registered device management extension
+PUT	 /mgmt/custom/bundle/{bundleId} 	Filtering Endpoint	Update an existing device management extension
+DELETE	 /mgmt/custom/bundle/{bundleId} 	Filtering Endpoint	Delete a device management extension
+GET	 /device/types/{deviceType}/devices/{deviceId}/events/{eventName} 	Filtering Endpoint	Get last event for a specific event id for a specific device.
+GET	 /device/types/{deviceType}/devices/{deviceId}/events 	Filtering Endpoint	Get all last events for a specific device.
+GET	 /device/types/{typeId}/devices/{deviceId}/location 	Filtering Endpoint	Get device location information. Gets location information for a device.
+PUT	 /device/types/{typeId}/devices/{deviceId}/location 	Filtering Endpoint	Update device location information. Updates the location information for a device. If no date is supplied, the entry is added with the current date and time.
+GET	 /device/types/{typeId}/devices/{deviceId}/exts/twc/ops/geocode 	Filtering Endpoint	Retrieve current meteorological observations for the location associated with your device.
+GET	 /s2s/services/{serviceUuid} 	Filtering Endpoint	Get the details of a service. Retrieve the service with the specified uuid.
+PUT	 /s2s/services/{serviceUuid} 	Filtering Endpoint	Update an external service. Updates the external service with the specified id. The following properties can be updated: name description credentials. Note that if the description field is omitted from the body of the update, then any existing description will be removed from the service.
+DELETE	 /s2s/services/{serviceUuid} 	Filtering Endpoint	Delete an external service. Deletes the external service with the specified id from the organization in the Watson IoT Platform. Please note the the delete will fail if the service is being referenced by another object in the organization, for example, a Historian Connector resource.

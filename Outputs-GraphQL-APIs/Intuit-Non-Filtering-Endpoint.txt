@@ -1,0 +1,46 @@
+***Anti-Pattern*** 
+Count: 30
+POST	 /fetchBill/{id} 	Non-Filtering Endpoint	Read a Bill by Id
+POST	 /createBill/{id} 	Non-Filtering Endpoint	
+POST	 /updateBill/{id} 	Non-Filtering Endpoint	
+POST	 /updateBill/{id} 	Non-Filtering Endpoint	
+POST	 /deleteBill/{id} 	Non-Filtering Endpoint	
+POST	 /fetchCreditMemo/{id} 	Non-Filtering Endpoint	Read an Credit Memo by Id
+POST	 /createCreditMemo/{id} 	Non-Filtering Endpoint	
+POST	 /updateCreditMemo/{id} 	Non-Filtering Endpoint	
+POST	 /deleteCreditMemo/{id} 	Non-Filtering Endpoint	
+POST	 /deleteCreditMemo/{id} 	Non-Filtering Endpoint	
+POST	 /fetchCustomer/{id} 	Non-Filtering Endpoint	Use queries to read customers. Apps can query the Customer entity by id or displayName.
+POST	 /fetchDelayedCharge/{id} 	Non-Filtering Endpoint	Read an DelayedCharge by Id
+POST	 /fetchDelayedCredit/{id}	Non-Filtering Endpoint	Read an DelayedCredit by Id
+POST	 /createDelayedCredit/{id} 	Non-Filtering Endpoint	
+POST	 /updateDelayedCredit/{id} 	Non-Filtering Endpoint	
+POST	 /deleteDelayedCredit/{id} 	Non-Filtering Endpoint	
+POST	 /fetchEstimate/{id} 	Non-Filtering Endpoint	Read an Estimate by Id
+POST	 /createEstimate/{id}	Non-Filtering Endpoint	
+POST	 /deleteEstimate/{id} 	Non-Filtering Endpoint	id: ID of an existing estimate
+POST	 /createExpense/{id} 	Non-Filtering Endpoint	
+POST	 /updateExpense/{id} 	Non-Filtering Endpoint	
+POST	 /deleteExpense/{id} 	Non-Filtering Endpoint	
+POST	 /fetchInvoice/{id} 	Non-Filtering Endpoint	Read an invoice by Id
+POST	 /createInvoice/{id} 	Non-Filtering Endpoint	
+POST	 /updateInvoice/{id} 	Non-Filtering Endpoint	
+POST	 /deleteInvoice/{id} 	Non-Filtering Endpoint	
+POST	 /fetchInvoicePayment/{id} 	Non-Filtering Endpoint	Read an InvoicePayment by Id
+POST	 /createInvoicePayment/{id} 	Non-Filtering Endpoint	
+POST	 /updateInvoicePayment/{id} 	Non-Filtering Endpoint	
+POST	 /deleteInvoicePayment/{id} 	Non-Filtering Endpoint	
+
+***Patterns*** 
+Count: 11
+POST	 /createInvoiceDraft 	Filtering Endpoint	Mutation for defining value of field within an Invoice Draft
+POST	 /transactionDraft/{id} 	Filtering Endpoint	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
+POST	 /createCustomer 	Filtering Endpoint	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
+POST	 /createDelayedCharge 	Filtering Endpoint	
+POST	 /deleteDelayedCharge 	Filtering Endpoint	
+POST	 /verificationOfEmployment 	Filtering Endpoint	Verification of Employment
+POST	 /verificationOfIncome 	Filtering Endpoint	Verification of Income
+POST	 /socialServiceVerification 	Filtering Endpoint	Social Service Verification
+POST	 /createEstimateDraft 	Filtering Endpoint	Estimate Draft
+POST	 /fetchExpense 	Filtering Endpoint	Read an Expense by Id
+POST	 /createInvoiceDraft 	Filtering Endpoint	Invoice Draft

@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 15
+GET	 /api/user/info 	Non-Filtering Endpoint	Returns information about a logged in user
+PUT	 /api/user/info 	Non-Filtering Endpoint	Updates a logged in users information
+GET	 /api/user 	Non-Filtering Endpoint	Gets list of users
+POST	 /api/v/2/devices/{SystemKey}/auth 	Non-Filtering Endpoint	Authenticates a device into the system
+POST	 /api/collection/{systemKey}/{collectionName} 	Non-Filtering Endpoint	Item create
+POST	 /api/data/{collectionID} 	Non-Filtering Endpoint	Item create
+POST	 /api/code/{systemKey}/{serviceName} 	Non-Filtering Endpoint	Calls/executes ClearCode service
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Non-Filtering Endpoint	Creates libraries for a system
+GET	 /codeadmin/failed 	Non-Filtering Endpoint	Lists failed code service runs for all systems that a developer can access
+POST	 /codeadmin/failed/{systemKey} 	Non-Filtering Endpoint	Retry failed code services
+POST	 /api/message/{systemKey}/publish 	Non-Filtering Endpoint	Publishes a message to a topic
+GET	 /admin/systemmanagement 	Non-Filtering Endpoint	Gets a systems info
+PUT	 /admin/systemmanagement 	Non-Filtering Endpoint	Updates a systems info
+DELETE	 /admin/systemmanagement 	Non-Filtering Endpoint	Deletes a system
+PUT	 /admin/collectionmanagement 	Non-Filtering Endpoint	Updates an existing connection in a system
+
+***Patterns*** 
+Count: 30
+POST	 /api/user/reg 	Filtering Endpoint	Register user
+POST	 /api/user/auth 	Filtering Endpoint	Authenticates a user into the system
+POST	 /api/user/anon 	Filtering Endpoint	Authenticates anonymous users into the system
+POST	 /api/user/checkauth 	Filtering Endpoint	Checks if user is authenticated
+POST	 /api/user/logout 	Filtering Endpoint	Logs out a user
+PUT	 /api/user/pass 	Filtering Endpoint	Changes a logged in users password
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Filtering Endpoint	Update a device's state or custom attributes only
+GET	 /api/collection/{systemKey}/{collectionName} 	Filtering Endpoint	fetch collection
+PUT	 /api/collection/{systemKey}/{collectionName} 	Filtering Endpoint	Item update
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Filtering Endpoint	Item delete
+GET	 /api/data/{collectionID} 	Filtering Endpoint	fetch collection
+PUT	 /api/data/{collectionID} 	Filtering Endpoint	Item update
+DELETE	 /api/data/{collectionID} 	Filtering Endpoint	Item delete
+GET	 /api/data/{collectionid}/columns 	Filtering Endpoint	get column key names
+GET	 /codeadmin/v/2/library/{systemKey} 	Filtering Endpoint	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Filtering Endpoint	Gets the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Filtering Endpoint	Updates the libraries for a system
+DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Filtering Endpoint	Deletes a libraries for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Filtering Endpoint	Gets all versions of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Filtering Endpoint	Gets a specific version of a library for a system
+GET	 /codeadmin/failed/{systemKey} 	Filtering Endpoint	Lists failed code service runs for specified system
+DELETE	 /codeadmin/failed/{systemKey} 	Filtering Endpoint	Delete failed code service run from list
+GET	 /api/message/{systemKey} 	Filtering Endpoint	Retrieve message history
+DELETE	 /api/message/{systemKey} 	Filtering Endpoint	Delete message history
+POST	 /admin/reg 	Filtering Endpoint	Registers a new developer account with the CB platform
+POST	 /admin/auth 	Filtering Endpoint	Authorizes a CB Developer account
+POST	 /admin/logout 	Filtering Endpoint	Logs a CB developer out of their session
+POST	 /admin/systemmanagement 	Filtering Endpoint	Creates a new system in a developers account
+POST	 /admin/collectionmanagement 	Filtering Endpoint	Creates a new collection or connection in a system
+PUT	 /admin/collectionmanagement 	Filtering Endpoint	Creates a column within an existing collection

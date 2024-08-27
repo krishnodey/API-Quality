@@ -1,0 +1,52 @@
+***Anti-Pattern*** 
+Count: 14
+GET	 /v1/projects 	Non-Filtering Endpoint	Lists projects for the authenticated user or team.
+PUT	 /v1/projects 	Non-Filtering Endpoint	Create or update project
+POST	 /v1/projects/{projectId}/services/build 	Non-Filtering Endpoint	Creates a new build service.
+POST	 /v1/projects/{projectId}/services/combined 	Non-Filtering Endpoint	Creates a new combined service.
+POST	 /v1/projects/{projectId}/services/deployment 	Non-Filtering Endpoint	Creates a new deployment service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Non-Filtering Endpoint	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Non-Filtering Endpoint	Sets the build arguments for the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Non-Filtering Endpoint	Aborts the given service build
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Non-Filtering Endpoint	Pause the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Non-Filtering Endpoint	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Non-Filtering Endpoint	Resumes the given service. Optionally takes several arguments to override resumed settings.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Non-Filtering Endpoint	
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Non-Filtering Endpoint	Sets the runtime environment for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Non-Filtering Endpoint	Modifies the scaling settings for the given service.
+
+***Patterns*** 
+Count: 33
+POST	 /v1/projects 	Filtering Endpoint	Creates a new project.
+PATCH	 /v1/projects/{projectId}	Filtering Endpoint	Updates a project.
+GET	 /v1/projects/{projectId} 	Filtering Endpoint	Get information about the given project
+DELETE	 /v1/projects/{projectId} 	Filtering Endpoint	Delete the given project. Fails if the project isn't empty.
+GET	 /v1/projects/{projectId}/services 	Filtering Endpoint	Gets a list of services belonging to the project
+PUT	 /v1/projects/{projectId}/services/build 	Filtering Endpoint	Creates or updates a build service.
+PATCH	 /v1/projects/{projectId}/services/build/{serviceId} 	Filtering Endpoint	Updates a build service.
+PUT	 /v1/projects/{projectId}/services/combined 	Filtering Endpoint	Creates or updates a combined service.
+PATCH	 /v1/projects/{projectId}/services/combined/{serviceId} 	Filtering Endpoint	Updates a combined service.
+PUT	 /v1/projects/{projectId}/services/deployment 	Filtering Endpoint	Creates or updates a deployment service.
+PATCH	 /v1/projects/{projectId}/services/deployment/{serviceId} 	Filtering Endpoint	Updates a deployment service.
+GET	 /v1/projects/{projectId}/services/{serviceId} 	Filtering Endpoint	Gets information about the given service.
+DELETE	 /v1/projects/{projectId}/services/{serviceId} 	Filtering Endpoint	Deletes the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	Filtering Endpoint	Gets information about the branches of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build 	Filtering Endpoint	Lists the builds for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Filtering Endpoint	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	Filtering Endpoint	Get details about the build arguments accessible by the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	Filtering Endpoint	Get logs for a service build
+GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	Filtering Endpoint	Get metrics for a service build
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	Filtering Endpoint	Updates the build options for a given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	Filtering Endpoint	Updates the version control source for a given build or combined service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Filtering Endpoint	Gets information about a build for the service
+GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	Filtering Endpoint	Gets a list of containers for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Filtering Endpoint	Gets information about the deployment of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Filtering Endpoint	Updates the deployment settings of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Filtering Endpoint	Lists the health checks for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Filtering Endpoint	Updates health checks for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	Filtering Endpoint	Get logs for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	Filtering Endpoint	Get metrics for a service
+GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	Filtering Endpoint	Lists the ports for the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	Filtering Endpoint	Updates the list of ports for the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	Filtering Endpoint	Gets information about the pull-requests of the given service.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	Filtering Endpoint	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'

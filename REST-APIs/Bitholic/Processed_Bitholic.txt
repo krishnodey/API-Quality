@@ -1,0 +1,6 @@
+{"http_verb": "GET ", "uri": " /balances ", "processed_uri": ["balances"], "description": " Get current balances.\n", "parameter": "", "processed_des_para": ["get", "current", "balance"]}
+{"http_verb": "POST ", "uri": " /order/{pairs} ", "processed_uri": ["order", "pairs"], "description": " Register your order.\n", "parameter": "", "processed_des_para": ["register", "order"]}
+{"http_verb": "POST ", "uri": " /cancel/{pairs} ", "processed_uri": ["cancel", "pairs"], "description": " Cancel the registered order.\n", "parameter": "", "processed_des_para": ["cancel", "registered", "order"]}
+{"http_verb": "GET ", "uri": " /openOrders ", "processed_uri": ["open", "orders"], "description": " Get your open orders.\n", "parameter": "", "processed_des_para": ["get", "open", "order"]}
+{"http_verb": "GET ", "uri": " /tradeHistories ", "processed_uri": ["trade", "histories"], "description": " Get your completed order.\n", "parameter": "", "processed_des_para": ["get", "complete", "order"]}
+{"http_verb": "GET ", "uri": " /balanceHistories ", "processed_uri": ["balance", "histories"], "description": " Get your balance History.", "parameter": "", "processed_des_para": ["get", "balance", "history"]}

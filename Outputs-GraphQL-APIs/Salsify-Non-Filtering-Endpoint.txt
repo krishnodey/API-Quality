@@ -1,0 +1,51 @@
+***Anti-Pattern*** 
+Count: 27
+POST	 /v1/orgs/{org_id}/products/ 	Non-Filtering Endpoint	Create Product
+POST	 /v1/orgs/{org_id}/products 	Non-Filtering Endpoint	Bulk Create Products
+GET	 /v1/orgs/{org_id}/products/{salsify:id} 	Non-Filtering Endpoint	Read Product Record
+GET	 /v1/orgs/{org_id}/products 	Non-Filtering Endpoint	Bulk Read Products
+PUT	 /v1/orgs/{org_id}/products/_upsert 	Non-Filtering Endpoint	Bulk Upsert Products
+POST	 /v1/orgs/{org_id}/records/ 	Non-Filtering Endpoint	Create Record
+POST	 /v1/orgs/{org_id}/records 	Non-Filtering Endpoint	Bulk Create Records
+GET	 /v1/orgs/{org_id}/records/{salsify:id} 	Non-Filtering Endpoint	Read Record
+GET	 /v1/orgs/{org_id}/records 	Non-Filtering Endpoint	Bulk Read Records
+GET	 /v1/orgs/{org_id}/record_types 	Non-Filtering Endpoint	Read Record Types
+PUT	 /v1/orgs/{org_id}/records/_upsert 	Non-Filtering Endpoint	Bulk Upsert Records
+POST	 /v1/orgs/{org_id}/properties 	Non-Filtering Endpoint	Create New Property
+POST	 /v1/orgs/{org_id}/properties 	Non-Filtering Endpoint	Bulk Create New Properties
+GET	 /v1/orgs/{org_ID}/properties/{salsify:id} 	Non-Filtering Endpoint	Read Property
+PUT	 /v1/orgs/{organization_id}/properties/_upsert 	Non-Filtering Endpoint	Bulk Upsert Properties
+POST	 /orgs/{org_id}/imports/upload_mounts 	Non-Filtering Endpoint	Create a Mount Point
+POST	 /orgs/{org_id}/imports 	Non-Filtering Endpoint	Creating a JSON Import from a Mount Point
+POST	 /orgs/{org_id}/imports 	Non-Filtering Endpoint	Creating a JSON Import from FTP
+PUT	 /orgs/{org_id}/imports/{import_id} 	Non-Filtering Endpoint	Updating an Import to Point at a New Mount Point
+POST	 /orgs/{org_id}/imports/{import_id}/runs 	Non-Filtering Endpoint	Starting an Import Run
+POST	 /orgs/{org_id}/export_runs 	Non-Filtering Endpoint	Start Export Run
+POST	 /v1/orgs/{organization_id}/digital_assets 	Non-Filtering Endpoint	Create a Digital Asset & Metadata
+POST	 /v1/orgs/{org_id}/digital_assets 	Non-Filtering Endpoint	Create Multiple Digital Assets
+GET	 /v1/orgs/{org_id}/digital_assets/{asset_id} 	Non-Filtering Endpoint	Read Digital Asset Metadata
+GET	 /v1/orgs/{org_id}/digital_assets 	Non-Filtering Endpoint	Bulk Read Digital Assets
+POST	 /v1/orgs/<org_ID>/digital_assets/refresh 	Non-Filtering Endpoint	Refresh Digital Assets
+PUT	 /v1/orgs/{organization_id}/digital_assets/_upsert 	Non-Filtering Endpoint	Bulk Upsert Digital Assets
+
+***Patterns*** 
+Count: 19
+PUT	 /v1/orgs/{org_id}/products/{product_id} 	Filtering Endpoint	Update Product
+PUT	 /v1/orgs/{org_id}/products 	Filtering Endpoint	Bulk Update Products
+DELETE	 /v1/orgs/{org_id}/products/{product_id} 	Filtering Endpoint	Delete Product
+DELETE	 /v1/orgs/{org_id}/products 	Filtering Endpoint	Bulk Delete Products
+PUT	 /orgs/{org_id}/records/{record_id} 	Filtering Endpoint	Update Record
+PUT	 /v1/orgs/{org_id}/records 	Filtering Endpoint	Bulk Update Records
+DELETE	 /v1/orgs/{org_id}/records/{product_id} 	Filtering Endpoint	Delete Record
+DELETE	 /v1/orgs/{org_id}/records 	Filtering Endpoint	Bulk Delete Records
+PUT	 /v1/orgs/{org_id}/properties/{salsify:id} 	Filtering Endpoint	Update Property
+DELETE	 /v1/orgs/{org_id}/properties/{salsify:id} 	Filtering Endpoint	Delete Property
+DELETE	 /v1/orgs/{org_id}/properties 	Filtering Endpoint	Bulk Delete Properties
+GET	 /orgs/{org_id}/imports/runs/{import_run_id} 	Filtering Endpoint	Getting the Status of an Import Run
+GET	 /orgs/{org_id}/export_runs/{export_id} 	Filtering Endpoint	Get Export Status
+PUT	 /v1/orgs/{org_id}/digital_assets/{salsify:id} 	Filtering Endpoint	Update Digital Asset Metadata
+PUT	  /v1/orgs/{org_id}/digital_assets 	Filtering Endpoint	Update Multiple Digital Assets
+DELETE	 /v1/orgs/{org_id}/digital_assets 	Filtering Endpoint	Delete Digital Assets
+DELETE	  /v1/orgs/{org_id}/digital_assets 	Filtering Endpoint	Delete Multiple Digital Assets
+PUT	  /v1/orgs/{org_id}/lists/{list_id}/members 	Filtering Endpoint	Add List Members
+DELETE	 /v1/orgs/{org_id}/lists/{list_id}/members 	Filtering Endpoint	Delete List Members

@@ -1,0 +1,53 @@
+***Anti-Pattern*** 
+Count: 24
+POST	 /entitlements 	Non-Filtering Endpoint	Get Entitlements for Customers
+POST	 /subscriptions/{subscriptionId}/users 	Non-Filtering Endpoint	Add user to a subscription
+GET	 /subscriptions 	Non-Filtering Endpoint	Get subscriptions
+DELETE	 /subscriptions/{subscriptionId}/users/{userId} 	Non-Filtering Endpoint	Remove a user from a subscription
+DELETE	 /subscriptions/{subscriptionId} 	Non-Filtering Endpoint	Remove subscription
+PUT	 /orders/{orderReferenceNumber} 	Non-Filtering Endpoint	Cancel renewal order
+GET	 /orders 	Non-Filtering Endpoint	Get all legacy orders
+GET	 /billing/invoices 	Non-Filtering Endpoint	Get all invoices
+POST	 /orders/estimates/price 	Non-Filtering Endpoint	Get price estimate for the given order.
+GET	 /catalog/locales 	Non-Filtering Endpoint	Get all possible locales for products.
+GET	 /catalog/service-types 	Non-Filtering Endpoint	Get all possible service types for products.
+GET	 /catalog/topics 	Non-Filtering Endpoint	Get all possible topics for products.
+GET	 /catalog/products 	Non-Filtering Endpoint	Get the products for a given locale.
+GET	 /catalog/reseller/products 	Non-Filtering Endpoint	Get products which can be used by resellers to place orders.
+PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Non-Filtering Endpoint	Change Renew type of an IBM agreement number.
+GET	 /catalog/category-topics  	Non-Filtering Endpoint	Get all possible category topics for products.
+GET	 /catalog/categories 	Non-Filtering Endpoint	Get all possible categories for products.
+GET	  /catalog/locales 	Non-Filtering Endpoint	Get all possible locales for products.
+GET	 /catalog/service-types > Get all possible service types for products. 	Non-Filtering Endpoint	
+GET	 /catalog/topics 	Non-Filtering Endpoint	Get all possible topics for products.
+GET	 /catalog/products 	Non-Filtering Endpoint	Get the products for a given locale.
+GET	 /catalog/reseller/products 	Non-Filtering Endpoint	Get products which can be used by resellers to place orders.
+PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Non-Filtering Endpoint	Change Renew type of an IBM agreement number.
+GET	 /quotes 	Non-Filtering Endpoint	Get All quotesCopied
+
+***Patterns*** 
+Count: 24
+POST	 /subscriptions 	Filtering Endpoint	Create subscription >
+GET	 /subscriptions/{subscriptionId} 	Filtering Endpoint	Get subscription
+GET	 /subscriptions/{subscriptionId}/users/{userId} 	Filtering Endpoint	Get user for subscription
+GET	 /subscriptions/{subscriptionId}/users 	Filtering Endpoint	Get users for a subscription
+PUT	 /subscriptions/{subscriptionId} 	Filtering Endpoint	Update Subscription
+PUT	 /subscriptions/{subscriptionId}/users/{userId} 	Filtering Endpoint	Update user in a subscription
+POST	 /orders 	Filtering Endpoint	Create renewal order
+GET	 /orders/{orderReferenceNumber} 	Filtering Endpoint	Get legacy order
+POST	 /orders 	Filtering Endpoint	Create Order
+GET	 /orders/{orderReferenceNumber} 	Filtering Endpoint	Get an Order
+GET	 /billing/{orderReferenceNumber}/billed 	Filtering Endpoint	Fetch billing details for a submitted order
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud/resourceinstances 	Filtering Endpoint	Get Resource Instance Usage Details
+GET	 /billing/{orderReferenceNumber}/usage/ibmcloud 	Filtering Endpoint	Get Usage Details
+PUT	 /orders/{orderReferenceNumber} 	Filtering Endpoint	Use this API to update, upgrade, buy more or cancel an existing order.
+POST	 /orders/validate/partnerIdentifier 	Filtering Endpoint	Validate Partner Identifer
+GET	 /catalog/products/{id} 	Filtering Endpoint	Get a product by product ID.
+GET	 /catalog/reseller/products/{id} 	Filtering Endpoint	Get a reseller product by ID.
+GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Filtering Endpoint	Get configuration for a given plan and product id.
+POST	 /quotes/orders 	Filtering Endpoint	Create order from Quote.
+GET	 /quotes/billing/{agreementnumber}/billed 	Filtering Endpoint	Get billed usage data for an agreement number
+GET	 /quotes/{sapQuoteNumber}	Filtering Endpoint	Get details of Quote
+GET	 /quotes/agreementnumber/{agreementnumber}/lineitems 	Filtering Endpoint	Get line items for an agreement number
+GET	 /quotes/orders/{orderReferenceNumber} 	Filtering Endpoint	Get Quote order
+PUT	  /quotes/agreementnumber/{agreementnumber} 	Filtering Endpoint	Update agreement

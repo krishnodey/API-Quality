@@ -83,11 +83,11 @@ def run(selected, uri_path, base_path, api_type):
     # uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     # print("\nFinished Detection of LessCohisiveDocumentation:\n")
 
-    # print("Detection of Non_FilteringEndpoint:")
-    # result_AP, result_P, p_count, ap_count= analyzer_obj.detect_non_filtering_endpoint()
-    # pattern_type = "Non-Filtering-Endpoint"
-    # uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-    # print("\nFinished Detection of Non_FilteringEndpoint:\n")
+    print("Detection of Non_FilteringEndpoint:")
+    result_AP, result_P, p_count, ap_count= analyzer_obj.detect_non_filtering_endpoint()
+    pattern_type = "Non-Filtering-Endpoint"
+    uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+    print("\nFinished Detection of Non_FilteringEndpoint:\n")
 
 
     print("Detection of ParameterTunneling:")

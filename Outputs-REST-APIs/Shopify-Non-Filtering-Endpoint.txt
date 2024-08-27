@@ -1,0 +1,76 @@
+***Anti-Pattern*** 
+Count: 27
+GET	 /admin/oauth/access_scopes.json 	Non-Filtering Endpoint	Retrieves a list of access scopes associated to the access token.
+GET	 /storefront_access_tokens.json 	Non-Filtering Endpoint	Retrieves a list of storefront access tokens that have been issued
+GET	 /reports.json 	Non-Filtering Endpoint	Retrieves a list of reports
+GET	 /application_credits.json 	Non-Filtering Endpoint	Retrieves all application credits
+GET	 /recurring_application_charges.json 	Non-Filtering Endpoint	Retrieves a list of recurring application charges
+DELETE	 /recurring_application_charges/{recurring_application_charge_id}.json 	Non-Filtering Endpoint	Cancels a recurring application charge
+GET	 /customers.json 	Non-Filtering Endpoint	Retrieves a list of customers
+GET	 /customers/search.json?query=Bob country:United States 	Non-Filtering Endpoint	Searches for customers that match a supplied query
+POST	 /customers/{customer_id}/account_activation_url.json 	Non-Filtering Endpoint	Creates an account activation URL for a customer
+POST	 /customers/{customer_id}/send_invite.json 	Non-Filtering Endpoint	Sends an account invite to a customer
+GET	 /customers/count.json 	Non-Filtering Endpoint	Retrieves a count of customers
+POST	 /customers/{customer_id}/addresses.json 	Non-Filtering Endpoint	Creates a new address for a customer
+PUT	 /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	Non-Filtering Endpoint	Performs bulk operations for multiple customer addresses
+PUT	 /customers/{customer_id}/addresses/{address_id}/default.json 	Non-Filtering Endpoint	Sets the default address for a customer
+POST	 /price_rules/{price_rule_id}/discount_codes.json 	Non-Filtering Endpoint	Creates a discount code
+GET	 /discount_codes/count.json 	Non-Filtering Endpoint	Retrieves a count of discount codes for a shop
+POST	 /price_rules/{price_rule_id}/batch.json 	Non-Filtering Endpoint	Creates a discount code creation job
+GET	 /price_rules.json 	Non-Filtering Endpoint	Retrieves a list of price rules
+GET	 /price_rules/count.json 	Non-Filtering Endpoint	Retrieves a count of all price rules
+DELETE	 /price_rules/{price_rule_id}.json 	Non-Filtering Endpoint	Remove an existing PriceRule
+GET	 /events.json 	Non-Filtering Endpoint	Retrieves a list of events
+GET	 /webhooks.json 	Non-Filtering Endpoint	Retrieves a list of webhooks
+GET	 /webhooks/{webhook_id}.json 	Non-Filtering Endpoint	Receive a single Webhook
+PUT	 /webhooks/{webhook_id}.json 	Non-Filtering Endpoint	Modify an existing Webhook
+DELETE	 /webhooks/{webhook_id}.json 	Non-Filtering Endpoint	Remove an existing Webhook
+GET	 /inventory_levels.json 	Non-Filtering Endpoint	Retrieves a list of inventory levels
+GET	 /locations.json 	Non-Filtering Endpoint	Retrieves a list of locations
+
+***Patterns*** 
+Count: 44
+POST	 /storefront_access_tokens.json 	Filtering Endpoint	Creates a new StorefrontAccessToken
+DELETE	 /storefront_access_tokens/{storefront_access_token_id}.json 	Filtering Endpoint	Deletes an existing storefront access token
+GET	 /reports/{report_id}.json 	Filtering Endpoint	Retrieves a single report
+POST	 /reports.json 	Filtering Endpoint	Creates a new report
+PUT	 /reports/{report_id}.json 	Filtering Endpoint	Updates a report
+DELETE	 /reports/{report_id}.json 	Filtering Endpoint	Deletes a report
+POST	 /application_charges.json 	Filtering Endpoint	Creates an application charge
+GET	 /application_charges/{application_charge_id}.json 	Filtering Endpoint	Retrieves an application charge
+GET	 /application_charges.json?since_id=556467234 	Filtering Endpoint	Retrieves a list of application charges
+POST	 /application_credits.json 	Filtering Endpoint	Creates an application credit
+GET	 /application_credits/{application_credit_id}.json 	Filtering Endpoint	Retrieves a single application credit
+POST	 /recurring_application_charges.json 	Filtering Endpoint	Creates a recurring application charge
+GET	 /recurring_application_charges/{recurring_application_charge_id}.json 	Filtering Endpoint	Retrieves a single charge
+PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	Filtering Endpoint	Updates the capped amount of a recurring application charge
+GET	 /customers/{customer_id}.json 	Filtering Endpoint	Retrieves a single customer
+POST	 /customers.json 	Filtering Endpoint	Creates a customer
+PUT	 /customers/{customer_id}.json 	Filtering Endpoint	Updates a customer
+DELETE	 /customers/{customer_id}.json 	Filtering Endpoint	Deletes a customer.
+GET	 /customers/{customer_id}/orders.json 	Filtering Endpoint	Retrieves all orders belonging to a customer
+GET	 /customers/{customer_id}/addresses.json 	Filtering Endpoint	Retrieves a list of addresses for a customer
+GET	 /customers/{customer_id}/addresses/{address_id}.json 	Filtering Endpoint	Retrieves details for a single customer address
+PUT	 /customers/{customer_id}/addresses/{address_id}.json 	Filtering Endpoint	Updates an existing customer address
+DELETE	 /customers/{customer_id}/addresses/{address_id}.json 	Filtering Endpoint	Removes an address from a customer’s address list
+PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Filtering Endpoint	Updates an existing discount code
+GET	 /price_rules/{price_rule_id}/discount_codes.json 	Filtering Endpoint	Retrieves a list of discount codes
+GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Filtering Endpoint	Retrieves a single discount code
+GET	 /discount_codes/lookup.json?code=SUMMERSALE10OFF 	Filtering Endpoint	Retrieves the location of a discount code
+DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Filtering Endpoint	Deletes a discount code
+GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	Filtering Endpoint	Retrieves a discount code creation job
+GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Filtering Endpoint	Retrieves a list of discount codes for a discount code creation job
+POST	 /price_rules.json 	Filtering Endpoint	Creates a price rule
+PUT	 /price_rules/{price_rule_id}.json 	Filtering Endpoint	Updates an existing a price rule
+GET	 /price_rules/{price_rule_id}.json 	Filtering Endpoint	Retrieves a single price rule
+GET	 /events/{event_id}.json 	Filtering Endpoint	Retrieves a single event
+GET	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	Filtering Endpoint	Retrieves a count of events
+GET	 /webhooks/count.json 	Filtering Endpoint	Receive a count of all Webhooks
+POST	 /webhooks.json 	Filtering Endpoint	Create a new Webhook
+GET	 /inventory_items.json?ids=808950810,39072856,457924702 	Filtering Endpoint	Retrieves a list of inventory items
+GET	 /inventory_items/{inventory_item_id}.json 	Filtering Endpoint	Retrieves a single inventory item by ID
+PUT	 /inventory_items/{inventory_item_id}.json 	Filtering Endpoint	Updates an existing inventory item
+POST	 /inventory_levels/adjust.json 	Filtering Endpoint	Adjusts the inventory level of an inventory item at a location
+DELETE	 /inventory_levels.json?inventory_item_id=808950810&location_id=905684977 	Filtering Endpoint	Deletes an inventory level from a location
+POST	 /inventory_levels/connect.json 	Filtering Endpoint	Connects an inventory item to a location
+POST	 /inventory_levels/set.json 	Filtering Endpoint	Sets the inventory level for an inventory item at a location

@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 21
+POST	 /createEventDocument/{eventId} 	Non-Filtering Endpoint	Create swapcard event document
+POST	 /createEventGroup/{eventId}	Non-Filtering Endpoint	Create a new group on the event
+POST	 /createEventPlanningLink/{eventId} 	Non-Filtering Endpoint	Create swapcard event planning link
+POST	 /createEventSponsor/{eventId} 	Non-Filtering Endpoint	Create swapcard event sponsor
+POST	 /deleteExhibitorLinkRelation 	Non-Filtering Endpoint	Delete a relation between two exhibitors in an exhibitor link
+POST	 /deleteExhibitorLink 	Non-Filtering Endpoint	Delete an exhibitor link and all its relations.
+POST	 /deleteFieldDefinitions	Non-Filtering Endpoint	Delete field definitions from an event. All values associated will be removed as well.
+POST	 /deletePlanningViews 	Non-Filtering Endpoint	Delete views from a planning.
+POST	 /deleteProducts 	Non-Filtering Endpoint	Delete one or more products from a event, and return product IDs successfully deleted.
+POST	 /deleteRoles	Non-Filtering Endpoint	Delete one or more roles.
+POST	 /deleteSelectFieldValues	Non-Filtering Endpoint	Delete values from a select field definition.
+POST	 /setSelectFieldValue	Non-Filtering Endpoint	Create or update a value for a select field definition.
+POST	 /updateEventPerson 	Non-Filtering Endpoint	Update an existing person in an event.
+POST	 /updateExhibitorMemberRoles 	Non-Filtering Endpoint	Update a role
+POST	 /updateExhibitor	Non-Filtering Endpoint	Update an exhibitor.
+POST	 /updateFieldDefinition	Non-Filtering Endpoint	Update an existing field definition.
+POST	 /updateProduct	Non-Filtering Endpoint	Update an existing product.
+POST	 /updateProducts	Non-Filtering Endpoint	Update an existing product.
+POST	 /updateRole 	Non-Filtering Endpoint	Update a role
+POST	 updateTicketType	Non-Filtering Endpoint	Update an existing ticket type.
+POST	 updateUserTerm	Non-Filtering Endpoint	Update an existing user term.
+
+***Patterns*** 
+Count: 9
+POST	 /createExhibitorLinkRelation	Filtering Endpoint	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLink	Filtering Endpoint	Create an exhibitor link in an event
+POST	 /createFieldDefinition	Filtering Endpoint	Create a new field definition in an event, which is required for custom fields.
+POST	 /createProduct 	Filtering Endpoint	Create a new product in an event.
+POST	 /createPushNotification 	Filtering Endpoint	Create a push notification
+POST	 /createRole 	Filtering Endpoint	Create a role
+POST	 /deleteEventExhibitors/{eventId}	Filtering Endpoint	Deprecated, use updateExhibitor with withEvent.data set to null instead
+POST	 /deleteEventNotifications/{eventId} 	Filtering Endpoint	Delete a swapcard event notification
+POST	 /upsertEventNotification	Filtering Endpoint	Upsert a notification for an event

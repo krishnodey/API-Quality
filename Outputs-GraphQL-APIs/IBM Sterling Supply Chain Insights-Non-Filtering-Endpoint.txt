@@ -1,0 +1,31 @@
+***Anti-Pattern*** 
+Count: 11
+POST	 /application 	Non-Filtering Endpoint	Creates a new application and returns the location of the created resource.
+GET	 /application 	Non-Filtering Endpoint	Returns any existing application that match your query.
+POST	 /billofmaterial 	Non-Filtering Endpoint	Creates a new bill of material and returns the location of the created resource.
+POST	 /billofmaterial/bulk 	Non-Filtering Endpoint	Retrieve and modify bill of material records in bulk.
+GET	 /billofmaterial 	Non-Filtering Endpoint	Returns any existing bills of material that match your query.
+POST	 /carriers 	Non-Filtering Endpoint	Creates a new carrier and returns the location of the created resource.
+POST	 /carriers/bulk 	Non-Filtering Endpoint	Retrieve and modify carrier records in bulk.
+GET	 /carriers 	Non-Filtering Endpoint	Returns any existing carrier records that match your query.
+POST	 /customers 	Non-Filtering Endpoint	Creates a new customer and returns the location of the created resource.
+POST	 /customers/bulk 	Non-Filtering Endpoint	Retrieve and modify customer records in bulk.
+GET	 /customers 	Non-Filtering Endpoint	Returns any existing customers that match your query.
+
+***Patterns*** 
+Count: 15
+DELETE	 /application/{id} 	Filtering Endpoint	Deletes an existing application.
+GET	 /application/{id} 	Filtering Endpoint	Returns the application that matches your query.
+PUT	 /application/{id} 	Filtering Endpoint	Updates an existing application and returns a 200 message if the call is successful.
+DELETE	 /billofmaterial/{id} 	Filtering Endpoint	Deletes an existing bill of material.
+GET	 /billofmaterial/{id} 	Filtering Endpoint	Retrieves the details of a bill of material that matches the ID.
+PATCH	 /billofmaterial/{id} 	Filtering Endpoint	Updates an existing bill of material and returns a 200 message if the call is successful.
+PUT	 /billofmaterial/{id} 	Filtering Endpoint	Updates an existing bill of material and returns a 200 message if the call is successful.
+DELETE	 /carriers/{id} 	Filtering Endpoint	Deletes an existing carrier.
+GET	 /carriers/{id} 	Filtering Endpoint	Retrieves the details of a carrier that matches the ID.
+PATCH	 /carriers/{id} 	Filtering Endpoint	Updates an existing carrier and returns a 200 message if the call is successful.
+PUT	 /carriers/{id} 	Filtering Endpoint	Updates an existing carrier and returns a 200 message if the call is successful.
+DELETE	 /customers/{id} 	Filtering Endpoint	Deletes an existing customer.
+GET	 /customers/{id} 	Filtering Endpoint	Retrieves the details of a customer that matches the ID.
+PATCH	 /customers/{id} 	Filtering Endpoint	Updates parts of existing customer records and returns a 200 message if the call is successful.
+PUT	 /customers/{id} 	Filtering Endpoint	Updates an existing customer and returns a 200 message if the call is successful.

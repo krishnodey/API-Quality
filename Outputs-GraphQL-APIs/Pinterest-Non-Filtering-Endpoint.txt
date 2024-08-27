@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 4
+GET	 /v5//pins 	Non-Filtering Endpoint	View, create, update, or delete information about Pins.
+POST	 /v5/pins/{pin_id}/save	Non-Filtering Endpoint	Save a Pin on a board or board section owned by the "operation user_account".
+GET	 /v5/boards 	Non-Filtering Endpoint	View, create, update, or delete information about boards.
+GET	 /v5/media 	Non-Filtering Endpoint	List media uploads filtered by given parameters.
+
+***Patterns*** 
+Count: 16
+POST	 /v5//pins 	Filtering Endpoint	Create a Pin on a board or board section owned by the "operation user_account".
+GET	 /v5/pins/{pin_id} 	Filtering Endpoint	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
+DELETE	 /v5/pins/{pin_id} 	Filtering Endpoint	Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account.
+PATCH	 /v5/pins/{pin_id} 	Filtering Endpoint	Update a pin owned by the "operating user_account".
+GET	 /v5/pins/{pin_id}/analytics 	Filtering Endpoint	Get analytics for a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
+POST	 /v5/boards 	Filtering Endpoint	Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/boards/{board_id} 	Filtering Endpoint	Get a board owned by the operation user_account - or a group board that has been shared with this account.
+PATCH	 /v5/boards/{board_id} 	Filtering Endpoint	Update a board owned by the "operating user_account".
+DELETE	 /v5/boards/{board_id} 	Filtering Endpoint	Delete a board owned by the "operation user_account".
+GET	 /v5/boards/{board_id}/pins 	Filtering Endpoint	Get a list of the Pins on a board owned by the "operation user_account" - or on a group board that has been shared with this account.
+GET	 /v5/boards/{board_id}/sections 	Filtering Endpoint	Get a list of all board sections from a board owned by the "operation user_account" - or a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+PATCH	 /v5/boards/{board_id}/sections 	Filtering Endpoint	Update a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+DELETE	 /v5/boards/{board_id}/sections/{section_id} 	Filtering Endpoint	Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Filtering Endpoint	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+POST	 /v5/media 	Filtering Endpoint	Register your intent to upload media
+GET	 /v5/media/{media_id} 	Filtering Endpoint	Get details for a registered media upload, including its current status.

@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 3
+GET	 /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] 	Non-Filtering Endpoint	Check account domain before signup
+GET	 /signupcheck/email?productid=[value]&email=[value]&apikey=[value] 	Non-Filtering Endpoint	Check email validity before signup
+DELETE	 /accounts/[account_id]/users/[userid]?apikey=[value] 	Non-Filtering Endpoint	Remove user from account
+
+***Patterns*** 
+Count: 18
+GET	 /accounts/[account_id]/addons?apikey=[value] 	Filtering Endpoint	Get all account add-ons with validity info
+POST	 /accounts/[account_id]/addons 	Filtering Endpoint	Add addon to account
+GET	 /accounts?apikey=[value] 	Filtering Endpoint	Get accounts info for reseller
+GET	 /accounts/[account_id]?apikey=[value] 	Filtering Endpoint	Get account info
+POST	 /accounts 	Filtering Endpoint	Create new account
+GET	 /accounts/[account_id]/status?apikey=[value] 	Filtering Endpoint	Get account status
+PUT	 /accounts/[account_id]/status 	Filtering Endpoint	Change account status (suspend, unsuspend or terminate)
+PUT	 /accounts/[account_id]/variation 	Filtering Endpoint	Change account variation
+GET	 /variations?apikey=[value] 	Filtering Endpoint	Get all reseller variations
+GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	Filtering Endpoint	Get account attribute
+PUT	 /accounts/[account_id]/attributes/[attribute_name] 	Filtering Endpoint	Change account attribute
+GET	 /accounts/[account_id]/users?apikey=[value] 	Filtering Endpoint	Get users list from account
+GET	 /licenses/[license_code]/addons?apikey=[value] 	Filtering Endpoint	Get all license add-ons with validity info
+POST	 /licenses/[license_code]/addons 	Filtering Endpoint	Add addon to license
+PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Filtering Endpoint	Change addon validity on owned license
+GET	 /licenses?apikey=[value] 	Filtering Endpoint	Get all licenses info for reseller
+GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	Filtering Endpoint	Get license attribute
+PUT	 /licenses/[license_code]/attributes/[attribute_name] 	Filtering Endpoint	Change license attribute

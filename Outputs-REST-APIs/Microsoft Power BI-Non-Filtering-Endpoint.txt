@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 12
+GET	 /admin/dashboards 	Non-Filtering Endpoint	Returns a list of dashboards for the organization.
+GET	 /admin/dataflows/{dataflowId}/export 	Non-Filtering Endpoint	Exports the specified dataflow definition to a .json file.
+GET	 /admin/capacities 	Non-Filtering Endpoint	Returns a list of capacities for the organization.
+POST	 /admin/groups/{groupId}/users 	Non-Filtering Endpoint	Grants user permissions to the specified workspace.
+DELETE	 /admin/pipelines/{pipelineId}/users/{identifier} 	Non-Filtering Endpoint	Remove user permissions from a specified deployment pipeline.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Non-Filtering Endpoint	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+GET	 /admin/workspaces/modified 	Non-Filtering Endpoint	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
+POST	 /admin/workspaces/getInfo 	Non-Filtering Endpoint	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
+GET	 /availableFeatures 	Non-Filtering Endpoint	Returns a list of available features for the user
+GET	 /capacities 	Non-Filtering Endpoint	Returns a list of capacities the user has access to.
+POST	 /groups/{groupId}/AssignToCapacity 	Non-Filtering Endpoint	Assigns the specified workspace to the specified capacity.
+POST	 /groups/{groupId}/dashboards 	Non-Filtering Endpoint	Creates a new empty dashboard on the specified workspace.
+
+***Patterns*** 
+Count: 22
+POST	 /admin/tenantKeys 	Filtering Endpoint	Adds an encryption key for Power BI workspaces assigned to a capacity.
+GET	 /admin/apps?$top={$top} 	Filtering Endpoint	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
+GET	 /admin/apps/{appId}/users 	Filtering Endpoint	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
+POST	 /admin/capacities/AssignWorkspaces 	Filtering Endpoint	Assigns the provided workspaces to the specified premium capacity.
+POST	 /admin/capacities/UnassignWorkspaces 	Filtering Endpoint	Unassigns the provided workspaces from capacity.
+GET	 /admin/groups/{groupId}/dashboards 	Filtering Endpoint	Returns a list of dashboards from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/datasources 	Filtering Endpoint	Returns a list of datasources for the specified dataflow.
+GET	 /admin/groups/{groupId}/dataflows 	Filtering Endpoint	Returns a list of dataflows from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/users 	Filtering Endpoint	Returns a list of users that have access to the specified dataflow (Preview).
+GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Filtering Endpoint	Returns a list of upstream dataflows for the specified dataflow.
+GET	 /admin/groups/{groupId}/datasets 	Filtering Endpoint	Returns a list of datasets from the specified workspace.
+GET	 /admin/groups/{groupId}/datasets/upstreamDataflows 	Filtering Endpoint	Returns a list of upstream dataflows for datasets from the specified workspace.
+GET	 /admin/datasets/{datasetId}/datasources 	Filtering Endpoint	Returns a list of datasources for the specified dataset.
+GET	 /apps/{appId} 	Filtering Endpoint	Returns the specified installed app.
+GET	 /apps/{appId}/dashboards/{dashboardId} 	Filtering Endpoint	Returns the specified dashboard from the specified app.
+GET	 /apps/{appId}/reports/{reportId} 	Filtering Endpoint	Returns the specified report from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Filtering Endpoint	Returns the specified tile within the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Filtering Endpoint	Returns a list of tiles within the specified dashboard from the specified app.
+GET	 /capacities/{capacityId}/refreshables/{refreshableId} 	Filtering Endpoint	Returns the specified refreshable for the specified capacity the user has access to.
+GET	 /capacities/{capacityId}/Workloads/{workloadName} 	Filtering Endpoint	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+GET	 /capacities/{capacityId}/Workloads 	Filtering Endpoint	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
+POST	 /AssignToCapacity 	Filtering Endpoint	Assigns "My Workspace" to the specified capacity.

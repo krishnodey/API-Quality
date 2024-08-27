@@ -1,0 +1,22 @@
+***Anti-Pattern*** 
+Count: 2
+GET	 /users/{userId}/recommendations 	Non-Filtering Endpoint	recommendationsByUserId
+GET	 /recommendations?category={category}&ageGroup={ageGroup} 	Non-Filtering Endpoint	recommendationsBy
+
+***Patterns*** 
+Count: 15
+GET	 /movies/{id} 	Filtering Endpoint	findMovieById
+GET	 /rawMovies/{id} 	Filtering Endpoint	findRawMovieById
+GET	 /movies?name={name}&author={author} 	Filtering Endpoint	findMovie
+POST	 /movies 	Filtering Endpoint	registerMovie
+POST	 /titles 	Filtering Endpoint	registerTitle
+POST	 /binaries/byteBuf 	Filtering Endpoint	registerByteBufBinary
+POST	 /binaries/byteArray 	Filtering Endpoint	registerByteArrayBinary
+DELETE	 /movies/{id} 	Filtering Endpoint	deleteMovie
+POST	 /content/rawContentSource 	Filtering Endpoint	rawContentSource
+POST	 /content/byteBufContent 	Filtering Endpoint	byteBufContent
+POST	 /content/byteArrayContent 	Filtering Endpoint	byteArrayContent
+POST	 /content/stringContent 	Filtering Endpoint	stringContent
+POST	 /content/movieContent 	Filtering Endpoint	movieContent
+POST	 content/movieContentBroken 	Filtering Endpoint	movieContentBroken
+POST	 /users/{userId}/recommendations 	Filtering Endpoint	updateRecommendation
