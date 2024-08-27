@@ -1,0 +1,38 @@
+***Anti-Pattern*** 
+Count: 24
+POST 	/delegateAccessTokenCreate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/storefrontAccessTokenCreate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/storefrontAccessTokenDelete	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/AccessScope	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/DelegateAccessToken	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/StorefrontAccessToken	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/ErrorPosition	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/ParseError	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/ParseErrorRange	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/PolarisVizDataPoint	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/PolarisVizDataSeries	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/PolarisVizResponse	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/TableData	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/TableDataColumn	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/TableResponse	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/publicationCreate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/publicationDelete{id}	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/publicationUpdate	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/AppFeedback	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/AppInstallation	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/FailedRequirement	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/Link	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/Publication	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/ResourceFeedback	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 9
+GET 	/shopifyqlQuery	 Regular methods
+GET 	/query/{id}	 Regular methods
+GET 	/appByHandle	 Regular methods
+GET 	/appByKey	 Regular methods
+GET 	/appInstallation/{id}	 Regular methods
+GET 	/appInstallations	 Regular methods
+GET 	/currentAppInstallation	 Regular methods
+GET 	/publication/{id}	 Regular methods
+GET 	/publications	 Regular methods

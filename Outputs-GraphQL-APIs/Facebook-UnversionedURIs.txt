@@ -1,0 +1,71 @@
+***Anti-Pattern*** 
+Count: 14
+/{group_id}/albums 	 No Version Found
+/{album_id}/photos 	 No Version Found
+/app/app_link_hosts 	 No Version Found
+/{business_id}/owned_apps 	 No Version Found
+/{application_id}/accounts 	 No Version Found
+/{application_id}/app_indexing 	 No Version Found
+/{application_id}/codeless_event_mappings 	 No Version Found
+/{application_id}/page_activities 	 No Version Found
+/{business_id}/client_apps 	 No Version Found
+/{application_id}/mmp_auditing 	 No Version Found
+/act_{ad_account_id}/subscribed_apps 	 No Version Found
+/{page_id}/subscribed_apps. 	 No Version Found
+/act_{ad_account_id}/subscribed_apps 	 No Version Found
+/{application_id}/activities 	 No Version Found
+
+***Patterns*** 
+Count: 52
+/v18.0/{album-id} 	 Version Found
+/v18.0/{album-id}/comments 	 Version Found
+/v18.0/{album-id}/likes 	 Version Found
+/v18.0/{album-id}/photos 	 Version Found
+/v18.0/{album-id}/picture 	 Version Found
+/v18.0/{app-link-host-id} 	 Version Found
+/v18.0/{app-link-host-id} 	 Version Found
+/v18.0/{app-link-host-id} 	 Version Found
+/v18.0/{application-id} 	 Version Found
+/v18.0/{application-id}/accounts 	 Version Found
+/v18.0/{application-id}/ad_placement_groups 	 Version Found
+/v18.0/{application-id}/adnetworkanalytics_results 	 Version Found
+/v18.0/{application-id}/aem_attribution 	 Version Found
+/v18.0/{application-id}/aem_conversion_configs 	 Version Found
+/v18.0/{application-id}/aem_conversion_filter 	 Version Found
+/v19.0/{application-id}/agencies 	 Version Found
+/v19.0/{application-id}/app_event_types 	 Version Found
+/v19.0/{application-id}/app_installed_groups 	 Version Found
+/v19.0/{application-id}/appassets 	 Version Found
+/v19.0/{application-id}/button_auto_detection_device_selection 	 Version Found
+/v19.0/{application-id}/cloudbridge_settings 	 Version Found
+/v19.0/{application-id}/da_checks 	 Version Found
+/v19.0/{application-id}/events 	 Version Found
+/v19.0/{application-id}/ios_skadnetwork_conversion_config 	 Version Found
+/v19.0/{application-id}/mobile_sdk_gk 	 Version Found
+/v19.0/{application-id}/monetized_digital_store_objects 	 Version Found
+/v19.0/{application-id}/permissions 	 Version Found
+/v19.0/{application-id}/products 	 Version Found
+/v19.0/{application-id}/purchases 	 Version Found
+/v19.0/{application-id}/subscribed_domains 	 Version Found
+/v19.0/{application-id}/subscribed_domains_phishing 	 Version Found
+/v19.0/{application-id}/ad_placement_groups 	 Version Found
+/v19.0/{application-id}/adnetworkanalytics_results 	 Version Found
+/v19.0/{application-id}/model_asset 	 Version Found
+/v19.0/{application-id}/monetized_digital_store_objects 	 Version Found
+/v19.0/{application-id}/permissions 	 Version Found
+/v19.0/{app-id}/picture 	 Version Found
+/v19.0/{application-id}/products 	 Version Found
+/v19.0/{application-id}/purchases 	 Version Found
+/v19.0/{app-id}/roles 	 Version Found
+/v19.0/{app-id}/scores 	 Version Found
+/v19.0/{app-id}/scores 	 Version Found
+/v19.0/{application-id}/subscribed_domains 	 Version Found
+/v19.0/{application-id}/subscribed_domains_phishing 	 Version Found
+/v19.0/{app-id}/subscriptions 	 Version Found
+/v19.0/{app-id}/subscriptions 	 Version Found
+/v19.0/{app-id}/translations 	 Version Found
+/v19.0/branded_content_search 	 Version Found
+/v19.0/{cpas-advertiser-partnership-recommendation-id} 	 Version Found
+/v19.0/{canvas-id} 	 Version Found
+/v19.0/{canvas-id}/preview 	 Version Found
+/v19.0/{canvas-id}/previews 	 Version Found

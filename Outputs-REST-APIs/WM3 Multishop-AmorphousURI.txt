@@ -46,14 +46,14 @@ Count: 43
 
 ***Patterns*** 
 Count: 11
-/shop/admin/products	Tidy End-point	Tidy Endpoint
-/shop/admin/products/:id	Tidy End-point	Tidy Endpoint
-/shop/admin/products	Tidy End-point	Tidy Endpoint
-/shop/admin/products	Tidy End-point	Tidy Endpoint
-/shop/admin/products/:idUpdate Product	Tidy End-point	Tidy Endpoint
-/shop/admin/properties	Tidy End-point	Tidy Endpoint
-/shop/admin/properties/:id	Tidy End-point	Tidy Endpoint
-/shop/admin/properties/:id	Tidy End-point	Tidy Endpoint
-/shop/admin/variants	Tidy End-point	Tidy Endpoint
-/shop/admin/variants/:id	Tidy End-point	Tidy Endpoint
-/shop/admin/variants/:id	Tidy End-point	Tidy Endpoint
+/shop/admin/products	Tidy End-point	
+/shop/admin/products/:id	Tidy End-point	
+/shop/admin/products	Tidy End-point	
+/shop/admin/products	Tidy End-point	
+/shop/admin/products/:idUpdate Product	Tidy End-point	
+/shop/admin/properties	Tidy End-point	
+/shop/admin/properties/:id	Tidy End-point	
+/shop/admin/properties/:id	Tidy End-point	
+/shop/admin/variants	Tidy End-point	
+/shop/admin/variants/:id	Tidy End-point	
+/shop/admin/variants/:id	Tidy End-point	

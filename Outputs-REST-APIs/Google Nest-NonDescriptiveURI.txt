@@ -1,0 +1,40 @@
+***Anti-Pattern*** 
+Count: 1
+/devices/thermostats/device_id/fan_timer_timeout	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 34
+/devices/thermostats/device_id/device_id	 Self-descriptive End-point
+/devices/thermostats/device_id/locale	 Self-descriptive End-point
+/devices/thermostats/device_id/software_version	 Self-descriptive End-point
+/devices/thermostats/device_id/structure_id	 Self-descriptive End-point
+/devices/thermostats/device_id/name	 Self-descriptive End-point
+/devices/thermostats/device_id/name_long	 Self-descriptive End-point
+/devices/thermostats/device_id/last_connection	 Self-descriptive End-point
+/devices/thermostats/device_id/is_online	 Self-descriptive End-point
+/devices/thermostats/device_id/can_cool	 Self-descriptive End-point
+/devices/thermostats/device_id/can_heat	 Self-descriptive End-point
+/devices/thermostats/device_id/is_using_emergency_heat	 Self-descriptive End-point
+/devices/thermostats/device_id/has_fan	 Self-descriptive End-point
+/devices/thermostats/device_id/fan_timer_active	 Self-descriptive End-point
+/devices/thermostats/device_id/has_leaf	 Self-descriptive End-point
+/devices/thermostats/device_id/temperature_scale	 Self-descriptive End-point
+/devices/thermostats/device_id/target_temperature_f	 Self-descriptive End-point
+/devices/thermostats/device_id/eco_temperature_high_f	 Self-descriptive End-point
+/devices/thermostats/device_id/eco_temperature_high_c	 Self-descriptive End-point
+/devices/thermostats/device_id/hvac_state	 Self-descriptive End-point
+/devices/thermostats/device_id/is_locked	 Self-descriptive End-point
+/devices/thermostats/device_id/sunlight_correction_enabled	 Self-descriptive End-point
+/devices/thermostats/device_id/where_name	 Self-descriptive End-point
+/devices/thermostats/device_id/time_to_target_training	 Self-descriptive End-point
+/devices/smoke_co_alarms/device_id/name	 Self-descriptive End-point
+/devices/smoke_co_alarms/device_id/ui_color_state	 Self-descriptive End-point
+/devices/smoke_co_alarms/device_id/where_name	 Self-descriptive End-point
+/devices/cameras/device_id/where_id	 Self-descriptive End-point
+/devices/cameras/device_id/where_name	 Self-descriptive End-point
+/devices/cameras/device_id/is_public_share_enabled	 Self-descriptive End-point
+/devices/cameras/device_id/activity_zones	 Self-descriptive End-point
+/devices/cameras/device_id/snapshot_url	 Self-descriptive End-point
+devices/cameras/device_id/last_event	 Self-descriptive End-point
+/devices/cameras/device_id/last_event/has_sound	 Self-descriptive End-point
+/devices/cameras/device_id/last_event/web_url	 Self-descriptive End-point

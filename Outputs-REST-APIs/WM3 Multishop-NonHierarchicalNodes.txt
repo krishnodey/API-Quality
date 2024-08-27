@@ -1,0 +1,59 @@
+***Anti-Pattern*** 
+Count: 7
+/shop/admin/properties/:property_id/property_values	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/properties/:property_id/property_values/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/properties/:property_id/property_values	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/properties/:property_id/property_values/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between property and values. 0 hierarchical relations were detected out of 53
+/shop/admin/tax_rates	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 53
+/shop/admin/tax_rates/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 53
+/shop/admin/tax_rates/:id	Non-hierarchical Nodes	Reversed hierarchy of type True detected between tax and rates. 0 hierarchical relations were detected out of 53
+
+***Patterns*** 
+Count: 47
+/shop/admin/prices?customer_id=:customer_id	Hierarchical Nodes	
+/shop/admin/customers/:customer_id/prices	Hierarchical Nodes	
+/shop/admin/customers/:customer_id/prices/:variant_id	Hierarchical Nodes	
+/shop/admin/price_lists	Hierarchical Nodes	
+/shop/admin/price_lists/:id	Hierarchical Nodes	
+/shop/admin/price_lists	Hierarchical Nodes	
+/shop/admin/price_lists/:id	Hierarchical Nodes	
+/shop/admin/products	Hierarchical Nodes	
+/shop/admin/products/:id	Hierarchical Nodes	
+/shop/admin/products	Hierarchical Nodes	
+/shop/admin/products	Hierarchical Nodes	
+/shop/admin/products/:idUpdate Product	Hierarchical Nodes	
+/shop/admin/properties	Hierarchical Nodes	
+/shop/admin/properties/:id	Hierarchical Nodes	
+/shop/admin/properties/:id	Hierarchical Nodes	
+/shop/admin/shipping_categories	Hierarchical Nodes	
+/shop/admin/shipping_categories/:id	Hierarchical Nodes	
+/shop/admin/shipping_categories	Hierarchical Nodes	
+/shop/admin/shipping_categories/:id	Hierarchical Nodes	
+/shop/admin/shipping_methods	Hierarchical Nodes	
+/shop/admin/shipping_methods/:id	Hierarchical Nodes	
+/shop/admin/prices/:price_id/staggered_prices	Hierarchical Nodes	
+/shop/admin/prices/:price_id/staggered_prices/:id	Hierarchical Nodes	
+/shop/admin/prices/:price_id/staggered_prices	Hierarchical Nodes	
+/shop/admin/prices/:price_id/staggered_prices/:id	Hierarchical Nodes	
+/shop/admin/prices/:price_id/staggered_prices/:id	Hierarchical Nodes	
+/shop/admin/stock_items	Hierarchical Nodes	
+/shop/admin/stock_items/:id	Hierarchical Nodes	
+/shop/admin/variants/:variant_id/stock_item	Hierarchical Nodes	
+/shop/admin/stock_items/:id	Hierarchical Nodes	
+/shop/admin/variants/:variant_id/stock_item	Hierarchical Nodes	
+/shop/admin/stock_items/:id/movement	Hierarchical Nodes	
+/shop/admin/variants/:variant_id/stock_item/movement	Hierarchical Nodes	
+/shop/admin/tax_categories	Hierarchical Nodes	
+/shop/admin/tax_categories/:id	Hierarchical Nodes	
+/shop/admin/tax_zones	Hierarchical Nodes	
+/shop/admin/tax_zones/:id	Hierarchical Nodes	
+/shop/admin/tax_zones	Hierarchical Nodes	
+/shop/admin/tax_zones/:id	Hierarchical Nodes	
+/shop/admin/variants	Hierarchical Nodes	
+/shop/admin/products/:product_id/variants	Hierarchical Nodes	
+/shop/admin/variants/:id	Hierarchical Nodes	
+/shop/admin/products/:product_id/variants/:id	Hierarchical Nodes	
+/shop/admin/products/:product_id/variants	Hierarchical Nodes	
+/shop/admin/variants/:id	Hierarchical Nodes	
+/shop/admin/products/:product_id/variants/:id	Hierarchical Nodes	
+/shop/admin/variants/update_stock	Hierarchical Nodes	

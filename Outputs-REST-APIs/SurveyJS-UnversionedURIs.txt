@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 24
+/setResultSummaryState?accessKey={accessKey} 	 No Version Found
+/getResultSummaryState/{id}?accessKey={accessKey} 	 No Version Found
+/getPublicResultSummaryState/{id} 	 No Version Found
+/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	 No Version Found
+/getSurveyPublicResults/{id}?from={from}&till={till} 	 No Version Found
+/generateAccessKey?accessKey={accessKey} 	 No Version Found
+/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	 No Version Found
+/getActive?accessKey={accessKey}&ownerId={ownerId} 	 No Version Found
+/getArchive?accessKey={accessKey}&ownerId={ownerId} 	 No Version Found
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	 No Version Found
+/archive/{id}?accessKey={accessKey} 	 No Version Found
+/restore/{id}?accessKey={accessKey} 	 No Version Found
+/delete/{id}?accessKey={accessKey} 	 No Version Found
+/changeName/{id}?accessKey={accessKey}&name={name} 	 No Version Found
+/changeJson?accessKey={accessKey} 	 No Version Found
+/publish/{id}?accessKey={accessKey} 	 No Version Found
+/unPublish/{id}?accessKey={accessKey} 	 No Version Found
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 No Version Found
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	 No Version Found
+/getIsResultPublic/{id}?accessKey={accessKey} 	 No Version Found
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	 No Version Found
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	 No Version Found
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	 No Version Found
+/deleteAllResults/{id}?accessKey={accessKey} 	 No Version Found
+
+***Patterns*** 
+Count: 0

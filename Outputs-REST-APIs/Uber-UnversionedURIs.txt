@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 14
+/oauth/authorize 	 No Version Found
+/oauth/token 	 No Version Found
+/history 	 No Version Found
+/payment-methods 	 No Version Found
+/products 	 No Version Found
+/products/{product_id} 	 No Version Found
+/estimates/price 	 No Version Found
+/estimates/time 	 No Version Found
+/requests/estimate 	 No Version Found
+/requests/current 	 No Version Found
+/requests/current 	 No Version Found
+/requests/current 	 No Version Found
+/requests/{request_id}/receipt 	 No Version Found
+/requests/{request_id}/map 	 No Version Found
+
+***Patterns*** 
+Count: 0

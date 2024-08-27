@@ -1,0 +1,76 @@
+***Anti-Pattern*** 
+Count: 8
+/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/{address_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and set. 0 hierarchical relations were detected out of 70
+/customers/{customer_id}/addresses/{address_id}/default.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between addresses and address. 0 hierarchical relations were detected out of 70
+/events/{event_id}.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between event and identification. 0 hierarchical relations were detected out of 70
+/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	Non-hierarchical Nodes	Reversed hierarchy of type True detected between events and count. 0 hierarchical relations were detected out of 70
+/inventory_levels/set.json	Non-hierarchical Nodes	Reversed hierarchy of type True detected between levels and set. 0 hierarchical relations were detected out of 70
+
+***Patterns*** 
+Count: 63
+/admin/oauth/access_scopes.json	Hierarchical Nodes	
+/storefront_access_tokens.json	Hierarchical Nodes	
+/storefront_access_tokens/{storefront_access_token_id}.json	Hierarchical Nodes	
+/storefront_access_tokens.json	Hierarchical Nodes	
+/reports.json	Hierarchical Nodes	
+/reports/{report_id}.json	Hierarchical Nodes	
+/reports.json	Hierarchical Nodes	
+/reports/{report_id}.json	Hierarchical Nodes	
+/reports/{report_id}.json	Hierarchical Nodes	
+/application_charges.json	Hierarchical Nodes	
+/application_charges/{application_charge_id}.json	Hierarchical Nodes	
+/application_charges.json?since_id=556467234	Hierarchical Nodes	
+/application_credits.json	Hierarchical Nodes	
+/application_credits/{application_credit_id}.json	Hierarchical Nodes	
+/application_credits.json	Hierarchical Nodes	
+/recurring_application_charges.json	Hierarchical Nodes	
+/recurring_application_charges/{recurring_application_charge_id}.json	Hierarchical Nodes	
+/recurring_application_charges.json	Hierarchical Nodes	
+/recurring_application_charges/{recurring_application_charge_id}.json	Hierarchical Nodes	
+/recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	Hierarchical Nodes	
+/customers.json	Hierarchical Nodes	
+/customers/search.json?query=Bob country:United States	Hierarchical Nodes	
+/customers/{customer_id}.json	Hierarchical Nodes	
+/customers.json	Hierarchical Nodes	
+/customers/{customer_id}.json	Hierarchical Nodes	
+/customers/{customer_id}/account_activation_url.json	Hierarchical Nodes	
+/customers/{customer_id}/send_invite.json	Hierarchical Nodes	
+/customers/{customer_id}.json	Hierarchical Nodes	
+/customers/count.json	Hierarchical Nodes	
+/customers/{customer_id}/orders.json	Hierarchical Nodes	
+/customers/{customer_id}/addresses.json	Hierarchical Nodes	
+/customers/{customer_id}/addresses.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/discount_codes.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/discount_codes.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	Hierarchical Nodes	
+/discount_codes/lookup.json?code=SUMMERSALE10OFF	Hierarchical Nodes	
+/discount_codes/count.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/batch.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/batch/{batch_id}.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json	Hierarchical Nodes	
+/price_rules.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}.json	Hierarchical Nodes	
+/price_rules.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}.json	Hierarchical Nodes	
+/price_rules/count.json	Hierarchical Nodes	
+/price_rules/{price_rule_id}.json	Hierarchical Nodes	
+/events.json	Hierarchical Nodes	
+/webhooks.json	Hierarchical Nodes	
+/webhooks/count.json	Hierarchical Nodes	
+/webhooks/{webhook_id}.json	Hierarchical Nodes	
+/webhooks.json	Hierarchical Nodes	
+/webhooks/{webhook_id}.json	Hierarchical Nodes	
+/webhooks/{webhook_id}.json	Hierarchical Nodes	
+/inventory_items.json?ids=808950810,39072856,457924702	Hierarchical Nodes	
+/inventory_items/{inventory_item_id}.json	Hierarchical Nodes	
+/inventory_items/{inventory_item_id}.json	Hierarchical Nodes	
+/inventory_levels.json	Hierarchical Nodes	
+/inventory_levels/adjust.json	Hierarchical Nodes	
+/inventory_levels.json?inventory_item_id=808950810&location_id=905684977	Hierarchical Nodes	
+/inventory_levels/connect.json	Hierarchical Nodes	
+/locations.json	Hierarchical Nodes	

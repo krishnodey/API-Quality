@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 2
+POST	/getSingleItem	Pluralized Nodes	Singular last node with POST method
+POST	/searchContent	Pluralized Nodes	Singular last node with POST method
+
+***Patterns*** 
+Count: 3
+POST	/getEditions	Singularized Nodes	Pluralized last node with POST method
+POST	/getSections	Singularized Nodes	Pluralized last node with POST method
+POST	/getTags	Singularized Nodes	Pluralized last node with POST method

@@ -1,0 +1,48 @@
+***Anti-Pattern*** 
+Count: 4
+POST 	/applications/{listingVersionId}/banner	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/applications/{listingVersionId}/icon	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/applications/{listingVersionId}/version	Pluralized Nodes	 [Singular last node with POST method.] 
+PUT 	/applications/{listingVersionId}/recommendedservices	Pluralized Nodes	 [Pluralized last node with PUT|DELETE method.] 
+
+***Patterns*** 
+Count: 39
+GET 	/installrequests	 Regular methods
+DELETE 	/applications/{listingVersionId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/applications/{listingVersionId}/banner	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/applications/{listingVersionId}/comments/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/applications/{listingVersionId}/packages/{packageVersionId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/applications/{listingVersionId}/relateddocs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/applications/{listingVersionId}/screenshots/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/applications/{listingVersionId}/supportingdocs/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/applications	 Regular methods
+GET 	/applications/{listingVersionId}	 Regular methods
+GET 	/applications/{listingVersionId}/availableservices	 Regular methods
+GET 	/applications/{listingVersionId}/comments	 Regular methods
+GET 	/applications/{listingVersionId}/packages	 Regular methods
+GET 	/applications/{listingVersionId}/packages/{packageVersionId}	 Regular methods
+GET 	/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	 Regular methods
+GET 	/applications/{listingVersionId}/recommendedservices	 Regular methods
+GET 	/appstore/publisher/v2/applications/{listingVersionId}/packages	 Regular methods
+GET 	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Regular methods
+GET 	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	 Regular methods
+PATCH 	/applications/{listingVersionId}	 Regular methods
+PATCH 	/applications/{listingVersionId}/banner	 Regular methods
+PATCH 	/applications/{listingVersionId}/packages/{packageVersionId}	 Regular methods
+PATCH 	/applications/{listingVersionId}/relateddocs/{id}	 Regular methods
+PATCH 	/applications/{listingVersionId}/screenshots	 Regular methods
+PATCH 	/applications/{listingVersionId}/supportingdocs/{id}	 Regular methods
+PATCH 	/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	 Regular methods
+POST 	/applications	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/applications/{listingVersionId}/comments	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/applications/{listingVersionId}/packages	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/applications/{listingVersionId}/relateddocs	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/applications/{listingVersionId}/screenshots	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/applications/{listingVersionId}/supportingdocs	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/applications/{listingVersionId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/applications/{listingVersionId}/banner	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/applications/{listingVersionId}/comments/{id}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/applications/{listingVersionId}/icon	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/applications/{listingVersionId}/packages/{packageVersionId}	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 

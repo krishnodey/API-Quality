@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 1
+/changeJson?accessKey={accessKey}	 Non-descriptive End-point
+
+***Patterns*** 
+Count: 23
+/setResultSummaryState?accessKey={accessKey}	 Self-descriptive End-point
+/getResultSummaryState/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/getPublicResultSummaryState/{id}	 Self-descriptive End-point
+/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	 Self-descriptive End-point
+/getSurveyPublicResults/{id}?from={from}&till={till}	 Self-descriptive End-point
+/generateAccessKey?accessKey={accessKey}	 Self-descriptive End-point
+/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	 Self-descriptive End-point
+/getActive?accessKey={accessKey}&ownerId={ownerId}	 Self-descriptive End-point
+/getArchive?accessKey={accessKey}&ownerId={ownerId}	 Self-descriptive End-point
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	 Self-descriptive End-point
+/archive/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/restore/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/delete/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/changeName/{id}?accessKey={accessKey}&name={name}	 Self-descriptive End-point
+/publish/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/unPublish/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	 Self-descriptive End-point
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	 Self-descriptive End-point
+/getIsResultPublic/{id}?accessKey={accessKey}	 Self-descriptive End-point
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	 Self-descriptive End-point
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	 Self-descriptive End-point
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	 Self-descriptive End-point
+/deleteAllResults/{id}?accessKey={accessKey}	 Self-descriptive End-point

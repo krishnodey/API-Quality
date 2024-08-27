@@ -1,0 +1,261 @@
+***Anti-Pattern*** 
+Count: 127
+/search	CRUDy End-point	 [search found] 
+/cancelEnterpriseAdminInvitation	CRUDy End-point	 [cancel found] 
+/cancelSponsorship	CRUDy End-point	 [cancel found] 
+/copyProjectV2	CRUDy End-point	 [copy found] 
+/createAttributionInvitation	CRUDy End-point	 [create found] 
+/createBranchProtectionRule	CRUDy End-point	 [create found] 
+/createCheckRun	CRUDy End-point	 [create found] 
+/createCheckSuite	CRUDy End-point	 [create found] 
+/createCommitOnBranch	CRUDy End-point	 [create found] 
+/createDeployment	CRUDy End-point	 [create found] 
+/createDeploymentStatus	CRUDy End-point	 [create found] 
+/createDiscussion	CRUDy End-point	 [create found] 
+/createEnterpriseOrganization	CRUDy End-point	 [create found] 
+/createEnvironment	CRUDy End-point	 [create found] 
+/createIpAllowListEntry	CRUDy End-point	 [create found] 
+/createIssue	CRUDy End-point	 [create found] 
+/createLabel	CRUDy End-point	 [create found] 
+/createLinkedBranch	CRUDy End-point	 [create found] 
+/createMigrationSource	CRUDy End-point	 [create found] 
+/createProject	CRUDy End-point	 [create found] 
+/createProjectV2	CRUDy End-point	 [create found] 
+/createProjectV2Field	CRUDy End-point	 [create found] 
+/createPullRequest	CRUDy End-point	 [create found] 
+/createRef	CRUDy End-point	 [create found] 
+/createRepository	CRUDy End-point	 [create found] 
+/createRepositoryRuleset	CRUDy End-point	 [create found] 
+/createSponsorsListing	CRUDy End-point	 [create found] 
+/createSponsorsTier	CRUDy End-point	 [create found] 
+/createSponsorship	CRUDy End-point	 [create found] 
+/createSponsorships	CRUDy End-point	 [create found] 
+/createTeamDiscussion	CRUDy End-point	 [create found] 
+/createTeamDiscussionComment	CRUDy End-point	 [create found] 
+/deleteBranchProtectionRule	CRUDy End-point	 [delete found] 
+/deleteDeployment	CRUDy End-point	 [delete found] 
+/deleteDiscussion	CRUDy End-point	 [delete found] 
+/deleteDiscussionComment	CRUDy End-point	 [delete found] 
+/deleteEnvironment	CRUDy End-point	 [delete found] 
+/deleteIpAllowListEntry	CRUDy End-point	 [delete found] 
+/deleteIssue	CRUDy End-point	 [delete found] 
+/deleteIssueComment	CRUDy End-point	 [delete found] 
+/deleteLabel	CRUDy End-point	 [delete found] 
+/deleteLinkedBranch	CRUDy End-point	 [delete found] 
+/deletePackageVersion	CRUDy End-point	 [delete found] 
+/deleteProject	CRUDy End-point	 [delete found] 
+/deleteProjectCard	CRUDy End-point	 [delete found] 
+/deleteProjectColumn	CRUDy End-point	 [delete found] 
+/deleteProjectV2	CRUDy End-point	 [delete found] 
+/deleteProjectV2Field	CRUDy End-point	 [delete found] 
+/deleteProjectV2Item	CRUDy End-point	 [delete found] 
+/deleteProjectV2Workflow	CRUDy End-point	 [delete found] 
+/deletePullRequestReview	CRUDy End-point	 [delete found] 
+/deletePullRequestReviewComment	CRUDy End-point	 [delete found] 
+/deleteRef	CRUDy End-point	 [delete found] 
+/deleteRepositoryRuleset	CRUDy End-point	 [delete found] 
+/deleteTeamDiscussion	CRUDy End-point	 [delete found] 
+/deleteTeamDiscussionComment	CRUDy End-point	 [delete found] 
+/deleteVerifiableDomain	CRUDy End-point	 [delete found] 
+/moveProjectCard	CRUDy End-point	 [move found] 
+/moveProjectColumn	CRUDy End-point	 [move found] 
+/removeAssigneesFromAssignable	CRUDy End-point	 [remove found] 
+/removeEnterpriseAdmin	CRUDy End-point	 [remove found] 
+/removeEnterpriseIdentityProvider	CRUDy End-point	 [remove found] 
+/removeEnterpriseMember	CRUDy End-point	 [remove found] 
+/removeEnterpriseOrganization	CRUDy End-point	 [remove found] 
+/removeEnterpriseSupportEntitlement	CRUDy End-point	 [remove found] 
+/removeLabelsFromLabelable	CRUDy End-point	 [remove found] 
+/removeOutsideCollaborator	CRUDy End-point	 [remove found] 
+/removeReaction	CRUDy End-point	 [remove found] 
+/removeStar	CRUDy End-point	 [remove found] 
+/removeUpvote	CRUDy End-point	 [remove found] 
+/updateBranchProtectionRule	CRUDy End-point	 [update found] 
+/updateCheckRun	CRUDy End-point	 [update found] 
+/updateCheckSuitePreferences	CRUDy End-point	 [update found] 
+/updateDiscussion	CRUDy End-point	 [update found] 
+/updateDiscussionComment	CRUDy End-point	 [update found] 
+/updateEnterpriseAdministratorRole	CRUDy End-point	 [update found] 
+/updateEnterpriseAllowPrivateRepositoryForkingSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseDefaultRepositoryPermissionSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanCreateRepositoriesSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanDeleteIssuesSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanDeleteRepositoriesSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanInviteCollaboratorsSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanMakePurchasesSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanUpdateProtectedBranchesSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseMembersCanViewDependencyInsightsSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseOrganizationProjectsSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseOwnerOrganizationRole	CRUDy End-point	 [update found] 
+/updateEnterpriseProfile	CRUDy End-point	 [update found] 
+/updateEnterpriseRepositoryProjectsSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseTeamDiscussionsSetting	CRUDy End-point	 [update found] 
+/updateEnterpriseTwoFactorAuthenticationRequiredSetting	CRUDy End-point	 [update found] 
+/updateEnvironment	CRUDy End-point	 [update found] 
+/updateIpAllowListEnabledSetting	CRUDy End-point	 [update found] 
+/updateIpAllowListEntry	CRUDy End-point	 [update found] 
+/updateIpAllowListForInstalledAppsEnabledSetting	CRUDy End-point	 [update found] 
+/updateIssue	CRUDy End-point	 [update found] 
+/updateIssueComment	CRUDy End-point	 [update found] 
+/updateLabel	CRUDy End-point	 [update found] 
+/updateNotificationRestrictionSetting	CRUDy End-point	 [update found] 
+/updateOrganizationAllowPrivateRepositoryForkingSetting	CRUDy End-point	 [update found] 
+/updateOrganizationWebCommitSignoffSetting	CRUDy End-point	 [update found] 
+/updatePatreonSponsorability	CRUDy End-point	 [update found] 
+/updateProject	CRUDy End-point	 [update found] 
+/updateProjectCard	CRUDy End-point	 [update found] 
+/updateProjectColumn	CRUDy End-point	 [update found] 
+/updateProjectV2	CRUDy End-point	 [update found] 
+/updateProjectV2Collaborators	CRUDy End-point	 [update found] 
+/updateProjectV2DraftIssue	CRUDy End-point	 [update found] 
+/updateProjectV2ItemFieldValue	CRUDy End-point	 [update found] 
+/updateProjectV2ItemPosition	CRUDy End-point	 [update found] 
+/updatePullRequest	CRUDy End-point	 [update found] 
+/updatePullRequestBranch	CRUDy End-point	 [update found] 
+/updatePullRequestReview	CRUDy End-point	 [update found] 
+/updatePullRequestReviewComment	CRUDy End-point	 [update found] 
+/updateRef	CRUDy End-point	 [update found] 
+/updateRefs	CRUDy End-point	 [update found] 
+/updateRepository	CRUDy End-point	 [update found] 
+/updateRepositoryRuleset	CRUDy End-point	 [update found] 
+/updateRepositoryWebCommitSignoffSetting	CRUDy End-point	 [update found] 
+/updateSponsorshipPreferences	CRUDy End-point	 [update found] 
+/updateSubscription	CRUDy End-point	 [update found] 
+/updateTeamDiscussion	CRUDy End-point	 [update found] 
+/updateTeamDiscussionComment	CRUDy End-point	 [update found] 
+/updateTeamReviewAssignment	CRUDy End-point	 [update found] 
+/updateTeamsRepository	CRUDy End-point	 [update found] 
+/updateTopics	CRUDy End-point	 [update found] 
+
+***Patterns*** 
+Count: 129
+/codeOfConduct	Verbless End-point	
+/codesOfConduct	Verbless End-point	
+/enterprise	Verbless End-point	
+/enterpriseAdministratorInvitation	Verbless End-point	
+/enterpriseAdministratorInvitationByToken	Verbless End-point	
+/license	Verbless End-point	
+/licenses	Verbless End-point	
+/marketplaceCategories	Verbless End-point	
+/marketplaceCategory	Verbless End-point	
+/marketplaceListing	Verbless End-point	
+/marketplaceListings	Verbless End-point	
+/meta	Verbless End-point	
+/node	Verbless End-point	
+/nodes	Verbless End-point	
+/organization	Verbless End-point	
+/rateLimit	Verbless End-point	
+/relay	Verbless End-point	
+/repository	Verbless End-point	
+/repositoryOwner	Verbless End-point	
+/resource	Verbless End-point	
+/securityAdvisories	Verbless End-point	
+/securityAdvisory	Verbless End-point	
+/securityVulnerabilities	Verbless End-point	
+/sponsorables	Verbless End-point	
+/topic	Verbless End-point	
+/user	Verbless End-point	
+/viewer	Verbless End-point	
+/abortQueuedMigrations	Verbless End-point	
+/abortRepositoryMigration	Verbless End-point	
+/acceptEnterpriseAdministratorInvitation	Verbless End-point	
+/acceptTopicSuggestion	Verbless End-point	
+/addAssigneesToAssignable	Verbless End-point	
+/addComment	Verbless End-point	
+/addDiscussionComment	Verbless End-point	
+/addDiscussionPollVote	Verbless End-point	
+/addEnterpriseOrganizationMember	Verbless End-point	
+/addEnterpriseSupportEntitlement	Verbless End-point	
+/addLabelsToLabelable	Verbless End-point	
+/addProjectCard	Verbless End-point	
+/addProjectColumn	Verbless End-point	
+/addProjectV2DraftIssue	Verbless End-point	
+/addProjectV2ItemById	Verbless End-point	
+/addPullRequestReview	Verbless End-point	
+/addPullRequestReviewComment	Verbless End-point	
+/addPullRequestReviewThread	Verbless End-point	
+/addPullRequestReviewThreadReply	Verbless End-point	
+/addReaction	Verbless End-point	
+/addStar	Verbless End-point	
+/addUpvote	Verbless End-point	
+/addVerifiableDomain	Verbless End-point	
+/approveDeployments	Verbless End-point	
+/approveVerifiableDomain	Verbless End-point	
+/archiveProjectV2Item	Verbless End-point	
+/archiveRepository	Verbless End-point	
+/changeUserStatus	Verbless End-point	
+/clearLabelsFromLabelable	Verbless End-point	
+/clearProjectV2ItemFieldValue	Verbless End-point	
+/cloneProject	Verbless End-point	
+/cloneTemplateRepository	Verbless End-point	
+/closeDiscussion	Verbless End-point	
+/closeIssue	Verbless End-point	
+/closePullRequest	Verbless End-point	
+/convertProjectCardNoteToIssue	Verbless End-point	
+/convertPullRequestToDraft	Verbless End-point	
+/declineTopicSuggestion	Verbless End-point	
+/dequeuePullRequest	Verbless End-point	
+/disablePullRequestAutoMerge	Verbless End-point	
+/dismissPullRequestReview	Verbless End-point	
+/dismissRepositoryVulnerabilityAlert	Verbless End-point	
+/enablePullRequestAutoMerge	Verbless End-point	
+/enqueuePullRequest	Verbless End-point	
+/followOrganization	Verbless End-point	
+/followUser	Verbless End-point	
+/grantEnterpriseOrganizationsMigratorRole	Verbless End-point	
+/grantMigratorRole	Verbless End-point	
+/importProject	Verbless End-point	
+/inviteEnterpriseAdmin	Verbless End-point	
+/linkProjectV2ToRepository	Verbless End-point	
+/linkProjectV2ToTeam	Verbless End-point	
+/linkRepositoryToProject	Verbless End-point	
+/lockLockable	Verbless End-point	
+/markDiscussionCommentAsAnswer	Verbless End-point	
+/markFileAsViewed	Verbless End-point	
+/markProjectV2AsTemplate	Verbless End-point	
+/markPullRequestReadyForReview	Verbless End-point	
+/mergeBranch	Verbless End-point	
+/mergePullRequest	Verbless End-point	
+/minimizeComment	Verbless End-point	
+/pinIssue	Verbless End-point	
+/publishSponsorsTier	Verbless End-point	
+/regenerateEnterpriseIdentityProviderRecoveryCodes	Verbless End-point	
+/regenerateVerifiableDomainToken	Verbless End-point	
+/rejectDeployments	Verbless End-point	
+/reopenDiscussion	Verbless End-point	
+/reopenIssue	Verbless End-point	
+/reopenPullRequest	Verbless End-point	
+/requestReviews	Verbless End-point	
+/rerequestCheckSuite	Verbless End-point	
+/resolveReviewThread	Verbless End-point	
+/retireSponsorsTier	Verbless End-point	
+/revertPullRequest	Verbless End-point	
+/revokeEnterpriseOrganizationsMigratorRole	Verbless End-point	
+/revokeMigratorRole	Verbless End-point	
+/setEnterpriseIdentityProvider	Verbless End-point	
+/setOrganizationInteractionLimit	Verbless End-point	
+/setRepositoryInteractionLimit	Verbless End-point	
+/setUserInteractionLimit	Verbless End-point	
+/startOrganizationMigration	Verbless End-point	
+/startRepositoryMigration	Verbless End-point	
+/submitPullRequestReview	Verbless End-point	
+/transferEnterpriseOrganization	Verbless End-point	
+/transferIssue	Verbless End-point	
+/unarchiveProjectV2Item	Verbless End-point	
+/unarchiveRepository	Verbless End-point	
+/unfollowOrganization	Verbless End-point	
+/unfollowUser	Verbless End-point	
+/unlinkProjectV2FromRepository	Verbless End-point	
+/unlinkProjectV2FromTeam	Verbless End-point	
+/unlinkRepositoryFromProject	Verbless End-point	
+/unlockLockable	Verbless End-point	
+/unmarkDiscussionCommentAsAnswer	Verbless End-point	
+/unmarkFileAsViewed	Verbless End-point	
+/unmarkIssueAsDuplicate	Verbless End-point	
+/unmarkProjectV2AsTemplate	Verbless End-point	
+/unminimizeComment	Verbless End-point	
+/unpinIssue	Verbless End-point	
+/unresolveReviewThread	Verbless End-point	
+/unsubscribeFromNotifications	Verbless End-point	
+/verifyVerifiableDomain	Verbless End-point	

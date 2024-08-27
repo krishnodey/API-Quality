@@ -22,240 +22,240 @@ Count: 19
 
 ***Patterns*** 
 Count: 237
-/codeOfConduct	Tidy End-point	Tidy Endpoint
-/codesOfConduct	Tidy End-point	Tidy Endpoint
-/enterprise	Tidy End-point	Tidy Endpoint
-/enterpriseAdministratorInvitation	Tidy End-point	Tidy Endpoint
-/enterpriseAdministratorInvitationByToken	Tidy End-point	Tidy Endpoint
-/license	Tidy End-point	Tidy Endpoint
-/licenses	Tidy End-point	Tidy Endpoint
-/marketplaceCategories	Tidy End-point	Tidy Endpoint
-/marketplaceCategory	Tidy End-point	Tidy Endpoint
-/marketplaceListing	Tidy End-point	Tidy Endpoint
-/marketplaceListings	Tidy End-point	Tidy Endpoint
-/meta	Tidy End-point	Tidy Endpoint
-/node	Tidy End-point	Tidy Endpoint
-/nodes	Tidy End-point	Tidy Endpoint
-/organization	Tidy End-point	Tidy Endpoint
-/rateLimit	Tidy End-point	Tidy Endpoint
-/relay	Tidy End-point	Tidy Endpoint
-/repository	Tidy End-point	Tidy Endpoint
-/repositoryOwner	Tidy End-point	Tidy Endpoint
-/resource	Tidy End-point	Tidy Endpoint
-/search	Tidy End-point	Tidy Endpoint
-/securityAdvisories	Tidy End-point	Tidy Endpoint
-/securityAdvisory	Tidy End-point	Tidy Endpoint
-/securityVulnerabilities	Tidy End-point	Tidy Endpoint
-/sponsorables	Tidy End-point	Tidy Endpoint
-/topic	Tidy End-point	Tidy Endpoint
-/user	Tidy End-point	Tidy Endpoint
-/viewer	Tidy End-point	Tidy Endpoint
-/abortQueuedMigrations	Tidy End-point	Tidy Endpoint
-/abortRepositoryMigration	Tidy End-point	Tidy Endpoint
-/acceptEnterpriseAdministratorInvitation	Tidy End-point	Tidy Endpoint
-/acceptTopicSuggestion	Tidy End-point	Tidy Endpoint
-/addAssigneesToAssignable	Tidy End-point	Tidy Endpoint
-/addComment	Tidy End-point	Tidy Endpoint
-/addDiscussionComment	Tidy End-point	Tidy Endpoint
-/addDiscussionPollVote	Tidy End-point	Tidy Endpoint
-/addEnterpriseOrganizationMember	Tidy End-point	Tidy Endpoint
-/addEnterpriseSupportEntitlement	Tidy End-point	Tidy Endpoint
-/addLabelsToLabelable	Tidy End-point	Tidy Endpoint
-/addProjectCard	Tidy End-point	Tidy Endpoint
-/addProjectColumn	Tidy End-point	Tidy Endpoint
-/addPullRequestReview	Tidy End-point	Tidy Endpoint
-/addPullRequestReviewComment	Tidy End-point	Tidy Endpoint
-/addPullRequestReviewThread	Tidy End-point	Tidy Endpoint
-/addPullRequestReviewThreadReply	Tidy End-point	Tidy Endpoint
-/addReaction	Tidy End-point	Tidy Endpoint
-/addStar	Tidy End-point	Tidy Endpoint
-/addUpvote	Tidy End-point	Tidy Endpoint
-/addVerifiableDomain	Tidy End-point	Tidy Endpoint
-/approveDeployments	Tidy End-point	Tidy Endpoint
-/approveVerifiableDomain	Tidy End-point	Tidy Endpoint
-/archiveRepository	Tidy End-point	Tidy Endpoint
-/cancelEnterpriseAdminInvitation	Tidy End-point	Tidy Endpoint
-/cancelSponsorship	Tidy End-point	Tidy Endpoint
-/changeUserStatus	Tidy End-point	Tidy Endpoint
-/clearLabelsFromLabelable	Tidy End-point	Tidy Endpoint
-/cloneProject	Tidy End-point	Tidy Endpoint
-/cloneTemplateRepository	Tidy End-point	Tidy Endpoint
-/closeDiscussion	Tidy End-point	Tidy Endpoint
-/closeIssue	Tidy End-point	Tidy Endpoint
-/closePullRequest	Tidy End-point	Tidy Endpoint
-/convertProjectCardNoteToIssue	Tidy End-point	Tidy Endpoint
-/convertPullRequestToDraft	Tidy End-point	Tidy Endpoint
-/copyProjectV2	Tidy End-point	Tidy Endpoint
-/createAttributionInvitation	Tidy End-point	Tidy Endpoint
-/createBranchProtectionRule	Tidy End-point	Tidy Endpoint
-/createCheckRun	Tidy End-point	Tidy Endpoint
-/createCheckSuite	Tidy End-point	Tidy Endpoint
-/createCommitOnBranch	Tidy End-point	Tidy Endpoint
-/createDeployment	Tidy End-point	Tidy Endpoint
-/createDeploymentStatus	Tidy End-point	Tidy Endpoint
-/createDiscussion	Tidy End-point	Tidy Endpoint
-/createEnterpriseOrganization	Tidy End-point	Tidy Endpoint
-/createEnvironment	Tidy End-point	Tidy Endpoint
-/createIpAllowListEntry	Tidy End-point	Tidy Endpoint
-/createIssue	Tidy End-point	Tidy Endpoint
-/createLabel	Tidy End-point	Tidy Endpoint
-/createLinkedBranch	Tidy End-point	Tidy Endpoint
-/createMigrationSource	Tidy End-point	Tidy Endpoint
-/createProject	Tidy End-point	Tidy Endpoint
-/createProjectV2	Tidy End-point	Tidy Endpoint
-/createPullRequest	Tidy End-point	Tidy Endpoint
-/createRef	Tidy End-point	Tidy Endpoint
-/createRepository	Tidy End-point	Tidy Endpoint
-/createRepositoryRuleset	Tidy End-point	Tidy Endpoint
-/createSponsorsListing	Tidy End-point	Tidy Endpoint
-/createSponsorsTier	Tidy End-point	Tidy Endpoint
-/createSponsorship	Tidy End-point	Tidy Endpoint
-/createSponsorships	Tidy End-point	Tidy Endpoint
-/createTeamDiscussion	Tidy End-point	Tidy Endpoint
-/createTeamDiscussionComment	Tidy End-point	Tidy Endpoint
-/declineTopicSuggestion	Tidy End-point	Tidy Endpoint
-/deleteBranchProtectionRule	Tidy End-point	Tidy Endpoint
-/deleteDeployment	Tidy End-point	Tidy Endpoint
-/deleteDiscussion	Tidy End-point	Tidy Endpoint
-/deleteDiscussionComment	Tidy End-point	Tidy Endpoint
-/deleteEnvironment	Tidy End-point	Tidy Endpoint
-/deleteIpAllowListEntry	Tidy End-point	Tidy Endpoint
-/deleteIssue	Tidy End-point	Tidy Endpoint
-/deleteIssueComment	Tidy End-point	Tidy Endpoint
-/deleteLabel	Tidy End-point	Tidy Endpoint
-/deleteLinkedBranch	Tidy End-point	Tidy Endpoint
-/deletePackageVersion	Tidy End-point	Tidy Endpoint
-/deleteProject	Tidy End-point	Tidy Endpoint
-/deleteProjectCard	Tidy End-point	Tidy Endpoint
-/deleteProjectColumn	Tidy End-point	Tidy Endpoint
-/deleteProjectV2	Tidy End-point	Tidy Endpoint
-/deletePullRequestReview	Tidy End-point	Tidy Endpoint
-/deletePullRequestReviewComment	Tidy End-point	Tidy Endpoint
-/deleteRef	Tidy End-point	Tidy Endpoint
-/deleteRepositoryRuleset	Tidy End-point	Tidy Endpoint
-/deleteTeamDiscussion	Tidy End-point	Tidy Endpoint
-/deleteTeamDiscussionComment	Tidy End-point	Tidy Endpoint
-/deleteVerifiableDomain	Tidy End-point	Tidy Endpoint
-/dequeuePullRequest	Tidy End-point	Tidy Endpoint
-/disablePullRequestAutoMerge	Tidy End-point	Tidy Endpoint
-/dismissPullRequestReview	Tidy End-point	Tidy Endpoint
-/dismissRepositoryVulnerabilityAlert	Tidy End-point	Tidy Endpoint
-/enablePullRequestAutoMerge	Tidy End-point	Tidy Endpoint
-/enqueuePullRequest	Tidy End-point	Tidy Endpoint
-/followOrganization	Tidy End-point	Tidy Endpoint
-/followUser	Tidy End-point	Tidy Endpoint
-/grantEnterpriseOrganizationsMigratorRole	Tidy End-point	Tidy Endpoint
-/grantMigratorRole	Tidy End-point	Tidy Endpoint
-/importProject	Tidy End-point	Tidy Endpoint
-/inviteEnterpriseAdmin	Tidy End-point	Tidy Endpoint
-/linkRepositoryToProject	Tidy End-point	Tidy Endpoint
-/lockLockable	Tidy End-point	Tidy Endpoint
-/markDiscussionCommentAsAnswer	Tidy End-point	Tidy Endpoint
-/markFileAsViewed	Tidy End-point	Tidy Endpoint
-/markPullRequestReadyForReview	Tidy End-point	Tidy Endpoint
-/mergeBranch	Tidy End-point	Tidy Endpoint
-/mergePullRequest	Tidy End-point	Tidy Endpoint
-/minimizeComment	Tidy End-point	Tidy Endpoint
-/moveProjectCard	Tidy End-point	Tidy Endpoint
-/moveProjectColumn	Tidy End-point	Tidy Endpoint
-/pinIssue	Tidy End-point	Tidy Endpoint
-/publishSponsorsTier	Tidy End-point	Tidy Endpoint
-/regenerateEnterpriseIdentityProviderRecoveryCodes	Tidy End-point	Tidy Endpoint
-/regenerateVerifiableDomainToken	Tidy End-point	Tidy Endpoint
-/rejectDeployments	Tidy End-point	Tidy Endpoint
-/removeAssigneesFromAssignable	Tidy End-point	Tidy Endpoint
-/removeEnterpriseAdmin	Tidy End-point	Tidy Endpoint
-/removeEnterpriseIdentityProvider	Tidy End-point	Tidy Endpoint
-/removeEnterpriseMember	Tidy End-point	Tidy Endpoint
-/removeEnterpriseOrganization	Tidy End-point	Tidy Endpoint
-/removeEnterpriseSupportEntitlement	Tidy End-point	Tidy Endpoint
-/removeLabelsFromLabelable	Tidy End-point	Tidy Endpoint
-/removeOutsideCollaborator	Tidy End-point	Tidy Endpoint
-/removeReaction	Tidy End-point	Tidy Endpoint
-/removeStar	Tidy End-point	Tidy Endpoint
-/removeUpvote	Tidy End-point	Tidy Endpoint
-/reopenDiscussion	Tidy End-point	Tidy Endpoint
-/reopenIssue	Tidy End-point	Tidy Endpoint
-/reopenPullRequest	Tidy End-point	Tidy Endpoint
-/requestReviews	Tidy End-point	Tidy Endpoint
-/rerequestCheckSuite	Tidy End-point	Tidy Endpoint
-/resolveReviewThread	Tidy End-point	Tidy Endpoint
-/retireSponsorsTier	Tidy End-point	Tidy Endpoint
-/revertPullRequest	Tidy End-point	Tidy Endpoint
-/revokeEnterpriseOrganizationsMigratorRole	Tidy End-point	Tidy Endpoint
-/revokeMigratorRole	Tidy End-point	Tidy Endpoint
-/setEnterpriseIdentityProvider	Tidy End-point	Tidy Endpoint
-/setOrganizationInteractionLimit	Tidy End-point	Tidy Endpoint
-/setRepositoryInteractionLimit	Tidy End-point	Tidy Endpoint
-/setUserInteractionLimit	Tidy End-point	Tidy Endpoint
-/startOrganizationMigration	Tidy End-point	Tidy Endpoint
-/startRepositoryMigration	Tidy End-point	Tidy Endpoint
-/submitPullRequestReview	Tidy End-point	Tidy Endpoint
-/transferEnterpriseOrganization	Tidy End-point	Tidy Endpoint
-/transferIssue	Tidy End-point	Tidy Endpoint
-/unarchiveRepository	Tidy End-point	Tidy Endpoint
-/unfollowOrganization	Tidy End-point	Tidy Endpoint
-/unfollowUser	Tidy End-point	Tidy Endpoint
-/unlinkRepositoryFromProject	Tidy End-point	Tidy Endpoint
-/unlockLockable	Tidy End-point	Tidy Endpoint
-/unmarkDiscussionCommentAsAnswer	Tidy End-point	Tidy Endpoint
-/unmarkFileAsViewed	Tidy End-point	Tidy Endpoint
-/unmarkIssueAsDuplicate	Tidy End-point	Tidy Endpoint
-/unminimizeComment	Tidy End-point	Tidy Endpoint
-/unpinIssue	Tidy End-point	Tidy Endpoint
-/unresolveReviewThread	Tidy End-point	Tidy Endpoint
-/unsubscribeFromNotifications	Tidy End-point	Tidy Endpoint
-/updateBranchProtectionRule	Tidy End-point	Tidy Endpoint
-/updateCheckRun	Tidy End-point	Tidy Endpoint
-/updateCheckSuitePreferences	Tidy End-point	Tidy Endpoint
-/updateDiscussion	Tidy End-point	Tidy Endpoint
-/updateDiscussionComment	Tidy End-point	Tidy Endpoint
-/updateEnterpriseAdministratorRole	Tidy End-point	Tidy Endpoint
-/updateEnterpriseAllowPrivateRepositoryForkingSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseDefaultRepositoryPermissionSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanCreateRepositoriesSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanDeleteIssuesSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanDeleteRepositoriesSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanInviteCollaboratorsSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanMakePurchasesSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanUpdateProtectedBranchesSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseMembersCanViewDependencyInsightsSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseOrganizationProjectsSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseOwnerOrganizationRole	Tidy End-point	Tidy Endpoint
-/updateEnterpriseProfile	Tidy End-point	Tidy Endpoint
-/updateEnterpriseRepositoryProjectsSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseTeamDiscussionsSetting	Tidy End-point	Tidy Endpoint
-/updateEnterpriseTwoFactorAuthenticationRequiredSetting	Tidy End-point	Tidy Endpoint
-/updateEnvironment	Tidy End-point	Tidy Endpoint
-/updateIpAllowListEnabledSetting	Tidy End-point	Tidy Endpoint
-/updateIpAllowListEntry	Tidy End-point	Tidy Endpoint
-/updateIpAllowListForInstalledAppsEnabledSetting	Tidy End-point	Tidy Endpoint
-/updateIssue	Tidy End-point	Tidy Endpoint
-/updateIssueComment	Tidy End-point	Tidy Endpoint
-/updateLabel	Tidy End-point	Tidy Endpoint
-/updateNotificationRestrictionSetting	Tidy End-point	Tidy Endpoint
-/updateOrganizationAllowPrivateRepositoryForkingSetting	Tidy End-point	Tidy Endpoint
-/updateOrganizationWebCommitSignoffSetting	Tidy End-point	Tidy Endpoint
-/updatePatreonSponsorability	Tidy End-point	Tidy Endpoint
-/updateProject	Tidy End-point	Tidy Endpoint
-/updateProjectCard	Tidy End-point	Tidy Endpoint
-/updateProjectColumn	Tidy End-point	Tidy Endpoint
-/updateProjectV2	Tidy End-point	Tidy Endpoint
-/updatePullRequest	Tidy End-point	Tidy Endpoint
-/updatePullRequestBranch	Tidy End-point	Tidy Endpoint
-/updatePullRequestReview	Tidy End-point	Tidy Endpoint
-/updatePullRequestReviewComment	Tidy End-point	Tidy Endpoint
-/updateRef	Tidy End-point	Tidy Endpoint
-/updateRefs	Tidy End-point	Tidy Endpoint
-/updateRepository	Tidy End-point	Tidy Endpoint
-/updateRepositoryRuleset	Tidy End-point	Tidy Endpoint
-/updateRepositoryWebCommitSignoffSetting	Tidy End-point	Tidy Endpoint
-/updateSponsorshipPreferences	Tidy End-point	Tidy Endpoint
-/updateSubscription	Tidy End-point	Tidy Endpoint
-/updateTeamDiscussion	Tidy End-point	Tidy Endpoint
-/updateTeamDiscussionComment	Tidy End-point	Tidy Endpoint
-/updateTeamReviewAssignment	Tidy End-point	Tidy Endpoint
-/updateTeamsRepository	Tidy End-point	Tidy Endpoint
-/updateTopics	Tidy End-point	Tidy Endpoint
-/verifyVerifiableDomain	Tidy End-point	Tidy Endpoint
+/codeOfConduct	Tidy End-point	
+/codesOfConduct	Tidy End-point	
+/enterprise	Tidy End-point	
+/enterpriseAdministratorInvitation	Tidy End-point	
+/enterpriseAdministratorInvitationByToken	Tidy End-point	
+/license	Tidy End-point	
+/licenses	Tidy End-point	
+/marketplaceCategories	Tidy End-point	
+/marketplaceCategory	Tidy End-point	
+/marketplaceListing	Tidy End-point	
+/marketplaceListings	Tidy End-point	
+/meta	Tidy End-point	
+/node	Tidy End-point	
+/nodes	Tidy End-point	
+/organization	Tidy End-point	
+/rateLimit	Tidy End-point	
+/relay	Tidy End-point	
+/repository	Tidy End-point	
+/repositoryOwner	Tidy End-point	
+/resource	Tidy End-point	
+/search	Tidy End-point	
+/securityAdvisories	Tidy End-point	
+/securityAdvisory	Tidy End-point	
+/securityVulnerabilities	Tidy End-point	
+/sponsorables	Tidy End-point	
+/topic	Tidy End-point	
+/user	Tidy End-point	
+/viewer	Tidy End-point	
+/abortQueuedMigrations	Tidy End-point	
+/abortRepositoryMigration	Tidy End-point	
+/acceptEnterpriseAdministratorInvitation	Tidy End-point	
+/acceptTopicSuggestion	Tidy End-point	
+/addAssigneesToAssignable	Tidy End-point	
+/addComment	Tidy End-point	
+/addDiscussionComment	Tidy End-point	
+/addDiscussionPollVote	Tidy End-point	
+/addEnterpriseOrganizationMember	Tidy End-point	
+/addEnterpriseSupportEntitlement	Tidy End-point	
+/addLabelsToLabelable	Tidy End-point	
+/addProjectCard	Tidy End-point	
+/addProjectColumn	Tidy End-point	
+/addPullRequestReview	Tidy End-point	
+/addPullRequestReviewComment	Tidy End-point	
+/addPullRequestReviewThread	Tidy End-point	
+/addPullRequestReviewThreadReply	Tidy End-point	
+/addReaction	Tidy End-point	
+/addStar	Tidy End-point	
+/addUpvote	Tidy End-point	
+/addVerifiableDomain	Tidy End-point	
+/approveDeployments	Tidy End-point	
+/approveVerifiableDomain	Tidy End-point	
+/archiveRepository	Tidy End-point	
+/cancelEnterpriseAdminInvitation	Tidy End-point	
+/cancelSponsorship	Tidy End-point	
+/changeUserStatus	Tidy End-point	
+/clearLabelsFromLabelable	Tidy End-point	
+/cloneProject	Tidy End-point	
+/cloneTemplateRepository	Tidy End-point	
+/closeDiscussion	Tidy End-point	
+/closeIssue	Tidy End-point	
+/closePullRequest	Tidy End-point	
+/convertProjectCardNoteToIssue	Tidy End-point	
+/convertPullRequestToDraft	Tidy End-point	
+/copyProjectV2	Tidy End-point	
+/createAttributionInvitation	Tidy End-point	
+/createBranchProtectionRule	Tidy End-point	
+/createCheckRun	Tidy End-point	
+/createCheckSuite	Tidy End-point	
+/createCommitOnBranch	Tidy End-point	
+/createDeployment	Tidy End-point	
+/createDeploymentStatus	Tidy End-point	
+/createDiscussion	Tidy End-point	
+/createEnterpriseOrganization	Tidy End-point	
+/createEnvironment	Tidy End-point	
+/createIpAllowListEntry	Tidy End-point	
+/createIssue	Tidy End-point	
+/createLabel	Tidy End-point	
+/createLinkedBranch	Tidy End-point	
+/createMigrationSource	Tidy End-point	
+/createProject	Tidy End-point	
+/createProjectV2	Tidy End-point	
+/createPullRequest	Tidy End-point	
+/createRef	Tidy End-point	
+/createRepository	Tidy End-point	
+/createRepositoryRuleset	Tidy End-point	
+/createSponsorsListing	Tidy End-point	
+/createSponsorsTier	Tidy End-point	
+/createSponsorship	Tidy End-point	
+/createSponsorships	Tidy End-point	
+/createTeamDiscussion	Tidy End-point	
+/createTeamDiscussionComment	Tidy End-point	
+/declineTopicSuggestion	Tidy End-point	
+/deleteBranchProtectionRule	Tidy End-point	
+/deleteDeployment	Tidy End-point	
+/deleteDiscussion	Tidy End-point	
+/deleteDiscussionComment	Tidy End-point	
+/deleteEnvironment	Tidy End-point	
+/deleteIpAllowListEntry	Tidy End-point	
+/deleteIssue	Tidy End-point	
+/deleteIssueComment	Tidy End-point	
+/deleteLabel	Tidy End-point	
+/deleteLinkedBranch	Tidy End-point	
+/deletePackageVersion	Tidy End-point	
+/deleteProject	Tidy End-point	
+/deleteProjectCard	Tidy End-point	
+/deleteProjectColumn	Tidy End-point	
+/deleteProjectV2	Tidy End-point	
+/deletePullRequestReview	Tidy End-point	
+/deletePullRequestReviewComment	Tidy End-point	
+/deleteRef	Tidy End-point	
+/deleteRepositoryRuleset	Tidy End-point	
+/deleteTeamDiscussion	Tidy End-point	
+/deleteTeamDiscussionComment	Tidy End-point	
+/deleteVerifiableDomain	Tidy End-point	
+/dequeuePullRequest	Tidy End-point	
+/disablePullRequestAutoMerge	Tidy End-point	
+/dismissPullRequestReview	Tidy End-point	
+/dismissRepositoryVulnerabilityAlert	Tidy End-point	
+/enablePullRequestAutoMerge	Tidy End-point	
+/enqueuePullRequest	Tidy End-point	
+/followOrganization	Tidy End-point	
+/followUser	Tidy End-point	
+/grantEnterpriseOrganizationsMigratorRole	Tidy End-point	
+/grantMigratorRole	Tidy End-point	
+/importProject	Tidy End-point	
+/inviteEnterpriseAdmin	Tidy End-point	
+/linkRepositoryToProject	Tidy End-point	
+/lockLockable	Tidy End-point	
+/markDiscussionCommentAsAnswer	Tidy End-point	
+/markFileAsViewed	Tidy End-point	
+/markPullRequestReadyForReview	Tidy End-point	
+/mergeBranch	Tidy End-point	
+/mergePullRequest	Tidy End-point	
+/minimizeComment	Tidy End-point	
+/moveProjectCard	Tidy End-point	
+/moveProjectColumn	Tidy End-point	
+/pinIssue	Tidy End-point	
+/publishSponsorsTier	Tidy End-point	
+/regenerateEnterpriseIdentityProviderRecoveryCodes	Tidy End-point	
+/regenerateVerifiableDomainToken	Tidy End-point	
+/rejectDeployments	Tidy End-point	
+/removeAssigneesFromAssignable	Tidy End-point	
+/removeEnterpriseAdmin	Tidy End-point	
+/removeEnterpriseIdentityProvider	Tidy End-point	
+/removeEnterpriseMember	Tidy End-point	
+/removeEnterpriseOrganization	Tidy End-point	
+/removeEnterpriseSupportEntitlement	Tidy End-point	
+/removeLabelsFromLabelable	Tidy End-point	
+/removeOutsideCollaborator	Tidy End-point	
+/removeReaction	Tidy End-point	
+/removeStar	Tidy End-point	
+/removeUpvote	Tidy End-point	
+/reopenDiscussion	Tidy End-point	
+/reopenIssue	Tidy End-point	
+/reopenPullRequest	Tidy End-point	
+/requestReviews	Tidy End-point	
+/rerequestCheckSuite	Tidy End-point	
+/resolveReviewThread	Tidy End-point	
+/retireSponsorsTier	Tidy End-point	
+/revertPullRequest	Tidy End-point	
+/revokeEnterpriseOrganizationsMigratorRole	Tidy End-point	
+/revokeMigratorRole	Tidy End-point	
+/setEnterpriseIdentityProvider	Tidy End-point	
+/setOrganizationInteractionLimit	Tidy End-point	
+/setRepositoryInteractionLimit	Tidy End-point	
+/setUserInteractionLimit	Tidy End-point	
+/startOrganizationMigration	Tidy End-point	
+/startRepositoryMigration	Tidy End-point	
+/submitPullRequestReview	Tidy End-point	
+/transferEnterpriseOrganization	Tidy End-point	
+/transferIssue	Tidy End-point	
+/unarchiveRepository	Tidy End-point	
+/unfollowOrganization	Tidy End-point	
+/unfollowUser	Tidy End-point	
+/unlinkRepositoryFromProject	Tidy End-point	
+/unlockLockable	Tidy End-point	
+/unmarkDiscussionCommentAsAnswer	Tidy End-point	
+/unmarkFileAsViewed	Tidy End-point	
+/unmarkIssueAsDuplicate	Tidy End-point	
+/unminimizeComment	Tidy End-point	
+/unpinIssue	Tidy End-point	
+/unresolveReviewThread	Tidy End-point	
+/unsubscribeFromNotifications	Tidy End-point	
+/updateBranchProtectionRule	Tidy End-point	
+/updateCheckRun	Tidy End-point	
+/updateCheckSuitePreferences	Tidy End-point	
+/updateDiscussion	Tidy End-point	
+/updateDiscussionComment	Tidy End-point	
+/updateEnterpriseAdministratorRole	Tidy End-point	
+/updateEnterpriseAllowPrivateRepositoryForkingSetting	Tidy End-point	
+/updateEnterpriseDefaultRepositoryPermissionSetting	Tidy End-point	
+/updateEnterpriseMembersCanChangeRepositoryVisibilitySetting	Tidy End-point	
+/updateEnterpriseMembersCanCreateRepositoriesSetting	Tidy End-point	
+/updateEnterpriseMembersCanDeleteIssuesSetting	Tidy End-point	
+/updateEnterpriseMembersCanDeleteRepositoriesSetting	Tidy End-point	
+/updateEnterpriseMembersCanInviteCollaboratorsSetting	Tidy End-point	
+/updateEnterpriseMembersCanMakePurchasesSetting	Tidy End-point	
+/updateEnterpriseMembersCanUpdateProtectedBranchesSetting	Tidy End-point	
+/updateEnterpriseMembersCanViewDependencyInsightsSetting	Tidy End-point	
+/updateEnterpriseOrganizationProjectsSetting	Tidy End-point	
+/updateEnterpriseOwnerOrganizationRole	Tidy End-point	
+/updateEnterpriseProfile	Tidy End-point	
+/updateEnterpriseRepositoryProjectsSetting	Tidy End-point	
+/updateEnterpriseTeamDiscussionsSetting	Tidy End-point	
+/updateEnterpriseTwoFactorAuthenticationRequiredSetting	Tidy End-point	
+/updateEnvironment	Tidy End-point	
+/updateIpAllowListEnabledSetting	Tidy End-point	
+/updateIpAllowListEntry	Tidy End-point	
+/updateIpAllowListForInstalledAppsEnabledSetting	Tidy End-point	
+/updateIssue	Tidy End-point	
+/updateIssueComment	Tidy End-point	
+/updateLabel	Tidy End-point	
+/updateNotificationRestrictionSetting	Tidy End-point	
+/updateOrganizationAllowPrivateRepositoryForkingSetting	Tidy End-point	
+/updateOrganizationWebCommitSignoffSetting	Tidy End-point	
+/updatePatreonSponsorability	Tidy End-point	
+/updateProject	Tidy End-point	
+/updateProjectCard	Tidy End-point	
+/updateProjectColumn	Tidy End-point	
+/updateProjectV2	Tidy End-point	
+/updatePullRequest	Tidy End-point	
+/updatePullRequestBranch	Tidy End-point	
+/updatePullRequestReview	Tidy End-point	
+/updatePullRequestReviewComment	Tidy End-point	
+/updateRef	Tidy End-point	
+/updateRefs	Tidy End-point	
+/updateRepository	Tidy End-point	
+/updateRepositoryRuleset	Tidy End-point	
+/updateRepositoryWebCommitSignoffSetting	Tidy End-point	
+/updateSponsorshipPreferences	Tidy End-point	
+/updateSubscription	Tidy End-point	
+/updateTeamDiscussion	Tidy End-point	
+/updateTeamDiscussionComment	Tidy End-point	
+/updateTeamReviewAssignment	Tidy End-point	
+/updateTeamsRepository	Tidy End-point	
+/updateTopics	Tidy End-point	
+/verifyVerifiableDomain	Tidy End-point	

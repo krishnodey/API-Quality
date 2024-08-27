@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 34
+-/admin/tenantKeys	Pertinent Documentation	Adds an encryption key for Power BI workspaces assigned to a capacity.
+-/admin/apps?$top={$top}	Pertinent Documentation	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
+-/admin/apps/{appId}/users	Pertinent Documentation	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
+-/admin/capacities/AssignWorkspaces	Pertinent Documentation	Assigns the provided workspaces to the specified premium capacity.
+-/admin/capacities/UnassignWorkspaces	Pertinent Documentation	Unassigns the provided workspaces from capacity.
+-/admin/dashboards	Pertinent Documentation	Returns a list of dashboards for the organization.
+-/admin/groups/{groupId}/dashboards	Pertinent Documentation	Returns a list of dashboards from the specified workspace.
+-/admin/dataflows/{dataflowId}/export	Pertinent Documentation	Exports the specified dataflow definition to a .json file.
+-/admin/dataflows/{dataflowId}/datasources	Pertinent Documentation	Returns a list of datasources for the specified dataflow.
+-/admin/groups/{groupId}/dataflows	Pertinent Documentation	Returns a list of dataflows from the specified workspace.
+-/admin/dataflows/{dataflowId}/users	Pertinent Documentation	Returns a list of users that have access to the specified dataflow (Preview).
+-/admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows	Pertinent Documentation	Returns a list of upstream dataflows for the specified dataflow.
+-/admin/groups/{groupId}/datasets	Pertinent Documentation	Returns a list of datasets from the specified workspace.
+-/admin/groups/{groupId}/datasets/upstreamDataflows	Pertinent Documentation	Returns a list of upstream dataflows for datasets from the specified workspace.
+-/admin/datasets/{datasetId}/datasources	Pertinent Documentation	Returns a list of datasources for the specified dataset.
+-/admin/capacities	Pertinent Documentation	Returns a list of capacities for the organization.
+-/admin/groups/{groupId}/users	Pertinent Documentation	Grants user permissions to the specified workspace.
+-/admin/pipelines/{pipelineId}/users/{identifier}	Pertinent Documentation	Remove user permissions from a specified deployment pipeline.
+-/admin/tenantKeys/{tenantKeyId}/Default.Rotate	Pertinent Documentation	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+-/admin/workspaces/modified	Pertinent Documentation	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
+-/admin/workspaces/getInfo	Pertinent Documentation	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
+-/apps/{appId}	Pertinent Documentation	Returns the specified installed app.
+-/apps/{appId}/dashboards/{dashboardId}	Pertinent Documentation	Returns the specified dashboard from the specified app.
+-/apps/{appId}/reports/{reportId}	Pertinent Documentation	Returns the specified report from the specified app.
+-/apps/{appId}/dashboards/{dashboardId}/tiles/{tileId}	Pertinent Documentation	Returns the specified tile within the specified dashboard from the specified app.
+-/apps/{appId}/dashboards/{dashboardId}/tiles	Pertinent Documentation	Returns a list of tiles within the specified dashboard from the specified app.
+-/availableFeatures	Pertinent Documentation	Returns a list of available features for the user
+-/capacities	Pertinent Documentation	Returns a list of capacities the user has access to.
+-/capacities/{capacityId}/refreshables/{refreshableId}	Pertinent Documentation	Returns the specified refreshable for the specified capacity the user has access to.
+-/capacities/{capacityId}/Workloads/{workloadName}	Pertinent Documentation	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+-/capacities/{capacityId}/Workloads	Pertinent Documentation	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
+-/AssignToCapacity	Pertinent Documentation	Assigns "My Workspace" to the specified capacity.
+-/groups/{groupId}/AssignToCapacity	Pertinent Documentation	Assigns the specified workspace to the specified capacity.
+-/groups/{groupId}/dashboards	Pertinent Documentation	Creates a new empty dashboard on the specified workspace.

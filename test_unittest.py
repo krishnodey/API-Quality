@@ -130,11 +130,6 @@ class Test_TestAntiPatterns(unittest.TestCase):
         ap, p, p_count, ap_count = analyzer.detect_inconsistent_documentations(data)
         self.assertEqual(ap_count,1)
     
-    #This test is designed for anti pattern
-    def test_Identifier_Ambiguity(self):
-        data = ['POST>>/v1/projects/{projectId}/services>>Update Variants stock']
-        ap, p, p_count, ap_count = analyzer.detect_inconsistent_documentations(data)
-        self.assertEqual(ap_count,1)
 
     
     

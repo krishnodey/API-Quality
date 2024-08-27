@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 5
+/getEditions	 Contextual Resource Names
+/getSections	 Contextual Resource Names
+/getSingleItem	 Contextual Resource Names
+/getTags	 Contextual Resource Names
+/searchContent	 Contextual Resource Names

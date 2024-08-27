@@ -1,0 +1,85 @@
+***Anti-Pattern*** 
+Count: 60
+/users/<userID>/properties	Non-standard End-point	 [unknown char found] 
+/users/<userID>/properties	Non-standard End-point	 [unknown char found] 
+/users/<userID>/properties	Non-standard End-point	 [unknown char found] 
+/users/<userID>/properties	Non-standard End-point	 [unknown char found] 
+/users/<userID>/devices	Non-standard End-point	 [unknown char found] 
+/users/<userID>/devicetypes	Non-standard End-point	 [unknown char found] 
+/users/<userID>/rules	Non-standard End-point	 [unknown char found] 
+/users/<userID>/scenes	Non-standard End-point	 [unknown char found] 
+/users/<userID>/trials	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/tokens	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/tokens	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/tokens	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/providerauth	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/providerauth	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/status	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/status	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/certificate	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/shares	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/shares/<shareID>	Non-standard End-point	 [unknown char found] 
+/devices/<deviceID>/shares	Non-standard End-point	 [unknown char found] 
+/users/<userID>/shares	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/manifests/latest/properties	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/manifests/<version>/properties	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/availablemanifestversions	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeId>/whitelist	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeId>/whitelist	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID>	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/enable	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/certificates	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID>	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/status	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/certificates	Non-standard End-point	 [unknown char found] 
+/devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID>	Non-standard End-point	 [unknown char found] 
+/pricing/devices/<deviceID>/revenueshare/upgradepath	Non-standard End-point	 [unknown char found] 
+/pricing/devicetypes/<deviceTypeID>/pricingtiers	Non-standard End-point	 [unknown char found] 
+/pricing/devices/<deviceID>/pricingtiers	Non-standard End-point	 [unknown char found] 
+/messages/export/<exportID>/status	Non-standard End-point	 [unknown char found] 
+/messages/export/<exportID>/result	Non-standard End-point	 [unknown char found] 
+/subscriptions/<subscriptionID>	Non-standard End-point	 [unknown char found] 
+/subscriptions/<subscriptionID>/validate	Non-standard End-point	 [unknown char found] 
+/notifications/<notificationID>/messages	Non-standard End-point	 [unknown char found] 
+/rules/<ruleID>	Non-standard End-point	 [unknown char found] 
+/rules/<ruleID>	Non-standard End-point	 [unknown char found] 
+/rules/<ruleID>	Non-standard End-point	 [unknown char found] 
+/rules/<ruleID>/executions	Non-standard End-point	 [unknown char found] 
+/rules/<ruleID>/actions	Non-standard End-point	 [unknown char found] 
+/rules/<ruleID>/actions	Non-standard End-point	 [unknown char found] 
+/scenes/<sceneID>	Non-standard End-point	 [unknown char found] 
+/scenes/<sceneID>	Non-standard End-point	 [unknown char found] 
+/scenes/<sceneID>	Non-standard End-point	 [unknown char found] 
+/scenes/<sceneID>	Non-standard End-point	 [unknown char found] 
+/ml/models/<modelID>/predict	Non-standard End-point	 [unknown char found] 
+/ml/models/<modelID>	Non-standard End-point	 [unknown char found] 
+
+***Patterns*** 
+Count: 20
+/users/self	Standard End-point	
+/devices	Standard End-point	
+/devices/status	Standard End-point	
+/messages	Standard End-point	
+/messages	Standard End-point	
+/actions	Standard End-point	
+/actions	Standard End-point	
+/messages/last	Standard End-point	
+/messages/analytics/aggregates	Standard End-point	
+/messages/analytics/histogram	Standard End-point	
+/messages/presence	Standard End-point	
+/messages/snapshots	Standard End-point	
+/messages/export	Standard End-point	
+/messages/export/history	Standard End-point	
+/subscriptions	Standard End-point	
+/subscriptions	Standard End-point	
+/rules	Standard End-point	
+/scenes	Standard End-point	
+/scenes	Standard End-point	
+/ml/models	Standard End-point	

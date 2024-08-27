@@ -1,0 +1,61 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 56
+/list/{type}	Standard End-point	
+/list/{type}/{base}	Standard End-point	
+/application	Standard End-point	
+/async?state	Standard End-point	
+/async/{id}	Standard End-point	
+/async/{id}	Standard End-point	
+/diagnostics/attributes?locale	Standard End-point	
+/diagnostics/index	Standard End-point	
+/diagnostics/index/{index}?attrs	Standard End-point	
+/diagnostics/object/{id}	Standard End-point	
+/domains	Standard End-point	
+/domains	Standard End-point	
+/domains/{domain}	Standard End-point	
+/domains/{domain}	Standard End-point	
+/domains/{domain}	Standard End-point	
+/domains/{domain}/addressbook/fields	Standard End-point	
+/domains/{domain}/addressbook/labels	Standard End-point	
+/domains/{domain}/addressbook/labels/{field}	Standard End-point	
+/domains/{domain}/addressbook/labels/{field}	Standard End-point	
+/domains/{domain}/addressbook/view	Standard End-point	
+/domains/{domain}/addressbook/view	Standard End-point	
+/domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/administrator	Standard End-point	
+/domains/{domain}/clientoptions?attrs	Standard End-point	
+/domains/{domain}/clientoptions?attrs	Standard End-point	
+/domains/{domain}/customaddresses	Standard End-point	
+/domains/{domain}/customaddresses/test?testAddress	Standard End-point	
+/domains/{domain}/gatewaysubdirs	Standard End-point	
+/domains/{domain}/info	Standard End-point	
+/domains/{domain}/links?direction	Standard End-point	
+/domains/{domain}/links/{link}	Standard End-point	
+/domains/{domain}/links/{link}	Standard End-point	
+/domains/{domain}/rebuild	Standard End-point	
+/domains/{domain}/refaccesscontrols	Standard End-point	
+/domains/{domain}/refaccesscontrols	Standard End-point	
+/domains/attributes	Standard End-point	
+/domains/{domain}/gateways	Standard End-point	
+/domains/{domain}/gateways	Standard End-point	
+/domains/{domain}/gateways/{gateway}	Standard End-point	
+/domains/{domain}/gateways/{gateway}	Standard End-point	
+/domains/{domain}/gateways/{gateway}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators/{id}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/administrators/{id}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/aliases	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Standard End-point	
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Standard End-point	
+/domains/{domain}/gateways/{gateway}/recoverDb	Standard End-point	

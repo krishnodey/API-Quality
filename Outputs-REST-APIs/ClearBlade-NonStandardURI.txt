@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 45
+/api/user/reg	Standard End-point	
+/api/user/auth	Standard End-point	
+/api/user/anon	Standard End-point	
+/api/user/checkauth	Standard End-point	
+/api/user/logout	Standard End-point	
+/api/user/info	Standard End-point	
+/api/user/info	Standard End-point	
+/api/user/pass	Standard End-point	
+/api/user	Standard End-point	
+/api/v/2/devices/{systemKey}/{name}	Standard End-point	
+/api/v/2/devices/{SystemKey}/auth	Standard End-point	
+/api/collection/{systemKey}/{collectionName}	Standard End-point	
+/api/collection/{systemKey}/{collectionName}	Standard End-point	
+/api/collection/{systemKey}/{collectionName}	Standard End-point	
+/api/collection/{systemKey}/{collectionName}	Standard End-point	
+/api/data/{collectionID}	Standard End-point	
+/api/data/{collectionID}	Standard End-point	
+/api/data/{collectionID}	Standard End-point	
+/api/data/{collectionID}	Standard End-point	
+/api/data/{collectionid}/columns	Standard End-point	
+/api/code/{systemKey}/{serviceName}	Standard End-point	
+/codeadmin/v/2/library/{systemKey}	Standard End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Standard End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Standard End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Standard End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Standard End-point	
+/codeadmin/v/2/history/library/{systemKey}/{name}	Standard End-point	
+/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	Standard End-point	
+/codeadmin/failed	Standard End-point	
+/codeadmin/failed/{systemKey}	Standard End-point	
+/codeadmin/failed/{systemKey}	Standard End-point	
+/codeadmin/failed/{systemKey}	Standard End-point	
+/api/message/{systemKey}	Standard End-point	
+/api/message/{systemKey}/publish	Standard End-point	
+/api/message/{systemKey}	Standard End-point	
+/admin/reg	Standard End-point	
+/admin/auth	Standard End-point	
+/admin/logout	Standard End-point	
+/admin/systemmanagement	Standard End-point	
+/admin/systemmanagement	Standard End-point	
+/admin/systemmanagement	Standard End-point	
+/admin/systemmanagement	Standard End-point	
+/admin/collectionmanagement	Standard End-point	
+/admin/collectionmanagement	Standard End-point	
+/admin/collectionmanagement	Standard End-point	

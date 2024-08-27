@@ -1,0 +1,48 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 43
+/installrequests	Verbless End-point	
+/applications/{listingVersionId}	Verbless End-point	
+/applications/{listingVersionId}/banner	Verbless End-point	
+/applications/{listingVersionId}/comments/{id}	Verbless End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/applications/{listingVersionId}/relateddocs/{id}	Verbless End-point	
+/applications/{listingVersionId}/screenshots/{id}	Verbless End-point	
+/applications/{listingVersionId}/supportingdocs/{id}	Verbless End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Verbless End-point	
+/applications	Verbless End-point	
+/applications/{listingVersionId}	Verbless End-point	
+/applications/{listingVersionId}/availableservices	Verbless End-point	
+/applications/{listingVersionId}/comments	Verbless End-point	
+/applications/{listingVersionId}/packages	Verbless End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Verbless End-point	
+/applications/{listingVersionId}/recommendedservices	Verbless End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages	Verbless End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Verbless End-point	
+/applications/{listingVersionId}	Verbless End-point	
+/applications/{listingVersionId}/banner	Verbless End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/applications/{listingVersionId}/relateddocs/{id}	Verbless End-point	
+/applications/{listingVersionId}/screenshots	Verbless End-point	
+/applications/{listingVersionId}/supportingdocs/{id}	Verbless End-point	
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/applications	Verbless End-point	
+/applications/{listingVersionId}/banner	Verbless End-point	
+/applications/{listingVersionId}/comments	Verbless End-point	
+/applications/{listingVersionId}/icon	Verbless End-point	
+/applications/{listingVersionId}/packages	Verbless End-point	
+/applications/{listingVersionId}/relateddocs	Verbless End-point	
+/applications/{listingVersionId}/screenshots	Verbless End-point	
+/applications/{listingVersionId}/supportingdocs	Verbless End-point	
+/applications/{listingVersionId}/version	Verbless End-point	
+/applications/{listingVersionId}	Verbless End-point	
+/applications/{listingVersionId}/banner	Verbless End-point	
+/applications/{listingVersionId}/comments/{id}	Verbless End-point	
+/applications/{listingVersionId}/icon	Verbless End-point	
+/applications/{listingVersionId}/packages/{packageVersionId}	Verbless End-point	
+/applications/{listingVersionId}/recommendedservices	Verbless End-point	

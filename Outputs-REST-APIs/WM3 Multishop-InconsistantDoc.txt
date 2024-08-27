@@ -1,0 +1,59 @@
+***Anti-Pattern*** 
+Count: 3
+POST	 /shop/admin/price_lists 	Inconsistent Documentation	Create Price list
+PUT	 /shop/admin/price_lists/:id 	Inconsistent Documentation	Update Price list
+POST	 /shop/admin/variants/update_stock 	Inconsistent Documentation	Update Variants stock
+
+***Patterns*** 
+Count: 51
+GET	 /shop/admin/prices?customer_id=:customer_id 	Consistent Documentation	Retrieve Customer Prices
+POST	 /shop/admin/customers/:customer_id/prices 	Consistent Documentation	Create Customer Price
+DELETE	/shop/admin/customers/:customer_id/prices/:variant_id	Consistent Documentation	DELETE
+GET	 /shop/admin/price_lists 	Consistent Documentation	Retrieve Price lists
+GET	 /shop/admin/price_lists/:id 	Consistent Documentation	Retrieve Price list
+GET	 /shop/admin/products 	Consistent Documentation	Retrieve Products
+GET	 /shop/admin/products/:id 	Consistent Documentation	Retrieve Product
+POST	 /shop/admin/products 	Consistent Documentation	Create Product
+POST	 /shop/admin/products 	Consistent Documentation	Create multiple Products
+PUT	 /shop/admin/products/:idUpdate Product 	Consistent Documentation	
+GET	 /shop/admin/properties 	Consistent Documentation	Retrieve Properties
+GET	 /shop/admin/properties/:id 	Consistent Documentation	Retrieve Property
+PUT	 /shop/admin/properties/:id 	Consistent Documentation	Update Property
+GET	 /shop/admin/properties/:property_id/property_values 	Consistent Documentation	Retrieve Property values
+GET	 /shop/admin/properties/:property_id/property_values/:id 	Consistent Documentation	Retrieve Property value
+POST	 /shop/admin/properties/:property_id/property_values 	Consistent Documentation	Create Property value
+PUT	 /shop/admin/properties/:property_id/property_values/:id 	Consistent Documentation	Update Property value
+GET	 /shop/admin/shipping_categories 	Consistent Documentation	Retrieve Shipping categories
+GET	 /shop/admin/shipping_categories/:id 	Consistent Documentation	Retrieve Shipping category
+POST	 /shop/admin/shipping_categories 	Consistent Documentation	Create Shipping category
+PUT	 /shop/admin/shipping_categories/:id 	Consistent Documentation	Update Shipping Category
+GET	 /shop/admin/shipping_methods 	Consistent Documentation	Retrieve Shipping methods
+GET	 /shop/admin/shipping_methods/:id 	Consistent Documentation	Retrieve Shipping method
+GET	 /shop/admin/prices/:price_id/staggered_prices 	Consistent Documentation	Retrieve Staggered prices
+GET	 /shop/admin/prices/:price_id/staggered_prices/:id 	Consistent Documentation	Retrieve Staggered Price
+POST	 /shop/admin/prices/:price_id/staggered_prices 	Consistent Documentation	Create Staggered Price
+PUT	 /shop/admin/prices/:price_id/staggered_prices/:id 	Consistent Documentation	Update Staggered Price
+DELETE	/shop/admin/prices/:price_id/staggered_prices/:id	Consistent Documentation	DELETE
+GET	 /shop/admin/stock_items 	Consistent Documentation	Retrieve Stock items
+GET	 /shop/admin/stock_items/:id 	Consistent Documentation	Retrieve Stock Item
+GET	 /shop/admin/variants/:variant_id/stock_item 	Consistent Documentation	Retrieve Stock Item
+PUT	 /shop/admin/stock_items/:id 	Consistent Documentation	Update Stock Item
+PUT	 /shop/admin/variants/:variant_id/stock_item 	Consistent Documentation	Update Stock Item
+POST	 /shop/admin/stock_items/:id/movement 	Consistent Documentation	Create Stock Item movement
+POST	 /shop/admin/variants/:variant_id/stock_item/movement 	Consistent Documentation	Create Stock Item movement
+GET	 /shop/admin/tax_categories 	Consistent Documentation	Retrieve Tax categories
+PUT	 /shop/admin/tax_categories/:id 	Consistent Documentation	Update Tax Category
+GET	 /shop/admin/tax_rates 	Consistent Documentation	Retrieve Tax rates
+GET	 /shop/admin/tax_rates/:id 	Consistent Documentation	Retrieve Tax rate
+PUT	 /shop/admin/tax_rates/:id 	Consistent Documentation	Update Tax rate
+GET	 /shop/admin/tax_zones 	Consistent Documentation	Retrieve Tax zones
+GET	 /shop/admin/tax_zones/:id 	Consistent Documentation	Retrieve Tax zone
+POST	 /shop/admin/tax_zones 	Consistent Documentation	Create Tax zone
+PUT	 /shop/admin/tax_zones/:id 	Consistent Documentation	Update Tax zone
+GET	 /shop/admin/variants 	Consistent Documentation	Retrieve Variants
+GET	 /shop/admin/products/:product_id/variants 	Consistent Documentation	Retrieve Variants
+GET	 /shop/admin/variants/:id 	Consistent Documentation	Retrieve Variant
+GET	 /shop/admin/products/:product_id/variants/:id 	Consistent Documentation	Retrieve Variant
+POST	 /shop/admin/products/:product_id/variants 	Consistent Documentation	Create Variant
+PUT	 /shop/admin/variants/:id 	Consistent Documentation	Update Variant
+PUT	 /shop/admin/products/:product_id/variants/:id 	Consistent Documentation	Update Variant

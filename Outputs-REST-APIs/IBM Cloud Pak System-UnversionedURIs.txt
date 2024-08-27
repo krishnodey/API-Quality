@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 34
+/deployment/resources/instances 	 No Version Found
+/deployment/resources/virtual data center./<virtual data center.UID> 	 No Version Found
+/deployment/resources/vm_configurations 	 No Version Found
+/deployment/resources/vdcs/{uuid}/vm_configurations 	 No Version Found
+/deployment/resources/volume_configurations 	 No Version Found
+/deployment/resources/vdcs/{uuid}/volume_configurations 	 No Version Found
+/deployment/resources/subnets 	 No Version Found
+/deployment/resources/subnets/<subnetUUID> 	 No Version Found
+/deployment/resources/addresses 	 No Version Found
+/deployment/resources/subnet/<subnetUUID>/addresses 	 No Version Found
+/deployment/resources/subnet/<subnetUUID>/addresses 	 No Version Found
+/deployment/resources/addresses/<addressUUID> 	 No Version Found
+/deployment/resources/addresses/<addressUUID> 	 No Version Found
+/deployment/resources/credentials 	 No Version Found
+/deployment/resources/credentials/<credentialUUID> 	 No Version Found
+/deployment/resources/images/<imageID> 	 No Version Found
+/deployment/resources/groups 	 No Version Found
+/deployment/resources/groups/<groupUUID> 	 No Version Found
+/deployment/resources/groups?isMaster=true 	 No Version Found
+/deployment/resources/groups/group<UUID>?showNested=true 	 No Version Found
+/deployment/resources/instances/<instanceUUID> 	 No Version Found
+/deployment/resources/instances 	 No Version Found
+/deployment/resources/instances/<instanceUUID> 	 No Version Found
+/deployment/resources/addresses 	 No Version Found
+/deployment/resources/volumes 	 No Version Found
+/deployment/resources/volumes/<volumeUUID> 	 No Version Found
+/deployment/resources/volumes 	 No Version Found
+/deployment/resources/instances/<instanceUUID> 	 No Version Found
+/deployment/resources/instance_snapshots 	 No Version Found
+/deployment/resources/acls 	 No Version Found
+/audit/resources/audit_config 	 No Version Found
+/admin/resources/backup 	 No Version Found
+/admin/resources/backup_subcomponents/{id} 	 No Version Found
+/admin/resources/chassis_management_modules 	 No Version Found
+
+***Patterns*** 
+Count: 0

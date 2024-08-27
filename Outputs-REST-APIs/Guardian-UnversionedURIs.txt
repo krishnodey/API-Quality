@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 5
+/getEditions 	 No Version Found
+/getSections 	 No Version Found
+/getSingleItem 	 No Version Found
+/getTags 	 No Version Found
+/searchContent 	 No Version Found
+
+***Patterns*** 
+Count: 0

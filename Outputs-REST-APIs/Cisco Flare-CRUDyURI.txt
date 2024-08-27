@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 25
+/environments	Verbless End-point	
+/environments?latitude={latitude}&longitude={longitude}	Verbless End-point	
+/environments?key={key}&value={value}	Verbless End-point	
+/environments	Verbless End-point	
+/environments/{environment_id}	Verbless End-point	
+/environments/{environment_id}	Verbless End-point	
+/environments/{environment_id}	Verbless End-point	
+/environments/{environment_id}/zones	Verbless End-point	
+/environments/{environment_id}/zones?x={x}&y={y}	Verbless End-point	
+/environments/{environment_id}/zones?key={key}&value={value}	Verbless End-point	
+/environments/{environment_id}/zones	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Verbless End-point	
+/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Verbless End-point	
+/environments/{environment_id}/devices	Verbless End-point	

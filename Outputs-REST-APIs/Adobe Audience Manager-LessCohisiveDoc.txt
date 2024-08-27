@@ -1,0 +1,70 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 65
+-/models/{modelId}	Pertinent Documentation	Updates an algorithmic model.
+-/models/{modelId}	Pertinent Documentation	Deletes an algorithmic model.
+-/models	Pertinent Documentation	Returns an array of algorithmic models and their summary.
+-/models	Pertinent Documentation	Creates an algorithmic model.
+-/models/{modelId}/processing-history	Pertinent Documentation	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
+-/models/{modelId}/runs/latest/traits	Pertinent Documentation	Returns a list of your most influential (accurate) traits for your algorithmic model.
+-/models/{modelId}/runs/latest/stats	Pertinent Documentation	Returns accuracy and reach values for your algorithmic model.
+-/models/bulk-delete	Pertinent Documentation	Delete multiple algorithmic models with a single operation.
+-/models/limits	Pertinent Documentation	Returns a count of the maximum number of algorithmic models you can create.
+-/algorithms/{algoTypeId}	Pertinent Documentation	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
+-/algorithms	Pertinent Documentation	Returns ID, name, and description for the available algorithms.
+-/available-data-feeds/	Pertinent Documentation	Gets the 'Available Data Feed' resources for a buyer.
+-/available-data-feeds/{dataSourceId}	Pertinent Documentation	Gets the data feed from the perspective of the buyer.
+-/available-data-feeds/{dataSourceId}/plans	Pertinent Documentation	Gets the plans which belong to the data feed, from the perspective of the buyer.
+-/available-data-feeds/{dataSourceId}/subscribe	Pertinent Documentation	Creates/Updates subscription to an available data feed.
+-/available-data-feeds/{dataSourceId}/requests	Pertinent Documentation	Creates a request for an available data feed.
+-/data-feeds/billing-report	Pertinent Documentation	Gets the billing report for last month
+-/data-feeds/billing-report	Pertinent Documentation	Gets the billing report for last month in CSV format
+-/data-feeds/usage	Pertinent Documentation	Inserts impression data for the plan subscription for last month.
+-/data-feeds/bulk-usage	Pertinent Documentation	Inserts bulk impression data for multiple plan subscriptions for last month.
+-/destinations/segment-impressions/	Pertinent Documentation	Returns all the segments and corresponding impression counts for all destinations
+-/destinations/segment-impressions/	Pertinent Documentation	Updates the segments and corresponding impression counts for destinations
+-/data-feeds/	Pertinent Documentation	Gets the `Data Feed` resources.
+-/data-feeds/	Pertinent Documentation	Creates a new `Data Feed`.
+-/data-feeds/{dataSourceId}	Pertinent Documentation	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+-/data-feeds/{dataSourceId}	Pertinent Documentation	Updates the 'Data Feed'.
+-/data-feeds/{dataSourceId}	Pertinent Documentation	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+-/data-feeds/{dataSourceId}/plans/	Pertinent Documentation	Gets the list of plans under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/plans/	Pertinent Documentation	Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.
+-/data-feeds/{dataSourceId}/subscriptions	Pertinent Documentation	Gets the list of 'Subscriptions' under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/subscriptions	Pertinent Documentation	Updates the list of 'Subscriptions' under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/requests/	Pertinent Documentation	Gets the list of 'Subscriptions Request' under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/requests/	Pertinent Documentation	Creates a 'Subscription' under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/requests/{requestId}	Pertinent Documentation	Gets a 'Data Feed Request' with 'requestId'.
+-/data-feeds/{dataSourceId}/requests/{requestId}	Pertinent Documentation	Updates an existing 'Data Feed Request'.
+-/data-feeds/{dataSourceId}/potential-subscribers/	Pertinent Documentation	Returns the list of potential subscribers for a 'Data Feed'.
+-/data-feeds/{dataSourceId}/plans/{planId}	Pertinent Documentation	Gets a 'Data Feed Plan' under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/plans/{planId}	Pertinent Documentation	Updates a 'Data Feed Plan' under a 'Data Feed'.
+-/data-feeds/{dataSourceId}/plans/{planId}	Pertinent Documentation	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+-/datasources/	Pertinent Documentation	Returns details about all GENERAL data sources.
+-/datasources/	Pertinent Documentation	Creates a Data Source of the type GENERAL or MERGE RULE.
+-/datasources/{dataSourceId}	Pertinent Documentation	Returns details about a specific data source.
+-/datasources/{dataSourceId}	Pertinent Documentation	Update a specific GENERAL or MERGE_RULE data source.
+-/datasources/{dataSourceId}	Pertinent Documentation	Delete a specific data source.
+-/datasources/bulk-delete	Pertinent Documentation	Bulk delete multiple data sources.
+-/datasources/configurations/available-id-types	Pertinent Documentation	Returns all available data source ID types.
+-/datasources/configurations/marketing-cloud-visitorid-versions	Pertinent Documentation	Returns a list of all active Experience Cloud visitor ID versions.
+-/datasources/{dataSourceId}/history/inbound	Pertinent Documentation	Returns Onboarding Status Report with success and failure rates for inbound data source files.
+-/datasources/{dataSourceId}/history/inbound/sampling-data	Pertinent Documentation	Returns sampling data for a datasource for onboarding (inbound) files.
+-/signals/derived/{derivedSignalId}	Pertinent Documentation	Returns information about a single derived signal.
+-/signals/derived/{derivedSignalId}	Pertinent Documentation	Updates a single derived signal.
+-/signals/derived/{derivedSignalId}	Pertinent Documentation	Deletes a single derived signal.
+-/signals/derived	Pertinent Documentation	Returns an array of derived signals and their information.
+-/signals/derived	Pertinent Documentation	Creates a new derived signal
+-/signals/derived/limits	Pertinent Documentation	Returns a count of the maximum number of derived signals you can create.
+-/destinations/	Pertinent Documentation	Creates a new destination.
+-/destinations/	Pertinent Documentation	Returns data for all your destinations.
+-/destinations/limits	Pertinent Documentation	Returns a count of the maximum number of destinations you can create.
+-/destinations/{destinationId}/history/outbound/	Pertinent Documentation	Returns outbound history for a specific destination by 'destinationId'.
+-/destinations/{destinationId}	Pertinent Documentation	Returns a specific destination by 'destinationId'.
+-/destinations/{destinationId}	Pertinent Documentation	Deletes a specific destination by 'destinationId'.
+-/destinations/{destinationId}	Pertinent Documentation	Updates a specific destination by 'destinationId'.
+-/destinations/{destinationId}/bulk-create	Pertinent Documentation	Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.
+-/destinations/{destinationId}/bulk-delete	Pertinent Documentation	Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.
+-/destinations/{destinationId}/mappings-by-priority/	Pertinent Documentation	Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.

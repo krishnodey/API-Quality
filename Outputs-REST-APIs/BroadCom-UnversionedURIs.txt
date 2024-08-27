@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 40
+/api/getAccess 	 No Version Found
+/bui/getBUIAllConfig 	 No Version Found
+/bui/getAllowedStatus 	 No Version Found
+/bui/getMyTicketDetails({persid}) 	 No Version Found
+/bui/getTicketsCustomData({persid}) 	 No Version Found
+/bui/getDefaultCategories 	 No Version Found
+/bui/attrInfo 	 No Version Found
+/bui/attrCtrl 	 No Version Found
+/bui/addLogComment 	 No Version Found
+/bui/changeStatus/{factory}({persid}) 	 No Version Found
+/bui/allFeeds({persid}) 	 No Version Found
+/bui/attmnt 	 No Version Found
+/bui/getBopSID 	 No Version Found
+/bui/attmnt({persid})/$value 	 No Version Found
+/bui/updateStatusForNotification 	 No Version Found
+/bui/updateStatusForAllNotification 	 No Version Found
+/bui/getMyResources 	 No Version Found
+/bui/getMyActiveChatSession 	 No Version Found
+/bui/checkActiveSessions 	 No Version Found
+/bui/createChatThread 	 No Version Found
+/bui/getChatHistory/{roomName} 	 No Version Found
+/bui/getDocument({id}) 	 No Version Found
+/bui/getKDAttachments({id}) 	 No Version Found
+/bui/getKDComments({id}) 	 No Version Found
+/bui/addKDComment({id}) 	 No Version Found
+/bui/rateDocument({id}) 	 No Version Found
+/bui/kdLinkInfo({id}) 	 No Version Found
+/bui/unLinkSolution({id}) 	 No Version Found
+/bui/helpAbout 	 No Version Found
+/bui/getEEMAuth 	 No Version Found
+/bui/{factory}({persid}) 	 No Version Found
+/bui/{factory}({persid}) 	 No Version Found
+/bui/{factory} 	 No Version Found
+/bui/{factory} 	 No Version Found
+/gs/mytkt_active 	 No Version Found
+/gs/mytkt_inactive 	 No Version Found
+/getServiceRequest 	 No Version Found
+/pcatSearch 	 No Version Found
+/getOfferings 	 No Version Found
+/suggestedSolutions 	 No Version Found
+
+***Patterns*** 
+Count: 0

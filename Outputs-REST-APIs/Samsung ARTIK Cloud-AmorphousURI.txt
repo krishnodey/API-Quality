@@ -59,27 +59,27 @@ Count: 56
 
 ***Patterns*** 
 Count: 24
-/users/self	Tidy End-point	Tidy Endpoint
-/devices	Tidy End-point	Tidy Endpoint
-/devices/status	Tidy End-point	Tidy Endpoint
-/devicetypes/<deviceTypeId>/whitelist	Tidy End-point	Tidy Endpoint
-/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Tidy End-point	Tidy Endpoint
-/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Tidy End-point	Tidy Endpoint
-/devicetypes/<deviceTypeId>/whitelist	Tidy End-point	Tidy Endpoint
-/messages	Tidy End-point	Tidy Endpoint
-/messages	Tidy End-point	Tidy Endpoint
-/actions	Tidy End-point	Tidy Endpoint
-/actions	Tidy End-point	Tidy Endpoint
-/messages/last	Tidy End-point	Tidy Endpoint
-/messages/analytics/aggregates	Tidy End-point	Tidy Endpoint
-/messages/analytics/histogram	Tidy End-point	Tidy Endpoint
-/messages/presence	Tidy End-point	Tidy Endpoint
-/messages/snapshots	Tidy End-point	Tidy Endpoint
-/messages/export	Tidy End-point	Tidy Endpoint
-/messages/export/history	Tidy End-point	Tidy Endpoint
-/subscriptions	Tidy End-point	Tidy Endpoint
-/subscriptions	Tidy End-point	Tidy Endpoint
-/rules	Tidy End-point	Tidy Endpoint
-/scenes	Tidy End-point	Tidy Endpoint
-/scenes	Tidy End-point	Tidy Endpoint
-/ml/models	Tidy End-point	Tidy Endpoint
+/users/self	Tidy End-point	
+/devices	Tidy End-point	
+/devices/status	Tidy End-point	
+/devicetypes/<deviceTypeId>/whitelist	Tidy End-point	
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/status	Tidy End-point	
+/devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows	Tidy End-point	
+/devicetypes/<deviceTypeId>/whitelist	Tidy End-point	
+/messages	Tidy End-point	
+/messages	Tidy End-point	
+/actions	Tidy End-point	
+/actions	Tidy End-point	
+/messages/last	Tidy End-point	
+/messages/analytics/aggregates	Tidy End-point	
+/messages/analytics/histogram	Tidy End-point	
+/messages/presence	Tidy End-point	
+/messages/snapshots	Tidy End-point	
+/messages/export	Tidy End-point	
+/messages/export/history	Tidy End-point	
+/subscriptions	Tidy End-point	
+/subscriptions	Tidy End-point	
+/rules	Tidy End-point	
+/scenes	Tidy End-point	
+/scenes	Tidy End-point	
+/ml/models	Tidy End-point	

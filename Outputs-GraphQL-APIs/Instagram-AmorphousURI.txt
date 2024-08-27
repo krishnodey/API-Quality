@@ -12,22 +12,22 @@ Count: 9
 
 ***Patterns*** 
 Count: 19
-/{ig-comment-id}?fields={fields}	Tidy End-point	Tidy Endpoint
-/{app-id}|{client-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-comment-id}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-comment-id}/replies	Tidy End-point	Tidy Endpoint
-/{ig-comment-id}/replies?message={message}	Tidy End-point	Tidy Endpoint
-/{ig-media-id}/comments	Tidy End-point	Tidy Endpoint
-/{ig-comment-id}/replies	Tidy End-point	Tidy Endpoint
-/{ig-comment-id}	Tidy End-point	Tidy Endpoint
-/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Tidy End-point	Tidy Endpoint
-{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-user-id}	Tidy End-point	Tidy Endpoint
-/{api-version}//{instagram-container-id}	Tidy End-point	Tidy Endpoint
-/{api-version}//{ig-hashtag-id}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Tidy End-point	Tidy Endpoint
-/{api-version}/{ig-user-id}/insights	Tidy End-point	Tidy Endpoint
+/{ig-comment-id}?fields={fields}	Tidy End-point	
+/{app-id}|{client-token}	Tidy End-point	
+/{api-version}/{ig-comment-id}	Tidy End-point	
+/{api-version}/{ig-comment-id}/replies	Tidy End-point	
+/{ig-comment-id}/replies?message={message}	Tidy End-point	
+/{ig-media-id}/comments	Tidy End-point	
+/{ig-comment-id}/replies	Tidy End-point	
+/{ig-comment-id}	Tidy End-point	
+/{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Tidy End-point	
+{api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-user-id}	Tidy End-point	
+/{api-version}//{instagram-container-id}	Tidy End-point	
+/{api-version}//{ig-hashtag-id}	Tidy End-point	
+/{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Tidy End-point	
+/{api-version}/{ig-user-id}/insights	Tidy End-point	

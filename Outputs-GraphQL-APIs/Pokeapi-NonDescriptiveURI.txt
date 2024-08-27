@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 24
+/v2/count/	 Self-descriptive End-point
+/v2/next/	 Self-descriptive End-point
+/v2/previous/	 Self-descriptive End-point
+/v2/results/	 Self-descriptive End-point
+/v2/berry/{id or name}/	 Self-descriptive End-point
+/v2/berry/{id}/	 Self-descriptive End-point
+/v2/berry/{name}/	 Self-descriptive End-point
+/v2/berry/{growth_time}/	 Self-descriptive End-point
+/v2/berry/{max_harvest}/	 Self-descriptive End-point
+/v2/berry/{natural_gift_power}/	 Self-descriptive End-point
+/v2/berry/{size}/	 Self-descriptive End-point
+/v2/berry/{smoothness}/	 Self-descriptive End-point
+/v2/berry/{soil_dryness}/	 Self-descriptive End-point
+/v2/berry/{firmness}/	 Self-descriptive End-point
+/v2/berry/{flavors}/	 Self-descriptive End-point
+/v2/berry/{items}/	 Self-descriptive End-point
+/v2/berry/{natural_gift_type}/	 Self-descriptive End-point
+/v2/berry/{potency}/	 Self-descriptive End-point
+/v2/berry-firmness/{id}/	 Self-descriptive End-point
+/v2/berry-firmness/{id or name}/	 Self-descriptive End-point
+/v2/berry-firmness/{name}/	 Self-descriptive End-point
+/v2/berry-firmness/{berries}/	 Self-descriptive End-point
+/v2/berry-firmness/{names}/	 Self-descriptive End-point
+v2/berry-flavor/{id or name}/	 Self-descriptive End-point

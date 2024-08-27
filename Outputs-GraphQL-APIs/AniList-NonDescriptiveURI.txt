@@ -1,0 +1,32 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 27
+/v2/oauth/token	 Self-descriptive End-point
+/v2/oauth/pin	 Self-descriptive End-point
+v2/SaveMediaListEntry	 Self-descriptive End-point
+v2/UpdateMediaListEntries	 Self-descriptive End-point
+v2/DeleteMediaListEntry	 Self-descriptive End-point
+v2/DeleteCustomList	 Self-descriptive End-point
+v2/SaveTextActivity	 Self-descriptive End-point
+v2/SaveListActivity	 Self-descriptive End-point
+v2/DeleteActivity	 Self-descriptive End-point
+v2/ToggleActivityPin	 Self-descriptive End-point
+v2/ToggleActivitySubscription	 Self-descriptive End-point
+v2/SaveActivityReply	 Self-descriptive End-point
+v2/DeleteActivityReply	 Self-descriptive End-point
+v2/ToggleLike	 Self-descriptive End-point
+v2/ToggleLikeV2	 Self-descriptive End-point
+v2/ToggleFollow	 Self-descriptive End-point
+v2/ToggleFavourite	 Self-descriptive End-point
+v2/UpdateFavouriteOrder	 Self-descriptive End-point
+v2/SaveReview	 Self-descriptive End-point
+v2/DeleteReview	 Self-descriptive End-point
+v2/RateReview	 Self-descriptive End-point
+v2/SaveRecommendation	 Self-descriptive End-point
+v2/SaveThread	 Self-descriptive End-point
+v2/DeleteThread	 Self-descriptive End-point
+v2/ToggleThreadSubscription	 Self-descriptive End-point
+v2/SaveThreadComment	 Self-descriptive End-point
+v2/DeleteThreadComment	 Self-descriptive End-point

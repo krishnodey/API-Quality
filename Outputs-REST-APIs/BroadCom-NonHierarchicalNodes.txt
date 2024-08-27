@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 19
+/api/getAccess	Non-hierarchical Nodes	Reversed hierarchy of type True detected between get and access. 0 hierarchical relations were detected out of 39
+/bui/getBUIAllConfig	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getAllowedStatus	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getMyTicketDetails({persid})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getTicketsCustomData({persid})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getDefaultCategories	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/attrCtrl	Non-hierarchical Nodes	Reversed hierarchy of type True detected between attributes and control. 0 hierarchical relations were detected out of 39
+/bui/changeStatus/{factory}({persid})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and change. 0 hierarchical relations were detected out of 39
+/bui/getBopSID	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getMyResources	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getMyActiveChatSession	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/createChatThread	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and create. 0 hierarchical relations were detected out of 39
+/bui/getChatHistory/{roomName}	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getDocument({id})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getKDAttachments({id})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/getKDComments({id})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+/bui/addKDComment({id})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between add and knowledge. 0 hierarchical relations were detected out of 39
+/bui/kdLinkInfo({id})	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and knowledge. 0 hierarchical relations were detected out of 39
+/bui/getEEMAuth	Non-hierarchical Nodes	Reversed hierarchy of type True detected between return and get. 0 hierarchical relations were detected out of 39
+
+***Patterns*** 
+Count: 21
+/bui/attrInfo	Hierarchical Nodes	
+/bui/addLogComment	Hierarchical Nodes	
+/bui/allFeeds({persid})	Hierarchical Nodes	
+/bui/attmnt	Hierarchical Nodes	
+/bui/attmnt({persid})/$value	Hierarchical Nodes	
+/bui/updateStatusForNotification	Hierarchical Nodes	
+/bui/updateStatusForAllNotification	Hierarchical Nodes	
+/bui/checkActiveSessions	Hierarchical Nodes	
+/bui/rateDocument({id})	Hierarchical Nodes	
+/bui/unLinkSolution({id})	Hierarchical Nodes	
+/bui/helpAbout	Hierarchical Nodes	
+/bui/{factory}({persid})	Hierarchical Nodes	
+/bui/{factory}({persid})	Hierarchical Nodes	
+/bui/{factory}	Hierarchical Nodes	
+/bui/{factory}	Hierarchical Nodes	
+/gs/mytkt_active	Hierarchical Nodes	
+/gs/mytkt_inactive	Hierarchical Nodes	
+/getServiceRequest	Hierarchical Nodes	
+/pcatSearch	Hierarchical Nodes	
+/getOfferings	Hierarchical Nodes	
+/suggestedSolutions	Hierarchical Nodes	

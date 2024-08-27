@@ -1,0 +1,38 @@
+***Anti-Pattern*** 
+Count: 5
+/delegateAccessTokenCreate	CRUDy End-point	 [create found] 
+/storefrontAccessTokenCreate	CRUDy End-point	 [create found] 
+/storefrontAccessTokenDelete	CRUDy End-point	 [delete found] 
+/publicationCreate	CRUDy End-point	 [create found] 
+/publicationUpdate	CRUDy End-point	 [update found] 
+
+***Patterns*** 
+Count: 28
+/AccessScope	Verbless End-point	
+/DelegateAccessToken	Verbless End-point	
+/StorefrontAccessToken	Verbless End-point	
+/shopifyqlQuery	Verbless End-point	
+/ErrorPosition	Verbless End-point	
+/ParseError	Verbless End-point	
+/ParseErrorRange	Verbless End-point	
+/PolarisVizDataPoint	Verbless End-point	
+/PolarisVizDataSeries	Verbless End-point	
+/PolarisVizResponse	Verbless End-point	
+/TableData	Verbless End-point	
+/TableDataColumn	Verbless End-point	
+/TableResponse	Verbless End-point	
+/query/{id}	Verbless End-point	
+/appByHandle	Verbless End-point	
+/appByKey	Verbless End-point	
+/appInstallation/{id}	Verbless End-point	
+/appInstallations	Verbless End-point	
+/currentAppInstallation	Verbless End-point	
+/publication/{id}	Verbless End-point	
+/publications	Verbless End-point	
+/publicationDelete{id}	Verbless End-point	
+/AppFeedback	Verbless End-point	
+/AppInstallation	Verbless End-point	
+/FailedRequirement	Verbless End-point	
+/Link	Verbless End-point	
+/Publication	Verbless End-point	
+/ResourceFeedback	Verbless End-point	

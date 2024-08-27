@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 21
+/company/<realmID>/account	Hierarchical Nodes	
+/company/<realmID>/query?query=<selectStatement>	Hierarchical Nodes	
+/company/<realmID>/account/<accountId>	Hierarchical Nodes	
+/company/<realmID>/account	Hierarchical Nodes	
+/company/<realmID>/bill	Hierarchical Nodes	
+/company/<realmID>/bill?operation=delete	Hierarchical Nodes	
+/company/<realmID>/query?query=<selectStatement>	Hierarchical Nodes	
+/company/<realmID>/bill/<billId>	Hierarchical Nodes	
+/company/<realmID>/bill	Hierarchical Nodes	
+/company/<realmID>/query?query=<selectStatement>	Hierarchical Nodes	
+/company/<realmID>/companyinfo/<realmID>	Hierarchical Nodes	
+/company/<realmID>/companyinfo	Hierarchical Nodes	
+/company/<realmID>/companyinfo	Hierarchical Nodes	
+/company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	Hierarchical Nodes	
+/company/<realmID>/invoice	Hierarchical Nodes	
+/company/<realmID>/invoice?operation=delete	Hierarchical Nodes	
+/company/<realmID>/invoice?operation=void	Hierarchical Nodes	
+/company/<realmID>/invoice/<invoiceId>/pdf	Hierarchical Nodes	
+/company/<realmID>/query?query=<selectStatement>	Hierarchical Nodes	
+/company/<realmID>/invoice	Hierarchical Nodes	
+/company/<realmID>/purchase	Hierarchical Nodes	

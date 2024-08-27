@@ -7,18 +7,18 @@ Count: 4
 
 ***Patterns*** 
 Count: 15
-/{ig-comment-id}?fields={fields}	Tidy End-point	Tidy Endpoint
-/{ig-comment-id}?hide={hide}	Tidy End-point	Tidy Endpoint
-/{ig-comment-id}	Tidy End-point	Tidy Endpoint
-/oauth/authorize	Tidy End-point	Tidy Endpoint
-/{media-id}	Tidy End-point	Tidy Endpoint
-/{media-id}/children	Tidy End-point	Tidy Endpoint
-/{user-id}/media	Tidy End-point	Tidy Endpoint
-/me	Tidy End-point	Tidy Endpoint
-/{user-id}	Tidy End-point	Tidy Endpoint
-/{ig-hashtag-id}	Tidy End-point	Tidy Endpoint
-/{ig-media-id}?fields={fields}	Tidy End-point	Tidy Endpoint
-/{ig-media-id}?comment_enabled={comment_enabled}	Tidy End-point	Tidy Endpoint
-/{ig-media-id}/comments?message={message}	Tidy End-point	Tidy Endpoint
-/{ig-media-id}/comments	Tidy End-point	Tidy Endpoint
-/{ig-user-id}?fields={fields}	Tidy End-point	Tidy Endpoint
+/{ig-comment-id}?fields={fields}	Tidy End-point	
+/{ig-comment-id}?hide={hide}	Tidy End-point	
+/{ig-comment-id}	Tidy End-point	
+/oauth/authorize	Tidy End-point	
+/{media-id}	Tidy End-point	
+/{media-id}/children	Tidy End-point	
+/{user-id}/media	Tidy End-point	
+/me	Tidy End-point	
+/{user-id}	Tidy End-point	
+/{ig-hashtag-id}	Tidy End-point	
+/{ig-media-id}?fields={fields}	Tidy End-point	
+/{ig-media-id}?comment_enabled={comment_enabled}	Tidy End-point	
+/{ig-media-id}/comments?message={message}	Tidy End-point	
+/{ig-media-id}/comments	Tidy End-point	
+/{ig-user-id}?fields={fields}	Tidy End-point	

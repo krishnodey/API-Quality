@@ -1,0 +1,60 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 55
+/abuseReport/{id}	Verbless End-point	
+/abuseReportLabels	Verbless End-point	
+/addOnPurchase/{id}	Verbless End-point	
+/aiMessages	Verbless End-point	
+/auditEventDefinitions	Verbless End-point	
+/auditEventsInstanceAmazonS3Configurations	Verbless End-point	
+/boardList/{id}	Verbless End-point	
+/ciCatalogResource/{id}	Verbless End-point	
+/ciCatalogResources/{projectPath}	Verbless End-point	
+/ciConfig/{projectPath}	Verbless End-point	
+/ciMinutesUsage/{namespaceId}	Verbless End-point	
+/ciPipelineStage/{id}	Verbless End-point	
+/ciQueueingHistory	Verbless End-point	
+/ciVariables	Verbless End-point	
+/containerRepository/{id}	Verbless End-point	
+/currentLicense	Verbless End-point	
+/currentUser	Verbless End-point	
+/designManagement	Verbless End-point	
+/devopsAdoptionEnabledNamespaces/{displayNamespaceId}	Verbless End-point	
+/echo	Verbless End-point	
+/epicBoardList/{id}	Verbless End-point	
+/explainVulnerabilityPrompt/{vulnerabilityId}	Verbless End-point	
+/frecentGroups	Verbless End-point	
+/frecentProjects	Verbless End-point	
+/geoNode	Verbless End-point	
+/gitpodEnabled	Verbless End-point	
+/group	Verbless End-point	
+groups	Verbless End-point	
+/instanceExternalAuditEventDestinations	Verbless End-point	
+/instanceGoogleCloudLoggingConfigurations	Verbless End-point	
+/instanceSecurityDashboard	Verbless End-point	
+/issue/{id}	Verbless End-point	
+/issues/{assigneeId}	Verbless End-point	
+/iteration/{id}	Verbless End-point	
+/jobs	Verbless End-point	
+/licenseHistoryEntries	Verbless End-point	
+/memberRole/{id}	Verbless End-point	
+/memberRolePermissions	Verbless End-point	
+/memberRoles/{id}	Verbless End-point	
+/mergeRequest/{id}	Verbless End-point	
+/metadata	Verbless End-point	
+/milestone/{id}	Verbless End-point	
+/mlModel/{id}	Verbless End-point	
+/namespace	Verbless End-point	
+/note/{id}	Verbless End-point	
+/organization/{id}	Verbless End-point	
+/organizations	Verbless End-point	
+/package/{id}	Verbless End-point	
+/project/{fullPath}	Verbless End-point	
+/projects/{ids}	Verbless End-point	
+/queryComplexity	Verbless End-point	
+/runner/{id}	Verbless End-point	
+/runnerSetup	Verbless End-point	
+/runners/{creatorId}	Verbless End-point	
+/selfManagedAddOnEligibleUsers	Verbless End-point	

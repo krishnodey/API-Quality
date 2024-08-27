@@ -1,0 +1,59 @@
+***Anti-Pattern*** 
+Count: 3
+POST 	/shop/admin/stock_items/:id/movement	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/shop/admin/variants/:variant_id/stock_item/movement	Pluralized Nodes	 [Singular last node with POST method.] 
+POST 	/shop/admin/variants/update_stock	Pluralized Nodes	 [Singular last node with POST method.] 
+
+***Patterns*** 
+Count: 51
+GET 	/shop/admin/prices?customer_id=:customer_id	 Regular methods
+POST 	/shop/admin/customers/:customer_id/prices	Singularized Nodes	 [Pluralized last node with POST method.] 
+DELETE 	/shop/admin/customers/:customer_id/prices/:variant_id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/price_lists	 Regular methods
+GET 	/shop/admin/price_lists/:id	 Regular methods
+POST 	/shop/admin/price_lists	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/price_lists/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/products	 Regular methods
+GET 	/shop/admin/products/:id	 Regular methods
+POST 	/shop/admin/products	Singularized Nodes	 [Pluralized last node with POST method.] 
+POST 	/shop/admin/products	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/products/:idUpdate Product	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/properties	 Regular methods
+GET 	/shop/admin/properties/:id	 Regular methods
+PUT 	/shop/admin/properties/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/properties/:property_id/property_values	 Regular methods
+GET 	/shop/admin/properties/:property_id/property_values/:id	 Regular methods
+POST 	/shop/admin/properties/:property_id/property_values	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/properties/:property_id/property_values/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/shipping_categories	 Regular methods
+GET 	/shop/admin/shipping_categories/:id	 Regular methods
+POST 	/shop/admin/shipping_categories	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/shipping_categories/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/shipping_methods	 Regular methods
+GET 	/shop/admin/shipping_methods/:id	 Regular methods
+GET 	/shop/admin/prices/:price_id/staggered_prices	 Regular methods
+GET 	/shop/admin/prices/:price_id/staggered_prices/:id	 Regular methods
+POST 	/shop/admin/prices/:price_id/staggered_prices	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/prices/:price_id/staggered_prices/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+DELETE 	/shop/admin/prices/:price_id/staggered_prices/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/stock_items	 Regular methods
+GET 	/shop/admin/stock_items/:id	 Regular methods
+GET 	/shop/admin/variants/:variant_id/stock_item	 Regular methods
+PUT 	/shop/admin/stock_items/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/shop/admin/variants/:variant_id/stock_item	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/tax_categories	 Regular methods
+PUT 	/shop/admin/tax_categories/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/tax_rates	 Regular methods
+GET 	/shop/admin/tax_rates/:id	 Regular methods
+PUT 	/shop/admin/tax_rates/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/tax_zones	 Regular methods
+GET 	/shop/admin/tax_zones/:id	 Regular methods
+POST 	/shop/admin/tax_zones	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/tax_zones/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+GET 	/shop/admin/variants	 Regular methods
+GET 	/shop/admin/products/:product_id/variants	 Regular methods
+GET 	/shop/admin/variants/:id	 Regular methods
+GET 	/shop/admin/products/:product_id/variants/:id	 Regular methods
+POST 	/shop/admin/products/:product_id/variants	Singularized Nodes	 [Pluralized last node with POST method.] 
+PUT 	/shop/admin/variants/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
+PUT 	/shop/admin/products/:product_id/variants/:id	Singularized Nodes	 [Singular last node with PUT|DELETE method.] 
