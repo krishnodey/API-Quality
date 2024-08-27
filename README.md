@@ -192,7 +192,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/krishnodey_) -dey.krishno25@egmail.com
+Your Name - [@krishnodey_](https://twitter.com/krishnodey_) -dey.krishno25@egmail.com
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 

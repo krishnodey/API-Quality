@@ -1,19 +1,22 @@
-import pandas as pd
+import json
 import random
 
 # Set your random seed for reproducibility
 random_seed = 42
 random.seed(random_seed)
 
-# Load the CSV file into a pandas DataFrame
-file_path = './Result-Database/result_database.csv'
-df = pd.read_csv(file_path, header=0, encoding='ISO-8859-1')
+# Load the JSONL file and read all lines
+file_path = './All-Data/output_data.jsonl'
+with open(file_path, 'r', encoding='utf-8') as infile:
+    lines = infile.readlines()
 
-# Select 100 random rows from the DataFrame
-selected_rows = df.sample(n=91)
+# Select 91 random lines
+selected_lines = random.sample(lines, 91)
 
+# Save the selected lines to a new JSONL file
+output_file_path = './Journal-Resources/Validation-Survey/validation_data.jsonl'
+with open(output_file_path, 'w', encoding='utf-8') as outfile:
+    outfile.writelines(selected_lines)
 
-output_file_path = './Result-Database/validation_data.csv'
-selected_rows.to_csv(output_file_path, index=False)
+print(f"Selected 91 lines saved to {output_file_path} with random seed {random_seed}.")
 
-print(f"Selected 91 rows saved to {output_file_path} with random seed {random_seed}.")
