@@ -85,11 +85,11 @@ print("\nFinished Detection of AmorphousURI.\n")
 # print("\nFinished Detection of Non-descriptiveURI:\n")
 
 
-# print("Detection of NonHierarchicalNodes:")
-# result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
-# pattern_type = "NonHierarchicalNodes"
-# uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-# print("\nFinished Detection of NonHierarchicalNodes:\n")
+print("Detection of NonHierarchicalNodes:")
+result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
+pattern_type = "NonHierarchicalNodes"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("\nFinished Detection of NonHierarchicalNodes:\n")
 
 # print("Detection of InconsistantDocumentation:")
 # result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations()

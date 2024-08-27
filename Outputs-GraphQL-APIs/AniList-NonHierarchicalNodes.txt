@@ -1,7 +1,7 @@
 ***Anti-Pattern*** 
 Count: 2
-v2/SaveListActivity	Non-hierarchical Nodes	Reversed hierarchy of type True detected between save and list. 0 hierarchical relations were detected out of -1
-v2/ToggleActivitySubscription	Non-hierarchical Nodes	Reversed hierarchy of type True detected between activity and subscription. 0 hierarchical relations were detected out of -1
+v2/SaveListActivity	Non-hierarchical Nodes	Reversed hierarchy of type True detected between save and list. 0 hierarchical relations were detected out of 2
+v2/ToggleActivitySubscription	Non-hierarchical Nodes	Reversed hierarchy of type True detected between activity and subscription. 0 hierarchical relations were detected out of 2
 
 ***Patterns*** 
 Count: 25

@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 9
-GET	/auth/login	Identifier Ambiguity	Get the active authentication scheme
-POST	/auth/token	Identifier Ambiguity	Exchange credentials for access token
-POST	/auth/revoke	Identifier Ambiguity	Revoke an access token
-GET	/settings	Identifier Ambiguity	Get the runtime settings
-GET	/flows	Identifier Ambiguity	Get the active flow configuration
-POST	/flows	Identifier Ambiguity	Set the active flow configuration
-POST	/flow	Identifier Ambiguity	Add a flow to the active configuration
-GET	/nodes	Identifier Ambiguity	Get a list of the installed nodes
-POST	/nodes	Identifier Ambiguity	Install a new node module
+Count: 0
 
 ***Patterns*** 
-Count: 6
-GET	/flow/:id	Identifier Annotation	Get an individual flow configuration
-PUT	/flow/:id	Identifier Annotation	Update an individual flow configuration
-DELETE	/flow/:id	Identifier Annotation	Delete an individual flow configuration
-GET	/nodes/:module	Identifier Annotation	Get a node module’s information
-PUT	/nodes/:module	Identifier Annotation	Enable/Disable a node module
-DELETE	/nodes/:module	Identifier Annotation	Remove a node module
+Count: 15
+GET	 /auth/login 	[Regular Endpoints]	Get the active authentication scheme
+POST	 /auth/token 	[Regular Endpoints]	Exchange credentials for access token
+POST	 /auth/revoke 	[Regular Endpoints]	Revoke an access token
+GET	 /settings 	[Regular Endpoints]	Get the runtime settings
+GET	 /flows 	[Regular Endpoints]	Get the active flow configuration
+POST	 /flows 	[Regular Endpoints]	Set the active flow configuration
+POST	 /flow 	[Regular Endpoints]	Add a flow to the active configuration
+GET	 /flow/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Get an individual flow configuration
+PUT	 /flow/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Update an individual flow configuration
+DELETE	 /flow/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete an individual flow configuration
+GET	 /nodes 	[Regular Endpoints]	Get a list of the installed nodes
+POST	 /nodes 	[Regular Endpoints]	Install a new node module
+GET	 /nodes/:module 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a node module’s information
+PUT	 /nodes/:module 	[Identifier is Enclosed in {} or <> or Starts with :]	Enable/Disable a node module
+DELETE	 /nodes/:module 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove a node module
