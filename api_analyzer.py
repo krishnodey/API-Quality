@@ -1,5 +1,5 @@
 from uri_cleaning import UriCleaning
-from hierarchical_metrics import HierarchicalMetrics
+#from hierarchical_metrics import HierarchicalMetrics
 import re
 #import nltk
 from nltk.stem import WordNetLemmatizer #for pluralized nodes
@@ -184,7 +184,7 @@ class ApiAnalyzer:
                 i = i +1
 
                 json_string=json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)     
+                file.write(json_string+"\n")     
             
         return amorphus_result_AP, amorphus_result_P, p_count, ap_count
     
@@ -295,7 +295,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
             
                 json_string=json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return standard_uri_result_AP, standard_uri_result_P, p_count, ap_count
     
@@ -349,7 +349,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
         
                 json_string=json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return crudyURIResult_AP, crudyURIResult_P, p_count, ap_count
     
@@ -400,7 +400,7 @@ class ApiAnalyzer:
                 #row['unversioned_comment'] = comment
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
                 
         return unversioned_result_AP, versioned_result_P , p_count, ap_count
 
@@ -488,7 +488,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
                 
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
         return pluralised_result_AP, pluralised_result_P, p_count, ap_count
     
 
@@ -530,7 +530,7 @@ class ApiAnalyzer:
                     self_descriptive_P.append(f"{uris.strip()}\t {P}")                    
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return non_descriptive_AP, self_descriptive_P, p_count, ap_count
     
@@ -655,7 +655,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
             
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
         return contextless_AP, contextual_P, p_count, ap_count
     
 
@@ -782,7 +782,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
         
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
         return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
     
 
@@ -909,7 +909,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
             
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
                         
         return less_cohesive_AP, less_cohesive_P, p_count, ap_count
     
@@ -1034,7 +1034,7 @@ class ApiAnalyzer:
                     p_count += 1
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
 
@@ -1108,7 +1108,7 @@ class ApiAnalyzer:
                     p_count += 1
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return non_filtering_endpoint_AP, filtering_endpoint_P, p_count, ap_count
 
@@ -1217,7 +1217,7 @@ class ApiAnalyzer:
                 #return 'No specific pattern detected'
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return parameter_tunneling_AP, parameter_adherence_P, p_count, ap_count
 
@@ -1288,7 +1288,7 @@ class ApiAnalyzer:
                     p_count += 1
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return incosistent_resource_archetype_AP, cosistent_resource_archetype_P, p_count, ap_count
     
@@ -1338,7 +1338,7 @@ class ApiAnalyzer:
                         p_count += 1
                     print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return identifier_ambiguity_AP, identifier_annotation_P, p_count, ap_count
 
@@ -1389,6 +1389,6 @@ class ApiAnalyzer:
                     p_count += 1
                     print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
-                file.write("\n"+json_string)
+                file.write(json_string+"\n")
 
         return flat_endpoint_AP, structed_endpoint_P, p_count, ap_count

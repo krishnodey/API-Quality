@@ -3,35 +3,35 @@ Count: 0
 
 ***Patterns*** 
 Count: 32
-/appCategories	Tidy End-point	
-/appCategories/{id}	Tidy End-point	
-/appEncryptionDeclarations	Tidy End-point	
-/appEncryptionDeclarations/{id}	Tidy End-point	
-/appInfoLocalizations/{id}	Tidy End-point	
-/appInfos/{id}	Tidy End-point	
-/appPreOrders/{id}	Tidy End-point	
-/appPreviewSets/{id}	Tidy End-point	
-/appPreviews/{id}	Tidy End-point	
-/appPricePoints	Tidy End-point	
-/appPricePoints/{id}	Tidy End-point	
-/appPriceTiers	Tidy End-point	
-/appPriceTiers/{id}	Tidy End-point	
-/appPrices/{id}	Tidy End-point	
-/appScreenshotSets/{id}	Tidy End-point	
-/appScreenshots/{id}	Tidy End-point	
-/appStoreReviewAttachments/{id}	Tidy End-point	
-/appStoreReviewDetails/{id}	Tidy End-point	
-/appStoreVersionLocalizations/{id}	Tidy End-point	
-/appStoreVersions/{id}	Tidy End-point	
-/apps	Tidy End-point	
-/betaAppLocalizations	Tidy End-point	
-/endUserLicenseAgreements/{id}	Tidy End-point	
-/financeReports	Tidy End-point	
-/preReleaseVersions	Tidy End-point	
-/routingAppCoverages/{id}	Tidy End-point	
-/salesReports	Tidy End-point	
-/appCategories/{id}/subcategories	Tidy End-point	
-/appEncryptionDeclarations/{id}/app	Tidy End-point	
-/appInfos/{id}/ageRatingDeclaration	Tidy End-point	
-/appInfos/{id}/appInfoLocalizations	Tidy End-point	
-/appInfos/{id}/primaryCategory	Tidy End-point	
+/appCategories	Tidy End-point	Tidy Endpoint
+/appCategories/{id}	Tidy End-point	Tidy Endpoint
+/appEncryptionDeclarations	Tidy End-point	Tidy Endpoint
+/appEncryptionDeclarations/{id}	Tidy End-point	Tidy Endpoint
+/appInfoLocalizations/{id}	Tidy End-point	Tidy Endpoint
+/appInfos/{id}	Tidy End-point	Tidy Endpoint
+/appPreOrders/{id}	Tidy End-point	Tidy Endpoint
+/appPreviewSets/{id}	Tidy End-point	Tidy Endpoint
+/appPreviews/{id}	Tidy End-point	Tidy Endpoint
+/appPricePoints	Tidy End-point	Tidy Endpoint
+/appPricePoints/{id}	Tidy End-point	Tidy Endpoint
+/appPriceTiers	Tidy End-point	Tidy Endpoint
+/appPriceTiers/{id}	Tidy End-point	Tidy Endpoint
+/appPrices/{id}	Tidy End-point	Tidy Endpoint
+/appScreenshotSets/{id}	Tidy End-point	Tidy Endpoint
+/appScreenshots/{id}	Tidy End-point	Tidy Endpoint
+/appStoreReviewAttachments/{id}	Tidy End-point	Tidy Endpoint
+/appStoreReviewDetails/{id}	Tidy End-point	Tidy Endpoint
+/appStoreVersionLocalizations/{id}	Tidy End-point	Tidy Endpoint
+/appStoreVersions/{id}	Tidy End-point	Tidy Endpoint
+/apps	Tidy End-point	Tidy Endpoint
+/betaAppLocalizations	Tidy End-point	Tidy Endpoint
+/endUserLicenseAgreements/{id}	Tidy End-point	Tidy Endpoint
+/financeReports	Tidy End-point	Tidy Endpoint
+/preReleaseVersions	Tidy End-point	Tidy Endpoint
+/routingAppCoverages/{id}	Tidy End-point	Tidy Endpoint
+/salesReports	Tidy End-point	Tidy Endpoint
+/appCategories/{id}/subcategories	Tidy End-point	Tidy Endpoint
+/appEncryptionDeclarations/{id}/app	Tidy End-point	Tidy Endpoint
+/appInfos/{id}/ageRatingDeclaration	Tidy End-point	Tidy Endpoint
+/appInfos/{id}/appInfoLocalizations	Tidy End-point	Tidy Endpoint
+/appInfos/{id}/primaryCategory	Tidy End-point	Tidy Endpoint

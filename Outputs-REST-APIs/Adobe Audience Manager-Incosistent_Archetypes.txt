@@ -1,70 +1,72 @@
 ***Anti-Pattern*** 
-Count: 9
-GET	/models/{modelId}/runs/latest/traits	Plural Nouns Found in Consecutive Nodes	Returns a list of your most influential (accurate) traits for your algorithmic model.
-GET	/models/{modelId}/runs/latest/stats	Plural Nouns Found in Consecutive Nodes	Returns accuracy and reach values for your algorithmic model.
-GET	/models/limits	Plural Nouns Found in Consecutive Nodes	Returns a count of the maximum number of algorithmic models you can create.
-GET	/datasources/configurations/available-id-types	Plural Nouns Found in Consecutive Nodes	Returns all available data source ID types.
-GET	/datasources/configurations/marketing-cloud-visitorid-versions	Plural Nouns Found in Consecutive Nodes	Returns a list of all active Experience Cloud visitor ID versions.
-GET	/datasources/{dataSourceId}/history/inbound	Singular Nouns Found in Consecutive Nodes	Returns Onboarding Status Report with success and failure rates for inbound data source files.
-GET	/datasources/{dataSourceId}/history/inbound/sampling-data	Singular Nouns Found in Consecutive Nodes	Returns sampling data for a datasource for onboarding (inbound) files.
-GET	/destinations/limits	Plural Nouns Found in Consecutive Nodes	Returns a count of the maximum number of destinations you can create.
-GET	/destinations/{destinationId}/history/outbound/	Singular Nouns Found in Consecutive Nodes	Returns outbound history for a specific destination by 'destinationId'.
+Count: 6
+GET	 /models/{modelId}/runs/latest/traits 	Plural Nouns Found in Consecutive Nodes	Returns a list of your most influential (accurate) traits for your algorithmic model.
+GET	 /models/{modelId}/runs/latest/stats 	Plural Nouns Found in Consecutive Nodes	Returns accuracy and reach values for your algorithmic model.
+GET	 /datasources/configurations/available-id-types 	Plural Nouns Found in Consecutive Nodes	Returns all available data source ID types.
+GET	 /datasources/configurations/marketing-cloud-visitorid-versions 	Plural Nouns Found in Consecutive Nodes	Returns a list of all active Experience Cloud visitor ID versions.
+GET	 /datasources/{dataSourceId}/history/inbound/sampling-data 	Singular Nouns Found in Consecutive Nodes	Returns sampling data for a datasource for onboarding (inbound) files.
+GET	 /destinations/{destinationId}/history/outbound/ 	Singular Nouns Found in Consecutive Nodes	Returns outbound history for a specific destination by 'destinationId'.
 
 ***Patterns*** 
-Count: 56
-PUT	/models/{modelId}	Cosistent Resource Archetype	Updates an algorithmic model.
-DELETE	/models/{modelId}	Cosistent Resource Archetype	Deletes an algorithmic model.
-GET	/models	Cosistent Resource Archetype	Returns an array of algorithmic models and their summary.
-POST	/models	Cosistent Resource Archetype	Creates an algorithmic model.
-GET	/models/{modelId}/processing-history	Cosistent Resource Archetype	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
-POST	/models/bulk-delete	Cosistent Resource Archetype	Delete multiple algorithmic models with a single operation.
-GET	/algorithms/{algoTypeId}	Cosistent Resource Archetype	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
-GET	/algorithms	Cosistent Resource Archetype	Returns ID, name, and description for the available algorithms.
-GET	/available-data-feeds/	Cosistent Resource Archetype	Gets the 'Available Data Feed' resources for a buyer.
-GET	/available-data-feeds/{dataSourceId}	Cosistent Resource Archetype	Gets the data feed from the perspective of the buyer.
-GET	/available-data-feeds/{dataSourceId}/plans	Cosistent Resource Archetype	Gets the plans which belong to the data feed, from the perspective of the buyer.
-POST	/available-data-feeds/{dataSourceId}/subscribe	Cosistent Resource Archetype	Creates/Updates subscription to an available data feed.
-POST	/available-data-feeds/{dataSourceId}/requests	Cosistent Resource Archetype	Creates a request for an available data feed.
-GET	/data-feeds/billing-report	Cosistent Resource Archetype	Gets the billing report for last month
-POST	/data-feeds/billing-report	Cosistent Resource Archetype	Gets the billing report for last month in CSV format
-POST	/data-feeds/usage	Cosistent Resource Archetype	Inserts impression data for the plan subscription for last month.
-POST	/data-feeds/bulk-usage	Cosistent Resource Archetype	Inserts bulk impression data for multiple plan subscriptions for last month.
-GET	/destinations/segment-impressions/	Cosistent Resource Archetype	Returns all the segments and corresponding impression counts for all destinations
-PATCH	/destinations/segment-impressions/	Cosistent Resource Archetype	Updates the segments and corresponding impression counts for destinations
-GET	/data-feeds/	Cosistent Resource Archetype	Gets the `Data Feed` resources.
-POST	/data-feeds/	Cosistent Resource Archetype	Creates a new `Data Feed`.
-GET	/data-feeds/{dataSourceId}	Cosistent Resource Archetype	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
-PUT	/data-feeds/{dataSourceId}	Cosistent Resource Archetype	Updates the 'Data Feed'.
-DELETE	/data-feeds/{dataSourceId}	Cosistent Resource Archetype	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
-GET	/data-feeds/{dataSourceId}/plans/	Cosistent Resource Archetype	Gets the list of plans under a 'Data Feed'.
-POST	/data-feeds/{dataSourceId}/plans/	Cosistent Resource Archetype	Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.
-GET	/data-feeds/{dataSourceId}/subscriptions	Cosistent Resource Archetype	Gets the list of 'Subscriptions' under a 'Data Feed'.
-PUT	/data-feeds/{dataSourceId}/subscriptions	Cosistent Resource Archetype	Updates the list of 'Subscriptions' under a 'Data Feed'.
-GET	/data-feeds/{dataSourceId}/requests/	Cosistent Resource Archetype	Gets the list of 'Subscriptions Request' under a 'Data Feed'.
-POST	/data-feeds/{dataSourceId}/requests/	Cosistent Resource Archetype	Creates a 'Subscription' under a 'Data Feed'.
-GET	/data-feeds/{dataSourceId}/requests/{requestId}	Cosistent Resource Archetype	Gets a 'Data Feed Request' with 'requestId'.
-PUT	/data-feeds/{dataSourceId}/requests/{requestId}	Cosistent Resource Archetype	Updates an existing 'Data Feed Request'.
-GET	/data-feeds/{dataSourceId}/potential-subscribers/	Cosistent Resource Archetype	Returns the list of potential subscribers for a 'Data Feed'.
-GET	/data-feeds/{dataSourceId}/plans/{planId}	Cosistent Resource Archetype	Gets a 'Data Feed Plan' under a 'Data Feed'.
-PUT	/data-feeds/{dataSourceId}/plans/{planId}	Cosistent Resource Archetype	Updates a 'Data Feed Plan' under a 'Data Feed'.
-DELETE	/data-feeds/{dataSourceId}/plans/{planId}	Cosistent Resource Archetype	Deletes a 'Data Feed Plan' under a 'Data Feed'.
-GET	/datasources/	Cosistent Resource Archetype	Returns details about all GENERAL data sources.
-POST	/datasources/	Cosistent Resource Archetype	Creates a Data Source of the type GENERAL or MERGE RULE.
-GET	/datasources/{dataSourceId}	Cosistent Resource Archetype	Returns details about a specific data source.
-PUT	/datasources/{dataSourceId}	Cosistent Resource Archetype	Update a specific GENERAL or MERGE_RULE data source.
-DELETE	/datasources/{dataSourceId}	Cosistent Resource Archetype	Delete a specific data source.
-POST	/datasources/bulk-delete	Cosistent Resource Archetype	Bulk delete multiple data sources.
-GET	/signals/derived/{derivedSignalId}	Cosistent Resource Archetype	Returns information about a single derived signal.
-PUT	/signals/derived/{derivedSignalId}	Cosistent Resource Archetype	Updates a single derived signal.
-DELETE	/signals/derived/{derivedSignalId}	Cosistent Resource Archetype	Deletes a single derived signal.
-GET	/signals/derived	Cosistent Resource Archetype	Returns an array of derived signals and their information.
-POST	/signals/derived	Cosistent Resource Archetype	Creates a new derived signal
-GET	/signals/derived/limits	Cosistent Resource Archetype	Returns a count of the maximum number of derived signals you can create.
-POST	/destinations/	Cosistent Resource Archetype	Creates a new destination.
-GET	/destinations/	Cosistent Resource Archetype	Returns data for all your destinations.
-GET	/destinations/{destinationId}	Cosistent Resource Archetype	Returns a specific destination by 'destinationId'.
-DELETE	/destinations/{destinationId}	Cosistent Resource Archetype	Deletes a specific destination by 'destinationId'.
-PUT	/destinations/{destinationId}	Cosistent Resource Archetype	Updates a specific destination by 'destinationId'.
-POST	/destinations/{destinationId}/bulk-create	Cosistent Resource Archetype	Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.
-POST	/destinations/{destinationId}/bulk-delete	Cosistent Resource Archetype	Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.
-GET	/destinations/{destinationId}/mappings-by-priority/	Cosistent Resource Archetype	Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.
+Count: 61
+PUT	 /models/{modelId} 	Cosistent Resource Archetype	Updates an algorithmic model.
+DELETE	 /models/{modelId} 	Cosistent Resource Archetype	Deletes an algorithmic model.
+GET	 /models 	Cosistent Resource Archetype	Returns an array of algorithmic models and their summary.
+POST	 /models 	Cosistent Resource Archetype	Creates an algorithmic model.
+GET	 /models/{modelId}/processing-history 	Cosistent Resource Archetype	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
+POST	 /models/bulk-delete 	Cosistent Resource Archetype	Delete multiple algorithmic models with a single operation.
+GET	 /models/limits 	Cosistent Resource Archetype	Returns a count of the maximum number of algorithmic models you can create.
+GET	 /algorithms/{algoTypeId} 	Cosistent Resource Archetype	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
+GET	 /algorithms 	Cosistent Resource Archetype	Returns ID, name, and description for the available algorithms.
+GET	 /available-data-feeds/ 	Cosistent Resource Archetype	Gets the 'Available Data Feed' resources for a buyer.
+GET	 /available-data-feeds/{dataSourceId} 	Cosistent Resource Archetype	Gets the data feed from the perspective of the buyer.
+GET	 /available-data-feeds/{dataSourceId}/plans 	Cosistent Resource Archetype	Gets the plans which belong to the data feed, from the perspective of the buyer.
+POST	 /available-data-feeds/{dataSourceId}/subscribe 	Cosistent Resource Archetype	Creates/Updates subscription to an available data feed.
+POST	 /available-data-feeds/{dataSourceId}/requests 	Cosistent Resource Archetype	Creates a request for an available data feed.
+GET	 /data-feeds/billing-report 	Cosistent Resource Archetype	Gets the billing report for last month
+POST	 /data-feeds/billing-report 	Cosistent Resource Archetype	Gets the billing report for last month in CSV format
+POST	 /data-feeds/usage 	Cosistent Resource Archetype	Inserts impression data for the plan subscription for last month.
+POST	 /data-feeds/bulk-usage 	Cosistent Resource Archetype	Inserts bulk impression data for multiple plan subscriptions for last month.
+GET	 /destinations/segment-impressions/ 	Cosistent Resource Archetype	Returns all the segments and corresponding impression counts for all destinations
+PATCH	 /destinations/segment-impressions/ 	Cosistent Resource Archetype	Updates the segments and corresponding impression counts for destinations
+GET	 /data-feeds/ 	Cosistent Resource Archetype	Gets the `Data Feed` resources.
+POST	 /data-feeds/ 	Cosistent Resource Archetype	Creates a new `Data Feed`.
+GET	 /data-feeds/{dataSourceId} 	Cosistent Resource Archetype	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+PUT	 /data-feeds/{dataSourceId} 	Cosistent Resource Archetype	Updates the 'Data Feed'.
+DELETE	 /data-feeds/{dataSourceId} 	Cosistent Resource Archetype	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+GET	 /data-feeds/{dataSourceId}/plans/ 	Cosistent Resource Archetype	Gets the list of plans under a 'Data Feed'.
+POST	 /data-feeds/{dataSourceId}/plans/ 	Cosistent Resource Archetype	Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.
+GET	 /data-feeds/{dataSourceId}/subscriptions 	Cosistent Resource Archetype	Gets the list of 'Subscriptions' under a 'Data Feed'.
+PUT	 /data-feeds/{dataSourceId}/subscriptions 	Cosistent Resource Archetype	Updates the list of 'Subscriptions' under a 'Data Feed'.
+GET	 /data-feeds/{dataSourceId}/requests/ 	Cosistent Resource Archetype	Gets the list of 'Subscriptions Request' under a 'Data Feed'.
+POST	 /data-feeds/{dataSourceId}/requests/ 	Cosistent Resource Archetype	Creates a 'Subscription' under a 'Data Feed'.
+GET	 /data-feeds/{dataSourceId}/requests/{requestId} 	Cosistent Resource Archetype	Gets a 'Data Feed Request' with 'requestId'.
+PUT	 /data-feeds/{dataSourceId}/requests/{requestId} 	Cosistent Resource Archetype	Updates an existing 'Data Feed Request'.
+GET	 /data-feeds/{dataSourceId}/potential-subscribers/ 	Cosistent Resource Archetype	Returns the list of potential subscribers for a 'Data Feed'.
+GET	 /data-feeds/{dataSourceId}/plans/{planId} 	Cosistent Resource Archetype	Gets a 'Data Feed Plan' under a 'Data Feed'.
+PUT	 /data-feeds/{dataSourceId}/plans/{planId} 	Cosistent Resource Archetype	Updates a 'Data Feed Plan' under a 'Data Feed'.
+DELETE	 /data-feeds/{dataSourceId}/plans/{planId} 	Cosistent Resource Archetype	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+GET	 /datasources/ 	Cosistent Resource Archetype	Returns details about all GENERAL data sources.
+POST	 /datasources/ 	Cosistent Resource Archetype	Creates a Data Source of the type GENERAL or MERGE RULE.
+GET	 /datasources/{dataSourceId} 	Cosistent Resource Archetype	Returns details about a specific data source.
+PUT	 /datasources/{dataSourceId} 	Cosistent Resource Archetype	Update a specific GENERAL or MERGE_RULE data source.
+DELETE	 /datasources/{dataSourceId} 	Cosistent Resource Archetype	Delete a specific data source.
+POST	 /datasources/bulk-delete 	Cosistent Resource Archetype	Bulk delete multiple data sources.
+GET	 /datasources/{dataSourceId}/history/inbound 	Cosistent Resource Archetype	Returns Onboarding Status Report with success and failure rates for inbound data source files.
+GET	 /datasources/{dataSourceId}/history/inbound/sampling-data 	Cosistent Resource Archetype	Returns sampling data for a datasource for onboarding (inbound) files.
+GET	 /signals/derived/{derivedSignalId} 	Cosistent Resource Archetype	Returns information about a single derived signal.
+PUT	 /signals/derived/{derivedSignalId} 	Cosistent Resource Archetype	Updates a single derived signal.
+DELETE	 /signals/derived/{derivedSignalId} 	Cosistent Resource Archetype	Deletes a single derived signal.
+GET	 /signals/derived 	Cosistent Resource Archetype	Returns an array of derived signals and their information.
+POST	 /signals/derived 	Cosistent Resource Archetype	Creates a new derived signal
+GET	 /signals/derived/limits 	Cosistent Resource Archetype	Returns a count of the maximum number of derived signals you can create.
+POST	 /destinations/ 	Cosistent Resource Archetype	Creates a new destination.
+GET	 /destinations/ 	Cosistent Resource Archetype	Returns data for all your destinations.
+GET	 /destinations/limits 	Cosistent Resource Archetype	Returns a count of the maximum number of destinations you can create.
+GET	 /destinations/{destinationId}/history/outbound/ 	Cosistent Resource Archetype	Returns outbound history for a specific destination by 'destinationId'.
+GET	 /destinations/{destinationId} 	Cosistent Resource Archetype	Returns a specific destination by 'destinationId'.
+DELETE	 /destinations/{destinationId} 	Cosistent Resource Archetype	Deletes a specific destination by 'destinationId'.
+PUT	 /destinations/{destinationId} 	Cosistent Resource Archetype	Updates a specific destination by 'destinationId'.
+POST	 /destinations/{destinationId}/bulk-create 	Cosistent Resource Archetype	Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.
+POST	 /destinations/{destinationId}/bulk-delete 	Cosistent Resource Archetype	Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.
+GET	 /destinations/{destinationId}/mappings-by-priority/ 	Cosistent Resource Archetype	Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.

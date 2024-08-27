@@ -28,15 +28,7 @@ print(f"Your selected choice is: {selected}")
 #patterns and anti-patterns
 uri_path = base_path+selected+"/"+selected+".txt"
 uri_obj = FileReadWrite(uri_path)
-#data = uri_obj.read_data()
-#print(data)
-#uri = []
-#des = []
-#for line in data:
-#    line  = line.split(">>")
-#    uri.append(line[1])
 
-#print(uri)
 
 analyzer_obj = ApiAnalyzer(api_type, selected)
 #analyzer_obj.detect_amorphous_uri()

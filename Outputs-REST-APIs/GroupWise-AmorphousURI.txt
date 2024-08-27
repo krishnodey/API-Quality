@@ -3,59 +3,59 @@ Count: 0
 
 ***Patterns*** 
 Count: 56
-/list/{type}	Tidy End-point	
-/list/{type}/{base}	Tidy End-point	
-/application	Tidy End-point	
-/async?state	Tidy End-point	
-/async/{id}	Tidy End-point	
-/async/{id}	Tidy End-point	
-/diagnostics/attributes?locale	Tidy End-point	
-/diagnostics/index	Tidy End-point	
-/diagnostics/index/{index}?attrs	Tidy End-point	
-/diagnostics/object/{id}	Tidy End-point	
-/domains	Tidy End-point	
-/domains	Tidy End-point	
-/domains/{domain}	Tidy End-point	
-/domains/{domain}	Tidy End-point	
-/domains/{domain}	Tidy End-point	
-/domains/{domain}/addressbook/fields	Tidy End-point	
-/domains/{domain}/addressbook/labels	Tidy End-point	
-/domains/{domain}/addressbook/labels/{field}	Tidy End-point	
-/domains/{domain}/addressbook/labels/{field}	Tidy End-point	
-/domains/{domain}/addressbook/view	Tidy End-point	
-/domains/{domain}/addressbook/view	Tidy End-point	
-/domains/{domain}/administrator	Tidy End-point	
-/domains/{domain}/administrator	Tidy End-point	
-/domains/{domain}/administrator	Tidy End-point	
-/domains/{domain}/clientoptions?attrs	Tidy End-point	
-/domains/{domain}/clientoptions?attrs	Tidy End-point	
-/domains/{domain}/customaddresses	Tidy End-point	
-/domains/{domain}/customaddresses/test?testAddress	Tidy End-point	
-/domains/{domain}/gatewaysubdirs	Tidy End-point	
-/domains/{domain}/info	Tidy End-point	
-/domains/{domain}/links?direction	Tidy End-point	
-/domains/{domain}/links/{link}	Tidy End-point	
-/domains/{domain}/links/{link}	Tidy End-point	
-/domains/{domain}/rebuild	Tidy End-point	
-/domains/{domain}/refaccesscontrols	Tidy End-point	
-/domains/{domain}/refaccesscontrols	Tidy End-point	
-/domains/attributes	Tidy End-point	
-/domains/{domain}/gateways	Tidy End-point	
-/domains/{domain}/gateways	Tidy End-point	
-/domains/{domain}/gateways/{gateway}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/administrators	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/administrators	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/administrators/{id}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/administrators/{id}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/aliases	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Tidy End-point	
-/domains/{domain}/gateways/{gateway}/recoverDb	Tidy End-point	
+/list/{type}	Tidy End-point	Tidy Endpoint
+/list/{type}/{base}	Tidy End-point	Tidy Endpoint
+/application	Tidy End-point	Tidy Endpoint
+/async?state	Tidy End-point	Tidy Endpoint
+/async/{id}	Tidy End-point	Tidy Endpoint
+/async/{id}	Tidy End-point	Tidy Endpoint
+/diagnostics/attributes?locale	Tidy End-point	Tidy Endpoint
+/diagnostics/index	Tidy End-point	Tidy Endpoint
+/diagnostics/index/{index}?attrs	Tidy End-point	Tidy Endpoint
+/diagnostics/object/{id}	Tidy End-point	Tidy Endpoint
+/domains	Tidy End-point	Tidy Endpoint
+/domains	Tidy End-point	Tidy Endpoint
+/domains/{domain}	Tidy End-point	Tidy Endpoint
+/domains/{domain}	Tidy End-point	Tidy Endpoint
+/domains/{domain}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/addressbook/fields	Tidy End-point	Tidy Endpoint
+/domains/{domain}/addressbook/labels	Tidy End-point	Tidy Endpoint
+/domains/{domain}/addressbook/labels/{field}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/addressbook/labels/{field}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/addressbook/view	Tidy End-point	Tidy Endpoint
+/domains/{domain}/addressbook/view	Tidy End-point	Tidy Endpoint
+/domains/{domain}/administrator	Tidy End-point	Tidy Endpoint
+/domains/{domain}/administrator	Tidy End-point	Tidy Endpoint
+/domains/{domain}/administrator	Tidy End-point	Tidy Endpoint
+/domains/{domain}/clientoptions?attrs	Tidy End-point	Tidy Endpoint
+/domains/{domain}/clientoptions?attrs	Tidy End-point	Tidy Endpoint
+/domains/{domain}/customaddresses	Tidy End-point	Tidy Endpoint
+/domains/{domain}/customaddresses/test?testAddress	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gatewaysubdirs	Tidy End-point	Tidy Endpoint
+/domains/{domain}/info	Tidy End-point	Tidy Endpoint
+/domains/{domain}/links?direction	Tidy End-point	Tidy Endpoint
+/domains/{domain}/links/{link}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/links/{link}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/rebuild	Tidy End-point	Tidy Endpoint
+/domains/{domain}/refaccesscontrols	Tidy End-point	Tidy Endpoint
+/domains/{domain}/refaccesscontrols	Tidy End-point	Tidy Endpoint
+/domains/attributes	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/administrators	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/administrators	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/administrators/{id}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/administrators/{id}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/aliases	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member}	Tidy End-point	Tidy Endpoint
+/domains/{domain}/gateways/{gateway}/recoverDb	Tidy End-point	Tidy Endpoint

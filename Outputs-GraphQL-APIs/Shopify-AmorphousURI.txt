@@ -5,34 +5,34 @@ Count: 2
 
 ***Patterns*** 
 Count: 31
-/delegateAccessTokenCreate	Tidy End-point	
-/storefrontAccessTokenCreate	Tidy End-point	
-/storefrontAccessTokenDelete	Tidy End-point	
-/AccessScope	Tidy End-point	
-/DelegateAccessToken	Tidy End-point	
-/StorefrontAccessToken	Tidy End-point	
-/shopifyqlQuery	Tidy End-point	
-/ErrorPosition	Tidy End-point	
-/ParseError	Tidy End-point	
-/ParseErrorRange	Tidy End-point	
-/PolarisVizDataPoint	Tidy End-point	
-/PolarisVizDataSeries	Tidy End-point	
-/PolarisVizResponse	Tidy End-point	
-/TableData	Tidy End-point	
-/TableDataColumn	Tidy End-point	
-/TableResponse	Tidy End-point	
-/query/{id}	Tidy End-point	
-/appByHandle	Tidy End-point	
-/appByKey	Tidy End-point	
-/appInstallation/{id}	Tidy End-point	
-/appInstallations	Tidy End-point	
-/currentAppInstallation	Tidy End-point	
-/publication/{id}	Tidy End-point	
-/publications	Tidy End-point	
-/publicationCreate	Tidy End-point	
-/publicationDelete{id}	Tidy End-point	
-/publicationUpdate	Tidy End-point	
-/AppFeedback	Tidy End-point	
-/AppInstallation	Tidy End-point	
-/FailedRequirement	Tidy End-point	
-/ResourceFeedback	Tidy End-point	
+/delegateAccessTokenCreate	Tidy End-point	Tidy Endpoint
+/storefrontAccessTokenCreate	Tidy End-point	Tidy Endpoint
+/storefrontAccessTokenDelete	Tidy End-point	Tidy Endpoint
+/AccessScope	Tidy End-point	Tidy Endpoint
+/DelegateAccessToken	Tidy End-point	Tidy Endpoint
+/StorefrontAccessToken	Tidy End-point	Tidy Endpoint
+/shopifyqlQuery	Tidy End-point	Tidy Endpoint
+/ErrorPosition	Tidy End-point	Tidy Endpoint
+/ParseError	Tidy End-point	Tidy Endpoint
+/ParseErrorRange	Tidy End-point	Tidy Endpoint
+/PolarisVizDataPoint	Tidy End-point	Tidy Endpoint
+/PolarisVizDataSeries	Tidy End-point	Tidy Endpoint
+/PolarisVizResponse	Tidy End-point	Tidy Endpoint
+/TableData	Tidy End-point	Tidy Endpoint
+/TableDataColumn	Tidy End-point	Tidy Endpoint
+/TableResponse	Tidy End-point	Tidy Endpoint
+/query/{id}	Tidy End-point	Tidy Endpoint
+/appByHandle	Tidy End-point	Tidy Endpoint
+/appByKey	Tidy End-point	Tidy Endpoint
+/appInstallation/{id}	Tidy End-point	Tidy Endpoint
+/appInstallations	Tidy End-point	Tidy Endpoint
+/currentAppInstallation	Tidy End-point	Tidy Endpoint
+/publication/{id}	Tidy End-point	Tidy Endpoint
+/publications	Tidy End-point	Tidy Endpoint
+/publicationCreate	Tidy End-point	Tidy Endpoint
+/publicationDelete{id}	Tidy End-point	Tidy Endpoint
+/publicationUpdate	Tidy End-point	Tidy Endpoint
+/AppFeedback	Tidy End-point	Tidy Endpoint
+/AppInstallation	Tidy End-point	Tidy Endpoint
+/FailedRequirement	Tidy End-point	Tidy Endpoint
+/ResourceFeedback	Tidy End-point	Tidy Endpoint

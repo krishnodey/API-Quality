@@ -35,37 +35,37 @@ Count: 32
 
 ***Patterns*** 
 Count: 34
-/v18.0/{album-id}	Tidy End-point	
-/{group_id}/albums	Tidy End-point	
-/v18.0/{album-id}/comments	Tidy End-point	
-/v18.0/{album-id}/likes	Tidy End-point	
-/v18.0/{album-id}/photos	Tidy End-point	
-/{album_id}/photos	Tidy End-point	
-/v18.0/{album-id}/picture	Tidy End-point	
-/v18.0/{app-link-host-id}	Tidy End-point	
-/v18.0/{app-link-host-id}	Tidy End-point	
-/v18.0/{app-link-host-id}	Tidy End-point	
-/v18.0/{application-id}	Tidy End-point	
-/v18.0/{application-id}/accounts	Tidy End-point	
-/{application_id}/accounts	Tidy End-point	
-/v19.0/{application-id}/agencies	Tidy End-point	
-/v19.0/{application-id}/appassets	Tidy End-point	
-/v19.0/{application-id}/events	Tidy End-point	
-/v19.0/{application-id}/permissions	Tidy End-point	
-/v19.0/{application-id}/products	Tidy End-point	
-/v19.0/{application-id}/purchases	Tidy End-point	
-/{application_id}/activities	Tidy End-point	
-/v19.0/{application-id}/permissions	Tidy End-point	
-/v19.0/{app-id}/picture	Tidy End-point	
-/v19.0/{application-id}/products	Tidy End-point	
-/v19.0/{application-id}/purchases	Tidy End-point	
-/v19.0/{app-id}/roles	Tidy End-point	
-/v19.0/{app-id}/scores	Tidy End-point	
-/v19.0/{app-id}/scores	Tidy End-point	
-/v19.0/{app-id}/subscriptions	Tidy End-point	
-/v19.0/{app-id}/subscriptions	Tidy End-point	
-/v19.0/{app-id}/translations	Tidy End-point	
-/v19.0/{cpas-advertiser-partnership-recommendation-id}	Tidy End-point	
-/v19.0/{canvas-id}	Tidy End-point	
-/v19.0/{canvas-id}/preview	Tidy End-point	
-/v19.0/{canvas-id}/previews	Tidy End-point	
+/v18.0/{album-id}	Tidy End-point	Tidy Endpoint
+/{group_id}/albums	Tidy End-point	Tidy Endpoint
+/v18.0/{album-id}/comments	Tidy End-point	Tidy Endpoint
+/v18.0/{album-id}/likes	Tidy End-point	Tidy Endpoint
+/v18.0/{album-id}/photos	Tidy End-point	Tidy Endpoint
+/{album_id}/photos	Tidy End-point	Tidy Endpoint
+/v18.0/{album-id}/picture	Tidy End-point	Tidy Endpoint
+/v18.0/{app-link-host-id}	Tidy End-point	Tidy Endpoint
+/v18.0/{app-link-host-id}	Tidy End-point	Tidy Endpoint
+/v18.0/{app-link-host-id}	Tidy End-point	Tidy Endpoint
+/v18.0/{application-id}	Tidy End-point	Tidy Endpoint
+/v18.0/{application-id}/accounts	Tidy End-point	Tidy Endpoint
+/{application_id}/accounts	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/agencies	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/appassets	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/events	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/permissions	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/products	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/purchases	Tidy End-point	Tidy Endpoint
+/{application_id}/activities	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/permissions	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/picture	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/products	Tidy End-point	Tidy Endpoint
+/v19.0/{application-id}/purchases	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/roles	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/scores	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/scores	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/subscriptions	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/subscriptions	Tidy End-point	Tidy Endpoint
+/v19.0/{app-id}/translations	Tidy End-point	Tidy Endpoint
+/v19.0/{cpas-advertiser-partnership-recommendation-id}	Tidy End-point	Tidy Endpoint
+/v19.0/{canvas-id}	Tidy End-point	Tidy Endpoint
+/v19.0/{canvas-id}/preview	Tidy End-point	Tidy Endpoint
+/v19.0/{canvas-id}/previews	Tidy End-point	Tidy Endpoint
