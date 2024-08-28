@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 5
+v2/bidder_positions/{id}	Amorphous End-point	 [underscore found] 
+v2/collection_items/{id}	Amorphous End-point	 [underscore found] 
+v2/collections?user_id=USER_ID&private=true	Amorphous End-point	 [uppercase found] 
+v2/user_details/{id}	Amorphous End-point	 [underscore found] 
+v2/current_user	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 16
+v2/applications/{id}	Tidy End-point	Tidy Endpoint
+v2/artists/{id}	Tidy End-point	Tidy Endpoint
+v2/artworks/{id}	Tidy End-point	Tidy Endpoint
+v2/bidders/{id}	Tidy End-point	Tidy Endpoint
+v2/bids/{id}	Tidy End-point	Tidy Endpoint
+v2/edition/{id}	Tidy End-point	Tidy Endpoint
+v2/fairs/{id}	Tidy End-point	Tidy Endpoint
+v2/genes/{id}	Tidy End-point	Tidy Endpoint
+v2/images/{id}	Tidy End-point	Tidy Endpoint
+v2/partners/{id}	Tidy End-point	Tidy Endpoint
+v2/profiles/{id}	Tidy End-point	Tidy Endpoint
+v2/sales	Tidy End-point	Tidy Endpoint
+v2/search?q=Andy+Warhol	Tidy End-point	Tidy Endpoint
+v2/shows/{id}	Tidy End-point	Tidy Endpoint
+v2/status	Tidy End-point	Tidy Endpoint
+v2/users/{id}	Tidy End-point	Tidy Endpoint

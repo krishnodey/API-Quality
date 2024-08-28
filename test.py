@@ -77,11 +77,11 @@ print("\nFinished Detection of AmorphousURI.\n")
 # print("\nFinished Detection of Non-descriptiveURI:\n")
 
 
-print("Detection of NonHierarchicalNodes:")
-result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
-pattern_type = "NonHierarchicalNodes"
-uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-print("\nFinished Detection of NonHierarchicalNodes:\n")
+# print("Detection of NonHierarchicalNodes:")
+# result_AP, result_P, p_count, ap_count = analyzer_obj.detect_non_hierarchical_nodes()
+# pattern_type = "NonHierarchicalNodes"
+# uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+# print("\nFinished Detection of NonHierarchicalNodes:\n")
 
 # print("Detection of InconsistantDocumentation:")
 # result_AP, result_P, p_count, ap_count = analyzer_obj.detect_inconsistent_documentations()
@@ -120,11 +120,11 @@ print("\nFinished Detection of NonHierarchicalNodes:\n")
 
 
 
-# print("Detection of InconsistentResoruceArchetype:")
-# result_AP, result_P, p_count, ap_count= analyzer_obj.detect_incosistent_resource_archetype()
-# pattern_type = "Incosistent_Archetypes"
-# uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-# print("\nFinished Detection of InconsistentResoruceArchetype:\n")
+print("Detection of InconsistentResoruceArchetype:")
+result_AP, result_P, p_count, ap_count= analyzer_obj.detect_incosistent_resource_archetype()
+pattern_type = "Incosistent_Archetypes"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("\nFinished Detection of InconsistentResoruceArchetype:\n")
 
 
 print("Detection of IndentifierAmbiguity:")
@@ -134,8 +134,8 @@ uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_typ
 print("\nFinished Detection of IndentifierAmbiguity:\n")
 
 
-# print("Detection of FlatEndpoint:")
-# result_AP, result_P, p_count, ap_count= analyzer_obj.detect_flat_endpoint()
-# pattern_type = "FlatEndpoint"
-# uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-# print("\nFinished Detection of FlatEndpoint:\n")
+print("Detection of FlatEndpoint:")
+result_AP, result_P, p_count, ap_count= analyzer_obj.detect_flat_endpoint()
+pattern_type = "FlatEndpoint"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("\nFinished Detection of FlatEndpoint:\n")

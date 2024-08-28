@@ -1,39 +1,95 @@
 ***Anti-Pattern*** 
-Count: 42
-GET	 /v1/me/library/albums/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a library album by using its identifier.
+Count: 101
+GET	 /v1/catalog/{storefront}/albums/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch an album by using its identifier.
+GET	 /v1/catalog/{storefront}/albums/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch an albumâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/albums/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch an albumâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/albums/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single albumâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/albums/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single albumâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/albums/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single albumâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/albums 	Singular Nouns Found in Consecutive Nodes	Fetch one or more albums by using their identifiers.
+GET	 /v1/catalog/{storefront}/albums 	Singular Nouns Found in Consecutive Nodes	Fetch one or more albums by using their UPC values.
+GET	 /v1/catalog/{storefront}/albums  	Singular Nouns Found in Consecutive Nodes	Fetch the equivalent, available content in the storefront for the provided albumsâ€™ identifiers.
 GET	 /v1/me/library/albums/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a library albumâ€™s relationship by using its identifier.
-GET	 /v1/me/library/albums 	Singular Nouns Found in Consecutive Nodes	Fetch one or more library albums by using their identifiers.
-GET	 /v1/me/library/albums 	Singular Nouns Found in Consecutive Nodes	Fetch all the library albums in alphabetical order.
-GET	 /v1/me/library/artists/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a library artist by using its identifier.
+GET	 /v1/catalog/{storefront}/artists/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch an artist by using the artistâ€™s identifier.id string (Required) The unique identifier for the artist. storefront string (Required) An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the id attributes of Storefront objects.
+GET	 /v1/catalog/{storefront}/artists/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch an artistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/artists/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch an artistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/artists/{id}/view/{view} 	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single artistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/artists/{id}/view/{view} 	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single artistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/artists/{id}/view/{view} 	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single artistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/artists 	Singular Nouns Found in Consecutive Nodes	Fetch one or more artists by using their identifiers.
 GET	 /v1/me/library/artists/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a library artistâ€™s relationship by using its identifier.
-GET	 /v1/me/library/artists 	Singular Nouns Found in Consecutive Nodes	Fetch one or more library artists by using their identifiers.
-GET	 /v1/me/library/songs/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a library song by using its identifier.
+GET	 /v1/catalog/{storefront}/songs/{id}	Singular Nouns Found in Consecutive Nodes	Fetch a song by using its identifier.
+GET	 /v1/catalog/{storefront}/songs/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a songâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/songs/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a songâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/songs 	Singular Nouns Found in Consecutive Nodes	Fetch one or more songs by using their identifiers.
+GET	 /v1/catalog/{storefront}/songs 	Singular Nouns Found in Consecutive Nodes	Fetch one or more songs by using their International Standard Recording Code (ISRC) values.
+GET	 /v1/catalog/{storefront}/songs 	Singular Nouns Found in Consecutive Nodes	Fetch the equivalent, available content in the storefront for the provided songsâ€™ identifiers.
 GET	 /v1/me/library/songs/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a library songâ€™s relationship by using its identifier.
-GET	 /v1/me/library/songs 	Singular Nouns Found in Consecutive Nodes	Fetch one or more library songs by using their identifiers.
-GET	 /v1/me/library/songs 	Singular Nouns Found in Consecutive Nodes	Fetch all the library songs in alphabetical order.
+GET	 /v1/catalog/{storefront}/music-videos/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a music video by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a music video by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a music videoâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a music videoâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a music videoâ€™s relationship by using its identifier.
 GET	 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single music videoâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single music videoâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single music videoâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single music videoâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/music-videos	Singular Nouns Found in Consecutive Nodes	Fetch one or more music videos by using their identifiers.
+GET	 /v1/catalog/{storefront}/music-videos	Singular Nouns Found in Consecutive Nodes	Fetch one or more music videos by using their identifiers.
+GET	 /v1/catalog/{storefront}/music-videos	Singular Nouns Found in Consecutive Nodes	Fetch one or more music videos by using their International Standard Recording Code (ISRC) values.
+GET	 /v1/catalog/{storefront}/music-videos	Singular Nouns Found in Consecutive Nodes	Fetch one or more music videos by using their International Standard Recording Code (ISRC) values.
+GET	 /v1/catalog/{storefront}/music-videos 	Singular Nouns Found in Consecutive Nodes	Fetch the equivalent, available content in the storefront for the provided music videosâ€™ identifiers.
+GET	 /v1/catalog/{storefront}/music-videos 	Singular Nouns Found in Consecutive Nodes	Fetch the equivalent, available content in the storefront for the provided music videosâ€™ identifiers.
 GET	 /v1/me/library/music-videos/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a library music video by using its identifier.
+GET	 /v1/me/library/music-videos/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a library music videoâ€™s relationship by using its identifier.
 GET	 /v1/me/library/music-videos/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a library music videoâ€™s relationship by using its identifier.
 GET	 /v1/me/library/music-videos 	Singular Nouns Found in Consecutive Nodes	Fetch one or more library music videos by using their identifiers.
 GET	 /v1/me/library/music-videos 	Singular Nouns Found in Consecutive Nodes	Fetch all the library music videos in alphabetical order.
-GET	 /v1/me/library/playlists/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a library playlist by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a playlist by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a playlistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a playlistâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/playlists/{id}/view/{view} 	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single playlistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/playlists/{id}/view/{view} 	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single playlistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/playlists/{id}/view/{view} 	Singular Nouns Found in Consecutive Nodes	Fetch related resources for a single playlistâ€™s relationship view.
+GET	 /v1/catalog/{storefront}/playlists 	Singular Nouns Found in Consecutive Nodes	Fetch one or more playlists by using their identifiers.
+GET	 /v1/catalog/{storefront}/playlists 	Singular Nouns Found in Consecutive Nodes	Fetch one or more Charts Playlists by using their Storefront value.
 GET	 /v1/me/library/playlists/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a library playlistâ€™s relationship by using its identifier.
-GET	 /v1/me/library/playlists 	Singular Nouns Found in Consecutive Nodes	Fetch one or more library playlists by using their identifiers.
-GET	 /v1/me/library/playlists 	Singular Nouns Found in Consecutive Nodes	Fetch all the library playlists in alphabetical order.
 GET	 /v1/me/library/playlist-folders 	Singular Nouns Found in Consecutive Nodes	Fetch the root library playlists folder for the user.
 GET	 /v1/me/library/playlist-folders/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a library playlist folder by using its identifier.
 GET	 /v1/me/library/playlist-folders/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a library playlist folderâ€™s relationship by using its identifier.
+GET	 /v1/me/library/playlist-folders/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a library playlist folderâ€™s relationship by using its identifier.
 GET	 /v1/me/library/playlist-folders 	Singular Nouns Found in Consecutive Nodes	Fetch one or more library playlist folders by using their identifiers.
 POST	 /v1/me/library/playlist-folders 	Singular Nouns Found in Consecutive Nodes	Create a new playlist folder in a userâ€™s library.
-POST	 /v1/me/library/playlists 	Singular Nouns Found in Consecutive Nodes	Create a new playlist in a userâ€™s library.
-POST	 /v1/me/library/playlists/{id}/tracks 	Singular Nouns Found in Consecutive Nodes	Add new tracks to the end of a library playlist.
+GET	 /v1/catalog/{storefront}/stations/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a station by using its identifier.
+GET	 /v1/catalog/{storefront}/stations/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a station's relationship using its identifier.
+GET	 /v1/catalog/{storefront}/stations/{id}/{relationship} 	Singular Nouns Found in Consecutive Nodes	Fetch a station's relationship using its identifier.
+GET	 /v1/catalog/{storefront}/stations 	Singular Nouns Found in Consecutive Nodes	Fetch one or more stations by using their identifiers.
+GET	 /v1/catalog/{storefront}/stations 	Singular Nouns Found in Consecutive Nodes	Fetch the Apple Music live radio stations for the storefront.
+GET	 /v1/catalog/{storefront}/stations 	Singular Nouns Found in Consecutive Nodes	Fetch the current userâ€™s personal Apple Music station.
+GET	 /v1/catalog/{storefront}/station-genres/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a station genre by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a station genre by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a station genreâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a station genreâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres/{id}/{relationship}	Singular Nouns Found in Consecutive Nodes	Fetch a station genreâ€™s relationship by using its identifier.
+GET	 /v1/catalog/{storefront}/station-genres 	Singular Nouns Found in Consecutive Nodes	Fetch one or more station genres by using their identifiers.
+GET	 /v1/catalog/{storefront}/station-genres 	Singular Nouns Found in Consecutive Nodes	Fetch one or more station genres by using their identifiers.
+GET	 /v1/catalog/{storefront}/station-genres 	Singular Nouns Found in Consecutive Nodes	Fetch all station genres for a given storefront.
+GET	 /v1/catalog/{storefront}/station-genres 	Singular Nouns Found in Consecutive Nodes	Fetch all station genres for a given storefront.
+GET	 /v1/catalog/{storefront}/search 	Singular Nouns Found in Consecutive Nodes	Search the catalog by using a query.
+GET	 /v1/catalog/{storefront}/search 	Singular Nouns Found in Consecutive Nodes	Search the catalog by using a query.
 GET	 /v1/catalog/{storefront}/search/hints 	Singular Nouns Found in Consecutive Nodes	Fetch the search term results for a hint.
+GET	 /v1/catalog/{storefront}/search/hints 	Singular Nouns Found in Consecutive Nodes	Fetch the search term results for a hint.
+GET	 /v1/catalog/{storefront}/search/suggestions 	Singular Nouns Found in Consecutive Nodes	Fetch the search suggestions for a provided term input.
 GET	 /v1/catalog/{storefront}/search/suggestions 	Singular Nouns Found in Consecutive Nodes	Fetch the search suggestions for a provided term input.
 GET	 /v1/me/library/search 	Singular Nouns Found in Consecutive Nodes	Search the library by using a query.
 GET	 /v1/me/ratings/albums/{id} 	Plural Nouns Found in Consecutive Nodes	Fetch a userâ€™s rating for an album by using the userâ€™s identifier.
 GET	 /v1/me/ratings/playlists/{id} 	Plural Nouns Found in Consecutive Nodes	Fetch a userâ€™s rating for a playlist by using the playlistâ€™s identifier.
 GET	 /v1/me/ratings/songs/{id} 	Plural Nouns Found in Consecutive Nodes	Fetch a userâ€™s rating for a song by using the songâ€™s identifier.
 GET	 /v1/me/ratings/stations/{id} 	Plural Nouns Found in Consecutive Nodes	Fetch a userâ€™s rating for a station by using the stationâ€™s identifier.
+GET	 /v1/me/ratings/albums 	Plural Nouns Found in Consecutive Nodes	Fetch the userâ€™s ratings for one or more albums by using the albums' identifiers.
+GET	 /v1/me/ratings/playlists 	Plural Nouns Found in Consecutive Nodes	Fetch the userâ€™s ratings for one or more playlists by using the playlists' identifiers.
+GET	 /v1/me/ratings/songs 	Plural Nouns Found in Consecutive Nodes	Fetch the userâ€™s ratings for one or more songs by using the songs' identifiers.
+GET	 /v1/me/ratings/stations 	Plural Nouns Found in Consecutive Nodes	Fetch the userâ€™s ratings for one or more stations by using the stations' identifiers.
 PUT	 /v1/me/ratings/albums/{id} 	Plural Nouns Found in Consecutive Nodes	Add a userâ€™s album rating by using the albumâ€™s identifier.
 PUT	 /v1/me/ratings/playlists/{id} 	Plural Nouns Found in Consecutive Nodes	Add a userâ€™s playlist rating by using the playlistâ€™s identifier.
 PUT	 /v1/me/ratings/songs/{id} 	Plural Nouns Found in Consecutive Nodes	Add a userâ€™s song rating by using the songâ€™s identifier.
@@ -42,93 +98,37 @@ DELETE	 /v1/me/ratings/albums/{id} 	Plural Nouns Found in Consecutive Nodes	Remo
 DELETE	 /v1/me/ratings/playlists/{id} 	Plural Nouns Found in Consecutive Nodes	Remove a userâ€™s playlist rating by using the playlistâ€™s identifier.
 DELETE	 /v1/me/ratings/songs/{id} 	Plural Nouns Found in Consecutive Nodes	Remove a userâ€™s song rating by using the songâ€™s identifier.
 DELETE	 /v1/me/ratings/stations/{id} 	Plural Nouns Found in Consecutive Nodes	Remove a userâ€™s station rating by using the stationâ€™s identifier.
+GET	 /v1/me/ratings/library-music-videos/{id} 	Singular Nouns Found in Consecutive Nodes	Fetch a userâ€™s rating for a library music video by using the music videoâ€™s library identifier.
+GET	 /v1/me/ratings/library-music-videos 	Singular Nouns Found in Consecutive Nodes	Fetch the userâ€™s ratings for one or more library music videos by using the library music videos' identifiers.
+PUT	 /v1/me/ratings/library-music-videos/{id} 	Singular Nouns Found in Consecutive Nodes	Add a userâ€™s library music video rating by using the library music videoâ€™s identifier.
 
 ***Patterns*** 
-Count: 87
-GET	 /v1/catalog/{storefront}/albums/{id} 	Cosistent Resource Archetype	Fetch an album by using its identifier.
-GET	 /v1/catalog/{storefront}/albums/{id}/{relationship} 	Cosistent Resource Archetype	Fetch an albumâ€™s relationship by using its identifier.
-GET	 /v1/catalog/{storefront}/albums/{id}/view/{view}	Cosistent Resource Archetype	Fetch related resources for a single albumâ€™s relationship view.
-GET	 /v1/catalog/{storefront}/albums 	Cosistent Resource Archetype	Fetch one or more albums by using their identifiers.
-GET	 /v1/catalog/{storefront}/albums 	Cosistent Resource Archetype	Fetch one or more albums by using their UPC values.
-GET	 /v1/catalog/{storefront}/albums  	Cosistent Resource Archetype	Fetch the equivalent, available content in the storefront for the provided albumsâ€™ identifiers.
+Count: 28
 GET	 /v1/me/library/albums/{id} 	Cosistent Resource Archetype	Fetch a library album by using its identifier.
-GET	 /v1/me/library/albums/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a library albumâ€™s relationship by using its identifier.
 GET	 /v1/me/library/albums 	Cosistent Resource Archetype	Fetch one or more library albums by using their identifiers.
 GET	 /v1/me/library/albums 	Cosistent Resource Archetype	Fetch all the library albums in alphabetical order.
 POST	 /v1/me/library 	Cosistent Resource Archetype	Add a catalog resource to a userâ€™s iCloud Music Library.
-GET	 /v1/catalog/{storefront}/artists/{id} 	Cosistent Resource Archetype	Fetch an artist by using the artistâ€™s identifier.id string (Required) The unique identifier for the artist. storefront string (Required) An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the id attributes of Storefront objects.
-GET	 /v1/catalog/{storefront}/artists/{id}/{relationship} 	Cosistent Resource Archetype	Fetch an artistâ€™s relationship by using its identifier.
-GET	 /v1/catalog/{storefront}/artists/{id}/view/{view} 	Cosistent Resource Archetype	Fetch related resources for a single artistâ€™s relationship view.
-GET	 /v1/catalog/{storefront}/artists 	Cosistent Resource Archetype	Fetch one or more artists by using their identifiers.
 GET	 /v1/me/library/artists/{id} 	Cosistent Resource Archetype	Fetch a library artist by using its identifier.
-GET	 /v1/me/library/artists/{id}/{relationship}	Cosistent Resource Archetype	Fetch a library artistâ€™s relationship by using its identifier.
 GET	 /v1/me/library/artists 	Cosistent Resource Archetype	Fetch one or more library artists by using their identifiers.
 GET	 /v1/artists/{id} 	Cosistent Resource Archetype	A resource object that represents the artist of an album where an artist can be one or more people.
-GET	 /v1/catalog/{storefront}/songs/{id}	Cosistent Resource Archetype	Fetch a song by using its identifier.
-GET	 /v1/catalog/{storefront}/songs/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a songâ€™s relationship by using its identifier.
-GET	 /v1/catalog/{storefront}/songs 	Cosistent Resource Archetype	Fetch one or more songs by using their identifiers.
-GET	 /v1/catalog/{storefront}/songs 	Cosistent Resource Archetype	Fetch one or more songs by using their International Standard Recording Code (ISRC) values.
-GET	 /v1/catalog/{storefront}/songs 	Cosistent Resource Archetype	Fetch the equivalent, available content in the storefront for the provided songsâ€™ identifiers.
 GET	 /v1/me/library/songs/{id} 	Cosistent Resource Archetype	Fetch a library song by using its identifier.
-GET	 /v1/me/library/songs/{id}/{relationship}	Cosistent Resource Archetype	Fetch a library songâ€™s relationship by using its identifier.
 GET	 /v1/me/library/songs 	Cosistent Resource Archetype	Fetch one or more library songs by using their identifiers.
 GET	 /v1/me/library/songs 	Cosistent Resource Archetype	Fetch all the library songs in alphabetical order.
-GET	 /v1/catalog/{storefront}/music-videos/{id} 	Cosistent Resource Archetype	Fetch a music video by using its identifier.
-GET	 /v1/catalog/{storefront}/music-videos/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a music videoâ€™s relationship by using its identifier.
-GET	 /v1/catalog/{storefront}/music-videos/{id}/view/{view}	Cosistent Resource Archetype	Fetch related resources for a single music videoâ€™s relationship view.
-GET	 /v1/catalog/{storefront}/music-videos	Cosistent Resource Archetype	Fetch one or more music videos by using their identifiers.
-GET	 /v1/catalog/{storefront}/music-videos	Cosistent Resource Archetype	Fetch one or more music videos by using their International Standard Recording Code (ISRC) values.
-GET	 /v1/catalog/{storefront}/music-videos 	Cosistent Resource Archetype	Fetch the equivalent, available content in the storefront for the provided music videosâ€™ identifiers.
-GET	 /v1/me/library/music-videos/{id} 	Cosistent Resource Archetype	Fetch a library music video by using its identifier.
-GET	 /v1/me/library/music-videos/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a library music videoâ€™s relationship by using its identifier.
-GET	 /v1/me/library/music-videos 	Cosistent Resource Archetype	Fetch one or more library music videos by using their identifiers.
-GET	 /v1/me/library/music-videos 	Cosistent Resource Archetype	Fetch all the library music videos in alphabetical order.
-GET	 /v1/catalog/{storefront}/playlists/{id} 	Cosistent Resource Archetype	Fetch a playlist by using its identifier.
-GET	 /v1/catalog/{storefront}/playlists/{id}/{relationship}	Cosistent Resource Archetype	Fetch a playlistâ€™s relationship by using its identifier.
-GET	 /v1/catalog/{storefront}/playlists/{id}/view/{view} 	Cosistent Resource Archetype	Fetch related resources for a single playlistâ€™s relationship view.
-GET	 /v1/catalog/{storefront}/playlists 	Cosistent Resource Archetype	Fetch one or more playlists by using their identifiers.
-GET	 /v1/catalog/{storefront}/playlists 	Cosistent Resource Archetype	Fetch one or more Charts Playlists by using their Storefront value.
 GET	 /v1/me/library/playlists/{id} 	Cosistent Resource Archetype	Fetch a library playlist by using its identifier.
-GET	 /v1/me/library/playlists/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a library playlistâ€™s relationship by using its identifier.
 GET	 /v1/me/library/playlists 	Cosistent Resource Archetype	Fetch one or more library playlists by using their identifiers.
 GET	 /v1/me/library/playlists 	Cosistent Resource Archetype	Fetch all the library playlists in alphabetical order.
-GET	 /v1/me/library/playlist-folders 	Cosistent Resource Archetype	Fetch the root library playlists folder for the user.
-GET	 /v1/me/library/playlist-folders/{id} 	Cosistent Resource Archetype	Fetch a library playlist folder by using its identifier.
-GET	 /v1/me/library/playlist-folders/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a library playlist folderâ€™s relationship by using its identifier.
-GET	 /v1/me/library/playlist-folders 	Cosistent Resource Archetype	Fetch one or more library playlist folders by using their identifiers.
-POST	 /v1/me/library/playlist-folders 	Cosistent Resource Archetype	Create a new playlist folder in a userâ€™s library.
 POST	 /v1/me/library/playlists 	Cosistent Resource Archetype	Create a new playlist in a userâ€™s library.
 POST	 /v1/me/library/playlists/{id}/tracks 	Cosistent Resource Archetype	Add new tracks to the end of a library playlist.
-GET	 /v1/catalog/{storefront}/stations/{id} 	Cosistent Resource Archetype	Fetch a station by using its identifier.
-GET	 /v1/catalog/{storefront}/stations/{id}/{relationship} 	Cosistent Resource Archetype	Fetch a station's relationship using its identifier.
-GET	 /v1/catalog/{storefront}/stations 	Cosistent Resource Archetype	Fetch one or more stations by using their identifiers.
-GET	 /v1/catalog/{storefront}/stations 	Cosistent Resource Archetype	Fetch the Apple Music live radio stations for the storefront.
-GET	 /v1/catalog/{storefront}/stations 	Cosistent Resource Archetype	Fetch the current userâ€™s personal Apple Music station.
-GET	 /v1/catalog/{storefront}/station-genres/{id} 	Cosistent Resource Archetype	Fetch a station genre by using its identifier.
-GET	 /v1/catalog/{storefront}/station-genres/{id}/{relationship}	Cosistent Resource Archetype	Fetch a station genreâ€™s relationship by using its identifier.
-GET	 /v1/catalog/{storefront}/station-genres 	Cosistent Resource Archetype	Fetch one or more station genres by using their identifiers.
-GET	 /v1/catalog/{storefront}/station-genres 	Cosistent Resource Archetype	Fetch all station genres for a given storefront.
-GET	 /v1/catalog/{storefront}/search 	Cosistent Resource Archetype	Search the catalog by using a query.
-GET	 /v1/catalog/{storefront}/search/hints 	Cosistent Resource Archetype	Fetch the search term results for a hint.
-GET	 /v1/catalog/{storefront}/search/suggestions 	Cosistent Resource Archetype	Fetch the search suggestions for a provided term input.
-GET	 /v1/me/library/search 	Cosistent Resource Archetype	Search the library by using a query.
 GET	 /v1/me/ratings/music-videos/{id} 	Cosistent Resource Archetype	Fetch a userâ€™s rating for a music video by using the videoâ€™s identifier.
-GET	 /v1/me/ratings/albums 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more albums by using the albums' identifiers.
 GET	 /v1/me/ratings/music-videos 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more music videos by using the music videos' identifiers.
-GET	 /v1/me/ratings/playlists 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more playlists by using the playlists' identifiers.
-GET	 /v1/me/ratings/songs 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more songs by using the songs' identifiers.
-GET	 /v1/me/ratings/stations 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more stations by using the stations' identifiers.
 PUT	 /v1/me/ratings/music-videos/{id} 	Cosistent Resource Archetype	Add a userâ€™s music video rating by using the music videoâ€™s identifier.
 DELETE	 /v1/me/ratings/music-videos/{id} 	Cosistent Resource Archetype	Remove a userâ€™s music video rating by using the music videoâ€™s identifier.
 GET	 /v1/me/ratings/library-albums/{id} 	Cosistent Resource Archetype	Fetch a userâ€™s rating for specific content by using the contentâ€™s identifier.
-GET	 /v1/me/ratings/library-music-videos/{id} 	Cosistent Resource Archetype	Fetch a userâ€™s rating for a library music video by using the music videoâ€™s library identifier.
 GET	 /v1/me/ratings/library-playlists/{id} 	Cosistent Resource Archetype	Fetch a userâ€™s rating for a library playlist by using the playlistâ€™s library identifier.
 GET	 /v1/me/ratings/library-songs/{id} 	Cosistent Resource Archetype	Fetch a userâ€™s rating for a library song by using the songâ€™s library identifier.
 GET	 /v1/me/ratings/library-albums 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more pieces of content by using the contentsâ€™ identifiers.
-GET	 /v1/me/ratings/library-music-videos 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more library music videos by using the library music videos' identifiers.
 GET	 /v1/me/ratings/library-playlists 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more library playlists by using the library playlists' identifiers.
 GET	 /v1/me/ratings/library-songs 	Cosistent Resource Archetype	Fetch the userâ€™s ratings for one or more library songs by using the library songs' identifiers.
 PUT	 /v1/me/ratings/library-albums/{id} 	Cosistent Resource Archetype	Add a userâ€™s content rating by using the contentâ€™s identifier.
-PUT	 /v1/me/ratings/library-music-videos/{id} 	Cosistent Resource Archetype	Add a userâ€™s library music video rating by using the library music videoâ€™s identifier.
 PUT	 /v1/me/ratings/library-playlists/{id} 	Cosistent Resource Archetype	Add a userâ€™s library playlist rating by using the library playlistâ€™s identifier.
 PUT	 /v1/me/ratings/library-songs/{id} 	Cosistent Resource Archetype	Add a userâ€™s library song rating by using the library songâ€™s identifier.

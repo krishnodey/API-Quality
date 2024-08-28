@@ -1247,12 +1247,14 @@ class ApiAnalyzer:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
-            for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
+            for line, method, uri, documentation, nodes in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters, self.processed_nodes):
                 row = json.loads(line)
 
                 verbs = ["get", "post", "put", "delete", "update", "create", "fetch", "remove", "add", "edit", "patch"]
-                nodes = [node for node in uri.split('/') if node.isalpha()]
-                #print(nodes)
+                #nodes = [node for node in uri.split('/') if node.isalpha()]
+                # print(uri)
+                # print(nodes)
+                #print(proc_uri)
                 #nodes = [subpart for part in uri.split('/') if part and not part.isdigit() for subpart in re.split(r'[._-]', part)]
 
                 flag = 0
@@ -1260,7 +1262,7 @@ class ApiAnalyzer:
                 for i in range(len(nodes) - 1):
                     if (not is_plural(nodes[i]) and not is_plural(nodes[i + 1])): # both singular
                         #return ['Inconsistent Resource Archetype Names antipattern', 'Violation: collection and store archetypes are not plural']
-                        flag == 1
+                        flag = 1
                         row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP1})
                         incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP1}\t{documentation.strip()}")
                         ap_count += 1
@@ -1287,6 +1289,7 @@ class ApiAnalyzer:
                     cosistent_resource_archetype_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
                 print("->", end=" ")
+                #print(f"{row['inconsistent_archetype']} ---- {row['consistent_archetype']}")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
 
@@ -1360,30 +1363,21 @@ class ApiAnalyzer:
             file.truncate()
             for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uri = row['uri']  
-                #     h_method = row['method']
-                #     documentation = row['description']
+
                 flag = 0
                 nodes = uri.split('/')
                 #print(nodes)
                 for node in nodes:
                     splitted_nodes = re.split(r'(?=[A-Z])|_|-', node)
-                    #print(splitted_nodes)
+                    # print(splitted_nodes)
                     if len(splitted_nodes) > 4:
                         #return "Flat Endpoint antipattern"
-                        # row['flat_endpoint'] = 1
-                        # row['structured_endpoint'] = 0
-                        # row['flat_endpoint_comment'] = AP
                         flag = 1
                         row.update({"flat_endpoint": 1, "structured_endpoint": 0, "flat_endpoint_comment": AP})
                         flat_endpoint_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                         ap_count += 1
                 if flag == 0:
                     #return "Structured Endpoint pattern"
-                    # row['flat_endpoint'] = 0
-                    # row['structured_endpoint'] = 1
-                    # row['flat_endpoint_comment'] = P
                     row.update({"flat_endpoint": 0, "structured_endpoint": 1, "flat_endpoint_comment": P})
                     structed_endpoint_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
