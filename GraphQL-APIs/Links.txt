@@ -29,7 +29,7 @@ https://developer.pluralsight.com/schema/channel/channelContent
 https://northflank.com/docs/v1/api/projects/list-projects
 
 https://developer.ibm.com/apis/catalog/ai4industry--anomaly-detection-product/api/API--ai4industry--anomaly-detection-api#batch_multi
-https://developer.ibm.com/apis/catalog/scinsights--supply-chain-insights/api/API--scinsights--ibm-sterling-supply-chain-insights-with-watson#IframeAppService.operation.create (more can be colleted)
+https://developer.ibm.com/apis/catalog/scinsights--supply-chain-insights/api/API--scinsights--ibm-sterling-supply-chain-insights-with-watson#IframeAppService.operation.create (all colleted)
 https://developer.ibm.com/apis/catalog/inventoryvis--inventory-visibility/api/API--inventoryvis--node-safety-stock-rule-apis#getRule (More can be collected)
 https://developer.ibm.com/apis/catalog/marketplace--ibm-marketplace/api/API--marketplace--entitlements
 

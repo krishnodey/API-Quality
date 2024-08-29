@@ -1,0 +1,39 @@
+***Anti-Pattern*** 
+Count: 22
+/deployment/resources/virtual data center./<virtual data center.UID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/vm_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/vdcs/{uuid}/vm_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/volume_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/vdcs/{uuid}/volume_configurations	Amorphous End-point	 [underscore found] 
+/deployment/resources/subnets/<subnetUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/subnet/<subnetUUID>/addresses	Amorphous End-point	 [uppercase found] 
+/deployment/resources/subnet/<subnetUUID>/addresses	Amorphous End-point	 [uppercase found] 
+/deployment/resources/addresses/<addressUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/addresses/<addressUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/credentials/<credentialUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/images/<imageID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/groups/<groupUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/groups/group<UUID>?showNested=true	Amorphous End-point	 [uppercase found] 
+/deployment/resources/instances/<instanceUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/instances/<instanceUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/volumes/<volumeUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/instances/<instanceUUID>	Amorphous End-point	 [uppercase found] 
+/deployment/resources/instance_snapshots	Amorphous End-point	 [underscore found] 
+/audit/resources/audit_config	Amorphous End-point	 [underscore found] 
+/admin/resources/backup_subcomponents/{id}	Amorphous End-point	 [underscore found] 
+/admin/resources/chassis_management_modules	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 12
+/deployment/resources/instances	Tidy End-point	Tidy Endpoint
+/deployment/resources/subnets	Tidy End-point	Tidy Endpoint
+/deployment/resources/addresses	Tidy End-point	Tidy Endpoint
+/deployment/resources/credentials	Tidy End-point	Tidy Endpoint
+/deployment/resources/groups	Tidy End-point	Tidy Endpoint
+/deployment/resources/groups?isMaster=true	Tidy End-point	Tidy Endpoint
+/deployment/resources/instances	Tidy End-point	Tidy Endpoint
+/deployment/resources/addresses	Tidy End-point	Tidy Endpoint
+/deployment/resources/volumes	Tidy End-point	Tidy Endpoint
+/deployment/resources/volumes	Tidy End-point	Tidy Endpoint
+/deployment/resources/acls	Tidy End-point	Tidy Endpoint
+/admin/resources/backup	Tidy End-point	Tidy Endpoint

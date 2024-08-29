@@ -1,9 +1,0 @@
-/auth/login
-/auth/revoke
-/auth/token
-/flow
-/flow/:id
-/flows
-/nodes
-/nodes/:module
-/settings

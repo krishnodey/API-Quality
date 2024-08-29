@@ -1,30 +1,36 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 27
+GET	 /channelContent/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelContent represents the various possible contents of channels by content type.
+GET	 /channelContent/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelContent represents the various possible contents of channels by content type.
+GET	 /channelGroup/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelGroup represents a grouping of Channels.
+GET	 /channelGroup/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelGroup represents a grouping of Channels.
+GET	 /channelMembers/{userId} 	Singular Nouns Found in Consecutive Nodes	ChannelMembers represent all members assigned to any Channel on the plan.
+POST	 /addChannel 	Singular Nouns Found in Consecutive Nodes	Create a new Channel.
+POST	 /addChannelGroups 	Singular Nouns Found in Consecutive Nodes	Add one or more Channel Groups.
+POST	 /addChannelMembers 	Singular Nouns Found in Consecutive Nodes	Assign a User to an existing Channel.
+POST	 /addTeamsToChannels 	Plural Nouns Found in Consecutive Nodes	Assign Teams to existing Channels.
+POST	 /archiveChannel 	Singular Nouns Found in Consecutive Nodes	Archive a Channel.
+DELETE	 /deleteChannelGroup 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channel Groups.
+DELETE	 /deleteChannelGroup 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channel Groups.
+DELETE	 /deleteChannelGroupChannels 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
+DELETE	 /deleteChannelGroupChannels 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
+POST	 /editChannel 	Singular Nouns Found in Consecutive Nodes	Modify Channel details. All edits require both channelId and actorUserId.
+DELETE	 /removeChannelContent 	Singular Nouns Found in Consecutive Nodes	Remove Content from an existing Channel.
+DELETE	 /removeChannelContent 	Singular Nouns Found in Consecutive Nodes	Remove Content from an existing Channel.
+DELETE	 /removeChannelMember 	Singular Nouns Found in Consecutive Nodes	Remove a member or contributor from an existing Channel.
+DELETE	 /removeChannelMember 	Singular Nouns Found in Consecutive Nodes	Remove a member or contributor from an existing Channel.
+PUT	 /updateChannelGroups 	Singular Nouns Found in Consecutive Nodes	Update one or more Channel Groups.
+GET	 /contentCatalog 	Singular Nouns Found in Consecutive Nodes	ContentCatalog represents an aggregate of all of the content types
+GET	 /courseCatalog 	Singular Nouns Found in Consecutive Nodes	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
+GET	 /labCatalog 	Singular Nouns Found in Consecutive Nodes	LabCatalog represents a list of labs available at Pluralsight.
+GET	 /marketTaxonomy 	Singular Nouns Found in Consecutive Nodes	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
+GET	 /pathCatalog 	Singular Nouns Found in Consecutive Nodes	Path Catalog represents a list of available Paths on Pluralsight.com.
+GET	 /programCatalog 	Singular Nouns Found in Consecutive Nodes	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
+GET	 /projectCatalog 	Singular Nouns Found in Consecutive Nodes	ProjectCatalog represents a list of available Projects on Pluralsight.com.
 
 ***Patterns*** 
-Count: 25
-GET	 /channelContent/{id} 	Cosistent Resource Archetype	ChannelContent represents the various possible contents of channels by content type.
-GET	 /channelGroup/{id} 	Cosistent Resource Archetype	ChannelGroup represents a grouping of Channels.
-GET	 /channelMembers/{userId} 	Cosistent Resource Archetype	ChannelMembers represent all members assigned to any Channel on the plan.
+Count: 4
 GET	 /channelProgress 	Cosistent Resource Archetype	ChannelProgress represents consumption of channel content by any user, regardless of whether they are a channel member or not.
 GET	 /channels 	Cosistent Resource Archetype	Channels represent collections of content like Courses, Paths, Projects, Guides, Interactive Courses, External Links, Labs, etc.
-POST	 /addChannel 	Cosistent Resource Archetype	Create a new Channel.
-POST	 /addChannelGroups 	Cosistent Resource Archetype	Add one or more Channel Groups.
-POST	 /addChannelMembers 	Cosistent Resource Archetype	Assign a User to an existing Channel.
 POST	 /addChannelsToChannelGroups 	Cosistent Resource Archetype	Add one or more Channels to one or more Channel Groups. Note: Adding a Channel that is already on a Channel Group will return success as true and will not duplicate the Channel.
-POST	 /addTeamsToChannels 	Cosistent Resource Archetype	Assign Teams to existing Channels.
-POST	 /archiveChannel 	Cosistent Resource Archetype	Archive a Channel.
-DELETE	 /deleteChannelGroup 	Cosistent Resource Archetype	Delete one or more Channel Groups.
-DELETE	 /deleteChannelGroupChannels 	Cosistent Resource Archetype	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
-POST	 /editChannel 	Cosistent Resource Archetype	Modify Channel details. All edits require both channelId and actorUserId.
-DELETE	 /removeChannelContent 	Cosistent Resource Archetype	Remove Content from an existing Channel.
-DELETE	 /removeChannelMember 	Cosistent Resource Archetype	Remove a member or contributor from an existing Channel.
-PUT	 /updateChannelGroups 	Cosistent Resource Archetype	Update one or more Channel Groups.
-GET	 /contentCatalog 	Cosistent Resource Archetype	ContentCatalog represents an aggregate of all of the content types
-GET	 /courseCatalog 	Cosistent Resource Archetype	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
-GET	 /labCatalog 	Cosistent Resource Archetype	LabCatalog represents a list of labs available at Pluralsight.
-GET	 /marketTaxonomy 	Cosistent Resource Archetype	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
-GET	 /pathCatalog 	Cosistent Resource Archetype	Path Catalog represents a list of available Paths on Pluralsight.com.
-GET	 /programCatalog 	Cosistent Resource Archetype	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
-GET	 /projectCatalog 	Cosistent Resource Archetype	ProjectCatalog represents a list of available Projects on Pluralsight.com.
 GET	 /tags 	Cosistent Resource Archetype	Tags represent one or more technology concepts associated with a piece of content.

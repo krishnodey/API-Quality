@@ -1,87 +1,177 @@
 ***Anti-Pattern*** 
-Count: 37
+Count: 172
+POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
+POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
+POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
 POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
 POST	 /api/user/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a user into the system
+POST	 /api/user/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a user into the system
+POST	 /api/user/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a user into the system
+POST	 /api/user/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a user into the system
+POST	 /api/user/anon 	Singular Nouns Found in Consecutive Nodes	Authenticates anonymous users into the system
+POST	 /api/user/anon 	Singular Nouns Found in Consecutive Nodes	Authenticates anonymous users into the system
+POST	 /api/user/anon 	Singular Nouns Found in Consecutive Nodes	Authenticates anonymous users into the system
 POST	 /api/user/anon 	Singular Nouns Found in Consecutive Nodes	Authenticates anonymous users into the system
 POST	 /api/user/checkauth 	Singular Nouns Found in Consecutive Nodes	Checks if user is authenticated
+POST	 /api/user/checkauth 	Singular Nouns Found in Consecutive Nodes	Checks if user is authenticated
+POST	 /api/user/checkauth 	Singular Nouns Found in Consecutive Nodes	Checks if user is authenticated
+POST	 /api/user/checkauth 	Singular Nouns Found in Consecutive Nodes	Checks if user is authenticated
+POST	 /api/user/checkauth 	Singular Nouns Found in Consecutive Nodes	Checks if user is authenticated
+POST	 /api/user/logout 	Singular Nouns Found in Consecutive Nodes	Logs out a user
+POST	 /api/user/logout 	Singular Nouns Found in Consecutive Nodes	Logs out a user
+POST	 /api/user/logout 	Singular Nouns Found in Consecutive Nodes	Logs out a user
 POST	 /api/user/logout 	Singular Nouns Found in Consecutive Nodes	Logs out a user
 GET	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Returns information about a logged in user
+GET	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Returns information about a logged in user
+GET	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Returns information about a logged in user
+GET	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Returns information about a logged in user
+PUT	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Updates a logged in users information
+PUT	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Updates a logged in users information
+PUT	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Updates a logged in users information
 PUT	 /api/user/info 	Singular Nouns Found in Consecutive Nodes	Updates a logged in users information
 PUT	 /api/user/pass 	Singular Nouns Found in Consecutive Nodes	Changes a logged in users password
+PUT	 /api/user/pass 	Singular Nouns Found in Consecutive Nodes	Changes a logged in users password
+PUT	 /api/user/pass 	Singular Nouns Found in Consecutive Nodes	Changes a logged in users password
+GET	 /api/user 	Singular Nouns Found in Consecutive Nodes	Gets list of users
+GET	 /api/user 	Singular Nouns Found in Consecutive Nodes	Gets list of users
+GET	 /api/user 	Singular Nouns Found in Consecutive Nodes	Gets list of users
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Update a device's state or custom attributes only
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Update a device's state or custom attributes only
+PUT	 /api/v/2/devices/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Update a device's state or custom attributes only
 PUT	 /api/v/2/devices/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Update a device's state or custom attributes only
 POST	 /api/v/2/devices/{SystemKey}/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a device into the system
+POST	 /api/v/2/devices/{SystemKey}/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a device into the system
+POST	 /api/v/2/devices/{SystemKey}/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a device into the system
+POST	 /api/v/2/devices/{SystemKey}/auth 	Singular Nouns Found in Consecutive Nodes	Authenticates a device into the system
+GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
 GET	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	fetch collection
 PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item update
+POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
+POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
+POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
+POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
+POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
+POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
 POST	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item create
 DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/collection/{systemKey}/{collectionName} 	Singular Nouns Found in Consecutive Nodes	Item delete
+GET	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+GET	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	fetch collection
+PUT	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	Item update
+PUT	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	Item update
+POST	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	Item create
+POST	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	Item create
+DELETE	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	Item delete
+DELETE	 /api/data/{collectionID} 	Singular Nouns Found in Consecutive Nodes	Item delete
+GET	 /api/data/{collectionid}/columns 	Singular Nouns Found in Consecutive Nodes	get column key names
+GET	 /api/data/{collectionid}/columns 	Singular Nouns Found in Consecutive Nodes	get column key names
+POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
+POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
+POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
+POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
+POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
+POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
 POST	 /api/code/{systemKey}/{serviceName} 	Singular Nouns Found in Consecutive Nodes	Calls/executes ClearCode service
 GET	 /codeadmin/v/2/library/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
 GET	 /codeadmin/v/2/library/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
+GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
 GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
 GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets the libraries for a system
 PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Updates the libraries for a system
 PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Updates the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Updates the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Updates the libraries for a system
+PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Updates the libraries for a system
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Creates libraries for a system
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Creates libraries for a system
+POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Creates libraries for a system
 POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Creates libraries for a system
 POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Creates libraries for a system
 DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Deletes a libraries for a system
 DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Deletes a libraries for a system
+DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Deletes a libraries for a system
+DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Deletes a libraries for a system
+DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Deletes a libraries for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets all versions of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets all versions of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets all versions of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets all versions of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets all versions of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Singular Nouns Found in Consecutive Nodes	Gets all versions of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
 GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
+GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Singular Nouns Found in Consecutive Nodes	Gets a specific version of a library for a system
+GET	 /codeadmin/failed 	Singular Nouns Found in Consecutive Nodes	Lists failed code service runs for all systems that a developer can access
+GET	 /codeadmin/failed 	Singular Nouns Found in Consecutive Nodes	Lists failed code service runs for all systems that a developer can access
+GET	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Lists failed code service runs for specified system
+GET	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Lists failed code service runs for specified system
+GET	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Lists failed code service runs for specified system
 GET	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Lists failed code service runs for specified system
 POST	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retry failed code services
+POST	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retry failed code services
+POST	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retry failed code services
+POST	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retry failed code services
+DELETE	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete failed code service run from list
+DELETE	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete failed code service run from list
+DELETE	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete failed code service run from list
 DELETE	 /codeadmin/failed/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete failed code service run from list
 GET	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retrieve message history
+GET	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retrieve message history
+GET	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retrieve message history
+GET	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retrieve message history
+GET	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Retrieve message history
+POST	 /api/message/{systemKey}/publish 	Singular Nouns Found in Consecutive Nodes	Publishes a message to a topic
+POST	 /api/message/{systemKey}/publish 	Singular Nouns Found in Consecutive Nodes	Publishes a message to a topic
+POST	 /api/message/{systemKey}/publish 	Singular Nouns Found in Consecutive Nodes	Publishes a message to a topic
+POST	 /api/message/{systemKey}/publish 	Singular Nouns Found in Consecutive Nodes	Publishes a message to a topic
+POST	 /api/message/{systemKey}/publish 	Singular Nouns Found in Consecutive Nodes	Publishes a message to a topic
 POST	 /api/message/{systemKey}/publish 	Singular Nouns Found in Consecutive Nodes	Publishes a message to a topic
 DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
+DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
+DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
+DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
+DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
+POST	 /admin/reg 	Singular Nouns Found in Consecutive Nodes	Registers a new developer account with the CB platform
+POST	 /admin/auth 	Singular Nouns Found in Consecutive Nodes	Authorizes a CB Developer account
+POST	 /admin/logout 	Singular Nouns Found in Consecutive Nodes	Logs a CB developer out of their session
+POST	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a new system in a developers account
+POST	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a new system in a developers account
+GET	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Gets a systems info
+GET	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Gets a systems info
+PUT	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Updates a systems info
+PUT	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Updates a systems info
+DELETE	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Deletes a system
+DELETE	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Deletes a system
+POST	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a new collection or connection in a system
+POST	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a new collection or connection in a system
+PUT	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Updates an existing connection in a system
+PUT	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Updates an existing connection in a system
+PUT	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a column within an existing collection
+PUT	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a column within an existing collection
 
 ***Patterns*** 
-Count: 45
-POST	 /api/user/reg 	Cosistent Resource Archetype	Register user
-POST	 /api/user/auth 	Cosistent Resource Archetype	Authenticates a user into the system
-POST	 /api/user/anon 	Cosistent Resource Archetype	Authenticates anonymous users into the system
-POST	 /api/user/checkauth 	Cosistent Resource Archetype	Checks if user is authenticated
-POST	 /api/user/logout 	Cosistent Resource Archetype	Logs out a user
-GET	 /api/user/info 	Cosistent Resource Archetype	Returns information about a logged in user
-PUT	 /api/user/info 	Cosistent Resource Archetype	Updates a logged in users information
-PUT	 /api/user/pass 	Cosistent Resource Archetype	Changes a logged in users password
-GET	 /api/user 	Cosistent Resource Archetype	Gets list of users
-PUT	 /api/v/2/devices/{systemKey}/{name} 	Cosistent Resource Archetype	Update a device's state or custom attributes only
-POST	 /api/v/2/devices/{SystemKey}/auth 	Cosistent Resource Archetype	Authenticates a device into the system
-GET	 /api/collection/{systemKey}/{collectionName} 	Cosistent Resource Archetype	fetch collection
-PUT	 /api/collection/{systemKey}/{collectionName} 	Cosistent Resource Archetype	Item update
-POST	 /api/collection/{systemKey}/{collectionName} 	Cosistent Resource Archetype	Item create
-DELETE	 /api/collection/{systemKey}/{collectionName} 	Cosistent Resource Archetype	Item delete
-GET	 /api/data/{collectionID} 	Cosistent Resource Archetype	fetch collection
-PUT	 /api/data/{collectionID} 	Cosistent Resource Archetype	Item update
-POST	 /api/data/{collectionID} 	Cosistent Resource Archetype	Item create
-DELETE	 /api/data/{collectionID} 	Cosistent Resource Archetype	Item delete
-GET	 /api/data/{collectionid}/columns 	Cosistent Resource Archetype	get column key names
-POST	 /api/code/{systemKey}/{serviceName} 	Cosistent Resource Archetype	Calls/executes ClearCode service
-GET	 /codeadmin/v/2/library/{systemKey} 	Cosistent Resource Archetype	Gets the libraries for a system
-GET	 /codeadmin/v/2/library/{systemKey}/{name} 	Cosistent Resource Archetype	Gets the libraries for a system
-PUT	 /codeadmin/v/2/library/{systemKey}/{name} 	Cosistent Resource Archetype	Updates the libraries for a system
-POST	 /codeadmin/v/2/library/{systemKey}/{name} 	Cosistent Resource Archetype	Creates libraries for a system
-DELETE	 /codeadmin/v/2/library/{systemKey}/{name} 	Cosistent Resource Archetype	Deletes a libraries for a system
-GET	 /codeadmin/v/2/history/library/{systemKey}/{name} 	Cosistent Resource Archetype	Gets all versions of a library for a system
-GET	 /codeadmin/v/2/history/library/{systemKey}/{name}/{version} 	Cosistent Resource Archetype	Gets a specific version of a library for a system
-GET	 /codeadmin/failed 	Cosistent Resource Archetype	Lists failed code service runs for all systems that a developer can access
-GET	 /codeadmin/failed/{systemKey} 	Cosistent Resource Archetype	Lists failed code service runs for specified system
-POST	 /codeadmin/failed/{systemKey} 	Cosistent Resource Archetype	Retry failed code services
-DELETE	 /codeadmin/failed/{systemKey} 	Cosistent Resource Archetype	Delete failed code service run from list
-GET	 /api/message/{systemKey} 	Cosistent Resource Archetype	Retrieve message history
-POST	 /api/message/{systemKey}/publish 	Cosistent Resource Archetype	Publishes a message to a topic
-DELETE	 /api/message/{systemKey} 	Cosistent Resource Archetype	Delete message history
-POST	 /admin/reg 	Cosistent Resource Archetype	Registers a new developer account with the CB platform
-POST	 /admin/auth 	Cosistent Resource Archetype	Authorizes a CB Developer account
-POST	 /admin/logout 	Cosistent Resource Archetype	Logs a CB developer out of their session
-POST	 /admin/systemmanagement 	Cosistent Resource Archetype	Creates a new system in a developers account
-GET	 /admin/systemmanagement 	Cosistent Resource Archetype	Gets a systems info
-PUT	 /admin/systemmanagement 	Cosistent Resource Archetype	Updates a systems info
-DELETE	 /admin/systemmanagement 	Cosistent Resource Archetype	Deletes a system
-POST	 /admin/collectionmanagement 	Cosistent Resource Archetype	Creates a new collection or connection in a system
-PUT	 /admin/collectionmanagement 	Cosistent Resource Archetype	Updates an existing connection in a system
-PUT	 /admin/collectionmanagement 	Cosistent Resource Archetype	Creates a column within an existing collection
+Count: 0

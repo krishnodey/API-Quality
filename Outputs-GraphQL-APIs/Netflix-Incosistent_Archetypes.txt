@@ -1,22 +1,32 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 20
+POST	 /binaries/byteBuf 	Singular Nouns Found in Consecutive Nodes	registerByteBufBinary
+POST	 /binaries/byteArray 	Singular Nouns Found in Consecutive Nodes	registerByteArrayBinary
+POST	 /content/rawContentSource 	Singular Nouns Found in Consecutive Nodes	rawContentSource
+POST	 /content/rawContentSource 	Singular Nouns Found in Consecutive Nodes	rawContentSource
+POST	 /content/rawContentSource 	Singular Nouns Found in Consecutive Nodes	rawContentSource
+POST	 /content/byteBufContent 	Singular Nouns Found in Consecutive Nodes	byteBufContent
+POST	 /content/byteBufContent 	Singular Nouns Found in Consecutive Nodes	byteBufContent
+POST	 /content/byteBufContent 	Singular Nouns Found in Consecutive Nodes	byteBufContent
+POST	 /content/byteArrayContent 	Singular Nouns Found in Consecutive Nodes	byteArrayContent
+POST	 /content/byteArrayContent 	Singular Nouns Found in Consecutive Nodes	byteArrayContent
+POST	 /content/byteArrayContent 	Singular Nouns Found in Consecutive Nodes	byteArrayContent
+POST	 /content/stringContent 	Singular Nouns Found in Consecutive Nodes	stringContent
+POST	 /content/stringContent 	Singular Nouns Found in Consecutive Nodes	stringContent
+POST	 /content/movieContent 	Singular Nouns Found in Consecutive Nodes	movieContent
+POST	 /content/movieContent 	Singular Nouns Found in Consecutive Nodes	movieContent
+POST	 content/movieContentBroken 	Singular Nouns Found in Consecutive Nodes	movieContentBroken
+POST	 content/movieContentBroken 	Singular Nouns Found in Consecutive Nodes	movieContentBroken
+POST	 content/movieContentBroken 	Singular Nouns Found in Consecutive Nodes	movieContentBroken
+POST	 /users/{userId}/recommendations 	Singular Nouns Found in Consecutive Nodes	updateRecommendation
+GET	 /users/{userId}/recommendations 	Singular Nouns Found in Consecutive Nodes	recommendationsByUserId
 
 ***Patterns*** 
-Count: 17
+Count: 7
 GET	 /movies/{id} 	Cosistent Resource Archetype	findMovieById
 GET	 /rawMovies/{id} 	Cosistent Resource Archetype	findRawMovieById
 GET	 /movies?name={name}&author={author} 	Cosistent Resource Archetype	findMovie
 POST	 /movies 	Cosistent Resource Archetype	registerMovie
 POST	 /titles 	Cosistent Resource Archetype	registerTitle
-POST	 /binaries/byteBuf 	Cosistent Resource Archetype	registerByteBufBinary
-POST	 /binaries/byteArray 	Cosistent Resource Archetype	registerByteArrayBinary
 DELETE	 /movies/{id} 	Cosistent Resource Archetype	deleteMovie
-POST	 /content/rawContentSource 	Cosistent Resource Archetype	rawContentSource
-POST	 /content/byteBufContent 	Cosistent Resource Archetype	byteBufContent
-POST	 /content/byteArrayContent 	Cosistent Resource Archetype	byteArrayContent
-POST	 /content/stringContent 	Cosistent Resource Archetype	stringContent
-POST	 /content/movieContent 	Cosistent Resource Archetype	movieContent
-POST	 content/movieContentBroken 	Cosistent Resource Archetype	movieContentBroken
-POST	 /users/{userId}/recommendations 	Cosistent Resource Archetype	updateRecommendation
-GET	 /users/{userId}/recommendations 	Cosistent Resource Archetype	recommendationsByUserId
 GET	 /recommendations?category={category}&ageGroup={ageGroup} 	Cosistent Resource Archetype	recommendationsBy

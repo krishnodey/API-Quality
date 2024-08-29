@@ -1,0 +1,35 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 30
+/createEventDocument/{eventId}	Tidy End-point	Tidy Endpoint
+/createEventGroup/{eventId}	Tidy End-point	Tidy Endpoint
+/createEventPlanningLink/{eventId}	Tidy End-point	Tidy Endpoint
+/createEventSponsor/{eventId}	Tidy End-point	Tidy Endpoint
+/createExhibitorLinkRelation	Tidy End-point	Tidy Endpoint
+/createExhibitorLink	Tidy End-point	Tidy Endpoint
+/createFieldDefinition	Tidy End-point	Tidy Endpoint
+/createProduct	Tidy End-point	Tidy Endpoint
+/createPushNotification	Tidy End-point	Tidy Endpoint
+/createRole	Tidy End-point	Tidy Endpoint
+/deleteEventExhibitors/{eventId}	Tidy End-point	Tidy Endpoint
+/deleteEventNotifications/{eventId}	Tidy End-point	Tidy Endpoint
+/deleteExhibitorLinkRelation	Tidy End-point	Tidy Endpoint
+/deleteExhibitorLink	Tidy End-point	Tidy Endpoint
+/deleteFieldDefinitions	Tidy End-point	Tidy Endpoint
+/deletePlanningViews	Tidy End-point	Tidy Endpoint
+/deleteProducts	Tidy End-point	Tidy Endpoint
+/deleteRoles	Tidy End-point	Tidy Endpoint
+/deleteSelectFieldValues	Tidy End-point	Tidy Endpoint
+/setSelectFieldValue	Tidy End-point	Tidy Endpoint
+/updateEventPerson	Tidy End-point	Tidy Endpoint
+/updateExhibitorMemberRoles	Tidy End-point	Tidy Endpoint
+/updateExhibitor	Tidy End-point	Tidy Endpoint
+/updateFieldDefinition	Tidy End-point	Tidy Endpoint
+/updateProduct	Tidy End-point	Tidy Endpoint
+/updateProducts	Tidy End-point	Tidy Endpoint
+/updateRole	Tidy End-point	Tidy Endpoint
+updateTicketType	Tidy End-point	Tidy Endpoint
+updateUserTerm	Tidy End-point	Tidy Endpoint
+/upsertEventNotification	Tidy End-point	Tidy Endpoint

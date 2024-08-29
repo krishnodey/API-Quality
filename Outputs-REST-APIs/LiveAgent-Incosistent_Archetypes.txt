@@ -1,26 +1,35 @@
 ***Anti-Pattern*** 
-Count: 6
-GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	Plural Nouns Found in Consecutive Nodes	Get account attribute
-PUT	 /accounts/[account_id]/attributes/[attribute_name] 	Plural Nouns Found in Consecutive Nodes	Change account attribute
-DELETE	 /accounts/[account_id]/users/[userid]?apikey=[value] 	Plural Nouns Found in Consecutive Nodes	Remove user from account
-PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Plural Nouns Found in Consecutive Nodes	Change addon validity on owned license
-GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	Plural Nouns Found in Consecutive Nodes	Get license attribute
-PUT	 /licenses/[license_code]/attributes/[attribute_name] 	Plural Nouns Found in Consecutive Nodes	Change license attribute
+Count: 26
+GET	 /accounts/[account_id]/addons?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get all account add-ons with validity info
+POST	 /accounts/[account_id]/addons 	Singular Nouns Found in Consecutive Nodes	Add addon to account
+GET	 /accounts/[account_id]?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get account info
+GET	 /accounts/[account_id]/status?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get account status
+GET	 /accounts/[account_id]/status?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get account status
+PUT	 /accounts/[account_id]/status 	Singular Nouns Found in Consecutive Nodes	Change account status (suspend, unsuspend or terminate)
+PUT	 /accounts/[account_id]/status 	Singular Nouns Found in Consecutive Nodes	Change account status (suspend, unsuspend or terminate)
+PUT	 /accounts/[account_id]/variation 	Singular Nouns Found in Consecutive Nodes	Change account variation
+PUT	 /accounts/[account_id]/variation 	Singular Nouns Found in Consecutive Nodes	Change account variation
+GET	 /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Check account domain before signup
+GET	 /signupcheck/email?productid=[value]&email=[value]&apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Check email validity before signup
+GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get account attribute
+GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get account attribute
+PUT	 /accounts/[account_id]/attributes/[attribute_name] 	Singular Nouns Found in Consecutive Nodes	Change account attribute
+PUT	 /accounts/[account_id]/attributes/[attribute_name] 	Singular Nouns Found in Consecutive Nodes	Change account attribute
+DELETE	 /accounts/[account_id]/users/[userid]?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Remove user from account
+GET	 /accounts/[account_id]/users?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get users list from account
+GET	 /licenses/[license_code]/addons?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get all license add-ons with validity info
+POST	 /licenses/[license_code]/addons 	Singular Nouns Found in Consecutive Nodes	Add addon to license
+PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Singular Nouns Found in Consecutive Nodes	Change addon validity on owned license
+PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Singular Nouns Found in Consecutive Nodes	Change addon validity on owned license
+PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Singular Nouns Found in Consecutive Nodes	Change addon validity on owned license
+GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get license attribute
+GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	Singular Nouns Found in Consecutive Nodes	Get license attribute
+PUT	 /licenses/[license_code]/attributes/[attribute_name] 	Singular Nouns Found in Consecutive Nodes	Change license attribute
+PUT	 /licenses/[license_code]/attributes/[attribute_name] 	Singular Nouns Found in Consecutive Nodes	Change license attribute
 
 ***Patterns*** 
-Count: 15
-GET	 /accounts/[account_id]/addons?apikey=[value] 	Cosistent Resource Archetype	Get all account add-ons with validity info
-POST	 /accounts/[account_id]/addons 	Cosistent Resource Archetype	Add addon to account
+Count: 4
 GET	 /accounts?apikey=[value] 	Cosistent Resource Archetype	Get accounts info for reseller
-GET	 /accounts/[account_id]?apikey=[value] 	Cosistent Resource Archetype	Get account info
 POST	 /accounts 	Cosistent Resource Archetype	Create new account
-GET	 /accounts/[account_id]/status?apikey=[value] 	Cosistent Resource Archetype	Get account status
-PUT	 /accounts/[account_id]/status 	Cosistent Resource Archetype	Change account status (suspend, unsuspend or terminate)
-PUT	 /accounts/[account_id]/variation 	Cosistent Resource Archetype	Change account variation
-GET	 /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] 	Cosistent Resource Archetype	Check account domain before signup
-GET	 /signupcheck/email?productid=[value]&email=[value]&apikey=[value] 	Cosistent Resource Archetype	Check email validity before signup
 GET	 /variations?apikey=[value] 	Cosistent Resource Archetype	Get all reseller variations
-GET	 /accounts/[account_id]/users?apikey=[value] 	Cosistent Resource Archetype	Get users list from account
-GET	 /licenses/[license_code]/addons?apikey=[value] 	Cosistent Resource Archetype	Get all license add-ons with validity info
-POST	 /licenses/[license_code]/addons 	Cosistent Resource Archetype	Add addon to license
 GET	 /licenses?apikey=[value] 	Cosistent Resource Archetype	Get all licenses info for reseller

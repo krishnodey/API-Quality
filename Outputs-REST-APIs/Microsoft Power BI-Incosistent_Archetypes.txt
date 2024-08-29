@@ -1,40 +1,57 @@
 ***Anti-Pattern*** 
-Count: 10
-GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Plural Nouns Found in Consecutive Nodes	Returns a list of upstream dataflows for the specified dataflow.
-GET	 /admin/groups/{groupId}/datasets/upstreamDataflows 	Plural Nouns Found in Consecutive Nodes	Returns a list of upstream dataflows for datasets from the specified workspace.
-DELETE	 /admin/pipelines/{pipelineId}/users/{identifier} 	Plural Nouns Found in Consecutive Nodes	Remove user permissions from a specified deployment pipeline.
-GET	 /apps/{appId}/dashboards/{dashboardId} 	Plural Nouns Found in Consecutive Nodes	Returns the specified dashboard from the specified app.
-GET	 /apps/{appId}/reports/{reportId} 	Plural Nouns Found in Consecutive Nodes	Returns the specified report from the specified app.
-GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Plural Nouns Found in Consecutive Nodes	Returns the specified tile within the specified dashboard from the specified app.
-GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Plural Nouns Found in Consecutive Nodes	Returns the specified tile within the specified dashboard from the specified app.
-GET	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Plural Nouns Found in Consecutive Nodes	Returns a list of tiles within the specified dashboard from the specified app.
-GET	 /capacities/{capacityId}/refreshables/{refreshableId} 	Plural Nouns Found in Consecutive Nodes	Returns the specified refreshable for the specified capacity the user has access to.
-GET	 /capacities/{capacityId}/Workloads/{workloadName} 	Plural Nouns Found in Consecutive Nodes	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+Count: 44
+POST	 /admin/tenantKeys 	Singular Nouns Found in Consecutive Nodes	Adds an encryption key for Power BI workspaces assigned to a capacity.
+GET	 /admin/apps/{appId}/users 	Singular Nouns Found in Consecutive Nodes	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
+GET	 /admin/groups/{groupId}/dashboards 	Singular Nouns Found in Consecutive Nodes	Returns a list of dashboards from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/export 	Singular Nouns Found in Consecutive Nodes	Exports the specified dataflow definition to a .json file.
+GET	 /admin/dataflows/{dataflowId}/export 	Singular Nouns Found in Consecutive Nodes	Exports the specified dataflow definition to a .json file.
+GET	 /admin/dataflows/{dataflowId}/datasources 	Singular Nouns Found in Consecutive Nodes	Returns a list of datasources for the specified dataflow.
+GET	 /admin/dataflows/{dataflowId}/datasources 	Plural Nouns Found in Consecutive Nodes	Returns a list of datasources for the specified dataflow.
+GET	 /admin/groups/{groupId}/dataflows 	Singular Nouns Found in Consecutive Nodes	Returns a list of dataflows from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/users 	Singular Nouns Found in Consecutive Nodes	Returns a list of users that have access to the specified dataflow (Preview).
+GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Singular Nouns Found in Consecutive Nodes	Returns a list of upstream dataflows for the specified dataflow.
+GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Singular Nouns Found in Consecutive Nodes	Returns a list of upstream dataflows for the specified dataflow.
+GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Singular Nouns Found in Consecutive Nodes	Returns a list of upstream dataflows for the specified dataflow.
+GET	 /admin/groups/{groupId}/datasets 	Singular Nouns Found in Consecutive Nodes	Returns a list of datasets from the specified workspace.
+GET	 /admin/groups/{groupId}/datasets/upstreamDataflows 	Singular Nouns Found in Consecutive Nodes	Returns a list of upstream dataflows for datasets from the specified workspace.
+GET	 /admin/datasets/{datasetId}/datasources 	Singular Nouns Found in Consecutive Nodes	Returns a list of datasources for the specified dataset.
+GET	 /admin/datasets/{datasetId}/datasources 	Plural Nouns Found in Consecutive Nodes	Returns a list of datasources for the specified dataset.
+POST	 /admin/groups/{groupId}/users 	Singular Nouns Found in Consecutive Nodes	Grants user permissions to the specified workspace.
+DELETE	 /admin/pipelines/{pipelineId}/users/{identifier} 	Singular Nouns Found in Consecutive Nodes	Remove user permissions from a specified deployment pipeline.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Singular Nouns Found in Consecutive Nodes	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Singular Nouns Found in Consecutive Nodes	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Singular Nouns Found in Consecutive Nodes	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Singular Nouns Found in Consecutive Nodes	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Singular Nouns Found in Consecutive Nodes	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+POST	 /admin/workspaces/getInfo 	Singular Nouns Found in Consecutive Nodes	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
+GET	 /apps/{appId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified installed app.
+GET	 /apps/{appId}/dashboards/{dashboardId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified dashboard from the specified app.
+GET	 /apps/{appId}/reports/{reportId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified report from the specified app.
+GET	 /apps/{appId}/reports/{reportId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified report from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified tile within the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified tile within the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified tile within the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Singular Nouns Found in Consecutive Nodes	Returns a list of tiles within the specified dashboard from the specified app.
+GET	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Singular Nouns Found in Consecutive Nodes	Returns a list of tiles within the specified dashboard from the specified app.
+GET	 /capacities/{capacityId}/refreshables/{refreshableId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified refreshable for the specified capacity the user has access to.
+GET	 /capacities/{capacityId}/refreshables/{refreshableId} 	Singular Nouns Found in Consecutive Nodes	Returns the specified refreshable for the specified capacity the user has access to.
+GET	 /capacities/{capacityId}/Workloads/{workloadName} 	Singular Nouns Found in Consecutive Nodes	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+GET	 /capacities/{capacityId}/Workloads/{workloadName} 	Singular Nouns Found in Consecutive Nodes	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
+GET	 /capacities/{capacityId}/Workloads 	Singular Nouns Found in Consecutive Nodes	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
+POST	 /AssignToCapacity 	Singular Nouns Found in Consecutive Nodes	Assigns "My Workspace" to the specified capacity.
+POST	 /groups/{groupId}/AssignToCapacity 	Singular Nouns Found in Consecutive Nodes	Assigns the specified workspace to the specified capacity.
+POST	 /groups/{groupId}/AssignToCapacity 	Singular Nouns Found in Consecutive Nodes	Assigns the specified workspace to the specified capacity.
+POST	 /groups/{groupId}/AssignToCapacity 	Singular Nouns Found in Consecutive Nodes	Assigns the specified workspace to the specified capacity.
+POST	 /groups/{groupId}/dashboards 	Singular Nouns Found in Consecutive Nodes	Creates a new empty dashboard on the specified workspace.
 
 ***Patterns*** 
-Count: 25
-POST	 /admin/tenantKeys 	Cosistent Resource Archetype	Adds an encryption key for Power BI workspaces assigned to a capacity.
+Count: 8
 GET	 /admin/apps?$top={$top} 	Cosistent Resource Archetype	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
-GET	 /admin/apps/{appId}/users 	Cosistent Resource Archetype	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
 POST	 /admin/capacities/AssignWorkspaces 	Cosistent Resource Archetype	Assigns the provided workspaces to the specified premium capacity.
 POST	 /admin/capacities/UnassignWorkspaces 	Cosistent Resource Archetype	Unassigns the provided workspaces from capacity.
 GET	 /admin/dashboards 	Cosistent Resource Archetype	Returns a list of dashboards for the organization.
-GET	 /admin/groups/{groupId}/dashboards 	Cosistent Resource Archetype	Returns a list of dashboards from the specified workspace.
-GET	 /admin/dataflows/{dataflowId}/export 	Cosistent Resource Archetype	Exports the specified dataflow definition to a .json file.
-GET	 /admin/dataflows/{dataflowId}/datasources 	Cosistent Resource Archetype	Returns a list of datasources for the specified dataflow.
-GET	 /admin/groups/{groupId}/dataflows 	Cosistent Resource Archetype	Returns a list of dataflows from the specified workspace.
-GET	 /admin/dataflows/{dataflowId}/users 	Cosistent Resource Archetype	Returns a list of users that have access to the specified dataflow (Preview).
-GET	 /admin/groups/{groupId}/datasets 	Cosistent Resource Archetype	Returns a list of datasets from the specified workspace.
-GET	 /admin/datasets/{datasetId}/datasources 	Cosistent Resource Archetype	Returns a list of datasources for the specified dataset.
 GET	 /admin/capacities 	Cosistent Resource Archetype	Returns a list of capacities for the organization.
-POST	 /admin/groups/{groupId}/users 	Cosistent Resource Archetype	Grants user permissions to the specified workspace.
-POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Cosistent Resource Archetype	Rotate the encryption key for Power BI workspaces assigned to a capacity.
 GET	 /admin/workspaces/modified 	Cosistent Resource Archetype	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
-POST	 /admin/workspaces/getInfo 	Cosistent Resource Archetype	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
-GET	 /apps/{appId} 	Cosistent Resource Archetype	Returns the specified installed app.
 GET	 /availableFeatures 	Cosistent Resource Archetype	Returns a list of available features for the user
 GET	 /capacities 	Cosistent Resource Archetype	Returns a list of capacities the user has access to.
-GET	 /capacities/{capacityId}/Workloads 	Cosistent Resource Archetype	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
-POST	 /AssignToCapacity 	Cosistent Resource Archetype	Assigns "My Workspace" to the specified capacity.
-POST	 /groups/{groupId}/AssignToCapacity 	Cosistent Resource Archetype	Assigns the specified workspace to the specified capacity.
-POST	 /groups/{groupId}/dashboards 	Cosistent Resource Archetype	Creates a new empty dashboard on the specified workspace.

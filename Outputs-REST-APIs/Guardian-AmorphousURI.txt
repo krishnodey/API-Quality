@@ -1,0 +1,10 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 5
+/getEditions	Tidy End-point	Tidy Endpoint
+/getSections	Tidy End-point	Tidy Endpoint
+/getSingleItem	Tidy End-point	Tidy Endpoint
+/getTags	Tidy End-point	Tidy Endpoint
+/searchContent	Tidy End-point	Tidy Endpoint

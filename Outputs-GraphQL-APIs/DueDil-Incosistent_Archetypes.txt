@@ -1,36 +1,147 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 142
+POST	 /v4/search/companies.{format} 	Singular Nouns Found in Consecutive Nodes	Find companies based on search criteria.
+POST	 /v4/search/charities.{format} 	Singular Nouns Found in Consecutive Nodes	Find charities based on search criteria.
+POST	 /v4/search/keywords.{format} 	Singular Nouns Found in Consecutive Nodes	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
+POST	 /v4/search/regions.{format} 	Singular Nouns Found in Consecutive Nodes	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.
+GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
+GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
+GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
+GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Singular Nouns Found in Consecutive Nodes	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Singular Nouns Found in Consecutive Nodes	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Singular Nouns Found in Consecutive Nodes	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Singular Nouns Found in Consecutive Nodes	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Singular Nouns Found in Consecutive Nodes	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Singular Nouns Found in Consecutive Nodes	Get registered names for a company.
+GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Singular Nouns Found in Consecutive Nodes	Get industries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Singular Nouns Found in Consecutive Nodes	Get industries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Singular Nouns Found in Consecutive Nodes	Get industries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Singular Nouns Found in Consecutive Nodes	Get industries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Singular Nouns Found in Consecutive Nodes	Get industries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Singular Nouns Found in Consecutive Nodes	Get addresses for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Singular Nouns Found in Consecutive Nodes	Get addresses for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Singular Nouns Found in Consecutive Nodes	Get addresses for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Singular Nouns Found in Consecutive Nodes	Get addresses for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Singular Nouns Found in Consecutive Nodes	Get addresses for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Singular Nouns Found in Consecutive Nodes	Get officers and their appointments for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Singular Nouns Found in Consecutive Nodes	Get officers and their appointments for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Singular Nouns Found in Consecutive Nodes	Get officers and their appointments for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Singular Nouns Found in Consecutive Nodes	Get officers and their appointments for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Singular Nouns Found in Consecutive Nodes	Get officers and their appointments for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Singular Nouns Found in Consecutive Nodes	Get company financial filings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Singular Nouns Found in Consecutive Nodes	Get company financial filings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Singular Nouns Found in Consecutive Nodes	Get company financial filings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Singular Nouns Found in Consecutive Nodes	Get company financial filings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Singular Nouns Found in Consecutive Nodes	Get company financial filings for a given company.
+GET	 /v4/officer/{officerId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
+GET	 /v4/officer/{officerId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
+GET	 /v4/charity/{countryCode}/{charityId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Singular Nouns Found in Consecutive Nodes	Get trustees for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Singular Nouns Found in Consecutive Nodes	Get trustees for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Singular Nouns Found in Consecutive Nodes	Get trustees for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Singular Nouns Found in Consecutive Nodes	Get trustees for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Singular Nouns Found in Consecutive Nodes	Get trustees for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Singular Nouns Found in Consecutive Nodes	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Singular Nouns Found in Consecutive Nodes	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Singular Nouns Found in Consecutive Nodes	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Singular Nouns Found in Consecutive Nodes	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Singular Nouns Found in Consecutive Nodes	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Singular Nouns Found in Consecutive Nodes	Get status history for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get geographic areas of activity for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get geographic areas of activity for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get geographic areas of activity for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get geographic areas of activity for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Singular Nouns Found in Consecutive Nodes	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Singular Nouns Found in Consecutive Nodes	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Singular Nouns Found in Consecutive Nodes	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Singular Nouns Found in Consecutive Nodes	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Singular Nouns Found in Consecutive Nodes	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Singular Nouns Found in Consecutive Nodes	Get registered names for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Singular Nouns Found in Consecutive Nodes	Get shareholders and their shareholdings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Singular Nouns Found in Consecutive Nodes	Get shareholders and their shareholdings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Singular Nouns Found in Consecutive Nodes	Get shareholders and their shareholdings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Singular Nouns Found in Consecutive Nodes	Get shareholders and their shareholdings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Singular Nouns Found in Consecutive Nodes	Get shareholders and their shareholdings for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Singular Nouns Found in Consecutive Nodes	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Singular Nouns Found in Consecutive Nodes	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Singular Nouns Found in Consecutive Nodes	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Singular Nouns Found in Consecutive Nodes	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Singular Nouns Found in Consecutive Nodes	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Singular Nouns Found in Consecutive Nodes	Get group parents for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Singular Nouns Found in Consecutive Nodes	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Singular Nouns Found in Consecutive Nodes	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Singular Nouns Found in Consecutive Nodes	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Singular Nouns Found in Consecutive Nodes	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Singular Nouns Found in Consecutive Nodes	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Singular Nouns Found in Consecutive Nodes	Get group subsidiaries for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get portfolio companies for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Singular Nouns Found in Consecutive Nodes	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Singular Nouns Found in Consecutive Nodes	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Singular Nouns Found in Consecutive Nodes	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Singular Nouns Found in Consecutive Nodes	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Singular Nouns Found in Consecutive Nodes	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Singular Nouns Found in Consecutive Nodes	Get bank accounts for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Singular Nouns Found in Consecutive Nodes	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Singular Nouns Found in Consecutive Nodes	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Singular Nouns Found in Consecutive Nodes	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Singular Nouns Found in Consecutive Nodes	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Singular Nouns Found in Consecutive Nodes	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Singular Nouns Found in Consecutive Nodes	Get gazette notices for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Singular Nouns Found in Consecutive Nodes	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Singular Nouns Found in Consecutive Nodes	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Singular Nouns Found in Consecutive Nodes	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Singular Nouns Found in Consecutive Nodes	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Singular Nouns Found in Consecutive Nodes	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Singular Nouns Found in Consecutive Nodes	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Singular Nouns Found in Consecutive Nodes	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Singular Nouns Found in Consecutive Nodes	Get charges for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Singular Nouns Found in Consecutive Nodes	Get charges for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Singular Nouns Found in Consecutive Nodes	Get charges for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Singular Nouns Found in Consecutive Nodes	Get charges for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Singular Nouns Found in Consecutive Nodes	Get charges for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Singular Nouns Found in Consecutive Nodes	Get persons of significant control (PoSC) for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Singular Nouns Found in Consecutive Nodes	Get persons of significant control (PoSC) for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Singular Nouns Found in Consecutive Nodes	Get persons of significant control (PoSC) for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Singular Nouns Found in Consecutive Nodes	Get persons of significant control (PoSC) for a given company.
+GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Singular Nouns Found in Consecutive Nodes	Get persons of significant control (PoSC) for a given company.
+GET	 /v4/officer/{officerId}/related-officers.{format} 	Singular Nouns Found in Consecutive Nodes	Get all related officers for a given officer
+GET	 /v4/officer/{officerId}/related-officers.{format} 	Singular Nouns Found in Consecutive Nodes	Get all related officers for a given officer
+GET	 /v4/officer/{officerId}/related-officers.{format} 	Singular Nouns Found in Consecutive Nodes	Get all related officers for a given officer
+GET	 /v4/officer/{officerId}/related-officers.{format} 	Singular Nouns Found in Consecutive Nodes	Get all related officers for a given officer
+GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
 
 ***Patterns*** 
-Count: 31
-POST	 /v4/search/companies.{format} 	Cosistent Resource Archetype	Find companies based on search criteria.
-POST	 /v4/search/charities.{format} 	Cosistent Resource Archetype	Find charities based on search criteria.
-POST	 /v4/search/keywords.{format} 	Cosistent Resource Archetype	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
-POST	 /v4/search/regions.{format} 	Cosistent Resource Archetype	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.
-GET	 /v4/company/{countryCode}/{companyId}.{format} 	Cosistent Resource Archetype	Get key information for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	Cosistent Resource Archetype	Get registered names for a company.
-GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	Cosistent Resource Archetype	Get industries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	Cosistent Resource Archetype	Get addresses for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	Cosistent Resource Archetype	Get officers and their appointments for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	Cosistent Resource Archetype	Get company financial filings for a given company.
-GET	 /v4/officer/{officerId}.{format} 	Cosistent Resource Archetype	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
-GET	 /v4/charity/{countryCode}/{charityId}.{format} 	Cosistent Resource Archetype	Get key information for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	Cosistent Resource Archetype	Get trustees for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	Cosistent Resource Archetype	Get status history for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Cosistent Resource Archetype	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Cosistent Resource Archetype	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Cosistent Resource Archetype	Get geographic areas of activity for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	Cosistent Resource Archetype	Get registered names for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	Cosistent Resource Archetype	Get classifiers for a given charity.
-GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	Cosistent Resource Archetype	Get shareholders and their shareholdings for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	Cosistent Resource Archetype	Get group parents for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	Cosistent Resource Archetype	Get group subsidiaries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	Cosistent Resource Archetype	Get portfolio companies for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	Cosistent Resource Archetype	Get bank accounts for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	Cosistent Resource Archetype	Get gazette notices for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	Cosistent Resource Archetype	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
-GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	Cosistent Resource Archetype	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
-GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Cosistent Resource Archetype	Get charges for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Cosistent Resource Archetype	Get persons of significant control (PoSC) for a given company.
-GET	 /v4/officer/{officerId}/related-officers.{format} 	Cosistent Resource Archetype	Get all related officers for a given officer
-GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Cosistent Resource Archetype	Get subsidiaries for a given charity.
+Count: 0

@@ -1,0 +1,19 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 14
+/oauth/authorize	Tidy End-point	Tidy Endpoint
+/oauth/token	Tidy End-point	Tidy Endpoint
+/history	Tidy End-point	Tidy Endpoint
+/payment-methods	Tidy End-point	Tidy Endpoint
+/products	Tidy End-point	Tidy Endpoint
+/products/{product_id}	Tidy End-point	Tidy Endpoint
+/estimates/price	Tidy End-point	Tidy Endpoint
+/estimates/time	Tidy End-point	Tidy Endpoint
+/requests/estimate	Tidy End-point	Tidy Endpoint
+/requests/current	Tidy End-point	Tidy Endpoint
+/requests/current	Tidy End-point	Tidy Endpoint
+/requests/current	Tidy End-point	Tidy Endpoint
+/requests/{request_id}/receipt	Tidy End-point	Tidy Endpoint
+/requests/{request_id}/map	Tidy End-point	Tidy Endpoint

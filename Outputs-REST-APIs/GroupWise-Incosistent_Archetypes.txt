@@ -1,40 +1,44 @@
 ***Anti-Pattern*** 
-Count: 22
-GET	 /domains/{domain}/customaddresses/test?testAddress 	Plural Nouns Found in Consecutive Nodes	Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string
-GET	 /domains/{domain}/links/{link} 	Plural Nouns Found in Consecutive Nodes	Get the domain link between domainName and linkName
-PUT	 /domains/{domain}/links/{link} 	Plural Nouns Found in Consecutive Nodes	Update the domain link between domainName and linkName
-DELETE	 /domains/{domain}/gateways/{gateway} 	Plural Nouns Found in Consecutive Nodes	Delete a specific Gateway given the name
-PUT	 /domains/{domain}/gateways/{gateway} 	Plural Nouns Found in Consecutive Nodes	Update a Gateway given the data
-GET	 /domains/{domain}/gateways/{gateway} 	Plural Nouns Found in Consecutive Nodes	Get a specific Gateway given the name
-GET	 /domains/{domain}/gateways/{gateway}/administrators 	Plural Nouns Found in Consecutive Nodes	Performs a query to find all the administrators for this gateway
-POST	 /domains/{domain}/gateways/{gateway}/administrators 	Plural Nouns Found in Consecutive Nodes	Adds a new administrator to this gateway.
-DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Plural Nouns Found in Consecutive Nodes	Remove an administrator member from this gateway
-DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Plural Nouns Found in Consecutive Nodes	Remove an administrator member from this gateway
-PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Plural Nouns Found in Consecutive Nodes	Remove an administrator member from this gateway
-PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Plural Nouns Found in Consecutive Nodes	Remove an administrator member from this gateway
-GET	 /domains/{domain}/gateways/{gateway}/aliases 	Plural Nouns Found in Consecutive Nodes	Performs a query to find all the aliases for this gateway
-GET	 /domains/{domain}/gateways/{gateway}/classofservice 	Plural Nouns Found in Consecutive Nodes	List the classes of service for a specific gateway
-POST	 /domains/{domain}/gateways/{gateway}/classofservice 	Plural Nouns Found in Consecutive Nodes	Create a Gwia Class of Service for the specified gateway
-GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Plural Nouns Found in Consecutive Nodes	Get a specific Gateway given the name
-PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Plural Nouns Found in Consecutive Nodes	Update a specific Class of Service given the name
-DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Plural Nouns Found in Consecutive Nodes	Delete a specific Class of Service given the name
-GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	Plural Nouns Found in Consecutive Nodes	List the members for a specific class of service
-POST	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	Plural Nouns Found in Consecutive Nodes	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
-DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	Plural Nouns Found in Consecutive Nodes	Remove a member from this class of service by id
-POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	Plural Nouns Found in Consecutive Nodes	Recover the Access Control database for the specified gateway. This command will recover the database in place.
+Count: 33
+GET	 /list/{type} 	Singular Nouns Found in Consecutive Nodes	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /list/{type}/{base} 	Singular Nouns Found in Consecutive Nodes	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /list/{type}/{base} 	Singular Nouns Found in Consecutive Nodes	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+GET	 /async/{id} 	Singular Nouns Found in Consecutive Nodes	Get a particular asynchronous job status
+DELETE	 /async/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
+GET	 /diagnostics/attributes?locale 	Plural Nouns Found in Consecutive Nodes	Return a map of attribute id to names.
+GET	 /diagnostics/index/{index}?attrs 	Singular Nouns Found in Consecutive Nodes	Reads objects from the specified index
+GET	 /diagnostics/object/{id} 	Singular Nouns Found in Consecutive Nodes	Dump an object from the domain database identified by it's DRN and record type.
+GET	 /domains/{domain}/addressbook/view 	Singular Nouns Found in Consecutive Nodes	Returns the address book view defined for the domain
+PUT	 /domains/{domain}/addressbook/view 	Singular Nouns Found in Consecutive Nodes	Returns the address book view defined for the domain
+GET	 /domains/{domain}/administrator 	Singular Nouns Found in Consecutive Nodes	Return the administrator for this domain
+PUT	 /domains/{domain}/administrator 	Singular Nouns Found in Consecutive Nodes	Set the administrator for this domain
+DELETE	 /domains/{domain}/administrator 	Singular Nouns Found in Consecutive Nodes	Clear the administrator for this domain
+GET	 /domains/{domain}/clientoptions?attrs 	Singular Nouns Found in Consecutive Nodes	Get the Client Options under a specific Domain
+PUT	 /domains/{domain}/clientoptions?attrs 	Singular Nouns Found in Consecutive Nodes	Update the Client Options under a specific Domain
+GET	 /domains/{domain}/customaddresses 	Singular Nouns Found in Consecutive Nodes	Get all Custom Addresses under a specific Domain
+GET	 /domains/{domain}/customaddresses/test?testAddress 	Singular Nouns Found in Consecutive Nodes	Test the Custom Addresses that are associated with this Domain using the specified testAddress value. Returns a response that is the evaluated custom address test string
+GET	 /domains/{domain}/gatewaysubdirs 	Singular Nouns Found in Consecutive Nodes	List the gateway sub-directories for the domain.
+GET	 /domains/{domain}/info 	Singular Nouns Found in Consecutive Nodes	Retrieve statistical information about the objects contained in this domain
+POST	 /domains/{domain}/rebuild 	Singular Nouns Found in Consecutive Nodes	Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service.
+GET	 /domains/{domain}/refaccesscontrols 	Singular Nouns Found in Consecutive Nodes	Get the Access Control List for the domain
+GET	 /domains/{domain}/refaccesscontrols 	Plural Nouns Found in Consecutive Nodes	Get the Access Control List for the domain
+PUT	 /domains/{domain}/refaccesscontrols 	Singular Nouns Found in Consecutive Nodes	Update the Access Control List for the domain
+PUT	 /domains/{domain}/refaccesscontrols 	Plural Nouns Found in Consecutive Nodes	Update the Access Control List for the domain
+GET	 /domains/attributes 	Plural Nouns Found in Consecutive Nodes	Get all available Domain Attributes
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Singular Nouns Found in Consecutive Nodes	Get a specific Gateway given the name
+PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Singular Nouns Found in Consecutive Nodes	Update a specific Class of Service given the name
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Singular Nouns Found in Consecutive Nodes	Delete a specific Class of Service given the name
+GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	Singular Nouns Found in Consecutive Nodes	List the members for a specific class of service
+POST	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members 	Singular Nouns Found in Consecutive Nodes	Adds a new member to this class of service. The 'id' field of groupMember is required and all other fields are ignored
+DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname}/members/{member} 	Singular Nouns Found in Consecutive Nodes	Remove a member from this class of service by id
+POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	Singular Nouns Found in Consecutive Nodes	Recover the Access Control database for the specified gateway. This command will recover the database in place.
+POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	Singular Nouns Found in Consecutive Nodes	Recover the Access Control database for the specified gateway. This command will recover the database in place.
 
 ***Patterns*** 
-Count: 36
-GET	 /list/{type} 	Cosistent Resource Archetype	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
-GET	 /list/{type}/{base} 	Cosistent Resource Archetype	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+Count: 27
 GET	 /application 	Cosistent Resource Archetype	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
 GET	 /async?state 	Cosistent Resource Archetype	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
-GET	 /async/{id} 	Cosistent Resource Archetype	Get a particular asynchronous job status
-DELETE	 /async/{id} 	Cosistent Resource Archetype	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
-GET	 /diagnostics/attributes?locale 	Cosistent Resource Archetype	Return a map of attribute id to names.
 GET	 /diagnostics/index 	Cosistent Resource Archetype	Returns the list of available indices to query
-GET	 /diagnostics/index/{index}?attrs 	Cosistent Resource Archetype	Reads objects from the specified index
-GET	 /diagnostics/object/{id} 	Cosistent Resource Archetype	Dump an object from the domain database identified by it's DRN and record type.
 GET	 /domains 	Cosistent Resource Archetype	Get a list of Domains for this system.
 POST	 /domains 	Cosistent Resource Archetype	Create a domain given the data. Note: The "rebuild" resource should be used to create the related database file (wpdomain.db) afterwards.
 DELETE	 /domains/{domain} 	Cosistent Resource Archetype	Delete a specific Domain given the domain name
@@ -44,20 +48,18 @@ GET	 /domains/{domain}/addressbook/fields 	Cosistent Resource Archetype	Returns 
 GET	 /domains/{domain}/addressbook/labels 	Cosistent Resource Archetype	Get the address book labels defined for the domain
 PUT	 /domains/{domain}/addressbook/labels/{field} 	Cosistent Resource Archetype	Set the address book label for the given field
 DELETE	 /domains/{domain}/addressbook/labels/{field} 	Cosistent Resource Archetype	Delete the address book label for the given field
-GET	 /domains/{domain}/addressbook/view 	Cosistent Resource Archetype	Returns the address book view defined for the domain
-PUT	 /domains/{domain}/addressbook/view 	Cosistent Resource Archetype	Returns the address book view defined for the domain
-GET	 /domains/{domain}/administrator 	Cosistent Resource Archetype	Return the administrator for this domain
-PUT	 /domains/{domain}/administrator 	Cosistent Resource Archetype	Set the administrator for this domain
-DELETE	 /domains/{domain}/administrator 	Cosistent Resource Archetype	Clear the administrator for this domain
-GET	 /domains/{domain}/clientoptions?attrs 	Cosistent Resource Archetype	Get the Client Options under a specific Domain
-PUT	 /domains/{domain}/clientoptions?attrs 	Cosistent Resource Archetype	Update the Client Options under a specific Domain
-GET	 /domains/{domain}/customaddresses 	Cosistent Resource Archetype	Get all Custom Addresses under a specific Domain
-GET	 /domains/{domain}/gatewaysubdirs 	Cosistent Resource Archetype	List the gateway sub-directories for the domain.
-GET	 /domains/{domain}/info 	Cosistent Resource Archetype	Retrieve statistical information about the objects contained in this domain
 GET	 /domains/{domain}/links?direction 	Cosistent Resource Archetype	List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound).
-POST	 /domains/{domain}/rebuild 	Cosistent Resource Archetype	Rebuild a specific Domain given the Domain name. This command will rebuild the database (wpdomain.db) file and place it in the respective folder where it belongs. It will also ensure that the service is configured properly for this Domain. Note that this command requires an AdminService object be configured to communicate with the respective service.
-GET	 /domains/{domain}/refaccesscontrols 	Cosistent Resource Archetype	Get the Access Control List for the domain
-PUT	 /domains/{domain}/refaccesscontrols 	Cosistent Resource Archetype	Update the Access Control List for the domain
-GET	 /domains/attributes 	Cosistent Resource Archetype	Get all available Domain Attributes
+GET	 /domains/{domain}/links/{link} 	Cosistent Resource Archetype	Get the domain link between domainName and linkName
+PUT	 /domains/{domain}/links/{link} 	Cosistent Resource Archetype	Update the domain link between domainName and linkName
 GET	 /domains/{domain}/gateways 	Cosistent Resource Archetype	Performs a query to find all the Gateways for this GroupWise system.
 POST	 /domains/{domain}/gateways 	Cosistent Resource Archetype	Create an Gateway given the Gateway data
+DELETE	 /domains/{domain}/gateways/{gateway} 	Cosistent Resource Archetype	Delete a specific Gateway given the name
+PUT	 /domains/{domain}/gateways/{gateway} 	Cosistent Resource Archetype	Update a Gateway given the data
+GET	 /domains/{domain}/gateways/{gateway} 	Cosistent Resource Archetype	Get a specific Gateway given the name
+GET	 /domains/{domain}/gateways/{gateway}/administrators 	Cosistent Resource Archetype	Performs a query to find all the administrators for this gateway
+POST	 /domains/{domain}/gateways/{gateway}/administrators 	Cosistent Resource Archetype	Adds a new administrator to this gateway.
+DELETE	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Cosistent Resource Archetype	Remove an administrator member from this gateway
+PUT	 /domains/{domain}/gateways/{gateway}/administrators/{id} 	Cosistent Resource Archetype	Remove an administrator member from this gateway
+GET	 /domains/{domain}/gateways/{gateway}/aliases 	Cosistent Resource Archetype	Performs a query to find all the aliases for this gateway
+GET	 /domains/{domain}/gateways/{gateway}/classofservice 	Cosistent Resource Archetype	List the classes of service for a specific gateway
+POST	 /domains/{domain}/gateways/{gateway}/classofservice 	Cosistent Resource Archetype	Create a Gwia Class of Service for the specified gateway

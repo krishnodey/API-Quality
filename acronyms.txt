@@ -172,3 +172,9 @@ si>>session indentifier
 bo>>bop
 logout>>log out
 isrc>>international standard recording code
+productreturn>>product return
+kpi>>key performance indicator
+supplyinventories>>supply inventories
+supplyplan>>supply plan
+supplyshipments>>supply shipments
+workorders>>work orders

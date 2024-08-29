@@ -1,0 +1,48 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 43
+/installrequests	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/banner	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/comments/{id}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/relateddocs/{id}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/screenshots/{id}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/supportingdocs/{id}	Tidy End-point	Tidy Endpoint
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId}	Tidy End-point	Tidy Endpoint
+/applications	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/availableservices	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/comments	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/recommendedservices	Tidy End-point	Tidy Endpoint
+/appstore/publisher/v2/applications/{listingVersionId}/packages	Tidy End-point	Tidy Endpoint
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/banner	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/relateddocs/{id}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/screenshots	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/supportingdocs/{id}	Tidy End-point	Tidy Endpoint
+/appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/applications	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/banner	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/comments	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/icon	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/relateddocs	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/screenshots	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/supportingdocs	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/version	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/banner	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/comments/{id}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/icon	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/packages/{packageVersionId}	Tidy End-point	Tidy Endpoint
+/applications/{listingVersionId}/recommendedservices	Tidy End-point	Tidy Endpoint

@@ -1,0 +1,23 @@
+***Anti-Pattern*** 
+Count: 6
+/v3/businesses/search?sort_by=best_match&limit=20	Amorphous End-point	 [underscore found] 
+/v3/businesses/{business_id_or_alias}/service_offerings	Amorphous End-point	 [underscore found] 
+/v3/businesses/business_id_or_alias/reviews?limit=20&sort_by=yelp_sort	Amorphous End-point	 [underscore found] 
+/v3/businesses/business_id_or_alias/review_highlights?count=3	Amorphous End-point	 [underscore found] 
+/v3/events?limit=3&sort_by=desc&sort_on=popularity	Amorphous End-point	 [underscore found] 
+/v3/events/event_id	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 12
+/v3/events/awesome-event	Tidy End-point	Tidy Endpoint
+/oauth2/authorize	Tidy End-point	Tidy Endpoint
+/oauth2/token	Tidy End-point	Tidy Endpoint
+/v3/businesses/search/phone	Tidy End-point	Tidy Endpoint
+Find the Yelp business that matches an exact input location. Use this to match business data from other sources with Yelp businesses.	Tidy End-point	Tidy Endpoint
+/v3/businesses/{id}	Tidy End-point	Tidy Endpoint
+/v3/transactions/{transaction_type}/search	Search for businesses which support food delivery transactions.	Tidy End-point	Tidy Endpoint
+/v3/businesses/engagement	Get engagement metrics information for the provided businesses.	Tidy End-point	Tidy Endpoint
+/v3/events/featured	Tidy End-point	Tidy Endpoint
+/v3/categories	Tidy End-point	Tidy Endpoint
+/v3/categories/alias	Tidy End-point	Tidy Endpoint
+/v3/autocomplete	Tidy End-point	Tidy Endpoint

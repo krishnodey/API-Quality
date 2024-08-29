@@ -1,46 +1,97 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 92
+POST	 /fetchBill/{id} 	Singular Nouns Found in Consecutive Nodes	Read a Bill by Id
+POST	 /fetchBill/{id} 	Singular Nouns Found in Consecutive Nodes	Read a Bill by Id
+POST	 /createBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteBill/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /fetchCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	Read an Credit Memo by Id
+POST	 /fetchCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	Read an Credit Memo by Id
+POST	 /fetchCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	Read an Credit Memo by Id
+POST	 /createCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteCreditMemo/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createInvoiceDraft 	Singular Nouns Found in Consecutive Nodes	Mutation for defining value of field within an Invoice Draft
+POST	 /createInvoiceDraft 	Singular Nouns Found in Consecutive Nodes	Mutation for defining value of field within an Invoice Draft
+POST	 /transactionDraft/{id} 	Singular Nouns Found in Consecutive Nodes	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
+POST	 /transactionDraft/{id} 	Singular Nouns Found in Consecutive Nodes	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
+POST	 /createCustomer 	Singular Nouns Found in Consecutive Nodes	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
+POST	 /fetchCustomer/{id} 	Singular Nouns Found in Consecutive Nodes	Use queries to read customers. Apps can query the Customer entity by id or displayName.
+POST	 /fetchCustomer/{id} 	Singular Nouns Found in Consecutive Nodes	Use queries to read customers. Apps can query the Customer entity by id or displayName.
+POST	 /fetchDelayedCharge/{id} 	Singular Nouns Found in Consecutive Nodes	Read an DelayedCharge by Id
+POST	 /fetchDelayedCharge/{id} 	Singular Nouns Found in Consecutive Nodes	Read an DelayedCharge by Id
+POST	 /fetchDelayedCharge/{id} 	Singular Nouns Found in Consecutive Nodes	Read an DelayedCharge by Id
+POST	 /createDelayedCharge 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createDelayedCharge 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteDelayedCharge 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteDelayedCharge 	Singular Nouns Found in Consecutive Nodes	
+POST	 /fetchDelayedCredit/{id}	Singular Nouns Found in Consecutive Nodes	Read an DelayedCredit by Id
+POST	 /fetchDelayedCredit/{id}	Singular Nouns Found in Consecutive Nodes	Read an DelayedCredit by Id
+POST	 /fetchDelayedCredit/{id}	Singular Nouns Found in Consecutive Nodes	Read an DelayedCredit by Id
+POST	 /createDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteDelayedCredit/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /verificationOfEmployment 	Singular Nouns Found in Consecutive Nodes	Verification of Employment
+POST	 /verificationOfIncome 	Singular Nouns Found in Consecutive Nodes	Verification of Income
+POST	 /socialServiceVerification 	Singular Nouns Found in Consecutive Nodes	Social Service Verification
+POST	 /socialServiceVerification 	Singular Nouns Found in Consecutive Nodes	Social Service Verification
+POST	 /fetchEstimate/{id} 	Singular Nouns Found in Consecutive Nodes	Read an Estimate by Id
+POST	 /fetchEstimate/{id} 	Singular Nouns Found in Consecutive Nodes	Read an Estimate by Id
+POST	 /createEstimate/{id}	Singular Nouns Found in Consecutive Nodes	
+POST	 /createEstimate/{id}	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteEstimate/{id} 	Singular Nouns Found in Consecutive Nodes	id: ID of an existing estimate
+POST	 /deleteEstimate/{id} 	Singular Nouns Found in Consecutive Nodes	id: ID of an existing estimate
+POST	 /createEstimateDraft 	Singular Nouns Found in Consecutive Nodes	Estimate Draft
+POST	 /createEstimateDraft 	Singular Nouns Found in Consecutive Nodes	Estimate Draft
+POST	 /fetchExpense 	Singular Nouns Found in Consecutive Nodes	Read an Expense by Id
+POST	 /createExpense/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createExpense/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateExpense/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateExpense/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteExpense/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteExpense/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /fetchInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	Read an invoice by Id
+POST	 /fetchInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	Read an invoice by Id
+POST	 /createInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteInvoice/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createInvoiceDraft 	Singular Nouns Found in Consecutive Nodes	Invoice Draft
+POST	 /createInvoiceDraft 	Singular Nouns Found in Consecutive Nodes	Invoice Draft
+POST	 /fetchInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	Read an InvoicePayment by Id
+POST	 /fetchInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	Read an InvoicePayment by Id
+POST	 /fetchInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	Read an InvoicePayment by Id
+POST	 /createInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /createInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /updateInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
+POST	 /deleteInvoicePayment/{id} 	Singular Nouns Found in Consecutive Nodes	
 
 ***Patterns*** 
-Count: 41
-POST	 /fetchBill/{id} 	Cosistent Resource Archetype	Read a Bill by Id
-POST	 /createBill/{id} 	Cosistent Resource Archetype	
-POST	 /updateBill/{id} 	Cosistent Resource Archetype	
-POST	 /updateBill/{id} 	Cosistent Resource Archetype	
-POST	 /deleteBill/{id} 	Cosistent Resource Archetype	
-POST	 /fetchCreditMemo/{id} 	Cosistent Resource Archetype	Read an Credit Memo by Id
-POST	 /createCreditMemo/{id} 	Cosistent Resource Archetype	
-POST	 /updateCreditMemo/{id} 	Cosistent Resource Archetype	
-POST	 /deleteCreditMemo/{id} 	Cosistent Resource Archetype	
-POST	 /deleteCreditMemo/{id} 	Cosistent Resource Archetype	
-POST	 /createInvoiceDraft 	Cosistent Resource Archetype	Mutation for defining value of field within an Invoice Draft
-POST	 /transactionDraft/{id} 	Cosistent Resource Archetype	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
-POST	 /createCustomer 	Cosistent Resource Archetype	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
-POST	 /fetchCustomer/{id} 	Cosistent Resource Archetype	Use queries to read customers. Apps can query the Customer entity by id or displayName.
-POST	 /fetchDelayedCharge/{id} 	Cosistent Resource Archetype	Read an DelayedCharge by Id
-POST	 /createDelayedCharge 	Cosistent Resource Archetype	
-POST	 /deleteDelayedCharge 	Cosistent Resource Archetype	
-POST	 /fetchDelayedCredit/{id}	Cosistent Resource Archetype	Read an DelayedCredit by Id
-POST	 /createDelayedCredit/{id} 	Cosistent Resource Archetype	
-POST	 /updateDelayedCredit/{id} 	Cosistent Resource Archetype	
-POST	 /deleteDelayedCredit/{id} 	Cosistent Resource Archetype	
-POST	 /verificationOfEmployment 	Cosistent Resource Archetype	Verification of Employment
-POST	 /verificationOfIncome 	Cosistent Resource Archetype	Verification of Income
-POST	 /socialServiceVerification 	Cosistent Resource Archetype	Social Service Verification
-POST	 /fetchEstimate/{id} 	Cosistent Resource Archetype	Read an Estimate by Id
-POST	 /createEstimate/{id}	Cosistent Resource Archetype	
-POST	 /deleteEstimate/{id} 	Cosistent Resource Archetype	id: ID of an existing estimate
-POST	 /createEstimateDraft 	Cosistent Resource Archetype	Estimate Draft
-POST	 /fetchExpense 	Cosistent Resource Archetype	Read an Expense by Id
-POST	 /createExpense/{id} 	Cosistent Resource Archetype	
-POST	 /updateExpense/{id} 	Cosistent Resource Archetype	
-POST	 /deleteExpense/{id} 	Cosistent Resource Archetype	
-POST	 /fetchInvoice/{id} 	Cosistent Resource Archetype	Read an invoice by Id
-POST	 /createInvoice/{id} 	Cosistent Resource Archetype	
-POST	 /updateInvoice/{id} 	Cosistent Resource Archetype	
-POST	 /deleteInvoice/{id} 	Cosistent Resource Archetype	
-POST	 /createInvoiceDraft 	Cosistent Resource Archetype	Invoice Draft
-POST	 /fetchInvoicePayment/{id} 	Cosistent Resource Archetype	Read an InvoicePayment by Id
-POST	 /createInvoicePayment/{id} 	Cosistent Resource Archetype	
-POST	 /updateInvoicePayment/{id} 	Cosistent Resource Archetype	
-POST	 /deleteInvoicePayment/{id} 	Cosistent Resource Archetype	
+Count: 0

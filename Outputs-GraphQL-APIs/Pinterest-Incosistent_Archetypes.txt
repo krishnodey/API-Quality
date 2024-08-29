@@ -1,25 +1,29 @@
 ***Anti-Pattern*** 
-Count: 2
-DELETE	 /v5/boards/{board_id}/sections/{section_id} 	Plural Nouns Found in Consecutive Nodes	Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
-GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Plural Nouns Found in Consecutive Nodes	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+Count: 18
+GET	 /v5/pins/{pin_id} 	Singular Nouns Found in Consecutive Nodes	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
+DELETE	 /v5/pins/{pin_id} 	Singular Nouns Found in Consecutive Nodes	Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account.
+PATCH	 /v5/pins/{pin_id} 	Singular Nouns Found in Consecutive Nodes	Update a pin owned by the "operating user_account".
+GET	 /v5/pins/{pin_id}/analytics 	Singular Nouns Found in Consecutive Nodes	Get analytics for a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
+POST	 /v5/pins/{pin_id}/save	Singular Nouns Found in Consecutive Nodes	Save a Pin on a board or board section owned by the "operation user_account".
+POST	 /v5/pins/{pin_id}/save	Singular Nouns Found in Consecutive Nodes	Save a Pin on a board or board section owned by the "operation user_account".
+GET	 /v5/boards/{board_id} 	Singular Nouns Found in Consecutive Nodes	Get a board owned by the operation user_account - or a group board that has been shared with this account.
+PATCH	 /v5/boards/{board_id} 	Singular Nouns Found in Consecutive Nodes	Update a board owned by the "operating user_account".
+DELETE	 /v5/boards/{board_id} 	Singular Nouns Found in Consecutive Nodes	Delete a board owned by the "operation user_account".
+GET	 /v5/boards/{board_id}/pins 	Singular Nouns Found in Consecutive Nodes	Get a list of the Pins on a board owned by the "operation user_account" - or on a group board that has been shared with this account.
+GET	 /v5/boards/{board_id}/sections 	Singular Nouns Found in Consecutive Nodes	Get a list of all board sections from a board owned by the "operation user_account" - or a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+PATCH	 /v5/boards/{board_id}/sections 	Singular Nouns Found in Consecutive Nodes	Update a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+DELETE	 /v5/boards/{board_id}/sections/{section_id} 	Singular Nouns Found in Consecutive Nodes	Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+DELETE	 /v5/boards/{board_id}/sections/{section_id} 	Singular Nouns Found in Consecutive Nodes	Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Singular Nouns Found in Consecutive Nodes	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Singular Nouns Found in Consecutive Nodes	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+GET	 /v5/media/{media_id} 	Singular Nouns Found in Consecutive Nodes	Get details for a registered media upload, including its current status.
+GET	 /v5/media/{media_id} 	Singular Nouns Found in Consecutive Nodes	Get details for a registered media upload, including its current status.
 
 ***Patterns*** 
-Count: 18
+Count: 6
 GET	 /v5//pins 	Cosistent Resource Archetype	View, create, update, or delete information about Pins.
 POST	 /v5//pins 	Cosistent Resource Archetype	Create a Pin on a board or board section owned by the "operation user_account".
-GET	 /v5/pins/{pin_id} 	Cosistent Resource Archetype	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
-DELETE	 /v5/pins/{pin_id} 	Cosistent Resource Archetype	Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account.
-PATCH	 /v5/pins/{pin_id} 	Cosistent Resource Archetype	Update a pin owned by the "operating user_account".
-GET	 /v5/pins/{pin_id}/analytics 	Cosistent Resource Archetype	Get analytics for a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
-POST	 /v5/pins/{pin_id}/save	Cosistent Resource Archetype	Save a Pin on a board or board section owned by the "operation user_account".
 GET	 /v5/boards 	Cosistent Resource Archetype	View, create, update, or delete information about boards.
 POST	 /v5/boards 	Cosistent Resource Archetype	Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
-GET	 /v5/boards/{board_id} 	Cosistent Resource Archetype	Get a board owned by the operation user_account - or a group board that has been shared with this account.
-PATCH	 /v5/boards/{board_id} 	Cosistent Resource Archetype	Update a board owned by the "operating user_account".
-DELETE	 /v5/boards/{board_id} 	Cosistent Resource Archetype	Delete a board owned by the "operation user_account".
-GET	 /v5/boards/{board_id}/pins 	Cosistent Resource Archetype	Get a list of the Pins on a board owned by the "operation user_account" - or on a group board that has been shared with this account.
-GET	 /v5/boards/{board_id}/sections 	Cosistent Resource Archetype	Get a list of all board sections from a board owned by the "operation user_account" - or a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
-PATCH	 /v5/boards/{board_id}/sections 	Cosistent Resource Archetype	Update a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
 GET	 /v5/media 	Cosistent Resource Archetype	List media uploads filtered by given parameters.
 POST	 /v5/media 	Cosistent Resource Archetype	Register your intent to upload media
-GET	 /v5/media/{media_id} 	Cosistent Resource Archetype	Get details for a registered media upload, including its current status.

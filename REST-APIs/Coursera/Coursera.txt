@@ -1,16 +1,14 @@
-Method	Endpoint	Description
-GET	 >> /api/businesses.v1/{orgId} >> 
-GET	>> /api/businesses.v1/{orgId}/contents >> Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it 
-GET	>> /api/businesses.v1/{orgId}/contents/{id}	>> Returns a list that contains one object. 
-GET	>> /api/businesses.v1/{orgId}/courseGradebookReports >> Retrieve course item-specific grading information with search criteria 
-GET>> /api/businesses.v1/{orgId}/enrollmentReports	>> Returns a paginated list of course progress summaries for all users that are managed in your account. Each entry in the list represents a single user’s progress for a single course. The overall progress is a number between 0 to 100, highlighting percentage of items completed by the learner. It is possible for a learner to have COMPLETED a course but have overall progress < 100, as a learner needs only to pass all graded items in order to complete a course.
-GET	>>/api/businesses.v1/{orgId}/programs>>	Returns a paginated list of active learning programs created within your account.
-GET	>>/api/businesses.v1/{orgId}/programs/{programId}/courseMaterials/{courseId} >> Returns a paginated list of individual course materials for a given course.
-GET	>> /api/businesses.v1/{orgId}/programs/{programId}/curriculumCollections>> Returns a paginated list of curriculum collections in your program.
-POST >> /api/businesses.v1/{orgId}/programs/{programId}/invitations	>> This adds a user as an invitee to a program. The external user id in the request can be an LMS / App specific identifier that can be later used for downstream calls. You can also trigger the invitation email to be sent automatically by specifying true for sendEmail in the request.
-POST >> /api/businesses.v1/{orgId}/programs/{programId}/invitations?action=multiCreate	>> This adds multiple users as invitees to a program. The external user id in the request can be an LMS / App specific identifier that can be later used for downstream calls. You can also trigger the invitation email to be sent automatically by specifying true for sendEmail in the request.
-GET	>> /api/businesses.v1/{orgId}/programs/{programId}/memberships	>> Returns a paginated list of accepted members in your program.
-POST >> /api/businesses.v1/{orgId}/programs/{programId}/memberships	>> Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
+GET	>> /api/businesses.v1/{orgId}/contents >> Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it  >> 
+GET	>> /api/businesses.v1/{orgId}/contents/{id}	>> Returns a list that contains one object.  >> 
+GET	>> /api/businesses.v1/{orgId}/courseGradebookReports >> Retrieve course item-specific grading information with search criteria  >> 
+GET>> /api/businesses.v1/{orgId}/enrollmentReports	>> Returns a paginated list of course progress summaries for all users that are managed in your account. Each entry in the list represents a single user's progress for a single course. The overall progress is a number between 0 to 100, highlighting percentage of items completed by the learner. It is possible for a learner to have COMPLETED a course but have overall progress < 100, as a learner needs only to pass all graded items in order to complete a course. >> 
+GET	>>/api/businesses.v1/{orgId}/programs>>	Returns a paginated list of active learning programs created within your account. >> 
+GET	>>/api/businesses.v1/{orgId}/programs/{programId}/courseMaterials/{courseId} >> Returns a paginated list of individual course materials for a given course.>> 
+GET	>> /api/businesses.v1/{orgId}/programs/{programId}/curriculumCollections>> Returns a paginated list of curriculum collections in your program. >> 
+POST >> /api/businesses.v1/{orgId}/programs/{programId}/invitations	>> This adds a user as an invitee to a program. The external user id in the request can be an LMS / App specific identifier that can be later used for downstream calls. You can also trigger the invitation email to be sent automatically by specifying true for sendEmail in the request. >>
+POST >> /api/businesses.v1/{orgId}/programs/{programId}/invitations?action=multiCreate	>> This adds multiple users as invitees to a program. The external user id in the request can be an LMS / App specific identifier that can be later used for downstream calls. You can also trigger the invitation email to be sent automatically by specifying true for sendEmail in the request. >> 
+GET	>> /api/businesses.v1/{orgId}/programs/{programId}/memberships	>> Returns a paginated list of accepted members in your program. >> 
+POST >> /api/businesses.v1/{orgId}/programs/{programId}/memberships	>> Creates a program membership for the user. Note that this will only work if the user already has a Coursera account. >> 
 GET	>> /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId}	>> This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
 POST >> /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments	>> Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 GET	>> /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments/{external_id~content_type~content_id}	>> For a specific user, return whether they are currently enrolled in a specific course
@@ -23,7 +21,6 @@ GET	>> /api/rest/v1/enterprise/programs/{programId}/learner-skill-scores >> Retu
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets	>> Returns a paginated list of all SkillSets in your enterprise program. Each entry in the list represents a single SkillSet.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/learner-progress	>> Returns the Skillset progress of a single learner in your learning program.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/skills/{skillId}/recommendations >> Returns a paginated list of all content recommendations for a skill within a SkillSet.
-GET	>> /api/businesses.v1/{orgId}>> 
 GET	>> /api/businesses.v1/{orgId}/contents	>> Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it
 GET	>> /api/businesses.v1/{orgId}/contents/{id} >> Returns a list that contains one object.
 GET	>> /api/businesses.v1/{orgId}/courseGradebookReports	>> Retrieve course item-specific grading information with search criteria
@@ -54,7 +51,6 @@ GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets >> Returns a pagin
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/learner-progress	>> Returns the Skillset progress of a single learner in your learning program.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/recommendations	>> Returns a paginated list of all content recommendations for a SkillSet.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/skills/{skillId}/recommendations >> Returns a paginated list of all content recommendations for a skill within a SkillSet.
-GET	>> /api/businesses.v1/{orgId}	>> 
 GET	>> /api/businesses.v1/{orgId}/contents >> Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it
 GET	>> /api/businesses.v1/{orgId}/contents/{id} >> Returns a list that contains one object.
 GET	>> /api/businesses.v1/{orgId}/courseGradebookReports >> Retrieve course item-specific grading information with search criteria
@@ -84,8 +80,7 @@ GET	>> /api/rest/v1/enterprise/programs/{programId}/skills/{skillId}/scores >> R
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets >> Returns a paginated list of all SkillSets in your enterprise program. Each entry in the list represents a single SkillSet.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/learner-progress	>> Returns the Skillset progress of a single learner in your learning program.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/recommendations	>> Returns a paginated list of all content recommendations for a SkillSet.
-GET	/api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/skills/{skillId}/recommendations >> Returns a paginated list of all content recommendations for a skill within a SkillSet.
-GET	>> /api/businesses.v1/{orgId} >> 	
+GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/skills/{skillId}/recommendations >> Returns a paginated list of all content recommendations for a skill within a SkillSet.
 GET	>> /api/businesses.v1/{orgId}/contents	>> Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it
 GET >> /api/businesses.v1/{orgId}/contents/{id} >> Returns a list that contains one object.
 GET >> /api/businesses.v1/{orgId}/courseGradebookReports >> Retrieve course item-specific grading information with search criteria
@@ -110,9 +105,9 @@ GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets >> Returns a pagin
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/learner-progress >> Returns the Skillset progress of a single learner in your learning program.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/recommendations	>> Returns a paginated list of all content recommendations for a SkillSet.
 GET	>> /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/skills/{skillId}/recommendations >> Returns a paginated list of all content recommendations for a skill within a SkillSet.
-GET	>> /api/businesses.v1/{orgId} >> BusinessOrganizationUser
-GET	>> /api/businesses.v1/{orgId}/users >> Returns a paginated list of users within your organiation.
-GET	>> /api/businesses.v1/{orgId}	>> BusinessProgram
+GET	>> /api/businesses.v1/{orgId} >> BusinessOrganizationUser >> 
+GET	>> /api/businesses.v1/{orgId}/users >> Returns a paginated list of users within your organiation. >> 
+GET	>> /api/businesses.v1/{orgId} >> BusinessProgram >> 
 GET	>> /api/businesses.v1/{orgId}/programs	>> Returns a paginated list of active learning programs created within your account.
 GET	>> /api/businesses.v1/{orgId}/contents	>> Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it
 GET	>> /api/businesses.v1/{orgId}/contents/{id}	>> Returns a list that contains one object.
@@ -135,7 +130,7 @@ GET	>> /api/businesses.v1/{orgId}/contents/{id} >> Returns a list that contains 
 GET	>> /api/businesses.v1/{orgId}/courseGradebookReports >> Retrieve course item-specific grading information with search criteria
 GET	>> /api/businesses.v1/{orgId}/programs/{programId}/courseMaterials/{courseId} >> Returns a paginated list of individual course materials for a given course.
 GET	>> /api/businesses.v1/{orgId}/programs/{programId}/curriculumCollections >> Returns a paginated list of curriculum collections in your program.
-GET	/api/businesses.v1/{orgId}/programs/{programId}/invitations	>> Returns a paginated list of pending invitations in your program.
+GET	>> /api/businesses.v1/{orgId}/programs/{programId}/invitations	>> Returns a paginated list of pending invitations in your program.
 POST >> /api/businesses.v1/{orgId}/programs/{programId}/invitations	>> This adds a user as an invitee to a program. The external user id in the request can be an LMS / App specific identifier that can be later used for downstream calls. You can also trigger the invitation email to be sent automatically by specifying true for sendEmail in the request.
 DELETE >> /api/businesses.v1/{orgId}/programs/{programId}/invitations/{programId~externalId} >> Delete a pending program invitation.
 GET	>> /api/businesses.v1/{orgId}/programs/{programId}/memberships	>> Returns a paginated list of accepted members in your program.

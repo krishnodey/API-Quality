@@ -1,0 +1,26 @@
+***Anti-Pattern*** 
+Count: 21
+/company/<realmID>/account	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/query?query=<selectStatement>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/account/<accountId>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/account	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/bill	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/bill?operation=delete	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/query?query=<selectStatement>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/bill/<billId>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/bill	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/query?query=<selectStatement>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/companyinfo/<realmID>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/companyinfo	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/companyinfo	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/reports/InventoryValuationSummary?<name>=<value>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/invoice	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/invoice?operation=delete	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/invoice?operation=void	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/invoice/<invoiceId>/pdf	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/query?query=<selectStatement>	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/invoice	Amorphous End-point	 [uppercase found] 
+/company/<realmID>/purchase	Amorphous End-point	 [uppercase found] 
+
+***Patterns*** 
+Count: 0

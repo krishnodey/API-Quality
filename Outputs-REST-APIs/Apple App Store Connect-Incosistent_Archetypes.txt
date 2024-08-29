@@ -1,37 +1,46 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 33
+GET	 /appEncryptionDeclarations 	Singular Nouns Found in Consecutive Nodes	filter by attribute platform
+GET	 /appEncryptionDeclarations/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appEncryptionDeclarations
+GET	 /appInfoLocalizations/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appInfoLocalizations
+GET	 /appPreOrders/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appPreOrders
+GET	 /appPreviewSets/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appPreviews
+GET	 /appPricePoints 	Singular Nouns Found in Consecutive Nodes	filter by id(s) of related priceTier
+GET	 /appPricePoints/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appPricePoints
+GET	 /appPriceTiers 	Singular Nouns Found in Consecutive Nodes	filter by id(s)
+GET	 /appPriceTiers/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appPriceTiers
+GET	 /appScreenshotSets/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appScreenshotSets
+GET	 /appScreenshots/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appScreenshots
+GET	 /appStoreReviewAttachments/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewAttachments/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appStoreReviewAttachments
+GET	 /appStoreReviewDetails/{id} 	Singular Nouns Found in Consecutive Nodes	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreReviewDetails/{id} 	Singular Nouns Found in Consecutive Nodes	he fields to include for returned resources of type appStoreReviewDetails
+GET	 /appStoreVersionLocalizations/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersionLocalizations/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appStoreVersionLocalizations
+GET	 /appStoreVersions/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appStoreVersions
+GET	 /betaAppLocalizations 	Singular Nouns Found in Consecutive Nodes	filter by attribute locale
+GET	 /endUserLicenseAgreements/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /endUserLicenseAgreements/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type endUserLicenseAgreements
+GET	 /preReleaseVersions 	Singular Nouns Found in Consecutive Nodes	filter by attribute builds.expired
+GET	 /routingAppCoverages/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type routingAppCoverages
+GET	 /salesReports 	Plural Nouns Found in Consecutive Nodes	filter by attribute frequency
+GET	 /appEncryptionDeclarations/{id}/app 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type apps
+GET	 /appEncryptionDeclarations/{id}/app 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type apps
+GET	 /appInfos/{id}/ageRatingDeclaration 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/ageRatingDeclaration 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/ageRatingDeclaration 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type ageRatingDeclarations
+GET	 /appInfos/{id}/appInfoLocalizations 	Singular Nouns Found in Consecutive Nodes	filter by attribute locale
+GET	 /appInfos/{id}/appInfoLocalizations 	Singular Nouns Found in Consecutive Nodes	filter by attribute locale
+GET	 /appInfos/{id}/primaryCategory 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appCategories
+GET	 /appInfos/{id}/primaryCategory 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appCategories
 
 ***Patterns*** 
-Count: 32
+Count: 8
 GET	 /appCategories 	Cosistent Resource Archetype	filter by attribute platforms
 GET	 /appCategories/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories
-GET	 /appEncryptionDeclarations 	Cosistent Resource Archetype	filter by attribute platform
-GET	 /appEncryptionDeclarations/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appEncryptionDeclarations
-GET	 /appInfoLocalizations/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appInfoLocalizations
 GET	 /appInfos/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appInfos
-GET	 /appPreOrders/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPreOrders
-GET	 /appPreviewSets/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPreviews
 GET	 /appPreviews/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPreviews
-GET	 /appPricePoints 	Cosistent Resource Archetype	filter by id(s) of related priceTier
-GET	 /appPricePoints/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPricePoints
-GET	 /appPriceTiers 	Cosistent Resource Archetype	filter by id(s)
-GET	 /appPriceTiers/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPriceTiers
 GET	 /appPrices/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPrices
-GET	 /appScreenshotSets/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appScreenshotSets
-GET	 /appScreenshots/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appScreenshots
-GET	 /appStoreReviewAttachments/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appStoreReviewAttachments
-GET	 /appStoreReviewDetails/{id} 	Cosistent Resource Archetype	he fields to include for returned resources of type appStoreReviewDetails
-GET	 /appStoreVersionLocalizations/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appStoreVersionLocalizations
-GET	 /appStoreVersions/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appStoreVersions
 GET	 /apps 	Cosistent Resource Archetype	filter by attribute 'appStoreVersions.appStoreState
-GET	 /betaAppLocalizations 	Cosistent Resource Archetype	filter by attribute locale
-GET	 /endUserLicenseAgreements/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type endUserLicenseAgreements
 GET	 /financeReports 	Cosistent Resource Archetype	filter by attribute regionCode
-GET	 /preReleaseVersions 	Cosistent Resource Archetype	filter by attribute builds.expired
-GET	 /routingAppCoverages/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type routingAppCoverages
-GET	 /salesReports 	Cosistent Resource Archetype	filter by attribute frequency
 GET	 /appCategories/{id}/subcategories 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories
-GET	 /appEncryptionDeclarations/{id}/app 	Cosistent Resource Archetype	the fields to include for returned resources of type apps
-GET	 /appInfos/{id}/ageRatingDeclaration 	Cosistent Resource Archetype	the fields to include for returned resources of type ageRatingDeclarations
-GET	 /appInfos/{id}/appInfoLocalizations 	Cosistent Resource Archetype	filter by attribute locale
-GET	 /appInfos/{id}/primaryCategory 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories

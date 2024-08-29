@@ -1,5 +1,0 @@
-/getEditions
-/getSections
-/getSingleItem
-/getTags
-/searchContent

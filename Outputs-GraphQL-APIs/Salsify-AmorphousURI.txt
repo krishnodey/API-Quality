@@ -1,0 +1,51 @@
+***Anti-Pattern*** 
+Count: 19
+/v1/orgs/{org_id}/products/	Amorphous End-point	 [trailing slash found] 
+/v1/orgs/{org_id}/products/_upsert	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/records/	Amorphous End-point	 [trailing slash found] 
+/v1/orgs/{org_id}/record_types	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/records/_upsert	Amorphous End-point	 [underscore found] 
+/v1/orgs/{organization_id}/properties/_upsert	Amorphous End-point	 [underscore found] 
+/orgs/{org_id}/imports/upload_mounts	Amorphous End-point	 [underscore found] 
+/orgs/{org_id}/export_runs	Amorphous End-point	 [underscore found] 
+/orgs/{org_id}/export_runs/{export_id}	Amorphous End-point	 [underscore found] 
+/v1/orgs/{organization_id}/digital_assets	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/digital_assets	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/digital_assets/{asset_id}	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/digital_assets	Amorphous End-point	 [underscore found] 
+/v1/orgs/<org_ID>/digital_assets/refresh	Amorphous End-point	 [uppercase found] 
+/v1/orgs/{org_id}/digital_assets/{salsify:id}	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/digital_assets	Amorphous End-point	 [underscore found] 
+/v1/orgs/{organization_id}/digital_assets/_upsert	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/digital_assets	Amorphous End-point	 [underscore found] 
+/v1/orgs/{org_id}/digital_assets	Amorphous End-point	 [underscore found] 
+
+***Patterns*** 
+Count: 27
+/v1/orgs/{org_id}/products	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/products/{salsify:id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/products	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/products/{product_id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/products	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/products/{product_id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/products	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/records	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/records/{salsify:id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/records	Tidy End-point	Tidy Endpoint
+/orgs/{org_id}/records/{record_id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/records	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/records/{product_id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/records	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/properties	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/properties	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_ID}/properties/{salsify:id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/properties/{salsify:id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/properties/{salsify:id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/properties	Tidy End-point	Tidy Endpoint
+/orgs/{org_id}/imports	Tidy End-point	Tidy Endpoint
+/orgs/{org_id}/imports	Tidy End-point	Tidy Endpoint
+/orgs/{org_id}/imports/{import_id}	Tidy End-point	Tidy Endpoint
+/orgs/{org_id}/imports/{import_id}/runs	Tidy End-point	Tidy Endpoint
+/orgs/{org_id}/imports/runs/{import_run_id}	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/lists/{list_id}/members	Tidy End-point	Tidy Endpoint
+/v1/orgs/{org_id}/lists/{list_id}/members	Tidy End-point	Tidy Endpoint

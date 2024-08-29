@@ -1,29 +1,47 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 39
+PUT	 /setResultSummaryState?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Change the result summary state.
+PUT	 /setResultSummaryState?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Change the result summary state.
+PUT	 /setResultSummaryState?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Change the result summary state.
+GET	 /getResultSummaryState/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns the result summary state.
+GET	 /getResultSummaryState/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns the result summary state.
+GET	 /getResultSummaryState/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns the result summary state.
+GET	 /getResultSummaryState/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns the result summary state.
+GET	 /getPublicResultSummaryState/{id} 	Singular Nouns Found in Consecutive Nodes	Returns public result summary state.
+GET	 /getPublicResultSummaryState/{id} 	Singular Nouns Found in Consecutive Nodes	Returns public result summary state.
+GET	 /getPublicResultSummaryState/{id} 	Singular Nouns Found in Consecutive Nodes	Returns public result summary state.
+GET	 /getPublicResultSummaryState/{id} 	Singular Nouns Found in Consecutive Nodes	Returns public result summary state.
+GET	 /getPublicResultSummaryState/{id} 	Singular Nouns Found in Consecutive Nodes	Returns public result summary state.
+GET	 /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	Singular Nouns Found in Consecutive Nodes	Returns survey results.
+GET	 /getSurveyPublicResults/{id}?from={from}&till={till} 	Singular Nouns Found in Consecutive Nodes	Returns survey public results.
+GET	 /getSurveyPublicResults/{id}?from={from}&till={till} 	Singular Nouns Found in Consecutive Nodes	Returns survey public results.
+GET	 /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	Singular Nouns Found in Consecutive Nodes	Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json).
+GET	 /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	Singular Nouns Found in Consecutive Nodes	Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json).
+GET	 /getActive?accessKey={accessKey}&ownerId={ownerId} 	Singular Nouns Found in Consecutive Nodes	Returns the list of active surveys.
+GET	 /getArchive?accessKey={accessKey}&ownerId={ownerId} 	Singular Nouns Found in Consecutive Nodes	Returns the list of archive surveys.
+PUT	 /archive/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Archive the survey by it's id. All survey results will be still accessible. You have to delete a survey to remove the access to it's results.
+PUT	 /restore/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Restore an archive survey by it's id.
+DELETE	 /delete/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible.
+PUT	 /changeName/{id}?accessKey={accessKey}&name={name} 	Singular Nouns Found in Consecutive Nodes	Change the survey name.
+PUT	 /changeName/{id}?accessKey={accessKey}&name={name} 	Singular Nouns Found in Consecutive Nodes	Change the survey name.
+PUT	 /changeJson?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Change the survey json.
+PUT	 /publish/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Publishing the survey.
+PUT	 /unPublish/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Disable publishing the survey.
+PUT	 /unPublish/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Disable publishing the survey.
+PUT	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Singular Nouns Found in Consecutive Nodes	Enable or disable using cookies of the publishing survey.
+POST	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Singular Nouns Found in Consecutive Nodes	Enable or disable using cookies of the publishing survey.
+GET	 /getIsResultPublic/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
+GET	 /getIsResultPublic/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
+GET	 /getIsResultPublic/{id}?accessKey={accessKey} 	Singular Nouns Found in Consecutive Nodes	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
+PUT	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Singular Nouns Found in Consecutive Nodes	Enable or disable the ability to view survey results by non autorized user via direct link.
+PUT	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Singular Nouns Found in Consecutive Nodes	Enable or disable the ability to view survey results by non autorized user via direct link.
+PUT	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Singular Nouns Found in Consecutive Nodes	Enable or disable the ability to view survey results by non autorized user via direct link.
+PUT	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	Singular Nouns Found in Consecutive Nodes	Enable or disable the ability to view survey results by non autorized user via direct link.
+PUT	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	Singular Nouns Found in Consecutive Nodes	Enable or disable the ability to view survey results by non autorized user via direct link.
+DELETE	 /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	Singular Nouns Found in Consecutive Nodes	Delete the survey result. Use it to delete spam or test results.
 
 ***Patterns*** 
-Count: 24
-PUT	 /setResultSummaryState?accessKey={accessKey} 	Cosistent Resource Archetype	Change the result summary state.
-GET	 /getResultSummaryState/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Returns the result summary state.
-GET	 /getPublicResultSummaryState/{id} 	Cosistent Resource Archetype	Returns public result summary state.
-GET	 /getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till} 	Cosistent Resource Archetype	Returns survey results.
-GET	 /getSurveyPublicResults/{id}?from={from}&till={till} 	Cosistent Resource Archetype	Returns survey public results.
+Count: 3
 GET	 /generateAccessKey?accessKey={accessKey} 	Cosistent Resource Archetype	Generates a new access key. The old access key becomes invalid.
-GET	 /getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId} 	Cosistent Resource Archetype	Returns the survey info (Info): name, pustId, created date and so on as well as survey JSON (Json).
-GET	 /getActive?accessKey={accessKey}&ownerId={ownerId} 	Cosistent Resource Archetype	Returns the list of active surveys.
-GET	 /getArchive?accessKey={accessKey}&ownerId={ownerId} 	Cosistent Resource Archetype	Returns the list of archive surveys.
 POST	 /create?accessKey={accessKey}&name={name}&ownerId={ownerId} 	Cosistent Resource Archetype	Create a new survey.
-PUT	 /archive/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Archive the survey by it's id. All survey results will be still accessible. You have to delete a survey to remove the access to it's results.
-PUT	 /restore/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Restore an archive survey by it's id.
-DELETE	 /delete/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Delete a survey by it's id. You will not be able to restore this survey. The survey results become inaccessible.
-PUT	 /changeName/{id}?accessKey={accessKey}&name={name} 	Cosistent Resource Archetype	Change the survey name.
-PUT	 /changeJson?accessKey={accessKey} 	Cosistent Resource Archetype	Change the survey json.
-PUT	 /publish/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Publishing the survey.
-PUT	 /unPublish/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Disable publishing the survey.
-PUT	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Cosistent Resource Archetype	Enable or disable using cookies of the publishing survey.
-POST	 /setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies} 	Cosistent Resource Archetype	Enable or disable using cookies of the publishing survey.
-GET	 /getIsResultPublic/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Returns true if the survey results could be viewed via direct link by a non autorized user, and false if could not.
-PUT	 /makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic} 	Cosistent Resource Archetype	Enable or disable the ability to view survey results by non autorized user via direct link.
-PUT	 /storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress} 	Cosistent Resource Archetype	Enable or disable the ability to view survey results by non autorized user via direct link.
-DELETE	 /deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId} 	Cosistent Resource Archetype	Delete the survey result. Use it to delete spam or test results.
 DELETE	 /deleteAllResults/{id}?accessKey={accessKey} 	Cosistent Resource Archetype	Delete all survey results. Use it to delete all tested results before running survey.

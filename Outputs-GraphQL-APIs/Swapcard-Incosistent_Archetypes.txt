@@ -1,35 +1,67 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 59
+POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
+POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
+POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
+POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
+POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
+POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
+POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
+POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
+POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
+POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
+POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
+POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
+POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
+POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
+POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
+POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
+POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
+POST	 /createExhibitorLinkRelation	Singular Nouns Found in Consecutive Nodes	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLinkRelation	Singular Nouns Found in Consecutive Nodes	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLinkRelation	Singular Nouns Found in Consecutive Nodes	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLink	Singular Nouns Found in Consecutive Nodes	Create an exhibitor link in an event
+POST	 /createExhibitorLink	Singular Nouns Found in Consecutive Nodes	Create an exhibitor link in an event
+POST	 /createFieldDefinition	Singular Nouns Found in Consecutive Nodes	Create a new field definition in an event, which is required for custom fields.
+POST	 /createFieldDefinition	Singular Nouns Found in Consecutive Nodes	Create a new field definition in an event, which is required for custom fields.
+POST	 /createProduct 	Singular Nouns Found in Consecutive Nodes	Create a new product in an event.
+POST	 /createPushNotification 	Singular Nouns Found in Consecutive Nodes	Create a push notification
+POST	 /createPushNotification 	Singular Nouns Found in Consecutive Nodes	Create a push notification
+POST	 /createRole 	Singular Nouns Found in Consecutive Nodes	Create a role
+POST	 /deleteEventExhibitors/{eventId}	Singular Nouns Found in Consecutive Nodes	Deprecated, use updateExhibitor with withEvent.data set to null instead
+POST	 /deleteEventExhibitors/{eventId}	Singular Nouns Found in Consecutive Nodes	Deprecated, use updateExhibitor with withEvent.data set to null instead
+POST	 /deleteEventNotifications/{eventId} 	Singular Nouns Found in Consecutive Nodes	Delete a swapcard event notification
+POST	 /deleteEventNotifications/{eventId} 	Singular Nouns Found in Consecutive Nodes	Delete a swapcard event notification
+POST	 /deleteExhibitorLinkRelation 	Singular Nouns Found in Consecutive Nodes	Delete a relation between two exhibitors in an exhibitor link
+POST	 /deleteExhibitorLinkRelation 	Singular Nouns Found in Consecutive Nodes	Delete a relation between two exhibitors in an exhibitor link
+POST	 /deleteExhibitorLinkRelation 	Singular Nouns Found in Consecutive Nodes	Delete a relation between two exhibitors in an exhibitor link
+POST	 /deleteExhibitorLink 	Singular Nouns Found in Consecutive Nodes	Delete an exhibitor link and all its relations.
+POST	 /deleteExhibitorLink 	Singular Nouns Found in Consecutive Nodes	Delete an exhibitor link and all its relations.
+POST	 /deleteFieldDefinitions	Singular Nouns Found in Consecutive Nodes	Delete field definitions from an event. All values associated will be removed as well.
+POST	 /deletePlanningViews 	Singular Nouns Found in Consecutive Nodes	Delete views from a planning.
+POST	 /deleteSelectFieldValues	Singular Nouns Found in Consecutive Nodes	Delete values from a select field definition.
+POST	 /deleteSelectFieldValues	Singular Nouns Found in Consecutive Nodes	Delete values from a select field definition.
+POST	 /setSelectFieldValue	Singular Nouns Found in Consecutive Nodes	Create or update a value for a select field definition.
+POST	 /setSelectFieldValue	Singular Nouns Found in Consecutive Nodes	Create or update a value for a select field definition.
+POST	 /setSelectFieldValue	Singular Nouns Found in Consecutive Nodes	Create or update a value for a select field definition.
+POST	 /updateEventPerson 	Singular Nouns Found in Consecutive Nodes	Update an existing person in an event.
+POST	 /updateEventPerson 	Singular Nouns Found in Consecutive Nodes	Update an existing person in an event.
+POST	 /updateExhibitorMemberRoles 	Singular Nouns Found in Consecutive Nodes	Update a role
+POST	 /updateExhibitorMemberRoles 	Singular Nouns Found in Consecutive Nodes	Update a role
+POST	 /updateExhibitor	Singular Nouns Found in Consecutive Nodes	Update an exhibitor.
+POST	 /updateFieldDefinition	Singular Nouns Found in Consecutive Nodes	Update an existing field definition.
+POST	 /updateFieldDefinition	Singular Nouns Found in Consecutive Nodes	Update an existing field definition.
+POST	 /updateProduct	Singular Nouns Found in Consecutive Nodes	Update an existing product.
+POST	 /updateRole 	Singular Nouns Found in Consecutive Nodes	Update a role
+POST	 updateTicketType	Singular Nouns Found in Consecutive Nodes	Update an existing ticket type.
+POST	 updateTicketType	Singular Nouns Found in Consecutive Nodes	Update an existing ticket type.
+POST	 updateUserTerm	Singular Nouns Found in Consecutive Nodes	Update an existing user term.
+POST	 updateUserTerm	Singular Nouns Found in Consecutive Nodes	Update an existing user term.
+POST	 /upsertEventNotification	Singular Nouns Found in Consecutive Nodes	Upsert a notification for an event
+POST	 /upsertEventNotification	Singular Nouns Found in Consecutive Nodes	Upsert a notification for an event
 
 ***Patterns*** 
-Count: 30
-POST	 /createEventDocument/{eventId} 	Cosistent Resource Archetype	Create swapcard event document
-POST	 /createEventGroup/{eventId}	Cosistent Resource Archetype	Create a new group on the event
-POST	 /createEventPlanningLink/{eventId} 	Cosistent Resource Archetype	Create swapcard event planning link
-POST	 /createEventSponsor/{eventId} 	Cosistent Resource Archetype	Create swapcard event sponsor
-POST	 /createExhibitorLinkRelation	Cosistent Resource Archetype	Create a relation between two exhibitors in an exhibitor link
-POST	 /createExhibitorLink	Cosistent Resource Archetype	Create an exhibitor link in an event
-POST	 /createFieldDefinition	Cosistent Resource Archetype	Create a new field definition in an event, which is required for custom fields.
-POST	 /createProduct 	Cosistent Resource Archetype	Create a new product in an event.
-POST	 /createPushNotification 	Cosistent Resource Archetype	Create a push notification
-POST	 /createRole 	Cosistent Resource Archetype	Create a role
-POST	 /deleteEventExhibitors/{eventId}	Cosistent Resource Archetype	Deprecated, use updateExhibitor with withEvent.data set to null instead
-POST	 /deleteEventNotifications/{eventId} 	Cosistent Resource Archetype	Delete a swapcard event notification
-POST	 /deleteExhibitorLinkRelation 	Cosistent Resource Archetype	Delete a relation between two exhibitors in an exhibitor link
-POST	 /deleteExhibitorLink 	Cosistent Resource Archetype	Delete an exhibitor link and all its relations.
-POST	 /deleteFieldDefinitions	Cosistent Resource Archetype	Delete field definitions from an event. All values associated will be removed as well.
-POST	 /deletePlanningViews 	Cosistent Resource Archetype	Delete views from a planning.
+Count: 3
 POST	 /deleteProducts 	Cosistent Resource Archetype	Delete one or more products from a event, and return product IDs successfully deleted.
 POST	 /deleteRoles	Cosistent Resource Archetype	Delete one or more roles.
-POST	 /deleteSelectFieldValues	Cosistent Resource Archetype	Delete values from a select field definition.
-POST	 /setSelectFieldValue	Cosistent Resource Archetype	Create or update a value for a select field definition.
-POST	 /updateEventPerson 	Cosistent Resource Archetype	Update an existing person in an event.
-POST	 /updateExhibitorMemberRoles 	Cosistent Resource Archetype	Update a role
-POST	 /updateExhibitor	Cosistent Resource Archetype	Update an exhibitor.
-POST	 /updateFieldDefinition	Cosistent Resource Archetype	Update an existing field definition.
-POST	 /updateProduct	Cosistent Resource Archetype	Update an existing product.
 POST	 /updateProducts	Cosistent Resource Archetype	Update an existing product.
-POST	 /updateRole 	Cosistent Resource Archetype	Update a role
-POST	 updateTicketType	Cosistent Resource Archetype	Update an existing ticket type.
-POST	 updateUserTerm	Cosistent Resource Archetype	Update an existing user term.
-POST	 /upsertEventNotification	Cosistent Resource Archetype	Upsert a notification for an event

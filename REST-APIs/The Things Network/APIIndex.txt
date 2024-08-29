@@ -1,4 +1,0 @@
-/applications
-/applications/{app_id}
-/applications/{app_id}/devices
-/applications/{app_id}/devices/{dev_id}

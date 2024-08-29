@@ -1,0 +1,29 @@
+***Anti-Pattern*** 
+Count: 1
+/storeIPAddressInResult/{id}?accessKey={accessKey}&storeIPAddress={storeIPAddress}	Amorphous End-point	 [uppercase found] 
+
+***Patterns*** 
+Count: 23
+/setResultSummaryState?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/getResultSummaryState/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/getPublicResultSummaryState/{id}	Tidy End-point	Tidy Endpoint
+/getSurveyResults/{id}?accessKey={accessKey}&from={from}&till={till}	Tidy End-point	Tidy Endpoint
+/getSurveyPublicResults/{id}?from={from}&till={till}	Tidy End-point	Tidy Endpoint
+/generateAccessKey?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/getSurveyInfo?accessKey={accessKey}&surveyId={surveyId}&ownerId={ownerId}	Tidy End-point	Tidy Endpoint
+/getActive?accessKey={accessKey}&ownerId={ownerId}	Tidy End-point	Tidy Endpoint
+/getArchive?accessKey={accessKey}&ownerId={ownerId}	Tidy End-point	Tidy Endpoint
+/create?accessKey={accessKey}&name={name}&ownerId={ownerId}	Tidy End-point	Tidy Endpoint
+/archive/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/restore/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/delete/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/changeName/{id}?accessKey={accessKey}&name={name}	Tidy End-point	Tidy Endpoint
+/changeJson?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/publish/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/unPublish/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Tidy End-point	Tidy Endpoint
+/setUseCookies/{id}?accessKey={accessKey}&useCookies={useCookies}	Tidy End-point	Tidy Endpoint
+/getIsResultPublic/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint
+/makeResultPublic/{id}?accessKey={accessKey}&makeResultPublic={makeResultPublic}	Tidy End-point	Tidy Endpoint
+/deleteResult?accessKey={accessKey}&postId={postId}&instanceId={instanceId}	Tidy End-point	Tidy Endpoint
+/deleteAllResults/{id}?accessKey={accessKey}	Tidy End-point	Tidy Endpoint

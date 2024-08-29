@@ -6,15 +6,14 @@ Bitholic
 BroadCom
 Cisco Flare
 ClearBlade
+Coursera
 Dropbox
 Droplit-io
-Facebook
 Google Nest
 GroupWise
 Guardian
 IBM Watson IoT
 IBM Cloud Pak System
-Instagram
 Linkedin
 LiveAgent
 Losant
@@ -22,6 +21,7 @@ Microsoft Azure IoT Hub
 Microsoft Partner Center
 Microsoft Power BI
 Node-RED
+OpenAI
 Oracle Cloud Marketplace Publisher
 Prolateral Core Infrastructure
 QuickBooks Online
@@ -35,4 +35,3 @@ Twitter
 Uber
 WM3 Multishop
 YouTube
-OpenAI
