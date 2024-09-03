@@ -45,3 +45,182 @@ GET >> /v1/projects/{projectId}/services/{serviceId}/runtime-environment >>
 POST >> /v1/projects/{projectId}/services/{serviceId}/runtime-environment >>  Sets the runtime environment for the given service. >>
 GET >> /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details >> Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read' >>
 POST >> /v1/projects/{projectId}/services/{serviceId}/scale >> Modifies the scaling settings for the given service. >> 
+GET >> /v1/domains >> Lists available domains >> 
+POST >> /v1/domains >> Registers a new domain >> 
+GET >> /v1/domains/{domain} >> Get domain >> domain string required Name of the domain
+DELETE >> /v1/domains/{domain} >> Deletes a domain and each of its registered subdomains.>> domain string required Name of the domain
+POST  >> /v1/domains/{domain}/import >> Import a certificate for the domain >>  domain string required Name of the domain
+POST >> /v1/domains/{domain}/subdomains >> Adds a new subdomain to the domain. >> domain string required Name of the domain
+GET >> /v1/domains/{domain}/subdomains/{subdomain} >> Gets details about the given subdomain >> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+DELETE >> /v1/domains/{domain}/subdomains/{subdomain}>> Removes a subdomain from a domain.>> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/assign >> Assigns a service port to the given subdomain >> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+DELETE >> /v1/domains/{domain}/subdomains/{subdomain}/assign>> Removes a subdomain from its assigned service >> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/cdn/disable >> Removes the CDN integration from the given subdomain >> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable >> Enables a CDN integration on the given subdomain>> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/paths >> Adds a new path to the subdomain. >> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+GET >> /v1/domains/{domain}/subdomains/{subdomain}/paths>> List paths for a given subdomain.>> domain string required Name of the domain subdomain string required Name of the domain string required Name of the domain subdomain string required Name of the subdomain
+GET >> /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}>> Get subdomain path details.>> domain string required Name of the domain subdomain string required Name of the subdomain subdomainPath string required Name of the path
+DELETE >> /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}>> Delete a path. >> domain string required Name of the domain subdomain string required Name of the subdomain subdomainPath string required Name of the path
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath} >> Update a subdomain path. >> domain string required Name of the domain subdomain string required Name of the subdomain subdomainPath string required Name of the path
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign>> Assign a subdomain path to a port. >> domain string required Name of the domain subdomain string required Name of the subdomain subdomainPath string required Name of the path
+DELETE >>  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign >> Unassign a subdomain path to a port.>> domain string required Name of the domain subdomain string required Name of the subdomain subdomainPath string required Name of the path
+POST >> /v1/domains/{domain}/subdomains/{subdomain}/verify >> Gets details about the given subdomain >> domain string required Name of the domain subdomain string required Name of the subdomain
+POST >> /v1/domains/{domain}/verify >> Attempts to verify the domain >> domain string required Name of the domain 
+GET >> /v1/projects/{projectId}/jobs >> Gets a list of jobs belonging to the project >> projectId string required ID of the projec
+POST >> /v1/projects/{projectId}/jobs/cron >> Creates a new cron job >> projectId string required ID of the project
+PUT >> /v1/projects/{projectId}/jobs/cron >> Creates or updates a cron job >> projectId string required ID of the project
+PATCH >> /v1/projects/{projectId}/jobs/cron/{jobId} >> Updates a cron job >> projectId string required ID of the project
+POST >> /v1/projects/{projectId}/jobs/manual >> Creates a new manual job that only runs when initiated via the UI, CLI, API or JS client.>> projectId string required ID of the project
+PUT >> /v1/projects/{projectId}/jobs/manual >> Creates or updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.>> projectId string required ID of the project
+PATCH >> /v1/projects/{projectId}/jobs/manual/{jobId} >> Updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId} >> Gets information about the given job >> projectId string required ID of the project jobId string required ID of the job
+DELETE >> /v1/projects/{projectId}/jobs/{jobId} >> Deletes the given job.>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/branches >> Gets information about the branches of the given job.>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/build >> Lists builds for the given job. >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/build >> Start a new build for the given job. Given a commit sha, it will build that commit.>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/build-arguments >> Gets the build arguments of the given job.>> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/build-arguments >> Sets build arguments for the given job. >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details >> Get details about the build arguments accessible by the given job.>> projectId string required ID of the project jobId string requir
+GET >> /v1/projects/{projectId}/jobs/{jobId}/build-logs >> Get logs for a job build >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/build-metrics >> Get metrics for a job build >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/build-options >> Updates the build options for a given job. >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/build-source >> Updates the version control source for a given job. >> projectId string required ID of the project jobId
+GET >> /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}>> Gets information about a build for the job >> projectId string required ID of the project jobId string required ID of the job
+DELETE >>  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} >> Aborts the given job build >> projectId string required ID of the project jobId string required ID of the job buildId string required ID of the job build
+GET >> /v1/projects/{projectId}/jobs/{jobId}/containers >> Gets a list of containers for the given job. >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/deployment >> Gets information about the deployment of the given job. >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/deployment>> Updates the deployment settings of the given job.>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/health-checks >> Lists the health checks for the given job.>> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/health-checks >> Updates health checks for the given job.>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/logs >> Get logs for a job>> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/metrics >> Get metrics for a job>> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/pause >> Pause the given job. >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/pull-requests >> Gets information about the pull-requests of the given job. >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/resume >> Resumes the given job. >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/runs >> Fetches run history for the given job >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/runs >> Starts a new job run for the given job >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} >> Returns data about the given job run>> projectId string required ID of the project jobId string required ID of the job runId string required ID of the job run
+DELETE >> /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} >> Aborts the given job run >> projectId string required ID of the project jobId string required ID of the job runId string required ID of the job run
+GET >> /v1/projects/{projectId}/jobs/{jobId}/runtime-environment >> Returns the runtime environment for the given job >> projectId string required ID of the project jobId string required ID of the job 
+POST >> /v1/projects/{projectId}/jobs/{jobId}/runtime-environment >> Sets the runtime environment for the given job. >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details >> Get details about the runtime environment accessible by the given job. >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/scale >> Modifies the scaling settings for the given job.>> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/settings >> Updates settings for the job >> projectId string required ID of the project jobId string required ID of the job
+POST >> /v1/projects/{projectId}/jobs/{jobId}/suspend >> Modify cron job to toggle suspending of its schedule. >> projectId string required ID of the project jobId string required ID of the job
+GET >> /v1/addon-types >> Gets information about the available addon types >> 
+GET >> /v1/projects/{projectId}/addons >> Gets a list of addons belonging to the project >> projectId string required ID of the project
+POST >> /v1/projects/{projectId}/addons >> Creates a new addon >> projectId string required ID of the project
+PUT >> /v1/projects/{projectId}/addons >> Creates or updates an addon >> projectId string required ID of the project
+GET >> /v1/projects/{projectId}/addons/{addonId} >> projectId string required ID of the project addonId string required ID of the addon
+PATCH >> /v1/projects/{projectId}/addons/{addonId} >> Updates an addon >> projectId string required ID of the project addonId string required ID of the addon
+DELETE >> /v1/projects/{projectId}/addons/{addonId} >> Deletes the given addon.>> projectId string required ID of the project addonId string required ID of the addon
+GET >> /v1/projects/{projectId}/addons/{addonId}/backup-schedules >> Gets details about an addon's backup schedules>> projectId string required ID of the project addonId string required ID of the addon
+POST >> /v1/projects/{projectId}/addons/{addonId}/backup-schedules >> Create a new backup schedule for an addon.>> projectId string required ID of the project addonId string required ID of the addon
+DELETE >> /v1/projects/{projectId}/addons/{addonId}/backup-schedules/{scheduleId} >> Deletes a backup schedule for an addon.>> projectId string required ID of the project addonId string required ID of the addon scheduleId string required ID of the backup schedule
+GET >> /v1/projects/{projectId}/addons/{addonId}/backups >> Returns a list of backups for the given addon. >> projectId string required ID of the project addonId string required ID of the addon
+POST >> /v1/projects/{projectId}/addons/{addonId}/backups >> Initiates a backup for the given addon >> projectId string required ID of the project addonId string required ID of the addon
+GET >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} >> Gets details about a given backup. >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+DELETE >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} >> Deletes a given backup >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+POST >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort >> Aborts the in progress backup. >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+POST >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore >> Aborts an in-progress backup restore.>> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+GET >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link >> Generates a temporary download link for downloading the given backup. >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+GET >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/logs >> Get logs for an addon backup >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+POST >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore >> Restores the given addon to the given backup state. >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+GET >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores >> Gets a list of restores for the given backup.>> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup
+GET >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{restoreId}/logs >> Get logs for an addon restore >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup restoreId string required ID of the restore
+POST >> /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain >> Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date. >> projectId string required ID of the project addonId string required ID of the addon  backupId string required ID of the backup 
+GET >> /v1/projects/{projectId}/addons/{addonId}/containers >> Gets a list of containers for the given addon. >> projectId string required ID of the project addonId string required ID of the addon
+GET >> /v1/projects/{projectId}/addons/{addonId}/credentials>>  Returns the credentials for connecting to the given addon.>> projectId string required ID of the project addonId string required ID of the addon 
+POST >> /v1/projects/{projectId}/addons/{addonId}/import >> Imports a database from an external archive or existing live database.>> projectId string required ID of the project addonId string required ID of the addon 
+GET >> /v1/projects/{projectId}/addons/{addonId}/logs >> Get logs for an addon>> projectId string required ID of the project addonId string required ID of the addon 
+GET >> /v1/projects/{projectId}/addons/{addonId}/metrics >> Get metrics for an addon >> projectId string required ID of the project addonId string required ID of the addon 
+POST >> /v1/projects/{projectId}/addons/{addonId}/network-settings >> Updates the network settings for the addon. >> projectId string required ID of the project addonId string required ID of the addon 
+POST >> /v1/projects/{projectId}/addons/{addonId}/pause >> Pause the given addon.>> projectId string required ID of the project addonId string required ID of the addon 
+POST >> /v1/projects/{projectId}/addons/{addonId}/pitr >> Restores an addon to a specific point in time. >> projectId string required ID of the project addonId string required ID of the addon 
+GET >> /v1/projects/{projectId}/addons/{addonId}/pitr-window >> Gets the valid window for performing a point-in-time restore (PITR) on this addon.>> projectId string required ID of the project addonId string required ID of the addon 
+POST >> /v1/projects/{projectId}/addons/{addonId}/reset >> Reset the given addon. >> projectId string required ID of the project addonId string required ID of the addon 
+POST >> /v1/projects/{projectId}/secrets/{secretId} >> Update a secret >> projectId string required ID of the project secretId string required ID of the secret
+POST >> /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} >> Link an addon to the secret group or edit the settings of the linked addon. >> projectId string required ID of the project secretId string required ID of the secret addonId string required ID of the addon
+GET >> /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} >> Get details about a given addon link.>> projectId string required ID of the project secretId string required ID of the secret addonId string required ID of the addon
+DELETE >> /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} >> Unlinks an addon from the secret group. >> projectId string required ID of the project secretId string required ID of the secret addonId string required ID of the addon
+GET >> /v1/projects/{projectId}/secrets/{secretId}/details >> View a secret with details about its linked addons >> projectId string required ID of the project secretId string required ID of the secret
+GET >> /v1/projects/{projectId}/volumes >> Gets a list of volumes belonging to the project >> projectId string required ID of the project
+POST >> /v1/projects/{projectId}/volumes >> Creates a volume with the specified payload >> projectId string required ID of the project
+GET >> /v1/projects/{projectId}/volumes/{volumeId} >> Retrieve a volume >> projectId string required ID of the project volumeId string required ID of the volume
+POST >> /v1/projects/{projectId}/volumes/{volumeId} >> Update volume mounts and storage size >> projectId string required ID of the project volumeId string required ID of the volume
+DELETE >> /v1/projects/{projectId}/volumes/{volumeId} >> Deletes this volume and its associated data.>> projectId string required ID of the project volumeId string required ID of the volume
+POST >> /v1/projects/{projectId}/volumes/{volumeId}/attach >>Attach a volume>> projectId string required ID of the project volumeId string required ID of the volume
+POST >> /v1/projects/{projectId}/volumes/{volumeId}/detach>> Detach a volume >> projectId string required ID of the project volumeId string required ID of the volume
+GET >> /v1/projects/{projectId}/pipelines >> Lists all pipelines for a project >> projectId string required ID of the project 
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId} >> Get details about a pipeline >> projectId string required ID of the project  pipelineId string required ID of the pipeline
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs >> Get information about the given preview template. >> projectId string required ID of the project  pipelineId string required ID of the pipeline
+POST >> /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs >> Update a given preview template.>> projectId string required ID of the project  pipelineId string required ID of the pipeline
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews >> Get a list of active preview environments for a template >> projectId string required ID of the project  pipelineId string required ID of the pipeline
+DELETE >> /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews/{previewId} >> Delete a preview environment generated by a preview template. >> projectId string required ID of the project  pipelineId string required ID of the pipeline previewId string required ID of the preview environment
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs >> Get a list of preview template runs>> projectId string required ID of the project  pipelineId string required ID of the pipeline 
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} >> Get information about the given preview template run. >> projectId string required ID of the project  pipelineId string required ID of the pipeline templateRunId string required ID of the template run
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} >> Gets details about a release flow>> projectId string required ID of the project  pipelineId string required ID of the pipeline stage string required Stage of the pipeline
+POST >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} >> Updates a release flow >> projectId string required ID of the project  pipelineId string required ID of the pipeline stage string required Stage of the pipeline
+POST >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs >> Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process. >> projectId string required ID of the project  pipelineId string required ID of the pipeline stage string required Stage of the pipeline
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs >> Lists runs of a release flow >> projectId string required ID of the project  pipelineId string required ID of the pipeline stage string required Stage of the pipeline
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}
+GET >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} >> Get information about the given release flow run >> projectId string required ID of the project  pipelineId string required ID of the pipeline stage string required Stage of the pipeline runId string required ID of the release flow run
+POST >> /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort >> Abort the given release flow run >> projectId string required ID of the project  pipelineId string required ID of the pipeline stage string required Stage of the pipeline runId string required ID of the release flow run
+GET >> /v1/templates >> Get a list of templates >> 
+POST >> /v1/templates >> Create a template >> 
+GET >> /v1/templates/{templateId} >> Get information about the given template. >> templateId string required ID of the template 
+POST >> /v1/templates/{templateId} >> Update a template >> templateId string required ID of the template
+DELETE >> /v1/templates/{templateId} >> Delete a template>> templateId string required ID of the template
+POST >> /v1/templates/{templateId}/runs >> Run a template >> templateId string required ID of the template
+GET >> /v1/templates/{templateId}/runs >> Get a list of template runs >> templateId string required ID of the template
+GET >> /v1/templates/{templateId}/runs/{templateRunId} >> Get information about the given template run. >> templateId string required ID of the template templateRunId string required ID of the template run
+POST >> /v1/templates/{templateId}/runs/{templateRunId}/abort >> Abort the given template run. >> templateId string required ID of the template templateRunId string required ID of the template run
+GET >> /v1/integrations/log-sinks >> Gets a list of log sinks added to this account. >> 
+POST >> /v1/integrations/log-sinks >> Creates a new log sink. >> 
+GET >> /v1/integrations/log-sinks/{logSinkId} >> Gets details about a given log sink. >> logSinkId string required ID of the log sink
+DELETE >> /v1/integrations/log-sinks/{logSinkId}>> Deletes a log sink. >> logSinkId string required ID of the log sink
+POST >> /v1/integrations/log-sinks/{logSinkId}/pause >> Pauses a given log sink. >> logSinkId string required ID of the log sink
+POST >> /v1/integrations/log-sinks/{logSinkId}/resume >> Resumes a paused log sink. >> logSinkId string required ID of the log sink
+POST >> /v1/integrations/log-sinks/{logSinkId}/settings >> Updates the settings for a log sink. >> logSinkId string required ID of the log sink
+GET >> /v1/integrations/notifications >> Lists notification integrations for the authenticated user or team. >>
+POST >> /v1/integrations/notifications >> Create a new notification integration. >> notificationId string required ID of the notification integration
+GET >> /v1/integrations/notifications/{notificationId} >> Get details about a notification integration. >> notificationId string required ID of the notification integration
+POST >> /v1/integrations/notifications/{notificationId} >> Updates a notification integration >> notificationId string required ID of the notification integration
+DELETE >> /v1/integrations/notifications/{notificationId} >> Deletes a notification integration >> notificationId string required ID of the notification integration
+GET >> /v1/integrations/registries >> Lists the container registry credentials saved to this account. Does not display secrets.>> 
+POST >> /v1/integrations/registries >> Adds a new set of container registry credentials to this account. >> 
+GET >> /v1/integrations/registries/{credentialId} >> Views a set of registry credential data. >> credentialId string required ID of the registry credential
+DELETE >> /v1/integrations/registries/{credentialId} >> Deletes a set of registry credential data.>> credentialId string required ID of the registry credential
+POST >> /v1/integrations/registries/{credentialId}/modify >> Updates a set of registry credential data.>> credentialId string required ID of the registry credential
+GET >> /v1/integrations/vcs Lists linked version control providers >> 
+POST >> /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} >> Generate a token for a specific VCS link. >> customVCSId string required ID of the custom VCS vcsLinkId string required ID of the version control link
+GET >> /v1/integrations/vcs/repos >> Gets a list of repositories accessible to this account >> 
+GET >> /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches >> Gets a list of branches for the repo >> 
+GET >> /v1/cloud-providers >> Lists supported cloud providers >>  
+GET >> /v1/cloud-providers/clusters >> Lists clusters for the authenticated user or team. >> 
+POST >> /v1/cloud-providers/clusters >> Creates a new cluster. >> 
+GET >> /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster >> clusterId string required ID of the cluster 
+POST >> /v1/cloud-providers/clusters/{clusterId} >> Update an existing cluster. >> clusterId string required ID of the cluster 
+DELETE >> /v1/cloud-providers/clusters/{clusterId} >> Delete the given cluster. Fails if the cluster has associated projects.>> clusterId string required ID of the cluster 
+GET >> /v1/cloud-providers/clusters/{clusterId}/nodes >> Get a list of nodes for the given cluster >> clusterId string required ID of the cluster 
+POST >> /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon >> Cordon a node on the cluster to prevent new pods from scheduling on it. >> clusterId string required ID of the cluster nodeId string required ID of the node
+POST >> /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain >> Drain a node by evicting all running pods. >> clusterId string required ID of the cluster nodeId string required ID of the node
+GET >> /v1/cloud-providers/docker-registries >> Lists docker registries for the authenticated user or team. 
+POST >> /v1/cloud-providers/docker-registries >> Creates a new docker registry. >> 
+GET >> /v1/cloud-providers/docker-registries/{registryId} >> Get information about the given docker registry >> registryId string required ID of the docker registry
+DELETE >> /v1/cloud-providers/docker-registries/{registryId} >> Delete the given docker registry. Fails if the docker registry is associated with existing clusters. >> registryId string required ID of the docker registry
+GET >> /v1/cloud-providers/integrations >> Lists integrations for the authenticated user or team. >> 
+POST >> /v1/cloud-providers/integrations >> Creates a new integration. >> 
+GET >> /v1/cloud-providers/integrations/{integrationId} >> Get information about the given integration >> integrationId string required ID of the provider integration
+POST >> /v1/cloud-providers/integrations/{integrationId} >> Update information about the given integration >> integrationId string required ID of the provider integration
+DELETE >> /v1/cloud-providers/integrations/{integrationId} >> Delete the given integration. Fails if the integration is associated with existing clusters. >> integrationId string required ID of the provider integration
+GET >> /v1/cloud-providers/node-types >> Lists supported cloud provider node types >> 
+GET >> /v1/cloud-providers/regions >> Lists supported cloud provider regions >> 
+GET >> /v1/tags >> List the resource tags for this entity. >> 
+POST >> /v1/tags >> Add a new resource tag for this entity. >> 
+PUT >> /v1/tags >> Update or create a resource tag. >> resourceTagId string required ID of the tag
+GET >> /v1/tags/{resourceTagId} >> View details for a given resource tag. >> resourceTagId string required ID of the tag
+PATCH >> /v1/tags/{resourceTagId} >>  Patch a resource tag. >> resourceTagId string required ID of the tag
+DELETE >> /v1/tags/{resourceTagId} >> Delete a resource tag. >> resourceTagId string required ID of the tag
+GET >> /v1/billing/invoices >> Get a list of past invoices >> 
+GET >> /v1/billing/invoices/details >> Get details about an invoice. >> 

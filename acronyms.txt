@@ -178,3 +178,11 @@ supplyinventories>>supply inventories
 supplyplan>>supply plan
 supplyshipments>>supply shipments
 workorders>>work orders
+addon>>add on
+twoFa>>two factor
+fa>>factor
+init>>intitialize
+pitr>>point in time restore
+vcs>>version control providers
+repo>>repository
+repos>>repositories

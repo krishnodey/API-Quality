@@ -23,3 +23,47 @@ GET >> /pathCatalog >> Path Catalog represents a list of available Paths on Plur
 GET >> /programCatalog >> programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance. >>
 GET >> /projectCatalog >> ProjectCatalog represents a list of available Projects on Pluralsight.com. >> 
 GET >> /tags >> Tags represent one or more technology concepts associated with a piece of content. >>
+GET >> /roleIqAssignments >> RoleIqAssignments represent Role IQ's that have been assigned to a particular user. >> 
+GET >> /roleIqCatalog >> A Role IQ represents a container of skills that define a particular Role. >>
+GET >> /roleIqLearnerLevels >> RoleIQLearnerLevels represent a learner's score for a particular role. >>
+GET >> /roleIqSkills >> RollIqSkills represent individual Skills assigned to a particular Role. A Skill can be assigned to 0 or more Roles and Roles will have 1 or more Skills. >> 
+GET >> /roleIqsSummary >> RoleIqsSummary is especially useful for Professional Plans as it represents a summary view of roles for your organization.  >>
+POST >> /addRole >> Create a new Role >> 
+POST >> /assignTeamsToRole >> Assign Teams to a Role. >>
+POST >> /assignUsersToRole >> Assign Users to a Role. >> 
+DELETE >> /deleteRole >> Delete an existing Role. >>
+PUT >> /editRole >> Edit an existing Role's information. >> 
+GET >> /skillAssessmentCatalog >> SkillAssessmentCatalog represents a list of all available Skill Assessments that can be taken by a User. >>
+GET >> /skillAssessmentResults >> SkillAssessmentResults represent the results of an assessment taken by a User. Once the assessment is completed, a User has 48 hours to complete a do-over if they would like. The higher of the two scores is kept. >> 
+GET >> /skillIqsSummary >> SkillIqsSummary represents a summary view of Skill IQ levels for your organization. >>
+GET >> /planPermissionSets >> PlanPermissionSets represent a custom permission model for what managers and admins have permissions for on a plan.  >> 
+GET >> /teamManagers >> TeamManagers represent a list of the plan users on a team who have additional rights to manage a Team that they are assigned to. >> 
+GET >> /teams >> Teams represents a list of teams (grouping of Users) associated with the provided API key. A User can belong to many Teams. >> 
+POST >> /addTeam >> Create a new Team. >> 
+POST >> /addTeamManager >> Makes an existing user on the plan a manager of the Team. Managers can be added to multiple teams. This will have no impact on their license if the manager is a licensed user. >>
+POST >> /addTeamMember >> Add a licensed user to a Team. This will not remove the user from any other Teams.>>
+DELETE >> /deleteTeam >> Delete a Team. >> 
+GET >> /editTeam >> Used to modify the details of a Team. >>
+POST >> /inviteManager >> Invite User to be a manager of a Team on the plan by sending them an email. >> 
+POST >> /moveMemberToTeam >> Add or Move licensed User to a Team. This will remove the member from all currently assigned teams and add them to the new teams provided. If no teamIds are provided, the member will be removed from all teams and moved to the unassigned section. >> 
+DELETE >> /removeTeamManager >> Remove a manager from a Team. >> 
+DELETE >> /removeTeamMember >> Removes a licensed user from a Team. >> 
+GET >> /courseDailyUsage >> Represents user course usage totals for each day the user viewed content, broken down per user, per course, per day by plan. >>
+GET >> /courseProgress >> CourseProgress returns course usage data, including current and previously licensed users.>>
+GET >> /practiceExamQuizProgress >> PracticeExamQuizProgress returns a record of attempts for taking any Quizzes or Practice Exams on Cloud Courses. >> 
+GET >>  /priority >> Priorities allow you to align your organization’s skill development to business objectives, accelerate growth, and monitor progress over time. >>
+GET >> /programAssessmentAttempts >> programAssessmentAttempts represents a detailed look at every attempt of taking a Tech Foundations Assessment from every user currently on the plan.  >> 
+GET >> /programAssessmentUserOptions >> ProgramAssessmentUserOptions represent a list of options for sessions of a User taking a Criterion Assessment. >> 
+GET >> /programUserProgress >> programUserProgress represents an aggregate report for every user currently on the plan as a zoomed out view of programAssessmentAttempts. >>
+GET >> /UserCertificationUploads >> represents a list of the certifications that users have uploaded while on the plan.  >> 
+GET >> /memberInvites >>  MemberInvites represent all invites that have been sent to Users for plan(s) associated with the provided API key. >>
+GET >> /planAdmins >> PlanAdmins represent a list of Users that have special permissions to edit plan details and to create API keys. >> 
+GET >> /users >> Users represent a list of anyone that is currently using or has ever used a license on the Plan(s) associated with the provided API key. Users may also be team managers or plan admins with a license. >>
+DELETE >> /cancelInvite >> Cancel an invite sent to a User. >> 
+POST >> /createUser >> Create a User. >> 
+PUT >> /editUser >>  Edit a User's information. >>
+POST >> /inviteMember >> Invite user to a plan. >> 
+DELETE >> /removeLicense >> Remove a User's license >> 
+DELETE >> /removeUser >> Remove Users from your plan. If User is a manager/plan-admin, their license will be removed but they will stay on the plan.
+GET >> /contentSlugToId >> ContentSlugToId represents a mapping from the contentSlug to an id. >> 
+GET >> /planInfo >> Returns information regarding a specific plan(s). >> 

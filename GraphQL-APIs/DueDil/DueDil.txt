@@ -29,3 +29,5 @@ GET >> /v4/company/{countryCode}/{companyId}/charges.{format} >> Get charges for
 GET >> /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} >> Get persons of significant control (PoSC) for a given company. >> 
 GET >> /v4/officer/{officerId}/related-officers.{format} >> Get all related officers for a given officer >> 
 GET >> /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}>> Get subsidiaries for a given charity. >> 
+GET >> /v4/charity/{countryCode}/{charityId}/financials.{format} >> Get financials for a given charity. >> countryCode required string ISO 3166-1 alpha-2 country code in lowercase. charityId required string Charity registration number format required string Value: "json" Response format. Currently, only supported option is json.
+GET >> /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} >> Get classifiers for a given charity. >> countryCode required string ISO 3166-1 alpha-2 country code in lowercase. charityId required string Charity registration number format required string Value: "json" Response format. Currently, only supported option is json.

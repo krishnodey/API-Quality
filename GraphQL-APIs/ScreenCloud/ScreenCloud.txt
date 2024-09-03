@@ -30,3 +30,74 @@ GET >> /v2.10.0/allEmbedViewLogsByContentTypeAndContentId >> Get embed view logs
 GET >> /v2.10.0/allEmbeds >> Reads and enables pagination through a set of Embed. >>
 GET >> /v2.10.0/allFavorites >> Reads and enables pagination through a set of Favorite. >>
 GET >> /v2.10.0/allFeatureFlagOrgs >> Reads and enables pagination through a set of FeatureFlagOrg. >> 
+GET >> /v2.10.0/allFeatureFlags >> Reads and enables pagination through a set of FeatureFlag.>>
+GET >> /v2.10.0/allFileOutputs >> Reads and enables pagination through a set of FileOutput. >>
+GET >> /v2.10.0/allFileProcessingJobs >> Reads and enables pagination through a set of FileProcessingJob.
+GET >> /v2.10.0/allFiles >> Reads and enables pagination through a set of File.
+GET >> /v2.10.0/allFolders >> Reads and enables pagination through a set of Folder.
+GET >> /v2.10.0/allFonts >> Reads and enables pagination through a set of Font.
+GET >> /v2.10.0/allGroupSpaces >> Reads and enables pagination through a set of GroupSpace.
+GET >> /v2.10.0/allGroups >> Reads and enables pagination through a set of Group. >> 
+GET >> /v2.10.0/allLayouts >> Reads and enables pagination through a set of Layout. >> 
+GET >> /v2.10.0/allLegacyLogs >> Reads and enables pagination through a set of LegacyLog.
+GET >> /v2.10.0/allLinks >> Reads and enables pagination through a set of Link.
+GET >> /v2.10.0/allLogs >> Reads and enables pagination through a set of Log.
+GET >> /v2.10.0/allLogsV2 >> Get all audit logs >> 
+GET >> /v2.10.0/allLogsV2ByObjectId >> Get all audit logs by object id >> 
+GET >> /v2.10.0/allLogsV2ByObjectIdCount >> Total count of all audit logs by object ID
+GET >> /v2.10.0/allLogsV2ByObjectType >> Get all audit logs by object type >>
+GET >> /v2.10.0/allLogsV2ByObjectTypeCount >> Total count of all audit logs by object type >> 
+GET >> /v2.10.0/allLogsV2ByUserId >> Get all audit logs by user ID
+GET >> /v2.10.0/allLogsV2ByUserIdCount >> Total count of all audit logs by user ID >> 
+GET >> /v2.10.0/allLogsV2Count >> Total count of all audit logs >> 
+GET >> /v2.10.0/allOrgConnections >> Reads and enables pagination through a set of OrgConnection. >>
+GET >> /v2.10.0/allOrgs >>Reads and enables pagination through a set of Org.  >>
+GET >> /v2.10.0/allPermissionSets >> Reads and enables pagination through a set of PermissionSet. >> 
+GET >> /v2.10.0/allPlaylists >> Reads and enables pagination through a set of Playlist. >>
+GET >> /v2.10.0/allScreenContentHistories >> Reads and enables pagination through a set of ScreenContentHistory. >> 
+GET >> /v2.10.0/allScreenGroups >> Reads and enables pagination through a set of ScreenGroup. >>
+GET >> /v2.10.0/allScreens >> Reads and enables pagination through a set of Screen. >> 
+GET >> /v2.10.0/allShareAssociations >> Reads and enables pagination through a set of ShareAssociation.>> 
+GET >> /v2.10.0/allSites >> Reads and enables pagination through a set of Site. >> 
+GET >> /v2.10.0/allSpaces >> Reads and enables pagination through a set of Space. >> 
+GET >> /v2.10.0/allSystemAccesses >> Reads and enables pagination through a set of SystemAccess. >> 
+GET >> /v2.10.0/allTagAssociations >> Reads and enables pagination through a set of TagAssociation.
+GET >> /v2.10.0/allTags >> Reads and enables pagination through a set of Tag. >> 
+GET >> /v2.10.0/allThemes >> Reads and enables pagination through a set of Theme.
+GET >> /v2.10.0/allTokens >> Reads and enables pagination through a set of Token.
+GET >> /v2.10.0/allUserGroups >> Reads and enables pagination through a set of UserGroup. >> 
+GET >> /v2.10.0/allUsers >> Reads and enables pagination through a set of User.
+GET >> /v2.10.0/app >> Reads a single App using its globally unique ID.
+GET >> /v2.10.0/appInstall >> Reads a single AppInstall using its globally unique ID.
+GET >> /v2.10.0/appInstance >> Reads a single AppInstance using its globally unique ID.
+GET >> /v2.10.0/appInstancesByAppIdAndSpaceId >>  Get all app instances by app ID and space ID.
+GET >> /v2.10.0/appVersion >> Reads a single AppVersion using its globally unique ID. >> 
+GET >> /v2.10.0/availableChannelsBySpaceId >> Get available channels by space's id. >> 
+GET >> /v2.10.0/availableLayoutsForSize >> Get list of available layouts that compatible with the size.
+GET >> /v2.10.0/billingAddon >> Reads a single BillingAddon using its globally unique ID.
+GET >> /v2.10.0/billingAddonPlan >> Reads a single BillingAddonPlan using its globally unique ID.
+GET >> /v2.10.0/billingAddonSubscription >> Reads a single BillingAddonSubscription using its globally unique ID.
+GET >> /v2.10.0/billingAddress >> Reads a single BillingAddress using its globally unique ID. >>
+GET >> /v2.10.0/billingCoupon >> Reads a single BillingCoupon using its globally unique ID.
+GET >> /v2.10.0/billingCustomer >> Reads a single BillingCustomer using its globally unique ID.
+GET >> /v2.10.0/billingDistributor >> Reads a single BillingDistributor using its globally unique ID.
+GET >> /v2.10.0/billingHierarchy >> Reads a single BillingHierarchy using its globally unique ID. >>
+GET >> /v2.10.0/billingPaymentSource >> Reads a single BillingPaymentSource using its globally unique ID. >>
+GET >> /v2.10.0/billingPlan >> Reads a single BillingPlan using its globally unique ID.
+GET >> /v2.10.0/billingRenewal >> Reads a single BillingRenewal using its globally unique ID.
+GET >> /v2.10.0/billingRenewalFuture >> Reads a single BillingRenewalFuture using its globally unique ID.
+GET >> /v2.10.0/billingReseller >> Reads a single BillingReseller using its globally unique ID.
+GET >> /v2.10.0/billingSubscription >> Reads a single BillingSubscription using its globally unique ID.
+GET >> /v2.10.0/billingSubscriptionFuture >> Reads a single BillingSubscriptionFuture using its globally unique ID.
+GET >> /v2.10.0/canPairScreen >> Returns a code based on the permissions and billing state
+GET >> /v2.10.0/cast >> Reads a single Cast using its globally unique ID.
+GET >> /v2.10.0/channel >> Reads a single Channel using its globally unique ID.
+GET >> /v2.10.0/commonFont >> Reads a single CommonFont using its globally unique ID.
+GET >> /v2.10.0/commonLayout >> Reads a single CommonLayout using its globally unique ID.
+GET >> /v2.10.0/commonPermissionSet >> Reads a single CommonPermissionSet using its globally unique ID.
+GET >> /v2.10.0/credential >> Reads a single Credential using its globally unique ID.
+GET >> /v2.10.0/currentBillingFeatureFlags >> Get the billing feature flags for the given space.
+GET >> /v2.10.0/currentFeatureFlag >> Get the currently logged in user (org) feature flag
+GET >> /v2.10.0/currentFeatureFlags >> Get the currently logged in user (org) feature flags
+GET >> /v2.10.0/currentOrgId >> Get current org id from the current session.
+GET >> /v2.10.0/currentProvider >> Get current provider from user JWT Claims.
