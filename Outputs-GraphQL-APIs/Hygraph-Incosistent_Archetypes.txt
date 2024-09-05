@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 9
+Count: 16
 PATCH	 /v2/models/{model_id}	Singular Nouns Found in Consecutive Nodes	You can at any time update the settings, and Preview URLs for your content models from within the schema editor.
 DELETE	 /v2/models/{model_id} 	Singular Nouns Found in Consecutive Nodes	For each of the content models you have created, you can choose to update, or delete from the schema editor.Deleting a model will also delete all of the content entries.
 GET	 /v2/post/{id} 	Singular Nouns Found in Consecutive Nodes	For each of the content models you have created, you can choose to update, or delete from the schema editor. Deleting a model will also delete all of the content entries.The post query is what you would use to fetch one entry from the CMS. You can fetch an individual entry by id, or any unique non-localized field defined in your content type.
@@ -9,6 +9,13 @@ GET	 /v2/post/{id}/local/{id} 	Singular Nouns Found in Consecutive Nodes	When fe
 GET	 /v2/pages/{id}/pageElements 	Singular Nouns Found in Consecutive Nodes	You can at any time update the settings, and Preview URLs for your content models from within the schema editor.
 DELETE	 /v2/models/{model_id} 	Singular Nouns Found in Consecutive Nodes	For each of the content models you have created, you can choose to update, or delete from the schema editor.Deleting a model will also delete all of the content entries.
 GET	 /v2/post/{id} 	Singular Nouns Found in Consecutive Nodes	For each of the content models you have created, you can choose to update, or delete from the schema editor. Deleting a model will also delete all of the content entries.The post query is what you would use to fetch one entry from the CMS. You can fetch an individual entry by id, or any unique non-localized field defined in your content type.
+GET	 /v2/{projectId}/{environment} 	Singular Nouns Found in Consecutive Nodes	Regular read & write endpoint
+GET	 /v2/{projectId}/{environment} 	Singular Nouns Found in Consecutive Nodes	Regular read & write endpoint
+GET	 /content/{projectId}/{environment} 	Singular Nouns Found in Consecutive Nodes	High performance endpoint
+GET	 /content/{projectId}/{environment} 	Singular Nouns Found in Consecutive Nodes	High performance endpoint
+GET	 /content/{projectId}/{environment} 	Singular Nouns Found in Consecutive Nodes	High performance endpoint
+GET	 /v2/{projectId}/master 	Singular Nouns Found in Consecutive Nodes	Each environment has its own API endpoint, with the alias of the environment appended to the URL.
+GET	 /v2/{projectId}/master 	Singular Nouns Found in Consecutive Nodes	Each environment has its own API endpoint, with the alias of the environment appended to the URL.
 
 ***Patterns*** 
 Count: 5

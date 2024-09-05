@@ -1,8 +1,15 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 7
+/v2.10.0/allLogsV2ByObjectId	Amorphous End-point	 [uppercase found] 
+/v2.10.0/allLogsV2ByObjectIdCount	Amorphous End-point	 [uppercase found] 
+/v2.10.0/allLogsV2ByObjectType	Amorphous End-point	 [uppercase found] 
+/v2.10.0/allLogsV2ByObjectTypeCount	Amorphous End-point	 [uppercase found] 
+/v2.10.0/allLogsV2ByUserId	Amorphous End-point	 [uppercase found] 
+/v2.10.0/allLogsV2ByUserIdCount	Amorphous End-point	 [uppercase found] 
+/v2.10.0/allLogsV2Count	Amorphous End-point	 [uppercase found] 
 
 ***Patterns*** 
-Count: 32
+Count: 96
 /v2.10.0/allAppCategories	Tidy End-point	Tidy Endpoint
 /v2.10.0/allAppInstalls	Tidy End-point	Tidy Endpoint
 /v2.10.0/allAppInstances	Tidy End-point	Tidy Endpoint
@@ -35,3 +42,67 @@ Count: 32
 /v2.10.0/allEmbeds	Tidy End-point	Tidy Endpoint
 /v2.10.0/allFavorites	Tidy End-point	Tidy Endpoint
 /v2.10.0/allFeatureFlagOrgs	Tidy End-point	Tidy Endpoint
+/v2.10.0/allFeatureFlags	Tidy End-point	Tidy Endpoint
+/v2.10.0/allFileOutputs	Tidy End-point	Tidy Endpoint
+/v2.10.0/allFileProcessingJobs	Tidy End-point	Tidy Endpoint
+/v2.10.0/allFiles	Tidy End-point	Tidy Endpoint
+/v2.10.0/allFolders	Tidy End-point	Tidy Endpoint
+/v2.10.0/allFonts	Tidy End-point	Tidy Endpoint
+/v2.10.0/allGroupSpaces	Tidy End-point	Tidy Endpoint
+/v2.10.0/allGroups	Tidy End-point	Tidy Endpoint
+/v2.10.0/allLayouts	Tidy End-point	Tidy Endpoint
+/v2.10.0/allLegacyLogs	Tidy End-point	Tidy Endpoint
+/v2.10.0/allLinks	Tidy End-point	Tidy Endpoint
+/v2.10.0/allLogs	Tidy End-point	Tidy Endpoint
+/v2.10.0/allLogsV2	Tidy End-point	Tidy Endpoint
+/v2.10.0/allOrgConnections	Tidy End-point	Tidy Endpoint
+/v2.10.0/allOrgs	Tidy End-point	Tidy Endpoint
+/v2.10.0/allPermissionSets	Tidy End-point	Tidy Endpoint
+/v2.10.0/allPlaylists	Tidy End-point	Tidy Endpoint
+/v2.10.0/allScreenContentHistories	Tidy End-point	Tidy Endpoint
+/v2.10.0/allScreenGroups	Tidy End-point	Tidy Endpoint
+/v2.10.0/allScreens	Tidy End-point	Tidy Endpoint
+/v2.10.0/allShareAssociations	Tidy End-point	Tidy Endpoint
+/v2.10.0/allSites	Tidy End-point	Tidy Endpoint
+/v2.10.0/allSpaces	Tidy End-point	Tidy Endpoint
+/v2.10.0/allSystemAccesses	Tidy End-point	Tidy Endpoint
+/v2.10.0/allTagAssociations	Tidy End-point	Tidy Endpoint
+/v2.10.0/allTags	Tidy End-point	Tidy Endpoint
+/v2.10.0/allThemes	Tidy End-point	Tidy Endpoint
+/v2.10.0/allTokens	Tidy End-point	Tidy Endpoint
+/v2.10.0/allUserGroups	Tidy End-point	Tidy Endpoint
+/v2.10.0/allUsers	Tidy End-point	Tidy Endpoint
+/v2.10.0/app	Tidy End-point	Tidy Endpoint
+/v2.10.0/appInstall	Tidy End-point	Tidy Endpoint
+/v2.10.0/appInstance	Tidy End-point	Tidy Endpoint
+/v2.10.0/appInstancesByAppIdAndSpaceId	Tidy End-point	Tidy Endpoint
+/v2.10.0/appVersion	Tidy End-point	Tidy Endpoint
+/v2.10.0/availableChannelsBySpaceId	Tidy End-point	Tidy Endpoint
+/v2.10.0/availableLayoutsForSize	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingAddon	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingAddonPlan	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingAddonSubscription	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingAddress	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingCoupon	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingCustomer	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingDistributor	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingHierarchy	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingPaymentSource	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingPlan	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingRenewal	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingRenewalFuture	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingReseller	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingSubscription	Tidy End-point	Tidy Endpoint
+/v2.10.0/billingSubscriptionFuture	Tidy End-point	Tidy Endpoint
+/v2.10.0/canPairScreen	Tidy End-point	Tidy Endpoint
+/v2.10.0/cast	Tidy End-point	Tidy Endpoint
+/v2.10.0/channel	Tidy End-point	Tidy Endpoint
+/v2.10.0/commonFont	Tidy End-point	Tidy Endpoint
+/v2.10.0/commonLayout	Tidy End-point	Tidy Endpoint
+/v2.10.0/commonPermissionSet	Tidy End-point	Tidy Endpoint
+/v2.10.0/credential	Tidy End-point	Tidy Endpoint
+/v2.10.0/currentBillingFeatureFlags	Tidy End-point	Tidy Endpoint
+/v2.10.0/currentFeatureFlag	Tidy End-point	Tidy Endpoint
+/v2.10.0/currentFeatureFlags	Tidy End-point	Tidy Endpoint
+/v2.10.0/currentOrgId	Tidy End-point	Tidy Endpoint
+/v2.10.0/currentProvider	Tidy End-point	Tidy Endpoint

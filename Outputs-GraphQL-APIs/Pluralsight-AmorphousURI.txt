@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 25
+Count: 69
 /channelContent/{id}	Tidy End-point	Tidy Endpoint
 /channelGroup/{id}	Tidy End-point	Tidy Endpoint
 /channelMembers/{userId}	Tidy End-point	Tidy Endpoint
@@ -28,3 +28,47 @@ Count: 25
 /programCatalog	Tidy End-point	Tidy Endpoint
 /projectCatalog	Tidy End-point	Tidy Endpoint
 /tags	Tidy End-point	Tidy Endpoint
+/roleIqAssignments	Tidy End-point	Tidy Endpoint
+/roleIqCatalog	Tidy End-point	Tidy Endpoint
+/roleIqLearnerLevels	Tidy End-point	Tidy Endpoint
+/roleIqSkills	Tidy End-point	Tidy Endpoint
+/roleIqsSummary	Tidy End-point	Tidy Endpoint
+/addRole	Tidy End-point	Tidy Endpoint
+/assignTeamsToRole	Tidy End-point	Tidy Endpoint
+/assignUsersToRole	Tidy End-point	Tidy Endpoint
+/deleteRole	Tidy End-point	Tidy Endpoint
+/editRole	Tidy End-point	Tidy Endpoint
+/skillAssessmentCatalog	Tidy End-point	Tidy Endpoint
+/skillAssessmentResults	Tidy End-point	Tidy Endpoint
+/skillIqsSummary	Tidy End-point	Tidy Endpoint
+/planPermissionSets	Tidy End-point	Tidy Endpoint
+/teamManagers	Tidy End-point	Tidy Endpoint
+/teams	Tidy End-point	Tidy Endpoint
+/addTeam	Tidy End-point	Tidy Endpoint
+/addTeamManager	Tidy End-point	Tidy Endpoint
+/addTeamMember	Tidy End-point	Tidy Endpoint
+/deleteTeam	Tidy End-point	Tidy Endpoint
+/editTeam	Tidy End-point	Tidy Endpoint
+/inviteManager	Tidy End-point	Tidy Endpoint
+/moveMemberToTeam	Tidy End-point	Tidy Endpoint
+/removeTeamManager	Tidy End-point	Tidy Endpoint
+/removeTeamMember	Tidy End-point	Tidy Endpoint
+/courseDailyUsage	Tidy End-point	Tidy Endpoint
+/courseProgress	Tidy End-point	Tidy Endpoint
+/practiceExamQuizProgress	Tidy End-point	Tidy Endpoint
+/priority	Tidy End-point	Tidy Endpoint
+/programAssessmentAttempts	Tidy End-point	Tidy Endpoint
+/programAssessmentUserOptions	Tidy End-point	Tidy Endpoint
+/programUserProgress	Tidy End-point	Tidy Endpoint
+/UserCertificationUploads	Tidy End-point	Tidy Endpoint
+/memberInvites	Tidy End-point	Tidy Endpoint
+/planAdmins	Tidy End-point	Tidy Endpoint
+/users	Tidy End-point	Tidy Endpoint
+/cancelInvite	Tidy End-point	Tidy Endpoint
+/createUser	Tidy End-point	Tidy Endpoint
+/editUser	Tidy End-point	Tidy Endpoint
+/inviteMember	Tidy End-point	Tidy Endpoint
+/removeLicense	Tidy End-point	Tidy Endpoint
+/removeUser	Tidy End-point	Tidy Endpoint
+/contentSlugToId	Tidy End-point	Tidy Endpoint
+/planInfo	Tidy End-point	Tidy Endpoint

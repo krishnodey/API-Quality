@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 31
+Count: 33
 POST	 /v4/search/companies.{format} 	Structed Endpoint	Find companies based on search criteria.
 POST	 /v4/search/charities.{format} 	Structed Endpoint	Find charities based on search criteria.
 POST	 /v4/search/keywords.{format} 	Structed Endpoint	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
@@ -34,3 +34,5 @@ GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Structed Endpoint	G
 GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Structed Endpoint	Get persons of significant control (PoSC) for a given company.
 GET	 /v4/officer/{officerId}/related-officers.{format} 	Structed Endpoint	Get all related officers for a given officer
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Structed Endpoint	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Structed Endpoint	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Structed Endpoint	Get classifiers for a given charity.

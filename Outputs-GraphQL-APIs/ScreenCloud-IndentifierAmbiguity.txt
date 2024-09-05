@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 32
+Count: 103
 GET	 /v2.10.0/allAppCategories 	[Regular Endpoints]	Get list of app's categories.
 GET	 /v2.10.0/allAppInstalls 	[Regular Endpoints]	Reads and enables pagination through a set of AppInstall.
 GET	 /v2.10.0/allAppInstances 	[Regular Endpoints]	Reads and enables pagination through a set of AppInstance.
@@ -35,3 +35,74 @@ GET	 /v2.10.0/allEmbedViewLogsByContentTypeAndContentId 	[Regular Endpoints]	Get
 GET	 /v2.10.0/allEmbeds 	[Regular Endpoints]	Reads and enables pagination through a set of Embed.
 GET	 /v2.10.0/allFavorites 	[Regular Endpoints]	Reads and enables pagination through a set of Favorite.
 GET	 /v2.10.0/allFeatureFlagOrgs 	[Regular Endpoints]	Reads and enables pagination through a set of FeatureFlagOrg.
+GET	 /v2.10.0/allFeatureFlags 	[Regular Endpoints]	Reads and enables pagination through a set of FeatureFlag.
+GET	 /v2.10.0/allFileOutputs 	[Regular Endpoints]	Reads and enables pagination through a set of FileOutput.
+GET	 /v2.10.0/allFileProcessingJobs 	[Regular Endpoints]	Reads and enables pagination through a set of FileProcessingJob.
+GET	 /v2.10.0/allFiles 	[Regular Endpoints]	Reads and enables pagination through a set of File.
+GET	 /v2.10.0/allFolders 	[Regular Endpoints]	Reads and enables pagination through a set of Folder.
+GET	 /v2.10.0/allFonts 	[Regular Endpoints]	Reads and enables pagination through a set of Font.
+GET	 /v2.10.0/allGroupSpaces 	[Regular Endpoints]	Reads and enables pagination through a set of GroupSpace.
+GET	 /v2.10.0/allGroups 	[Regular Endpoints]	Reads and enables pagination through a set of Group.
+GET	 /v2.10.0/allLayouts 	[Regular Endpoints]	Reads and enables pagination through a set of Layout.
+GET	 /v2.10.0/allLegacyLogs 	[Regular Endpoints]	Reads and enables pagination through a set of LegacyLog.
+GET	 /v2.10.0/allLinks 	[Regular Endpoints]	Reads and enables pagination through a set of Link.
+GET	 /v2.10.0/allLogs 	[Regular Endpoints]	Reads and enables pagination through a set of Log.
+GET	 /v2.10.0/allLogsV2 	[Regular Endpoints]	Get all audit logs
+GET	 /v2.10.0/allLogsV2ByObjectId 	[Regular Endpoints]	Get all audit logs by object id
+GET	 /v2.10.0/allLogsV2ByObjectIdCount 	[Regular Endpoints]	Total count of all audit logs by object ID
+GET	 /v2.10.0/allLogsV2ByObjectType 	[Regular Endpoints]	Get all audit logs by object type
+GET	 /v2.10.0/allLogsV2ByObjectTypeCount 	[Regular Endpoints]	Total count of all audit logs by object type
+GET	 /v2.10.0/allLogsV2ByUserId 	[Regular Endpoints]	Get all audit logs by user ID
+GET	 /v2.10.0/allLogsV2ByUserIdCount 	[Regular Endpoints]	Total count of all audit logs by user ID
+GET	 /v2.10.0/allLogsV2Count 	[Regular Endpoints]	Total count of all audit logs
+GET	 /v2.10.0/allOrgConnections 	[Regular Endpoints]	Reads and enables pagination through a set of OrgConnection.
+GET	 /v2.10.0/allOrgs 	[Regular Endpoints]	Reads and enables pagination through a set of Org.
+GET	 /v2.10.0/allPermissionSets 	[Regular Endpoints]	Reads and enables pagination through a set of PermissionSet.
+GET	 /v2.10.0/allPlaylists 	[Regular Endpoints]	Reads and enables pagination through a set of Playlist.
+GET	 /v2.10.0/allScreenContentHistories 	[Regular Endpoints]	Reads and enables pagination through a set of ScreenContentHistory.
+GET	 /v2.10.0/allScreenGroups 	[Regular Endpoints]	Reads and enables pagination through a set of ScreenGroup.
+GET	 /v2.10.0/allScreens 	[Regular Endpoints]	Reads and enables pagination through a set of Screen.
+GET	 /v2.10.0/allShareAssociations 	[Regular Endpoints]	Reads and enables pagination through a set of ShareAssociation.
+GET	 /v2.10.0/allSites 	[Regular Endpoints]	Reads and enables pagination through a set of Site.
+GET	 /v2.10.0/allSpaces 	[Regular Endpoints]	Reads and enables pagination through a set of Space.
+GET	 /v2.10.0/allSystemAccesses 	[Regular Endpoints]	Reads and enables pagination through a set of SystemAccess.
+GET	 /v2.10.0/allTagAssociations 	[Regular Endpoints]	Reads and enables pagination through a set of TagAssociation.
+GET	 /v2.10.0/allTags 	[Regular Endpoints]	Reads and enables pagination through a set of Tag.
+GET	 /v2.10.0/allThemes 	[Regular Endpoints]	Reads and enables pagination through a set of Theme.
+GET	 /v2.10.0/allTokens 	[Regular Endpoints]	Reads and enables pagination through a set of Token.
+GET	 /v2.10.0/allUserGroups 	[Regular Endpoints]	Reads and enables pagination through a set of UserGroup.
+GET	 /v2.10.0/allUsers 	[Regular Endpoints]	Reads and enables pagination through a set of User.
+GET	 /v2.10.0/app 	[Regular Endpoints]	Reads a single App using its globally unique ID.
+GET	 /v2.10.0/appInstall 	[Regular Endpoints]	Reads a single AppInstall using its globally unique ID.
+GET	 /v2.10.0/appInstance 	[Regular Endpoints]	Reads a single AppInstance using its globally unique ID.
+GET	 /v2.10.0/appInstancesByAppIdAndSpaceId 	[Regular Endpoints]	Get all app instances by app ID and space ID.
+GET	 /v2.10.0/appVersion 	[Regular Endpoints]	Reads a single AppVersion using its globally unique ID.
+GET	 /v2.10.0/availableChannelsBySpaceId 	[Regular Endpoints]	Get available channels by space's id.
+GET	 /v2.10.0/availableLayoutsForSize 	[Regular Endpoints]	Get list of available layouts that compatible with the size.
+GET	 /v2.10.0/billingAddon 	[Regular Endpoints]	Reads a single BillingAddon using its globally unique ID.
+GET	 /v2.10.0/billingAddonPlan 	[Regular Endpoints]	Reads a single BillingAddonPlan using its globally unique ID.
+GET	 /v2.10.0/billingAddonSubscription 	[Regular Endpoints]	Reads a single BillingAddonSubscription using its globally unique ID.
+GET	 /v2.10.0/billingAddress 	[Regular Endpoints]	Reads a single BillingAddress using its globally unique ID.
+GET	 /v2.10.0/billingCoupon 	[Regular Endpoints]	Reads a single BillingCoupon using its globally unique ID.
+GET	 /v2.10.0/billingCustomer 	[Regular Endpoints]	Reads a single BillingCustomer using its globally unique ID.
+GET	 /v2.10.0/billingDistributor 	[Regular Endpoints]	Reads a single BillingDistributor using its globally unique ID.
+GET	 /v2.10.0/billingHierarchy 	[Regular Endpoints]	Reads a single BillingHierarchy using its globally unique ID.
+GET	 /v2.10.0/billingPaymentSource 	[Regular Endpoints]	Reads a single BillingPaymentSource using its globally unique ID.
+GET	 /v2.10.0/billingPlan 	[Regular Endpoints]	Reads a single BillingPlan using its globally unique ID.
+GET	 /v2.10.0/billingRenewal 	[Regular Endpoints]	Reads a single BillingRenewal using its globally unique ID.
+GET	 /v2.10.0/billingRenewalFuture 	[Regular Endpoints]	Reads a single BillingRenewalFuture using its globally unique ID.
+GET	 /v2.10.0/billingReseller 	[Regular Endpoints]	Reads a single BillingReseller using its globally unique ID.
+GET	 /v2.10.0/billingSubscription 	[Regular Endpoints]	Reads a single BillingSubscription using its globally unique ID.
+GET	 /v2.10.0/billingSubscriptionFuture 	[Regular Endpoints]	Reads a single BillingSubscriptionFuture using its globally unique ID.
+GET	 /v2.10.0/canPairScreen 	[Regular Endpoints]	Returns a code based on the permissions and billing state
+GET	 /v2.10.0/cast 	[Regular Endpoints]	Reads a single Cast using its globally unique ID.
+GET	 /v2.10.0/channel 	[Regular Endpoints]	Reads a single Channel using its globally unique ID.
+GET	 /v2.10.0/commonFont 	[Regular Endpoints]	Reads a single CommonFont using its globally unique ID.
+GET	 /v2.10.0/commonLayout 	[Regular Endpoints]	Reads a single CommonLayout using its globally unique ID.
+GET	 /v2.10.0/commonPermissionSet 	[Regular Endpoints]	Reads a single CommonPermissionSet using its globally unique ID.
+GET	 /v2.10.0/credential 	[Regular Endpoints]	Reads a single Credential using its globally unique ID.
+GET	 /v2.10.0/currentBillingFeatureFlags 	[Regular Endpoints]	Get the billing feature flags for the given space.
+GET	 /v2.10.0/currentFeatureFlag 	[Regular Endpoints]	Get the currently logged in user (org) feature flag
+GET	 /v2.10.0/currentFeatureFlags 	[Regular Endpoints]	Get the currently logged in user (org) feature flags
+GET	 /v2.10.0/currentOrgId 	[Regular Endpoints]	Get current org id from the current session.
+GET	 /v2.10.0/currentProvider 	[Regular Endpoints]	Get current provider from user JWT Claims.

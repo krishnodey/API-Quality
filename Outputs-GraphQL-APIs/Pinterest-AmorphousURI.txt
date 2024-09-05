@@ -1,8 +1,78 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 70
+/v5//user_account	Amorphous End-point	 [underscore found] 
+/v5//user_account/analytics	Amorphous End-point	 [underscore found] 
+/v5//user_account/analytics/top_pins	Amorphous End-point	 [underscore found] 
+/user_account/analytics/top_video_pins	Amorphous End-point	 [underscore found] 
+/user_account/businesses	Amorphous End-point	 [underscore found] 
+/user_account/followers	Amorphous End-point	 [underscore found] 
+/user_account/following	Amorphous End-point	 [underscore found] 
+/user_account/following/boards	Amorphous End-point	 [underscore found] 
+/user_account/following/{username}	Amorphous End-point	 [underscore found] 
+/user_account/websites	Amorphous End-point	 [underscore found] 
+/user_account/websites	Amorphous End-point	 [underscore found] 
+/user_account/websites	Amorphous End-point	 [underscore found] 
+/user_account/websites/verification	Amorphous End-point	 [underscore found] 
+/ad_accounts	Amorphous End-point	 [underscore found] 
+/ad_accounts	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/mmm_reports	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/mmm_reports	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/reports	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/reports	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/sandbox	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/targeting_analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/templates	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/templates/{template_id}/reports	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/campaigns	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/campaigns	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/campaigns	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/campaigns/analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/campaigns/targeting_analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/campaigns/{campaign_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups/analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups/targeting_analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups/audience_sizing	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_groups/{ad_group_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/bid_floor	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ad_previews	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ads	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ads	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ads	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ads/analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ads/targeting_analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/ads/{ad_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/product_group_promotions	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/product_group_promotions	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/product_group_promotions	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/product_group_promotions/{product_group_promotion_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/product_groups/analytics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/bulk/download	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/bulk/upsert	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/bulk/{bulk_request_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/audiences	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/audiences	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/audiences/{audience_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/audiences/{audience_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/audiences/custom	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/customer_lists	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/customer_lists	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/customer_lists/{customer_list_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/customer_lists/{customer_list_id}	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/keywords	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/keywords	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/keywords	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/keywords/metrics	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/targeting_templates	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/targeting_templates	Amorphous End-point	 [underscore found] 
+/ad_accounts/{ad_account_id}/targeting_templates	Amorphous End-point	 [underscore found] 
 
 ***Patterns*** 
-Count: 20
+Count: 22
 /v5//pins	Tidy End-point	Tidy Endpoint
 /v5//pins	Tidy End-point	Tidy Endpoint
 /v5/pins/{pin_id}	Tidy End-point	Tidy Endpoint
@@ -23,3 +93,5 @@ Count: 20
 /v5/media	Tidy End-point	Tidy Endpoint
 /v5/media	Tidy End-point	Tidy Endpoint
 /v5/media/{media_id}	Tidy End-point	Tidy Endpoint
+/users/{username}/interests/follow	Tidy End-point	Tidy Endpoint
+/trends/keywords/{region}/top/{trend_type}	Tidy End-point	Tidy Endpoint

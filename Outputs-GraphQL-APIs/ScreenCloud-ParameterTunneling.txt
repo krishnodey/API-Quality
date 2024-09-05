@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 32
+Count: 103
 GET	 /v2.10.0/allAppCategories 	Parameter Tunneling	Get list of app's categories.
 GET	 /v2.10.0/allAppInstalls 	Parameter Tunneling	Reads and enables pagination through a set of AppInstall.
 GET	 /v2.10.0/allAppInstances 	Parameter Tunneling	Reads and enables pagination through a set of AppInstance.
@@ -32,6 +32,77 @@ GET	 /v2.10.0/allEmbedViewLogsByContentTypeAndContentId 	Parameter Tunneling	Get
 GET	 /v2.10.0/allEmbeds 	Parameter Tunneling	Reads and enables pagination through a set of Embed.
 GET	 /v2.10.0/allFavorites 	Parameter Tunneling	Reads and enables pagination through a set of Favorite.
 GET	 /v2.10.0/allFeatureFlagOrgs 	Parameter Tunneling	Reads and enables pagination through a set of FeatureFlagOrg.
+GET	 /v2.10.0/allFeatureFlags 	Parameter Tunneling	Reads and enables pagination through a set of FeatureFlag.
+GET	 /v2.10.0/allFileOutputs 	Parameter Tunneling	Reads and enables pagination through a set of FileOutput.
+GET	 /v2.10.0/allFileProcessingJobs 	Parameter Tunneling	Reads and enables pagination through a set of FileProcessingJob.
+GET	 /v2.10.0/allFiles 	Parameter Tunneling	Reads and enables pagination through a set of File.
+GET	 /v2.10.0/allFolders 	Parameter Tunneling	Reads and enables pagination through a set of Folder.
+GET	 /v2.10.0/allFonts 	Parameter Tunneling	Reads and enables pagination through a set of Font.
+GET	 /v2.10.0/allGroupSpaces 	Parameter Tunneling	Reads and enables pagination through a set of GroupSpace.
+GET	 /v2.10.0/allGroups 	Parameter Tunneling	Reads and enables pagination through a set of Group.
+GET	 /v2.10.0/allLayouts 	Parameter Tunneling	Reads and enables pagination through a set of Layout.
+GET	 /v2.10.0/allLegacyLogs 	Parameter Tunneling	Reads and enables pagination through a set of LegacyLog.
+GET	 /v2.10.0/allLinks 	Parameter Tunneling	Reads and enables pagination through a set of Link.
+GET	 /v2.10.0/allLogs 	Parameter Tunneling	Reads and enables pagination through a set of Log.
+GET	 /v2.10.0/allLogsV2 	Parameter Tunneling	Get all audit logs
+GET	 /v2.10.0/allLogsV2ByObjectId 	Parameter Tunneling	Get all audit logs by object id
+GET	 /v2.10.0/allLogsV2ByObjectType 	Parameter Tunneling	Get all audit logs by object type
+GET	 /v2.10.0/allLogsV2ByUserId 	Parameter Tunneling	Get all audit logs by user ID
+GET	 /v2.10.0/allOrgConnections 	Parameter Tunneling	Reads and enables pagination through a set of OrgConnection.
+GET	 /v2.10.0/allOrgs 	Parameter Tunneling	Reads and enables pagination through a set of Org.
+GET	 /v2.10.0/allPermissionSets 	Parameter Tunneling	Reads and enables pagination through a set of PermissionSet.
+GET	 /v2.10.0/allPlaylists 	Parameter Tunneling	Reads and enables pagination through a set of Playlist.
+GET	 /v2.10.0/allScreenContentHistories 	Parameter Tunneling	Reads and enables pagination through a set of ScreenContentHistory.
+GET	 /v2.10.0/allScreenGroups 	Parameter Tunneling	Reads and enables pagination through a set of ScreenGroup.
+GET	 /v2.10.0/allScreens 	Parameter Tunneling	Reads and enables pagination through a set of Screen.
+GET	 /v2.10.0/allShareAssociations 	Parameter Tunneling	Reads and enables pagination through a set of ShareAssociation.
+GET	 /v2.10.0/allSites 	Parameter Tunneling	Reads and enables pagination through a set of Site.
+GET	 /v2.10.0/allSpaces 	Parameter Tunneling	Reads and enables pagination through a set of Space.
+GET	 /v2.10.0/allSystemAccesses 	Parameter Tunneling	Reads and enables pagination through a set of SystemAccess.
+GET	 /v2.10.0/allTagAssociations 	Parameter Tunneling	Reads and enables pagination through a set of TagAssociation.
+GET	 /v2.10.0/allTags 	Parameter Tunneling	Reads and enables pagination through a set of Tag.
+GET	 /v2.10.0/allThemes 	Parameter Tunneling	Reads and enables pagination through a set of Theme.
+GET	 /v2.10.0/allTokens 	Parameter Tunneling	Reads and enables pagination through a set of Token.
+GET	 /v2.10.0/allUserGroups 	Parameter Tunneling	Reads and enables pagination through a set of UserGroup.
+GET	 /v2.10.0/allUsers 	Parameter Tunneling	Reads and enables pagination through a set of User.
+GET	 /v2.10.0/appInstancesByAppIdAndSpaceId 	Parameter Tunneling	Get all app instances by app ID and space ID.
+GET	 /v2.10.0/availableChannelsBySpaceId 	Parameter Tunneling	Get available channels by space's id.
+GET	 /v2.10.0/availableLayoutsForSize 	Parameter Tunneling	Get list of available layouts that compatible with the size.
+GET	 /v2.10.0/billingAddon 	Parameter Tunneling	Reads a single BillingAddon using its globally unique ID.
+GET	 /v2.10.0/billingAddonPlan 	Parameter Tunneling	Reads a single BillingAddonPlan using its globally unique ID.
+GET	 /v2.10.0/billingAddonSubscription 	Parameter Tunneling	Reads a single BillingAddonSubscription using its globally unique ID.
+GET	 /v2.10.0/billingAddress 	Parameter Tunneling	Reads a single BillingAddress using its globally unique ID.
+GET	 /v2.10.0/canPairScreen 	Parameter Tunneling	Returns a code based on the permissions and billing state
+GET	 /v2.10.0/currentBillingFeatureFlags 	Parameter Tunneling	Get the billing feature flags for the given space.
+GET	 /v2.10.0/currentFeatureFlag 	Parameter Tunneling	Get the currently logged in user (org) feature flag
+GET	 /v2.10.0/currentFeatureFlags 	Parameter Tunneling	Get the currently logged in user (org) feature flags
+GET	 /v2.10.0/currentOrgId 	Parameter Tunneling	Get current org id from the current session.
+GET	 /v2.10.0/currentProvider 	Parameter Tunneling	Get current provider from user JWT Claims.
 
 ***Patterns*** 
 Count: 0
+GET	 /v2.10.0/allLogsV2ByObjectIdCount 	Parameter Adherence	Total count of all audit logs by object ID
+GET	 /v2.10.0/allLogsV2ByObjectTypeCount 	Parameter Adherence	Total count of all audit logs by object type
+GET	 /v2.10.0/allLogsV2ByUserIdCount 	Parameter Adherence	Total count of all audit logs by user ID
+GET	 /v2.10.0/allLogsV2Count 	Parameter Adherence	Total count of all audit logs
+GET	 /v2.10.0/app 	Parameter Adherence	Reads a single App using its globally unique ID.
+GET	 /v2.10.0/appInstall 	Parameter Adherence	Reads a single AppInstall using its globally unique ID.
+GET	 /v2.10.0/appInstance 	Parameter Adherence	Reads a single AppInstance using its globally unique ID.
+GET	 /v2.10.0/appVersion 	Parameter Adherence	Reads a single AppVersion using its globally unique ID.
+GET	 /v2.10.0/billingCoupon 	Parameter Adherence	Reads a single BillingCoupon using its globally unique ID.
+GET	 /v2.10.0/billingCustomer 	Parameter Adherence	Reads a single BillingCustomer using its globally unique ID.
+GET	 /v2.10.0/billingDistributor 	Parameter Adherence	Reads a single BillingDistributor using its globally unique ID.
+GET	 /v2.10.0/billingHierarchy 	Parameter Adherence	Reads a single BillingHierarchy using its globally unique ID.
+GET	 /v2.10.0/billingPaymentSource 	Parameter Adherence	Reads a single BillingPaymentSource using its globally unique ID.
+GET	 /v2.10.0/billingPlan 	Parameter Adherence	Reads a single BillingPlan using its globally unique ID.
+GET	 /v2.10.0/billingRenewal 	Parameter Adherence	Reads a single BillingRenewal using its globally unique ID.
+GET	 /v2.10.0/billingRenewalFuture 	Parameter Adherence	Reads a single BillingRenewalFuture using its globally unique ID.
+GET	 /v2.10.0/billingReseller 	Parameter Adherence	Reads a single BillingReseller using its globally unique ID.
+GET	 /v2.10.0/billingSubscription 	Parameter Adherence	Reads a single BillingSubscription using its globally unique ID.
+GET	 /v2.10.0/billingSubscriptionFuture 	Parameter Adherence	Reads a single BillingSubscriptionFuture using its globally unique ID.
+GET	 /v2.10.0/cast 	Parameter Adherence	Reads a single Cast using its globally unique ID.
+GET	 /v2.10.0/channel 	Parameter Adherence	Reads a single Channel using its globally unique ID.
+GET	 /v2.10.0/commonFont 	Parameter Adherence	Reads a single CommonFont using its globally unique ID.
+GET	 /v2.10.0/commonLayout 	Parameter Adherence	Reads a single CommonLayout using its globally unique ID.
+GET	 /v2.10.0/commonPermissionSet 	Parameter Adherence	Reads a single CommonPermissionSet using its globally unique ID.
+GET	 /v2.10.0/credential 	Parameter Adherence	Reads a single Credential using its globally unique ID.

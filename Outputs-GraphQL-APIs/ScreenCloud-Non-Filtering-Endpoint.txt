@@ -1,11 +1,25 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 17
 GET	 /v2.10.0/allAppCategories 	Non-Filtering Endpoint	Get list of app's categories.
 GET	 /v2.10.0/allEmbedViewLogs 	Non-Filtering Endpoint	Get embed view logs
 GET	 /v2.10.0/allEmbedViewLogsByContentTypeAndContentId 	Non-Filtering Endpoint	Get embed view logs by content type and content id
+GET	 /v2.10.0/allLogsV2 	Non-Filtering Endpoint	Get all audit logs
+GET	 /v2.10.0/allLogsV2ByObjectId 	Non-Filtering Endpoint	Get all audit logs by object id
+GET	 /v2.10.0/allLogsV2ByObjectType 	Non-Filtering Endpoint	Get all audit logs by object type
+GET	 /v2.10.0/allLogsV2ByUserId 	Non-Filtering Endpoint	Get all audit logs by user ID
+GET	 /v2.10.0/allPlaylists 	Non-Filtering Endpoint	Reads and enables pagination through a set of Playlist.
+GET	 /v2.10.0/appInstancesByAppIdAndSpaceId 	Non-Filtering Endpoint	Get all app instances by app ID and space ID.
+GET	 /v2.10.0/availableChannelsBySpaceId 	Non-Filtering Endpoint	Get available channels by space's id.
+GET	 /v2.10.0/availableLayoutsForSize 	Non-Filtering Endpoint	Get list of available layouts that compatible with the size.
+GET	 /v2.10.0/canPairScreen 	Non-Filtering Endpoint	Returns a code based on the permissions and billing state
+GET	 /v2.10.0/currentBillingFeatureFlags 	Non-Filtering Endpoint	Get the billing feature flags for the given space.
+GET	 /v2.10.0/currentFeatureFlag 	Non-Filtering Endpoint	Get the currently logged in user (org) feature flag
+GET	 /v2.10.0/currentFeatureFlags 	Non-Filtering Endpoint	Get the currently logged in user (org) feature flags
+GET	 /v2.10.0/currentOrgId 	Non-Filtering Endpoint	Get current org id from the current session.
+GET	 /v2.10.0/currentProvider 	Non-Filtering Endpoint	Get current provider from user JWT Claims.
 
 ***Patterns*** 
-Count: 29
+Count: 86
 GET	 /v2.10.0/allAppInstalls 	Filtering Endpoint	Reads and enables pagination through a set of AppInstall.
 GET	 /v2.10.0/allAppInstances 	Filtering Endpoint	Reads and enables pagination through a set of AppInstance.
 GET	 /v2.10.0/allAppVersions 	Filtering Endpoint	Reads and enables pagination through a set of AppVersion.
@@ -35,3 +49,60 @@ GET	 /v2.10.0/allCredentials 	Filtering Endpoint	Reads and enables pagination th
 GET	 /v2.10.0/allEmbeds 	Filtering Endpoint	Reads and enables pagination through a set of Embed.
 GET	 /v2.10.0/allFavorites 	Filtering Endpoint	Reads and enables pagination through a set of Favorite.
 GET	 /v2.10.0/allFeatureFlagOrgs 	Filtering Endpoint	Reads and enables pagination through a set of FeatureFlagOrg.
+GET	 /v2.10.0/allFeatureFlags 	Filtering Endpoint	Reads and enables pagination through a set of FeatureFlag.
+GET	 /v2.10.0/allFileOutputs 	Filtering Endpoint	Reads and enables pagination through a set of FileOutput.
+GET	 /v2.10.0/allFileProcessingJobs 	Filtering Endpoint	Reads and enables pagination through a set of FileProcessingJob.
+GET	 /v2.10.0/allFiles 	Filtering Endpoint	Reads and enables pagination through a set of File.
+GET	 /v2.10.0/allFolders 	Filtering Endpoint	Reads and enables pagination through a set of Folder.
+GET	 /v2.10.0/allFonts 	Filtering Endpoint	Reads and enables pagination through a set of Font.
+GET	 /v2.10.0/allGroupSpaces 	Filtering Endpoint	Reads and enables pagination through a set of GroupSpace.
+GET	 /v2.10.0/allGroups 	Filtering Endpoint	Reads and enables pagination through a set of Group.
+GET	 /v2.10.0/allLayouts 	Filtering Endpoint	Reads and enables pagination through a set of Layout.
+GET	 /v2.10.0/allLegacyLogs 	Filtering Endpoint	Reads and enables pagination through a set of LegacyLog.
+GET	 /v2.10.0/allLinks 	Filtering Endpoint	Reads and enables pagination through a set of Link.
+GET	 /v2.10.0/allLogs 	Filtering Endpoint	Reads and enables pagination through a set of Log.
+GET	 /v2.10.0/allLogsV2ByObjectIdCount 	Filtering Endpoint	Total count of all audit logs by object ID
+GET	 /v2.10.0/allLogsV2ByObjectTypeCount 	Filtering Endpoint	Total count of all audit logs by object type
+GET	 /v2.10.0/allLogsV2ByUserIdCount 	Filtering Endpoint	Total count of all audit logs by user ID
+GET	 /v2.10.0/allLogsV2Count 	Filtering Endpoint	Total count of all audit logs
+GET	 /v2.10.0/allOrgConnections 	Filtering Endpoint	Reads and enables pagination through a set of OrgConnection.
+GET	 /v2.10.0/allOrgs 	Filtering Endpoint	Reads and enables pagination through a set of Org.
+GET	 /v2.10.0/allPermissionSets 	Filtering Endpoint	Reads and enables pagination through a set of PermissionSet.
+GET	 /v2.10.0/allScreenContentHistories 	Filtering Endpoint	Reads and enables pagination through a set of ScreenContentHistory.
+GET	 /v2.10.0/allScreenGroups 	Filtering Endpoint	Reads and enables pagination through a set of ScreenGroup.
+GET	 /v2.10.0/allScreens 	Filtering Endpoint	Reads and enables pagination through a set of Screen.
+GET	 /v2.10.0/allShareAssociations 	Filtering Endpoint	Reads and enables pagination through a set of ShareAssociation.
+GET	 /v2.10.0/allSites 	Filtering Endpoint	Reads and enables pagination through a set of Site.
+GET	 /v2.10.0/allSpaces 	Filtering Endpoint	Reads and enables pagination through a set of Space.
+GET	 /v2.10.0/allSystemAccesses 	Filtering Endpoint	Reads and enables pagination through a set of SystemAccess.
+GET	 /v2.10.0/allTagAssociations 	Filtering Endpoint	Reads and enables pagination through a set of TagAssociation.
+GET	 /v2.10.0/allTags 	Filtering Endpoint	Reads and enables pagination through a set of Tag.
+GET	 /v2.10.0/allThemes 	Filtering Endpoint	Reads and enables pagination through a set of Theme.
+GET	 /v2.10.0/allTokens 	Filtering Endpoint	Reads and enables pagination through a set of Token.
+GET	 /v2.10.0/allUserGroups 	Filtering Endpoint	Reads and enables pagination through a set of UserGroup.
+GET	 /v2.10.0/allUsers 	Filtering Endpoint	Reads and enables pagination through a set of User.
+GET	 /v2.10.0/app 	Filtering Endpoint	Reads a single App using its globally unique ID.
+GET	 /v2.10.0/appInstall 	Filtering Endpoint	Reads a single AppInstall using its globally unique ID.
+GET	 /v2.10.0/appInstance 	Filtering Endpoint	Reads a single AppInstance using its globally unique ID.
+GET	 /v2.10.0/appVersion 	Filtering Endpoint	Reads a single AppVersion using its globally unique ID.
+GET	 /v2.10.0/billingAddon 	Filtering Endpoint	Reads a single BillingAddon using its globally unique ID.
+GET	 /v2.10.0/billingAddonPlan 	Filtering Endpoint	Reads a single BillingAddonPlan using its globally unique ID.
+GET	 /v2.10.0/billingAddonSubscription 	Filtering Endpoint	Reads a single BillingAddonSubscription using its globally unique ID.
+GET	 /v2.10.0/billingAddress 	Filtering Endpoint	Reads a single BillingAddress using its globally unique ID.
+GET	 /v2.10.0/billingCoupon 	Filtering Endpoint	Reads a single BillingCoupon using its globally unique ID.
+GET	 /v2.10.0/billingCustomer 	Filtering Endpoint	Reads a single BillingCustomer using its globally unique ID.
+GET	 /v2.10.0/billingDistributor 	Filtering Endpoint	Reads a single BillingDistributor using its globally unique ID.
+GET	 /v2.10.0/billingHierarchy 	Filtering Endpoint	Reads a single BillingHierarchy using its globally unique ID.
+GET	 /v2.10.0/billingPaymentSource 	Filtering Endpoint	Reads a single BillingPaymentSource using its globally unique ID.
+GET	 /v2.10.0/billingPlan 	Filtering Endpoint	Reads a single BillingPlan using its globally unique ID.
+GET	 /v2.10.0/billingRenewal 	Filtering Endpoint	Reads a single BillingRenewal using its globally unique ID.
+GET	 /v2.10.0/billingRenewalFuture 	Filtering Endpoint	Reads a single BillingRenewalFuture using its globally unique ID.
+GET	 /v2.10.0/billingReseller 	Filtering Endpoint	Reads a single BillingReseller using its globally unique ID.
+GET	 /v2.10.0/billingSubscription 	Filtering Endpoint	Reads a single BillingSubscription using its globally unique ID.
+GET	 /v2.10.0/billingSubscriptionFuture 	Filtering Endpoint	Reads a single BillingSubscriptionFuture using its globally unique ID.
+GET	 /v2.10.0/cast 	Filtering Endpoint	Reads a single Cast using its globally unique ID.
+GET	 /v2.10.0/channel 	Filtering Endpoint	Reads a single Channel using its globally unique ID.
+GET	 /v2.10.0/commonFont 	Filtering Endpoint	Reads a single CommonFont using its globally unique ID.
+GET	 /v2.10.0/commonLayout 	Filtering Endpoint	Reads a single CommonLayout using its globally unique ID.
+GET	 /v2.10.0/commonPermissionSet 	Filtering Endpoint	Reads a single CommonPermissionSet using its globally unique ID.
+GET	 /v2.10.0/credential 	Filtering Endpoint	Reads a single Credential using its globally unique ID.

@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 142
+Count: 151
 POST	 /v4/search/companies.{format} 	Singular Nouns Found in Consecutive Nodes	Find companies based on search criteria.
 POST	 /v4/search/charities.{format} 	Singular Nouns Found in Consecutive Nodes	Find charities based on search criteria.
 POST	 /v4/search/keywords.{format} 	Singular Nouns Found in Consecutive Nodes	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
@@ -142,6 +142,15 @@ GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns 
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Singular Nouns Found in Consecutive Nodes	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Singular Nouns Found in Consecutive Nodes	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
 
 ***Patterns*** 
 Count: 0

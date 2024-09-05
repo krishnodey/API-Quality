@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 113
+Count: 510
 PATCH	 /v1/projects/{projectId}	Singular Nouns Found in Consecutive Nodes	Updates a project.
 GET	 /v1/projects/{projectId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given project
 DELETE	 /v1/projects/{projectId} 	Singular Nouns Found in Consecutive Nodes	Delete the given project. Fails if the project isn't empty.
@@ -113,9 +113,428 @@ GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	
 POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Singular Nouns Found in Consecutive Nodes	Modifies the scaling settings for the given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Singular Nouns Found in Consecutive Nodes	Modifies the scaling settings for the given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Singular Nouns Found in Consecutive Nodes	Modifies the scaling settings for the given service.
+POST	 /v1/domains/{domain}/import 	Singular Nouns Found in Consecutive Nodes	Import a certificate for the domain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/assign 	Singular Nouns Found in Consecutive Nodes	Assigns a service port to the given subdomain
+DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/assign	Singular Nouns Found in Consecutive Nodes	Removes a subdomain from its assigned service
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/disable 	Singular Nouns Found in Consecutive Nodes	Removes the CDN integration from the given subdomain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/disable 	Singular Nouns Found in Consecutive Nodes	Removes the CDN integration from the given subdomain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable 	Singular Nouns Found in Consecutive Nodes	Enables a CDN integration on the given subdomain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable 	Singular Nouns Found in Consecutive Nodes	Enables a CDN integration on the given subdomain
+GET	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}	Singular Nouns Found in Consecutive Nodes	Get subdomain path details.
+DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}	Singular Nouns Found in Consecutive Nodes	Delete a path.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath} 	Singular Nouns Found in Consecutive Nodes	Update a subdomain path.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign	Singular Nouns Found in Consecutive Nodes	Assign a subdomain path to a port.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign	Singular Nouns Found in Consecutive Nodes	Assign a subdomain path to a port.
+DELETE	  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign 	Singular Nouns Found in Consecutive Nodes	Unassign a subdomain path to a port.
+DELETE	  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign 	Singular Nouns Found in Consecutive Nodes	Unassign a subdomain path to a port.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/verify 	Singular Nouns Found in Consecutive Nodes	Gets details about the given subdomain
+POST	 /v1/domains/{domain}/verify 	Singular Nouns Found in Consecutive Nodes	Attempts to verify the domain
+GET	 /v1/projects/{projectId}/jobs 	Singular Nouns Found in Consecutive Nodes	Gets a list of jobs belonging to the project
+POST	 /v1/projects/{projectId}/jobs/cron 	Singular Nouns Found in Consecutive Nodes	Creates a new cron job
+PUT	 /v1/projects/{projectId}/jobs/cron 	Singular Nouns Found in Consecutive Nodes	Creates or updates a cron job
+PATCH	 /v1/projects/{projectId}/jobs/cron/{jobId} 	Singular Nouns Found in Consecutive Nodes	Updates a cron job
+PATCH	 /v1/projects/{projectId}/jobs/cron/{jobId} 	Singular Nouns Found in Consecutive Nodes	Updates a cron job
+PATCH	 /v1/projects/{projectId}/jobs/cron/{jobId} 	Singular Nouns Found in Consecutive Nodes	Updates a cron job
+POST	 /v1/projects/{projectId}/jobs/manual 	Singular Nouns Found in Consecutive Nodes	Creates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
+PUT	 /v1/projects/{projectId}/jobs/manual 	Singular Nouns Found in Consecutive Nodes	Creates or updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
+PATCH	 /v1/projects/{projectId}/jobs/manual/{jobId} 	Singular Nouns Found in Consecutive Nodes	Updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
+PATCH	 /v1/projects/{projectId}/jobs/manual/{jobId} 	Singular Nouns Found in Consecutive Nodes	Updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
+PATCH	 /v1/projects/{projectId}/jobs/manual/{jobId} 	Singular Nouns Found in Consecutive Nodes	Updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
+GET	 /v1/projects/{projectId}/jobs/{jobId} 	Singular Nouns Found in Consecutive Nodes	Gets information about the given job
+GET	 /v1/projects/{projectId}/jobs/{jobId} 	Singular Nouns Found in Consecutive Nodes	Gets information about the given job
+DELETE	 /v1/projects/{projectId}/jobs/{jobId} 	Singular Nouns Found in Consecutive Nodes	Deletes the given job.
+DELETE	 /v1/projects/{projectId}/jobs/{jobId} 	Singular Nouns Found in Consecutive Nodes	Deletes the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/branches 	Singular Nouns Found in Consecutive Nodes	Gets information about the branches of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/branches 	Singular Nouns Found in Consecutive Nodes	Gets information about the branches of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build 	Singular Nouns Found in Consecutive Nodes	Lists builds for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build 	Singular Nouns Found in Consecutive Nodes	Lists builds for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build 	Singular Nouns Found in Consecutive Nodes	Lists builds for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Singular Nouns Found in Consecutive Nodes	Start a new build for the given job. Given a commit sha, it will build that commit.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Singular Nouns Found in Consecutive Nodes	Start a new build for the given job. Given a commit sha, it will build that commit.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Singular Nouns Found in Consecutive Nodes	Start a new build for the given job. Given a commit sha, it will build that commit.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Singular Nouns Found in Consecutive Nodes	Gets the build arguments of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Singular Nouns Found in Consecutive Nodes	Gets the build arguments of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Singular Nouns Found in Consecutive Nodes	Gets the build arguments of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Singular Nouns Found in Consecutive Nodes	Sets build arguments for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Singular Nouns Found in Consecutive Nodes	Sets build arguments for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Singular Nouns Found in Consecutive Nodes	Sets build arguments for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details 	Singular Nouns Found in Consecutive Nodes	Get details about the build arguments accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details 	Singular Nouns Found in Consecutive Nodes	Get details about the build arguments accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details 	Singular Nouns Found in Consecutive Nodes	Get details about the build arguments accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details 	Plural Nouns Found in Consecutive Nodes	Get details about the build arguments accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-logs 	Singular Nouns Found in Consecutive Nodes	Get logs for a job build
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-logs 	Singular Nouns Found in Consecutive Nodes	Get logs for a job build
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-logs 	Singular Nouns Found in Consecutive Nodes	Get logs for a job build
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for a job build
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for a job build
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build-metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for a job build
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-options 	Singular Nouns Found in Consecutive Nodes	Updates the build options for a given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-options 	Singular Nouns Found in Consecutive Nodes	Updates the build options for a given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-options 	Singular Nouns Found in Consecutive Nodes	Updates the build options for a given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-source 	Singular Nouns Found in Consecutive Nodes	Updates the version control source for a given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-source 	Singular Nouns Found in Consecutive Nodes	Updates the version control source for a given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-source 	Singular Nouns Found in Consecutive Nodes	Updates the version control source for a given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-source 	Singular Nouns Found in Consecutive Nodes	Updates the version control source for a given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Singular Nouns Found in Consecutive Nodes	Gets information about a build for the job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Singular Nouns Found in Consecutive Nodes	Gets information about a build for the job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Singular Nouns Found in Consecutive Nodes	Gets information about a build for the job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Singular Nouns Found in Consecutive Nodes	Gets information about a build for the job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Singular Nouns Found in Consecutive Nodes	Gets information about a build for the job
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job build
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job build
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job build
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job build
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job build
+GET	 /v1/projects/{projectId}/jobs/{jobId}/containers 	Singular Nouns Found in Consecutive Nodes	Gets a list of containers for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/containers 	Singular Nouns Found in Consecutive Nodes	Gets a list of containers for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/deployment 	Singular Nouns Found in Consecutive Nodes	Gets information about the deployment of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/deployment 	Singular Nouns Found in Consecutive Nodes	Gets information about the deployment of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/deployment 	Singular Nouns Found in Consecutive Nodes	Gets information about the deployment of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/deployment	Singular Nouns Found in Consecutive Nodes	Updates the deployment settings of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/deployment	Singular Nouns Found in Consecutive Nodes	Updates the deployment settings of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/deployment	Singular Nouns Found in Consecutive Nodes	Updates the deployment settings of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Singular Nouns Found in Consecutive Nodes	Lists the health checks for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Singular Nouns Found in Consecutive Nodes	Lists the health checks for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Singular Nouns Found in Consecutive Nodes	Lists the health checks for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Singular Nouns Found in Consecutive Nodes	Updates health checks for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Singular Nouns Found in Consecutive Nodes	Updates health checks for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Singular Nouns Found in Consecutive Nodes	Updates health checks for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for a job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for a job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for a job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for a job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Singular Nouns Found in Consecutive Nodes	Pause the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Singular Nouns Found in Consecutive Nodes	Pause the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Singular Nouns Found in Consecutive Nodes	Pause the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/pull-requests 	Singular Nouns Found in Consecutive Nodes	Gets information about the pull-requests of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/pull-requests 	Singular Nouns Found in Consecutive Nodes	Gets information about the pull-requests of the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/pull-requests 	Singular Nouns Found in Consecutive Nodes	Gets information about the pull-requests of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Singular Nouns Found in Consecutive Nodes	Fetches run history for the given job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Singular Nouns Found in Consecutive Nodes	Fetches run history for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Singular Nouns Found in Consecutive Nodes	Starts a new job run for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Singular Nouns Found in Consecutive Nodes	Starts a new job run for the given job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Returns data about the given job run
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Returns data about the given job run
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Returns data about the given job run
+DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job run
+DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job run
+DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Aborts the given job run
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Returns the runtime environment for the given job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Returns the runtime environment for the given job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Returns the runtime environment for the given job
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Returns the runtime environment for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Sets the runtime environment for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Sets the runtime environment for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Sets the runtime environment for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Singular Nouns Found in Consecutive Nodes	Sets the runtime environment for the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details 	Singular Nouns Found in Consecutive Nodes	Get details about the runtime environment accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details 	Singular Nouns Found in Consecutive Nodes	Get details about the runtime environment accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details 	Singular Nouns Found in Consecutive Nodes	Get details about the runtime environment accessible by the given job.
+GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details 	Singular Nouns Found in Consecutive Nodes	Get details about the runtime environment accessible by the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Singular Nouns Found in Consecutive Nodes	Modifies the scaling settings for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Singular Nouns Found in Consecutive Nodes	Modifies the scaling settings for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Singular Nouns Found in Consecutive Nodes	Modifies the scaling settings for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/settings 	Singular Nouns Found in Consecutive Nodes	Updates settings for the job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/settings 	Singular Nouns Found in Consecutive Nodes	Updates settings for the job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/suspend 	Singular Nouns Found in Consecutive Nodes	Modify cron job to toggle suspending of its schedule.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/suspend 	Singular Nouns Found in Consecutive Nodes	Modify cron job to toggle suspending of its schedule.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/suspend 	Singular Nouns Found in Consecutive Nodes	Modify cron job to toggle suspending of its schedule.
+GET	 /v1/projects/{projectId}/addons 	Singular Nouns Found in Consecutive Nodes	Gets a list of addons belonging to the project
+POST	 /v1/projects/{projectId}/addons 	Singular Nouns Found in Consecutive Nodes	Creates a new addon
+PUT	 /v1/projects/{projectId}/addons 	Singular Nouns Found in Consecutive Nodes	Creates or updates an addon
+GET	 /v1/projects/{projectId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	projectId string required ID of the project addonId string required ID of the addon
+GET	 /v1/projects/{projectId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	projectId string required ID of the project addonId string required ID of the addon
+PATCH	 /v1/projects/{projectId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Updates an addon
+PATCH	 /v1/projects/{projectId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Updates an addon
+DELETE	 /v1/projects/{projectId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Deletes the given addon.
+DELETE	 /v1/projects/{projectId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Deletes the given addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Singular Nouns Found in Consecutive Nodes	Gets details about an addon's backup schedules
+GET	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Singular Nouns Found in Consecutive Nodes	Gets details about an addon's backup schedules
+GET	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Singular Nouns Found in Consecutive Nodes	Gets details about an addon's backup schedules
+POST	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Singular Nouns Found in Consecutive Nodes	Create a new backup schedule for an addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Singular Nouns Found in Consecutive Nodes	Create a new backup schedule for an addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Singular Nouns Found in Consecutive Nodes	Create a new backup schedule for an addon.
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules/{scheduleId} 	Singular Nouns Found in Consecutive Nodes	Deletes a backup schedule for an addon.
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules/{scheduleId} 	Singular Nouns Found in Consecutive Nodes	Deletes a backup schedule for an addon.
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules/{scheduleId} 	Singular Nouns Found in Consecutive Nodes	Deletes a backup schedule for an addon.
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules/{scheduleId} 	Singular Nouns Found in Consecutive Nodes	Deletes a backup schedule for an addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups 	Singular Nouns Found in Consecutive Nodes	Returns a list of backups for the given addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups 	Singular Nouns Found in Consecutive Nodes	Returns a list of backups for the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups 	Singular Nouns Found in Consecutive Nodes	Initiates a backup for the given addon
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups 	Singular Nouns Found in Consecutive Nodes	Initiates a backup for the given addon
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Singular Nouns Found in Consecutive Nodes	Gets details about a given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Singular Nouns Found in Consecutive Nodes	Gets details about a given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Singular Nouns Found in Consecutive Nodes	Gets details about a given backup.
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Singular Nouns Found in Consecutive Nodes	Deletes a given backup
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Singular Nouns Found in Consecutive Nodes	Deletes a given backup
+DELETE	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Singular Nouns Found in Consecutive Nodes	Deletes a given backup
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Singular Nouns Found in Consecutive Nodes	Aborts the in progress backup.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Singular Nouns Found in Consecutive Nodes	Aborts the in progress backup.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Singular Nouns Found in Consecutive Nodes	Aborts the in progress backup.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Singular Nouns Found in Consecutive Nodes	Aborts the in progress backup.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Singular Nouns Found in Consecutive Nodes	Aborts an in-progress backup restore.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Singular Nouns Found in Consecutive Nodes	Aborts an in-progress backup restore.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Singular Nouns Found in Consecutive Nodes	Aborts an in-progress backup restore.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Singular Nouns Found in Consecutive Nodes	Aborts an in-progress backup restore.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Singular Nouns Found in Consecutive Nodes	Aborts an in-progress backup restore.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Singular Nouns Found in Consecutive Nodes	Generates a temporary download link for downloading the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Singular Nouns Found in Consecutive Nodes	Generates a temporary download link for downloading the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Singular Nouns Found in Consecutive Nodes	Generates a temporary download link for downloading the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Singular Nouns Found in Consecutive Nodes	Generates a temporary download link for downloading the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Singular Nouns Found in Consecutive Nodes	Generates a temporary download link for downloading the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon backup
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon backup
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon backup
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Singular Nouns Found in Consecutive Nodes	Restores the given addon to the given backup state.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Singular Nouns Found in Consecutive Nodes	Restores the given addon to the given backup state.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Singular Nouns Found in Consecutive Nodes	Restores the given addon to the given backup state.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Singular Nouns Found in Consecutive Nodes	Restores the given addon to the given backup state.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores 	Singular Nouns Found in Consecutive Nodes	Gets a list of restores for the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores 	Singular Nouns Found in Consecutive Nodes	Gets a list of restores for the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores 	Singular Nouns Found in Consecutive Nodes	Gets a list of restores for the given backup.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{restoreId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon restore
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{restoreId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon restore
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{restoreId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon restore
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{restoreId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon restore
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain 	Singular Nouns Found in Consecutive Nodes	Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain 	Singular Nouns Found in Consecutive Nodes	Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain 	Singular Nouns Found in Consecutive Nodes	Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain 	Singular Nouns Found in Consecutive Nodes	Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date.
+GET	 /v1/projects/{projectId}/addons/{addonId}/containers 	Singular Nouns Found in Consecutive Nodes	Gets a list of containers for the given addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/containers 	Singular Nouns Found in Consecutive Nodes	Gets a list of containers for the given addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/credentials	Singular Nouns Found in Consecutive Nodes	Returns the credentials for connecting to the given addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/credentials	Singular Nouns Found in Consecutive Nodes	Returns the credentials for connecting to the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Singular Nouns Found in Consecutive Nodes	Imports a database from an external archive or existing live database.
+POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Singular Nouns Found in Consecutive Nodes	Imports a database from an external archive or existing live database.
+POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Singular Nouns Found in Consecutive Nodes	Imports a database from an external archive or existing live database.
+GET	 /v1/projects/{projectId}/addons/{addonId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon
+GET	 /v1/projects/{projectId}/addons/{addonId}/logs 	Singular Nouns Found in Consecutive Nodes	Get logs for an addon
+GET	 /v1/projects/{projectId}/addons/{addonId}/metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for an addon
+GET	 /v1/projects/{projectId}/addons/{addonId}/metrics 	Singular Nouns Found in Consecutive Nodes	Get metrics for an addon
+POST	 /v1/projects/{projectId}/addons/{addonId}/network-settings 	Singular Nouns Found in Consecutive Nodes	Updates the network settings for the addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/network-settings 	Singular Nouns Found in Consecutive Nodes	Updates the network settings for the addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/network-settings 	Singular Nouns Found in Consecutive Nodes	Updates the network settings for the addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pause 	Singular Nouns Found in Consecutive Nodes	Pause the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pause 	Singular Nouns Found in Consecutive Nodes	Pause the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pause 	Singular Nouns Found in Consecutive Nodes	Pause the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Singular Nouns Found in Consecutive Nodes	Restores an addon to a specific point in time.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Singular Nouns Found in Consecutive Nodes	Restores an addon to a specific point in time.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Singular Nouns Found in Consecutive Nodes	Restores an addon to a specific point in time.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Singular Nouns Found in Consecutive Nodes	Restores an addon to a specific point in time.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Singular Nouns Found in Consecutive Nodes	Restores an addon to a specific point in time.
+GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Singular Nouns Found in Consecutive Nodes	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Singular Nouns Found in Consecutive Nodes	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Singular Nouns Found in Consecutive Nodes	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Singular Nouns Found in Consecutive Nodes	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Singular Nouns Found in Consecutive Nodes	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Singular Nouns Found in Consecutive Nodes	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/reset 	Singular Nouns Found in Consecutive Nodes	Reset the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/reset 	Singular Nouns Found in Consecutive Nodes	Reset the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/reset 	Singular Nouns Found in Consecutive Nodes	Reset the given addon.
+POST	 /v1/projects/{projectId}/secrets/{secretId} 	Singular Nouns Found in Consecutive Nodes	Update a secret
+POST	 /v1/projects/{projectId}/secrets/{secretId} 	Singular Nouns Found in Consecutive Nodes	Update a secret
+POST	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Link an addon to the secret group or edit the settings of the linked addon.
+POST	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Link an addon to the secret group or edit the settings of the linked addon.
+POST	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Link an addon to the secret group or edit the settings of the linked addon.
+GET	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Get details about a given addon link.
+GET	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Get details about a given addon link.
+GET	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Get details about a given addon link.
+DELETE	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Unlinks an addon from the secret group.
+DELETE	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Unlinks an addon from the secret group.
+DELETE	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Singular Nouns Found in Consecutive Nodes	Unlinks an addon from the secret group.
+GET	 /v1/projects/{projectId}/secrets/{secretId}/details 	Singular Nouns Found in Consecutive Nodes	View a secret with details about its linked addons
+GET	 /v1/projects/{projectId}/secrets/{secretId}/details 	Singular Nouns Found in Consecutive Nodes	View a secret with details about its linked addons
+GET	 /v1/projects/{projectId}/volumes 	Singular Nouns Found in Consecutive Nodes	Gets a list of volumes belonging to the project
+POST	 /v1/projects/{projectId}/volumes 	Singular Nouns Found in Consecutive Nodes	Creates a volume with the specified payload
+GET	 /v1/projects/{projectId}/volumes/{volumeId} 	Singular Nouns Found in Consecutive Nodes	Retrieve a volume
+GET	 /v1/projects/{projectId}/volumes/{volumeId} 	Singular Nouns Found in Consecutive Nodes	Retrieve a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId} 	Singular Nouns Found in Consecutive Nodes	Update volume mounts and storage size
+POST	 /v1/projects/{projectId}/volumes/{volumeId} 	Singular Nouns Found in Consecutive Nodes	Update volume mounts and storage size
+DELETE	 /v1/projects/{projectId}/volumes/{volumeId} 	Singular Nouns Found in Consecutive Nodes	Deletes this volume and its associated data.
+DELETE	 /v1/projects/{projectId}/volumes/{volumeId} 	Singular Nouns Found in Consecutive Nodes	Deletes this volume and its associated data.
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Singular Nouns Found in Consecutive Nodes	Attach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Singular Nouns Found in Consecutive Nodes	Attach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Singular Nouns Found in Consecutive Nodes	Attach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Singular Nouns Found in Consecutive Nodes	Detach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Singular Nouns Found in Consecutive Nodes	Detach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Singular Nouns Found in Consecutive Nodes	Detach a volume
+GET	 /v1/projects/{projectId}/pipelines 	Singular Nouns Found in Consecutive Nodes	Lists all pipelines for a project
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId} 	Singular Nouns Found in Consecutive Nodes	Get details about a pipeline
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId} 	Singular Nouns Found in Consecutive Nodes	Get details about a pipeline
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template.
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Singular Nouns Found in Consecutive Nodes	Update a given preview template.
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Singular Nouns Found in Consecutive Nodes	Update a given preview template.
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Singular Nouns Found in Consecutive Nodes	Update a given preview template.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews 	Singular Nouns Found in Consecutive Nodes	Get a list of active preview environments for a template
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews 	Singular Nouns Found in Consecutive Nodes	Get a list of active preview environments for a template
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews 	Singular Nouns Found in Consecutive Nodes	Get a list of active preview environments for a template
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews 	Plural Nouns Found in Consecutive Nodes	Get a list of active preview environments for a template
+DELETE	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews/{previewId} 	Singular Nouns Found in Consecutive Nodes	Delete a preview environment generated by a preview template.
+DELETE	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews/{previewId} 	Singular Nouns Found in Consecutive Nodes	Delete a preview environment generated by a preview template.
+DELETE	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews/{previewId} 	Singular Nouns Found in Consecutive Nodes	Delete a preview environment generated by a preview template.
+DELETE	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews/{previewId} 	Plural Nouns Found in Consecutive Nodes	Delete a preview environment generated by a preview template.
+DELETE	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/previews/{previewId} 	Singular Nouns Found in Consecutive Nodes	Delete a preview environment generated by a preview template.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs 	Singular Nouns Found in Consecutive Nodes	Get a list of preview template runs
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs 	Singular Nouns Found in Consecutive Nodes	Get a list of preview template runs
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs 	Singular Nouns Found in Consecutive Nodes	Get a list of preview template runs
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs 	Plural Nouns Found in Consecutive Nodes	Get a list of preview template runs
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template run.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template run.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template run.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Plural Nouns Found in Consecutive Nodes	Get information about the given preview template run.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template run.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given preview template run.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Singular Nouns Found in Consecutive Nodes	Gets details about a release flow
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Singular Nouns Found in Consecutive Nodes	Gets details about a release flow
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Singular Nouns Found in Consecutive Nodes	Gets details about a release flow
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Singular Nouns Found in Consecutive Nodes	Updates a release flow
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Singular Nouns Found in Consecutive Nodes	Updates a release flow
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Singular Nouns Found in Consecutive Nodes	Updates a release flow
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Singular Nouns Found in Consecutive Nodes	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Singular Nouns Found in Consecutive Nodes	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Singular Nouns Found in Consecutive Nodes	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Singular Nouns Found in Consecutive Nodes	Lists runs of a release flow
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Singular Nouns Found in Consecutive Nodes	Lists runs of a release flow
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Singular Nouns Found in Consecutive Nodes	Lists runs of a release flow
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given release flow run
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given release flow run
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given release flow run
+GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given release flow run
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given release flow run
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given release flow run
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given release flow run
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given release flow run
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given release flow run
+GET	 /v1/templates/{templateId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given template.
+POST	 /v1/templates/{templateId} 	Singular Nouns Found in Consecutive Nodes	Update a template
+DELETE	 /v1/templates/{templateId} 	Singular Nouns Found in Consecutive Nodes	Delete a template
+POST	 /v1/templates/{templateId}/runs 	Singular Nouns Found in Consecutive Nodes	Run a template
+GET	 /v1/templates/{templateId}/runs 	Singular Nouns Found in Consecutive Nodes	Get a list of template runs
+GET	 /v1/templates/{templateId}/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given template run.
+GET	 /v1/templates/{templateId}/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given template run.
+GET	 /v1/templates/{templateId}/runs/{templateRunId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given template run.
+POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given template run.
+POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given template run.
+POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given template run.
+POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Singular Nouns Found in Consecutive Nodes	Abort the given template run.
+GET	 /v1/integrations/log-sinks/{logSinkId} 	Singular Nouns Found in Consecutive Nodes	Gets details about a given log sink.
+GET	 /v1/integrations/log-sinks/{logSinkId} 	Singular Nouns Found in Consecutive Nodes	Gets details about a given log sink.
+DELETE	 /v1/integrations/log-sinks/{logSinkId}	Singular Nouns Found in Consecutive Nodes	Deletes a log sink.
+DELETE	 /v1/integrations/log-sinks/{logSinkId}	Singular Nouns Found in Consecutive Nodes	Deletes a log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Singular Nouns Found in Consecutive Nodes	Pauses a given log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Singular Nouns Found in Consecutive Nodes	Pauses a given log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Singular Nouns Found in Consecutive Nodes	Pauses a given log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes a paused log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes a paused log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes a paused log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/settings 	Singular Nouns Found in Consecutive Nodes	Updates the settings for a log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/settings 	Singular Nouns Found in Consecutive Nodes	Updates the settings for a log sink.
+GET	 /v1/integrations/notifications 	Plural Nouns Found in Consecutive Nodes	Lists notification integrations for the authenticated user or team.
+POST	 /v1/integrations/notifications 	Plural Nouns Found in Consecutive Nodes	Create a new notification integration.
+GET	 /v1/integrations/notifications/{notificationId} 	Plural Nouns Found in Consecutive Nodes	Get details about a notification integration.
+GET	 /v1/integrations/notifications/{notificationId} 	Singular Nouns Found in Consecutive Nodes	Get details about a notification integration.
+POST	 /v1/integrations/notifications/{notificationId} 	Plural Nouns Found in Consecutive Nodes	Updates a notification integration
+POST	 /v1/integrations/notifications/{notificationId} 	Singular Nouns Found in Consecutive Nodes	Updates a notification integration
+DELETE	 /v1/integrations/notifications/{notificationId} 	Plural Nouns Found in Consecutive Nodes	Deletes a notification integration
+DELETE	 /v1/integrations/notifications/{notificationId} 	Singular Nouns Found in Consecutive Nodes	Deletes a notification integration
+GET	 /v1/integrations/registries 	Plural Nouns Found in Consecutive Nodes	Lists the container registry credentials saved to this account. Does not display secrets.
+POST	 /v1/integrations/registries 	Plural Nouns Found in Consecutive Nodes	Adds a new set of container registry credentials to this account.
+GET	 /v1/integrations/registries/{credentialId} 	Plural Nouns Found in Consecutive Nodes	Views a set of registry credential data.
+GET	 /v1/integrations/registries/{credentialId} 	Singular Nouns Found in Consecutive Nodes	Views a set of registry credential data.
+DELETE	 /v1/integrations/registries/{credentialId} 	Plural Nouns Found in Consecutive Nodes	Deletes a set of registry credential data.
+DELETE	 /v1/integrations/registries/{credentialId} 	Singular Nouns Found in Consecutive Nodes	Deletes a set of registry credential data.
+POST	 /v1/integrations/registries/{credentialId}/modify 	Plural Nouns Found in Consecutive Nodes	Updates a set of registry credential data.
+POST	 /v1/integrations/registries/{credentialId}/modify 	Singular Nouns Found in Consecutive Nodes	Updates a set of registry credential data.
+POST	 /v1/integrations/registries/{credentialId}/modify 	Singular Nouns Found in Consecutive Nodes	Updates a set of registry credential data.
+GET	 /v1/integrations/vcs Lists linked version control providers 	Singular Nouns Found in Consecutive Nodes	
+GET	 /v1/integrations/vcs Lists linked version control providers 	Plural Nouns Found in Consecutive Nodes	
+GET	 /v1/integrations/vcs Lists linked version control providers 	Singular Nouns Found in Consecutive Nodes	
+GET	 /v1/integrations/vcs Lists linked version control providers 	Singular Nouns Found in Consecutive Nodes	
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Singular Nouns Found in Consecutive Nodes	Generate a token for a specific VCS link.
+GET	 /v1/integrations/vcs/repos 	Singular Nouns Found in Consecutive Nodes	Gets a list of repositories accessible to this account
+GET	 /v1/integrations/vcs/repos 	Plural Nouns Found in Consecutive Nodes	Gets a list of repositories accessible to this account
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Singular Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Plural Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Singular Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Singular Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Singular Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Singular Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Singular Nouns Found in Consecutive Nodes	Gets a list of branches for the repo
+GET	 /v1/cloud-providers/clusters 	Plural Nouns Found in Consecutive Nodes	Lists clusters for the authenticated user or team.
+POST	 /v1/cloud-providers/clusters 	Plural Nouns Found in Consecutive Nodes	Creates a new cluster.
+GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Plural Nouns Found in Consecutive Nodes	clusterId string required ID of the cluster
+GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Singular Nouns Found in Consecutive Nodes	clusterId string required ID of the cluster
+GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Singular Nouns Found in Consecutive Nodes	clusterId string required ID of the cluster
+GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Singular Nouns Found in Consecutive Nodes	clusterId string required ID of the cluster
+POST	 /v1/cloud-providers/clusters/{clusterId} 	Plural Nouns Found in Consecutive Nodes	Update an existing cluster.
+POST	 /v1/cloud-providers/clusters/{clusterId} 	Singular Nouns Found in Consecutive Nodes	Update an existing cluster.
+DELETE	 /v1/cloud-providers/clusters/{clusterId} 	Plural Nouns Found in Consecutive Nodes	Delete the given cluster. Fails if the cluster has associated projects.
+DELETE	 /v1/cloud-providers/clusters/{clusterId} 	Singular Nouns Found in Consecutive Nodes	Delete the given cluster. Fails if the cluster has associated projects.
+GET	 /v1/cloud-providers/clusters/{clusterId}/nodes 	Plural Nouns Found in Consecutive Nodes	Get a list of nodes for the given cluster
+GET	 /v1/cloud-providers/clusters/{clusterId}/nodes 	Singular Nouns Found in Consecutive Nodes	Get a list of nodes for the given cluster
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Plural Nouns Found in Consecutive Nodes	Cordon a node on the cluster to prevent new pods from scheduling on it.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Singular Nouns Found in Consecutive Nodes	Cordon a node on the cluster to prevent new pods from scheduling on it.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Singular Nouns Found in Consecutive Nodes	Cordon a node on the cluster to prevent new pods from scheduling on it.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Singular Nouns Found in Consecutive Nodes	Cordon a node on the cluster to prevent new pods from scheduling on it.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Plural Nouns Found in Consecutive Nodes	Drain a node by evicting all running pods.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Singular Nouns Found in Consecutive Nodes	Drain a node by evicting all running pods.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Singular Nouns Found in Consecutive Nodes	Drain a node by evicting all running pods.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Singular Nouns Found in Consecutive Nodes	Drain a node by evicting all running pods.
+GET	 /v1/cloud-providers/docker-registries/{registryId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given docker registry
+DELETE	 /v1/cloud-providers/docker-registries/{registryId} 	Singular Nouns Found in Consecutive Nodes	Delete the given docker registry. Fails if the docker registry is associated with existing clusters.
+GET	 /v1/cloud-providers/integrations 	Plural Nouns Found in Consecutive Nodes	Lists integrations for the authenticated user or team.
+POST	 /v1/cloud-providers/integrations 	Plural Nouns Found in Consecutive Nodes	Creates a new integration.
+GET	 /v1/cloud-providers/integrations/{integrationId} 	Plural Nouns Found in Consecutive Nodes	Get information about the given integration
+GET	 /v1/cloud-providers/integrations/{integrationId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given integration
+POST	 /v1/cloud-providers/integrations/{integrationId} 	Plural Nouns Found in Consecutive Nodes	Update information about the given integration
+POST	 /v1/cloud-providers/integrations/{integrationId} 	Singular Nouns Found in Consecutive Nodes	Update information about the given integration
+DELETE	 /v1/cloud-providers/integrations/{integrationId} 	Plural Nouns Found in Consecutive Nodes	Delete the given integration. Fails if the integration is associated with existing clusters.
+DELETE	 /v1/cloud-providers/integrations/{integrationId} 	Singular Nouns Found in Consecutive Nodes	Delete the given integration. Fails if the integration is associated with existing clusters.
+GET	 /v1/cloud-providers/regions 	Plural Nouns Found in Consecutive Nodes	Lists supported cloud provider regions
+GET	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	View details for a given resource tag.
+GET	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	View details for a given resource tag.
+PATCH	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	Patch a resource tag.
+PATCH	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	Patch a resource tag.
+DELETE	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	Delete a resource tag.
+DELETE	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	Delete a resource tag.
+GET	 /v1/billing/invoices/details 	Plural Nouns Found in Consecutive Nodes	Get details about an invoice.
 
 ***Patterns*** 
-Count: 3
+Count: 25
 GET	 /v1/projects 	Cosistent Resource Archetype	Lists projects for the authenticated user or team.
 POST	 /v1/projects 	Cosistent Resource Archetype	Creates a new project.
 PUT	 /v1/projects 	Cosistent Resource Archetype	Create or update project
+GET	 /v1/domains 	Cosistent Resource Archetype	Lists available domains
+POST	 /v1/domains 	Cosistent Resource Archetype	Registers a new domain
+GET	 /v1/domains/{domain} 	Cosistent Resource Archetype	Get domain
+DELETE	 /v1/domains/{domain} 	Cosistent Resource Archetype	Deletes a domain and each of its registered subdomains.
+POST	 /v1/domains/{domain}/subdomains 	Cosistent Resource Archetype	Adds a new subdomain to the domain.
+GET	 /v1/domains/{domain}/subdomains/{subdomain} 	Cosistent Resource Archetype	Gets details about the given subdomain
+DELETE	 /v1/domains/{domain}/subdomains/{subdomain}	Cosistent Resource Archetype	Removes a subdomain from a domain.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths 	Cosistent Resource Archetype	Adds a new path to the subdomain.
+GET	 /v1/domains/{domain}/subdomains/{subdomain}/paths	Cosistent Resource Archetype	List paths for a given subdomain.
+GET	 /v1/addon-types 	Cosistent Resource Archetype	Gets information about the available addon types
+GET	 /v1/templates 	Cosistent Resource Archetype	Get a list of templates
+POST	 /v1/templates 	Cosistent Resource Archetype	Create a template
+GET	 /v1/integrations/log-sinks 	Cosistent Resource Archetype	Gets a list of log sinks added to this account.
+POST	 /v1/integrations/log-sinks 	Cosistent Resource Archetype	Creates a new log sink.
+GET	 /v1/cloud-providers 	Cosistent Resource Archetype	Lists supported cloud providers
+GET	 /v1/cloud-providers/docker-registries 	Cosistent Resource Archetype	Lists docker registries for the authenticated user or team.
+POST	 /v1/cloud-providers/docker-registries 	Cosistent Resource Archetype	Creates a new docker registry.
+GET	 /v1/cloud-providers/node-types 	Cosistent Resource Archetype	Lists supported cloud provider node types
+GET	 /v1/tags 	Cosistent Resource Archetype	List the resource tags for this entity.
+POST	 /v1/tags 	Cosistent Resource Archetype	Add a new resource tag for this entity.
+PUT	 /v1/tags 	Cosistent Resource Archetype	Update or create a resource tag.
+GET	 /v1/billing/invoices 	Cosistent Resource Archetype	Get a list of past invoices

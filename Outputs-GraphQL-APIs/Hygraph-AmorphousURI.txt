@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 12
+Count: 15
 /v2/models	Tidy End-point	Tidy Endpoint
 /v2/models/{model_id}	Tidy End-point	Tidy Endpoint
 /v2/models/{model_id}	Tidy End-point	Tidy Endpoint
@@ -15,3 +15,6 @@ Count: 12
 /v2/post/{id}	Tidy End-point	Tidy Endpoint
 /v2/posts/{id}	Tidy End-point	Tidy Endpoint
 /v2/posts/{id}/comments/{id}	Tidy End-point	Tidy Endpoint
+/v2/{projectId}/{environment}	Tidy End-point	Tidy Endpoint
+/content/{projectId}/{environment}	Tidy End-point	Tidy Endpoint
+/v2/{projectId}/master	Tidy End-point	Tidy Endpoint

@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 22
+Count: 105
 GET	 /v5//pins 	[Regular Endpoints]	View, create, update, or delete information about Pins.
 POST	 /v5//pins 	[Regular Endpoints]	Create a Pin on a board or board section owned by the "operation user_account".
 GET	 /v5/pins/{pin_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
@@ -25,3 +25,86 @@ GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	[Identifier is Enclosed i
 GET	 /v5/media 	[Regular Endpoints]	List media uploads filtered by given parameters.
 POST	 /v5/media 	[Regular Endpoints]	Register your intent to upload media
 GET	 /v5/media/{media_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get details for a registered media upload, including its current status.
+GET	 /v5//user_account 	[Regular Endpoints]	Get account information for the "operation user_account"
+GET	 /v5//user_account/analytics 	[Regular Endpoints]	Get analytics for the "operation user_account"
+GET	 /v5//user_account/analytics/top_pins 	[Regular Endpoints]	Gets analytics data about a user's top pins (limited to the top 50).
+GET	 /user_account/analytics/top_video_pins 	[Regular Endpoints]	Gets analytics data about a user's top video pins (limited to the top 50).
+GET	 /user_account/businesses 	[Regular Endpoints]	Get a list of your linked business accounts.
+GET	 /user_account/followers 	[Regular Endpoints]	Get a list of your followers. Ratelimit category: ads_read Sandbox support:enabled
+GET	 /user_account/following 	[Regular Endpoints]	Get a list of who a certain user follows.
+GET	 /user_account/following/boards 	[Regular Endpoints]	Get a list of the boards a user follows. The request returns a board summary object array.
+POST	 /user_account/following/{username} 	[Identifier is Enclosed in {} or <> or Starts with :]	Use this request, as a signed-in user, to follow another user.
+POST	 /user_account/websites 	[Regular Endpoints]	Verify a website as a signed-in user.
+GET	 /user_account/websites 	[Regular Endpoints]	Get user websites, claimed or not
+DEL	 /user_account/websites 	[Regular Endpoints]	Unverifu a website verified by the signed-in user.
+GET	 /user_account/websites/verification 	[Regular Endpoints]	Get verification code for user to install on the website to claim it.
+GET	 /users/{username}/interests/follow 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of a user's following interests in one place.
+GET	 /ad_accounts 	[Regular Endpoints]	Get a list of the ad_accounts that the "operation user_account" has access to.
+POST	 /ad_accounts 	[Regular Endpoints]	Create a new ad account. Different ad accounts can support different currencies, payment methods, etc.
+GET	 /ad_accounts/{ad_account_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get an ad account
+GET	 /ad_accounts/{ad_account_id}/analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get analytics for the specified ad_account_id, filtered by the specified options.
+GET	 /ad_accounts/{ad_account_id}/mmm_reports 	[Identifier is Enclosed in {} or <> or Starts with :]	Get an mmm report for an ad account. This returns a URL to an mmm metrics report given a token returned from the create mmm report endpoint.
+POST	 /ad_accounts/{ad_account_id}/mmm_reports 	[Identifier is Enclosed in {} or <> or Starts with :]	This creates an asynchronous mmm report based on the given request. It returns a token that you can use to download the report when it is ready.
+GET	 /ad_accounts/{ad_account_id}/reports 	[Identifier is Enclosed in {} or <> or Starts with :]	This returns a URL to an analytics report given a token returned from the post request report creation call. You can use the URL to download the report. The link is valid for five minutes and the report is valid for one hour.
+POST	 /ad_accounts/{ad_account_id}/reports 	[Identifier is Enclosed in {} or <> or Starts with :]	This returns a token that you can use to download the report when it is ready. Note that this endpoint requires the parameters to be passed as JSON-formatted in the request body. This endpoint does not support URL query parameters.
+DEL	 /ad_accounts/{ad_account_id}/sandbox 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete an ad account and all the ads data associated with that account.
+GET	 /ad_accounts/{ad_account_id}/targeting_analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get targeting analytics for an ad account.
+GET	 /ad_accounts/{ad_account_id}/templates 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets all Templates associated with an ad account ID.
+POST	 /ad_accounts/{ad_account_id}/templates/{template_id}/reports 	[Identifier is Enclosed in {} or <> or Starts with :]	This takes a template ID and an optional custom timeframe and constructs an asynchronous report based on the template. It returns a token that you can use to download the report when it is ready.
+POST	 /ad_accounts/{ad_account_id}/templates/{template_id}/reports 	[Identifier is Enclosed in {} or <> or Starts with :]	This takes a template ID and an optional custom timeframe and constructs an asynchronous report based on the template. It returns a token that you can use to download the report when it is ready.
+GET	 /ad_accounts/{ad_account_id}/campaigns  	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of the campaigns in the specified ad_account_id, filtered by the specified options.
+POST	 /ad_accounts/{ad_account_id}/campaigns 	[Identifier is Enclosed in {} or <> or Starts with :]	Create multiple new campaigns. Every campaign has its own campaign_id and houses one or more ad groups, which contain one or more ads.
+PATCH	 /ad_accounts/{ad_account_id}/campaigns 	[Identifier is Enclosed in {} or <> or Starts with :]	Update multiple ad campaigns based on campaign_ids.
+GET	 /ad_accounts/{ad_account_id}/campaigns/analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get analytics for the specified campaigns in the specified ad_account_id, filtered by the specified options.
+GET	 /ad_accounts/{ad_account_id}/campaigns/targeting_analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get targeting analytics for one or more campaigns.
+GET	 /ad_accounts/{ad_account_id}/campaigns/{campaign_id}  	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific campaign given the campaign ID.
+GET	 /ad_accounts/{ad_account_id}/campaigns/{campaign_id}  	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific campaign given the campaign ID.
+GET	 /ad_accounts/{ad_account_id}/ad_groups 	[Identifier is Enclosed in {} or <> or Starts with :]	List ad groups based on provided campaign IDs or ad group IDs.(campaign_ids or ad_group_ids).
+POST	 /ad_accounts/{ad_account_id}/ad_groups 	[Identifier is Enclosed in {} or <> or Starts with :]	Create multiple new ad groups. All ads in a given ad group will have the same budget, bid, run dates, targeting, and placement (search, browse, other).
+PATCH	 /ad_accounts/{ad_account_id}/ad_groups 	[Identifier is Enclosed in {} or <> or Starts with :]	Update multiple existing ad groups.
+GET	 /ad_accounts/{ad_account_id}/ad_groups/analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get analytics for the specified ad groups in the specified ad_account_id, filtered by the specified options.
+GET	 /ad_accounts/{ad_account_id}/ad_groups/targeting_analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get targeting analytics for one or more ad groups.
+POST	 /ad_accounts/{ad_account_id}/ad_groups/audience_sizing 	[Identifier is Enclosed in {} or <> or Starts with :]	Get potential audience size for an ad group with given targeting criteria.
+GET	 /ad_accounts/{ad_account_id}/ad_groups/{ad_group_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific ad given the ad ID. If your pin is rejected, rejected_reasons will contain additional information from the Ad Review process.
+GET	 /ad_accounts/{ad_account_id}/ad_groups/{ad_group_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific ad given the ad ID. If your pin is rejected, rejected_reasons will contain additional information from the Ad Review process.
+POST	 /ad_accounts/{ad_account_id}/bid_floor 	[Identifier is Enclosed in {} or <> or Starts with :]	List bid floors for your campaign configuration. Bid floors are given in microcurrency values based on the currency in the bid floor specification.
+POST	 /ad_accounts/{ad_account_id}/ad_previews 	[Identifier is Enclosed in {} or <> or Starts with :]	Create an ad preview given an ad account ID and either an existing organic pin ID or the URL for an image to be used to create the Pin and the ad.
+GET	 /ad_accounts/{ad_account_id}/ads 	[Identifier is Enclosed in {} or <> or Starts with :]	List ads that meet the filters provided: Listed campaign ids or ad group ids or ad ids Listed entity statuses If no filter is provided, all ads in the ad account are returned.
+POST	 /ad_accounts/{ad_account_id}/ads 	[Identifier is Enclosed in {} or <> or Starts with :]	Create multiple new ads. Request must contain ad_group_id, creative_type, and the source Pin pin_id.
+PATCH	 /ad_accounts/{ad_account_id}/ads 	[Identifier is Enclosed in {} or <> or Starts with :]	Update multiple existing ads
+GET	 /ad_accounts/{ad_account_id}/ads/analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get analytics for the specified ads in the specified ad_account_id, filtered by the specified options.
+GET	 /ad_accounts/{ad_account_id}/ads/targeting_analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get targeting analytics for one or more ads.
+GET	 /ad_accounts/{ad_account_id}/ads/{ad_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific ad given the ad ID. If your pin is rejected, rejected_reasons will contain additional information from the Ad Review process.
+GET	 /ad_accounts/{ad_account_id}/ads/{ad_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific ad given the ad ID. If your pin is rejected, rejected_reasons will contain additional information from the Ad Review process.
+POST	 /ad_accounts/{ad_account_id}/product_group_promotions 	[Identifier is Enclosed in {} or <> or Starts with :]	Add one or more product groups from your catalog to an existing ad group. (Product groups added to an ad group are a 'product group promotion.')
+PATCH	 /ad_accounts/{ad_account_id}/product_group_promotions 	[Identifier is Enclosed in {} or <> or Starts with :]	Update multiple existing Product Group Promotions (by product_group_id)
+GET	 /ad_accounts/{ad_account_id}/product_group_promotions 	[Identifier is Enclosed in {} or <> or Starts with :]	List existing product group promotions associated with an ad account.
+GET	 /ad_accounts/{ad_account_id}/product_group_promotions/{product_group_promotion_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a product group promotion by id
+GET	 /ad_accounts/{ad_account_id}/product_group_promotions/{product_group_promotion_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a product group promotion by id
+GET	 /ad_accounts/{ad_account_id}/product_groups/analytics 	[Identifier is Enclosed in {} or <> or Starts with :]	Get analytics for the specified product groups in the specified ad_account_id, filtered by the specified options.
+POST	 /ad_accounts/{ad_account_id}/bulk/download 	[Identifier is Enclosed in {} or <> or Starts with :]	Create an asynchronous report that may include information on campaigns, ad groups, product groups, ads, and/or keywords; can filter by campaigns. Though the entities may be active, archived, or paused, only active entities will return data.
+POST	 /ad_accounts/{ad_account_id}/bulk/upsert 	[Identifier is Enclosed in {} or <> or Starts with :]	Either create or update any combination of campaigns, ad groups, product groups, ads, or keywords.
+GET	  /ad_accounts/{ad_account_id}/bulk/{bulk_request_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the status of a bulk request by request_id, along with a download URL that will allow you to download the new or updated entity data (campaigns, ad groups, product groups, ads, or keywords).
+GET	  /ad_accounts/{ad_account_id}/bulk/{bulk_request_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the status of a bulk request by request_id, along with a download URL that will allow you to download the new or updated entity data (campaigns, ad groups, product groups, ads, or keywords).
+GET	 /ad_accounts/{ad_account_id}/audiences 	[Identifier is Enclosed in {} or <> or Starts with :]	Get list of audiences for the ad account.
+POST	 /ad_accounts/{ad_account_id}/audiences 	[Identifier is Enclosed in {} or <> or Starts with :]	Create an audience you can use in targeting for specific ad groups. Targeting combines customer information with the ways users interact with Pinterest to help you reach specific groups of users; you can include or exclude specific audience_ids when you create an ad group.
+GET	 /ad_accounts/{ad_account_id}/audiences/{audience_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific audience given the audience ID.
+GET	 /ad_accounts/{ad_account_id}/audiences/{audience_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a specific audience given the audience ID.
+PATCH	 /ad_accounts/{ad_account_id}/audiences/{audience_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update (edit or remove) an existing targeting audience.
+PATCH	 /ad_accounts/{ad_account_id}/audiences/{audience_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update (edit or remove) an existing targeting audience.
+POST	 /ad_accounts/{ad_account_id}/audiences/custom 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a custom audience and find the audiences you want your ads to reach.
+POST	 /ad_accounts/{ad_account_id}/customer_lists 	[Identifier is Enclosed in {} or <> or Starts with :]	Create a customer list from your records(hashed or plain-text email addresses, or hashed MAIDs or IDFAs).
+GET	 /ad_accounts/{ad_account_id}/customer_lists 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a set of customer lists including id and name based on the filters provided.
+GET	 /ad_accounts/{ad_account_id}/customer_lists/{customer_list_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a specific customer list given the customer list ID.
+GET	 /ad_accounts/{ad_account_id}/customer_lists/{customer_list_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a specific customer list given the customer list ID.
+PATCH	 /ad_accounts/{ad_account_id}/customer_lists/{customer_list_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Append or remove records to/from an existing customer list. (A customer list is one of the four types of Pinterest audiences.)
+PATCH	 /ad_accounts/{ad_account_id}/customer_lists/{customer_list_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Append or remove records to/from an existing customer list. (A customer list is one of the four types of Pinterest audiences.)
+GET	 /ad_accounts/{ad_account_id}/keywords 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of keywords based on the filters provided. If no filter is provided, it will default to the ad_account_id filter, which means it will only return keywords that specifically have parent_id set to the ad_account_id. Note: Keywords can have ad_account_ids, campaign_ids, and ad_group_ids set as their parent_ids. Keywords created through Ads Manager will have their parent_id set to an ad_group_id, not ad_account_id.
+POST	 /ad_accounts/{ad_account_id}/keywords 	[Identifier is Enclosed in {} or <> or Starts with :]	Create keywords for following entity types(advertiser, campaign, ad group or ad).
+PATCH	 /ad_accounts/{ad_account_id}/keywords 	[Identifier is Enclosed in {} or <> or Starts with :]	Update one or more keywords' bid and archived fields.Archiving a keyword effectively deletes it - keywords no longer receive metrics and no longer visible within the parent entity's keywords list.
+GET	 /ad_accounts/{ad_account_id}/keywords/metrics 	[Identifier is Enclosed in {} or <> or Starts with :]	See keyword metrics for a specified country, aggregated across all of Pinterest.
+GET	 /trends/keywords/{region}/top/{trend_type} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the top trending search keywords among the Pinterest user audience.
+GET	 /trends/keywords/{region}/top/{trend_type} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the top trending search keywords among the Pinterest user audience.
+GET	 /ad_accounts/{ad_account_id}/targeting_templates 	[Identifier is Enclosed in {} or <> or Starts with :]	Get a list of the targeting templates in the specified ad_account_id
+POST	 /ad_accounts/{ad_account_id}/targeting_templates 	[Identifier is Enclosed in {} or <> or Starts with :]	Targeting templates allow advertisers to save a set of targeting details including audience lists, keywords & interest, demographics, and placements to use more than once during the campaign creation process.
+PATCH	 /ad_accounts/{ad_account_id}/targeting_templates 	[Identifier is Enclosed in {} or <> or Starts with :]	Update the targeting template given advertiser ID and targeting template ID

@@ -1,5 +1,8 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 3
+GET	 /v2/{projectId}/{environment} 	Non-Filtering Endpoint	Regular read & write endpoint
+GET	 /content/{projectId}/{environment} 	Non-Filtering Endpoint	High performance endpoint
+GET	 /v2/{projectId}/master 	Non-Filtering Endpoint	Each environment has its own API endpoint, with the alias of the environment appended to the URL.
 
 ***Patterns*** 
 Count: 12

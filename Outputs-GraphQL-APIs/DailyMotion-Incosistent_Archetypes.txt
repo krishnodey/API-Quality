@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 62
+Count: 81
 GET	 /METRICS/TIME_WATCHED_SECONDS 	Singular Nouns Found in Consecutive Nodes	Time watched in seconds
 GET	 /METRICS/TIME_WATCHED_SECONDS 	Singular Nouns Found in Consecutive Nodes	Time watched in seconds
 GET	 /METRICS/VIEW_THROUGH_RATE 	Singular Nouns Found in Consecutive Nodes	Video view through rate
@@ -20,57 +20,81 @@ GET	 /METRICS/GDPR_FULL_CONSENT_SCORE		Singular Nouns Found in Consecutive Nodes
 GET	 /METRICS/GDPR_FULL_CONSENT_SCORE		Singular Nouns Found in Consecutive Nodes	Share of users who granted their full consent for the processing of their personal data
 GET	 /METRICS/GDPR_FULL_CONSENT_SCORE		Singular Nouns Found in Consecutive Nodes	Share of users who granted their full consent for the processing of their personal data
 GET	 /METRICS/VTR_SCORE 	Singular Nouns Found in Consecutive Nodes	Share of users who watched a full ad
-GET	 DIMENSION/CHANNEL_SLUG 	Singular Nouns Found in Consecutive Nodes	Channel ownerâ€™s channel URL Slug
-GET	 DIMENSION/CHANNEL_SLUG 	Singular Nouns Found in Consecutive Nodes	Channel ownerâ€™s channel URL Slug
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
-GET	 DIMENSION/VIDEO_ID		Singular Nouns Found in Consecutive Nodes	Video ID
-GET	 DIMENSION/VIDEO_TITLE	Singular Nouns Found in Consecutive Nodes	Title of the video
-GET	 DIMENSION/VIDEO_TITLE	Singular Nouns Found in Consecutive Nodes	Title of the video
-GET	 DIMENSION/MEDIA_TYPE		Singular Nouns Found in Consecutive Nodes	Type of video: LIVE or VIDEO
-GET	 DIMENSION/MEDIA_TYPE		Singular Nouns Found in Consecutive Nodes	Type of video: LIVE or VIDEO
-GET	 DIMENSION/VISITOR_DOMAIN_GROUP		Singular Nouns Found in Consecutive Nodes	Visitor domain
-GET	 DIMENSION/VISITOR_DOMAIN_GROUP		Singular Nouns Found in Consecutive Nodes	Visitor domain
-GET	 DIMENSION/VISITOR_DOMAIN_GROUP		Singular Nouns Found in Consecutive Nodes	Visitor domain
-GET	 DIMENSION/VISITOR_SUBDOMAIN 	Singular Nouns Found in Consecutive Nodes	Visitor subdomain
-GET	 DIMENSION/VISITOR_SUBDOMAIN 	Singular Nouns Found in Consecutive Nodes	Visitor subdomain
-GET	 DIMENSION/VISITOR_PAGE_URL 	Singular Nouns Found in Consecutive Nodes	Visitor page URL
-GET	 DIMENSION/VISITOR_PAGE_URL 	Singular Nouns Found in Consecutive Nodes	Visitor page URL
-GET	 DIMENSION/VISITOR_PAGE_URL 	Singular Nouns Found in Consecutive Nodes	Visitor page URL
-GET	 DIMENSION/VISITOR_COUNTRY 	Singular Nouns Found in Consecutive Nodes	Visitor country
-GET	 DIMENSION/VISITOR_COUNTRY 	Singular Nouns Found in Consecutive Nodes	Visitor country
-GET	 DIMENSION/VISITOR_DEVICE_TYPE 	Singular Nouns Found in Consecutive Nodes	Visitor device type
-GET	 DIMENSION/VISITOR_DEVICE_TYPE 	Singular Nouns Found in Consecutive Nodes	Visitor device type
-GET	 DIMENSION/VISITOR_DEVICE_TYPE 	Singular Nouns Found in Consecutive Nodes	Visitor device type
-GET	 DIMENSION/MONETIZATION_TYPE 	Singular Nouns Found in Consecutive Nodes	Monetization category: video or website
-GET	 DIMENSION/MONETIZATION_TYPE 	Singular Nouns Found in Consecutive Nodes	Monetization category: video or website
-GET	 DIMENSION/INVENTORY_POSITION 	Singular Nouns Found in Consecutive Nodes	Position of the ad opportunity. Usually one of the following â€“ preroll, midroll, postroll, ivv
-GET	 DIMENSION/INVENTORY_POSITION 	Singular Nouns Found in Consecutive Nodes	Position of the ad opportunity. Usually one of the following â€“ preroll, midroll, postroll, ivv
-GET	 DIMENSION/OUTCOME 	Singular Nouns Found in Consecutive Nodes	Breakdown of missed impression by category
-GET	 DIMENSION/NOAD_REASON_READABLE 	Singular Nouns Found in Consecutive Nodes	No ads grouped by why they were not available for monetization.
-GET	 DIMENSION/NOAD_REASON_READABLE 	Singular Nouns Found in Consecutive Nodes	No ads grouped by why they were not available for monetization.
-GET	 DIMENSION/NOAD_REASON_READABLE 	Singular Nouns Found in Consecutive Nodes	No ads grouped by why they were not available for monetization.
-GET	 DIMENSION/AD_ERROR_READABLE		Singular Nouns Found in Consecutive Nodes	Ad errors returned by our advertising system for the selected metric
-GET	 DIMENSION/AD_ERROR_READABLE		Singular Nouns Found in Consecutive Nodes	Ad errors returned by our advertising system for the selected metric
-GET	 DIMENSION/AD_ERROR_CODE		Singular Nouns Found in Consecutive Nodes	Ad error code returned by our advertising system for the selected metric
-GET	 DIMENSION/BUYER		Singular Nouns Found in Consecutive Nodes	Potential and actual buyers of the inventory
-GET	 DIMENSION/BUYER_TYPE	 	Singular Nouns Found in Consecutive Nodes	Type of buyer of the inventory. Usually either P1 or Dailymotion
-GET	 DIMENSION/BUYER_TYPE	 	Singular Nouns Found in Consecutive Nodes	Type of buyer of the inventory. Usually either P1 or Dailymotion
-GET	 DIMENSION/ACTION	 	Singular Nouns Found in Consecutive Nodes	Action defines how a view or inventory was generated by clarifying the stakeholders involved
+GET	 /DIMENSION/CHANNEL_SLUG 	Singular Nouns Found in Consecutive Nodes	Channel ownerâ€™s channel URL Slug
+GET	 /DIMENSION/CHANNEL_SLUG 	Singular Nouns Found in Consecutive Nodes	Channel ownerâ€™s channel URL Slug
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug 	Singular Nouns Found in Consecutive Nodes	Note: value is case sensitive â€“ make sure to input accurate lower and upper cases
+GET	 /DIMENSION/VIDEO_ID		Singular Nouns Found in Consecutive Nodes	Video ID
+GET	 /DIMENSION/VIDEO_TITLE	Singular Nouns Found in Consecutive Nodes	Title of the video
+GET	 /DIMENSION/VIDEO_TITLE	Singular Nouns Found in Consecutive Nodes	Title of the video
+GET	 /DIMENSION/MEDIA_TYPE		Singular Nouns Found in Consecutive Nodes	Type of video: LIVE or VIDEO
+GET	 /DIMENSION/MEDIA_TYPE		Singular Nouns Found in Consecutive Nodes	Type of video: LIVE or VIDEO
+GET	 /DIMENSION/VISITOR_DOMAIN_GROUP		Singular Nouns Found in Consecutive Nodes	Visitor domain
+GET	 /DIMENSION/VISITOR_DOMAIN_GROUP		Singular Nouns Found in Consecutive Nodes	Visitor domain
+GET	 /DIMENSION/VISITOR_DOMAIN_GROUP		Singular Nouns Found in Consecutive Nodes	Visitor domain
+GET	 /DIMENSION/VISITOR_SUBDOMAIN 	Singular Nouns Found in Consecutive Nodes	Visitor subdomain
+GET	 /DIMENSION/VISITOR_SUBDOMAIN 	Singular Nouns Found in Consecutive Nodes	Visitor subdomain
+GET	 /DIMENSION/VISITOR_PAGE_URL 	Singular Nouns Found in Consecutive Nodes	Visitor page URL
+GET	 /DIMENSION/VISITOR_PAGE_URL 	Singular Nouns Found in Consecutive Nodes	Visitor page URL
+GET	 /DIMENSION/VISITOR_PAGE_URL 	Singular Nouns Found in Consecutive Nodes	Visitor page URL
+GET	 /DIMENSION/VISITOR_COUNTRY 	Singular Nouns Found in Consecutive Nodes	Visitor country
+GET	 /DIMENSION/VISITOR_COUNTRY 	Singular Nouns Found in Consecutive Nodes	Visitor country
+GET	 /DIMENSION/VISITOR_DEVICE_TYPE 	Singular Nouns Found in Consecutive Nodes	Visitor device type
+GET	 /DIMENSION/VISITOR_DEVICE_TYPE 	Singular Nouns Found in Consecutive Nodes	Visitor device type
+GET	 /DIMENSION/VISITOR_DEVICE_TYPE 	Singular Nouns Found in Consecutive Nodes	Visitor device type
+GET	 /DIMENSION/MONETIZATION_TYPE 	Singular Nouns Found in Consecutive Nodes	Monetization category: video or website
+GET	 /DIMENSION/MONETIZATION_TYPE 	Singular Nouns Found in Consecutive Nodes	Monetization category: video or website
+GET	 /DIMENSION/INVENTORY_POSITION 	Singular Nouns Found in Consecutive Nodes	Position of the ad opportunity. Usually one of the following â€“ preroll, midroll, postroll, ivv
+GET	 /DIMENSION/INVENTORY_POSITION 	Singular Nouns Found in Consecutive Nodes	Position of the ad opportunity. Usually one of the following â€“ preroll, midroll, postroll, ivv
+GET	 /DIMENSION/OUTCOME 	Singular Nouns Found in Consecutive Nodes	Breakdown of missed impression by category
+GET	 /DIMENSION/NOAD_REASON_READABLE 	Singular Nouns Found in Consecutive Nodes	No ads grouped by why they were not available for monetization.
+GET	 /DIMENSION/NOAD_REASON_READABLE 	Singular Nouns Found in Consecutive Nodes	No ads grouped by why they were not available for monetization.
+GET	 /DIMENSION/NOAD_REASON_READABLE 	Singular Nouns Found in Consecutive Nodes	No ads grouped by why they were not available for monetization.
+GET	 /DIMENSION/AD_ERROR_READABLE		Singular Nouns Found in Consecutive Nodes	Ad errors returned by our advertising system for the selected metric
+GET	 /DIMENSION/AD_ERROR_READABLE		Singular Nouns Found in Consecutive Nodes	Ad errors returned by our advertising system for the selected metric
+GET	 /DIMENSION/AD_ERROR_CODE		Singular Nouns Found in Consecutive Nodes	Ad error code returned by our advertising system for the selected metric
+GET	 /DIMENSION/BUYER		Singular Nouns Found in Consecutive Nodes	Potential and actual buyers of the inventory
+GET	 /DIMENSION/BUYER_TYPE	 	Singular Nouns Found in Consecutive Nodes	Type of buyer of the inventory. Usually either P1 or Dailymotion
+GET	 /DIMENSION/BUYER_TYPE	 	Singular Nouns Found in Consecutive Nodes	Type of buyer of the inventory. Usually either P1 or Dailymotion
+GET	 /DIMENSION/ACTION	 	Singular Nouns Found in Consecutive Nodes	Action defines how a view or inventory was generated by clarifying the stakeholders involved
+GET	 /DIMENSION/PLAYER_ID		Singular Nouns Found in Consecutive Nodes	ID(s) of the player(s) used to play your content. The ID(s) listed can be yours or from third parties.
+GET	 /DIMENSION/PLAYER_TITLE		Singular Nouns Found in Consecutive Nodes	Title(s) of the player(s) used to play your content. The title(s) listed can be yours or from third parties.
+GET	 /DIMENSION/PLAYER_TITLE		Singular Nouns Found in Consecutive Nodes	Title(s) of the player(s) used to play your content. The title(s) listed can be yours or from third parties.
+GET	 /DIMENSION/VIDEO_POSITION		Singular Nouns Found in Consecutive Nodes	Position of the video within a playlist CONTENT_TAG	Breakdown the data by each tag specified on content.
+GET	 /DIMENSION/VIDEO_POSITION		Singular Nouns Found in Consecutive Nodes	Position of the video within a playlist CONTENT_TAG	Breakdown the data by each tag specified on content.
+GET	 /DIMENSION/CONTENT_TAG_LIST		Singular Nouns Found in Consecutive Nodes	Comma separated list of tags specified on content
+GET	 /DIMENSION/CONTENT_TAG_LIST		Singular Nouns Found in Consecutive Nodes	Comma separated list of tags specified on content
+GET	 /filters/channelSlug		Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific channel
+GET	 /filters/videoOwnerChannelSlug 	Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific video owner channel
+GET	 /filters/videoOwnerChannelSlug 	Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific video owner channel
+GET	 /filters/videoOwnerChannelSlug 	Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific video owner channel
+GET	 /filtersrs/mediaType		Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific media type: LIVE or VIDEO
+GET	 /filters/visitorDomainGroup 	Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific visitor domain group
+GET	 /filters/visitorDomainGroup 	Singular Nouns Found in Consecutive Nodes	Limits the result set to a specific visitor domain group
+GET	 /filters/monetizationType 	Singular Nouns Found in Consecutive Nodes	Limits the monetization category to either Video Monetization or Website Monetization
+GET	 /PRODUCTS/CONTENT > This is the Default value if product is not specified. 	Singular Nouns Found in Consecutive Nodes	
+GET	 /PRODUCTS/CONTENT > This is the Default value if product is not specified. 	Singular Nouns Found in Consecutive Nodes	
+GET	 /PRODUCTS/CONTENT > This is the Default value if product is not specified. 	Singular Nouns Found in Consecutive Nodes	
+GET	 /PRODUCTS/CONTENT > This is the Default value if product is not specified. 	Singular Nouns Found in Consecutive Nodes	
 
 ***Patterns*** 
-Count: 9
+Count: 14
 GET	 /Metrics		Cosistent Resource Archetype	Measurements related to activity
 GET	 /Dimensions 	Cosistent Resource Archetype	Organize metrics across common criteria
-POST	 /Filters		Cosistent Resource Archetype	Scope down the result set
+POST	 /Filters 	Cosistent Resource Archetype	Scope down the result set
 GET	 Product		Cosistent Resource Archetype	Targets a specific product usage. On Dailymotion, data is collected and attributed against three different kinds of product usage: data generated on your content, on your embeds or on your claims.
 GET	 /METRICS/VIEWS 	Cosistent Resource Archetype	Number of views
 GET	 /METRICS/UPLOADS		Cosistent Resource Archetype	Number of videos uploaded
 GET	 /METRICS/NO_ADS		Cosistent Resource Archetype	Ad opportunities identified to be not eligible for monetization
 GET	 /METRICS/NO_AD_RATE 	Cosistent Resource Archetype	Share of ad opportunities not eligible for monetizationNo ad rate = No ads / Total inventory
 GET	 /METRICS/NB_IMPRESSION 	Cosistent Resource Archetype	Total number of ads displayed
+GET	 /DIMENSION/PLAYLIST_ID		Cosistent Resource Archetype	ID(s) of the playlist(s) used to play your content. The ID(s) listed can be yours or from third parties.
+GET	 /DIMENSION/PLAYLIST_TITLE		Cosistent Resource Archetype	Title(s) of the playlist(s) used to play your content. The title(s) listed can be yours or from third parties.
+GET	 /PRODUCTS/EMBED		Cosistent Resource Archetype	Get data only for embeds that belong to this Partner account
+GET	 /PRODUCTS/CLAIM		Cosistent Resource Archetype	Get data only for claims that belong to this Partner account
+GET	 /PRODUCTS/ALL 	Cosistent Resource Archetype	Get data only for content, embeds and claims that belong to this Partner account

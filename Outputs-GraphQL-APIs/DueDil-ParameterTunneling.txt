@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 31
+Count: 33
 POST	 /v4/search/companies.{format} 	Parameter Adherence	Find companies based on search criteria.
 POST	 /v4/search/charities.{format} 	Parameter Adherence	Find charities based on search criteria.
 POST	 /v4/search/keywords.{format} 	Parameter Adherence	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
@@ -34,3 +34,5 @@ GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	Parameter Adherence
 GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	Parameter Adherence	Get persons of significant control (PoSC) for a given company.
 GET	 /v4/officer/{officerId}/related-officers.{format} 	Parameter Adherence	Get all related officers for a given officer
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	Parameter Adherence	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	Parameter Adherence	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Parameter Adherence	Get classifiers for a given charity.

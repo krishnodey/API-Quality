@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 41
+Count: 51
 /Metrics	Amorphous End-point	 [uppercase found] 
 /Dimensions	Amorphous End-point	 [uppercase found] 
 /Filters	Amorphous End-point	 [uppercase found] 
@@ -22,25 +22,40 @@ Product	Amorphous End-point	 [uppercase found]
 /METRICS/VIEWABILITY_SCORE	Amorphous End-point	 [uppercase found] 
 /METRICS/GDPR_FULL_CONSENT_SCORE	Amorphous End-point	 [uppercase found] 
 /METRICS/VTR_SCORE	Amorphous End-point	 [uppercase found] 
-DIMENSION/CHANNEL_SLUG	Amorphous End-point	 [uppercase found] 
-DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug	Amorphous End-point	 [uppercase found] 
-DIMENSION/VIDEO_ID	Amorphous End-point	 [uppercase found] 
-DIMENSION/VIDEO_TITLE	Amorphous End-point	 [uppercase found] 
-DIMENSION/MEDIA_TYPE	Amorphous End-point	 [uppercase found] 
-DIMENSION/VISITOR_DOMAIN_GROUP	Amorphous End-point	 [uppercase found] 
-DIMENSION/VISITOR_SUBDOMAIN	Amorphous End-point	 [uppercase found] 
-DIMENSION/VISITOR_PAGE_URL	Amorphous End-point	 [uppercase found] 
-DIMENSION/VISITOR_COUNTRY	Amorphous End-point	 [uppercase found] 
-DIMENSION/VISITOR_DEVICE_TYPE	Amorphous End-point	 [uppercase found] 
-DIMENSION/MONETIZATION_TYPE	Amorphous End-point	 [uppercase found] 
-DIMENSION/INVENTORY_POSITION	Amorphous End-point	 [uppercase found] 
-DIMENSION/OUTCOME	Amorphous End-point	 [uppercase found] 
-DIMENSION/NOAD_REASON_READABLE	Amorphous End-point	 [uppercase found] 
-DIMENSION/AD_ERROR_READABLE	Amorphous End-point	 [uppercase found] 
-DIMENSION/AD_ERROR_CODE	Amorphous End-point	 [uppercase found] 
-DIMENSION/BUYER	Amorphous End-point	 [uppercase found] 
-DIMENSION/BUYER_TYPE	Amorphous End-point	 [uppercase found] 
-DIMENSION/ACTION	Amorphous End-point	 [uppercase found] 
+/DIMENSION/CHANNEL_SLUG	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VIDEO_OWNER_CHANNEL_SLUG	Content ownerâ€™s channel URL Slug	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VIDEO_ID	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VIDEO_TITLE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/MEDIA_TYPE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VISITOR_DOMAIN_GROUP	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VISITOR_SUBDOMAIN	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VISITOR_PAGE_URL	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VISITOR_COUNTRY	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VISITOR_DEVICE_TYPE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/MONETIZATION_TYPE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/INVENTORY_POSITION	Amorphous End-point	 [uppercase found] 
+/DIMENSION/OUTCOME	Amorphous End-point	 [uppercase found] 
+/DIMENSION/NOAD_REASON_READABLE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/AD_ERROR_READABLE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/AD_ERROR_CODE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/BUYER	Amorphous End-point	 [uppercase found] 
+/DIMENSION/BUYER_TYPE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/ACTION	Amorphous End-point	 [uppercase found] 
+/DIMENSION/PLAYER_ID	Amorphous End-point	 [uppercase found] 
+/DIMENSION/PLAYER_TITLE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/PLAYLIST_ID	Amorphous End-point	 [uppercase found] 
+/DIMENSION/PLAYLIST_TITLE	Amorphous End-point	 [uppercase found] 
+/DIMENSION/VIDEO_POSITION	Amorphous End-point	 [uppercase found] 
+/DIMENSION/CONTENT_TAG_LIST	Amorphous End-point	 [uppercase found] 
+/PRODUCTS/CONTENT > This is the Default value if product is not specified.	Amorphous End-point	 [uppercase found] 
+/PRODUCTS/EMBED	Amorphous End-point	 [uppercase found] 
+/PRODUCTS/CLAIM	Amorphous End-point	 [uppercase found] 
+/PRODUCTS/ALL	Amorphous End-point	 [uppercase found] 
 
 ***Patterns*** 
-Count: 0
+Count: 5
+/filters/channelSlug	Tidy End-point	Tidy Endpoint
+/filters/videoOwnerChannelSlug	Tidy End-point	Tidy Endpoint
+/filtersrs/mediaType	Tidy End-point	Tidy Endpoint
+/filters/visitorDomainGroup	Tidy End-point	Tidy Endpoint
+/filters/monetizationType	Tidy End-point	Tidy Endpoint

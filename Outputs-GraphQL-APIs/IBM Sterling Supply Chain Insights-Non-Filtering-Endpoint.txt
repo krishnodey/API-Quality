@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 11
+Count: 61
 POST	 /application 	Non-Filtering Endpoint	Creates a new application and returns the location of the created resource.
 GET	 /application 	Non-Filtering Endpoint	Returns any existing application that match your query.
 POST	 /billofmaterial 	Non-Filtering Endpoint	Creates a new bill of material and returns the location of the created resource.
@@ -11,9 +11,59 @@ GET	 /carriers 	Non-Filtering Endpoint	Returns any existing carrier records that
 POST	 /customers 	Non-Filtering Endpoint	Creates a new customer and returns the location of the created resource.
 POST	 /customers/bulk 	Non-Filtering Endpoint	Retrieve and modify customer records in bulk.
 GET	 /customers 	Non-Filtering Endpoint	Returns any existing customers that match your query.
+POST	 /events 	Non-Filtering Endpoint	Creates a new external event and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /events/bulk 	Non-Filtering Endpoint	Retrieve and modify event records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /events 	Non-Filtering Endpoint	Returns any existing event records that match your query.
+GET	 /issues 	Non-Filtering Endpoint	Retrieves the details for one or more issues that match your query.
+POST	 /itemsuppliers 	Non-Filtering Endpoint	Creates a new item supplier and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /itemsuppliers 	Non-Filtering Endpoint	Returns any existing item suppliers that match your query.
+POST	 /items/bulk 	Non-Filtering Endpoint	Retrieve and modify item records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /items 	Non-Filtering Endpoint	Retrieves the details for one or more items that match your query.
+POST	  /kpis 	Non-Filtering Endpoint	Creates a new KPI and returns the location of the created resource.
+GET	 /kpis 	Non-Filtering Endpoint	Retrieves the details for one or more KPIs that match your query.
+POST	 /locations/bulk 	Non-Filtering Endpoint	Retrieve and modify location records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /locations 	Non-Filtering Endpoint	Retrieves the details for one or more locations that match your query.
+POST	 /orderitemallocations 	Non-Filtering Endpoint	Creates a new order allocation and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /orderitemallocations 	Non-Filtering Endpoint	Returns any existing order allocations that match your query.
+POST	 /productinventories/bulk 	Non-Filtering Endpoint	Retrieve and modify product inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /productinventories 	Non-Filtering Endpoint	Retrieves the details for one or more product inventories that match your query.
+POST	  /productreturns 	Non-Filtering Endpoint	Creates a new product return and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /productreturns/bulk 	Non-Filtering Endpoint	Retrieve and modify returned product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /productreturns 	Non-Filtering Endpoint	Returns any existing returned product records that match your query.
+POST	 /products/bulk 	Non-Filtering Endpoint	Retrieve and modify product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /products 	Non-Filtering Endpoint	Retrieves the details for one or more products that match your query.
+GET	 /salesorderlines 	Non-Filtering Endpoint	Retrieves the details for one or more sales order lines that match your query.
+POST	 /salesorders/bulk 	Non-Filtering Endpoint	Retrieve and modify sales order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesorders 	Non-Filtering Endpoint	Retrieves the details for one or more sales orders that match your query.
+PATCH	 /salesorders/{id} 	Non-Filtering Endpoint	
+POST	 /salesplan 	Non-Filtering Endpoint	Creates a new sales plan and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesplan/bulk 	Non-Filtering Endpoint	Retrieve and modify sales plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesplan 	Non-Filtering Endpoint	Returns any existing sales plans that match your query.
+GET	 /salesshipmentlines 	Non-Filtering Endpoint	Retrieves the details for one or more sales shipment lines that match your query.
+POST	 /salesshipments/bulk 	Non-Filtering Endpoint	Retrieve and modify sales shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesshipments 	Non-Filtering Endpoint	Retrieves the details for one or more sales shipments that match your query.
+POST	 /suppliers/bulk 	Non-Filtering Endpoint	Retrieve and modify supplier records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /suppliers 	Non-Filtering Endpoint	Retrieves the details for one or more suppliers that match your query.
+POST	 /supplyinventories/bulk 	Non-Filtering Endpoint	Retrieve and modify supply inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyinventories 	Non-Filtering Endpoint	Retrieves the details for one or more supply inventories that match your query.
+GET	 /supplyorderlines 	Non-Filtering Endpoint	Retrieves the details for one or more supply order lines that match your query.
+POST	 /supplyorders/bulk 	Non-Filtering Endpoint	Retrieve and modify supply order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyorders 	Non-Filtering Endpoint	Retrieves the details for one or more purchase orders that match your query.
+POST	 /supplyplan/bulk 	Non-Filtering Endpoint	Retrieve and modify supply plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyplan 	Non-Filtering Endpoint	Retrieves the details for one or more supply plans that match your query.
+GET	 /supplyshipmentlines 	Non-Filtering Endpoint	Retrieves the details for one or more supply shipment lines that match your query.
+POST	 /supplyshipments/bulk 	Non-Filtering Endpoint	Retrieve and modify supply shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyshipments 	Non-Filtering Endpoint	Retrieves the details for one or more supply shipments that match your query.
+POST	 /variables 	Non-Filtering Endpoint	Creates a new variable and returns the location of the created resource.
+GET	 /variables 	Non-Filtering Endpoint	Retrieves the details for one or more variables that match your query.
+POST	 /variables/{id}/actions/reset_to_default 	Non-Filtering Endpoint	Initiate the "reset to default" action on a variable.
+POST	 /workorders/bulk 	Non-Filtering Endpoint	Retrieve and modify work order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /workorders 	Non-Filtering Endpoint	Retrieves the details for one or more work orders that match your query.
+POST	 /{dataObject}/bulk 	Non-Filtering Endpoint	Bulk process custom data records. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /{dataObject}\ 	Non-Filtering Endpoint	Adds a custom data record to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 
 ***Patterns*** 
-Count: 15
+Count: 133
 DELETE	 /application/{id} 	Filtering Endpoint	Deletes an existing application.
 GET	 /application/{id} 	Filtering Endpoint	Returns the application that matches your query.
 PUT	 /application/{id} 	Filtering Endpoint	Updates an existing application and returns a 200 message if the call is successful.
@@ -29,3 +79,121 @@ DELETE	 /customers/{id} 	Filtering Endpoint	Deletes an existing customer.
 GET	 /customers/{id} 	Filtering Endpoint	Retrieves the details of a customer that matches the ID.
 PATCH	 /customers/{id} 	Filtering Endpoint	Updates parts of existing customer records and returns a 200 message if the call is successful.
 PUT	 /customers/{id} 	Filtering Endpoint	Updates an existing customer and returns a 200 message if the call is successful.
+DELETE	 /events/{id} 	Filtering Endpoint	Deletes an existing external event. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	  /events/{id} 	Filtering Endpoint	Retrieves the details of an event that matches the ID.
+PATCH	 /events/{id} 	Filtering Endpoint	Updates an existing external event and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /events/{id} 	Filtering Endpoint	Updates an existing external event and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /issues/{id} 	Filtering Endpoint	Retrieves the details of an issue that matches the ID.
+POST	 /itemsuppliers/bulk 	Filtering Endpoint	Bulk process item suppliers. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /itemsuppliers/{id} 	Filtering Endpoint	Deletes an existing item supplier. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /itemsuppliers/{id} 	Filtering Endpoint	Returns the item supplier that matches your query.
+PATCH	 /itemsuppliers/{id} 	Filtering Endpoint	Updates an existing item supplier and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /itemsuppliers/{id} 	Filtering Endpoint	Updates an existing item supplier and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /items 	Filtering Endpoint	Adds an item to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /items/{id} 	Filtering Endpoint	Deletes an existing item from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /items/{id} 	Filtering Endpoint	Retrieves the details of an item that matches the ID.
+PATCH	  /items/{id} 	Filtering Endpoint	Updates an existing item and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /items/{id} 	Filtering Endpoint	Updates an existing item and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	  /kpis/{id} 	Filtering Endpoint	Deletes an existing KPI.
+GET	 /kpis/{id} 	Filtering Endpoint	Retrieves the details of a KPI that matches the ID.
+GET	 /kpis/{kpi}/score 	Filtering Endpoint	Retrieves the details for one or more KPI scores that match your query.
+PUT	 /kpis/{id} 	Filtering Endpoint	Updates an existing KPI and returns a 200 message if the call is successful.
+POST	 /locations 	Filtering Endpoint	Adds a location to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /locations/{id} 	Filtering Endpoint	Deletes an existing location from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /locations/{id} 	Filtering Endpoint	Retrieves the details of a location that matches the ID.
+PATCH	 /locations/{id} 	Filtering Endpoint	Updates an existing location and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /locations/{id} 	Filtering Endpoint	Updates an existing location and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /orderitemallocations/bulk 	Filtering Endpoint	Bulk process order allocations. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	  /orderitemallocations/{id} 	Filtering Endpoint	Deletes an existing order allocation. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /orderitemallocations/{id} 	Filtering Endpoint	Returns the order allocation that matches your query.
+PATCH	 /orderitemallocations/{id} 	Filtering Endpoint	Updates an existing order allocation and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /orderitemallocations/{id} 	Filtering Endpoint	Updates an existing order allocation and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /productinventories 	Filtering Endpoint	Adds a product inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /productinventories/{id} 	Filtering Endpoint	Deletes an existing product inventory from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /productinventories/{id} 	Filtering Endpoint	Retrieves the details of a product inventory that matches the ID.
+PATCH	 /productinventories/{id} 	Filtering Endpoint	Updates an existing product inventory and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /productinventories/{id} 	Filtering Endpoint	Updates an existing product inventory and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /productreturns/{id} 	Filtering Endpoint	Deletes an existing product return. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /productreturns/{id} 	Filtering Endpoint	Retrieves the details of a returned product that matches the ID.
+PATCH	 /productreturns/{id} 	Filtering Endpoint	Updates an existing product return and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /productreturns/{id} 	Filtering Endpoint	Updates an existing product return and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /products 	Filtering Endpoint	Adds a product to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /products/{id} 	Filtering Endpoint	Deletes an existing product from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /products/{id} 	Filtering Endpoint	Retrieves the details of a product that matches the ID.
+PATCH	 /products/{id} 	Filtering Endpoint	Updates an existing product and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /products/{id} 	Filtering Endpoint	Updates an existing product and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorderlines/bulk 	Filtering Endpoint	Bulk process sales order lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorderlines 	Filtering Endpoint	Adds a sales order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesorderlines/{id} 	Filtering Endpoint	Deletes an existing sales order line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesorderlines/{id} 	Filtering Endpoint	Retrieves the details of a sales order line that the ID.
+PATCH	 /salesorderlines/{id} 	Filtering Endpoint	Updates an existing sales order line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesorderlines/{id} 	Filtering Endpoint	Updates an existing sales order line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorders 	Filtering Endpoint	Adds a sales order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesorders/{id} 	Filtering Endpoint	Deletes an existing sales order from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesorders/{id} 	Filtering Endpoint	Retrieves the details of a sales order that the ID.
+PUT	 /salesorders/{id} 	Filtering Endpoint	Updates an existing sales order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesplan/{id} 	Filtering Endpoint	Deletes an existing sales plan. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesplan/{id} 	Filtering Endpoint	Retrieves the details of a sales plan that matches the ID.
+PATCH	 /salesplan/{id} 	Filtering Endpoint	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesplan/{id} 	Filtering Endpoint	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipmentlines/bulk 	Filtering Endpoint	Bulk process sales shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipmentlines 	Filtering Endpoint	Adds a sales shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesshipmentlines/{id} 	Filtering Endpoint	Deletes an existing sales shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesshipmentlines/{id} 	Filtering Endpoint	Retrieves the details of a sales shipment line that matches the ID.
+PATCH	 /salesshipmentlines/{id} 	Filtering Endpoint	Updates an existing sales shipment line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesshipmentlines/{id} 	Filtering Endpoint	Updates an existing sales shipment line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipments 	Filtering Endpoint	Adds a sales shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesshipments/{id} 	Filtering Endpoint	Deletes an existing sales shipment from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesshipments/{id} 	Filtering Endpoint	Retrieves the details of a sales shipment that matches the ID.
+PATCH	 /salesshipments/{id} 	Filtering Endpoint	Updates an existing sales shipment and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesshipments/{id} 	Filtering Endpoint	Updates an existing sales shipment and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /suppliers 	Filtering Endpoint	Adds a supplier to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /suppliers/{id} 	Filtering Endpoint	Deletes an existing supplier from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /suppliers/{id} 	Filtering Endpoint	Retrieves the details of a supplier that matches the ID.
+PATCH	 /suppliers/{id} 	Filtering Endpoint	Updates the description for a supplier. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /suppliers/{id} 	Filtering Endpoint	Updates an existing supplier and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyinventories 	Filtering Endpoint	Adds a supply inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyinventories/{id} 	Filtering Endpoint	Deletes an existing supply inventory from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyinventories/{id} 	Filtering Endpoint	Retrieves the details of a supply inventory that matches the ID.
+PATCH	 /supplyinventories/{id} 	Filtering Endpoint	Updates an existing supply inventory and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyinventories/{id} 	Filtering Endpoint	Updates an existing supply inventory and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorderlines/bulk 	Filtering Endpoint	Bulk process supply order lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorderlines 	Filtering Endpoint	Adds a supply order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyorderlines/{id} 	Filtering Endpoint	Deletes an existing supply order line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyorderlines/{id} 	Filtering Endpoint	Retrieves the details of a supply order line that the ID.
+PATCH	 /supplyorderlines/{id} 	Filtering Endpoint	Updates an existing supply order line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyorderlines/{id} 	Filtering Endpoint	Updates an existing supply order line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /supplyorders 	Filtering Endpoint	Adds a supply order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyorders/{id} 	Filtering Endpoint	Deletes an existing supply order from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyorders/{id} 	Filtering Endpoint	Retrieves the details of a supply order that matches the ID.
+PATCH	 /supplyorders/{id} 	Filtering Endpoint	Updates an existing supply order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyorders/{id} 	Filtering Endpoint	Updates an existing supply order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyplan 	Filtering Endpoint	Adds a supply plan to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyplan/{id} 	Filtering Endpoint	Deletes an existing supply plan from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyplan/{id} 	Filtering Endpoint	Retrieves the details of a supply plan that matches the ID.
+PATCH	 /supplyplan/{id} 	Filtering Endpoint	Updates an existing supply plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyplan/{id} 	Filtering Endpoint	Updates an existing supply plan and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipmentlines/bulk 	Filtering Endpoint	Bulk process supply shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipmentlines 	Filtering Endpoint	Adds a supply shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyshipmentlines/{id} 	Filtering Endpoint	Deletes an existing supply shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyshipmentlines/{id} 	Filtering Endpoint	Retrieves the details of a supply shipment line that matches the ID.
+PATCH	 /supplyshipmentlines/{id} 	Filtering Endpoint	Updates an existing supply shipment line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyshipmentlines/{id} 	Filtering Endpoint	Updates an existing supply shipment line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipments 	Filtering Endpoint	Adds a supply shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyshipments/{id} 	Filtering Endpoint	Deletes an supply shipment from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyshipments/{id} 	Filtering Endpoint	Retrieves the details of a supply shipment that matches the ID.
+PATCH	 /supplyshipments/{id} 	Filtering Endpoint	Updates an existing supply shipment and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyshipments/{id} 	Filtering Endpoint	Updates an existing supply shipment and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /variables/{id} 	Filtering Endpoint	Deletes an existing variable.
+GET	 /variables/{id} 	Filtering Endpoint	Retrieves the details of the variable that matches the ID.
+PUT	 /variables/{id} 	Filtering Endpoint	Updates an existing variable and returns a 200 message if the update is successful.
+POST	 /workorders 	Filtering Endpoint	Adds a work order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /workorders/{id} 	Filtering Endpoint	Deletes an existing business area from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	  /workorders/{id} 	Filtering Endpoint	Retrieves the details of a work order that matches the ID.
+PATCH	 /workorders/{id} 	Filtering Endpoint	Updates an existing work order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /workorders/{id} 	Filtering Endpoint	Updates an existing business area and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /{dataObject}/{id} 	Filtering Endpoint	Deletes an existing custom data record from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /{dataObject}/{id} 	Filtering Endpoint	Retrieves the details of a custom data record that matches the ID.
+GET	 /{dataObject} 	Filtering Endpoint	Retrieves the details for one or more custom data records that match your query.
+PATCH	 /{dataObject}/{id} 	Filtering Endpoint	Updates an existing custom data record and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /{dataObject}/{id} 	Filtering Endpoint	Updates an existing custom data record and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin

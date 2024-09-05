@@ -186,3 +186,4 @@ pitr>>point in time restore
 vcs>>version control providers
 repo>>repository
 repos>>repositories
+mmm>>marketing mix modeling

@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 83
+Count: 89
 POST	 /v4/search/companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find companies based on search criteria.
 POST	 /v4/search/charities.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find charities based on search criteria.
 POST	 /v4/search/keywords.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
@@ -86,3 +86,9 @@ GET	 /v4/officer/{officerId}/related-officers.{format} 	[Identifier is Enclosed 
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
 GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.

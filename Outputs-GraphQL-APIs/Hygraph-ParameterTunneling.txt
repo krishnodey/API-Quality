@@ -1,6 +1,9 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 4
 POST	 /v2/models 	Parameter Tunneling	Create models
+GET	 /v2/{projectId}/{environment} 	Parameter Tunneling	Regular read & write endpoint
+GET	 /content/{projectId}/{environment} 	Parameter Tunneling	High performance endpoint
+GET	 /v2/{projectId}/master 	Parameter Tunneling	Each environment has its own API endpoint, with the alias of the environment appended to the URL.
 
 ***Patterns*** 
 Count: 11

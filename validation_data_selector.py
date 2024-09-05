@@ -10,8 +10,8 @@ file_path = './All-Data/output_data.jsonl'
 with open(file_path, 'r', encoding='utf-8') as infile:
     lines = infile.readlines()
 
-# Select 91 random lines
-selected_lines = random.sample(lines, 91)
+# Select 94 random lines
+selected_lines = random.sample(lines, 94)
 
 # Save the selected lines to a new JSONL file
 output_file_path = './Journal-Resources/Validation-Survey/validation_data.jsonl'

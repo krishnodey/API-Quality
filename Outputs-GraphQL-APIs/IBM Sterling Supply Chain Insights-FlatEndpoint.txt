@@ -2,7 +2,7 @@
 Count: 0
 
 ***Patterns*** 
-Count: 26
+Count: 194
 POST	 /application 	Structed Endpoint	Creates a new application and returns the location of the created resource.
 DELETE	 /application/{id} 	Structed Endpoint	Deletes an existing application.
 GET	 /application 	Structed Endpoint	Returns any existing application that match your query.
@@ -29,3 +29,171 @@ GET	 /customers/{id} 	Structed Endpoint	Retrieves the details of a customer that
 GET	 /customers 	Structed Endpoint	Returns any existing customers that match your query.
 PATCH	 /customers/{id} 	Structed Endpoint	Updates parts of existing customer records and returns a 200 message if the call is successful.
 PUT	 /customers/{id} 	Structed Endpoint	Updates an existing customer and returns a 200 message if the call is successful.
+POST	 /events 	Structed Endpoint	Creates a new external event and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /events/bulk 	Structed Endpoint	Retrieve and modify event records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /events/{id} 	Structed Endpoint	Deletes an existing external event. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	  /events/{id} 	Structed Endpoint	Retrieves the details of an event that matches the ID.
+GET	 /events 	Structed Endpoint	Returns any existing event records that match your query.
+PATCH	 /events/{id} 	Structed Endpoint	Updates an existing external event and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /events/{id} 	Structed Endpoint	Updates an existing external event and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /issues/{id} 	Structed Endpoint	Retrieves the details of an issue that matches the ID.
+GET	 /issues 	Structed Endpoint	Retrieves the details for one or more issues that match your query.
+POST	 /itemsuppliers 	Structed Endpoint	Creates a new item supplier and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /itemsuppliers/bulk 	Structed Endpoint	Bulk process item suppliers. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /itemsuppliers/{id} 	Structed Endpoint	Deletes an existing item supplier. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /itemsuppliers/{id} 	Structed Endpoint	Returns the item supplier that matches your query.
+GET	 /itemsuppliers 	Structed Endpoint	Returns any existing item suppliers that match your query.
+PATCH	 /itemsuppliers/{id} 	Structed Endpoint	Updates an existing item supplier and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /itemsuppliers/{id} 	Structed Endpoint	Updates an existing item supplier and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /items/bulk 	Structed Endpoint	Retrieve and modify item records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /items 	Structed Endpoint	Adds an item to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /items/{id} 	Structed Endpoint	Deletes an existing item from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /items/{id} 	Structed Endpoint	Retrieves the details of an item that matches the ID.
+GET	 /items 	Structed Endpoint	Retrieves the details for one or more items that match your query.
+PATCH	  /items/{id} 	Structed Endpoint	Updates an existing item and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /items/{id} 	Structed Endpoint	Updates an existing item and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /kpis 	Structed Endpoint	Creates a new KPI and returns the location of the created resource.
+DELETE	  /kpis/{id} 	Structed Endpoint	Deletes an existing KPI.
+GET	 /kpis/{id} 	Structed Endpoint	Retrieves the details of a KPI that matches the ID.
+GET	 /kpis/{kpi}/score 	Structed Endpoint	Retrieves the details for one or more KPI scores that match your query.
+GET	 /kpis 	Structed Endpoint	Retrieves the details for one or more KPIs that match your query.
+PUT	 /kpis/{id} 	Structed Endpoint	Updates an existing KPI and returns a 200 message if the call is successful.
+POST	 /locations/bulk 	Structed Endpoint	Retrieve and modify location records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /locations 	Structed Endpoint	Adds a location to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /locations/{id} 	Structed Endpoint	Deletes an existing location from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /locations/{id} 	Structed Endpoint	Retrieves the details of a location that matches the ID.
+GET	 /locations 	Structed Endpoint	Retrieves the details for one or more locations that match your query.
+PATCH	 /locations/{id} 	Structed Endpoint	Updates an existing location and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /locations/{id} 	Structed Endpoint	Updates an existing location and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /orderitemallocations 	Structed Endpoint	Creates a new order allocation and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /orderitemallocations/bulk 	Structed Endpoint	Bulk process order allocations. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	  /orderitemallocations/{id} 	Structed Endpoint	Deletes an existing order allocation. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /orderitemallocations/{id} 	Structed Endpoint	Returns the order allocation that matches your query.
+GET	 /orderitemallocations 	Structed Endpoint	Returns any existing order allocations that match your query.
+PATCH	 /orderitemallocations/{id} 	Structed Endpoint	Updates an existing order allocation and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /orderitemallocations/{id} 	Structed Endpoint	Updates an existing order allocation and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /productinventories/bulk 	Structed Endpoint	Retrieve and modify product inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /productinventories 	Structed Endpoint	Adds a product inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /productinventories/{id} 	Structed Endpoint	Deletes an existing product inventory from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /productinventories/{id} 	Structed Endpoint	Retrieves the details of a product inventory that matches the ID.
+GET	 /productinventories 	Structed Endpoint	Retrieves the details for one or more product inventories that match your query.
+PATCH	 /productinventories/{id} 	Structed Endpoint	Updates an existing product inventory and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /productinventories/{id} 	Structed Endpoint	Updates an existing product inventory and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /productreturns 	Structed Endpoint	Creates a new product return and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /productreturns/bulk 	Structed Endpoint	Retrieve and modify returned product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /productreturns/{id} 	Structed Endpoint	Deletes an existing product return. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /productreturns/{id} 	Structed Endpoint	Retrieves the details of a returned product that matches the ID.
+GET	 /productreturns 	Structed Endpoint	Returns any existing returned product records that match your query.
+PATCH	 /productreturns/{id} 	Structed Endpoint	Updates an existing product return and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /productreturns/{id} 	Structed Endpoint	Updates an existing product return and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /products/bulk 	Structed Endpoint	Retrieve and modify product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /products 	Structed Endpoint	Adds a product to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /products/{id} 	Structed Endpoint	Deletes an existing product from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /products/{id} 	Structed Endpoint	Retrieves the details of a product that matches the ID.
+GET	 /products 	Structed Endpoint	Retrieves the details for one or more products that match your query.
+PATCH	 /products/{id} 	Structed Endpoint	Updates an existing product and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /products/{id} 	Structed Endpoint	Updates an existing product and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorderlines/bulk 	Structed Endpoint	Bulk process sales order lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorderlines 	Structed Endpoint	Adds a sales order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesorderlines/{id} 	Structed Endpoint	Deletes an existing sales order line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesorderlines/{id} 	Structed Endpoint	Retrieves the details of a sales order line that the ID.
+GET	 /salesorderlines 	Structed Endpoint	Retrieves the details for one or more sales order lines that match your query.
+PATCH	 /salesorderlines/{id} 	Structed Endpoint	Updates an existing sales order line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesorderlines/{id} 	Structed Endpoint	Updates an existing sales order line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorders/bulk 	Structed Endpoint	Retrieve and modify sales order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorders 	Structed Endpoint	Adds a sales order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesorders/{id} 	Structed Endpoint	Deletes an existing sales order from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesorders/{id} 	Structed Endpoint	Retrieves the details of a sales order that the ID.
+GET	 /salesorders 	Structed Endpoint	Retrieves the details for one or more sales orders that match your query.
+PATCH	 /salesorders/{id} 	Structed Endpoint	
+PUT	 /salesorders/{id} 	Structed Endpoint	Updates an existing sales order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesplan 	Structed Endpoint	Creates a new sales plan and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesplan/bulk 	Structed Endpoint	Retrieve and modify sales plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesplan/{id} 	Structed Endpoint	Deletes an existing sales plan. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesplan 	Structed Endpoint	Returns any existing sales plans that match your query.
+GET	 /salesplan/{id} 	Structed Endpoint	Retrieves the details of a sales plan that matches the ID.
+PATCH	 /salesplan/{id} 	Structed Endpoint	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesplan/{id} 	Structed Endpoint	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipmentlines/bulk 	Structed Endpoint	Bulk process sales shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipmentlines 	Structed Endpoint	Adds a sales shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesshipmentlines/{id} 	Structed Endpoint	Deletes an existing sales shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesshipmentlines/{id} 	Structed Endpoint	Retrieves the details of a sales shipment line that matches the ID.
+GET	 /salesshipmentlines 	Structed Endpoint	Retrieves the details for one or more sales shipment lines that match your query.
+PATCH	 /salesshipmentlines/{id} 	Structed Endpoint	Updates an existing sales shipment line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesshipmentlines/{id} 	Structed Endpoint	Updates an existing sales shipment line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipments/bulk 	Structed Endpoint	Retrieve and modify sales shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipments 	Structed Endpoint	Adds a sales shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesshipments/{id} 	Structed Endpoint	Deletes an existing sales shipment from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesshipments/{id} 	Structed Endpoint	Retrieves the details of a sales shipment that matches the ID.
+GET	 /salesshipments 	Structed Endpoint	Retrieves the details for one or more sales shipments that match your query.
+PATCH	 /salesshipments/{id} 	Structed Endpoint	Updates an existing sales shipment and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesshipments/{id} 	Structed Endpoint	Updates an existing sales shipment and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /suppliers/bulk 	Structed Endpoint	Retrieve and modify supplier records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /suppliers 	Structed Endpoint	Adds a supplier to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /suppliers/{id} 	Structed Endpoint	Deletes an existing supplier from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /suppliers/{id} 	Structed Endpoint	Retrieves the details of a supplier that matches the ID.
+GET	 /suppliers 	Structed Endpoint	Retrieves the details for one or more suppliers that match your query.
+PATCH	 /suppliers/{id} 	Structed Endpoint	Updates the description for a supplier. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /suppliers/{id} 	Structed Endpoint	Updates an existing supplier and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyinventories/bulk 	Structed Endpoint	Retrieve and modify supply inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyinventories 	Structed Endpoint	Adds a supply inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyinventories/{id} 	Structed Endpoint	Deletes an existing supply inventory from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyinventories/{id} 	Structed Endpoint	Retrieves the details of a supply inventory that matches the ID.
+GET	 /supplyinventories 	Structed Endpoint	Retrieves the details for one or more supply inventories that match your query.
+PATCH	 /supplyinventories/{id} 	Structed Endpoint	Updates an existing supply inventory and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyinventories/{id} 	Structed Endpoint	Updates an existing supply inventory and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorderlines/bulk 	Structed Endpoint	Bulk process supply order lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorderlines 	Structed Endpoint	Adds a supply order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyorderlines/{id} 	Structed Endpoint	Deletes an existing supply order line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyorderlines/{id} 	Structed Endpoint	Retrieves the details of a supply order line that the ID.
+GET	 /supplyorderlines 	Structed Endpoint	Retrieves the details for one or more supply order lines that match your query.
+PATCH	 /supplyorderlines/{id} 	Structed Endpoint	Updates an existing supply order line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyorderlines/{id} 	Structed Endpoint	Updates an existing supply order line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorders/bulk 	Structed Endpoint	Retrieve and modify supply order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /supplyorders 	Structed Endpoint	Adds a supply order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyorders/{id} 	Structed Endpoint	Deletes an existing supply order from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyorders/{id} 	Structed Endpoint	Retrieves the details of a supply order that matches the ID.
+GET	 /supplyorders 	Structed Endpoint	Retrieves the details for one or more purchase orders that match your query.
+PATCH	 /supplyorders/{id} 	Structed Endpoint	Updates an existing supply order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyorders/{id} 	Structed Endpoint	Updates an existing supply order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyplan/bulk 	Structed Endpoint	Retrieve and modify supply plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyplan 	Structed Endpoint	Adds a supply plan to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyplan/{id} 	Structed Endpoint	Deletes an existing supply plan from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyplan/{id} 	Structed Endpoint	Retrieves the details of a supply plan that matches the ID.
+GET	 /supplyplan 	Structed Endpoint	Retrieves the details for one or more supply plans that match your query.
+PATCH	 /supplyplan/{id} 	Structed Endpoint	Updates an existing supply plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyplan/{id} 	Structed Endpoint	Updates an existing supply plan and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipmentlines/bulk 	Structed Endpoint	Bulk process supply shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipmentlines 	Structed Endpoint	Adds a supply shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyshipmentlines/{id} 	Structed Endpoint	Deletes an existing supply shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyshipmentlines/{id} 	Structed Endpoint	Retrieves the details of a supply shipment line that matches the ID.
+GET	 /supplyshipmentlines 	Structed Endpoint	Retrieves the details for one or more supply shipment lines that match your query.
+PATCH	 /supplyshipmentlines/{id} 	Structed Endpoint	Updates an existing supply shipment line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyshipmentlines/{id} 	Structed Endpoint	Updates an existing supply shipment line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipments/bulk 	Structed Endpoint	Retrieve and modify supply shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipments 	Structed Endpoint	Adds a supply shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /supplyshipments/{id} 	Structed Endpoint	Deletes an supply shipment from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyshipments/{id} 	Structed Endpoint	Retrieves the details of a supply shipment that matches the ID.
+GET	 /supplyshipments 	Structed Endpoint	Retrieves the details for one or more supply shipments that match your query.
+PATCH	 /supplyshipments/{id} 	Structed Endpoint	Updates an existing supply shipment and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /supplyshipments/{id} 	Structed Endpoint	Updates an existing supply shipment and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /variables 	Structed Endpoint	Creates a new variable and returns the location of the created resource.
+DELETE	 /variables/{id} 	Structed Endpoint	Deletes an existing variable.
+GET	 /variables/{id} 	Structed Endpoint	Retrieves the details of the variable that matches the ID.
+GET	 /variables 	Structed Endpoint	Retrieves the details for one or more variables that match your query.
+POST	 /variables/{id}/actions/reset_to_default 	Structed Endpoint	Initiate the "reset to default" action on a variable.
+PUT	 /variables/{id} 	Structed Endpoint	Updates an existing variable and returns a 200 message if the update is successful.
+POST	 /workorders/bulk 	Structed Endpoint	Retrieve and modify work order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /workorders 	Structed Endpoint	Adds a work order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /workorders/{id} 	Structed Endpoint	Deletes an existing business area from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	  /workorders/{id} 	Structed Endpoint	Retrieves the details of a work order that matches the ID.
+GET	 /workorders 	Structed Endpoint	Retrieves the details for one or more work orders that match your query.
+PATCH	 /workorders/{id} 	Structed Endpoint	Updates an existing work order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /workorders/{id} 	Structed Endpoint	Updates an existing business area and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /{dataObject}/bulk 	Structed Endpoint	Bulk process custom data records. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /{dataObject}\ 	Structed Endpoint	Adds a custom data record to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /{dataObject}/{id} 	Structed Endpoint	Deletes an existing custom data record from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /{dataObject}/{id} 	Structed Endpoint	Retrieves the details of a custom data record that matches the ID.
+GET	 /{dataObject} 	Structed Endpoint	Retrieves the details for one or more custom data records that match your query.
+PATCH	 /{dataObject}/{id} 	Structed Endpoint	Updates an existing custom data record and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /{dataObject}/{id} 	Structed Endpoint	Updates an existing custom data record and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
