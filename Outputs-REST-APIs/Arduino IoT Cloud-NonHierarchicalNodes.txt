@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 1
+/devices/{id}/events	Non-hierarchical Nodes	Reversed hierarchy of type True detected between identification and events. 0 hierarchical relations were detected out of 2
+
+***Patterns*** 
+Count: 19
+/devices	Hierarchical Nodes	
+/devices/{id}	Hierarchical Nodes	
+/devices/{id}/properties	Hierarchical Nodes	
+/devices	Hierarchical Nodes	
+/devices/{id}	Hierarchical Nodes	
+/devices/{id}	Hierarchical Nodes	
+/devices/{id}/properties/{pid}	Hierarchical Nodes	
+/devices/{id}/properties	Hierarchical Nodes	
+/devices/{id}/certs	Hierarchical Nodes	
+/devices/{id}/certs/{cid}	Hierarchical Nodes	
+/devices/{id}/certs	Hierarchical Nodes	
+/devices/{id}/certs/{cid}	Hierarchical Nodes	
+/devices/{id}/certs/{cid}	Hierarchical Nodes	
+/devices/{id}/pass	Hierarchical Nodes	
+/things/{id}/properties	Hierarchical Nodes	
+/things/{id}/properties/{pid}/publish	Hierarchical Nodes	
+/series/batch_query	Hierarchical Nodes	
+/series/batch_query_raw	Hierarchical Nodes	
+/series/batch_query_raw/lastvalue	Hierarchical Nodes	

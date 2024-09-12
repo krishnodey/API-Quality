@@ -1,0 +1,50 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 45
+/api/user/reg	Verbless End-point	
+/api/user/auth	Verbless End-point	
+/api/user/anon	Verbless End-point	
+/api/user/checkauth	Verbless End-point	
+/api/user/logout	Verbless End-point	
+/api/user/info	Verbless End-point	
+/api/user/info	Verbless End-point	
+/api/user/pass	Verbless End-point	
+/api/user	Verbless End-point	
+/api/v/2/devices/{systemKey}/{name}	Verbless End-point	
+/api/v/2/devices/{SystemKey}/auth	Verbless End-point	
+/api/collection/{systemKey}/{collectionName}	Verbless End-point	
+/api/collection/{systemKey}/{collectionName}	Verbless End-point	
+/api/collection/{systemKey}/{collectionName}	Verbless End-point	
+/api/collection/{systemKey}/{collectionName}	Verbless End-point	
+/api/data/{collectionID}	Verbless End-point	
+/api/data/{collectionID}	Verbless End-point	
+/api/data/{collectionID}	Verbless End-point	
+/api/data/{collectionID}	Verbless End-point	
+/api/data/{collectionid}/columns	Verbless End-point	
+/api/code/{systemKey}/{serviceName}	Verbless End-point	
+/codeadmin/v/2/library/{systemKey}	Verbless End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Verbless End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Verbless End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Verbless End-point	
+/codeadmin/v/2/library/{systemKey}/{name}	Verbless End-point	
+/codeadmin/v/2/history/library/{systemKey}/{name}	Verbless End-point	
+/codeadmin/v/2/history/library/{systemKey}/{name}/{version}	Verbless End-point	
+/codeadmin/failed	Verbless End-point	
+/codeadmin/failed/{systemKey}	Verbless End-point	
+/codeadmin/failed/{systemKey}	Verbless End-point	
+/codeadmin/failed/{systemKey}	Verbless End-point	
+/api/message/{systemKey}	Verbless End-point	
+/api/message/{systemKey}/publish	Verbless End-point	
+/api/message/{systemKey}	Verbless End-point	
+/admin/reg	Verbless End-point	
+/admin/auth	Verbless End-point	
+/admin/logout	Verbless End-point	
+/admin/systemmanagement	Verbless End-point	
+/admin/systemmanagement	Verbless End-point	
+/admin/systemmanagement	Verbless End-point	
+/admin/systemmanagement	Verbless End-point	
+/admin/collectionmanagement	Verbless End-point	
+/admin/collectionmanagement	Verbless End-point	
+/admin/collectionmanagement	Verbless End-point	

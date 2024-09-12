@@ -1,0 +1,11 @@
+***Anti-Pattern*** 
+Count: 1
+-/tradeHistories	Non-pertinent Documentation	Get your completed order.
+
+***Patterns*** 
+Count: 5
+-/balances	Pertinent Documentation	Get current balances.
+-/order/{pairs}	Pertinent Documentation	Register your order.
+-/cancel/{pairs}	Pertinent Documentation	Cancel the registered order.
+-/openOrders	Pertinent Documentation	Get your open orders.
+-/balanceHistories	Pertinent Documentation	Get your balance History.

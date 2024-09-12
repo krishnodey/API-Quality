@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 20
+/devices	Verbless End-point	
+/devices/{id}	Verbless End-point	
+/devices/{id}/events	Verbless End-point	
+/devices/{id}/properties	Verbless End-point	
+/devices	Verbless End-point	
+/devices/{id}	Verbless End-point	
+/devices/{id}	Verbless End-point	
+/devices/{id}/properties/{pid}	Verbless End-point	
+/devices/{id}/properties	Verbless End-point	
+/devices/{id}/certs	Verbless End-point	
+/devices/{id}/certs/{cid}	Verbless End-point	
+/devices/{id}/certs	Verbless End-point	
+/devices/{id}/certs/{cid}	Verbless End-point	
+/devices/{id}/certs/{cid}	Verbless End-point	
+/devices/{id}/pass	Verbless End-point	
+/things/{id}/properties	Verbless End-point	
+/things/{id}/properties/{pid}/publish	Verbless End-point	
+/series/batch_query	Verbless End-point	
+/series/batch_query_raw	Verbless End-point	
+/series/batch_query_raw/lastvalue	Verbless End-point	

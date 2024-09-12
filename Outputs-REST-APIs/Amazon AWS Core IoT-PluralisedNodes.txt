@@ -1,0 +1,155 @@
+***Anti-Pattern*** 
+Count: 31
+PUT 	/security-profiles/securityProfileName/targets?securityProfileTargetArn=securityProfileTargetArn	Pluralized Nodes	Pluralized last node with PUT and DELETE method
+PUT 	/things/thingName/principals	Pluralized Nodes	Pluralized last node with PUT and DELETE method
+POST 	/indexing/config	Pluralized Nodes	Singular last node with POST method
+POST 	/security-profile-behaviors/validate	Pluralized Nodes	Singular last node with POST method
+POST 	/authorizer/authorizerName/test	Pluralized Nodes	Singular last node with POST method
+POST 	/test-authorization?clientId=clientId	Pluralized Nodes	Singular last node with POST method
+POST 	/audit/mitigationactions/tasks/taskId	Pluralized Nodes	Singular last node with POST method
+POST 	/default-authorizer	Pluralized Nodes	Singular last node with POST method
+POST 	/indices/search	Pluralized Nodes	Singular last node with POST method
+POST 	/cacertificate?allowAutoRegistration=allowAutoRegistration&setAsActive=setAsActive	Pluralized Nodes	Singular last node with POST method
+POST 	/policy-targets/policyName?marker=marker&pageSize=pageSize	Pluralized Nodes	Singular last node with POST method
+POST 	/audit/suppressions/list	Pluralized Nodes	Singular last node with POST method
+POST 	/indices/cardinality	Pluralized Nodes	Singular last node with POST method
+POST 	/rules/ruleName/enable	Pluralized Nodes	Singular last node with POST method
+POST 	/rules/ruleName/disable	Pluralized Nodes	Singular last node with POST method
+DELETE 	/things/thingName/principals	Pluralized Nodes	Pluralized last node with PUT and DELETE method
+DELETE 	/security-profiles/securityProfileName/targets?securityProfileTargetArn=securityProfileTargetArn	Pluralized Nodes	Pluralized last node with PUT and DELETE method
+POST 	/target-policies/policyName	Pluralized Nodes	Singular last node with POST method
+POST 	/audit/suppressions/describe	Pluralized Nodes	Singular last node with POST method
+POST 	/audit/suppressions/delete	Pluralized Nodes	Singular last node with POST method
+POST 	/rules/ruleName	Pluralized Nodes	Singular last node with POST method
+POST 	/things/thingName	Pluralized Nodes	Singular last node with POST method
+POST 	/streams/streamId	Pluralized Nodes	Singular last node with POST method
+POST 	/policies/policyName/version?setAsDefault=setAsDefault	Pluralized Nodes	Singular last node with POST method
+POST 	/policies/policyName	Pluralized Nodes	Singular last node with POST method
+POST 	/mitigationactions/actions/actionName	Pluralized Nodes	Singular last node with POST method
+POST 	/keys-and-certificate?setAsActive=setAsActive	Pluralized Nodes	Singular last node with POST method
+POST 	/dynamic-thing-groups/thingGroupName	Pluralized Nodes	Singular last node with POST method
+POST 	/dimensions/name	Pluralized Nodes	Singular last node with POST method
+POST 	/billing-groups/billingGroupName	Pluralized Nodes	Singular last node with POST method
+POST 	/audit/suppressions/create	Pluralized Nodes	Singular last node with POST method
+
+***Patterns*** 
+Count: 119
+PATCH 	/accept-certificate-transfer/certificateId?setAsActive=setAsActive	 Regular methods
+PUT 	/billing-groups/addThingToBillingGroup	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT 	/thing-groups/addThingToThingGroup	Singularized Nodes	Singular last node with PUT and DELETE method
+POST 	/jobs/jobId/targets?namespaceId=namespaceId	Singularized Nodes	Pluralized last node with POST method
+PUT 	/target-policies/policyName	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT 	/principal-policies/policyName	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT 	/audit/mitigationactions/tasks/taskId/cancel	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT 	/audit/tasks/taskId/cancel	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/jobs/jobId?namespaceId=namespaceId	 Regular methods
+PATCH 	/dynamic-thing-groups/thingGroupName	 Regular methods
+PUT 	/domainConfigurations/domainConfigurationName	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/dimensions/name	 Regular methods
+PUT 	/certificates/certificateId?newStatus=newStatus	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/billing-groups/billingGroupName	 Regular methods
+PUT 	/authorizer/authorizerName	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/audit/suppressions/update	 Regular methods
+PATCH 	/audit/configuration	 Regular methods
+PATCH 	/provisioning-templates/templateName	 Regular methods
+PUT 	/role-aliases/roleAlias	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/audit/scheduledaudits/scheduledAuditName	 Regular methods
+PATCH 	/security-profiles/securityProfileName?expectedVersion=expectedVersion	 Regular methods
+PUT 	/streams/streamId	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/things/thingName	 Regular methods
+PATCH 	/thing-groups/thingGroupName	 Regular methods
+PUT 	/thing-groups/updateThingGroupsForThing	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/destinations	 Regular methods
+PATCH 	/transfer-certificate/certificateId?targetAwsAccount=targetAwsAccount	 Regular methods
+POST 	/tags	Singularized Nodes	Pluralized last node with POST method
+POST 	/thing-registration-tasks	Singularized Nodes	Pluralized last node with POST method
+POST 	/audit/tasks	Singularized Nodes	Pluralized last node with POST method
+POST 	/loggingOptions	Singularized Nodes	Pluralized last node with POST method
+PATCH 	/policies/policyName/version/policyVersionId	 Regular methods
+PATCH 	/rules/ruleName	 Regular methods
+PUT 	/thing-groups/removeThingFromThingGroup	Singularized Nodes	Singular last node with PUT and DELETE method
+GET 	/violation-events?endTime=endTime&maxResults=maxResults&nextToken=nextToken&securityProfileName=securityProfileName&startTime=startTime&thingName=thingName	 Regular methods
+GET 	/v2LoggingLevel?maxResults=maxResults&nextToken=nextToken&targetType=targetType	 Regular methods
+GET 	/rules?maxResults=maxResults&nextToken=nextToken&ruleDisabled=ruleDisabled&topic=topic	 Regular methods
+GET 	/destinations?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/thing-types?maxResults=maxResults&nextToken=nextToken&thingTypeName=thingTypeName	 Regular methods
+GET 	/thing-groups/thingGroupName/things?maxResults=maxResults&nextToken=nextToken&recursive=recursive	 Regular methods
+GET 	/billing-groups/billingGroupName/things?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/things?attributeName=attributeName&attributeValue=attributeValue&maxResults=maxResults&nextToken=nextToken&thingTypeName=thingTypeName	 Regular methods
+GET 	/thing-registration-tasks?maxResults=maxResults&nextToken=nextToken&status=status	 Regular methods
+GET 	/thing-registration-tasks/taskId/reports?maxResults=maxResults&nextToken=nextToken&reportType=reportType	 Regular methods
+GET 	/things/thingName/principals?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/things/thingName/thing-groups?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/thing-groups?maxResults=maxResults&namePrefixFilter=namePrefixFilter&nextToken=nextToken&parentGroup=parentGroup&recursive=recursive	 Regular methods
+GET 	/security-profiles/securityProfileName/targets?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/tags?nextToken=nextToken&resourceArn=resourceArn	 Regular methods
+GET 	/streams?isAscendingOrder=ascendingOrder&maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/security-profiles-for-target?maxResults=maxResults&nextToken=nextToken&recursive=recursive&securityProfileTargetArn=securityProfileTargetArn	 Regular methods
+GET 	/security-profiles?dimensionName=dimensionName&maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/audit/scheduledaudits?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/role-aliases?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/provisioning-templates/templateName/versions?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/provisioning-templates?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/principals/things?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/principal-policies?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/policies/policyName/version	 Regular methods
+GET 	/policy-principals?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/certificates-out-going?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/policies?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/mitigationactions/actions?actionType=actionType&maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/jobs?maxResults=maxResults&namespaceId=namespaceId&nextToken=nextToken&status=status&targetSelection=targetSelection&thingGroupId=thingGroupId&thingGroupName=thingGroupName	 Regular methods
+GET 	/things/thingName/jobs?maxResults=maxResults&namespaceId=namespaceId&nextToken=nextToken&status=status	 Regular methods
+GET 	/jobs/jobId/things?maxResults=maxResults&nextToken=nextToken&status=status	 Regular methods
+GET 	/indices?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/domainConfigurations?marker=marker&pageSize=pageSize&serviceType=serviceType	 Regular methods
+GET 	/dimensions?maxResults=maxResults&nextToken=nextToken	 Regular methods
+GET 	/certificates-by-ca/caCertificateId?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/certificates?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/cacertificates?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize	 Regular methods
+GET 	/billing-groups?maxResults=maxResults&namePrefixFilter=namePrefixFilter&nextToken=nextToken	 Regular methods
+GET 	/authorizers/?isAscendingOrder=ascendingOrder&marker=marker&pageSize=pageSize&status=status	 Regular methods
+GET 	/audit/tasks?endTime=endTime&maxResults=maxResults&nextToken=nextToken&startTime=startTime&taskStatus=taskStatus&taskType=taskType	 Regular methods
+POST 	/audit/findings	Singularized Nodes	Pluralized last node with POST method
+GET 	/active-violations?maxResults=maxResults&nextToken=nextToken&securityProfileName=securityProfileName&thingName=thingName	 Regular methods
+GET 	/v2LoggingOptions	 Regular methods
+GET 	/rules/ruleName	 Regular methods
+POST 	/indices/statistics	Singularized Nodes	Pluralized last node with POST method
+GET 	/policies/policyName/version/policyVersionId	 Regular methods
+GET 	/policies/policyName	 Regular methods
+POST 	/indices/percentiles	Singularized Nodes	Pluralized last node with POST method
+GET 	/loggingOptions	 Regular methods
+GET 	/jobs/jobId/job-document	 Regular methods
+GET 	/indexing/config	 Regular methods
+POST 	/effective-policies?thingName=thingName	Singularized Nodes	Pluralized last node with POST method
+GET 	/thing-types/thingTypeName	 Regular methods
+GET 	/thing-registration-tasks/taskId	 Regular methods
+GET 	/thing-groups/thingGroupName	 Regular methods
+GET 	/security-profiles/securityProfileName	 Regular methods
+GET 	/role-aliases/roleAlias	 Regular methods
+GET 	/provisioning-templates/templateName/versions/versionId	 Regular methods
+GET 	/provisioning-templates/templateName	 Regular methods
+GET 	/event-configurations	 Regular methods
+GET 	/endpoint?endpointType=endpointType	 Regular methods
+GET 	/domainConfigurations/domainConfigurationName	 Regular methods
+GET 	/default-authorizer	 Regular methods
+GET 	/audit/tasks/taskId	 Regular methods
+GET 	/audit/mitigationactions/tasks/taskId	 Regular methods
+GET 	/audit/findings/findingId	 Regular methods
+GET 	/audit/configuration	 Regular methods
+DELETE 	/thing-types/thingTypeName	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/things/thingName?expectedVersion=expectedVersion	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/provisioning-templates/templateName/versions/versionId	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/provisioning-templates/templateName	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/policies/policyName/version/policyVersionId	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/policies/policyName	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/jobs/jobId?force=force&namespaceId=namespaceId	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/certificates/certificateId?forceDelete=forceDelete	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/audit/configuration?deleteScheduledAudits=deleteScheduledAudits	Singularized Nodes	Singular last node with PUT and DELETE method
+POST 	/destinations	Singularized Nodes	Pluralized last node with POST method
+POST 	/provisioning-templates/templateName/versions?setAsDefault=setAsDefault	Singularized Nodes	Pluralized last node with POST method
+POST 	/certificates?setAsActive=setAsActive	Singularized Nodes	Pluralized last node with POST method
+GET 	/confirmdestination/confirmationToken+	 Regular methods
+DELETE 	/default-authorizer	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT 	/things/thingName/jobs/jobId/cancel?force=force	Singularized Nodes	Singular last node with PUT and DELETE method
+PUT 	/jobs/jobId/cancel?force=force	Singularized Nodes	Singular last node with PUT and DELETE method
+PATCH 	/cancel-certificate-transfer/certificateId	 Regular methods

@@ -1,0 +1,11 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 6
+/balances	Hierarchical Nodes	
+/order/{pairs}	Hierarchical Nodes	
+/cancel/{pairs}	Hierarchical Nodes	
+/openOrders	Hierarchical Nodes	
+/tradeHistories	Hierarchical Nodes	
+/balanceHistories	Hierarchical Nodes	

@@ -90,11 +90,11 @@ print("\nFinished Detection of AmorphousURI.\n")
 # print("\nFinished Detection of InconsistantDocumentation:\n")
 
 
-# print("Detection of ContextlessResource:")
-# result_AP, result_P, p_count, ap_count= analyzer_obj.detect_contextless()
-# pattern_type = "ContextlessResource"
-# uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-# print("\nFinished Detection of ContextlessResource:\n")
+print("Detection of ContextlessResource:")
+result_AP, result_P, p_count, ap_count= analyzer_obj.detect_contextless()
+pattern_type = "ContextlessResource"
+uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+print("\nFinished Detection of ContextlessResource:\n")
 
 
 

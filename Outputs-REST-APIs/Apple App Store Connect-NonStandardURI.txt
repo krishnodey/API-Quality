@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 32
+/appCategories	Standard End-point	Standard Endpoint
+/appCategories/{id}	Standard End-point	Standard Endpoint
+/appEncryptionDeclarations	Standard End-point	Standard Endpoint
+/appEncryptionDeclarations/{id}	Standard End-point	Standard Endpoint
+/appInfoLocalizations/{id}	Standard End-point	Standard Endpoint
+/appInfos/{id}	Standard End-point	Standard Endpoint
+/appPreOrders/{id}	Standard End-point	Standard Endpoint
+/appPreviewSets/{id}	Standard End-point	Standard Endpoint
+/appPreviews/{id}	Standard End-point	Standard Endpoint
+/appPricePoints	Standard End-point	Standard Endpoint
+/appPricePoints/{id}	Standard End-point	Standard Endpoint
+/appPriceTiers	Standard End-point	Standard Endpoint
+/appPriceTiers/{id}	Standard End-point	Standard Endpoint
+/appPrices/{id}	Standard End-point	Standard Endpoint
+/appScreenshotSets/{id}	Standard End-point	Standard Endpoint
+/appScreenshots/{id}	Standard End-point	Standard Endpoint
+/appStoreReviewAttachments/{id}	Standard End-point	Standard Endpoint
+/appStoreReviewDetails/{id}	Standard End-point	Standard Endpoint
+/appStoreVersionLocalizations/{id}	Standard End-point	Standard Endpoint
+/appStoreVersions/{id}	Standard End-point	Standard Endpoint
+/apps	Standard End-point	Standard Endpoint
+/betaAppLocalizations	Standard End-point	Standard Endpoint
+/endUserLicenseAgreements/{id}	Standard End-point	Standard Endpoint
+/financeReports	Standard End-point	Standard Endpoint
+/preReleaseVersions	Standard End-point	Standard Endpoint
+/routingAppCoverages/{id}	Standard End-point	Standard Endpoint
+/salesReports	Standard End-point	Standard Endpoint
+/appCategories/{id}/subcategories	Standard End-point	Standard Endpoint
+/appEncryptionDeclarations/{id}/app	Standard End-point	Standard Endpoint
+/appInfos/{id}/ageRatingDeclaration	Standard End-point	Standard Endpoint
+/appInfos/{id}/appInfoLocalizations	Standard End-point	Standard Endpoint
+/appInfos/{id}/primaryCategory	Standard End-point	Standard Endpoint

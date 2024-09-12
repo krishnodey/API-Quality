@@ -1,0 +1,45 @@
+***Anti-Pattern*** 
+Count: 1
+/bui/attmnt({persid})/$value	Non-standard End-point	 [unknown char found] 
+
+***Patterns*** 
+Count: 39
+/api/getAccess	Standard End-point	Standard Endpoint
+/bui/getBUIAllConfig	Standard End-point	Standard Endpoint
+/bui/getAllowedStatus	Standard End-point	Standard Endpoint
+/bui/getMyTicketDetails({persid})	Standard End-point	Standard Endpoint
+/bui/getTicketsCustomData({persid})	Standard End-point	Standard Endpoint
+/bui/getDefaultCategories	Standard End-point	Standard Endpoint
+/bui/attrInfo	Standard End-point	Standard Endpoint
+/bui/attrCtrl	Standard End-point	Standard Endpoint
+/bui/addLogComment	Standard End-point	Standard Endpoint
+/bui/changeStatus/{factory}({persid})	Standard End-point	Standard Endpoint
+/bui/allFeeds({persid})	Standard End-point	Standard Endpoint
+/bui/attmnt	Standard End-point	Standard Endpoint
+/bui/getBopSID	Standard End-point	Standard Endpoint
+/bui/updateStatusForNotification	Standard End-point	Standard Endpoint
+/bui/updateStatusForAllNotification	Standard End-point	Standard Endpoint
+/bui/getMyResources	Standard End-point	Standard Endpoint
+/bui/getMyActiveChatSession	Standard End-point	Standard Endpoint
+/bui/checkActiveSessions	Standard End-point	Standard Endpoint
+/bui/createChatThread	Standard End-point	Standard Endpoint
+/bui/getChatHistory/{roomName}	Standard End-point	Standard Endpoint
+/bui/getDocument({id})	Standard End-point	Standard Endpoint
+/bui/getKDAttachments({id})	Standard End-point	Standard Endpoint
+/bui/getKDComments({id})	Standard End-point	Standard Endpoint
+/bui/addKDComment({id})	Standard End-point	Standard Endpoint
+/bui/rateDocument({id})	Standard End-point	Standard Endpoint
+/bui/kdLinkInfo({id})	Standard End-point	Standard Endpoint
+/bui/unLinkSolution({id})	Standard End-point	Standard Endpoint
+/bui/helpAbout	Standard End-point	Standard Endpoint
+/bui/getEEMAuth	Standard End-point	Standard Endpoint
+/bui/{factory}({persid})	Standard End-point	Standard Endpoint
+/bui/{factory}({persid})	Standard End-point	Standard Endpoint
+/bui/{factory}	Standard End-point	Standard Endpoint
+/bui/{factory}	Standard End-point	Standard Endpoint
+/gs/mytkt_active	Standard End-point	Standard Endpoint
+/gs/mytkt_inactive	Standard End-point	Standard Endpoint
+/getServiceRequest	Standard End-point	Standard Endpoint
+/pcatSearch	Standard End-point	Standard Endpoint
+/getOfferings	Standard End-point	Standard Endpoint
+/suggestedSolutions	Standard End-point	Standard Endpoint

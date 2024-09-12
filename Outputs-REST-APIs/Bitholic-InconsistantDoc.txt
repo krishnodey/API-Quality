@@ -1,0 +1,11 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 6
+GET	 /balances 	Consistent Documentation	Get current balances.
+POST	 /order/{pairs} 	Consistent Documentation	Register your order.
+POST	 /cancel/{pairs} 	Consistent Documentation	Cancel the registered order.
+GET	 /openOrders 	Consistent Documentation	Get your open orders.
+GET	 /tradeHistories 	Consistent Documentation	Get your completed order.
+GET	 /balanceHistories 	Consistent Documentation	Get your balance History.

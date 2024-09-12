@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 20
+/devices	 Self-descriptive End-point
+/devices/{id}	 Self-descriptive End-point
+/devices/{id}/events	 Self-descriptive End-point
+/devices/{id}/properties	 Self-descriptive End-point
+/devices	 Self-descriptive End-point
+/devices/{id}	 Self-descriptive End-point
+/devices/{id}	 Self-descriptive End-point
+/devices/{id}/properties/{pid}	 Self-descriptive End-point
+/devices/{id}/properties	 Self-descriptive End-point
+/devices/{id}/certs	 Self-descriptive End-point
+/devices/{id}/certs/{cid}	 Self-descriptive End-point
+/devices/{id}/certs	 Self-descriptive End-point
+/devices/{id}/certs/{cid}	 Self-descriptive End-point
+/devices/{id}/certs/{cid}	 Self-descriptive End-point
+/devices/{id}/pass	 Self-descriptive End-point
+/things/{id}/properties	 Self-descriptive End-point
+/things/{id}/properties/{pid}/publish	 Self-descriptive End-point
+/series/batch_query	 Self-descriptive End-point
+/series/batch_query_raw	 Self-descriptive End-point
+/series/batch_query_raw/lastvalue	 Self-descriptive End-point

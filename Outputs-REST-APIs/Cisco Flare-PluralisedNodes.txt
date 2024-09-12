@@ -1,0 +1,30 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 25
+GET 	/environments	 Regular methods
+GET 	/environments?latitude={latitude}&longitude={longitude}	 Regular methods
+GET 	/environments?key={key}&value={value}	 Regular methods
+POST 	/environments	Singularized Nodes	Pluralized last node with POST method
+GET 	/environments/{environment_id}	 Regular methods
+PUT 	/environments/{environment_id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/environments/{environment_id}	Singularized Nodes	Singular last node with PUT and DELETE method
+GET 	/environments/{environment_id}/zones	 Regular methods
+GET 	/environments/{environment_id}/zones?x={x}&y={y}	 Regular methods
+GET 	/environments/{environment_id}/zones?key={key}&value={value}	 Regular methods
+POST 	/environments/{environment_id}/zones	Singularized Nodes	Pluralized last node with POST method
+GET 	/environments/{environment_id}/zones/{zone_id}	 Regular methods
+PUT 	/environments/{environment_id}/zones/{zone_id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/environments/{environment_id}/zones/{zone_id}	Singularized Nodes	Singular last node with PUT and DELETE method
+GET 	/environments/{environment_id}/zones/{zone_id}/things	 Regular methods
+GET 	/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	 Regular methods
+GET 	/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	 Regular methods
+POST 	/environments/{environment_id}/zones/{zone_id}/things	Singularized Nodes	Pluralized last node with POST method
+GET 	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	 Regular methods
+GET 	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	 Regular methods
+GET 	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	 Regular methods
+GET 	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	 Regular methods
+PUT 	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Singularized Nodes	Singular last node with PUT and DELETE method
+DELETE 	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	Singularized Nodes	Singular last node with PUT and DELETE method
+GET 	/environments/{environment_id}/devices	 Regular methods

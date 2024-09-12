@@ -1,0 +1,11 @@
+***Anti-Pattern*** 
+Count: 0
+
+***Patterns*** 
+Count: 6
+/balances	Standard End-point	Standard Endpoint
+/order/{pairs}	Standard End-point	Standard Endpoint
+/cancel/{pairs}	Standard End-point	Standard Endpoint
+/openOrders	Standard End-point	Standard Endpoint
+/tradeHistories	Standard End-point	Standard Endpoint
+/balanceHistories	Standard End-point	Standard Endpoint

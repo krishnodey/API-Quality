@@ -1,0 +1,37 @@
+***Anti-Pattern*** 
+Count: 4
+-/appPriceTiers	Non-pertinent Documentation	filter by id(s)
+-/financeReports	Non-pertinent Documentation	filter by attribute regionCode
+-/preReleaseVersions	Non-pertinent Documentation	filter by attribute builds.expired
+-/salesReports	Non-pertinent Documentation	filter by attribute frequency
+
+***Patterns*** 
+Count: 28
+-/appCategories	Pertinent Documentation	filter by attribute platforms
+-/appCategories/{id}	Pertinent Documentation	the fields to include for returned resources of type appCategories
+-/appEncryptionDeclarations	Pertinent Documentation	filter by attribute platform
+-/appEncryptionDeclarations/{id}	Pertinent Documentation	the fields to include for returned resources of type appEncryptionDeclarations
+-/appInfoLocalizations/{id}	Pertinent Documentation	the fields to include for returned resources of type appInfoLocalizations
+-/appInfos/{id}	Pertinent Documentation	the fields to include for returned resources of type appInfos
+-/appPreOrders/{id}	Pertinent Documentation	the fields to include for returned resources of type appPreOrders
+-/appPreviewSets/{id}	Pertinent Documentation	the fields to include for returned resources of type appPreviews
+-/appPreviews/{id}	Pertinent Documentation	the fields to include for returned resources of type appPreviews
+-/appPricePoints	Pertinent Documentation	filter by id(s) of related priceTier
+-/appPricePoints/{id}	Pertinent Documentation	the fields to include for returned resources of type appPricePoints
+-/appPriceTiers/{id}	Pertinent Documentation	the fields to include for returned resources of type appPriceTiers
+-/appPrices/{id}	Pertinent Documentation	the fields to include for returned resources of type appPrices
+-/appScreenshotSets/{id}	Pertinent Documentation	the fields to include for returned resources of type appScreenshotSets
+-/appScreenshots/{id}	Pertinent Documentation	the fields to include for returned resources of type appScreenshots
+-/appStoreReviewAttachments/{id}	Pertinent Documentation	the fields to include for returned resources of type appStoreReviewAttachments
+-/appStoreReviewDetails/{id}	Pertinent Documentation	he fields to include for returned resources of type appStoreReviewDetails
+-/appStoreVersionLocalizations/{id}	Pertinent Documentation	the fields to include for returned resources of type appStoreVersionLocalizations
+-/appStoreVersions/{id}	Pertinent Documentation	the fields to include for returned resources of type appStoreVersions
+-/apps	Pertinent Documentation	filter by attribute 'appStoreVersions.appStoreState
+-/betaAppLocalizations	Pertinent Documentation	filter by attribute locale
+-/endUserLicenseAgreements/{id}	Pertinent Documentation	the fields to include for returned resources of type endUserLicenseAgreements
+-/routingAppCoverages/{id}	Pertinent Documentation	the fields to include for returned resources of type routingAppCoverages
+-/appCategories/{id}/subcategories	Pertinent Documentation	the fields to include for returned resources of type appCategories
+-/appEncryptionDeclarations/{id}/app	Pertinent Documentation	the fields to include for returned resources of type apps
+-/appInfos/{id}/ageRatingDeclaration	Pertinent Documentation	the fields to include for returned resources of type ageRatingDeclarations
+-/appInfos/{id}/appInfoLocalizations	Pertinent Documentation	filter by attribute locale
+-/appInfos/{id}/primaryCategory	Pertinent Documentation	the fields to include for returned resources of type appCategories

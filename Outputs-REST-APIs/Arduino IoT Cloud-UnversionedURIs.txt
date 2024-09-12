@@ -1,0 +1,25 @@
+***Anti-Pattern*** 
+Count: 20
+/devices 	 No Version Found
+/devices/{id} 	 No Version Found
+/devices/{id}/events 	 No Version Found
+/devices/{id}/properties 	 No Version Found
+/devices 	 No Version Found
+/devices/{id} 	 No Version Found
+/devices/{id} 	 No Version Found
+/devices/{id}/properties/{pid} 	 No Version Found
+/devices/{id}/properties 	 No Version Found
+/devices/{id}/certs 	 No Version Found
+/devices/{id}/certs/{cid} 	 No Version Found
+/devices/{id}/certs 	 No Version Found
+/devices/{id}/certs/{cid} 	 No Version Found
+/devices/{id}/certs/{cid} 	 No Version Found
+/devices/{id}/pass 	 No Version Found
+/things/{id}/properties 	 No Version Found
+/things/{id}/properties/{pid}/publish 	 No Version Found
+/series/batch_query 	 No Version Found
+/series/batch_query_raw 	 No Version Found
+/series/batch_query_raw/lastvalue 	 No Version Found
+
+***Patterns*** 
+Count: 0

@@ -367,9 +367,35 @@ def set_public_private(text, api):
 print(set_public_private("BroadCom", "REST"))'''
 
 
-from uri_cleaning import UriCleaning
+# from uri_cleaning import UriCleaning
 
-text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
-obj = UriCleaning()
-node = "device/{ID}/name.jpg"
-print(obj.get_uri_nodes(node))
+# text = "Creates a new StorefrontAccessToken.json new_palyer et v ge"
+# obj = UriCleaning()
+# node = "device/{ID}/name.jpg"
+# print(obj.get_uri_nodes(node))
+
+
+import json
+import csv
+
+# Function to convert JSONL to CSV
+def jsonl_to_csv(jsonl_file, csv_file):
+    with open(jsonl_file, 'r', encoding='utf-8') as f_jsonl, open(csv_file, 'w', newline='', encoding='utf-8') as f_csv:
+        csv_writer = None
+        for line in f_jsonl:
+            # Load each line as a JSON object
+            json_obj = json.loads(line.strip())
+            
+            # If this is the first line, create CSV headers
+            if csv_writer is None:
+                headers = json_obj.keys()
+                csv_writer = csv.DictWriter(f_csv, fieldnames=headers)
+                csv_writer.writeheader()
+            
+            # Write each JSON object as a row in the CSV
+            csv_writer.writerow(json_obj)
+
+# Usage
+jsonl_file = 'All-Data\output_data.jsonl'  # Your input JSONL file
+csv_file = 'All-Data\output_data.csv'     # Your output CSV file
+jsonl_to_csv(jsonl_file, csv_file)
