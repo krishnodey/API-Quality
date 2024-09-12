@@ -124,50 +124,45 @@ Anti-pattern:
 /environments List environments. Gets a list of all environments.
 
 * **Parameter Tunneling vs  Parameter Adherence**
-
-
 Web APIs often have path parameters and query parameters to file specific resources. Path parameters (e.g., /api/books/{id})  are used to identify or retrieve a specific resource, while query parameters (e.g., /api/books?category=fiction) are used for sorting, filtering, and pagination of the request data. Path parameters should be used to identify resources (e.g. delete, update, create, etc). In contrast, query parameters should be used for sorting, filtering, and pagination of resources. Parameter Tunneling antipattern occurs if path parameters are used for sorting, filtering, and pagination, or query parameters are used for identifying resources. Consistent use of path and query parameters would result in a Parameter Adherence pattern.
 
-Pattern:
+**Pattern:**
 /desserts?type=cake&seller-id=1234   Return all the resource types cakes with seller-id of 11234 
 /v1/me/ratings/albums/{id}    Remove a user’s album rating by using the album’s identifier.
 
-Anti-Pattern:
+**Anti-Pattern:**
 /desserts?page=5&pageSize=25 Update the resource desserts
 
 * **Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names**
-
 Resource archetypes are the basic building blocks of API endpoints. Two of the most commonly used resource archetypes are Document and Collection. The Document archetype usually includes fields filled with values that describe a resource, while a Collection resource is a list of document resources. To maintain clarity, singular nouns should be used for naming Documents, while plural nouns should be used for naming Collections. Adhering to these rules results in the Consistent Resource Archetype Names pattern. In contrast, the Inconsistent Resource Archetype Names antipattern occurs if plural nouns are used for naming documents or singular nouns are used for naming collections.
 
-Pattern:
+**Pattern:**
 GET /recipes/desserts/apple-pie
 
-Anti-Pattern: 
+**Anti-Pattern:**
 GET /recipe/dessert/apple-pies
 
 * **Identifier Annotation vs Identifier Ambiguity**
-
 Path parameters or resource identifiers used in endpoints should be enclosed in curly braces, angle brackets, or followed by a colon sign. Using such symbols in endpoint design is referred to as Identifier Annotation pattern, which improves endpoint readability and understandability. In contrast, the absence of curly braces, angle brackets, or colon to represent resource identifiers would result in an Identifier Ambiguity antipattern.
 
-Pattern:
+**Pattern:**
 /v2/lists/:id/members
 /appInstallation/{id}
 /rules/<ruleID>
 
-Anti-Pattern:
+**Anti-Pattern:**
 /rules/ruleKey
 /idFromLegacyId
 
 
 * **Flat vs Structured Endpoint**
-
 Forward slash (/) must be used to separate nodes of an endpoint and indicate a hierarchical relationship. A structured Endpoint pattern occurs when forward slashes are used to break down complex resource names to improve the readability and understandability of the endpoint. In contrast, a Flat Endpoint antipattern occurs when complex or large resource names are not broken down with forward slashes.
 
-Pattern: 
+**Pattern: **
 /requests/{request_id}/receipt
 /requests/{request_id}/map
 
-Anti-Pattern:
+**Anti-Pattern:**
 /requestFirmwareUpdateFromInStoreReader
 /requestItemDisplayFromInStoreReader
 
