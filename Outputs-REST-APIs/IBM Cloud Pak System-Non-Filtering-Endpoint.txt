@@ -1,39 +1,39 @@
 ***Anti-Pattern*** 
-Count: 17
-DELETE	 /deployment/resources/virtual data center./<virtual data center.UID> 	Non-Filtering Endpoint	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
-POST	 /deployment/resources/vdcs/{uuid}/vm_configurations 	Non-Filtering Endpoint	Create a new configuration for the virtual machine.
-POST	 /deployment/resources/vdcs/{uuid}/volume_configurations 	Non-Filtering Endpoint	Create a new volume configuration.
-PUT	 /deployment/resources/addresses/<addressUUID> 	Non-Filtering Endpoint	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
-DELETE	 /deployment/resources/credentials/<credentialUUID> 	Non-Filtering Endpoint	Deleting a credential
-DELETE	 /deployment/resources/images/<imageID> 	Non-Filtering Endpoint	Deleting images from the system
-PUT	 /deployment/resources/groups/<groupUUID> 	Non-Filtering Endpoint	Updating a group
-GET	 /deployment/resources/groups?isMaster=true 	Non-Filtering Endpoint	Retrieving master groups
-GET	 /deployment/resources/groups/group<UUID>?showNested=true 	Non-Filtering Endpoint	Retrieving nested and parent groups
-PUT	 /deployment/resources/instances/<instanceUUID> 	Non-Filtering Endpoint	Stopping, starting, or and restarting virtual machines
-DELETE	 /deployment/resources/instances/<instanceUUID> 	Non-Filtering Endpoint	Deleting currently deployed virtual machines
+Count: 16
+POST	 /deployment/resources/instances 	Non-Filtering Endpoint	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
+POST	 /deployment/resources/vm_configurations 	Non-Filtering Endpoint	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/volume_configurations 	Non-Filtering Endpoint	Create a new volume configuration.
+POST	 /deployment/resources/subnets 	Non-Filtering Endpoint	Create a new subnet.
+POST	 /deployment/resources/addresses 	Non-Filtering Endpoint	Create a new address.
+POST	 /deployment/resources/credentials 	Non-Filtering Endpoint	Creating a new credential
+POST	 /deployment/resources/groups 	Non-Filtering Endpoint	Creating a group
+GET	 /deployment/resources/instances 	Non-Filtering Endpoint	Viewing currently deployed virtual machines
 GET	 /deployment/resources/addresses 	Non-Filtering Endpoint	Getting a new address
-DELETE	 /deployment/resources/volumes/<volumeUUID> 	Non-Filtering Endpoint	Deleting a volume
-PUT	 /deployment/resources/instances/<instanceUUID> 	Non-Filtering Endpoint	Storing a previously deployed virtual machine
+POST	 /deployment/resources/volumes 	Non-Filtering Endpoint	Creating a volume
+POST	 /deployment/resources/volumes 	Non-Filtering Endpoint	Attaching or detaching volumes
 GET	 /deployment/resources/instance_snapshots 	Non-Filtering Endpoint	Retrieving a list of snapshots
 GET	 /deployment/resources/acls 	Non-Filtering Endpoint	Get all acls
+POST	 /audit/resources/audit_config 	Non-Filtering Endpoint	Create an audit configuration
+POST	 /admin/resources/backup 	Non-Filtering Endpoint	Initiate a backup operation
 GET	 /admin/resources/chassis_management_modules 	Non-Filtering Endpoint	Get all chassis management modules
 
 ***Patterns*** 
-Count: 17
-POST	 /deployment/resources/instances 	Filtering Endpoint	Deploying a virtual appliance. You can use the representational state transfer (REST) application programming interface (API) to deploy a virtual appliance.
-POST	 /deployment/resources/vm_configurations 	Filtering Endpoint	Create a new configuration for the virtual machine.
-POST	 /deployment/resources/volume_configurations 	Filtering Endpoint	Create a new volume configuration.
-POST	 /deployment/resources/subnets 	Filtering Endpoint	Create a new subnet.
+Count: 18
+DELETE	 /deployment/resources/virtual data center./<virtual data center.UID> 	Filtering Endpoint	Removing a virtual data center. You can remove a virtual data center as long as it is longer referenced by any resource in the Cloud Pak System environment.
+POST	 /deployment/resources/vdcs/{uuid}/vm_configurations 	Filtering Endpoint	Create a new configuration for the virtual machine.
+POST	 /deployment/resources/vdcs/{uuid}/volume_configurations 	Filtering Endpoint	Create a new volume configuration.
 DELETE	 /deployment/resources/subnets/<subnetUUID> 	Filtering Endpoint	Delete a subnet.
-POST	 /deployment/resources/addresses 	Filtering Endpoint	Create a new address.
 POST	 /deployment/resources/subnet/<subnetUUID>/addresses 	Filtering Endpoint	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
 PUT	 /deployment/resources/subnet/<subnetUUID>/addresses 	Filtering Endpoint	Create a range of addresses that are attached to a subnet. An API is available first to create a range of addresses from an IP range or a list of host names and then to attach those addresses to a subnet.
+PUT	 /deployment/resources/addresses/<addressUUID> 	Filtering Endpoint	You can use the representational state transfer (REST) application programming interface (API) to move an address from one subnet to another.
 DELETE	 /deployment/resources/addresses/<addressUUID> 	Filtering Endpoint	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
-POST	 /deployment/resources/credentials 	Filtering Endpoint	Creating a new credential
-POST	 /deployment/resources/groups 	Filtering Endpoint	Creating a group
-GET	 /deployment/resources/instances 	Filtering Endpoint	Viewing currently deployed virtual machines
-POST	 /deployment/resources/volumes 	Filtering Endpoint	Creating a volume
-POST	 /deployment/resources/volumes 	Filtering Endpoint	Attaching or detaching volumes
-POST	 /audit/resources/audit_config 	Filtering Endpoint	Create an audit configuration
-POST	 /admin/resources/backup 	Filtering Endpoint	Initiate a backup operation
+DELETE	 /deployment/resources/credentials/<credentialUUID> 	Filtering Endpoint	Deleting a credential
+DELETE	 /deployment/resources/images/<imageID> 	Filtering Endpoint	Deleting images from the system
+PUT	 /deployment/resources/groups/<groupUUID> 	Filtering Endpoint	Updating a group
+GET	 /deployment/resources/groups?isMaster=true 	Filtering Endpoint	Retrieving master groups
+GET	 /deployment/resources/groups/group<UUID>?showNested=true 	Filtering Endpoint	Retrieving nested and parent groups
+PUT	 /deployment/resources/instances/<instanceUUID> 	Filtering Endpoint	Stopping, starting, or and restarting virtual machines
+DELETE	 /deployment/resources/instances/<instanceUUID> 	Filtering Endpoint	Deleting currently deployed virtual machines
+DELETE	 /deployment/resources/volumes/<volumeUUID> 	Filtering Endpoint	Deleting a volume
+PUT	 /deployment/resources/instances/<instanceUUID> 	Filtering Endpoint	Storing a previously deployed virtual machine
 GET	 /admin/resources/backup_subcomponents/{id} 	Filtering Endpoint	Get information on a specified volume group

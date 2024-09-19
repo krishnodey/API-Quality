@@ -1,19 +1,102 @@
 ***Anti-Pattern*** 
-Count: 80
+Count: 256
+GET	 /codeOfConduct 	Non-Filtering Endpoint	Look up a code of conduct by its key.
+GET	 /codesOfConduct 	Non-Filtering Endpoint	Look up a code of conduct by its key.
+GET	 /enterprise 	Non-Filtering Endpoint	Look up an enterprise by URL slug.
+GET	 /enterpriseAdministratorInvitation 	Non-Filtering Endpoint	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
+GET	 /enterpriseAdministratorInvitationByToken 	Non-Filtering Endpoint	Look up a pending enterprise administrator invitation by invitation token.
+GET	 /license 	Non-Filtering Endpoint	Look up an open source license by its key.
 GET	 /licenses 	Non-Filtering Endpoint	Return a list of known open source licenses.
 GET	 /marketplaceCategories 	Non-Filtering Endpoint	Get alphabetically sorted list of Marketplace categories.
+GET	 /marketplaceCategory 	Non-Filtering Endpoint	Look up a Marketplace category by its slug.
 GET	 /marketplaceListing 	Non-Filtering Endpoint	Look up a single Marketplace listing.
 GET	 /marketplaceListings 	Non-Filtering Endpoint	Look up Marketplace listings.
 GET	 /meta 	Non-Filtering Endpoint	Return information about the GitHub instance.
 GET	 /node 	Non-Filtering Endpoint	Fetches an object given its ID.
 GET	 /nodes 	Non-Filtering Endpoint	Lookup nodes by a list of IDs.
+GET	 /organization 	Non-Filtering Endpoint	Lookup a organization by login.
+GET	 /rateLimit 	Non-Filtering Endpoint	The client's rate limit information.
+GET	 /relay 	Non-Filtering Endpoint	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
+GET	 /repository 	Non-Filtering Endpoint	Lookup a given repository by the owner and repository name.
+GET	 /repositoryOwner 	Non-Filtering Endpoint	Lookup a repository owner (ie. either a User or an Organization) by login.
+GET	 /resource 	Non-Filtering Endpoint	Lookup resource by a URL.
 GET	 /search 	Non-Filtering Endpoint	Perform a search across resources, returning a maximum of 1,000 results.
+GET	 /securityAdvisories 	Non-Filtering Endpoint	GitHub Security Advisories.
 GET	 /securityAdvisory 	Non-Filtering Endpoint	Fetch a Security Advisory by its GHSA ID.
+GET	 /securityVulnerabilities 	Non-Filtering Endpoint	Software Vulnerabilities documented by GitHub Security Advisories.
+GET	 /sponsorables 	Non-Filtering Endpoint	Users and organizations who can be sponsored via GitHub Sponsors.
+GET	 /topic 	Non-Filtering Endpoint	Look up a topic by name.
+GET	 /user 	Non-Filtering Endpoint	Lookup a user by login.
+GET	 /viewer 	Non-Filtering Endpoint	The currently authenticated user.
+POST	 /abortQueuedMigrations 	Non-Filtering Endpoint	Clear all of a customer's queued migrations.
+POST	 /abortRepositoryMigration 	Non-Filtering Endpoint	Abort a repository migration queued or in progress.
+POST	 /acceptEnterpriseAdministratorInvitation 	Non-Filtering Endpoint	Accepts a pending invitation for a user to become an administrator of an enterprise.
+POST	 /acceptTopicSuggestion 	Non-Filtering Endpoint	Applies a suggested topic to the repository.
+POST	 /addAssigneesToAssignable 	Non-Filtering Endpoint	Adds assignees to an assignable object.
+POST	 /addComment 	Non-Filtering Endpoint	Adds a comment to an Issue or Pull Request.
+POST	 /addDiscussionComment 	Non-Filtering Endpoint	Adds a comment to a Discussion, possibly as a reply to another comment.
+POST	 /addDiscussionPollVote 	Non-Filtering Endpoint	Vote for an option in a discussion poll.
+POST	 /addEnterpriseOrganizationMember 	Non-Filtering Endpoint	Adds enterprise members to an organization within the enterprise.
+POST	 /addEnterpriseSupportEntitlement 	Non-Filtering Endpoint	Adds a support entitlement to an enterprise member.
+POST	 /addLabelsToLabelable 	Non-Filtering Endpoint	Adds labels to a labelable object.
+POST	 /addProjectCard 	Non-Filtering Endpoint	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
+POST	 /addProjectColumn 	Non-Filtering Endpoint	Adds a column to a Project.
+POST	 /addProjectV2DraftIssue 	Non-Filtering Endpoint	Creates a new draft issue and add it to a Project.
+POST	 /addProjectV2ItemById 	Non-Filtering Endpoint	Links an existing content instance to a Project.
+POST	 /addPullRequestReview 	Non-Filtering Endpoint	Adds a review to a Pull Request.
+POST	 /addPullRequestReviewComment 	Non-Filtering Endpoint	Adds a comment to a review.
+POST	 /addPullRequestReviewThread 	Non-Filtering Endpoint	Adds a new thread to a pending Pull Request Review.
+POST	 /addPullRequestReviewThreadReply 	Non-Filtering Endpoint	Adds a reply to an existing Pull Request Review Thread.
+POST	 /addReaction 	Non-Filtering Endpoint	Adds a reaction to a subject.
+POST	 /addStar 	Non-Filtering Endpoint	Adds a star to a Starrable.
+POST	 /addUpvote 	Non-Filtering Endpoint	Add an upvote to a discussion or discussion comment.
+POST	 /addVerifiableDomain 	Non-Filtering Endpoint	Adds a verifiable domain to an owning account.
+POST	 /approveDeployments 	Non-Filtering Endpoint	Approve all pending deployments under one or more environments.
+POST	 /approveVerifiableDomain 	Non-Filtering Endpoint	Approve a verifiable domain for notification delivery.
+POST	 /archiveProjectV2Item 	Non-Filtering Endpoint	Archives a ProjectV2Item.
+POST	 /archiveRepository 	Non-Filtering Endpoint	Marks a repository as archived.
+POST	 /cancelEnterpriseAdminInvitation 	Non-Filtering Endpoint	Cancels a pending invitation for an administrator to join an enterprise.
+POST	 /cancelSponsorship 	Non-Filtering Endpoint	Cancel an active sponsorship.
 POST	 /changeUserStatus 	Non-Filtering Endpoint	Update your status on GitHub.
+POST	 /clearLabelsFromLabelable 	Non-Filtering Endpoint	Clears all labels from a labelable object.
+POST	 /clearProjectV2ItemFieldValue 	Non-Filtering Endpoint	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
+POST	 /cloneProject 	Non-Filtering Endpoint	Creates a new project by cloning configuration from an existing project.
+POST	 /cloneTemplateRepository 	Non-Filtering Endpoint	Create a new repository with the same files and directory structure as a template repository.
+POST	 /closeDiscussion 	Non-Filtering Endpoint	Close a discussion.
+POST	 /closeIssue 	Non-Filtering Endpoint	Close an issue.
+POST	 /closePullRequest 	Non-Filtering Endpoint	Close a pull request.
+POST	 /convertProjectCardNoteToIssue 	Non-Filtering Endpoint	Convert a project note card to one associated with a newly created issue.
+POST	 /convertPullRequestToDraft 	Non-Filtering Endpoint	Converts a pull request to draft.
+POST	 /copyProjectV2 	Non-Filtering Endpoint	Copy a project.
+POST	 /createAttributionInvitation 	Non-Filtering Endpoint	Invites a user to claim reattributable data.
+POST	 /createBranchProtectionRule 	Non-Filtering Endpoint	Create a new branch protection rule.
+POST	 /createCheckRun 	Non-Filtering Endpoint	Create a check run.
+POST	 /createCheckSuite 	Non-Filtering Endpoint	Create a check suite.
 POST	 /createCommitOnBranch 	Non-Filtering Endpoint	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
+POST	 /createDeployment 	Non-Filtering Endpoint	Creates a new deployment event.
+POST	 /createDeploymentStatus 	Non-Filtering Endpoint	Create a deployment status.
+POST	 /createDiscussion 	Non-Filtering Endpoint	Create a discussion.
 POST	 /createEnterpriseOrganization 	Non-Filtering Endpoint	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
 POST	 /createEnvironment 	Non-Filtering Endpoint	Creates an environment or simply returns it if already exists.
 POST	 /createIpAllowListEntry 	Non-Filtering Endpoint	Creates a new IP allow list entry.
+POST	 /createIssue 	Non-Filtering Endpoint	Creates a new issue.
+POST	 /createLabel 	Non-Filtering Endpoint	Creates a new label.
+POST	 /createLinkedBranch 	Non-Filtering Endpoint	Create a branch linked to an issue.
+POST	 /createMigrationSource 	Non-Filtering Endpoint	Creates a GitHub Enterprise Importer (GEI) migration source.
+POST	 /createProject 	Non-Filtering Endpoint	Creates a new project.
+POST	 /createProjectV2 	Non-Filtering Endpoint	Creates a new project.
+POST	 /createProjectV2Field 	Non-Filtering Endpoint	Create a new project field.
+POST	 /createPullRequest 	Non-Filtering Endpoint	Create a new pull request.
+POST	 /createRef 	Non-Filtering Endpoint	Create a new Git Ref.
+POST	 /createRepository 	Non-Filtering Endpoint	Create a new repository.
+POST	 /createRepositoryRuleset 	Non-Filtering Endpoint	Create a repository ruleset.
+POST	 /createSponsorsListing 	Non-Filtering Endpoint	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
+POST	 /createSponsorsTier 	Non-Filtering Endpoint	Create a new payment tier for your GitHub Sponsors profile.
+POST	 /createSponsorship 	Non-Filtering Endpoint	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
+POST	 /createSponsorships 	Non-Filtering Endpoint	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+POST	 /createTeamDiscussion 	Non-Filtering Endpoint	Creates a new team discussion.
+POST	 /createTeamDiscussionComment 	Non-Filtering Endpoint	Creates a new team discussion comment.
+POST	 /declineTopicSuggestion 	Non-Filtering Endpoint	Rejects a suggested topic for the repository.
 POST	 /deleteBranchProtectionRule 	Non-Filtering Endpoint	Delete a branch protection rule.
 POST	 /deleteDeployment 	Non-Filtering Endpoint	Deletes a deployment.
 POST	 /deleteDiscussion 	Non-Filtering Endpoint	Delete a discussion and all of its replies.
@@ -23,6 +106,7 @@ POST	 /deleteIpAllowListEntry 	Non-Filtering Endpoint	Deletes an IP allow list e
 POST	 /deleteIssue 	Non-Filtering Endpoint	Deletes an Issue object.
 POST	 /deleteIssueComment 	Non-Filtering Endpoint	Deletes an IssueComment object.
 POST	 /deleteLabel 	Non-Filtering Endpoint	Deletes a label.
+POST	 /deleteLinkedBranch 	Non-Filtering Endpoint	Unlink a branch from an issue.
 POST	 /deletePackageVersion 	Non-Filtering Endpoint	Delete a package version.
 POST	 /deleteProject 	Non-Filtering Endpoint	Deletes a project.
 POST	 /deleteProjectCard 	Non-Filtering Endpoint	Deletes a project card.
@@ -38,19 +122,104 @@ POST	 /deleteRepositoryRuleset 	Non-Filtering Endpoint	Delete a repository rules
 POST	 /deleteTeamDiscussion 	Non-Filtering Endpoint	Deletes a team discussion.
 POST	 /deleteTeamDiscussionComment 	Non-Filtering Endpoint	Deletes a team discussion comment.
 POST	 /deleteVerifiableDomain 	Non-Filtering Endpoint	Deletes a verifiable domain.
+POST	 /dequeuePullRequest 	Non-Filtering Endpoint	Remove a pull request from the merge queue.
+POST	 /disablePullRequestAutoMerge 	Non-Filtering Endpoint	Disable auto merge on the given pull request.
+POST	 /dismissPullRequestReview 	Non-Filtering Endpoint	Dismisses an approved or rejected pull request review.
+POST	 /dismissRepositoryVulnerabilityAlert 	Non-Filtering Endpoint	Dismisses the Dependabot alert.
+POST	 /enablePullRequestAutoMerge 	Non-Filtering Endpoint	Enable the default auto-merge on a pull request.
+POST	 /enqueuePullRequest 	Non-Filtering Endpoint	Add a pull request to the merge queue.
+POST	 /followOrganization 	Non-Filtering Endpoint	Follow an organization.
+POST	 /followUser 	Non-Filtering Endpoint	Follow a user.
+POST	 /grantEnterpriseOrganizationsMigratorRole 	Non-Filtering Endpoint	Grant the migrator role to a user for all organizations under an enterprise account.
+POST	 /grantMigratorRole 	Non-Filtering Endpoint	Grant the migrator role to a user or a team.
 POST	 /importProject 	Non-Filtering Endpoint	Creates a new project by importing columns and a list of issues/PRs.
+POST	 /inviteEnterpriseAdmin 	Non-Filtering Endpoint	Invite someone to become an administrator of the enterprise.
+POST	 /linkProjectV2ToRepository 	Non-Filtering Endpoint	Links a project to a repository.
+POST	 /linkProjectV2ToTeam 	Non-Filtering Endpoint	Links a project to a team.
+POST	 /linkRepositoryToProject 	Non-Filtering Endpoint	Creates a repository link for a project.
+POST	 /lockLockable 	Non-Filtering Endpoint	Lock a lockable object.
+POST	 /markDiscussionCommentAsAnswer 	Non-Filtering Endpoint	Mark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /markFileAsViewed 	Non-Filtering Endpoint	Mark a pull request file as viewed.
+POST	 /markProjectV2AsTemplate 	Non-Filtering Endpoint	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
+POST	 /markPullRequestReadyForReview 	Non-Filtering Endpoint	Marks a pull request ready for review.
+POST	 /mergeBranch 	Non-Filtering Endpoint	Merge a head into a branch.
+POST	 /mergePullRequest 	Non-Filtering Endpoint	Merge a pull request.
+POST	 /minimizeComment 	Non-Filtering Endpoint	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /moveProjectCard 	Non-Filtering Endpoint	Moves a project card to another place.
+POST	 /moveProjectColumn 	Non-Filtering Endpoint	Moves a project column to another place.
+POST	 /pinIssue 	Non-Filtering Endpoint	Pin an issue to a repository.
+POST	 /publishSponsorsTier 	Non-Filtering Endpoint	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
+POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Non-Filtering Endpoint	Regenerates the identity provider recovery codes for an enterprise.
+POST	 /regenerateVerifiableDomainToken 	Non-Filtering Endpoint	Regenerates a verifiable domain's verification token.
+POST	 /rejectDeployments 	Non-Filtering Endpoint	Reject all pending deployments under one or more environments.
+POST	 /removeAssigneesFromAssignable 	Non-Filtering Endpoint	Removes assignees from an assignable object.
+POST	 /removeEnterpriseAdmin 	Non-Filtering Endpoint	Removes an administrator from the enterprise.
+POST	 /removeEnterpriseIdentityProvider 	Non-Filtering Endpoint	Removes the identity provider from an enterprise.
+POST	 /removeEnterpriseMember 	Non-Filtering Endpoint	Removes a user from all organizations within the enterprise.
+POST	 /removeEnterpriseOrganization 	Non-Filtering Endpoint	Removes an organization from the enterprise.
+POST	 /removeEnterpriseSupportEntitlement 	Non-Filtering Endpoint	Removes a support entitlement from an enterprise member.
+POST	 /removeLabelsFromLabelable 	Non-Filtering Endpoint	Removes labels from a Labelable object.
+POST	 /removeOutsideCollaborator 	Non-Filtering Endpoint	Removes outside collaborator from all repositories in an organization.
+POST	 /removeReaction 	Non-Filtering Endpoint	Removes a reaction from a subject.
+POST	 /removeStar 	Non-Filtering Endpoint	Removes a star from a Starrable.
+POST	 /removeUpvote 	Non-Filtering Endpoint	Remove an upvote to a discussion or discussion comment.
+POST	 /reopenDiscussion 	Non-Filtering Endpoint	Reopen a discussion.
+POST	 /reopenIssue 	Non-Filtering Endpoint	Reopen a issue.
+POST	 /reopenPullRequest 	Non-Filtering Endpoint	Reopen a pull request.
+POST	 /requestReviews 	Non-Filtering Endpoint	Set review requests on a pull request.
+POST	 /rerequestCheckSuite 	Non-Filtering Endpoint	Rerequests an existing check suite.
+POST	 /resolveReviewThread 	Non-Filtering Endpoint	Marks a review thread as resolved.
+POST	 /retireSponsorsTier 	Non-Filtering Endpoint	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+POST	 /revertPullRequest 	Non-Filtering Endpoint	Create a pull request that reverts the changes from a merged pull request.
+POST	 /revokeEnterpriseOrganizationsMigratorRole 	Non-Filtering Endpoint	Revoke the migrator role to a user for all organizations under an enterprise account.
+POST	 /revokeMigratorRole 	Non-Filtering Endpoint	Revoke the migrator role from a user or a team.
 POST	 /setEnterpriseIdentityProvider 	Non-Filtering Endpoint	Creates or updates the identity provider for an enterprise.
+POST	 /setOrganizationInteractionLimit 	Non-Filtering Endpoint	Set an organization level interaction limit for an organization's public repositories.
+POST	 /setRepositoryInteractionLimit 	Non-Filtering Endpoint	Sets an interaction limit setting for a repository.
+POST	 /setUserInteractionLimit 	Non-Filtering Endpoint	Set a user level interaction limit for an user's public repositories.
+POST	 /startOrganizationMigration 	Non-Filtering Endpoint	Starts a GitHub Enterprise Importer organization migration.
+POST	 /startRepositoryMigration 	Non-Filtering Endpoint	Starts a GitHub Enterprise Importer (GEI) repository migration.
+POST	 /submitPullRequestReview 	Non-Filtering Endpoint	Submits a pending pull request review.
+POST	 /transferEnterpriseOrganization 	Non-Filtering Endpoint	Transfer an organization from one enterprise to another enterprise.
+POST	 /transferIssue 	Non-Filtering Endpoint	Transfer an issue to a different repository.
+POST	 /unarchiveProjectV2Item 	Non-Filtering Endpoint	Unarchives a ProjectV2Item.
+POST	 /unarchiveRepository 	Non-Filtering Endpoint	Unarchives a repository.
+POST	 /unfollowOrganization 	Non-Filtering Endpoint	Unfollow an organization.
+POST	 /unfollowUser 	Non-Filtering Endpoint	Unfollow a user.
+POST	 /unlinkProjectV2FromRepository 	Non-Filtering Endpoint	Unlinks a project from a repository.
+POST	 /unlinkProjectV2FromTeam 	Non-Filtering Endpoint	Unlinks a project to a team.
 POST	 /unlinkRepositoryFromProject 	Non-Filtering Endpoint	Deletes a repository link from a project.
+POST	 /unlockLockable 	Non-Filtering Endpoint	Unlock a lockable object.
+POST	 /unmarkDiscussionCommentAsAnswer 	Non-Filtering Endpoint	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
+POST	 /unmarkFileAsViewed 	Non-Filtering Endpoint	Unmark a pull request file as viewed.
+POST	 /unmarkIssueAsDuplicate 	Non-Filtering Endpoint	Unmark an issue as a duplicate of another issue.
+POST	 /unmarkProjectV2AsTemplate 	Non-Filtering Endpoint	Unmark a project as a template.
+POST	 /unminimizeComment 	Non-Filtering Endpoint	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /unpinIssue 	Non-Filtering Endpoint	Unpin a pinned issue from a repository.
+POST	 /unresolveReviewThread 	Non-Filtering Endpoint	Marks a review thread as unresolved.
+POST	 /unsubscribeFromNotifications 	Non-Filtering Endpoint	Unsubscribes from notifications.
 POST	 /updateBranchProtectionRule 	Non-Filtering Endpoint	Update a branch protection rule.
 POST	 /updateCheckRun 	Non-Filtering Endpoint	Update a check run.
+POST	 /updateCheckSuitePreferences 	Non-Filtering Endpoint	Modifies the settings of an existing check suite.
 POST	 /updateDiscussion 	Non-Filtering Endpoint	Update a discussion.
 POST	 /updateDiscussionComment 	Non-Filtering Endpoint	Update the contents of a comment on a Discussion.
 POST	 /updateEnterpriseAdministratorRole 	Non-Filtering Endpoint	Updates the role of an enterprise administrator.
+POST	 /updateEnterpriseAllowPrivateRepositoryForkingSetting 	Non-Filtering Endpoint	Sets whether private repository forks are enabled for an enterprise.
+POST	 /updateEnterpriseDefaultRepositoryPermissionSetting 	Non-Filtering Endpoint	Sets the base repository permission for organizations in an enterprise.
+POST	 /updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Non-Filtering Endpoint	Sets whether organization members with admin permissions on a repository can change repository visibility.
+POST	 /updateEnterpriseMembersCanCreateRepositoriesSetting 	Non-Filtering Endpoint	Sets the members can create repositories setting for an enterprise.
 POST	 /updateEnterpriseMembersCanDeleteIssuesSetting 	Non-Filtering Endpoint	Sets the members can delete issues setting for an enterprise.
 POST	 /updateEnterpriseMembersCanDeleteRepositoriesSetting 	Non-Filtering Endpoint	Sets the members can delete repositories setting for an enterprise.
+POST	 /updateEnterpriseMembersCanInviteCollaboratorsSetting 	Non-Filtering Endpoint	Sets whether members can invite collaborators are enabled for an enterprise.
+POST	 /updateEnterpriseMembersCanMakePurchasesSetting 	Non-Filtering Endpoint	Sets whether or not an organization owner can make purchases.
 POST	 /updateEnterpriseMembersCanUpdateProtectedBranchesSetting 	Non-Filtering Endpoint	Sets the members can update protected branches setting for an enterprise.
+POST	 /updateEnterpriseMembersCanViewDependencyInsightsSetting 	Non-Filtering Endpoint	Sets the members can view dependency insights for an enterprise.
+POST	 /updateEnterpriseOrganizationProjectsSetting 	Non-Filtering Endpoint	Sets whether organization projects are enabled for an enterprise.
 POST	 /updateEnterpriseOwnerOrganizationRole 	Non-Filtering Endpoint	Updates the role of an enterprise owner with an organization.
 POST	 /updateEnterpriseProfile 	Non-Filtering Endpoint	Updates an enterprise's profile.
+POST	 /updateEnterpriseRepositoryProjectsSetting 	Non-Filtering Endpoint	Sets whether repository projects are enabled for a enterprise.
+POST	 /updateEnterpriseTeamDiscussionsSetting 	Non-Filtering Endpoint	Sets whether team discussions are enabled for an enterprise.
+POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Non-Filtering Endpoint	Sets whether two factor authentication is required for all users in an enterprise.
 POST	 /updateEnvironment 	Non-Filtering Endpoint	Updates an environment.
 POST	 /updateIpAllowListEnabledSetting 	Non-Filtering Endpoint	Sets whether an IP allow list is enabled on an owner.
 POST	 /updateIpAllowListEntry 	Non-Filtering Endpoint	Updates an IP allow list entry.
@@ -59,6 +228,9 @@ POST	 /updateIssue 	Non-Filtering Endpoint	Updates an Issue.
 POST	 /updateIssueComment 	Non-Filtering Endpoint	Updates an IssueComment object.
 POST	 /updateLabel 	Non-Filtering Endpoint	Updates an existing label.
 POST	 /updateNotificationRestrictionSetting 	Non-Filtering Endpoint	Update the setting to restrict notifications to only verified or approved domains available to an owner.
+POST	 /updateOrganizationAllowPrivateRepositoryForkingSetting 	Non-Filtering Endpoint	Sets whether private repository forks are enabled for an organization.
+POST	 /updateOrganizationWebCommitSignoffSetting 	Non-Filtering Endpoint	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
+POST	 /updatePatreonSponsorability 	Non-Filtering Endpoint	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
 POST	 /updateProject 	Non-Filtering Endpoint	Updates an existing project.
 POST	 /updateProjectCard 	Non-Filtering Endpoint	Updates an existing project card.
 POST	 /updateProjectColumn 	Non-Filtering Endpoint	Updates an existing project column.
@@ -68,194 +240,22 @@ POST	 /updateProjectV2DraftIssue 	Non-Filtering Endpoint	Updates a draft issue w
 POST	 /updateProjectV2ItemFieldValue 	Non-Filtering Endpoint	This mutation updates the value of a field for an item in a Project. Currentlyonly single-select, text, number, date, and iteration fields are supported.
 POST	 /updateProjectV2ItemPosition 	Non-Filtering Endpoint	This mutation updates the position of the item in the project, where the position represents the priority of an item.
 POST	 /updatePullRequest 	Non-Filtering Endpoint	Update a pull request.
+POST	 /updatePullRequestBranch 	Non-Filtering Endpoint	Merge or Rebase HEAD from upstream branch into pull request branch.
 POST	 /updatePullRequestReview 	Non-Filtering Endpoint	Updates the body of a pull request review.
 POST	 /updatePullRequestReviewComment 	Non-Filtering Endpoint	Updates a pull request review comment.
 POST	 /updateRef 	Non-Filtering Endpoint	Update a Git Ref.
 POST	 /updateRefs 	Non-Filtering Endpoint	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
 POST	 /updateRepository 	Non-Filtering Endpoint	Update information about a repository.
 POST	 /updateRepositoryRuleset 	Non-Filtering Endpoint	Update a repository ruleset.
+POST	 /updateRepositoryWebCommitSignoffSetting 	Non-Filtering Endpoint	Sets whether contributors are required to sign off on web-based commits for a repository.
 POST	 /updateSponsorshipPreferences 	Non-Filtering Endpoint	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
 POST	 /updateSubscription 	Non-Filtering Endpoint	Updates the state for subscribable subjects.
 POST	 /updateTeamDiscussion 	Non-Filtering Endpoint	Updates a team discussion.
 POST	 /updateTeamDiscussionComment 	Non-Filtering Endpoint	Updates a discussion comment.
 POST	 /updateTeamReviewAssignment 	Non-Filtering Endpoint	Updates team review assignment.
 POST	 /updateTeamsRepository 	Non-Filtering Endpoint	Update team repository.
+POST	 /updateTopics 	Non-Filtering Endpoint	Replaces the repository's topics with the given topics.
+POST	 /verifyVerifiableDomain 	Non-Filtering Endpoint	Verify that a verifiable domain has the expected DNS record.
 
 ***Patterns*** 
-Count: 176
-GET	 /codeOfConduct 	Filtering Endpoint	Look up a code of conduct by its key.
-GET	 /codesOfConduct 	Filtering Endpoint	Look up a code of conduct by its key.
-GET	 /enterprise 	Filtering Endpoint	Look up an enterprise by URL slug.
-GET	 /enterpriseAdministratorInvitation 	Filtering Endpoint	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
-GET	 /enterpriseAdministratorInvitationByToken 	Filtering Endpoint	Look up a pending enterprise administrator invitation by invitation token.
-GET	 /license 	Filtering Endpoint	Look up an open source license by its key.
-GET	 /marketplaceCategory 	Filtering Endpoint	Look up a Marketplace category by its slug.
-GET	 /organization 	Filtering Endpoint	Lookup a organization by login.
-GET	 /rateLimit 	Filtering Endpoint	The client's rate limit information.
-GET	 /relay 	Filtering Endpoint	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
-GET	 /repository 	Filtering Endpoint	Lookup a given repository by the owner and repository name.
-GET	 /repositoryOwner 	Filtering Endpoint	Lookup a repository owner (ie. either a User or an Organization) by login.
-GET	 /resource 	Filtering Endpoint	Lookup resource by a URL.
-GET	 /securityAdvisories 	Filtering Endpoint	GitHub Security Advisories.
-GET	 /securityVulnerabilities 	Filtering Endpoint	Software Vulnerabilities documented by GitHub Security Advisories.
-GET	 /sponsorables 	Filtering Endpoint	Users and organizations who can be sponsored via GitHub Sponsors.
-GET	 /topic 	Filtering Endpoint	Look up a topic by name.
-GET	 /user 	Filtering Endpoint	Lookup a user by login.
-GET	 /viewer 	Filtering Endpoint	The currently authenticated user.
-POST	 /abortQueuedMigrations 	Filtering Endpoint	Clear all of a customer's queued migrations.
-POST	 /abortRepositoryMigration 	Filtering Endpoint	Abort a repository migration queued or in progress.
-POST	 /acceptEnterpriseAdministratorInvitation 	Filtering Endpoint	Accepts a pending invitation for a user to become an administrator of an enterprise.
-POST	 /acceptTopicSuggestion 	Filtering Endpoint	Applies a suggested topic to the repository.
-POST	 /addAssigneesToAssignable 	Filtering Endpoint	Adds assignees to an assignable object.
-POST	 /addComment 	Filtering Endpoint	Adds a comment to an Issue or Pull Request.
-POST	 /addDiscussionComment 	Filtering Endpoint	Adds a comment to a Discussion, possibly as a reply to another comment.
-POST	 /addDiscussionPollVote 	Filtering Endpoint	Vote for an option in a discussion poll.
-POST	 /addEnterpriseOrganizationMember 	Filtering Endpoint	Adds enterprise members to an organization within the enterprise.
-POST	 /addEnterpriseSupportEntitlement 	Filtering Endpoint	Adds a support entitlement to an enterprise member.
-POST	 /addLabelsToLabelable 	Filtering Endpoint	Adds labels to a labelable object.
-POST	 /addProjectCard 	Filtering Endpoint	Adds a card to a ProjectColumn. Either contentId or note must be provided but not both.
-POST	 /addProjectColumn 	Filtering Endpoint	Adds a column to a Project.
-POST	 /addProjectV2DraftIssue 	Filtering Endpoint	Creates a new draft issue and add it to a Project.
-POST	 /addProjectV2ItemById 	Filtering Endpoint	Links an existing content instance to a Project.
-POST	 /addPullRequestReview 	Filtering Endpoint	Adds a review to a Pull Request.
-POST	 /addPullRequestReviewComment 	Filtering Endpoint	Adds a comment to a review.
-POST	 /addPullRequestReviewThread 	Filtering Endpoint	Adds a new thread to a pending Pull Request Review.
-POST	 /addPullRequestReviewThreadReply 	Filtering Endpoint	Adds a reply to an existing Pull Request Review Thread.
-POST	 /addReaction 	Filtering Endpoint	Adds a reaction to a subject.
-POST	 /addStar 	Filtering Endpoint	Adds a star to a Starrable.
-POST	 /addUpvote 	Filtering Endpoint	Add an upvote to a discussion or discussion comment.
-POST	 /addVerifiableDomain 	Filtering Endpoint	Adds a verifiable domain to an owning account.
-POST	 /approveDeployments 	Filtering Endpoint	Approve all pending deployments under one or more environments.
-POST	 /approveVerifiableDomain 	Filtering Endpoint	Approve a verifiable domain for notification delivery.
-POST	 /archiveProjectV2Item 	Filtering Endpoint	Archives a ProjectV2Item.
-POST	 /archiveRepository 	Filtering Endpoint	Marks a repository as archived.
-POST	 /cancelEnterpriseAdminInvitation 	Filtering Endpoint	Cancels a pending invitation for an administrator to join an enterprise.
-POST	 /cancelSponsorship 	Filtering Endpoint	Cancel an active sponsorship.
-POST	 /clearLabelsFromLabelable 	Filtering Endpoint	Clears all labels from a labelable object.
-POST	 /clearProjectV2ItemFieldValue 	Filtering Endpoint	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
-POST	 /cloneProject 	Filtering Endpoint	Creates a new project by cloning configuration from an existing project.
-POST	 /cloneTemplateRepository 	Filtering Endpoint	Create a new repository with the same files and directory structure as a template repository.
-POST	 /closeDiscussion 	Filtering Endpoint	Close a discussion.
-POST	 /closeIssue 	Filtering Endpoint	Close an issue.
-POST	 /closePullRequest 	Filtering Endpoint	Close a pull request.
-POST	 /convertProjectCardNoteToIssue 	Filtering Endpoint	Convert a project note card to one associated with a newly created issue.
-POST	 /convertPullRequestToDraft 	Filtering Endpoint	Converts a pull request to draft.
-POST	 /copyProjectV2 	Filtering Endpoint	Copy a project.
-POST	 /createAttributionInvitation 	Filtering Endpoint	Invites a user to claim reattributable data.
-POST	 /createBranchProtectionRule 	Filtering Endpoint	Create a new branch protection rule.
-POST	 /createCheckRun 	Filtering Endpoint	Create a check run.
-POST	 /createCheckSuite 	Filtering Endpoint	Create a check suite.
-POST	 /createDeployment 	Filtering Endpoint	Creates a new deployment event.
-POST	 /createDeploymentStatus 	Filtering Endpoint	Create a deployment status.
-POST	 /createDiscussion 	Filtering Endpoint	Create a discussion.
-POST	 /createIssue 	Filtering Endpoint	Creates a new issue.
-POST	 /createLabel 	Filtering Endpoint	Creates a new label.
-POST	 /createLinkedBranch 	Filtering Endpoint	Create a branch linked to an issue.
-POST	 /createMigrationSource 	Filtering Endpoint	Creates a GitHub Enterprise Importer (GEI) migration source.
-POST	 /createProject 	Filtering Endpoint	Creates a new project.
-POST	 /createProjectV2 	Filtering Endpoint	Creates a new project.
-POST	 /createProjectV2Field 	Filtering Endpoint	Create a new project field.
-POST	 /createPullRequest 	Filtering Endpoint	Create a new pull request.
-POST	 /createRef 	Filtering Endpoint	Create a new Git Ref.
-POST	 /createRepository 	Filtering Endpoint	Create a new repository.
-POST	 /createRepositoryRuleset 	Filtering Endpoint	Create a repository ruleset.
-POST	 /createSponsorsListing 	Filtering Endpoint	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
-POST	 /createSponsorsTier 	Filtering Endpoint	Create a new payment tier for your GitHub Sponsors profile.
-POST	 /createSponsorship 	Filtering Endpoint	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
-POST	 /createSponsorships 	Filtering Endpoint	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
-POST	 /createTeamDiscussion 	Filtering Endpoint	Creates a new team discussion.
-POST	 /createTeamDiscussionComment 	Filtering Endpoint	Creates a new team discussion comment.
-POST	 /declineTopicSuggestion 	Filtering Endpoint	Rejects a suggested topic for the repository.
-POST	 /deleteLinkedBranch 	Filtering Endpoint	Unlink a branch from an issue.
-POST	 /dequeuePullRequest 	Filtering Endpoint	Remove a pull request from the merge queue.
-POST	 /disablePullRequestAutoMerge 	Filtering Endpoint	Disable auto merge on the given pull request.
-POST	 /dismissPullRequestReview 	Filtering Endpoint	Dismisses an approved or rejected pull request review.
-POST	 /dismissRepositoryVulnerabilityAlert 	Filtering Endpoint	Dismisses the Dependabot alert.
-POST	 /enablePullRequestAutoMerge 	Filtering Endpoint	Enable the default auto-merge on a pull request.
-POST	 /enqueuePullRequest 	Filtering Endpoint	Add a pull request to the merge queue.
-POST	 /followOrganization 	Filtering Endpoint	Follow an organization.
-POST	 /followUser 	Filtering Endpoint	Follow a user.
-POST	 /grantEnterpriseOrganizationsMigratorRole 	Filtering Endpoint	Grant the migrator role to a user for all organizations under an enterprise account.
-POST	 /grantMigratorRole 	Filtering Endpoint	Grant the migrator role to a user or a team.
-POST	 /inviteEnterpriseAdmin 	Filtering Endpoint	Invite someone to become an administrator of the enterprise.
-POST	 /linkProjectV2ToRepository 	Filtering Endpoint	Links a project to a repository.
-POST	 /linkProjectV2ToTeam 	Filtering Endpoint	Links a project to a team.
-POST	 /linkRepositoryToProject 	Filtering Endpoint	Creates a repository link for a project.
-POST	 /lockLockable 	Filtering Endpoint	Lock a lockable object.
-POST	 /markDiscussionCommentAsAnswer 	Filtering Endpoint	Mark a discussion comment as the chosen answer for discussions in an answerable category.
-POST	 /markFileAsViewed 	Filtering Endpoint	Mark a pull request file as viewed.
-POST	 /markProjectV2AsTemplate 	Filtering Endpoint	Mark a project as a template. Note that only projects which are owned by an Organization can be marked as a template.
-POST	 /markPullRequestReadyForReview 	Filtering Endpoint	Marks a pull request ready for review.
-POST	 /mergeBranch 	Filtering Endpoint	Merge a head into a branch.
-POST	 /mergePullRequest 	Filtering Endpoint	Merge a pull request.
-POST	 /minimizeComment 	Filtering Endpoint	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
-POST	 /moveProjectCard 	Filtering Endpoint	Moves a project card to another place.
-POST	 /moveProjectColumn 	Filtering Endpoint	Moves a project column to another place.
-POST	 /pinIssue 	Filtering Endpoint	Pin an issue to a repository.
-POST	 /publishSponsorsTier 	Filtering Endpoint	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
-POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Filtering Endpoint	Regenerates the identity provider recovery codes for an enterprise.
-POST	 /regenerateVerifiableDomainToken 	Filtering Endpoint	Regenerates a verifiable domain's verification token.
-POST	 /rejectDeployments 	Filtering Endpoint	Reject all pending deployments under one or more environments.
-POST	 /removeAssigneesFromAssignable 	Filtering Endpoint	Removes assignees from an assignable object.
-POST	 /removeEnterpriseAdmin 	Filtering Endpoint	Removes an administrator from the enterprise.
-POST	 /removeEnterpriseIdentityProvider 	Filtering Endpoint	Removes the identity provider from an enterprise.
-POST	 /removeEnterpriseMember 	Filtering Endpoint	Removes a user from all organizations within the enterprise.
-POST	 /removeEnterpriseOrganization 	Filtering Endpoint	Removes an organization from the enterprise.
-POST	 /removeEnterpriseSupportEntitlement 	Filtering Endpoint	Removes a support entitlement from an enterprise member.
-POST	 /removeLabelsFromLabelable 	Filtering Endpoint	Removes labels from a Labelable object.
-POST	 /removeOutsideCollaborator 	Filtering Endpoint	Removes outside collaborator from all repositories in an organization.
-POST	 /removeReaction 	Filtering Endpoint	Removes a reaction from a subject.
-POST	 /removeStar 	Filtering Endpoint	Removes a star from a Starrable.
-POST	 /removeUpvote 	Filtering Endpoint	Remove an upvote to a discussion or discussion comment.
-POST	 /reopenDiscussion 	Filtering Endpoint	Reopen a discussion.
-POST	 /reopenIssue 	Filtering Endpoint	Reopen a issue.
-POST	 /reopenPullRequest 	Filtering Endpoint	Reopen a pull request.
-POST	 /requestReviews 	Filtering Endpoint	Set review requests on a pull request.
-POST	 /rerequestCheckSuite 	Filtering Endpoint	Rerequests an existing check suite.
-POST	 /resolveReviewThread 	Filtering Endpoint	Marks a review thread as resolved.
-POST	 /retireSponsorsTier 	Filtering Endpoint	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
-POST	 /revertPullRequest 	Filtering Endpoint	Create a pull request that reverts the changes from a merged pull request.
-POST	 /revokeEnterpriseOrganizationsMigratorRole 	Filtering Endpoint	Revoke the migrator role to a user for all organizations under an enterprise account.
-POST	 /revokeMigratorRole 	Filtering Endpoint	Revoke the migrator role from a user or a team.
-POST	 /setOrganizationInteractionLimit 	Filtering Endpoint	Set an organization level interaction limit for an organization's public repositories.
-POST	 /setRepositoryInteractionLimit 	Filtering Endpoint	Sets an interaction limit setting for a repository.
-POST	 /setUserInteractionLimit 	Filtering Endpoint	Set a user level interaction limit for an user's public repositories.
-POST	 /startOrganizationMigration 	Filtering Endpoint	Starts a GitHub Enterprise Importer organization migration.
-POST	 /startRepositoryMigration 	Filtering Endpoint	Starts a GitHub Enterprise Importer (GEI) repository migration.
-POST	 /submitPullRequestReview 	Filtering Endpoint	Submits a pending pull request review.
-POST	 /transferEnterpriseOrganization 	Filtering Endpoint	Transfer an organization from one enterprise to another enterprise.
-POST	 /transferIssue 	Filtering Endpoint	Transfer an issue to a different repository.
-POST	 /unarchiveProjectV2Item 	Filtering Endpoint	Unarchives a ProjectV2Item.
-POST	 /unarchiveRepository 	Filtering Endpoint	Unarchives a repository.
-POST	 /unfollowOrganization 	Filtering Endpoint	Unfollow an organization.
-POST	 /unfollowUser 	Filtering Endpoint	Unfollow a user.
-POST	 /unlinkProjectV2FromRepository 	Filtering Endpoint	Unlinks a project from a repository.
-POST	 /unlinkProjectV2FromTeam 	Filtering Endpoint	Unlinks a project to a team.
-POST	 /unlockLockable 	Filtering Endpoint	Unlock a lockable object.
-POST	 /unmarkDiscussionCommentAsAnswer 	Filtering Endpoint	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
-POST	 /unmarkFileAsViewed 	Filtering Endpoint	Unmark a pull request file as viewed.
-POST	 /unmarkIssueAsDuplicate 	Filtering Endpoint	Unmark an issue as a duplicate of another issue.
-POST	 /unmarkProjectV2AsTemplate 	Filtering Endpoint	Unmark a project as a template.
-POST	 /unminimizeComment 	Filtering Endpoint	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
-POST	 /unpinIssue 	Filtering Endpoint	Unpin a pinned issue from a repository.
-POST	 /unresolveReviewThread 	Filtering Endpoint	Marks a review thread as unresolved.
-POST	 /unsubscribeFromNotifications 	Filtering Endpoint	Unsubscribes from notifications.
-POST	 /updateCheckSuitePreferences 	Filtering Endpoint	Modifies the settings of an existing check suite.
-POST	 /updateEnterpriseAllowPrivateRepositoryForkingSetting 	Filtering Endpoint	Sets whether private repository forks are enabled for an enterprise.
-POST	 /updateEnterpriseDefaultRepositoryPermissionSetting 	Filtering Endpoint	Sets the base repository permission for organizations in an enterprise.
-POST	 /updateEnterpriseMembersCanChangeRepositoryVisibilitySetting 	Filtering Endpoint	Sets whether organization members with admin permissions on a repository can change repository visibility.
-POST	 /updateEnterpriseMembersCanCreateRepositoriesSetting 	Filtering Endpoint	Sets the members can create repositories setting for an enterprise.
-POST	 /updateEnterpriseMembersCanInviteCollaboratorsSetting 	Filtering Endpoint	Sets whether members can invite collaborators are enabled for an enterprise.
-POST	 /updateEnterpriseMembersCanMakePurchasesSetting 	Filtering Endpoint	Sets whether or not an organization owner can make purchases.
-POST	 /updateEnterpriseMembersCanViewDependencyInsightsSetting 	Filtering Endpoint	Sets the members can view dependency insights for an enterprise.
-POST	 /updateEnterpriseOrganizationProjectsSetting 	Filtering Endpoint	Sets whether organization projects are enabled for an enterprise.
-POST	 /updateEnterpriseRepositoryProjectsSetting 	Filtering Endpoint	Sets whether repository projects are enabled for a enterprise.
-POST	 /updateEnterpriseTeamDiscussionsSetting 	Filtering Endpoint	Sets whether team discussions are enabled for an enterprise.
-POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Filtering Endpoint	Sets whether two factor authentication is required for all users in an enterprise.
-POST	 /updateOrganizationAllowPrivateRepositoryForkingSetting 	Filtering Endpoint	Sets whether private repository forks are enabled for an organization.
-POST	 /updateOrganizationWebCommitSignoffSetting 	Filtering Endpoint	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
-POST	 /updatePatreonSponsorability 	Filtering Endpoint	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
-POST	 /updatePullRequestBranch 	Filtering Endpoint	Merge or Rebase HEAD from upstream branch into pull request branch.
-POST	 /updateRepositoryWebCommitSignoffSetting 	Filtering Endpoint	Sets whether contributors are required to sign off on web-based commits for a repository.
-POST	 /updateTopics 	Filtering Endpoint	Replaces the repository's topics with the given topics.
-POST	 /verifyVerifiableDomain 	Filtering Endpoint	Verify that a verifiable domain has the expected DNS record.
+Count: 0

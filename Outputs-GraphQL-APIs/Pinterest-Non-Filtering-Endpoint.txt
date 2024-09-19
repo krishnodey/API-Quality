@@ -1,9 +1,11 @@
 ***Anti-Pattern*** 
-Count: 22
+Count: 20
 GET	 /v5//pins 	Non-Filtering Endpoint	View, create, update, or delete information about Pins.
-POST	 /v5/pins/{pin_id}/save	Non-Filtering Endpoint	Save a Pin on a board or board section owned by the "operation user_account".
+POST	 /v5//pins 	Non-Filtering Endpoint	Create a Pin on a board or board section owned by the "operation user_account".
 GET	 /v5/boards 	Non-Filtering Endpoint	View, create, update, or delete information about boards.
+POST	 /v5/boards 	Non-Filtering Endpoint	Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
 GET	 /v5/media 	Non-Filtering Endpoint	List media uploads filtered by given parameters.
+POST	 /v5/media 	Non-Filtering Endpoint	Register your intent to upload media
 GET	 /v5//user_account 	Non-Filtering Endpoint	Get account information for the "operation user_account"
 GET	 /v5//user_account/analytics 	Non-Filtering Endpoint	Get analytics for the "operation user_account"
 GET	 /v5//user_account/analytics/top_pins 	Non-Filtering Endpoint	Gets analytics data about a user's top pins (limited to the top 50).
@@ -12,25 +14,20 @@ GET	 /user_account/businesses 	Non-Filtering Endpoint	Get a list of your linked 
 GET	 /user_account/followers 	Non-Filtering Endpoint	Get a list of your followers. Ratelimit category: ads_read Sandbox support:enabled
 GET	 /user_account/following 	Non-Filtering Endpoint	Get a list of who a certain user follows.
 GET	 /user_account/following/boards 	Non-Filtering Endpoint	Get a list of the boards a user follows. The request returns a board summary object array.
-POST	 /user_account/following/{username} 	Non-Filtering Endpoint	Use this request, as a signed-in user, to follow another user.
+POST	 /user_account/websites 	Non-Filtering Endpoint	Verify a website as a signed-in user.
 GET	 /user_account/websites 	Non-Filtering Endpoint	Get user websites, claimed or not
+DEL	 /user_account/websites 	Non-Filtering Endpoint	Unverifu a website verified by the signed-in user.
 GET	 /user_account/websites/verification 	Non-Filtering Endpoint	Get verification code for user to install on the website to claim it.
 GET	 /ad_accounts 	Non-Filtering Endpoint	Get a list of the ad_accounts that the "operation user_account" has access to.
-POST	 /ad_accounts/{ad_account_id}/campaigns 	Non-Filtering Endpoint	Create multiple new campaigns. Every campaign has its own campaign_id and houses one or more ad groups, which contain one or more ads.
-POST	 /ad_accounts/{ad_account_id}/ad_previews 	Non-Filtering Endpoint	Create an ad preview given an ad account ID and either an existing organic pin ID or the URL for an image to be used to create the Pin and the ad.
-POST	 /ad_accounts/{ad_account_id}/ads 	Non-Filtering Endpoint	Create multiple new ads. Request must contain ad_group_id, creative_type, and the source Pin pin_id.
-POST	 /ad_accounts/{ad_account_id}/product_group_promotions 	Non-Filtering Endpoint	Add one or more product groups from your catalog to an existing ad group. (Product groups added to an ad group are a 'product group promotion.')
-POST	 /ad_accounts/{ad_account_id}/keywords 	Non-Filtering Endpoint	Create keywords for following entity types(advertiser, campaign, ad group or ad).
-GET	 /ad_accounts/{ad_account_id}/keywords/metrics 	Non-Filtering Endpoint	See keyword metrics for a specified country, aggregated across all of Pinterest.
+POST	 /ad_accounts 	Non-Filtering Endpoint	Create a new ad account. Different ad accounts can support different currencies, payment methods, etc.
 
 ***Patterns*** 
-Count: 70
-POST	 /v5//pins 	Filtering Endpoint	Create a Pin on a board or board section owned by the "operation user_account".
+Count: 72
 GET	 /v5/pins/{pin_id} 	Filtering Endpoint	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
 DELETE	 /v5/pins/{pin_id} 	Filtering Endpoint	Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account.
 PATCH	 /v5/pins/{pin_id} 	Filtering Endpoint	Update a pin owned by the "operating user_account".
 GET	 /v5/pins/{pin_id}/analytics 	Filtering Endpoint	Get analytics for a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
-POST	 /v5/boards 	Filtering Endpoint	Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
+POST	 /v5/pins/{pin_id}/save	Filtering Endpoint	Save a Pin on a board or board section owned by the "operation user_account".
 GET	 /v5/boards/{board_id} 	Filtering Endpoint	Get a board owned by the operation user_account - or a group board that has been shared with this account.
 PATCH	 /v5/boards/{board_id} 	Filtering Endpoint	Update a board owned by the "operating user_account".
 DELETE	 /v5/boards/{board_id} 	Filtering Endpoint	Delete a board owned by the "operation user_account".
@@ -39,12 +36,9 @@ GET	 /v5/boards/{board_id}/sections 	Filtering Endpoint	Get a list of all board 
 PATCH	 /v5/boards/{board_id}/sections 	Filtering Endpoint	Update a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
 DELETE	 /v5/boards/{board_id}/sections/{section_id} 	Filtering Endpoint	Delete a board section on a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
 GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Filtering Endpoint	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
-POST	 /v5/media 	Filtering Endpoint	Register your intent to upload media
 GET	 /v5/media/{media_id} 	Filtering Endpoint	Get details for a registered media upload, including its current status.
-POST	 /user_account/websites 	Filtering Endpoint	Verify a website as a signed-in user.
-DEL	 /user_account/websites 	Filtering Endpoint	Unverifu a website verified by the signed-in user.
+POST	 /user_account/following/{username} 	Filtering Endpoint	Use this request, as a signed-in user, to follow another user.
 GET	 /users/{username}/interests/follow 	Filtering Endpoint	Get a list of a user's following interests in one place.
-POST	 /ad_accounts 	Filtering Endpoint	Create a new ad account. Different ad accounts can support different currencies, payment methods, etc.
 GET	 /ad_accounts/{ad_account_id} 	Filtering Endpoint	Get an ad account
 GET	 /ad_accounts/{ad_account_id}/analytics 	Filtering Endpoint	Get analytics for the specified ad_account_id, filtered by the specified options.
 GET	 /ad_accounts/{ad_account_id}/mmm_reports 	Filtering Endpoint	Get an mmm report for an ad account. This returns a URL to an mmm metrics report given a token returned from the create mmm report endpoint.
@@ -56,6 +50,7 @@ GET	 /ad_accounts/{ad_account_id}/targeting_analytics 	Filtering Endpoint	Get ta
 GET	 /ad_accounts/{ad_account_id}/templates 	Filtering Endpoint	Gets all Templates associated with an ad account ID.
 POST	 /ad_accounts/{ad_account_id}/templates/{template_id}/reports 	Filtering Endpoint	This takes a template ID and an optional custom timeframe and constructs an asynchronous report based on the template. It returns a token that you can use to download the report when it is ready.
 GET	 /ad_accounts/{ad_account_id}/campaigns  	Filtering Endpoint	Get a list of the campaigns in the specified ad_account_id, filtered by the specified options.
+POST	 /ad_accounts/{ad_account_id}/campaigns 	Filtering Endpoint	Create multiple new campaigns. Every campaign has its own campaign_id and houses one or more ad groups, which contain one or more ads.
 PATCH	 /ad_accounts/{ad_account_id}/campaigns 	Filtering Endpoint	Update multiple ad campaigns based on campaign_ids.
 GET	 /ad_accounts/{ad_account_id}/campaigns/analytics 	Filtering Endpoint	Get analytics for the specified campaigns in the specified ad_account_id, filtered by the specified options.
 GET	 /ad_accounts/{ad_account_id}/campaigns/targeting_analytics 	Filtering Endpoint	Get targeting analytics for one or more campaigns.
@@ -68,11 +63,14 @@ GET	 /ad_accounts/{ad_account_id}/ad_groups/targeting_analytics 	Filtering Endpo
 POST	 /ad_accounts/{ad_account_id}/ad_groups/audience_sizing 	Filtering Endpoint	Get potential audience size for an ad group with given targeting criteria.
 GET	 /ad_accounts/{ad_account_id}/ad_groups/{ad_group_id} 	Filtering Endpoint	Get a specific ad given the ad ID. If your pin is rejected, rejected_reasons will contain additional information from the Ad Review process.
 POST	 /ad_accounts/{ad_account_id}/bid_floor 	Filtering Endpoint	List bid floors for your campaign configuration. Bid floors are given in microcurrency values based on the currency in the bid floor specification.
+POST	 /ad_accounts/{ad_account_id}/ad_previews 	Filtering Endpoint	Create an ad preview given an ad account ID and either an existing organic pin ID or the URL for an image to be used to create the Pin and the ad.
 GET	 /ad_accounts/{ad_account_id}/ads 	Filtering Endpoint	List ads that meet the filters provided: Listed campaign ids or ad group ids or ad ids Listed entity statuses If no filter is provided, all ads in the ad account are returned.
+POST	 /ad_accounts/{ad_account_id}/ads 	Filtering Endpoint	Create multiple new ads. Request must contain ad_group_id, creative_type, and the source Pin pin_id.
 PATCH	 /ad_accounts/{ad_account_id}/ads 	Filtering Endpoint	Update multiple existing ads
 GET	 /ad_accounts/{ad_account_id}/ads/analytics 	Filtering Endpoint	Get analytics for the specified ads in the specified ad_account_id, filtered by the specified options.
 GET	 /ad_accounts/{ad_account_id}/ads/targeting_analytics 	Filtering Endpoint	Get targeting analytics for one or more ads.
 GET	 /ad_accounts/{ad_account_id}/ads/{ad_id} 	Filtering Endpoint	Get a specific ad given the ad ID. If your pin is rejected, rejected_reasons will contain additional information from the Ad Review process.
+POST	 /ad_accounts/{ad_account_id}/product_group_promotions 	Filtering Endpoint	Add one or more product groups from your catalog to an existing ad group. (Product groups added to an ad group are a 'product group promotion.')
 PATCH	 /ad_accounts/{ad_account_id}/product_group_promotions 	Filtering Endpoint	Update multiple existing Product Group Promotions (by product_group_id)
 GET	 /ad_accounts/{ad_account_id}/product_group_promotions 	Filtering Endpoint	List existing product group promotions associated with an ad account.
 GET	 /ad_accounts/{ad_account_id}/product_group_promotions/{product_group_promotion_id} 	Filtering Endpoint	Get a product group promotion by id
@@ -90,7 +88,9 @@ GET	 /ad_accounts/{ad_account_id}/customer_lists 	Filtering Endpoint	Get a set o
 GET	 /ad_accounts/{ad_account_id}/customer_lists/{customer_list_id} 	Filtering Endpoint	Gets a specific customer list given the customer list ID.
 PATCH	 /ad_accounts/{ad_account_id}/customer_lists/{customer_list_id} 	Filtering Endpoint	Append or remove records to/from an existing customer list. (A customer list is one of the four types of Pinterest audiences.)
 GET	 /ad_accounts/{ad_account_id}/keywords 	Filtering Endpoint	Get a list of keywords based on the filters provided. If no filter is provided, it will default to the ad_account_id filter, which means it will only return keywords that specifically have parent_id set to the ad_account_id. Note: Keywords can have ad_account_ids, campaign_ids, and ad_group_ids set as their parent_ids. Keywords created through Ads Manager will have their parent_id set to an ad_group_id, not ad_account_id.
+POST	 /ad_accounts/{ad_account_id}/keywords 	Filtering Endpoint	Create keywords for following entity types(advertiser, campaign, ad group or ad).
 PATCH	 /ad_accounts/{ad_account_id}/keywords 	Filtering Endpoint	Update one or more keywords' bid and archived fields.Archiving a keyword effectively deletes it - keywords no longer receive metrics and no longer visible within the parent entity's keywords list.
+GET	 /ad_accounts/{ad_account_id}/keywords/metrics 	Filtering Endpoint	See keyword metrics for a specified country, aggregated across all of Pinterest.
 GET	 /trends/keywords/{region}/top/{trend_type} 	Filtering Endpoint	Get the top trending search keywords among the Pinterest user audience.
 GET	 /ad_accounts/{ad_account_id}/targeting_templates 	Filtering Endpoint	Get a list of the targeting templates in the specified ad_account_id
 POST	 /ad_accounts/{ad_account_id}/targeting_templates 	Filtering Endpoint	Targeting templates allow advertisers to save a set of targeting details including audience lists, keywords & interest, demographics, and placements to use more than once during the campaign creation process.

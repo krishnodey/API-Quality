@@ -1,25 +1,25 @@
 ***Anti-Pattern*** 
-Count: 11
-DELETE	 /devices/{id} 	Non-Filtering Endpoint	Removes a device associated to the user.
+Count: 5
+PUT	 /devices 	Non-Filtering Endpoint	Creates a new device associated to the user.
 GET	 /devices 	Non-Filtering Endpoint	Returns the list of devices associated to the user.
-DELETE	 /devices/{id} 	Non-Filtering Endpoint	Removes a device associated to the user
-PUT	 /devices/{id}/certs 	Non-Filtering Endpoint	Creates a new cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
-DELETE	 /devices/{id}/certs/{cid} 	Non-Filtering Endpoint	Removes a cert associated to a device
-POST	 /devices/{id}/pass 	Non-Filtering Endpoint	Check if the password matches.
-PUT	 /things/{id}/properties 	Non-Filtering Endpoint	Creates a new property associated to a thing
-PUT	 /things/{id}/properties/{pid}/publish 	Non-Filtering Endpoint	Publish a property value to MQTT
 POST	 /series/batch_query 	Non-Filtering Endpoint	Returns the batch of time-series data
 POST	 /series/batch_query_raw 	Non-Filtering Endpoint	Returns the batch of time-series data raw
 POST	 /series/batch_query_raw/lastvalue 	Non-Filtering Endpoint	Returns the batch of time-series data raw
 
 ***Patterns*** 
-Count: 9
-PUT	 /devices 	Filtering Endpoint	Creates a new device associated to the user.
+Count: 15
+DELETE	 /devices/{id} 	Filtering Endpoint	Removes a device associated to the user.
 GET	 /devices/{id}/events 	Filtering Endpoint	GET device events.
 GET	 /devices/{id}/properties 	Filtering Endpoint	GET device properties.
 GET	 /devices/{id} 	Filtering Endpoint	Returns the device requested by the user.
+DELETE	 /devices/{id} 	Filtering Endpoint	Removes a device associated to the user
 GET	 /devices/{id}/properties/{pid} 	Filtering Endpoint	GET device properties values in a range of time
 PUT	 /devices/{id}/properties 	Filtering Endpoint	Update device properties last values
+PUT	 /devices/{id}/certs 	Filtering Endpoint	Creates a new cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+DELETE	 /devices/{id}/certs/{cid} 	Filtering Endpoint	Removes a cert associated to a device
 GET	 /devices/{id}/certs 	Filtering Endpoint	Returns the list of certs associated to the device
 GET	 /devices/{id}/certs/{cid} 	Filtering Endpoint	Returns the cert requested by the user
 POST	 /devices/{id}/certs/{cid} 	Filtering Endpoint	Updates a cert associated to a device. The csr is signed and saved in database. The CommonName will be replaced with the device id.
+POST	 /devices/{id}/pass 	Filtering Endpoint	Check if the password matches.
+PUT	 /things/{id}/properties 	Filtering Endpoint	Creates a new property associated to a thing
+PUT	 /things/{id}/properties/{pid}/publish 	Filtering Endpoint	Publish a property value to MQTT

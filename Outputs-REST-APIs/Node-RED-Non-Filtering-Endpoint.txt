@@ -1,20 +1,20 @@
 ***Anti-Pattern*** 
-Count: 6
+Count: 9
 GET	 /auth/login 	Non-Filtering Endpoint	Get the active authentication scheme
+POST	 /auth/token 	Non-Filtering Endpoint	Exchange credentials for access token
+POST	 /auth/revoke 	Non-Filtering Endpoint	Revoke an access token
 GET	 /settings 	Non-Filtering Endpoint	Get the runtime settings
 GET	 /flows 	Non-Filtering Endpoint	Get the active flow configuration
+POST	 /flows 	Non-Filtering Endpoint	Set the active flow configuration
+POST	 /flow 	Non-Filtering Endpoint	Add a flow to the active configuration
 GET	 /nodes 	Non-Filtering Endpoint	Get a list of the installed nodes
-PUT	 /nodes/:module 	Non-Filtering Endpoint	Enable/Disable a node module
-DELETE	 /nodes/:module 	Non-Filtering Endpoint	Remove a node module
+POST	 /nodes 	Non-Filtering Endpoint	Install a new node module
 
 ***Patterns*** 
-Count: 9
-POST	 /auth/token 	Filtering Endpoint	Exchange credentials for access token
-POST	 /auth/revoke 	Filtering Endpoint	Revoke an access token
-POST	 /flows 	Filtering Endpoint	Set the active flow configuration
-POST	 /flow 	Filtering Endpoint	Add a flow to the active configuration
+Count: 6
 GET	 /flow/:id 	Filtering Endpoint	Get an individual flow configuration
 PUT	 /flow/:id 	Filtering Endpoint	Update an individual flow configuration
 DELETE	 /flow/:id 	Filtering Endpoint	Delete an individual flow configuration
-POST	 /nodes 	Filtering Endpoint	Install a new node module
 GET	 /nodes/:module 	Filtering Endpoint	Get a node module’s information
+PUT	 /nodes/:module 	Filtering Endpoint	Enable/Disable a node module
+DELETE	 /nodes/:module 	Filtering Endpoint	Remove a node module

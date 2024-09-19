@@ -1,38 +1,38 @@
 ***Anti-Pattern*** 
-Count: 9
+Count: 29
+POST	 /delegateAccessTokenCreate	Non-Filtering Endpoint	creating a delegate access token.
+POST	 /storefrontAccessTokenCreate	Non-Filtering Endpoint	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
 POST	 /storefrontAccessTokenDelete	Non-Filtering Endpoint	Deletes a storefront access token.
+POST	 /AccessScope	Non-Filtering Endpoint	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
+POST	 /DelegateAccessToken	Non-Filtering Endpoint	A token that delegates a set of scopes from the original permission.
+POST	 /StorefrontAccessToken	Non-Filtering Endpoint	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
 GET	 /shopifyqlQuery	Non-Filtering Endpoint	Returns the results of a ShopifyQL query
+POST	 /ErrorPosition 	Non-Filtering Endpoint	Error position information in a ShopifyQL parsing error.
+POST	 /ParseError 	Non-Filtering Endpoint	A ShopifyQL parsing error.
+POST	 /ParseErrorRange	Non-Filtering Endpoint	A range of ShopifyQL parsing errors.
+POST	 /PolarisVizDataPoint	Non-Filtering Endpoint	A PolarisViz data point structure for ShopifyQL query.
+POST	 /PolarisVizDataSeries	Non-Filtering Endpoint	The data series used for PolarisViz visualization.
+POST	 /PolarisVizResponse 	Non-Filtering Endpoint	A PolarisViz response to a ShopifyQL query.
+POST	 /TableData 	Non-Filtering Endpoint	The result in a tabular format with schema information and formatted and unformatted row data.
+POST	 /TableDataColumn 	Non-Filtering Endpoint	A nested array representation of the data. An index in an array represents a row number.
+POST	 /TableResponse 	Non-Filtering Endpoint	The default table response structure for a ShopifyQL query.
 GET	 /appByHandle 	Non-Filtering Endpoint	Fetches app by handle. Returns null if the app doesn't exist.
 GET	 /appByKey 	Non-Filtering Endpoint	Fetches an app by its client ID. Returns null if the app doesn't exist.
 GET	 /appInstallations 	Non-Filtering Endpoint	A list of app installations. To use this query, you need to contact Shopify Support to grant your custom app the read_apps access scope. Public apps can't be granted this access scope.
 GET	 /currentAppInstallation 	Non-Filtering Endpoint	Return the AppInstallation for the currently authenticated App.
-GET	 /publication/{id} 	Non-Filtering Endpoint	Lookup a publication by ID.
 GET	 /publications 	Non-Filtering Endpoint	List of publications.
+POST	 /publicationCreate 	Non-Filtering Endpoint	Creates a publication.
 POST	 /publicationUpdate	Non-Filtering Endpoint	Updates a publication.
+POST	 /AppFeedback 	Non-Filtering Endpoint	Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store.
+POST	 /AppInstallation 	Non-Filtering Endpoint	Represents an installed application on a shop.
+POST	 /FailedRequirement 	Non-Filtering Endpoint	Requirements that must be met before an app can be installed.
+POST	 /Link 	Non-Filtering Endpoint	A link to direct users to.
+POST	 /Publication 	Non-Filtering Endpoint	A publication is a group of products and collections that is published to an app.
+POST	 /ResourceFeedback	Non-Filtering Endpoint	Represents feedback from apps about a resource, and the steps required to set up the apps on the shop.
 
 ***Patterns*** 
-Count: 24
-POST	 /delegateAccessTokenCreate	Filtering Endpoint	creating a delegate access token.
-POST	 /storefrontAccessTokenCreate	Filtering Endpoint	Creates a storefront access token. An app can have a maximum of 100 active storefront access tokens for each shop.
-POST	 /AccessScope	Filtering Endpoint	The permission required to access a Shopify Admin API or Storefront API resource for a shop. Merchants grant access scopes that are requested by applications.
-POST	 /DelegateAccessToken	Filtering Endpoint	A token that delegates a set of scopes from the original permission.
-POST	 /StorefrontAccessToken	Filtering Endpoint	A token that's used to delegate unauthenticated access scopes to clients that need to access the unauthenticated Storefront API. An app can have a maximum of 100 active storefront access tokens for each shop.
-POST	 /ErrorPosition 	Filtering Endpoint	Error position information in a ShopifyQL parsing error.
-POST	 /ParseError 	Filtering Endpoint	A ShopifyQL parsing error.
-POST	 /ParseErrorRange	Filtering Endpoint	A range of ShopifyQL parsing errors.
-POST	 /PolarisVizDataPoint	Filtering Endpoint	A PolarisViz data point structure for ShopifyQL query.
-POST	 /PolarisVizDataSeries	Filtering Endpoint	The data series used for PolarisViz visualization.
-POST	 /PolarisVizResponse 	Filtering Endpoint	A PolarisViz response to a ShopifyQL query.
-POST	 /TableData 	Filtering Endpoint	The result in a tabular format with schema information and formatted and unformatted row data.
-POST	 /TableDataColumn 	Filtering Endpoint	A nested array representation of the data. An index in an array represents a row number.
-POST	 /TableResponse 	Filtering Endpoint	The default table response structure for a ShopifyQL query.
+Count: 4
 GET	 /query/{id} 	Filtering Endpoint	Lookup an App by ID or return the currently authenticated App.
 GET	 /appInstallation/{id} 	Filtering Endpoint	Lookup an AppInstallation by ID or return the AppInstallation for the currently authenticated App.
-POST	 /publicationCreate 	Filtering Endpoint	Creates a publication.
+GET	 /publication/{id} 	Filtering Endpoint	Lookup a publication by ID.
 POST	 /publicationDelete{id} 	Filtering Endpoint	Deletes a publication.
-POST	 /AppFeedback 	Filtering Endpoint	Reports the status of shops and their resources and displays this information within Shopify admin. AppFeedback is used to notify merchants about steps they need to take to set up an app on their store.
-POST	 /AppInstallation 	Filtering Endpoint	Represents an installed application on a shop.
-POST	 /FailedRequirement 	Filtering Endpoint	Requirements that must be met before an app can be installed.
-POST	 /Link 	Filtering Endpoint	A link to direct users to.
-POST	 /Publication 	Filtering Endpoint	A publication is a group of products and collections that is published to an app.
-POST	 /ResourceFeedback	Filtering Endpoint	Represents feedback from apps about a resource, and the steps required to set up the apps on the shop.

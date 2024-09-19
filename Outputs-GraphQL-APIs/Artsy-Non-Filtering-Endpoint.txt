@@ -1,12 +1,11 @@
 ***Anti-Pattern*** 
-Count: 4
+Count: 3
 GET	 v2/sales 	Non-Filtering Endpoint	Users can retrieve sales by following the sales link from root.live	Boolean- filter live auctions only is_auction	Boolean- filter auctions only published	Boolean- limit to published sales
-GET	 v2/search?q=Andy+Warhol 	Non-Filtering Endpoint	Search for anything by following the search link from root with a query parameter.
 GET	 v2/status 	Non-Filtering Endpoint	This API retrieves the system status.
 GET	 v2/current_user 	Non-Filtering Endpoint	Retrieve the currently authenticated user by following the current_user link from root.
 
 ***Patterns*** 
-Count: 17
+Count: 18
 GET	 v2/applications/{id} 	Filtering Endpoint	Users can retrieve a specific application by ID by rendering the "application" link template from root.
 GET	 v2/artists/{id} 	Filtering Endpoint	Users can retrieve a specific artist by ID by rendering the "artist" link template from root.
 GET	 v2/artworks/{id} 	Filtering Endpoint	Users can retrieve a specific artwork by ID by rendering the "artwork" link template from root.
@@ -21,6 +20,7 @@ GET	 v2/genes/{id} 	Filtering Endpoint	Retrieve genes by following the genes lin
 GET	 v2/images/{id} 	Filtering Endpoint	show_id	Retrieve images for a given show, often called "installation shots".
 GET	 v2/partners/{id} 	Filtering Endpoint	Users can retrieve a specific partner by ID by rendering the "partner" link template from root.
 GET	 v2/profiles/{id} 	Filtering Endpoint	Users can retrieve a specific profile by ID by rendering the "profile" link template from root.
+GET	 v2/search?q=Andy+Warhol 	Filtering Endpoint	Search for anything by following the search link from root with a query parameter.
 GET	 v2/shows/{id} 	Filtering Endpoint	Retrieve shows by following the shows link from root, or the "shows" links within a partner.
 GET	 v2/user_details/{id} 	Filtering Endpoint	Users can retrieve a specific user by following the "user_details" link from a user.
 GET	 v2/users/{id}	Filtering Endpoint	Users can retrieve a specific user by rendering the "user" link template from root.

@@ -1,51 +1,54 @@
 ***Anti-Pattern*** 
-Count: 17
+Count: 28
+GET	 /abuseReportLabels 	Non-Filtering Endpoint	Abuse report labels.
 GET	 /aiMessages 	Non-Filtering Endpoint	Find GitLab Duo Chat messages.
-GET	 /ciCatalogResource/{id}	Non-Filtering Endpoint	A single CI/CD Catalog resource visible to an authorized user.
-GET	 /ciCatalogResources/{projectPath}	Non-Filtering Endpoint	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
-GET	 /ciConfig/{projectPath} 	Non-Filtering Endpoint	Linted and processed contents of a CI config. Should not be requested more than once per request
-GET	 /ciMinutesUsage/{namespaceId} 	Non-Filtering Endpoint	Compute usage data for a namespace.
-GET	 /ciPipelineStage/{id} 	Non-Filtering Endpoint	Stage belonging to a CI pipeline.
+GET	 /auditEventDefinitions 	Non-Filtering Endpoint	Definitions for all audit events available on the instance.
+GET	 /auditEventsInstanceAmazonS3Configurations 	Non-Filtering Endpoint	Instance-level Amazon S3 configurations for audit events.
+GET	 /ciQueueingHistory 	Non-Filtering Endpoint	Time it took for ci job to be picked up by runner in percentiles.
 GET	 /ciVariables 	Non-Filtering Endpoint	List of the instanceâ€™s CI/CD variables.
+GET	 /currentLicense 	Non-Filtering Endpoint	Fields related to the current license.
 GET	 /currentUser 	Non-Filtering Endpoint	Get information about current user.
-GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Non-Filtering Endpoint	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
+GET	 /designManagement 	Non-Filtering Endpoint	Fields related to design management.
+GET	 /echo 	Non-Filtering Endpoint	Testing endpoint to validate the API with.
+GET	 /frecentGroups 	Non-Filtering Endpoint	A userâ€™s frecently visited groups.
+GET	 /frecentProjects 	Non-Filtering Endpoint	A userâ€™s frecently visited projects.
 GET	 /geoNode 	Non-Filtering Endpoint	Find a Geo node
+GET	 /gitpodEnabled 	Non-Filtering Endpoint	Whether Gitpod is enabled in application settings.
 GET	 /group 	Non-Filtering Endpoint	Find a group
 GET	 groups 	Non-Filtering Endpoint	Find groups.
+GET	 /instanceExternalAuditEventDestinations 	Non-Filtering Endpoint	Instance level external audit event destinations.
+GET	 /instanceGoogleCloudLoggingConfigurations 	Non-Filtering Endpoint	Instance level google cloud logging configurations.
+GET	 /instanceSecurityDashboard 	Non-Filtering Endpoint	Fields related to Instance Security Dashboard.
 GET	 /jobs 	Non-Filtering Endpoint	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
+GET	 /licenseHistoryEntries 	Non-Filtering Endpoint	Fields related to entries in the license history.
 GET	 /memberRolePermissions 	Non-Filtering Endpoint	List of all customizable permissions.
-GET	 /memberRoles/{id} 	Non-Filtering Endpoint	Member roles available for the instance.
+GET	 /metadata 	Non-Filtering Endpoint	Metadata about GitLab.
 GET	 /namespace 	Non-Filtering Endpoint	Find a namespace.
 GET	 /organizations 	Non-Filtering Endpoint	List organizations.
+GET	 /queryComplexity 	Non-Filtering Endpoint	Information about the complexity of the GraphQL query.
+GET	 /runnerSetup 	Non-Filtering Endpoint	Runner setup instructions.
+GET	 /selfManagedAddOnEligibleUsers 	Non-Filtering Endpoint	Users within the self-managed instance who are eligible for add-ons
 
 ***Patterns*** 
-Count: 38
+Count: 27
 GET	 /abuseReport/{id} 	Filtering Endpoint	Find an abuse report.
-GET	 /abuseReportLabels 	Filtering Endpoint	Abuse report labels.
 GET	 /addOnPurchase/{id} 	Filtering Endpoint	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
-GET	 /auditEventDefinitions 	Filtering Endpoint	Definitions for all audit events available on the instance.
-GET	 /auditEventsInstanceAmazonS3Configurations 	Filtering Endpoint	Instance-level Amazon S3 configurations for audit events.
 GET	 /boardList/{id} 	Filtering Endpoint	Find an issue board list.
-GET	 /ciQueueingHistory 	Filtering Endpoint	Time it took for ci job to be picked up by runner in percentiles.
+GET	 /ciCatalogResource/{id}	Filtering Endpoint	A single CI/CD Catalog resource visible to an authorized user.
+GET	 /ciCatalogResources/{projectPath}	Filtering Endpoint	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
+GET	 /ciConfig/{projectPath} 	Filtering Endpoint	Linted and processed contents of a CI config. Should not be requested more than once per request
+GET	 /ciMinutesUsage/{namespaceId} 	Filtering Endpoint	Compute usage data for a namespace.
+GET	 /ciPipelineStage/{id} 	Filtering Endpoint	Stage belonging to a CI pipeline.
 GET	 /containerRepository/{id} 	Filtering Endpoint	Find a container repository.
-GET	 /currentLicense 	Filtering Endpoint	Fields related to the current license.
-GET	 /designManagement 	Filtering Endpoint	Fields related to design management.
 GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Filtering Endpoint	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
-GET	 /echo 	Filtering Endpoint	Testing endpoint to validate the API with.
 GET	 /epicBoardList/{id} 	Filtering Endpoint	Returns EpicList.
-GET	 /frecentGroups 	Filtering Endpoint	A userâ€™s frecently visited groups.
-GET	 /frecentProjects 	Filtering Endpoint	A userâ€™s frecently visited projects.
-GET	 /gitpodEnabled 	Filtering Endpoint	Whether Gitpod is enabled in application settings.
-GET	 /instanceExternalAuditEventDestinations 	Filtering Endpoint	Instance level external audit event destinations.
-GET	 /instanceGoogleCloudLoggingConfigurations 	Filtering Endpoint	Instance level google cloud logging configurations.
-GET	 /instanceSecurityDashboard 	Filtering Endpoint	Fields related to Instance Security Dashboard.
+GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Filtering Endpoint	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
 GET	 /issue/{id} 	Filtering Endpoint	Find an issue.
 GET	 /issues/{assigneeId} 	Filtering Endpoint	Find issues visible to the current user. At least one filter must be provided.
 GET	 /iteration/{id} 	Filtering Endpoint	Find an iteration.
-GET	 /licenseHistoryEntries 	Filtering Endpoint	Fields related to entries in the license history.
 GET	 /memberRole/{id} 	Filtering Endpoint	Finds a single custom role.
+GET	 /memberRoles/{id} 	Filtering Endpoint	Member roles available for the instance.
 GET	 /mergeRequest/{id} 	Filtering Endpoint	Find a merge request.
-GET	 /metadata 	Filtering Endpoint	Metadata about GitLab.
 GET	 /milestone/{id} 	Filtering Endpoint	Find a milestone.
 GET	 /mlModel/{id} 	Filtering Endpoint	Find machine learning models.
 GET	 /note/{id} 	Filtering Endpoint	Find a note.
@@ -53,8 +56,5 @@ GET	 /organization/{id} 	Filtering Endpoint	Find an organization.
 GET	 /package/{id} 	Filtering Endpoint	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
 GET	 /project/{fullPath} 	Filtering Endpoint	Find a project.
 GET	 /projects/{ids} 	Filtering Endpoint	Find projects visible to the current user.
-GET	 /queryComplexity 	Filtering Endpoint	Information about the complexity of the GraphQL query.
 GET	 /runner/{id} 	Filtering Endpoint	Find a runner.
-GET	 /runnerSetup 	Filtering Endpoint	Runner setup instructions.
 GET	 /runners/{creatorId}  	Filtering Endpoint	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.
-GET	 /selfManagedAddOnEligibleUsers 	Filtering Endpoint	Users within the self-managed instance who are eligible for add-ons

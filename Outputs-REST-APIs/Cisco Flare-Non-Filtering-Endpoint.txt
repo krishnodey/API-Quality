@@ -1,26 +1,26 @@
 ***Anti-Pattern*** 
-Count: 3
+Count: 2
 GET	 /environments 	Non-Filtering Endpoint	List environments. Gets a list of all environments.
-POST	 /environments/{environment_id}/zones 	Non-Filtering Endpoint	New zone. Creates a new zone from the template.
-POST	 /environments/{environment_id}/zones/{zone_id}/things 	Non-Filtering Endpoint	New thing. Creates a new thing from the template.
+POST	 /environments 	Non-Filtering Endpoint	New environment Creates a new environment from the template.
 
 ***Patterns*** 
-Count: 22
+Count: 23
 GET	 /environments?latitude={latitude}&longitude={longitude} 	Filtering Endpoint	Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
 GET	 /environments?key={key}&value={value} 	Filtering Endpoint	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
-POST	 /environments 	Filtering Endpoint	New environment Creates a new environment from the template.
 GET	 /environments/{environment_id} 	Filtering Endpoint	Get environment. Gets an environment.
 PUT	 /environments/{environment_id} 	Filtering Endpoint	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
 DELETE	 /environments/{environment_id} 	Filtering Endpoint	Delete environment. Deletes an environment.
 GET	 /environments/{environment_id}/zones 	Filtering Endpoint	List zones. Gets a list of all zones in the environment.
 GET	 /environments/{environment_id}/zones?x={x}&y={y} 	Filtering Endpoint	Gets a list of all zones in the environment. Params can include the following: If x and y coordinates are specified, returns a list of all zones in the environment containing the given point.
 GET	 /environments/{environment_id}/zones?key={key}&value={value} 	Filtering Endpoint	Gets a list of all zones in the environment. Params can include the following: If key and value are specified, returns zones whose data objects contain the given key/value pair.
+POST	 /environments/{environment_id}/zones 	Filtering Endpoint	New zone. Creates a new zone from the template.
 GET	 /environments/{environment_id}/zones/{zone_id} 	Filtering Endpoint	Get zone. Gets a zone.
 PUT	 /environments/{environment_id}/zones/{zone_id} 	Filtering Endpoint	Updates a zone. The message can contain just the properties of the object to be updated.
 DELETE	 /environments/{environment_id}/zones/{zone_id} 	Filtering Endpoint	Delete zone. Deletes a zone.
 GET	 /environments/{environment_id}/zones/{zone_id}/things 	Filtering Endpoint	List things. Gets a list of all things in a zone.
 GET	 /environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} 	Filtering Endpoint	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
 GET	 /environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} 	Filtering Endpoint	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
+POST	 /environments/{environment_id}/zones/{zone_id}/things 	Filtering Endpoint	New thing. Creates a new thing from the template.
 GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	Filtering Endpoint	Get thing. Gets a thing.
 GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	Filtering Endpoint	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
 GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	Filtering Endpoint	Get thing data value. Gets a single data value for a thing.

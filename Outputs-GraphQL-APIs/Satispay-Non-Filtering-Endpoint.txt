@@ -1,23 +1,23 @@
 ***Anti-Pattern*** 
-Count: 5
+Count: 10
 POST	 /v1/authentication_keys 	Non-Filtering Endpoint	Obtain the KeyId. API to retrieve the KeyId
+POST	 /wally-services/protocol/tests/signature 	Non-Filtering Endpoint	Test the Authentication
+POST	 /v1/payments  	Non-Filtering Endpoint	Create payment
 GET	 /v1/payments 	Non-Filtering Endpoint	Get shop-payments list
+POST	 /v1/pre_authorized_payment_tokens 	Non-Filtering Endpoint	Create authorization
 PUT	 /v1/pre_authorized_payment_tokens/id 	Non-Filtering Endpoint	Update authorization
-POST	 /v1/sessions/{id}/events 	Non-Filtering Endpoint	Create session event
+POST	 /v1/mqtt_certificates 	Non-Filtering Endpoint	Create mqtt certificates
+POST	 /v1/sessions 	Non-Filtering Endpoint	Open session
+POST	 /v1/reports 	Non-Filtering Endpoint	Create new report
 GET	 /v1/reports 	Non-Filtering Endpoint	Get list of reports
 
 ***Patterns*** 
-Count: 13
-POST	 /wally-services/protocol/tests/signature 	Filtering Endpoint	Test the Authentication
-POST	 /v1/payments  	Filtering Endpoint	Create payment
+Count: 8
 GET	 /v1/payments/{id} 	Filtering Endpoint	Get payment details
 PUT	 /v1/payments/{id} 	Filtering Endpoint	Update payment
 GET	 /v1/daily_closure/{daily_closure_date} 	Filtering Endpoint	Retrieve daily closure
-POST	 /v1/pre_authorized_payment_tokens 	Filtering Endpoint	Create authorization
 GET	 /v1/pre_authorized_payment_tokens/{id} 	Filtering Endpoint	Get authorization
-POST	 /v1/mqtt_certificates 	Filtering Endpoint	Create mqtt certificates
-POST	 /v1/sessions 	Filtering Endpoint	Open session
+POST	 /v1/sessions/{id}/events 	Filtering Endpoint	Create session event
 GET	 /v1/sessions/{id} 	Filtering Endpoint	Get session details
 PATCH	 /v1/sessions/{id} 	Filtering Endpoint	Update session >
-POST	 /v1/reports 	Filtering Endpoint	Create new report
 GET	 /v1/reports/{report_id} 	Filtering Endpoint	Retrieve a Report

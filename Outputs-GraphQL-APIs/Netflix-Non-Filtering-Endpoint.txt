@@ -1,22 +1,22 @@
 ***Anti-Pattern*** 
-Count: 2
-GET	 /users/{userId}/recommendations 	Non-Filtering Endpoint	recommendationsByUserId
-GET	 /recommendations?category={category}&ageGroup={ageGroup} 	Non-Filtering Endpoint	recommendationsBy
+Count: 10
+POST	 /movies 	Non-Filtering Endpoint	registerMovie
+POST	 /titles 	Non-Filtering Endpoint	registerTitle
+POST	 /binaries/byteBuf 	Non-Filtering Endpoint	registerByteBufBinary
+POST	 /binaries/byteArray 	Non-Filtering Endpoint	registerByteArrayBinary
+POST	 /content/rawContentSource 	Non-Filtering Endpoint	rawContentSource
+POST	 /content/byteBufContent 	Non-Filtering Endpoint	byteBufContent
+POST	 /content/byteArrayContent 	Non-Filtering Endpoint	byteArrayContent
+POST	 /content/stringContent 	Non-Filtering Endpoint	stringContent
+POST	 /content/movieContent 	Non-Filtering Endpoint	movieContent
+POST	 content/movieContentBroken 	Non-Filtering Endpoint	movieContentBroken
 
 ***Patterns*** 
-Count: 15
+Count: 7
 GET	 /movies/{id} 	Filtering Endpoint	findMovieById
 GET	 /rawMovies/{id} 	Filtering Endpoint	findRawMovieById
 GET	 /movies?name={name}&author={author} 	Filtering Endpoint	findMovie
-POST	 /movies 	Filtering Endpoint	registerMovie
-POST	 /titles 	Filtering Endpoint	registerTitle
-POST	 /binaries/byteBuf 	Filtering Endpoint	registerByteBufBinary
-POST	 /binaries/byteArray 	Filtering Endpoint	registerByteArrayBinary
 DELETE	 /movies/{id} 	Filtering Endpoint	deleteMovie
-POST	 /content/rawContentSource 	Filtering Endpoint	rawContentSource
-POST	 /content/byteBufContent 	Filtering Endpoint	byteBufContent
-POST	 /content/byteArrayContent 	Filtering Endpoint	byteArrayContent
-POST	 /content/stringContent 	Filtering Endpoint	stringContent
-POST	 /content/movieContent 	Filtering Endpoint	movieContent
-POST	 content/movieContentBroken 	Filtering Endpoint	movieContentBroken
 POST	 /users/{userId}/recommendations 	Filtering Endpoint	updateRecommendation
+GET	 /users/{userId}/recommendations 	Filtering Endpoint	recommendationsByUserId
+GET	 /recommendations?category={category}&ageGroup={ageGroup} 	Filtering Endpoint	recommendationsBy

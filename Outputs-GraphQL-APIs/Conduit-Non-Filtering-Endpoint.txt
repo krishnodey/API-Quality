@@ -1,35 +1,35 @@
 ***Anti-Pattern*** 
-Count: 2
-GET	 /authentication/verify-email/:verificationToken 	Non-Filtering Endpoint	Verify Email
-GET	 /authentication/verify-change-email/:verificationToken 	Non-Filtering Endpoint	Verify Change Email
+Count: 28
+POST	 /authentication/local/new 	Non-Filtering Endpoint	Create a user
+POST	 /authentication/local 	Non-Filtering Endpoint	Login Request
+POST	 /authentication/local/resent-verification 	Non-Filtering Endpoint	Resend Verification
+POST	 /authentication/forgot-password 	Non-Filtering Endpoint	Forgot Password
+POST	 /authentication/reset-password 	Non-Filtering Endpoint	Reset Password
+POST	 /authentication/local/change-password 	Non-Filtering Endpoint	Change Password
+POST	 /authentication/local/change-email 	Non-Filtering Endpoint	Change Email
+POST	 /authentication/logout 	Non-Filtering Endpoint	Logout Request
+GET	 /authentication/apple 	Non-Filtering Endpoint	Authenticate with Apple
+GET	 /authentication/bitbucket 	Non-Filtering Endpoint	Authenticate with Bitbucket
+GET	 /authentication/facebook 	Non-Filtering Endpoint	Authenticate with Facebook
+GET	 /authentication/figma 	Non-Filtering Endpoint	Authenticate with Figma
+GET	 /authentication/init/github 	Non-Filtering Endpoint	Authenticate with GitHub
+GET	 /authentication/init/gitlab 	Non-Filtering Endpoint	Authenticate with GitLab
+GET	 /authentication/init/google 	Non-Filtering Endpoint	Authenticate with Google
+GET	 /authentication/linkedin 	Non-Filtering Endpoint	Authenticate with LinkedIn
+GET	 /authentication/init/microsoft 	Non-Filtering Endpoint	Authenticate with Microsoft
+GET	 /authentication/init/reddit 	Non-Filtering Endpoint	Authenticate with Reddit
+GET	 /authentication/init/slack 	Non-Filtering Endpoint	Authenticate with Slack
+GET	 /authentication/init/twitch 	Non-Filtering Endpoint	Authenticate with Twitch
+GET	 /authentication/init/twitter 	Non-Filtering Endpoint	Authenticate with Twitter
+PUT	 /authentication/twoFa/enable 	Non-Filtering Endpoint	Enable two factor authentication with phone method
+POST	 /authentication/twoFa/enable/verify 	Non-Filtering Endpoint	Verify two factor authentication code
+POST	 /authentication/twoFa/authorize 	Non-Filtering Endpoint	Login with two factor authentication
+POST	 /authentication/twoFa/verify 	Non-Filtering Endpoint	Verify two factor authentication code
+GET	 /authentication/twoFa/generate 	Non-Filtering Endpoint	Generate backup codes
+POST	 /authentication/twoFa/recover 	Non-Filtering Endpoint	Recover two factor authentication
+PUT	 /authentication/twoFa/disable 	Non-Filtering Endpoint	Disable two factor authentication
 
 ***Patterns*** 
-Count: 28
-POST	 /authentication/local/new 	Filtering Endpoint	Create a user
-POST	 /authentication/local 	Filtering Endpoint	Login Request
-POST	 /authentication/local/resent-verification 	Filtering Endpoint	Resend Verification
-POST	 /authentication/forgot-password 	Filtering Endpoint	Forgot Password
-POST	 /authentication/reset-password 	Filtering Endpoint	Reset Password
-POST	 /authentication/local/change-password 	Filtering Endpoint	Change Password
-POST	 /authentication/local/change-email 	Filtering Endpoint	Change Email
-POST	 /authentication/logout 	Filtering Endpoint	Logout Request
-GET	 /authentication/apple 	Filtering Endpoint	Authenticate with Apple
-GET	 /authentication/bitbucket 	Filtering Endpoint	Authenticate with Bitbucket
-GET	 /authentication/facebook 	Filtering Endpoint	Authenticate with Facebook
-GET	 /authentication/figma 	Filtering Endpoint	Authenticate with Figma
-GET	 /authentication/init/github 	Filtering Endpoint	Authenticate with GitHub
-GET	 /authentication/init/gitlab 	Filtering Endpoint	Authenticate with GitLab
-GET	 /authentication/init/google 	Filtering Endpoint	Authenticate with Google
-GET	 /authentication/linkedin 	Filtering Endpoint	Authenticate with LinkedIn
-GET	 /authentication/init/microsoft 	Filtering Endpoint	Authenticate with Microsoft
-GET	 /authentication/init/reddit 	Filtering Endpoint	Authenticate with Reddit
-GET	 /authentication/init/slack 	Filtering Endpoint	Authenticate with Slack
-GET	 /authentication/init/twitch 	Filtering Endpoint	Authenticate with Twitch
-GET	 /authentication/init/twitter 	Filtering Endpoint	Authenticate with Twitter
-PUT	 /authentication/twoFa/enable 	Filtering Endpoint	Enable two factor authentication with phone method
-POST	 /authentication/twoFa/enable/verify 	Filtering Endpoint	Verify two factor authentication code
-POST	 /authentication/twoFa/authorize 	Filtering Endpoint	Login with two factor authentication
-POST	 /authentication/twoFa/verify 	Filtering Endpoint	Verify two factor authentication code
-GET	 /authentication/twoFa/generate 	Filtering Endpoint	Generate backup codes
-POST	 /authentication/twoFa/recover 	Filtering Endpoint	Recover two factor authentication
-PUT	 /authentication/twoFa/disable 	Filtering Endpoint	Disable two factor authentication
+Count: 2
+GET	 /authentication/verify-email/:verificationToken 	Filtering Endpoint	Verify Email
+GET	 /authentication/verify-change-email/:verificationToken 	Filtering Endpoint	Verify Change Email

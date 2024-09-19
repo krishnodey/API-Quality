@@ -1049,7 +1049,7 @@ class ApiAnalyzer:
         ap_count = 0
         
         def extract_intention(api_documentation):
-            fetch_keywords = ["fetch", "return", "get", "retrieve", "list", "update", "delete", "find"]
+            fetch_keywords = [""]
             update_keywords = ["update", "modify", "change", "edit"]
             create_keywords = ["create", "add", "post", "insert"]
             delete_keywords = ["delete", "remove", "destroy"]

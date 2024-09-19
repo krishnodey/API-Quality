@@ -1,11 +1,11 @@
 ***Anti-Pattern*** 
-Count: 6
+Count: 4
 GET	 /balances 	Non-Filtering Endpoint	Get current balances.
-POST	 /order/{pairs} 	Non-Filtering Endpoint	Register your order.
-POST	 /cancel/{pairs} 	Non-Filtering Endpoint	Cancel the registered order.
 GET	 /openOrders 	Non-Filtering Endpoint	Get your open orders.
 GET	 /tradeHistories 	Non-Filtering Endpoint	Get your completed order.
 GET	 /balanceHistories 	Non-Filtering Endpoint	Get your balance History.
 
 ***Patterns*** 
-Count: 0
+Count: 2
+POST	 /order/{pairs} 	Filtering Endpoint	Register your order.
+POST	 /cancel/{pairs} 	Filtering Endpoint	Cancel the registered order.

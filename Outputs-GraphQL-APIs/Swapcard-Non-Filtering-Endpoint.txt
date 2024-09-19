@@ -1,9 +1,11 @@
 ***Anti-Pattern*** 
-Count: 21
-POST	 /createEventDocument/{eventId} 	Non-Filtering Endpoint	Create swapcard event document
-POST	 /createEventGroup/{eventId}	Non-Filtering Endpoint	Create a new group on the event
-POST	 /createEventPlanningLink/{eventId} 	Non-Filtering Endpoint	Create swapcard event planning link
-POST	 /createEventSponsor/{eventId} 	Non-Filtering Endpoint	Create swapcard event sponsor
+Count: 24
+POST	 /createExhibitorLinkRelation	Non-Filtering Endpoint	Create a relation between two exhibitors in an exhibitor link
+POST	 /createExhibitorLink	Non-Filtering Endpoint	Create an exhibitor link in an event
+POST	 /createFieldDefinition	Non-Filtering Endpoint	Create a new field definition in an event, which is required for custom fields.
+POST	 /createProduct 	Non-Filtering Endpoint	Create a new product in an event.
+POST	 /createPushNotification 	Non-Filtering Endpoint	Create a push notification
+POST	 /createRole 	Non-Filtering Endpoint	Create a role
 POST	 /deleteExhibitorLinkRelation 	Non-Filtering Endpoint	Delete a relation between two exhibitors in an exhibitor link
 POST	 /deleteExhibitorLink 	Non-Filtering Endpoint	Delete an exhibitor link and all its relations.
 POST	 /deleteFieldDefinitions	Non-Filtering Endpoint	Delete field definitions from an event. All values associated will be removed as well.
@@ -21,15 +23,13 @@ POST	 /updateProducts	Non-Filtering Endpoint	Update an existing product.
 POST	 /updateRole 	Non-Filtering Endpoint	Update a role
 POST	 updateTicketType	Non-Filtering Endpoint	Update an existing ticket type.
 POST	 updateUserTerm	Non-Filtering Endpoint	Update an existing user term.
+POST	 /upsertEventNotification	Non-Filtering Endpoint	Upsert a notification for an event
 
 ***Patterns*** 
-Count: 9
-POST	 /createExhibitorLinkRelation	Filtering Endpoint	Create a relation between two exhibitors in an exhibitor link
-POST	 /createExhibitorLink	Filtering Endpoint	Create an exhibitor link in an event
-POST	 /createFieldDefinition	Filtering Endpoint	Create a new field definition in an event, which is required for custom fields.
-POST	 /createProduct 	Filtering Endpoint	Create a new product in an event.
-POST	 /createPushNotification 	Filtering Endpoint	Create a push notification
-POST	 /createRole 	Filtering Endpoint	Create a role
+Count: 6
+POST	 /createEventDocument/{eventId} 	Filtering Endpoint	Create swapcard event document
+POST	 /createEventGroup/{eventId}	Filtering Endpoint	Create a new group on the event
+POST	 /createEventPlanningLink/{eventId} 	Filtering Endpoint	Create swapcard event planning link
+POST	 /createEventSponsor/{eventId} 	Filtering Endpoint	Create swapcard event sponsor
 POST	 /deleteEventExhibitors/{eventId}	Filtering Endpoint	Deprecated, use updateExhibitor with withEvent.data set to null instead
 POST	 /deleteEventNotifications/{eventId} 	Filtering Endpoint	Delete a swapcard event notification
-POST	 /upsertEventNotification	Filtering Endpoint	Upsert a notification for an event

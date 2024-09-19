@@ -397,5 +397,5 @@ def jsonl_to_csv(jsonl_file, csv_file):
 
 # Usage
 jsonl_file = 'All-Data\output_data.jsonl'  # Your input JSONL file
-csv_file = 'All-Data\output_data.csv'     # Your output CSV file
+csv_file = 'All-Data\output_data_update.csv'     # Your output CSV file
 jsonl_to_csv(jsonl_file, csv_file)

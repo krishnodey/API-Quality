@@ -1,8 +1,6 @@
 ***Anti-Pattern*** 
 Count: 13
 GET	 /answers 	Non-Filtering Endpoint	Returns all the undeleted answers in the system.
-POST	 /answers/{id}/accept 	Non-Filtering Endpoint	Accepts an answer. Use an access_token with write_access to accept. Accept votes can only be cast on answers to questions owned by the access_token's user, and only if no other answer is accepted.
-POST	 /answers/{id}/accept/undo 	Non-Filtering Endpoint	Undoes an accept on an answer. Use an access_token with write_access to undo an upvote.
 GET	 /articles 	Non-Filtering Endpoint	Gets all the articles on the site. To constrain articles returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and constraint, passing tagged=c;java will return only those articles with both tags. As such, passing more than 5 tags will always return zero results.
 POST	 /articles/add 	Non-Filtering Endpoint	Create a new article. Use an access_token with write_access to create a new article. This method returns the created article.
 GET	 /badges 	Non-Filtering Endpoint	Returns all the badges in the system. Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
@@ -12,11 +10,15 @@ GET	 /badges/tags 	Non-Filtering Endpoint	Returns the badges that are awarded fo
 GET	 /questions/featured 	Non-Filtering Endpoint	Returns all the questions with active bounties in the system.
 GET	 /questions/no-answers 	Non-Filtering Endpoint	Returns questions which have received no answers. Compare with /questions/unanswered which merely returns questions that the sites consider insufficiently well answered.
 GET	 /questions/unanswered/my-tags 	Non-Filtering Endpoint	Returns questions the site considers to be unanswered, which are within a user's favorite tags. If a user has not favorites, their frequented tags are used instead. Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered. This method corresponds roughly with the unanswered ""my tags"" tab. This method request an access_token.
+GET	 /search/advanced 	Non-Filtering Endpoint	Searches a site for any questions which fit the given criteria.
+GET	 /search/excerpts 	Non-Filtering Endpoint	Searches a site for items which match the given criteria.
 GET	 /users/moderators/elected 	Non-Filtering Endpoint	Returns those users on a site who both have moderator powers, and were actually elected.
 
 ***Patterns*** 
 Count: 64
 GET	 /answers/{ids} 	Filtering Endpoint	Gets the set of answers identified by ids. This is meant for batch fetching of questions. A useful trick to poll for updates is to sort by activity, with a minimum date of the last time you polled.
+POST	 /answers/{id}/accept 	Filtering Endpoint	Accepts an answer. Use an access_token with write_access to accept. Accept votes can only be cast on answers to questions owned by the access_token's user, and only if no other answer is accepted.
+POST	 /answers/{id}/accept/undo 	Filtering Endpoint	Undoes an accept on an answer. Use an access_token with write_access to undo an upvote.
 GET	 /answers/{ids}/comments 	Filtering Endpoint	Gets the comments on a set of answers. If you know that you have an answer id and need the comments, use this method. If you know you have a question id, use /questions/{id}/comments. If you are unsure, use /posts/{id}/comments.
 POST	 /answers/{id}/delete 	Filtering Endpoint	Deletes an answer. Note that only answer owners can delete their answers, this is not equivalent to casting a delete vote. Also be aware that there are conditions when even an answer's owner cannot delete it, and this method will respect those limits. Use an access_token with write_access to delete an answer. It is not possible to undelete an answer via the API. In practice, this method will never return an object.
 POST	 /answers/{id}/downvote 	Filtering Endpoint	Downvotes an answer. Use an access_token with write_access to upvote. To undo a downvote on an answer use the /answers/{id}/downvote/undo method. This method returns the downvoted answer.
@@ -60,8 +62,6 @@ POST	 /questions/{id}/downvote/undo 	Filtering Endpoint	Undoes an downvote on a 
 POST	 /question/{id}/favorite/undo 	Filtering Endpoint	Unbookmarks a question. Previously known as "unfavoriting" a question. Use an access_token with write_access to unbookmark. To bookmark a question use the /questions/{id}/favorite method. This method returns the un-bookmarked question.
 POST	 /questions/{id}/suggested-edit/add 	Filtering Endpoint	Create a suggested_edit on an existing question. Use an access_token with write_access to create a suggested_edit. Stack Exchange sites take question quality seriously, and many checks are run on the actual websites that can require various user actions be taken. In the API, any "low quality" checks that are triggered cause the write request to fail. This includes situations where a CAPTCHA or guidance text would be displayed on the websites. This method returns the new suggested_edit suggested_edit.
 POST	 /question/{id}/upvote/undo 	Filtering Endpoint	Undoes an upvote on a question. Use an access_token with write_access to undo an upvote. To upvote a question use the /questions/{id}/upvote method. This method returns the un-upvoted question.
-GET	 /search/advanced 	Filtering Endpoint	Searches a site for any questions which fit the given criteria.
-GET	 /search/excerpts 	Filtering Endpoint	Searches a site for items which match the given criteria.
 GET	 /tags/{tags}/info 	Filtering Endpoint	Returns tag objects representing the tags in {tags} found on the site. This method diverges from the standard naming patterns to avoid conflicting with existing methods, due to the free form nature of tag names. This method returns a list of tags.
 GET	 /tags/{tags}/synonyms 	Filtering Endpoint	Gets all the synonyms that point to the tags identified in {tags}. If you're looking to discover all the tag synonyms on a site, use the /tags/synonyms methods instead of call this method on all tags. {tags} can contain up to 20 individual tags per request.
 GET	 /tags/{tag}/top-answerers/{period} 	Filtering Endpoint	Returns the top 20 answerers active in a single tag, of either all-time or the last 30 days. This is a view into the data presented on the tag info page for the site. This method returns a list of tag score objects.

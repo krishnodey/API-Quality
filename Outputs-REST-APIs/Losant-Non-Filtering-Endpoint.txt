@@ -1,9 +1,11 @@
 ***Anti-Pattern*** 
-Count: 36
+Count: 63
 GET	 /applications/APPLICATION_ID/archiveData 	Non-Filtering Endpoint	Returns success when a job has been enqueued to archive this application’s device data for a given day
 GET	 /applications/APPLICATION_ID/backfillArchiveData 	Non-Filtering Endpoint	Returns success when a job has been enqueued to backfill all current data to it’s archive
 DELETE	 /applications/APPLICATION_ID 	Non-Filtering Endpoint	Deletes an application
 GET	 /applications/APPLICATION_ID 	Non-Filtering Endpoint	Retrieves information on an application
+POST	 /applications/APPLICATION_ID/mqttPublishMessage 	Non-Filtering Endpoint	Publishes the given message to the given MQTT topic
+GET	 /applications/APPLICATION_ID/mqttSubscriptionStream 	Non-Filtering Endpoint	Attach to a real time stream of state messages for the given MQTT topic using Server Sent Events (SSE)
 PATCH	 /applications/APPLICATION_ID 	Non-Filtering Endpoint	Updates information about an application
 GET	 /applications/APPLICATION_ID/payloadCounts 	Non-Filtering Endpoint	Returns payload counts for the time range specified for this application
 GET	 /applications/APPLICATION_ID/search 	Non-Filtering Endpoint	Search across an application’s resources by target identifier
@@ -11,58 +13,56 @@ DELETE	 /applications/APPLICATION_ID/tokens/API_TOKEN_ID 	Non-Filtering Endpoint
 GET	 /applications/APPLICATION_ID/tokens/API_TOKEN_ID 	Non-Filtering Endpoint	Retrieves information on an API token
 PATCH	 /applications/APPLICATION_ID/tokens/API_TOKEN_ID 	Non-Filtering Endpoint	Updates information about an API token
 GET	 /applications/APPLICATION_ID/tokens 	Non-Filtering Endpoint	Returns the API tokens for an application
+POST	 /applications/APPLICATION_ID/tokens 	Non-Filtering Endpoint	Create a new API token for an application
 DELETE	 /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID 	Non-Filtering Endpoint	Deletes an applicationKey
 GET	 /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID 	Non-Filtering Endpoint	Retrieves information on an applicationKey
 PATCH	 /applications/APPLICATION_ID/keys/APPLICATION_KEY_ID 	Non-Filtering Endpoint	Updates information about an applicationKey
 GET	 /applications/APPLICATION_ID/keys 	Non-Filtering Endpoint	Returns the applicationKeys for an application
+POST	 /applications/APPLICATION_ID/keys 	Non-Filtering Endpoint	Create a new applicationKey for an application
 GET	 /applications 	Non-Filtering Endpoint	Returns the applications the current user has permission to see
+POST	 /applications 	Non-Filtering Endpoint	Create a new application
 GET	 /orgs/ORG_ID/audit-logs/AUDIT_LOG_ID 	Non-Filtering Endpoint	Retrieves information on an audit log
 GET	 /orgs/ORG_ID/audit-logs 	Non-Filtering Endpoint	Returns the audit logs for the organization
+POST	 /auth/device 	Non-Filtering Endpoint	Authenticates a device using the provided credentials.
+POST	 /auth/solutionUser 	Non-Filtering Endpoint	Authenticates a solution user using the provided credentials.
+POST	 /auth/user 	Non-Filtering Endpoint	Authenticates a user using the provided credentials.
+POST	 /auth/user/github 	Non-Filtering Endpoint	Authenticates a user via GitHub OAuth.
 DELETE	 /dashboards/DASHBOARD_ID 	Non-Filtering Endpoint	Deletes a dashboard
 GET	 /dashboards/DASHBOARD_ID 	Non-Filtering Endpoint	Retrieves information on a dashboard
 PATCH	 /dashboards/DASHBOARD_ID 	Non-Filtering Endpoint	Updates information about a dashboard
+POST	 /dashboards/DASHBOARD_ID 	Non-Filtering Endpoint	Sends a snapshot of a dashboard
+POST	 /dashboards/DASHBOARD_ID/validateContext 	Non-Filtering Endpoint	Validates a context object against the dashboard’s context configuration
 GET	 /dashboards 	Non-Filtering Endpoint	Returns the dashboards the current user has permission to see
+POST	 /dashboards 	Non-Filtering Endpoint	Create a new dashboard
+POST	 /applications/APPLICATION_ID/data/export 	Non-Filtering Endpoint	Creates a csv file from a query of devices and attributes over a time range.
 POST	 /applications/APPLICATION_ID/data/last-value-query 	Non-Filtering Endpoint	Returns the last known data for the given attribute
 POST	 /applications/APPLICATION_ID/data/time-series-query 	Non-Filtering Endpoint	Returns the data for the given query
+POST	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column 	Non-Filtering Endpoint	Adds a new column to this data table
 DELETE	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID 	Non-Filtering Endpoint	Deletes a data table
 GET	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID 	Non-Filtering Endpoint	Retrieves information on a data table
 PATCH	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID 	Non-Filtering Endpoint	Updates information about a data table
+DELETE	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column 	Non-Filtering Endpoint	Removes a column from this data table
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/commandStream 	Non-Filtering Endpoint	Attach to a real time stream of command messages to this device using Server Sent Events (SSE)
 DELETE	 /applications/APPLICATION_ID/devices/DEVICE_ID 	Non-Filtering Endpoint	Deletes a device
+POST	 /applications/APPLICATION_ID/devices/DEVICE_ID/export 	Non-Filtering Endpoint	Creates a device data export. Defaults to all data.
 GET	 /applications/APPLICATION_ID/devices/DEVICE_ID 	Non-Filtering Endpoint	Retrieves information on a device
 GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/command 	Non-Filtering Endpoint	Retrieve the last known commands(s) sent to the device
 GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/compositeState 	Non-Filtering Endpoint	Retrieve the composite last complete state of the device
 GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/logs 	Non-Filtering Endpoint	Retrieve the recent log entries about the device
 GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/state 	Non-Filtering Endpoint	Retrieve the last known state(s) of the device
+DELETE	 /applications/APPLICATION_ID/devices/DEVICE_ID/data 	Non-Filtering Endpoint	Removes all device data for the specified time range. Defaults to all data.
+POST	 /applications/APPLICATION_ID/devices/DEVICE_ID/setConnectionStatus 	Non-Filtering Endpoint	Set the current connection status of the device
+GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/stateStream 	Non-Filtering Endpoint	Attach to a real time stream of state messages from this device using Server Sent Events (SSE)
+PATCH	 /applications/APPLICATION_ID/experience/bootstrap 	Non-Filtering Endpoint	Bootstraps the experience for this application with standard endpoints and views
 DELETE	 /applications/APPLICATION_ID/experience 	Non-Filtering Endpoint	Deletes multiple parts of an experience including users, groups, slugs, domains, versions, endpoints, views, and workflows
+POST	 /applications/APPLICATION_ID/devices/export 	Non-Filtering Endpoint	Creates an export of all device metadata.
 GET	 /applications/APPLICATION_ID/devices 	Non-Filtering Endpoint	Returns the devices for an application
+POST	 /applications/APPLICATION_ID/devices 	Non-Filtering Endpoint	Create a new device for an application
+POST	 /applications/APPLICATION_ID/devices/command 	Non-Filtering Endpoint	Send a command to multiple devices
 GET	 /applications/APPLICATION_ID/edge/deployments 	Non-Filtering Endpoint	Returns the edge deployments for an application
+POST	 /applications/APPLICATION_ID/edge/deployments/release 	Non-Filtering Endpoint	Deploy an edge workflow version to one or more edge devices. Version can be blank, if removal is desired.
+POST	 /applications/APPLICATION_ID/edge/deployments/remove 	Non-Filtering Endpoint	Remove all edge deployments from a device, remove all edge deployments of a workflow, or remove a specific workflow from a specific device
+POST	 /applications/APPLICATION_ID/edge/deployments/replace 	Non-Filtering Endpoint	Replace deployments of an edge workflow version with a new version. New version can be blank, if removal is desired.
 
 ***Patterns*** 
-Count: 27
-POST	 /applications/APPLICATION_ID/mqttPublishMessage 	Filtering Endpoint	Publishes the given message to the given MQTT topic
-GET	 /applications/APPLICATION_ID/mqttSubscriptionStream 	Filtering Endpoint	Attach to a real time stream of state messages for the given MQTT topic using Server Sent Events (SSE)
-POST	 /applications/APPLICATION_ID/tokens 	Filtering Endpoint	Create a new API token for an application
-POST	 /applications/APPLICATION_ID/keys 	Filtering Endpoint	Create a new applicationKey for an application
-POST	 /applications 	Filtering Endpoint	Create a new application
-POST	 /auth/device 	Filtering Endpoint	Authenticates a device using the provided credentials.
-POST	 /auth/solutionUser 	Filtering Endpoint	Authenticates a solution user using the provided credentials.
-POST	 /auth/user 	Filtering Endpoint	Authenticates a user using the provided credentials.
-POST	 /auth/user/github 	Filtering Endpoint	Authenticates a user via GitHub OAuth.
-POST	 /dashboards/DASHBOARD_ID 	Filtering Endpoint	Sends a snapshot of a dashboard
-POST	 /dashboards/DASHBOARD_ID/validateContext 	Filtering Endpoint	Validates a context object against the dashboard’s context configuration
-POST	 /dashboards 	Filtering Endpoint	Create a new dashboard
-POST	 /applications/APPLICATION_ID/data/export 	Filtering Endpoint	Creates a csv file from a query of devices and attributes over a time range.
-POST	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column 	Filtering Endpoint	Adds a new column to this data table
-DELETE	 /applications/APPLICATION_ID/data-tables/DATA_TABLE_ID/column 	Filtering Endpoint	Removes a column from this data table
-GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/commandStream 	Filtering Endpoint	Attach to a real time stream of command messages to this device using Server Sent Events (SSE)
-POST	 /applications/APPLICATION_ID/devices/DEVICE_ID/export 	Filtering Endpoint	Creates a device data export. Defaults to all data.
-DELETE	 /applications/APPLICATION_ID/devices/DEVICE_ID/data 	Filtering Endpoint	Removes all device data for the specified time range. Defaults to all data.
-POST	 /applications/APPLICATION_ID/devices/DEVICE_ID/setConnectionStatus 	Filtering Endpoint	Set the current connection status of the device
-GET	 /applications/APPLICATION_ID/devices/DEVICE_ID/stateStream 	Filtering Endpoint	Attach to a real time stream of state messages from this device using Server Sent Events (SSE)
-PATCH	 /applications/APPLICATION_ID/experience/bootstrap 	Filtering Endpoint	Bootstraps the experience for this application with standard endpoints and views
-POST	 /applications/APPLICATION_ID/devices/export 	Filtering Endpoint	Creates an export of all device metadata.
-POST	 /applications/APPLICATION_ID/devices 	Filtering Endpoint	Create a new device for an application
-POST	 /applications/APPLICATION_ID/devices/command 	Filtering Endpoint	Send a command to multiple devices
-POST	 /applications/APPLICATION_ID/edge/deployments/release 	Filtering Endpoint	Deploy an edge workflow version to one or more edge devices. Version can be blank, if removal is desired.
-POST	 /applications/APPLICATION_ID/edge/deployments/remove 	Filtering Endpoint	Remove all edge deployments from a device, remove all edge deployments of a workflow, or remove a specific workflow from a specific device
-POST	 /applications/APPLICATION_ID/edge/deployments/replace 	Filtering Endpoint	Replace deployments of an edge workflow version with a new version. New version can be blank, if removal is desired.
+Count: 0

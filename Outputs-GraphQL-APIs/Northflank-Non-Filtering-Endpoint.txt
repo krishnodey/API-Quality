@@ -1,115 +1,65 @@
 ***Anti-Pattern*** 
-Count: 85
+Count: 30
 GET	 /v1/projects 	Non-Filtering Endpoint	Lists projects for the authenticated user or team.
+POST	 /v1/projects 	Non-Filtering Endpoint	Creates a new project.
 PUT	 /v1/projects 	Non-Filtering Endpoint	Create or update project
-POST	 /v1/projects/{projectId}/services/build 	Non-Filtering Endpoint	Creates a new build service.
-POST	 /v1/projects/{projectId}/services/combined 	Non-Filtering Endpoint	Creates a new combined service.
-POST	 /v1/projects/{projectId}/services/deployment 	Non-Filtering Endpoint	Creates a new deployment service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Non-Filtering Endpoint	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
-POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Non-Filtering Endpoint	Sets the build arguments for the given service.
-DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Non-Filtering Endpoint	Aborts the given service build
-POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Non-Filtering Endpoint	Pause the given service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Non-Filtering Endpoint	Restarts the given service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Non-Filtering Endpoint	Resumes the given service. Optionally takes several arguments to override resumed settings.
-GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Non-Filtering Endpoint	
-POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Non-Filtering Endpoint	Sets the runtime environment for the given service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Non-Filtering Endpoint	Modifies the scaling settings for the given service.
 GET	 /v1/domains 	Non-Filtering Endpoint	Lists available domains
-POST	 /v1/domains/{domain}/import 	Non-Filtering Endpoint	Import a certificate for the domain
-POST	 /v1/domains/{domain}/subdomains 	Non-Filtering Endpoint	Adds a new subdomain to the domain.
-DELETE	 /v1/domains/{domain}/subdomains/{subdomain}	Non-Filtering Endpoint	Removes a subdomain from a domain.
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/assign 	Non-Filtering Endpoint	Assigns a service port to the given subdomain
-DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/assign	Non-Filtering Endpoint	Removes a subdomain from its assigned service
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/disable 	Non-Filtering Endpoint	Removes the CDN integration from the given subdomain
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable 	Non-Filtering Endpoint	Enables a CDN integration on the given subdomain
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths 	Non-Filtering Endpoint	Adds a new path to the subdomain.
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign	Non-Filtering Endpoint	Assign a subdomain path to a port.
-DELETE	  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign 	Non-Filtering Endpoint	Unassign a subdomain path to a port.
-POST	 /v1/domains/{domain}/verify 	Non-Filtering Endpoint	Attempts to verify the domain
-POST	 /v1/projects/{projectId}/jobs/cron 	Non-Filtering Endpoint	Creates a new cron job
-POST	 /v1/projects/{projectId}/jobs/manual 	Non-Filtering Endpoint	Creates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Non-Filtering Endpoint	Start a new build for the given job. Given a commit sha, it will build that commit.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Non-Filtering Endpoint	Sets build arguments for the given job.
-DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Non-Filtering Endpoint	Aborts the given job build
-POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Non-Filtering Endpoint	Pause the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Non-Filtering Endpoint	Resumes the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Non-Filtering Endpoint	Starts a new job run for the given job
-DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Non-Filtering Endpoint	Aborts the given job run
-POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Non-Filtering Endpoint	Sets the runtime environment for the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Non-Filtering Endpoint	Modifies the scaling settings for the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/suspend 	Non-Filtering Endpoint	Modify cron job to toggle suspending of its schedule.
+POST	 /v1/domains 	Non-Filtering Endpoint	Registers a new domain
 GET	 /v1/addon-types 	Non-Filtering Endpoint	Gets information about the available addon types
-POST	 /v1/projects/{projectId}/addons 	Non-Filtering Endpoint	Creates a new addon
-GET	 /v1/projects/{projectId}/addons/{addonId} 	Non-Filtering Endpoint	projectId string required ID of the project addonId string required ID of the addon
-POST	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Non-Filtering Endpoint	Create a new backup schedule for an addon.
-POST	 /v1/projects/{projectId}/addons/{addonId}/backups 	Non-Filtering Endpoint	Initiates a backup for the given addon
-POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Non-Filtering Endpoint	Aborts the in progress backup.
-POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Non-Filtering Endpoint	Aborts an in-progress backup restore.
-GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Non-Filtering Endpoint	Generates a temporary download link for downloading the given backup.
-POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Non-Filtering Endpoint	Restores the given addon to the given backup state.
-POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Non-Filtering Endpoint	Imports a database from an external archive or existing live database.
-POST	 /v1/projects/{projectId}/addons/{addonId}/pause 	Non-Filtering Endpoint	Pause the given addon.
-POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Non-Filtering Endpoint	Restores an addon to a specific point in time.
-POST	 /v1/projects/{projectId}/addons/{addonId}/reset 	Non-Filtering Endpoint	Reset the given addon.
-POST	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Non-Filtering Endpoint	Link an addon to the secret group or edit the settings of the linked addon.
-DELETE	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Non-Filtering Endpoint	Unlinks an addon from the secret group.
-GET	 /v1/projects/{projectId}/secrets/{secretId}/details 	Non-Filtering Endpoint	View a secret with details about its linked addons
-POST	 /v1/projects/{projectId}/volumes 	Non-Filtering Endpoint	Creates a volume with the specified payload
-POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Non-Filtering Endpoint	Attach a volume
-POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Non-Filtering Endpoint	Detach a volume
-POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Non-Filtering Endpoint	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
-POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Non-Filtering Endpoint	Abort the given release flow run
 GET	 /v1/templates 	Non-Filtering Endpoint	Get a list of templates
-POST	 /v1/templates/{templateId}/runs 	Non-Filtering Endpoint	Run a template
-POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Non-Filtering Endpoint	Abort the given template run.
+POST	 /v1/templates 	Non-Filtering Endpoint	Create a template
 GET	 /v1/integrations/log-sinks 	Non-Filtering Endpoint	Gets a list of log sinks added to this account.
-POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Non-Filtering Endpoint	Pauses a given log sink.
-POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Non-Filtering Endpoint	Resumes a paused log sink.
+POST	 /v1/integrations/log-sinks 	Non-Filtering Endpoint	Creates a new log sink.
 GET	 /v1/integrations/notifications 	Non-Filtering Endpoint	Lists notification integrations for the authenticated user or team.
+POST	 /v1/integrations/notifications 	Non-Filtering Endpoint	Create a new notification integration.
 GET	 /v1/integrations/registries 	Non-Filtering Endpoint	Lists the container registry credentials saved to this account. Does not display secrets.
-GET	 /v1/integrations/registries/{credentialId} 	Non-Filtering Endpoint	Views a set of registry credential data.
-POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Non-Filtering Endpoint	Generate a token for a specific VCS link.
+POST	 /v1/integrations/registries 	Non-Filtering Endpoint	Adds a new set of container registry credentials to this account.
+GET	 /v1/integrations/vcs Lists linked version control providers 	Non-Filtering Endpoint	
 GET	 /v1/integrations/vcs/repos 	Non-Filtering Endpoint	Gets a list of repositories accessible to this account
 GET	 /v1/cloud-providers 	Non-Filtering Endpoint	Lists supported cloud providers
 GET	 /v1/cloud-providers/clusters 	Non-Filtering Endpoint	Lists clusters for the authenticated user or team.
-GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Non-Filtering Endpoint	clusterId string required ID of the cluster
-POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Non-Filtering Endpoint	Cordon a node on the cluster to prevent new pods from scheduling on it.
-POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Non-Filtering Endpoint	Drain a node by evicting all running pods.
+POST	 /v1/cloud-providers/clusters 	Non-Filtering Endpoint	Creates a new cluster.
 GET	 /v1/cloud-providers/docker-registries 	Non-Filtering Endpoint	Lists docker registries for the authenticated user or team.
+POST	 /v1/cloud-providers/docker-registries 	Non-Filtering Endpoint	Creates a new docker registry.
 GET	 /v1/cloud-providers/integrations 	Non-Filtering Endpoint	Lists integrations for the authenticated user or team.
+POST	 /v1/cloud-providers/integrations 	Non-Filtering Endpoint	Creates a new integration.
 GET	 /v1/cloud-providers/node-types 	Non-Filtering Endpoint	Lists supported cloud provider node types
 GET	 /v1/cloud-providers/regions 	Non-Filtering Endpoint	Lists supported cloud provider regions
 GET	 /v1/tags 	Non-Filtering Endpoint	List the resource tags for this entity.
+POST	 /v1/tags 	Non-Filtering Endpoint	Add a new resource tag for this entity.
 PUT	 /v1/tags 	Non-Filtering Endpoint	Update or create a resource tag.
-GET	 /v1/tags/{resourceTagId} 	Non-Filtering Endpoint	View details for a given resource tag.
-PATCH	 /v1/tags/{resourceTagId} 	Non-Filtering Endpoint	Patch a resource tag.
 GET	 /v1/billing/invoices 	Non-Filtering Endpoint	Get a list of past invoices
 GET	 /v1/billing/invoices/details 	Non-Filtering Endpoint	Get details about an invoice.
 
 ***Patterns*** 
-Count: 140
-POST	 /v1/projects 	Filtering Endpoint	Creates a new project.
+Count: 195
 PATCH	 /v1/projects/{projectId}	Filtering Endpoint	Updates a project.
 GET	 /v1/projects/{projectId} 	Filtering Endpoint	Get information about the given project
 DELETE	 /v1/projects/{projectId} 	Filtering Endpoint	Delete the given project. Fails if the project isn't empty.
 GET	 /v1/projects/{projectId}/services 	Filtering Endpoint	Gets a list of services belonging to the project
+POST	 /v1/projects/{projectId}/services/build 	Filtering Endpoint	Creates a new build service.
 PUT	 /v1/projects/{projectId}/services/build 	Filtering Endpoint	Creates or updates a build service.
 PATCH	 /v1/projects/{projectId}/services/build/{serviceId} 	Filtering Endpoint	Updates a build service.
+POST	 /v1/projects/{projectId}/services/combined 	Filtering Endpoint	Creates a new combined service.
 PUT	 /v1/projects/{projectId}/services/combined 	Filtering Endpoint	Creates or updates a combined service.
 PATCH	 /v1/projects/{projectId}/services/combined/{serviceId} 	Filtering Endpoint	Updates a combined service.
+POST	 /v1/projects/{projectId}/services/deployment 	Filtering Endpoint	Creates a new deployment service.
 PUT	 /v1/projects/{projectId}/services/deployment 	Filtering Endpoint	Creates or updates a deployment service.
 PATCH	 /v1/projects/{projectId}/services/deployment/{serviceId} 	Filtering Endpoint	Updates a deployment service.
 GET	 /v1/projects/{projectId}/services/{serviceId} 	Filtering Endpoint	Gets information about the given service.
 DELETE	 /v1/projects/{projectId}/services/{serviceId} 	Filtering Endpoint	Deletes the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	Filtering Endpoint	Gets information about the branches of the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build 	Filtering Endpoint	Lists the builds for the service
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Filtering Endpoint	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Filtering Endpoint	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Filtering Endpoint	Sets the build arguments for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	Filtering Endpoint	Get details about the build arguments accessible by the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	Filtering Endpoint	Get logs for a service build
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	Filtering Endpoint	Get metrics for a service build
 POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	Filtering Endpoint	Updates the build options for a given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	Filtering Endpoint	Updates the version control source for a given build or combined service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Filtering Endpoint	Gets information about a build for the service
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Filtering Endpoint	Aborts the given service build
 GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	Filtering Endpoint	Gets a list of containers for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Filtering Endpoint	Gets information about the deployment of the given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Filtering Endpoint	Updates the deployment settings of the given service.
@@ -117,35 +67,56 @@ GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Filtering Endp
 POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Filtering Endpoint	Updates health checks for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	Filtering Endpoint	Get logs for a service
 GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	Filtering Endpoint	Get metrics for a service
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Filtering Endpoint	Pause the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	Filtering Endpoint	Lists the ports for the given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	Filtering Endpoint	Updates the list of ports for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	Filtering Endpoint	Gets information about the pull-requests of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Filtering Endpoint	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Filtering Endpoint	Resumes the given service. Optionally takes several arguments to override resumed settings.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Filtering Endpoint	
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Filtering Endpoint	Sets the runtime environment for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	Filtering Endpoint	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'
-POST	 /v1/domains 	Filtering Endpoint	Registers a new domain
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Filtering Endpoint	Modifies the scaling settings for the given service.
 GET	 /v1/domains/{domain} 	Filtering Endpoint	Get domain
 DELETE	 /v1/domains/{domain} 	Filtering Endpoint	Deletes a domain and each of its registered subdomains.
+POST	 /v1/domains/{domain}/import 	Filtering Endpoint	Import a certificate for the domain
+POST	 /v1/domains/{domain}/subdomains 	Filtering Endpoint	Adds a new subdomain to the domain.
 GET	 /v1/domains/{domain}/subdomains/{subdomain} 	Filtering Endpoint	Gets details about the given subdomain
+DELETE	 /v1/domains/{domain}/subdomains/{subdomain}	Filtering Endpoint	Removes a subdomain from a domain.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/assign 	Filtering Endpoint	Assigns a service port to the given subdomain
+DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/assign	Filtering Endpoint	Removes a subdomain from its assigned service
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/disable 	Filtering Endpoint	Removes the CDN integration from the given subdomain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable 	Filtering Endpoint	Enables a CDN integration on the given subdomain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths 	Filtering Endpoint	Adds a new path to the subdomain.
 GET	 /v1/domains/{domain}/subdomains/{subdomain}/paths	Filtering Endpoint	List paths for a given subdomain.
 GET	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}	Filtering Endpoint	Get subdomain path details.
 DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}	Filtering Endpoint	Delete a path.
 POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath} 	Filtering Endpoint	Update a subdomain path.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign	Filtering Endpoint	Assign a subdomain path to a port.
+DELETE	  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign 	Filtering Endpoint	Unassign a subdomain path to a port.
 POST	 /v1/domains/{domain}/subdomains/{subdomain}/verify 	Filtering Endpoint	Gets details about the given subdomain
+POST	 /v1/domains/{domain}/verify 	Filtering Endpoint	Attempts to verify the domain
 GET	 /v1/projects/{projectId}/jobs 	Filtering Endpoint	Gets a list of jobs belonging to the project
+POST	 /v1/projects/{projectId}/jobs/cron 	Filtering Endpoint	Creates a new cron job
 PUT	 /v1/projects/{projectId}/jobs/cron 	Filtering Endpoint	Creates or updates a cron job
 PATCH	 /v1/projects/{projectId}/jobs/cron/{jobId} 	Filtering Endpoint	Updates a cron job
+POST	 /v1/projects/{projectId}/jobs/manual 	Filtering Endpoint	Creates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
 PUT	 /v1/projects/{projectId}/jobs/manual 	Filtering Endpoint	Creates or updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
 PATCH	 /v1/projects/{projectId}/jobs/manual/{jobId} 	Filtering Endpoint	Updates a new manual job that only runs when initiated via the UI, CLI, API or JS client.
 GET	 /v1/projects/{projectId}/jobs/{jobId} 	Filtering Endpoint	Gets information about the given job
 DELETE	 /v1/projects/{projectId}/jobs/{jobId} 	Filtering Endpoint	Deletes the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/branches 	Filtering Endpoint	Gets information about the branches of the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build 	Filtering Endpoint	Lists builds for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Filtering Endpoint	Start a new build for the given job. Given a commit sha, it will build that commit.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Filtering Endpoint	Gets the build arguments of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Filtering Endpoint	Sets build arguments for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details 	Filtering Endpoint	Get details about the build arguments accessible by the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-logs 	Filtering Endpoint	Get logs for a job build
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-metrics 	Filtering Endpoint	Get metrics for a job build
 POST	 /v1/projects/{projectId}/jobs/{jobId}/build-options 	Filtering Endpoint	Updates the build options for a given job.
 POST	 /v1/projects/{projectId}/jobs/{jobId}/build-source 	Filtering Endpoint	Updates the version control source for a given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Filtering Endpoint	Gets information about a build for the job
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Filtering Endpoint	Aborts the given job build
 GET	 /v1/projects/{projectId}/jobs/{jobId}/containers 	Filtering Endpoint	Gets a list of containers for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/deployment 	Filtering Endpoint	Gets information about the deployment of the given job.
 POST	 /v1/projects/{projectId}/jobs/{jobId}/deployment	Filtering Endpoint	Updates the deployment settings of the given job.
@@ -153,37 +124,62 @@ GET	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Filtering Endpoint	Lis
 POST	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Filtering Endpoint	Updates health checks for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/logs 	Filtering Endpoint	Get logs for a job
 GET	 /v1/projects/{projectId}/jobs/{jobId}/metrics 	Filtering Endpoint	Get metrics for a job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Filtering Endpoint	Pause the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/pull-requests 	Filtering Endpoint	Gets information about the pull-requests of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Filtering Endpoint	Resumes the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Filtering Endpoint	Fetches run history for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Filtering Endpoint	Starts a new job run for the given job
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Filtering Endpoint	Returns data about the given job run
+DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Filtering Endpoint	Aborts the given job run
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Filtering Endpoint	Returns the runtime environment for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Filtering Endpoint	Sets the runtime environment for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details 	Filtering Endpoint	Get details about the runtime environment accessible by the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Filtering Endpoint	Modifies the scaling settings for the given job.
 POST	 /v1/projects/{projectId}/jobs/{jobId}/settings 	Filtering Endpoint	Updates settings for the job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/suspend 	Filtering Endpoint	Modify cron job to toggle suspending of its schedule.
 GET	 /v1/projects/{projectId}/addons 	Filtering Endpoint	Gets a list of addons belonging to the project
+POST	 /v1/projects/{projectId}/addons 	Filtering Endpoint	Creates a new addon
 PUT	 /v1/projects/{projectId}/addons 	Filtering Endpoint	Creates or updates an addon
+GET	 /v1/projects/{projectId}/addons/{addonId} 	Filtering Endpoint	projectId string required ID of the project addonId string required ID of the addon
 PATCH	 /v1/projects/{projectId}/addons/{addonId} 	Filtering Endpoint	Updates an addon
 DELETE	 /v1/projects/{projectId}/addons/{addonId} 	Filtering Endpoint	Deletes the given addon.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Filtering Endpoint	Gets details about an addon's backup schedules
+POST	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules 	Filtering Endpoint	Create a new backup schedule for an addon.
 DELETE	 /v1/projects/{projectId}/addons/{addonId}/backup-schedules/{scheduleId} 	Filtering Endpoint	Deletes a backup schedule for an addon.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups 	Filtering Endpoint	Returns a list of backups for the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups 	Filtering Endpoint	Initiates a backup for the given addon
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Filtering Endpoint	Gets details about a given backup.
 DELETE	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Filtering Endpoint	Deletes a given backup
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Filtering Endpoint	Aborts the in progress backup.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Filtering Endpoint	Aborts an in-progress backup restore.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Filtering Endpoint	Generates a temporary download link for downloading the given backup.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/logs 	Filtering Endpoint	Get logs for an addon backup
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Filtering Endpoint	Restores the given addon to the given backup state.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores 	Filtering Endpoint	Gets a list of restores for the given backup.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{restoreId}/logs 	Filtering Endpoint	Get logs for an addon restore
 POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain 	Filtering Endpoint	Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date.
 GET	 /v1/projects/{projectId}/addons/{addonId}/containers 	Filtering Endpoint	Gets a list of containers for the given addon.
 GET	 /v1/projects/{projectId}/addons/{addonId}/credentials	Filtering Endpoint	Returns the credentials for connecting to the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Filtering Endpoint	Imports a database from an external archive or existing live database.
 GET	 /v1/projects/{projectId}/addons/{addonId}/logs 	Filtering Endpoint	Get logs for an addon
 GET	 /v1/projects/{projectId}/addons/{addonId}/metrics 	Filtering Endpoint	Get metrics for an addon
 POST	 /v1/projects/{projectId}/addons/{addonId}/network-settings 	Filtering Endpoint	Updates the network settings for the addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pause 	Filtering Endpoint	Pause the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/pitr 	Filtering Endpoint	Restores an addon to a specific point in time.
 GET	 /v1/projects/{projectId}/addons/{addonId}/pitr-window 	Filtering Endpoint	Gets the valid window for performing a point-in-time restore (PITR) on this addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/reset 	Filtering Endpoint	Reset the given addon.
 POST	 /v1/projects/{projectId}/secrets/{secretId} 	Filtering Endpoint	Update a secret
+POST	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Filtering Endpoint	Link an addon to the secret group or edit the settings of the linked addon.
 GET	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Filtering Endpoint	Get details about a given addon link.
+DELETE	 /v1/projects/{projectId}/secrets/{secretId}/addons/{addonId} 	Filtering Endpoint	Unlinks an addon from the secret group.
+GET	 /v1/projects/{projectId}/secrets/{secretId}/details 	Filtering Endpoint	View a secret with details about its linked addons
 GET	 /v1/projects/{projectId}/volumes 	Filtering Endpoint	Gets a list of volumes belonging to the project
+POST	 /v1/projects/{projectId}/volumes 	Filtering Endpoint	Creates a volume with the specified payload
 GET	 /v1/projects/{projectId}/volumes/{volumeId} 	Filtering Endpoint	Retrieve a volume
 POST	 /v1/projects/{projectId}/volumes/{volumeId} 	Filtering Endpoint	Update volume mounts and storage size
 DELETE	 /v1/projects/{projectId}/volumes/{volumeId} 	Filtering Endpoint	Deletes this volume and its associated data.
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Filtering Endpoint	Attach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Filtering Endpoint	Detach a volume
 GET	 /v1/projects/{projectId}/pipelines 	Filtering Endpoint	Lists all pipelines for a project
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId} 	Filtering Endpoint	Get details about a pipeline
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Filtering Endpoint	Get information about the given preview template.
@@ -194,37 +190,41 @@ GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs 	Filterin
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Filtering Endpoint	Get information about the given preview template run.
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Filtering Endpoint	Gets details about a release flow
 POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Filtering Endpoint	Updates a release flow
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Filtering Endpoint	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Filtering Endpoint	Lists runs of a release flow
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} 	Filtering Endpoint	Get information about the given release flow run
-POST	 /v1/templates 	Filtering Endpoint	Create a template
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Filtering Endpoint	Abort the given release flow run
 GET	 /v1/templates/{templateId} 	Filtering Endpoint	Get information about the given template.
 POST	 /v1/templates/{templateId} 	Filtering Endpoint	Update a template
 DELETE	 /v1/templates/{templateId} 	Filtering Endpoint	Delete a template
+POST	 /v1/templates/{templateId}/runs 	Filtering Endpoint	Run a template
 GET	 /v1/templates/{templateId}/runs 	Filtering Endpoint	Get a list of template runs
 GET	 /v1/templates/{templateId}/runs/{templateRunId} 	Filtering Endpoint	Get information about the given template run.
-POST	 /v1/integrations/log-sinks 	Filtering Endpoint	Creates a new log sink.
+POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Filtering Endpoint	Abort the given template run.
 GET	 /v1/integrations/log-sinks/{logSinkId} 	Filtering Endpoint	Gets details about a given log sink.
 DELETE	 /v1/integrations/log-sinks/{logSinkId}	Filtering Endpoint	Deletes a log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Filtering Endpoint	Pauses a given log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Filtering Endpoint	Resumes a paused log sink.
 POST	 /v1/integrations/log-sinks/{logSinkId}/settings 	Filtering Endpoint	Updates the settings for a log sink.
-POST	 /v1/integrations/notifications 	Filtering Endpoint	Create a new notification integration.
 GET	 /v1/integrations/notifications/{notificationId} 	Filtering Endpoint	Get details about a notification integration.
 POST	 /v1/integrations/notifications/{notificationId} 	Filtering Endpoint	Updates a notification integration
 DELETE	 /v1/integrations/notifications/{notificationId} 	Filtering Endpoint	Deletes a notification integration
-POST	 /v1/integrations/registries 	Filtering Endpoint	Adds a new set of container registry credentials to this account.
+GET	 /v1/integrations/registries/{credentialId} 	Filtering Endpoint	Views a set of registry credential data.
 DELETE	 /v1/integrations/registries/{credentialId} 	Filtering Endpoint	Deletes a set of registry credential data.
 POST	 /v1/integrations/registries/{credentialId}/modify 	Filtering Endpoint	Updates a set of registry credential data.
-GET	 /v1/integrations/vcs Lists linked version control providers 	Filtering Endpoint	
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Filtering Endpoint	Generate a token for a specific VCS link.
 GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Filtering Endpoint	Gets a list of branches for the repo
-POST	 /v1/cloud-providers/clusters 	Filtering Endpoint	Creates a new cluster.
+GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Filtering Endpoint	clusterId string required ID of the cluster
 POST	 /v1/cloud-providers/clusters/{clusterId} 	Filtering Endpoint	Update an existing cluster.
 DELETE	 /v1/cloud-providers/clusters/{clusterId} 	Filtering Endpoint	Delete the given cluster. Fails if the cluster has associated projects.
 GET	 /v1/cloud-providers/clusters/{clusterId}/nodes 	Filtering Endpoint	Get a list of nodes for the given cluster
-POST	 /v1/cloud-providers/docker-registries 	Filtering Endpoint	Creates a new docker registry.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Filtering Endpoint	Cordon a node on the cluster to prevent new pods from scheduling on it.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Filtering Endpoint	Drain a node by evicting all running pods.
 GET	 /v1/cloud-providers/docker-registries/{registryId} 	Filtering Endpoint	Get information about the given docker registry
 DELETE	 /v1/cloud-providers/docker-registries/{registryId} 	Filtering Endpoint	Delete the given docker registry. Fails if the docker registry is associated with existing clusters.
-POST	 /v1/cloud-providers/integrations 	Filtering Endpoint	Creates a new integration.
 GET	 /v1/cloud-providers/integrations/{integrationId} 	Filtering Endpoint	Get information about the given integration
 POST	 /v1/cloud-providers/integrations/{integrationId} 	Filtering Endpoint	Update information about the given integration
 DELETE	 /v1/cloud-providers/integrations/{integrationId} 	Filtering Endpoint	Delete the given integration. Fails if the integration is associated with existing clusters.
-POST	 /v1/tags 	Filtering Endpoint	Add a new resource tag for this entity.
+GET	 /v1/tags/{resourceTagId} 	Filtering Endpoint	View details for a given resource tag.
+PATCH	 /v1/tags/{resourceTagId} 	Filtering Endpoint	Patch a resource tag.
 DELETE	 /v1/tags/{resourceTagId} 	Filtering Endpoint	Delete a resource tag.

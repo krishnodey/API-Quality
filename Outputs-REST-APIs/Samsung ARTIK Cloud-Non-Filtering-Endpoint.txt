@@ -1,34 +1,30 @@
 ***Anti-Pattern*** 
-Count: 25
+Count: 20
 GET	 /users/self 	Non-Filtering Endpoint	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
-POST	 /users/<userID>/properties 	Non-Filtering Endpoint	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
-PUT	 /devices/<deviceID> 	Non-Filtering Endpoint	Modifies a device's parameters.
-PUT	 /devices/<deviceID>/tokens 	Non-Filtering Endpoint	Creates a new access token for a device.
-POST	 /devices/<deviceID>/providerauth 	Non-Filtering Endpoint	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
-DELETE	 /devices/<deviceID>/providerauth 	Non-Filtering Endpoint	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
+POST	 /devices 	Non-Filtering Endpoint	Adds a device.
 GET	 /devices/status 	Non-Filtering Endpoint	Returns a list of device statuses.
-PUT	 /devices/<deviceID>/status 	Non-Filtering Endpoint	Modifies current status of a device.
-POST	 /devices/<deviceID>/shares 	Non-Filtering Endpoint	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
-POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Non-Filtering Endpoint	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
+POST	 /messages 	Non-Filtering Endpoint	Sends a message.
 GET	 /messages 	Non-Filtering Endpoint	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
+POST	 /actions 	Non-Filtering Endpoint	Sends an Action to the specified device.
 GET	 /actions 	Non-Filtering Endpoint	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
 GET	 /messages/last 	Non-Filtering Endpoint	Returns the most recent normalized messages from a device or devices.
 GET	 /messages/analytics/aggregates 	Non-Filtering Endpoint	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
 GET	 /messages/analytics/histogram 	Non-Filtering Endpoint	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
 GET	 /messages/presence 	Non-Filtering Endpoint	Returns presence of normalized messages.
 GET	 /messages/snapshots 	Non-Filtering Endpoint	Returns last received value for all Manifest fields (aka device state) of a device or devices.
+POST	 /messages/export 	Non-Filtering Endpoint	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
 GET	 /messages/export/history 	Non-Filtering Endpoint	Returns a list of export queries that have been performed.
+POST	 /subscriptions 	Non-Filtering Endpoint	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
 GET	 /subscriptions 	Non-Filtering Endpoint	Returns all subscriptions for the current application. This call accepts application tokens as the access token.
-POST	 /subscriptions/<subscriptionID>/validate 	Non-Filtering Endpoint	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
 POST	 /rules 	Non-Filtering Endpoint	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
-GET	 /rules/<ruleID>/actions 	Non-Filtering Endpoint	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
-PUT	 /scenes/<sceneID> 	Non-Filtering Endpoint	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
+POST	 /scenes 	Non-Filtering Endpoint	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
 GET	 /scenes 	Non-Filtering Endpoint	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
-POST	 /scenes/<sceneID> 	Non-Filtering Endpoint	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST	 /ml/models 	Non-Filtering Endpoint	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
 
 ***Patterns*** 
-Count: 55
+Count: 60
 GET	 /users/<userID>/properties 	Filtering Endpoint	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
+POST	 /users/<userID>/properties 	Filtering Endpoint	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
 PUT	 /users/<userID>/properties 	Filtering Endpoint	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
 DELETE	 /users/<userID>/properties 	Filtering Endpoint	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
 GET	 /users/<userID>/devices 	Filtering Endpoint	Returns all devices owned by a user and/or shared devices on the user's account.
@@ -37,14 +33,19 @@ GET	 /users/<userID>/rules 	Filtering Endpoint	Returns the user's Rules created 
 GET	 /users/<userID>/scenes 	Filtering Endpoint	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
 GET	 /users/<userID>/trials 	Filtering Endpoint	Returns the trials of a participant or administrator.
 GET	 /devices/<deviceID> 	Filtering Endpoint	Returns a specific shared or owned device. Required permissions: READ on the device.
-POST	 /devices 	Filtering Endpoint	Adds a device.
+PUT	 /devices/<deviceID> 	Filtering Endpoint	Modifies a device's parameters.
 DELETE	 /devices/<deviceID> 	Filtering Endpoint	Deletes a device.
 GET	 /devices/<deviceID>/tokens 	Filtering Endpoint	Returns the access token of a device.
+PUT	 /devices/<deviceID>/tokens 	Filtering Endpoint	Creates a new access token for a device.
 DELETE	 /devices/<deviceID>/tokens 	Filtering Endpoint	Deletes the access token of a device.
+POST	 /devices/<deviceID>/providerauth 	Filtering Endpoint	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
+DELETE	 /devices/<deviceID>/providerauth 	Filtering Endpoint	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
 GET	 /devices/<deviceID>/status 	Filtering Endpoint	Returns current status of a device.
+PUT	 /devices/<deviceID>/status 	Filtering Endpoint	Modifies current status of a device.
 GET	 /devices/<deviceID>/certificate 	Filtering Endpoint	Returns fields for a device's certificates.
 GET	 /devices/<deviceID>/shares 	Filtering Endpoint	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
 GET	 /devices/<deviceID>/shares/<shareID> 	Filtering Endpoint	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+POST	 /devices/<deviceID>/shares 	Filtering Endpoint	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
 GET	 /users/<userID>/shares 	Filtering Endpoint	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
 GET	 /devicetypes/<deviceTypeID> 	Filtering Endpoint	Returns the device type of a device.
 GET	 /devicetypes/<deviceTypeID> 	Filtering Endpoint	Returns a list of device types.
@@ -57,29 +58,28 @@ GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Filtering En
 GET	 /devicetypes/<deviceTypeId>/whitelist 	Filtering Endpoint	Returns the Approved List for a device type.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Filtering Endpoint	Deletes a specified device from a device type's Approved List.
 PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	Filtering Endpoint	Enables or disables a device type's Approved List.
+POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Filtering Endpoint	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	Filtering Endpoint	Deletes an Approved List certificate for a device type.
 GET	 /devicetypes/<deviceTypeID>/whitelist/status 	Filtering Endpoint	Returns the enabled/disabled status of an Approved List.
 GET	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Filtering Endpoint	Returns details of an Approved List certificate.
 GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Filtering Endpoint	Returns a specified vendor device ID.
-POST	 /messages 	Filtering Endpoint	Sends a message.
-POST	 /actions 	Filtering Endpoint	Sends an Action to the specified device.
 GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Filtering Endpoint	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
 GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Filtering Endpoint	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
 GET	 /pricing/devices/<deviceID>/pricingtiers 	Filtering Endpoint	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
-POST	 /messages/export 	Filtering Endpoint	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
 GET	 /messages/export/<exportID>/status 	Filtering Endpoint	Returns the status of the messages export.
 GET	 /messages/export/<exportID>/result 	Filtering Endpoint	Returns the result of the export query. The result call returns the response in tgz format.
-POST	 /subscriptions 	Filtering Endpoint	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
 GET	 /subscriptions/<subscriptionID> 	Filtering Endpoint	Returns a subscription. This call accepts application and user tokens as the access token.
+POST	 /subscriptions/<subscriptionID>/validate 	Filtering Endpoint	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
 GET	 /notifications/<notificationID>/messages 	Filtering Endpoint	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
 GET	 /rules/<ruleID> 	Filtering Endpoint	Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 PUT	 /rules/<ruleID> 	Filtering Endpoint	Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 DELETE	 /rules/<ruleID> 	Filtering Endpoint	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 GET	 /rules/<ruleID>/executions 	Filtering Endpoint	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 POST	 /rules/<ruleID>/actions 	Filtering Endpoint	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
-POST	 /scenes 	Filtering Endpoint	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
+GET	 /rules/<ruleID>/actions 	Filtering Endpoint	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
+PUT	 /scenes/<sceneID> 	Filtering Endpoint	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
 GET	 /scenes/<sceneID> 	Filtering Endpoint	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
 DELETE	 /scenes/<sceneID> 	Filtering Endpoint	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
-POST	 /ml/models 	Filtering Endpoint	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
+POST	 /scenes/<sceneID> 	Filtering Endpoint	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
 POST	 /ml/models/<modelID>/predict 	Filtering Endpoint	Returns the predicted output for a machine learning model.
 GET	 /ml/models/<modelID> 	Filtering Endpoint	Returns a model.
