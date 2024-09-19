@@ -3,7 +3,7 @@ Count: 0
 
 ***Patterns*** 
 Count: 54
-GET	 /shop/admin/prices?customer_id=:customer_id 	Structed Endpoint	Retrieve Customer Prices
+GET	 /shop/admin/prices	Structed Endpoint	Retrieve Customer Prices
 POST	 /shop/admin/customers/:customer_id/prices 	Structed Endpoint	Create Customer Price
 DELETE	 /shop/admin/customers/:customer_id/prices/:variant_id 	Structed Endpoint	DELETE
 GET	 /shop/admin/price_lists 	Structed Endpoint	Retrieve Price lists

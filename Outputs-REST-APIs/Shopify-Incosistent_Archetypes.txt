@@ -1,20 +1,13 @@
 ***Anti-Pattern*** 
-Count: 100
+Count: 61
 GET	 /admin/oauth/access_scopes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of access scopes associated to the access token.
 GET	 /admin/oauth/access_scopes.json 	Plural Nouns Found in Consecutive Nodes	Retrieves a list of access scopes associated to the access token.
 POST	 /storefront_access_tokens.json 	Plural Nouns Found in Consecutive Nodes	Creates a new StorefrontAccessToken
 DELETE	 /storefront_access_tokens/{storefront_access_token_id}.json 	Plural Nouns Found in Consecutive Nodes	Deletes an existing storefront access token
-DELETE	 /storefront_access_tokens/{storefront_access_token_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes an existing storefront access token
 GET	 /storefront_access_tokens.json 	Plural Nouns Found in Consecutive Nodes	Retrieves a list of storefront access tokens that have been issued
-GET	 /reports/{report_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single report
-PUT	 /reports/{report_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates a report
-DELETE	 /reports/{report_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a report
 GET	 /application_charges/{application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves an application charge
-GET	 /application_charges/{application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves an application charge
-GET	 /application_credits/{application_credit_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single application credit
 GET	 /application_credits/{application_credit_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single application credit
 POST	 /recurring_application_charges.json 	Singular Nouns Found in Consecutive Nodes	Creates a recurring application charge
-GET	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single charge
 GET	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single charge
 GET	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single charge
 GET	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single charge
@@ -22,107 +15,89 @@ GET	 /recurring_application_charges.json 	Singular Nouns Found in Consecutive No
 DELETE	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Cancels a recurring application charge
 DELETE	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Cancels a recurring application charge
 DELETE	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Cancels a recurring application charge
-DELETE	 /recurring_application_charges/{recurring_application_charge_id}.json 	Singular Nouns Found in Consecutive Nodes	Cancels a recurring application charge
 PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	Singular Nouns Found in Consecutive Nodes	Updates the capped amount of a recurring application charge
 PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	Singular Nouns Found in Consecutive Nodes	Updates the capped amount of a recurring application charge
 PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	Singular Nouns Found in Consecutive Nodes	Updates the capped amount of a recurring application charge
 PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	Singular Nouns Found in Consecutive Nodes	Updates the capped amount of a recurring application charge
-PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	Singular Nouns Found in Consecutive Nodes	Updates the capped amount of a recurring application charge
-GET	 /customers/{customer_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single customer
-PUT	 /customers/{customer_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates a customer
-POST	 /customers/{customer_id}/account_activation_url.json 	Singular Nouns Found in Consecutive Nodes	Creates an account activation URL for a customer
 POST	 /customers/{customer_id}/account_activation_url.json 	Singular Nouns Found in Consecutive Nodes	Creates an account activation URL for a customer
 POST	 /customers/{customer_id}/account_activation_url.json 	Singular Nouns Found in Consecutive Nodes	Creates an account activation URL for a customer
 POST	 /customers/{customer_id}/account_activation_url.json 	Singular Nouns Found in Consecutive Nodes	Creates an account activation URL for a customer
 POST	 /customers/{customer_id}/send_invite.json 	Singular Nouns Found in Consecutive Nodes	Sends an account invite to a customer
 POST	 /customers/{customer_id}/send_invite.json 	Singular Nouns Found in Consecutive Nodes	Sends an account invite to a customer
-POST	 /customers/{customer_id}/send_invite.json 	Singular Nouns Found in Consecutive Nodes	Sends an account invite to a customer
-DELETE	 /customers/{customer_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a customer.
-GET	 /customers/{customer_id}/orders.json 	Singular Nouns Found in Consecutive Nodes	Retrieves all orders belonging to a customer
-GET	 /customers/{customer_id}/addresses.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of addresses for a customer
-GET	 /customers/{customer_id}/addresses/{address_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves details for a single customer address
 GET	 /customers/{customer_id}/addresses/{address_id}.json 	Plural Nouns Found in Consecutive Nodes	Retrieves details for a single customer address
-POST	 /customers/{customer_id}/addresses.json 	Singular Nouns Found in Consecutive Nodes	Creates a new address for a customer
-PUT	 /customers/{customer_id}/addresses/{address_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing customer address
 PUT	 /customers/{customer_id}/addresses/{address_id}.json 	Plural Nouns Found in Consecutive Nodes	Updates an existing customer address
-DELETE	 /customers/{customer_id}/addresses/{address_id}.json 	Singular Nouns Found in Consecutive Nodes	Removes an address from a customer’s address list
 DELETE	 /customers/{customer_id}/addresses/{address_id}.json 	Plural Nouns Found in Consecutive Nodes	Removes an address from a customer’s address list
-PUT	 /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	Singular Nouns Found in Consecutive Nodes	Performs bulk operations for multiple customer addresses
-PUT	 /customers/{customer_id}/addresses/{address_id}/default.json 	Singular Nouns Found in Consecutive Nodes	Sets the default address for a customer
 PUT	 /customers/{customer_id}/addresses/{address_id}/default.json 	Plural Nouns Found in Consecutive Nodes	Sets the default address for a customer
 PUT	 /customers/{customer_id}/addresses/{address_id}/default.json 	Singular Nouns Found in Consecutive Nodes	Sets the default address for a customer
 POST	 /price_rules/{price_rule_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Creates a discount code
 POST	 /price_rules/{price_rule_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Creates a discount code
-POST	 /price_rules/{price_rule_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Creates a discount code
-PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing discount code
 PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing discount code
 PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing discount code
 PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing discount code
 PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing discount code
 GET	 /price_rules/{price_rule_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes
 GET	 /price_rules/{price_rule_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes
-GET	 /price_rules/{price_rule_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes
 GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single discount code
 GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single discount code
 GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single discount code
 GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single discount code
-GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single discount code
-DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a discount code
 DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a discount code
 DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a discount code
 DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a discount code
 DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	Singular Nouns Found in Consecutive Nodes	Deletes a discount code
 POST	 /price_rules/{price_rule_id}/batch.json 	Singular Nouns Found in Consecutive Nodes	Creates a discount code creation job
 POST	 /price_rules/{price_rule_id}/batch.json 	Singular Nouns Found in Consecutive Nodes	Creates a discount code creation job
-POST	 /price_rules/{price_rule_id}/batch.json 	Singular Nouns Found in Consecutive Nodes	Creates a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a discount code creation job
-GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a discount code creation job
-GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes for a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes for a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes for a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes for a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes for a discount code creation job
 GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a list of discount codes for a discount code creation job
 PUT	 /price_rules/{price_rule_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing a price rule
-PUT	 /price_rules/{price_rule_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing a price rule
-GET	 /price_rules/{price_rule_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single price rule
 GET	 /price_rules/{price_rule_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single price rule
 DELETE	 /price_rules/{price_rule_id}.json 	Singular Nouns Found in Consecutive Nodes	Remove an existing PriceRule
-DELETE	 /price_rules/{price_rule_id}.json 	Singular Nouns Found in Consecutive Nodes	Remove an existing PriceRule
-GET	 /events/{event_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single event
-GET	 /webhooks/{webhook_id}.json 	Singular Nouns Found in Consecutive Nodes	Receive a single Webhook
-PUT	 /webhooks/{webhook_id}.json 	Singular Nouns Found in Consecutive Nodes	Modify an existing Webhook
-DELETE	 /webhooks/{webhook_id}.json 	Singular Nouns Found in Consecutive Nodes	Remove an existing Webhook
 GET	 /inventory_items/{inventory_item_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single inventory item by ID
-GET	 /inventory_items/{inventory_item_id}.json 	Singular Nouns Found in Consecutive Nodes	Retrieves a single inventory item by ID
-PUT	 /inventory_items/{inventory_item_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing inventory item
 PUT	 /inventory_items/{inventory_item_id}.json 	Singular Nouns Found in Consecutive Nodes	Updates an existing inventory item
 
 ***Patterns*** 
-Count: 27
+Count: 41
 GET	 /reports.json 	Cosistent Resource Archetype	Retrieves a list of reports
+GET	 /reports/{report_id}.json 	Cosistent Resource Archetype	Retrieves a single report
 POST	 /reports.json 	Cosistent Resource Archetype	Creates a new report
+PUT	 /reports/{report_id}.json 	Cosistent Resource Archetype	Updates a report
+DELETE	 /reports/{report_id}.json 	Cosistent Resource Archetype	Deletes a report
 POST	 /application_charges.json 	Cosistent Resource Archetype	Creates an application charge
 GET	 /application_charges.json?since_id=556467234 	Cosistent Resource Archetype	Retrieves a list of application charges
 POST	 /application_credits.json 	Cosistent Resource Archetype	Creates an application credit
 GET	 /application_credits.json 	Cosistent Resource Archetype	Retrieves all application credits
 GET	 /customers.json 	Cosistent Resource Archetype	Retrieves a list of customers
 GET	 /customers/search.json?query=Bob country:United States 	Cosistent Resource Archetype	Searches for customers that match a supplied query
+GET	 /customers/{customer_id}.json 	Cosistent Resource Archetype	Retrieves a single customer
 POST	 /customers.json 	Cosistent Resource Archetype	Creates a customer
+PUT	 /customers/{customer_id}.json 	Cosistent Resource Archetype	Updates a customer
+DELETE	 /customers/{customer_id}.json 	Cosistent Resource Archetype	Deletes a customer.
 GET	 /customers/count.json 	Cosistent Resource Archetype	Retrieves a count of customers
+GET	 /customers/{customer_id}/orders.json 	Cosistent Resource Archetype	Retrieves all orders belonging to a customer
+GET	 /customers/{customer_id}/addresses.json 	Cosistent Resource Archetype	Retrieves a list of addresses for a customer
+POST	 /customers/{customer_id}/addresses.json 	Cosistent Resource Archetype	Creates a new address for a customer
+PUT	 /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	Cosistent Resource Archetype	Performs bulk operations for multiple customer addresses
 GET	 /discount_codes/lookup.json?code=SUMMERSALE10OFF 	Cosistent Resource Archetype	Retrieves the location of a discount code
 GET	 /discount_codes/count.json 	Cosistent Resource Archetype	Retrieves a count of discount codes for a shop
 POST	 /price_rules.json 	Cosistent Resource Archetype	Creates a price rule
 GET	 /price_rules.json 	Cosistent Resource Archetype	Retrieves a list of price rules
 GET	 /price_rules/count.json 	Cosistent Resource Archetype	Retrieves a count of all price rules
 GET	 /events.json 	Cosistent Resource Archetype	Retrieves a list of events
+GET	 /events/{event_id}.json 	Cosistent Resource Archetype	Retrieves a single event
 GET	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	Cosistent Resource Archetype	Retrieves a count of events
 GET	 /webhooks.json 	Cosistent Resource Archetype	Retrieves a list of webhooks
 GET	 /webhooks/count.json 	Cosistent Resource Archetype	Receive a count of all Webhooks
+GET	 /webhooks/{webhook_id}.json 	Cosistent Resource Archetype	Receive a single Webhook
 POST	 /webhooks.json 	Cosistent Resource Archetype	Create a new Webhook
+PUT	 /webhooks/{webhook_id}.json 	Cosistent Resource Archetype	Modify an existing Webhook
+DELETE	 /webhooks/{webhook_id}.json 	Cosistent Resource Archetype	Remove an existing Webhook
 GET	 /inventory_items.json?ids=808950810,39072856,457924702 	Cosistent Resource Archetype	Retrieves a list of inventory items
 GET	 /inventory_levels.json 	Cosistent Resource Archetype	Retrieves a list of inventory levels
 POST	 /inventory_levels/adjust.json 	Cosistent Resource Archetype	Adjusts the inventory level of an inventory item at a location

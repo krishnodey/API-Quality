@@ -1,196 +1,196 @@
 ***Anti-Pattern*** 
-Count: 82
-POST	 /application 	Parameter Tunneling	Creates a new application and returns the location of the created resource.
-GET	 /application 	Parameter Tunneling	Returns any existing application that match your query.
-POST	 /billofmaterial 	Parameter Tunneling	Creates a new bill of material and returns the location of the created resource.
-POST	 /billofmaterial/bulk 	Parameter Tunneling	Retrieve and modify bill of material records in bulk.
-GET	 /billofmaterial 	Parameter Tunneling	Returns any existing bills of material that match your query.
-POST	 /carriers 	Parameter Tunneling	Creates a new carrier and returns the location of the created resource.
-POST	 /carriers/bulk 	Parameter Tunneling	Retrieve and modify carrier records in bulk.
-GET	 /carriers 	Parameter Tunneling	Returns any existing carrier records that match your query.
-POST	 /customers 	Parameter Tunneling	Creates a new customer and returns the location of the created resource.
-POST	 /customers/bulk 	Parameter Tunneling	Retrieve and modify customer records in bulk.
-GET	 /customers 	Parameter Tunneling	Returns any existing customers that match your query.
-POST	 /events 	Parameter Tunneling	Creates a new external event and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /events/bulk 	Parameter Tunneling	Retrieve and modify event records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /events 	Parameter Tunneling	Returns any existing event records that match your query.
-GET	 /issues 	Parameter Tunneling	Retrieves the details for one or more issues that match your query.
-POST	 /itemsuppliers 	Parameter Tunneling	Creates a new item supplier and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /itemsuppliers 	Parameter Tunneling	Returns any existing item suppliers that match your query.
-POST	 /items/bulk 	Parameter Tunneling	Retrieve and modify item records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /items 	Parameter Tunneling	Adds an item to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /items 	Parameter Tunneling	Retrieves the details for one or more items that match your query.
-POST	  /kpis 	Parameter Tunneling	Creates a new KPI and returns the location of the created resource.
-GET	 /kpis 	Parameter Tunneling	Retrieves the details for one or more KPIs that match your query.
-POST	 /locations/bulk 	Parameter Tunneling	Retrieve and modify location records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /locations 	Parameter Tunneling	Adds a location to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /locations 	Parameter Tunneling	Retrieves the details for one or more locations that match your query.
-POST	 /orderitemallocations 	Parameter Tunneling	Creates a new order allocation and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /orderitemallocations 	Parameter Tunneling	Returns any existing order allocations that match your query.
-POST	 /productinventories/bulk 	Parameter Tunneling	Retrieve and modify product inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	  /productinventories 	Parameter Tunneling	Adds a product inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /productinventories 	Parameter Tunneling	Retrieves the details for one or more product inventories that match your query.
-POST	  /productreturns 	Parameter Tunneling	Creates a new product return and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /productreturns/bulk 	Parameter Tunneling	Retrieve and modify returned product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /productreturns 	Parameter Tunneling	Returns any existing returned product records that match your query.
-POST	 /products/bulk 	Parameter Tunneling	Retrieve and modify product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /products 	Parameter Tunneling	Adds a product to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /products 	Parameter Tunneling	Retrieves the details for one or more products that match your query.
-POST	 /salesorderlines 	Parameter Tunneling	Adds a sales order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /salesorderlines 	Parameter Tunneling	Retrieves the details for one or more sales order lines that match your query.
-POST	 /salesorders/bulk 	Parameter Tunneling	Retrieve and modify sales order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /salesorders 	Parameter Tunneling	Adds a sales order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /salesorders 	Parameter Tunneling	Retrieves the details for one or more sales orders that match your query.
-PATCH	 /salesorders/{id} 	Parameter Tunneling	
-POST	 /salesplan 	Parameter Tunneling	Creates a new sales plan and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /salesplan/bulk 	Parameter Tunneling	Retrieve and modify sales plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /salesplan 	Parameter Tunneling	Returns any existing sales plans that match your query.
-POST	 /salesshipmentlines 	Parameter Tunneling	Adds a sales shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /salesshipmentlines 	Parameter Tunneling	Retrieves the details for one or more sales shipment lines that match your query.
-POST	 /salesshipments/bulk 	Parameter Tunneling	Retrieve and modify sales shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /salesshipments 	Parameter Tunneling	Adds a sales shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /salesshipments 	Parameter Tunneling	Retrieves the details for one or more sales shipments that match your query.
-POST	 /suppliers/bulk 	Parameter Tunneling	Retrieve and modify supplier records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /suppliers 	Parameter Tunneling	Adds a supplier to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /suppliers 	Parameter Tunneling	Retrieves the details for one or more suppliers that match your query.
-POST	 /supplyinventories/bulk 	Parameter Tunneling	Retrieve and modify supply inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /supplyinventories 	Parameter Tunneling	Adds a supply inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /supplyinventories 	Parameter Tunneling	Retrieves the details for one or more supply inventories that match your query.
-POST	 /supplyorderlines 	Parameter Tunneling	Adds a supply order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /supplyorderlines 	Parameter Tunneling	Retrieves the details for one or more supply order lines that match your query.
-POST	 /supplyorders/bulk 	Parameter Tunneling	Retrieve and modify supply order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	  /supplyorders 	Parameter Tunneling	Adds a supply order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /supplyorders 	Parameter Tunneling	Retrieves the details for one or more purchase orders that match your query.
-POST	 /supplyplan/bulk 	Parameter Tunneling	Retrieve and modify supply plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /supplyplan 	Parameter Tunneling	Adds a supply plan to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /supplyplan 	Parameter Tunneling	Retrieves the details for one or more supply plans that match your query.
-POST	 /supplyshipmentlines 	Parameter Tunneling	Adds a supply shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /supplyshipmentlines 	Parameter Tunneling	Retrieves the details for one or more supply shipment lines that match your query.
-POST	 /supplyshipments/bulk 	Parameter Tunneling	Retrieve and modify supply shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /supplyshipments 	Parameter Tunneling	Adds a supply shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /supplyshipments 	Parameter Tunneling	Retrieves the details for one or more supply shipments that match your query.
-POST	 /variables 	Parameter Tunneling	Creates a new variable and returns the location of the created resource.
-GET	 /variables 	Parameter Tunneling	Retrieves the details for one or more variables that match your query.
-POST	 /variables/{id}/actions/reset_to_default 	Parameter Tunneling	Initiate the "reset to default" action on a variable.
-POST	 /workorders/bulk 	Parameter Tunneling	Retrieve and modify work order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /workorders 	Parameter Tunneling	Adds a work order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /workorders 	Parameter Tunneling	Retrieves the details for one or more work orders that match your query.
-POST	 /{dataObject}/bulk 	Parameter Tunneling	Bulk process custom data records. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+Count: 165
 
 ***Patterns*** 
-Count: 112
+Count: 29
+POST	 /application 	Parameter Adherence	Creates a new application and returns the location of the created resource.
 DELETE	 /application/{id} 	Parameter Adherence	Deletes an existing application.
+GET	 /application 	Parameter Adherence	Returns any existing application that match your query.
 GET	 /application/{id} 	Parameter Adherence	Returns the application that matches your query.
 PUT	 /application/{id} 	Parameter Adherence	Updates an existing application and returns a 200 message if the call is successful.
+POST	 /billofmaterial 	Parameter Adherence	Creates a new bill of material and returns the location of the created resource.
+POST	 /billofmaterial/bulk 	Parameter Adherence	Retrieve and modify bill of material records in bulk.
 DELETE	 /billofmaterial/{id} 	Parameter Adherence	Deletes an existing bill of material.
+GET	 /billofmaterial 	Parameter Adherence	Returns any existing bills of material that match your query.
 GET	 /billofmaterial/{id} 	Parameter Adherence	Retrieves the details of a bill of material that matches the ID.
 PATCH	 /billofmaterial/{id} 	Parameter Adherence	Updates an existing bill of material and returns a 200 message if the call is successful.
 PUT	 /billofmaterial/{id} 	Parameter Adherence	Updates an existing bill of material and returns a 200 message if the call is successful.
+POST	 /carriers 	Parameter Adherence	Creates a new carrier and returns the location of the created resource.
+POST	 /carriers/bulk 	Parameter Adherence	Retrieve and modify carrier records in bulk.
 DELETE	 /carriers/{id} 	Parameter Adherence	Deletes an existing carrier.
 GET	 /carriers/{id} 	Parameter Adherence	Retrieves the details of a carrier that matches the ID.
+GET	 /carriers 	Parameter Adherence	Returns any existing carrier records that match your query.
 PATCH	 /carriers/{id} 	Parameter Adherence	Updates an existing carrier and returns a 200 message if the call is successful.
 PUT	 /carriers/{id} 	Parameter Adherence	Updates an existing carrier and returns a 200 message if the call is successful.
+POST	 /customers 	Parameter Adherence	Creates a new customer and returns the location of the created resource.
+POST	 /customers/bulk 	Parameter Adherence	Retrieve and modify customer records in bulk.
 DELETE	 /customers/{id} 	Parameter Adherence	Deletes an existing customer.
 GET	 /customers/{id} 	Parameter Adherence	Retrieves the details of a customer that matches the ID.
+GET	 /customers 	Parameter Adherence	Returns any existing customers that match your query.
 PATCH	 /customers/{id} 	Parameter Adherence	Updates parts of existing customer records and returns a 200 message if the call is successful.
 PUT	 /customers/{id} 	Parameter Adherence	Updates an existing customer and returns a 200 message if the call is successful.
+POST	 /events 	Parameter Adherence	Creates a new external event and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /events/bulk 	Parameter Adherence	Retrieve and modify event records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /events/{id} 	Parameter Adherence	Deletes an existing external event. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	  /events/{id} 	Parameter Adherence	Retrieves the details of an event that matches the ID.
+GET	 /events 	Parameter Adherence	Returns any existing event records that match your query.
 PATCH	 /events/{id} 	Parameter Adherence	Updates an existing external event and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /events/{id} 	Parameter Adherence	Updates an existing external event and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /issues/{id} 	Parameter Adherence	Retrieves the details of an issue that matches the ID.
+GET	 /issues 	Parameter Adherence	Retrieves the details for one or more issues that match your query.
+POST	 /itemsuppliers 	Parameter Adherence	Creates a new item supplier and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /itemsuppliers/bulk 	Parameter Adherence	Bulk process item suppliers. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /itemsuppliers/{id} 	Parameter Adherence	Deletes an existing item supplier. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /itemsuppliers/{id} 	Parameter Adherence	Returns the item supplier that matches your query.
+GET	 /itemsuppliers 	Parameter Adherence	Returns any existing item suppliers that match your query.
 PATCH	 /itemsuppliers/{id} 	Parameter Adherence	Updates an existing item supplier and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /itemsuppliers/{id} 	Parameter Adherence	Updates an existing item supplier and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /items/bulk 	Parameter Adherence	Retrieve and modify item records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /items 	Parameter Adherence	Adds an item to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /items/{id} 	Parameter Adherence	Deletes an existing item from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /items/{id} 	Parameter Adherence	Retrieves the details of an item that matches the ID.
+GET	 /items 	Parameter Adherence	Retrieves the details for one or more items that match your query.
 PATCH	  /items/{id} 	Parameter Adherence	Updates an existing item and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /items/{id} 	Parameter Adherence	Updates an existing item and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /kpis 	Parameter Adherence	Creates a new KPI and returns the location of the created resource.
 DELETE	  /kpis/{id} 	Parameter Adherence	Deletes an existing KPI.
 GET	 /kpis/{id} 	Parameter Adherence	Retrieves the details of a KPI that matches the ID.
 GET	 /kpis/{kpi}/score 	Parameter Adherence	Retrieves the details for one or more KPI scores that match your query.
+GET	 /kpis 	Parameter Adherence	Retrieves the details for one or more KPIs that match your query.
 PUT	 /kpis/{id} 	Parameter Adherence	Updates an existing KPI and returns a 200 message if the call is successful.
+POST	 /locations/bulk 	Parameter Adherence	Retrieve and modify location records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /locations 	Parameter Adherence	Adds a location to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /locations/{id} 	Parameter Adherence	Deletes an existing location from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /locations/{id} 	Parameter Adherence	Retrieves the details of a location that matches the ID.
+GET	 /locations 	Parameter Adherence	Retrieves the details for one or more locations that match your query.
 PATCH	 /locations/{id} 	Parameter Adherence	Updates an existing location and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /locations/{id} 	Parameter Adherence	Updates an existing location and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /orderitemallocations 	Parameter Adherence	Creates a new order allocation and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /orderitemallocations/bulk 	Parameter Adherence	Bulk process order allocations. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	  /orderitemallocations/{id} 	Parameter Adherence	Deletes an existing order allocation. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /orderitemallocations/{id} 	Parameter Adherence	Returns the order allocation that matches your query.
+GET	 /orderitemallocations 	Parameter Adherence	Returns any existing order allocations that match your query.
 PATCH	 /orderitemallocations/{id} 	Parameter Adherence	Updates an existing order allocation and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /orderitemallocations/{id} 	Parameter Adherence	Updates an existing order allocation and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /productinventories/bulk 	Parameter Adherence	Retrieve and modify product inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /productinventories 	Parameter Adherence	Adds a product inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /productinventories/{id} 	Parameter Adherence	Deletes an existing product inventory from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /productinventories/{id} 	Parameter Adherence	Retrieves the details of a product inventory that matches the ID.
+GET	 /productinventories 	Parameter Adherence	Retrieves the details for one or more product inventories that match your query.
 PATCH	 /productinventories/{id} 	Parameter Adherence	Updates an existing product inventory and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /productinventories/{id} 	Parameter Adherence	Updates an existing product inventory and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /productreturns 	Parameter Adherence	Creates a new product return and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /productreturns/bulk 	Parameter Adherence	Retrieve and modify returned product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /productreturns/{id} 	Parameter Adherence	Deletes an existing product return. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /productreturns/{id} 	Parameter Adherence	Retrieves the details of a returned product that matches the ID.
+GET	 /productreturns 	Parameter Adherence	Returns any existing returned product records that match your query.
 PATCH	 /productreturns/{id} 	Parameter Adherence	Updates an existing product return and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /productreturns/{id} 	Parameter Adherence	Updates an existing product return and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /products/bulk 	Parameter Adherence	Retrieve and modify product records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /products 	Parameter Adherence	Adds a product to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /products/{id} 	Parameter Adherence	Deletes an existing product from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /products/{id} 	Parameter Adherence	Retrieves the details of a product that matches the ID.
+GET	 /products 	Parameter Adherence	Retrieves the details for one or more products that match your query.
 PATCH	 /products/{id} 	Parameter Adherence	Updates an existing product and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /products/{id} 	Parameter Adherence	Updates an existing product and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /salesorderlines/bulk 	Parameter Adherence	Bulk process sales order lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorderlines 	Parameter Adherence	Adds a sales order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /salesorderlines/{id} 	Parameter Adherence	Deletes an existing sales order line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /salesorderlines/{id} 	Parameter Adherence	Retrieves the details of a sales order line that the ID.
+GET	 /salesorderlines 	Parameter Adherence	Retrieves the details for one or more sales order lines that match your query.
 PATCH	 /salesorderlines/{id} 	Parameter Adherence	Updates an existing sales order line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /salesorderlines/{id} 	Parameter Adherence	Updates an existing sales order line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorders/bulk 	Parameter Adherence	Retrieve and modify sales order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesorders 	Parameter Adherence	Adds a sales order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /salesorders/{id} 	Parameter Adherence	Deletes an existing sales order from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /salesorders/{id} 	Parameter Adherence	Retrieves the details of a sales order that the ID.
+GET	 /salesorders 	Parameter Adherence	Retrieves the details for one or more sales orders that match your query.
+PATCH	 /salesorders/{id} 	Parameter Adherence	
 PUT	 /salesorders/{id} 	Parameter Adherence	Updates an existing sales order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesplan 	Parameter Adherence	Creates a new sales plan and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesplan/bulk 	Parameter Adherence	Retrieve and modify sales plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /salesplan/{id} 	Parameter Adherence	Deletes an existing sales plan. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /salesplan 	Parameter Adherence	Returns any existing sales plans that match your query.
 GET	 /salesplan/{id} 	Parameter Adherence	Retrieves the details of a sales plan that matches the ID.
 PATCH	 /salesplan/{id} 	Parameter Adherence	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /salesplan/{id} 	Parameter Adherence	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /salesshipmentlines/bulk 	Parameter Adherence	Bulk process sales shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipmentlines 	Parameter Adherence	Adds a sales shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /salesshipmentlines/{id} 	Parameter Adherence	Deletes an existing sales shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /salesshipmentlines/{id} 	Parameter Adherence	Retrieves the details of a sales shipment line that matches the ID.
+GET	 /salesshipmentlines 	Parameter Adherence	Retrieves the details for one or more sales shipment lines that match your query.
 PATCH	 /salesshipmentlines/{id} 	Parameter Adherence	Updates an existing sales shipment line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /salesshipmentlines/{id} 	Parameter Adherence	Updates an existing sales shipment line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipments/bulk 	Parameter Adherence	Retrieve and modify sales shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesshipments 	Parameter Adherence	Adds a sales shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /salesshipments/{id} 	Parameter Adherence	Deletes an existing sales shipment from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /salesshipments/{id} 	Parameter Adherence	Retrieves the details of a sales shipment that matches the ID.
+GET	 /salesshipments 	Parameter Adherence	Retrieves the details for one or more sales shipments that match your query.
 PATCH	 /salesshipments/{id} 	Parameter Adherence	Updates an existing sales shipment and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /salesshipments/{id} 	Parameter Adherence	Updates an existing sales shipment and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /suppliers/bulk 	Parameter Adherence	Retrieve and modify supplier records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /suppliers 	Parameter Adherence	Adds a supplier to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /suppliers/{id} 	Parameter Adherence	Deletes an existing supplier from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /suppliers/{id} 	Parameter Adherence	Retrieves the details of a supplier that matches the ID.
+GET	 /suppliers 	Parameter Adherence	Retrieves the details for one or more suppliers that match your query.
 PATCH	 /suppliers/{id} 	Parameter Adherence	Updates the description for a supplier. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /suppliers/{id} 	Parameter Adherence	Updates an existing supplier and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyinventories/bulk 	Parameter Adherence	Retrieve and modify supply inventory records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyinventories 	Parameter Adherence	Adds a supply inventory to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyinventories/{id} 	Parameter Adherence	Deletes an existing supply inventory from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyinventories/{id} 	Parameter Adherence	Retrieves the details of a supply inventory that matches the ID.
+GET	 /supplyinventories 	Parameter Adherence	Retrieves the details for one or more supply inventories that match your query.
 PATCH	 /supplyinventories/{id} 	Parameter Adherence	Updates an existing supply inventory and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyinventories/{id} 	Parameter Adherence	Updates an existing supply inventory and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /supplyorderlines/bulk 	Parameter Adherence	Bulk process supply order lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorderlines 	Parameter Adherence	Adds a supply order line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyorderlines/{id} 	Parameter Adherence	Deletes an existing supply order line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyorderlines/{id} 	Parameter Adherence	Retrieves the details of a supply order line that the ID.
+GET	 /supplyorderlines 	Parameter Adherence	Retrieves the details for one or more supply order lines that match your query.
 PATCH	 /supplyorderlines/{id} 	Parameter Adherence	Updates an existing supply order line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyorderlines/{id} 	Parameter Adherence	Updates an existing supply order line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyorders/bulk 	Parameter Adherence	Retrieve and modify supply order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	  /supplyorders 	Parameter Adherence	Adds a supply order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyorders/{id} 	Parameter Adherence	Deletes an existing supply order from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyorders/{id} 	Parameter Adherence	Retrieves the details of a supply order that matches the ID.
+GET	 /supplyorders 	Parameter Adherence	Retrieves the details for one or more purchase orders that match your query.
 PATCH	 /supplyorders/{id} 	Parameter Adherence	Updates an existing supply order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyorders/{id} 	Parameter Adherence	Updates an existing supply order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyplan/bulk 	Parameter Adherence	Retrieve and modify supply plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyplan 	Parameter Adherence	Adds a supply plan to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyplan/{id} 	Parameter Adherence	Deletes an existing supply plan from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyplan/{id} 	Parameter Adherence	Retrieves the details of a supply plan that matches the ID.
+GET	 /supplyplan 	Parameter Adherence	Retrieves the details for one or more supply plans that match your query.
 PATCH	 /supplyplan/{id} 	Parameter Adherence	Updates an existing supply plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyplan/{id} 	Parameter Adherence	Updates an existing supply plan and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /supplyshipmentlines/bulk 	Parameter Adherence	Bulk process supply shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipmentlines 	Parameter Adherence	Adds a supply shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyshipmentlines/{id} 	Parameter Adherence	Deletes an existing supply shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyshipmentlines/{id} 	Parameter Adherence	Retrieves the details of a supply shipment line that matches the ID.
+GET	 /supplyshipmentlines 	Parameter Adherence	Retrieves the details for one or more supply shipment lines that match your query.
 PATCH	 /supplyshipmentlines/{id} 	Parameter Adherence	Updates an existing supply shipment line and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyshipmentlines/{id} 	Parameter Adherence	Updates an existing supply shipment line and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipments/bulk 	Parameter Adherence	Retrieve and modify supply shipment records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyshipments 	Parameter Adherence	Adds a supply shipment to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyshipments/{id} 	Parameter Adherence	Deletes an supply shipment from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyshipments/{id} 	Parameter Adherence	Retrieves the details of a supply shipment that matches the ID.
+GET	 /supplyshipments 	Parameter Adherence	Retrieves the details for one or more supply shipments that match your query.
 PATCH	 /supplyshipments/{id} 	Parameter Adherence	Updates an existing supply shipment and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyshipments/{id} 	Parameter Adherence	Updates an existing supply shipment and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /variables 	Parameter Adherence	Creates a new variable and returns the location of the created resource.
 DELETE	 /variables/{id} 	Parameter Adherence	Deletes an existing variable.
 GET	 /variables/{id} 	Parameter Adherence	Retrieves the details of the variable that matches the ID.
+GET	 /variables 	Parameter Adherence	Retrieves the details for one or more variables that match your query.
+POST	 /variables/{id}/actions/reset_to_default 	Parameter Adherence	Initiate the "reset to default" action on a variable.
 PUT	 /variables/{id} 	Parameter Adherence	Updates an existing variable and returns a 200 message if the update is successful.
+POST	 /workorders/bulk 	Parameter Adherence	Retrieve and modify work order records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /workorders 	Parameter Adherence	Adds a work order to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /workorders/{id} 	Parameter Adherence	Deletes an existing business area from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	  /workorders/{id} 	Parameter Adherence	Retrieves the details of a work order that matches the ID.
+GET	 /workorders 	Parameter Adherence	Retrieves the details for one or more work orders that match your query.
 PATCH	 /workorders/{id} 	Parameter Adherence	Updates an existing work order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /workorders/{id} 	Parameter Adherence	Updates an existing business area and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /{dataObject}/bulk 	Parameter Adherence	Bulk process custom data records. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /{dataObject}\ 	Parameter Adherence	Adds a custom data record to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /{dataObject}/{id} 	Parameter Adherence	Deletes an existing custom data record from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /{dataObject}/{id} 	Parameter Adherence	Retrieves the details of a custom data record that matches the ID.

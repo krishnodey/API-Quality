@@ -1,8 +1,7 @@
 ***Anti-Pattern*** 
-Count: 69
+Count: 62
 POST	 /authentication/local/new 	Singular Nouns Found in Consecutive Nodes	Create a user
 POST	 /authentication/local/new 	Singular Nouns Found in Consecutive Nodes	Create a user
-POST	 /authentication/local 	Singular Nouns Found in Consecutive Nodes	Login Request
 POST	 /authentication/local/resent-verification 	Singular Nouns Found in Consecutive Nodes	Resend Verification
 POST	 /authentication/local/resent-verification 	Singular Nouns Found in Consecutive Nodes	Resend Verification
 POST	 /authentication/local/resent-verification 	Singular Nouns Found in Consecutive Nodes	Resend Verification
@@ -25,18 +24,12 @@ GET	 /authentication/verify-change-email/:verificationToken 	Singular Nouns Foun
 GET	 /authentication/verify-change-email/:verificationToken 	Singular Nouns Found in Consecutive Nodes	Verify Change Email
 GET	 /authentication/verify-change-email/:verificationToken 	Singular Nouns Found in Consecutive Nodes	Verify Change Email
 GET	 /authentication/verify-change-email/:verificationToken 	Singular Nouns Found in Consecutive Nodes	Verify Change Email
-POST	 /authentication/logout 	Singular Nouns Found in Consecutive Nodes	Logout Request
-GET	 /authentication/apple 	Singular Nouns Found in Consecutive Nodes	Authenticate with Apple
-GET	 /authentication/bitbucket 	Singular Nouns Found in Consecutive Nodes	Authenticate with Bitbucket
-GET	 /authentication/facebook 	Singular Nouns Found in Consecutive Nodes	Authenticate with Facebook
-GET	 /authentication/figma 	Singular Nouns Found in Consecutive Nodes	Authenticate with Figma
 GET	 /authentication/init/github 	Singular Nouns Found in Consecutive Nodes	Authenticate with GitHub
 GET	 /authentication/init/github 	Singular Nouns Found in Consecutive Nodes	Authenticate with GitHub
 GET	 /authentication/init/gitlab 	Singular Nouns Found in Consecutive Nodes	Authenticate with GitLab
 GET	 /authentication/init/gitlab 	Singular Nouns Found in Consecutive Nodes	Authenticate with GitLab
 GET	 /authentication/init/google 	Singular Nouns Found in Consecutive Nodes	Authenticate with Google
 GET	 /authentication/init/google 	Singular Nouns Found in Consecutive Nodes	Authenticate with Google
-GET	 /authentication/linkedin 	Singular Nouns Found in Consecutive Nodes	Authenticate with LinkedIn
 GET	 /authentication/init/microsoft 	Singular Nouns Found in Consecutive Nodes	Authenticate with Microsoft
 GET	 /authentication/init/microsoft 	Singular Nouns Found in Consecutive Nodes	Authenticate with Microsoft
 GET	 /authentication/init/reddit 	Singular Nouns Found in Consecutive Nodes	Authenticate with Reddit
@@ -71,4 +64,11 @@ PUT	 /authentication/twoFa/disable 	Singular Nouns Found in Consecutive Nodes	Di
 PUT	 /authentication/twoFa/disable 	Singular Nouns Found in Consecutive Nodes	Disable two factor authentication
 
 ***Patterns*** 
-Count: 0
+Count: 7
+POST	 /authentication/local 	Cosistent Resource Archetype	Login Request
+POST	 /authentication/logout 	Cosistent Resource Archetype	Logout Request
+GET	 /authentication/apple 	Cosistent Resource Archetype	Authenticate with Apple
+GET	 /authentication/bitbucket 	Cosistent Resource Archetype	Authenticate with Bitbucket
+GET	 /authentication/facebook 	Cosistent Resource Archetype	Authenticate with Facebook
+GET	 /authentication/figma 	Cosistent Resource Archetype	Authenticate with Figma
+GET	 /authentication/linkedin 	Cosistent Resource Archetype	Authenticate with LinkedIn

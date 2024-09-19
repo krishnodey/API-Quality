@@ -1,57 +1,42 @@
 ***Anti-Pattern*** 
-Count: 36
-GET	/v18.0/{album-id}/comments	Parameter Tunneling	Represents a collection of Comments on the Album.
-GET	/v18.0/{album-id}/likes 	Parameter Tunneling	A collection of Profiles who like the Album.
-GET	 /v18.0/{album-id}/photos 	Parameter Tunneling	A collection of Photos in the Album
-GET	/v18.0/{album-id}/picture 	Parameter Tunneling	A link to the Album cover photo.
-POST	/app/app_link_hosts	Parameter Tunneling	create app link hosts using the
-GET	 /v18.0/{application-id}/accounts 	Parameter Tunneling	Represents a collection of test users on an app.
-GET	/v18.0/{application-id}/ad_placement_groups 	Parameter Tunneling	Ad placement groups for publishing ads on this app
-GET	 /v18.0/{application-id}/adnetworkanalytics_results	Parameter Tunneling	Obtain the results of an async Audience Network query for this publisher entity
-GE	/v18.0/{application-id}/aem_attribution	Parameter Tunneling	aem_attribution
-GET	/v18.0/{application-id}/aem_conversion_configs	Parameter Tunneling	The aggregated event measurement conversion value configs for this app
-GET	/v18.0/{application-id}/aem_conversion_filter	Parameter Tunneling	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
-GET	 /v19.0/{application-id}/agencies 	Parameter Tunneling	The businesses which are not owner but can advertise for this app
-GET	 /v19.0/{application-id}/app_event_types	Parameter Tunneling	Info about App Events logged for the app
-GET	 /v19.0/{application-id}/appassets 	Parameter Tunneling	An Edge to the CanvasAppAsset
-GET	 /v19.0/{application-id}/button_auto_detection_device_selection	Parameter Tunneling	to turn on auto device sampling.
-GET	/v19.0/{application-id}/cloudbridge_settings	Parameter Tunneling	ApplicationCloudbridgeSettings
-GET	/v19.0/{application-id}/ios_skadnetwork_conversion_config	Parameter Tunneling	ApplicationiosSkadnetworkConversionConfig
-GET	 /v19.0/{application-id}/mobile_sdk_gk 	Parameter Tunneling	Gatekeeper for Mobile SDK
-GET	 /v19.0/{application-id}/permissions 	Parameter Tunneling	The status of permissions that are have been submitted for Login Review
-GET	 /v19.0/{application-id}/products 	Parameter Tunneling	In-app-purchaseable products associated with this app
-GET	 /v19.0/{application-id}/purchases	Parameter Tunneling	In-app-purchaseable products of this app owned by the user
-POST	 /{application_id}/activities 	Parameter Tunneling	Application activities are events from your app.You can use a user access token or app access token to log events to this endpoint.
-GET	 /v19.0/{application-id}/ad_placement_groups 	Parameter Tunneling	Application Ad Placement Groups
-GET	 /v19.0/{application-id}/adnetworkanalytics_results 	Parameter Tunneling	Application Adnetworkanalytics Results
-GET	 /v19.0/{application-id}/model_asset 	Parameter Tunneling	Application Model Asset
-GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Parameter Tunneling	Application Monetized Digital Store Objects
-GET	 /v19.0/{application-id}/permissions 	Parameter Tunneling	Application Permissions
-GET	 /v19.0/{app-id}/picture 	Parameter Tunneling	An app's profile picture.
-GET	 /v19.0/{application-id}/purchases 	Parameter Tunneling	Application Purchases
-GET	 /v19.0/{app-id}/roles 	Parameter Tunneling	The developer roles defined for a Facebook app.
-GET	 /v19.0/{app-id}/scores 	Parameter Tunneling	Scores from this Facebook game for a user and their friends.
-GET	 /v19.0/{application-id}/subscribed_domains 	Parameter Tunneling	Application Subscribed Domains
-GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Parameter Tunneling	Application Subscribed Domains Phishing
-POST	 /v19.0/{app-id}/translations 	Parameter Tunneling	You can specify new strings to be translated for your app using this edge:
-GET	 /v19.0/branded_content_search 	Parameter Tunneling	Returns branded content based on your search. By default we only return content that is currently available on Facebook or Instagram, and content that was created on or after August 17, 2023.
-GET	/v19.0/{canvas-id} 	Parameter Tunneling	A canvas document
+Count: 48
 
 ***Patterns*** 
-Count: 30
+Count: 18
 GET	/v18.0/{album-id} 	Parameter Adherence	Get Fields and Edges on an Album.
 POST	 /{group_id}/albums	Parameter Adherence	When posting to this edge, an Album will be created.
+GET	/v18.0/{album-id}/comments	Parameter Adherence	Represents a collection of Comments on the Album.
+GET	/v18.0/{album-id}/likes 	Parameter Adherence	A collection of Profiles who like the Album.
+GET	 /v18.0/{album-id}/photos 	Parameter Adherence	A collection of Photos in the Album
 POST	 /{album_id}/photos 	Parameter Adherence	When posting to this edge, a Photo will be created.
+GET	/v18.0/{album-id}/picture 	Parameter Adherence	A link to the Album cover photo.
 GET	/v18.0/{app-link-host-id} 	Parameter Adherence	An individual app link host object created by an app. An app link host is a wrapper for a group of different app links.
+POST	/app/app_link_hosts	Parameter Adherence	create app link hosts using the
 DELET	/v18.0/{app-link-host-id}	Parameter Adherence	delete app links using this edge
 POST	/v18.0/{app-link-host-id}	Parameter Adherence	update app links using this edge
 GET	/v18.0/{application-id} 	Parameter Adherence	Get information about a Facebook app.
 POST	 /{business_id}/owned_apps 	Parameter Adherence	When posting to this edge, an Application will be created.
+GET	 /v18.0/{application-id}/accounts 	Parameter Adherence	Represents a collection of test users on an app.
 POST	 /{application_id}/accounts 	Parameter Adherence	When posting to this edge, a TestAccount will be created.
+GET	/v18.0/{application-id}/ad_placement_groups 	Parameter Adherence	Ad placement groups for publishing ads on this app
+GET	 /v18.0/{application-id}/adnetworkanalytics_results	Parameter Adherence	Obtain the results of an async Audience Network query for this publisher entity
+GE	/v18.0/{application-id}/aem_attribution	Parameter Adherence	aem_attribution
+GET	/v18.0/{application-id}/aem_conversion_configs	Parameter Adherence	The aggregated event measurement conversion value configs for this app
+GET	/v18.0/{application-id}/aem_conversion_filter	Parameter Adherence	Boolean for if product_set_id [fb_content_id] belongs to a certain catalog [catalog_id]
+GET	 /v19.0/{application-id}/agencies 	Parameter Adherence	The businesses which are not owner but can advertise for this app
+GET	 /v19.0/{application-id}/app_event_types	Parameter Adherence	Info about App Events logged for the app
 GET	 /v19.0/{application-id}/app_installed_groups	Parameter Adherence	List of facebook groups the app is installed in
+GET	 /v19.0/{application-id}/appassets 	Parameter Adherence	An Edge to the CanvasAppAsset
+GET	 /v19.0/{application-id}/button_auto_detection_device_selection	Parameter Adherence	to turn on auto device sampling.
+GET	/v19.0/{application-id}/cloudbridge_settings	Parameter Adherence	ApplicationCloudbridgeSettings
 GET	 /v19.0/{application-id}/da_checks	Parameter Adherence	A list of results after running Dynamic Ads checks on this app.
 GET	 /v19.0/{application-id}/events 	Parameter Adherence	Retrieves events created on your page on behalf of your app
+GET	/v19.0/{application-id}/ios_skadnetwork_conversion_config	Parameter Adherence	ApplicationiosSkadnetworkConversionConfig
+GET	 /v19.0/{application-id}/mobile_sdk_gk 	Parameter Adherence	Gatekeeper for Mobile SDK
 GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Parameter Adherence	List of digital store objects for this app monetized via Audience Network
+GET	 /v19.0/{application-id}/permissions 	Parameter Adherence	The status of permissions that are have been submitted for Login Review
+GET	 /v19.0/{application-id}/products 	Parameter Adherence	In-app-purchaseable products associated with this app
+GET	 /v19.0/{application-id}/purchases	Parameter Adherence	In-app-purchaseable products of this app owned by the user
 GET	 /v19.0/{application-id}/subscribed_domains 	Parameter Adherence	GETGraphApplicationSubscribedDomainsEdge
 GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Parameter Adherence	GETGraphApplicationSubscribedDomainsPhishingEdge
 POST	 /{application_id}/app_indexing 	Parameter Adherence	When posting to this edge, an Application will be created.
@@ -62,10 +47,25 @@ POST	 /{application_id}/mmp_auditing	Parameter Adherence	When posting to this ed
 POST	 /act_{ad_account_id}/subscribed_apps 	Parameter Adherence	You can update an Application by making a POST request to /act_{ad_account_id}/subscribed_apps.
 DELETE	  /{page_id}/subscribed_apps. 	Parameter Adherence	You can dissociate an Application from a Page by making a DELETE request to /{page_id}/subscribed_apps.
 DELETE	 /act_{ad_account_id}/subscribed_apps 	Parameter Adherence	You can dissociate an Application from an AdAccount by making a DELETE request to /act_{ad_account_id}/subscribed_apps.
+POST	 /{application_id}/activities 	Parameter Adherence	Application activities are events from your app.You can use a user access token or app access token to log events to this endpoint.
+GET	 /v19.0/{application-id}/ad_placement_groups 	Parameter Adherence	Application Ad Placement Groups
+GET	 /v19.0/{application-id}/adnetworkanalytics_results 	Parameter Adherence	Application Adnetworkanalytics Results
+GET	 /v19.0/{application-id}/model_asset 	Parameter Adherence	Application Model Asset
+GET	 /v19.0/{application-id}/monetized_digital_store_objects 	Parameter Adherence	Application Monetized Digital Store Objects
+GET	 /v19.0/{application-id}/permissions 	Parameter Adherence	Application Permissions
+GET	 /v19.0/{app-id}/picture 	Parameter Adherence	An app's profile picture.
 GET	 /v19.0/{application-id}/products 	Parameter Adherence	product_ids list<string> List of product ids (e.g. 'golden_gem') to retrieve info about
+GET	 /v19.0/{application-id}/purchases 	Parameter Adherence	Application Purchases
+GET	 /v19.0/{app-id}/roles 	Parameter Adherence	The developer roles defined for a Facebook app.
+GET	 /v19.0/{app-id}/scores 	Parameter Adherence	Scores from this Facebook game for a user and their friends.
 DELETE	 /v19.0/{app-id}/scores 	Parameter Adherence	You can delete all scores from your app using this edge. To delete individual scores, use the /{user-id}/scores edge.
+GET	 /v19.0/{application-id}/subscribed_domains 	Parameter Adherence	Application Subscribed Domains
+GET	 /v19.0/{application-id}/subscribed_domains_phishing 	Parameter Adherence	Application Subscribed Domains Phishing
 POST	 /v19.0/{app-id}/subscriptions 	Parameter Adherence	You can create new Webhooks subscriptions using this edge
 DELETE	 /v19.0/{app-id}/subscriptions	Parameter Adherence	You can delete all or per-object subscriptions using this operation:
+POST	 /v19.0/{app-id}/translations 	Parameter Adherence	You can specify new strings to be translated for your app using this edge:
+GET	 /v19.0/branded_content_search 	Parameter Adherence	Returns branded content based on your search. By default we only return content that is currently available on Facebook or Instagram, and content that was created on or after August 17, 2023.
 GET	 /v19.0/{cpas-advertiser-partnership-recommendation-id} 	Parameter Adherence	Returns a recommendation of a single retailer for a specific brand. This endpoint returns a retailer-brand pair and an advertiser who can advertise on behalf of the producer.
+GET	/v19.0/{canvas-id} 	Parameter Adherence	A canvas document
 GET	 /v19.0/{canvas-id}/preview 	Parameter Adherence	Get preview HTML embed element
 GET	 /v19.0/{canvas-id}/previews 	Parameter Adherence	Get preview notifications for the canvas. Sends a Canvas preview notification to specified page admin ids.

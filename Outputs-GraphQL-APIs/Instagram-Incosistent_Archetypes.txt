@@ -1,8 +1,5 @@
 ***Anti-Pattern*** 
-Count: 123
-GET	 /{ig-comment-id}?fields={fields} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Comment.
-GET	 /{ig-comment-id}?fields={fields} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Comment.
-GET	 /{user-id}/accounts?access_token={user-access-token} 	Singular Nouns Found in Consecutive Nodes	Page access tokens are used in Graph API calls to manage Pages. To generate a page access token, an admin of the page must grant your app the Page permission or permissions needed. Once granted, you can retrieve the Page access token using a user access token with the required permissions.
+Count: 94
 GET	 /{app-id}|{client-token} 	Singular Nouns Found in Consecutive Nodes	Client tokens make Graph API requests on behalf of apps instead of users.
 GET	 /{app-id}|{client-token} 	Singular Nouns Found in Consecutive Nodes	Client tokens make Graph API requests on behalf of apps instead of users.
 GET	 /{api-version}/{ig-comment-id} 	Singular Nouns Found in Consecutive Nodes	Get Instagram comments
@@ -10,22 +7,14 @@ GET	 /{api-version}/{ig-comment-id} 	Singular Nouns Found in Consecutive Nodes	G
 GET	 /{api-version}/{ig-comment-id} 	Singular Nouns Found in Consecutive Nodes	Get Instagram comments
 GET	 /{api-version}/{ig-comment-id} 	Singular Nouns Found in Consecutive Nodes	Get Instagram comments
 GET	 /{api-version}/{ig-comment-id} 	Singular Nouns Found in Consecutive Nodes	Get Instagram comments
-GET	 /{api-version}/{ig-comment-id} 	Singular Nouns Found in Consecutive Nodes	Get Instagram comments
-GET	 /{api-version}/{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
 GET	 /{api-version}/{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
 GET	 /{api-version}/{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
 GET	 /{api-version}/{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
 GET	 /{api-version}/{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
 GET	 /{api-version}/{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Get a list of IG Comments on the IG Comment; Create an IG Comment on an IG Comment.
 POST	 /{ig-comment-id}/replies?message={message} 	Singular Nouns Found in Consecutive Nodes	Replying to a Comment
-POST	 /{ig-comment-id}/replies?message={message} 	Singular Nouns Found in Consecutive Nodes	Replying to a Comment
-POST	 /{ig-media-id}/comments 	Singular Nouns Found in Consecutive Nodes	Create an IG Comment on an IG Media object
 POST	 /{ig-media-id}/comments 	Singular Nouns Found in Consecutive Nodes	Create an IG Comment on an IG Media object
 GET	 /{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Returns a list of IG Comments on an IG Comment.
-GET	 /{ig-comment-id}/replies 	Singular Nouns Found in Consecutive Nodes	Returns a list of IG Comments on an IG Comment.
-DELETE	 /{ig-comment-id}	Singular Nouns Found in Consecutive Nodes	Deleting a Comment
-DELETE	 /{ig-comment-id}	Singular Nouns Found in Consecutive Nodes	Deleting a Comment
-GET	 /{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
 GET	 /{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
 GET	 /{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
 GET	 /{api-version}/{instagram-container-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
@@ -36,8 +25,6 @@ GET	 /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 
 GET	 /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
 GET	 /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
 GET	 /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
-GET	 /{api-version}/{ig-hashtag-id}?fields={fields}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
-GET	 /{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
 GET	 /{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
 GET	 /{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
 GET	 /{api-version}/{ig-media-id}?fields={fields}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
@@ -48,14 +35,11 @@ POST	 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_toke
 POST	 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
 POST	 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
 POST	 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
-POST	 {api-version}/{ig-media-id}?comment_enabled={comment-enabled} &access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
 GET	 /{api-version}/{ig-user-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	 /{api-version}/{ig-user-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	 /{api-version}/{ig-user-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	 /{api-version}/{ig-user-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	 /{api-version}/{ig-user-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
-GET	 /{api-version}/{ig-user-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
-GET	 /{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	Singular Nouns Found in Consecutive Nodes	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
 GET	 /{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	Singular Nouns Found in Consecutive Nodes	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
 GET	 /{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	Singular Nouns Found in Consecutive Nodes	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
 GET	 /{api-version}/{ig-user-id}?fields=business_discovery.username({username}) 	Singular Nouns Found in Consecutive Nodes	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
@@ -65,8 +49,6 @@ GET	 /v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&a
 GET	 /v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
 GET	 /v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
 GET	 /v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
-GET	 /v9.0/{ig-user-id}/content_publishing_limit?fields={fields}&since={since}&access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
-GET	 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 GET	 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 GET	 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 GET	 {api-version}/{ig-user-id}/insights ?metric={metric} &period={period} &since={since} &until={until} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
@@ -77,8 +59,6 @@ GET	 /{api-version}//{instagram-container-id} 	Singular Nouns Found in Consecuti
 GET	 /{api-version}//{instagram-container-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
 GET	 /{api-version}//{instagram-container-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
 GET	 /{api-version}//{instagram-container-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
-GET	 /{api-version}//{instagram-container-id} 	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an IG Container.
-GET	 /{api-version}//{ig-hashtag-id} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
 GET	 /{api-version}//{ig-hashtag-id} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
 GET	 /{api-version}//{ig-hashtag-id} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
 GET	 /{api-version}//{ig-hashtag-id} 	Singular Nouns Found in Consecutive Nodes	Returns Fields and Edges on an IG Hashtag.
@@ -87,12 +67,9 @@ GET	 /{api-version}//{ig-hashtag-id} 	Singular Nouns Found in Consecutive Nodes	
 GET	 /{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Singular Nouns Found in Consecutive Nodes	Returns a list of the most recently published photo and video IG Media objects published with a specific hashtag.
 GET	 /{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Singular Nouns Found in Consecutive Nodes	Returns a list of the most recently published photo and video IG Media objects published with a specific hashtag.
 GET	 /{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Singular Nouns Found in Consecutive Nodes	Returns a list of the most recently published photo and video IG Media objects published with a specific hashtag.
-GET	 /{ig-hashtag-id}/recent_media?user_id={user-id}&fields={fields}	Singular Nouns Found in Consecutive Nodes	Returns a list of the most recently published photo and video IG Media objects published with a specific hashtag.
 GET	 /{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} 	Singular Nouns Found in Consecutive Nodes	Returns the most popular photo and video IG Media objects that have been tagged with the hashtag.
 GET	 /{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} 	Singular Nouns Found in Consecutive Nodes	Returns the most popular photo and video IG Media objects that have been tagged with the hashtag.
 GET	 /{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} 	Singular Nouns Found in Consecutive Nodes	Returns the most popular photo and video IG Media objects that have been tagged with the hashtag.
-GET	 /{ig-hashtag-id}/top_media?user_id={user-id}&fields={fields} 	Singular Nouns Found in Consecutive Nodes	Returns the most popular photo and video IG Media objects that have been tagged with the hashtag.
-GET	 /{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
 GET	 /{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
 GET	 /{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
 GET	 /{api-version}/{ig-media-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Gets fields and edges on IG media.
@@ -103,21 +80,15 @@ POST	 /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_toke
 POST	 /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
 POST	 /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
 POST	 /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
-POST	 /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token} 	Singular Nouns Found in Consecutive Nodes	Enable or disable comments on an IG Media.
 GET	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
 GET	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
-GET	/{api-version}/{ig-user-id} ?fields={fields} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get fields and edges on an Instagram Business or Creator Account.
-GET	 /{ig-user-id}?fields=business_discovery.username({username}) 	Singular Nouns Found in Consecutive Nodes	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
-GET	 /{ig-user-id}?fields=business_discovery.username({username}) 	Singular Nouns Found in Consecutive Nodes	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.
 GET	/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
 GET	/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
 GET	/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
 GET	/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
-GET	/v9.0/{ig-user-id}/content_publishing_limit ?fields={fields} &since={since} &access_token={access-token}	Singular Nouns Found in Consecutive Nodes	Get the number of times an IG User has published and IG Container within a given time period. Refer to the Content Publishing guide for complete publishing steps.
-GET	 /{api-version}/{ig-user-id}/insights 	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 GET	 /{api-version}/{ig-user-id}/insights 	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 GET	 /{api-version}/{ig-user-id}/insights 	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 GET	 /{api-version}/{ig-user-id}/insights 	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
@@ -125,5 +96,9 @@ GET	 /{api-version}/{ig-user-id}/insights 	Singular Nouns Found in Consecutive N
 GET	 /{api-version}/{ig-user-id}/insights 	Singular Nouns Found in Consecutive Nodes	Returns insights on an IG User.
 
 ***Patterns*** 
-Count: 1
+Count: 5
+GET	 /{ig-comment-id}?fields={fields} 	Cosistent Resource Archetype	Get fields and edges on an IG Comment.
 GET	 /oauth/access_token 	Cosistent Resource Archetype	To generate an app access token, you need
+GET	 /{user-id}/accounts?access_token={user-access-token} 	Cosistent Resource Archetype	Page access tokens are used in Graph API calls to manage Pages. To generate a page access token, an admin of the page must grant your app the Page permission or permissions needed. Once granted, you can retrieve the Page access token using a user access token with the required permissions.
+DELETE	 /{ig-comment-id}	Cosistent Resource Archetype	Deleting a Comment
+GET	 /{ig-user-id}?fields=business_discovery.username({username}) 	Cosistent Resource Archetype	Returns data about another Instagram Business or Creator IG User. Perform this request on the Instagram Business or Creator IG User who is making the query, and identify the targeted business with the username parameter.

@@ -1,16 +1,16 @@
 ***Anti-Pattern*** 
 Count: 29
-POST	 /authentication/local/new 	Parameter Tunneling	Create a user
-POST	 /authentication/local/change-password 	Parameter Tunneling	Change Password
-POST	 /authentication/local/change-email 	Parameter Tunneling	Change Email
-GET	 /authentication/verify-email/:verificationToken 	Parameter Tunneling	Verify Email
 
 ***Patterns*** 
 Count: 1
+POST	 /authentication/local/new 	Parameter Adherence	Create a user
 POST	 /authentication/local 	Parameter Adherence	Login Request
 POST	 /authentication/local/resent-verification 	Parameter Adherence	Resend Verification
 POST	 /authentication/forgot-password 	Parameter Adherence	Forgot Password
 POST	 /authentication/reset-password 	Parameter Adherence	Reset Password
+POST	 /authentication/local/change-password 	Parameter Adherence	Change Password
+POST	 /authentication/local/change-email 	Parameter Adherence	Change Email
+GET	 /authentication/verify-email/:verificationToken 	Parameter Adherence	Verify Email
 GET	 /authentication/verify-change-email/:verificationToken 	Parameter Adherence	Verify Change Email
 POST	 /authentication/logout 	Parameter Adherence	Logout Request
 GET	 /authentication/apple 	Parameter Adherence	Authenticate with Apple

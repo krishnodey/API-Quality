@@ -3,73 +3,73 @@ Count: 0
 
 ***Patterns*** 
 Count: 70
-PUT	 /models/{modelId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an algorithmic model.
-DELETE	 /models/{modelId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an algorithmic model.
-GET	 /models 	[Regular Endpoints]	Returns an array of algorithmic models and their summary.
-POST	 /models 	[Regular Endpoints]	Creates an algorithmic model.
-GET	 /models/{modelId}/processing-history 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
-GET	 /models/{modelId}/runs/latest/traits 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of your most influential (accurate) traits for your algorithmic model.
-GET	 /models/{modelId}/runs/latest/stats 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns accuracy and reach values for your algorithmic model.
-POST	 /models/bulk-delete 	[Regular Endpoints]	Delete multiple algorithmic models with a single operation.
-GET	 /models/limits 	[Regular Endpoints]	Returns a count of the maximum number of algorithmic models you can create.
-GET	 /algorithms/{algoTypeId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
-GET	 /algorithms 	[Regular Endpoints]	Returns ID, name, and description for the available algorithms.
-GET	 /available-data-feeds/ 	[Regular Endpoints]	Gets the 'Available Data Feed' resources for a buyer.
-GET	 /available-data-feeds/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the data feed from the perspective of the buyer.
-GET	 /available-data-feeds/{dataSourceId}/plans 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the plans which belong to the data feed, from the perspective of the buyer.
-POST	 /available-data-feeds/{dataSourceId}/subscribe 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates/Updates subscription to an available data feed.
-POST	 /available-data-feeds/{dataSourceId}/requests 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a request for an available data feed.
-GET	 /data-feeds/billing-report 	[Regular Endpoints]	Gets the billing report for last month
-POST	 /data-feeds/billing-report 	[Regular Endpoints]	Gets the billing report for last month in CSV format
-POST	 /data-feeds/usage 	[Regular Endpoints]	Inserts impression data for the plan subscription for last month.
-POST	 /data-feeds/bulk-usage 	[Regular Endpoints]	Inserts bulk impression data for multiple plan subscriptions for last month.
-GET	 /destinations/segment-impressions/ 	[Regular Endpoints]	Returns all the segments and corresponding impression counts for all destinations
-PATCH	 /destinations/segment-impressions/ 	[Regular Endpoints]	Updates the segments and corresponding impression counts for destinations
-GET	 /data-feeds/ 	[Regular Endpoints]	Gets the `Data Feed` resources.
-POST	 /data-feeds/ 	[Regular Endpoints]	Creates a new `Data Feed`.
-GET	 /data-feeds/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
-PUT	 /data-feeds/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the 'Data Feed'.
-DELETE	 /data-feeds/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
-GET	 /data-feeds/{dataSourceId}/plans/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the list of plans under a 'Data Feed'.
-POST	 /data-feeds/{dataSourceId}/plans/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.
-GET	 /data-feeds/{dataSourceId}/subscriptions 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the list of 'Subscriptions' under a 'Data Feed'.
-PUT	 /data-feeds/{dataSourceId}/subscriptions 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the list of 'Subscriptions' under a 'Data Feed'.
-GET	 /data-feeds/{dataSourceId}/requests/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the list of 'Subscriptions Request' under a 'Data Feed'.
-POST	 /data-feeds/{dataSourceId}/requests/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a 'Subscription' under a 'Data Feed'.
-GET	 /data-feeds/{dataSourceId}/requests/{requestId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Request' with 'requestId'.
-GET	 /data-feeds/{dataSourceId}/requests/{requestId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Request' with 'requestId'.
-PUT	 /data-feeds/{dataSourceId}/requests/{requestId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing 'Data Feed Request'.
-PUT	 /data-feeds/{dataSourceId}/requests/{requestId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing 'Data Feed Request'.
-GET	 /data-feeds/{dataSourceId}/potential-subscribers/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the list of potential subscribers for a 'Data Feed'.
-GET	 /data-feeds/{dataSourceId}/plans/{planId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Plan' under a 'Data Feed'.
-GET	 /data-feeds/{dataSourceId}/plans/{planId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Plan' under a 'Data Feed'.
-PUT	 /data-feeds/{dataSourceId}/plans/{planId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a 'Data Feed Plan' under a 'Data Feed'.
-PUT	 /data-feeds/{dataSourceId}/plans/{planId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a 'Data Feed Plan' under a 'Data Feed'.
-DELETE	 /data-feeds/{dataSourceId}/plans/{planId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a 'Data Feed Plan' under a 'Data Feed'.
-DELETE	 /data-feeds/{dataSourceId}/plans/{planId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a 'Data Feed Plan' under a 'Data Feed'.
-GET	 /datasources/ 	[Regular Endpoints]	Returns details about all GENERAL data sources.
-POST	 /datasources/ 	[Regular Endpoints]	Creates a Data Source of the type GENERAL or MERGE RULE.
-GET	 /datasources/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns details about a specific data source.
-PUT	 /datasources/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update a specific GENERAL or MERGE_RULE data source.
-DELETE	 /datasources/{dataSourceId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific data source.
-POST	 /datasources/bulk-delete 	[Regular Endpoints]	Bulk delete multiple data sources.
-GET	 /datasources/configurations/available-id-types 	[Regular Endpoints]	Returns all available data source ID types.
-GET	 /datasources/configurations/marketing-cloud-visitorid-versions 	[Regular Endpoints]	Returns a list of all active Experience Cloud visitor ID versions.
-GET	 /datasources/{dataSourceId}/history/inbound 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Onboarding Status Report with success and failure rates for inbound data source files.
-GET	 /datasources/{dataSourceId}/history/inbound/sampling-data 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns sampling data for a datasource for onboarding (inbound) files.
-GET	 /signals/derived/{derivedSignalId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns information about a single derived signal.
-PUT	 /signals/derived/{derivedSignalId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a single derived signal.
-DELETE	 /signals/derived/{derivedSignalId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a single derived signal.
-GET	 /signals/derived 	[Regular Endpoints]	Returns an array of derived signals and their information.
-POST	 /signals/derived 	[Regular Endpoints]	Creates a new derived signal
-GET	 /signals/derived/limits 	[Regular Endpoints]	Returns a count of the maximum number of derived signals you can create.
-POST	 /destinations/ 	[Regular Endpoints]	Creates a new destination.
-GET	 /destinations/ 	[Regular Endpoints]	Returns data for all your destinations.
-GET	 /destinations/limits 	[Regular Endpoints]	Returns a count of the maximum number of destinations you can create.
-GET	 /destinations/{destinationId}/history/outbound/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns outbound history for a specific destination by 'destinationId'.
-GET	 /destinations/{destinationId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a specific destination by 'destinationId'.
-DELETE	 /destinations/{destinationId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a specific destination by 'destinationId'.
-PUT	 /destinations/{destinationId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a specific destination by 'destinationId'.
-POST	 /destinations/{destinationId}/bulk-create 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.
-POST	 /destinations/{destinationId}/bulk-delete 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.
-GET	 /destinations/{destinationId}/mappings-by-priority/ 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.
+PUT	/models/{modelId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an algorithmic model.
+DELETE	/models/{modelId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an algorithmic model.
+GET	/models	[Regular Endpoints]	Returns an array of algorithmic models and their summary.
+POST	/models	[Regular Endpoints]	Creates an algorithmic model.
+GET	/models/{modelId}/processing-history	[Identifier is Enclosed in {} or <> or Starts with :]	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
+GET	/models/{modelId}/runs/latest/traits	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of your most influential (accurate) traits for your algorithmic model.
+GET	/models/{modelId}/runs/latest/stats	[Identifier is Enclosed in {} or <> or Starts with :]	Returns accuracy and reach values for your algorithmic model.
+POST	/models/bulk-delete	[Regular Endpoints]	Delete multiple algorithmic models with a single operation.
+GET	/models/limits	[Regular Endpoints]	Returns a count of the maximum number of algorithmic models you can create.
+GET	/algorithms/{algoTypeId}	[Identifier is Enclosed in {} or <> or Starts with :]	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
+GET	/algorithms	[Regular Endpoints]	Returns ID, name, and description for the available algorithms.
+GET	/available-data-feeds/	[Regular Endpoints]	Gets the 'Available Data Feed' resources for a buyer.
+GET	/available-data-feeds/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the data feed from the perspective of the buyer.
+GET	/available-data-feeds/{dataSourceId}/plans	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the plans which belong to the data feed, from the perspective of the buyer.
+POST	/available-data-feeds/{dataSourceId}/subscribe	[Identifier is Enclosed in {} or <> or Starts with :]	Creates/Updates subscription to an available data feed.
+POST	/available-data-feeds/{dataSourceId}/requests	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a request for an available data feed.
+GET	/data-feeds/billing-report	[Regular Endpoints]	Gets the billing report for last month
+POST	/data-feeds/billing-report	[Regular Endpoints]	Gets the billing report for last month in CSV format
+POST	/data-feeds/usage	[Regular Endpoints]	Inserts impression data for the plan subscription for last month.
+POST	/data-feeds/bulk-usage	[Regular Endpoints]	Inserts bulk impression data for multiple plan subscriptions for last month.
+GET	/destinations/segment-impressions/	[Regular Endpoints]	Returns all the segments and corresponding impression counts for all destinations
+PATCH	/destinations/segment-impressions/	[Regular Endpoints]	Updates the segments and corresponding impression counts for destinations
+GET	/data-feeds/	[Regular Endpoints]	Gets the `Data Feed` resources.
+POST	/data-feeds/	[Regular Endpoints]	Creates a new `Data Feed`.
+GET	/data-feeds/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+PUT	/data-feeds/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the 'Data Feed'.
+DELETE	/data-feeds/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
+GET	/data-feeds/{dataSourceId}/plans/	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the list of plans under a 'Data Feed'.
+POST	/data-feeds/{dataSourceId}/plans/	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new 'Plan' (also known as rate card) for this 'Data Feed'.
+GET	/data-feeds/{dataSourceId}/subscriptions	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the list of 'Subscriptions' under a 'Data Feed'.
+PUT	/data-feeds/{dataSourceId}/subscriptions	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the list of 'Subscriptions' under a 'Data Feed'.
+GET	/data-feeds/{dataSourceId}/requests/	[Identifier is Enclosed in {} or <> or Starts with :]	Gets the list of 'Subscriptions Request' under a 'Data Feed'.
+POST	/data-feeds/{dataSourceId}/requests/	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a 'Subscription' under a 'Data Feed'.
+GET	/data-feeds/{dataSourceId}/requests/{requestId}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Request' with 'requestId'.
+GET	/data-feeds/{dataSourceId}/requests/{requestId}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Request' with 'requestId'.
+PUT	/data-feeds/{dataSourceId}/requests/{requestId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing 'Data Feed Request'.
+PUT	/data-feeds/{dataSourceId}/requests/{requestId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing 'Data Feed Request'.
+GET	/data-feeds/{dataSourceId}/potential-subscribers/	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the list of potential subscribers for a 'Data Feed'.
+GET	/data-feeds/{dataSourceId}/plans/{planId}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Plan' under a 'Data Feed'.
+GET	/data-feeds/{dataSourceId}/plans/{planId}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a 'Data Feed Plan' under a 'Data Feed'.
+PUT	/data-feeds/{dataSourceId}/plans/{planId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a 'Data Feed Plan' under a 'Data Feed'.
+PUT	/data-feeds/{dataSourceId}/plans/{planId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a 'Data Feed Plan' under a 'Data Feed'.
+DELETE	/data-feeds/{dataSourceId}/plans/{planId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+DELETE	/data-feeds/{dataSourceId}/plans/{planId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+GET	/datasources/	[Regular Endpoints]	Returns details about all GENERAL data sources.
+POST	/datasources/	[Regular Endpoints]	Creates a Data Source of the type GENERAL or MERGE RULE.
+GET	/datasources/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Returns details about a specific data source.
+PUT	/datasources/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Update a specific GENERAL or MERGE_RULE data source.
+DELETE	/datasources/{dataSourceId}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a specific data source.
+POST	/datasources/bulk-delete	[Regular Endpoints]	Bulk delete multiple data sources.
+GET	/datasources/configurations/available-id-types	[Regular Endpoints]	Returns all available data source ID types.
+GET	/datasources/configurations/marketing-cloud-visitorid-versions	[Regular Endpoints]	Returns a list of all active Experience Cloud visitor ID versions.
+GET	/datasources/{dataSourceId}/history/inbound	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Onboarding Status Report with success and failure rates for inbound data source files.
+GET	/datasources/{dataSourceId}/history/inbound/sampling-data	[Identifier is Enclosed in {} or <> or Starts with :]	Returns sampling data for a datasource for onboarding (inbound) files.
+GET	/signals/derived/{derivedSignalId}	[Identifier is Enclosed in {} or <> or Starts with :]	Returns information about a single derived signal.
+PUT	/signals/derived/{derivedSignalId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a single derived signal.
+DELETE	/signals/derived/{derivedSignalId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a single derived signal.
+GET	/signals/derived	[Regular Endpoints]	Returns an array of derived signals and their information.
+POST	/signals/derived	[Regular Endpoints]	Creates a new derived signal
+GET	/signals/derived/limits	[Regular Endpoints]	Returns a count of the maximum number of derived signals you can create.
+POST	/destinations/	[Regular Endpoints]	Creates a new destination.
+GET	/destinations/	[Regular Endpoints]	Returns data for all your destinations.
+GET	/destinations/limits	[Regular Endpoints]	Returns a count of the maximum number of destinations you can create.
+GET	/destinations/{destinationId}/history/outbound/	[Identifier is Enclosed in {} or <> or Starts with :]	Returns outbound history for a specific destination by 'destinationId'.
+GET	/destinations/{destinationId}	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a specific destination by 'destinationId'.
+DELETE	/destinations/{destinationId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a specific destination by 'destinationId'.
+PUT	/destinations/{destinationId}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a specific destination by 'destinationId'.
+POST	/destinations/{destinationId}/bulk-create	[Identifier is Enclosed in {} or <> or Starts with :]	Creates multiple destination mappings for a specified destination by 'destinationId' in one operation.
+POST	/destinations/{destinationId}/bulk-delete	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes multiple destination mappings for one specified destination by 'destinationId' in one operation.
+GET	/destinations/{destinationId}/mappings-by-priority/	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of destination mappings for a specific cookie destination by 'destinationId' in the ascending order of priority.

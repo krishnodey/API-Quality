@@ -1,56 +1,55 @@
 ***Anti-Pattern*** 
-Count: 35
-GET	 /aiMessages 	Parameter Tunneling	Find GitLab Duo Chat messages.
-GET	 /ciCatalogResource/{id}	Parameter Tunneling	A single CI/CD Catalog resource visible to an authorized user.
-GET	 /ciCatalogResources/{projectPath}	Parameter Tunneling	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
-GET	 /ciConfig/{projectPath} 	Parameter Tunneling	Linted and processed contents of a CI config. Should not be requested more than once per request
-GET	 /ciMinutesUsage/{namespaceId} 	Parameter Tunneling	Compute usage data for a namespace.
-GET	 /ciPipelineStage/{id} 	Parameter Tunneling	Stage belonging to a CI pipeline.
-GET	 /ciVariables 	Parameter Tunneling	List of the instanceâ€™s CI/CD variables.
-GET	 /currentUser 	Parameter Tunneling	Get information about current user.
-GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Parameter Tunneling	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
-GET	 /geoNode 	Parameter Tunneling	Find a Geo node
-GET	 /group 	Parameter Tunneling	Find a group
-GET	 groups 	Parameter Tunneling	Find groups.
-GET	 /jobs 	Parameter Tunneling	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
-GET	 /memberRolePermissions 	Parameter Tunneling	List of all customizable permissions.
-GET	 /memberRoles/{id} 	Parameter Tunneling	Member roles available for the instance.
-GET	 /namespace 	Parameter Tunneling	Find a namespace.
-GET	 /organizations 	Parameter Tunneling	List organizations.
-GET	 /selfManagedAddOnEligibleUsers 	Parameter Tunneling	Users within the self-managed instance who are eligible for add-ons
+Count: 55
 
 ***Patterns*** 
-Count: 20
+Count: 0
 GET	 /abuseReport/{id} 	Parameter Adherence	Find an abuse report.
 GET	 /abuseReportLabels 	Parameter Adherence	Abuse report labels.
 GET	 /addOnPurchase/{id} 	Parameter Adherence	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
+GET	 /aiMessages 	Parameter Adherence	Find GitLab Duo Chat messages.
 GET	 /auditEventDefinitions 	Parameter Adherence	Definitions for all audit events available on the instance.
 GET	 /auditEventsInstanceAmazonS3Configurations 	Parameter Adherence	Instance-level Amazon S3 configurations for audit events.
 GET	 /boardList/{id} 	Parameter Adherence	Find an issue board list.
+GET	 /ciCatalogResource/{id}	Parameter Adherence	A single CI/CD Catalog resource visible to an authorized user.
+GET	 /ciCatalogResources/{projectPath}	Parameter Adherence	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
+GET	 /ciConfig/{projectPath} 	Parameter Adherence	Linted and processed contents of a CI config. Should not be requested more than once per request
+GET	 /ciMinutesUsage/{namespaceId} 	Parameter Adherence	Compute usage data for a namespace.
+GET	 /ciPipelineStage/{id} 	Parameter Adherence	Stage belonging to a CI pipeline.
 GET	 /ciQueueingHistory 	Parameter Adherence	Time it took for ci job to be picked up by runner in percentiles.
+GET	 /ciVariables 	Parameter Adherence	List of the instanceâ€™s CI/CD variables.
 GET	 /containerRepository/{id} 	Parameter Adherence	Find a container repository.
 GET	 /currentLicense 	Parameter Adherence	Fields related to the current license.
+GET	 /currentUser 	Parameter Adherence	Get information about current user.
 GET	 /designManagement 	Parameter Adherence	Fields related to design management.
 GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Parameter Adherence	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
 GET	 /echo 	Parameter Adherence	Testing endpoint to validate the API with.
 GET	 /epicBoardList/{id} 	Parameter Adherence	Returns EpicList.
+GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Parameter Adherence	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
 GET	 /frecentGroups 	Parameter Adherence	A userâ€™s frecently visited groups.
 GET	 /frecentProjects 	Parameter Adherence	A userâ€™s frecently visited projects.
+GET	 /geoNode 	Parameter Adherence	Find a Geo node
 GET	 /gitpodEnabled 	Parameter Adherence	Whether Gitpod is enabled in application settings.
+GET	 /group 	Parameter Adherence	Find a group
+GET	 groups 	Parameter Adherence	Find groups.
 GET	 /instanceExternalAuditEventDestinations 	Parameter Adherence	Instance level external audit event destinations.
 GET	 /instanceGoogleCloudLoggingConfigurations 	Parameter Adherence	Instance level google cloud logging configurations.
 GET	 /instanceSecurityDashboard 	Parameter Adherence	Fields related to Instance Security Dashboard.
 GET	 /issue/{id} 	Parameter Adherence	Find an issue.
 GET	 /issues/{assigneeId} 	Parameter Adherence	Find issues visible to the current user. At least one filter must be provided.
 GET	 /iteration/{id} 	Parameter Adherence	Find an iteration.
+GET	 /jobs 	Parameter Adherence	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
 GET	 /licenseHistoryEntries 	Parameter Adherence	Fields related to entries in the license history.
 GET	 /memberRole/{id} 	Parameter Adherence	Finds a single custom role.
+GET	 /memberRolePermissions 	Parameter Adherence	List of all customizable permissions.
+GET	 /memberRoles/{id} 	Parameter Adherence	Member roles available for the instance.
 GET	 /mergeRequest/{id} 	Parameter Adherence	Find a merge request.
 GET	 /metadata 	Parameter Adherence	Metadata about GitLab.
 GET	 /milestone/{id} 	Parameter Adherence	Find a milestone.
 GET	 /mlModel/{id} 	Parameter Adherence	Find machine learning models.
+GET	 /namespace 	Parameter Adherence	Find a namespace.
 GET	 /note/{id} 	Parameter Adherence	Find a note.
 GET	 /organization/{id} 	Parameter Adherence	Find an organization.
+GET	 /organizations 	Parameter Adherence	List organizations.
 GET	 /package/{id} 	Parameter Adherence	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
 GET	 /project/{fullPath} 	Parameter Adherence	Find a project.
 GET	 /projects/{ids} 	Parameter Adherence	Find projects visible to the current user.
@@ -58,3 +57,4 @@ GET	 /queryComplexity 	Parameter Adherence	Information about the complexity of t
 GET	 /runner/{id} 	Parameter Adherence	Find a runner.
 GET	 /runnerSetup 	Parameter Adherence	Runner setup instructions.
 GET	 /runners/{creatorId}  	Parameter Adherence	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.
+GET	 /selfManagedAddOnEligibleUsers 	Parameter Adherence	Users within the self-managed instance who are eligible for add-ons

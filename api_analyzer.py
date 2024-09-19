@@ -1039,78 +1039,78 @@ class ApiAnalyzer:
         return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
 
 
-    def detect_non_filtering_endpoint(self):
-        P = "Filtering Endpoint"
-        AP = "Non-Filtering Endpoint"
+    # def detect_non_filtering_endpoint(self):
+    #     P = "Filtering Endpoint"
+    #     AP = "Non-Filtering Endpoint"
 
-        non_filtering_endpoint_AP = []
-        filtering_endpoint_P = []
-        p_count = 0
-        ap_count = 0
+    #     non_filtering_endpoint_AP = []
+    #     filtering_endpoint_P = []
+    #     p_count = 0
+    #     ap_count = 0
         
-        def extract_intention(api_documentation):
-            fetch_keywords = [""]
-            update_keywords = ["update", "modify", "change", "edit"]
-            create_keywords = ["create", "add", "post", "insert"]
-            delete_keywords = ["delete", "remove", "destroy"]
+    #     def extract_intention(api_documentation):
+    #         fetch_keywords = [""]
+    #         update_keywords = ["update", "modify", "change", "edit"]
+    #         create_keywords = ["create", "add", "post", "insert"]
+    #         delete_keywords = ["delete", "remove", "destroy"]
 
-            intention = ""
-            api_doc_lower = api_documentation.lower()
+    #         intention = ""
+    #         api_doc_lower = api_documentation.lower()
 
-            for word in fetch_keywords:
-                if word in api_doc_lower:
-                    intention = "Fetch"
-                    break
-            if not intention:
-                for word in update_keywords:
-                    if word in api_doc_lower:
-                        intention = "Update"
-                        break
-            if not intention:
-                for word in create_keywords:
-                    if word in api_doc_lower:
-                        intention = "Create"
-                        break
-            if not intention:
-                for word in delete_keywords:
-                    if word in api_doc_lower:
-                        intention = "Delete"
-                        break
-            return intention
+    #         for word in fetch_keywords:
+    #             if word in api_doc_lower:
+    #                 intention = "Fetch"
+    #                 break
+    #         if not intention:
+    #             for word in update_keywords:
+    #                 if word in api_doc_lower:
+    #                     intention = "Update"
+    #                     break
+    #         if not intention:
+    #             for word in create_keywords:
+    #                 if word in api_doc_lower:
+    #                     intention = "Create"
+    #                     break
+    #         if not intention:
+    #             for word in delete_keywords:
+    #                 if word in api_doc_lower:
+    #                     intention = "Delete"
+    #                     break
+    #         return intention
         
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
-        with open(path, 'r+') as file:
-            lines = file.read().strip().split("\n")
-            file.seek(0)
-            file.truncate()
-            for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
-                row = json.loads(line)
+    #     path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+    #     with open(path, 'r+') as file:
+    #         lines = file.read().strip().split("\n")
+    #         file.seek(0)
+    #         file.truncate()
+    #         for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
+    #             row = json.loads(line)
     
-                # Extract intention from API documentation
-                Intention = extract_intention(documentation)
+    #             # Extract intention from API documentation
+    #             Intention = extract_intention(documentation)
 
-                # Check if intention includes "Fetch" or "Return"
-                FetchIntention = "Fetch" in Intention or "Return" in Intention
+    #             # Check if intention includes "Fetch" or "Return"
+    #             FetchIntention = "Fetch" in Intention or "Return" in Intention
 
-                # Check if parameter exists in request endpoint
-                has_param = '?' in uri or '{' in uri or '}' in uri or ':' in uri or '<' in uri or '>' in uri
+    #             # Check if parameter exists in request endpoint
+    #             has_param = '?' in uri or '{' in uri or '}' in uri or ':' in uri or '<' in uri or '>' in uri
 
-                # Determine endpoint type based on conditions
-                if (FetchIntention and not has_param) or (not FetchIntention and has_param):
-                    row.update({"non-filtering_endpoint": 1, "filtering_endpoint": 0, "non-filtering_comment": AP})
-                    #return 'Non-Filtering Endpoint'  # Antipattern
-                    non_filtering_endpoint_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
-                elif (FetchIntention and has_param) or (not FetchIntention and not has_param):
-                    #return 'Filtering Endpoint'  # Pattern
-                    row.update({"non-filtering_endpoint": 0, "filtering_endpoint": 1, "non-filtering_comment": P})
-                    filtering_endpoint_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    p_count += 1
-                print("->", end=" ")
-                json_string = json.dumps(row, ensure_ascii=False)
-                file.write(json_string+"\n")
+    #             # Determine endpoint type based on conditions
+    #             if (FetchIntention and not has_param) or (not FetchIntention and has_param):
+    #                 row.update({"non-filtering_endpoint": 1, "filtering_endpoint": 0, "non-filtering_comment": AP})
+    #                 #return 'Non-Filtering Endpoint'  # Antipattern
+    #                 non_filtering_endpoint_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+    #                 ap_count += 1
+    #             elif (FetchIntention and has_param) or (not FetchIntention and not has_param):
+    #                 #return 'Filtering Endpoint'  # Pattern
+    #                 row.update({"non-filtering_endpoint": 0, "filtering_endpoint": 1, "non-filtering_comment": P})
+    #                 filtering_endpoint_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+    #                 p_count += 1
+    #             print("->", end=" ")
+    #             json_string = json.dumps(row, ensure_ascii=False)
+    #             file.write(json_string+"\n")
 
-        return non_filtering_endpoint_AP, filtering_endpoint_P, p_count, ap_count
+    #     return non_filtering_endpoint_AP, filtering_endpoint_P, p_count, ap_count
 
 
     def detect_parameters_tunneling(self):
@@ -1165,10 +1165,6 @@ class ApiAnalyzer:
             file.truncate()
             for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uri = row['uri']  
-                #     h_method = row['method']
-                #     documentation = row['description']
         
         
                 intention = extract_intention(documentation)
@@ -1180,7 +1176,7 @@ class ApiAnalyzer:
 
                 if intention == "spf":
                     sort_intention = True
-                elif intention in ["Delete", "Update", "Fetch", "Delete", "Create"]:
+                elif intention in ["Delete", "Update", "Delete", "Create"]:
                     identify_intention = True
 
                 if (query_param and sort_intention) or (path_param and identify_intention):
@@ -1195,18 +1191,18 @@ class ApiAnalyzer:
                     # row['parameter_tunneling'] = 1
                     # row['parameter_adherence'] = 0
                     # row['parameter_tunneling_comment'] = AP   
-                    row.update({"parameter_tunneling": 1, "parameter_adherence": 2, "parameter_tunneling_comment": AP})                
+                    row.update({"parameter_tunneling": 1, "parameter_adherence": 0, "parameter_tunneling_comment": AP})                
                     parameter_tunneling_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
                     ap_count += 1
                     #return 'Parameters Tunneling antipattern'
-                elif (intention and not (query_param or path_param)) or (not intention and (query_param or path_param)):
-                    #return 'Parameters Tunneling antipattern'
-                    # row['parameter_tunneling'] = 1
-                    # row['parameter_adherence'] = 0
-                    # row['parameter_tunneling_comment'] = AP     
-                    row.update({"parameter_tunneling": 1, "parameter_adherence": 0, "parameter_tunneling_comment": AP})                   
-                    parameter_tunneling_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
+                # elif (intention and not (query_param or path_param)) or (not intention and (query_param or path_param)):
+                #     #return 'Parameters Tunneling antipattern'
+                #     # row['parameter_tunneling'] = 1
+                #     # row['parameter_adherence'] = 0
+                #     # row['parameter_tunneling_comment'] = AP     
+                #     row.update({"parameter_tunneling": 1, "parameter_adherence": 0, "parameter_tunneling_comment": AP})                   
+                #     parameter_tunneling_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
+                #     ap_count += 1
                 else:
                     # row['parameter_tunneling'] = 0
                     # row['parameter_adherence'] = 1
@@ -1250,44 +1246,61 @@ class ApiAnalyzer:
             for line, method, uri, documentation, nodes in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters, self.processed_nodes):
                 row = json.loads(line)
 
-                verbs = ["get", "post", "put", "delete", "update", "create", "fetch", "remove", "add", "edit", "patch"]
+                
                 #nodes = [node for node in uri.split('/') if node.isalpha()]
                 # print(uri)
                 # print(nodes)
                 #print(proc_uri)
                 #nodes = [subpart for part in uri.split('/') if part and not part.isdigit() for subpart in re.split(r'[._-]', part)]
-
-                flag = 0
-                # Check for singular/plural pattern violations
-                for i in range(len(nodes) - 1):
-                    if (not is_plural(nodes[i]) and not is_plural(nodes[i + 1])): # both singular
-                        #return ['Inconsistent Resource Archetype Names antipattern', 'Violation: collection and store archetypes are not plural']
-                        flag = 1
-                        row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP1})
-                        incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP1}\t{documentation.strip()}")
-                        ap_count += 1
-                    if (is_plural(nodes[i]) and is_plural(nodes[i + 1])): # both plural
-                        #return ['Inconsistent Resource Archetype Names antipattern', 'Document is not singular'
-                        flag = 1
-                        row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP2})
-                        incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP2}\t{documentation.strip()}")
-                        ap_count += 1
-
-                # Analyze the last path segment for Controller
-                if len(nodes) > 2:
-                    last_segment = nodes[-1]
-                    first_word = re.split(r'[-_]', last_segment)[0]
-                    if first_word.lower() in verbs:
-                        if method.upper() not in ['GET', 'POST']:
-                            flag = 1
-                            row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP1})
-                            incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP3}\t{documentation.strip()}")
-                            ap_count += 1
-                        
-                if flag != 1:
-                    row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": AP1})
+                if "identification" in nodes:
+                    nodes.remove("identification")
+                #print(nodes)
+                if len(nodes) <= 2:
+                    row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Less than 3 nodes present in endpoint"})
                     cosistent_resource_archetype_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
                     p_count += 1
+                else:
+                    flag = 0
+                    # Check for singular/plural pattern violations
+                    for i in range(len(nodes) - 1):
+                        if (not is_plural(nodes[i]) and not is_plural(nodes[i + 1])): # both singular
+                            #return ['Inconsistent Resource Archetype Names antipattern', 'Violation: collection and store archetypes are not plural']
+                            flag = 1
+                            row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP1})
+                            incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP1}\t{documentation.strip()}")
+                            ap_count += 1
+                        if (is_plural(nodes[i]) and is_plural(nodes[i + 1])): # both plural
+                            #return ['Inconsistent Resource Archetype Names antipattern', 'Document is not singular'
+                            flag = 1
+                            row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP2})
+                            incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP2}\t{documentation.strip()}")
+                            ap_count += 1
+
+                    # Analyze the last path segment for Controller
+                    verbs = ["get", "post", "put", "delete", "update", "create", "fetch", "remove", "add", "edit", "patch"]
+                    if len(nodes) > 2:
+                        last_segment = nodes[-1]
+                        # print(last_segment)
+                        first_word = re.split(r'[-_]', last_segment)[0]
+                        #print(first_word)
+                        if (first_word.lower() in verbs):
+                            # print(method.upper())
+                            if (method.upper().strip() in ["GET", "POST"]):
+                                # print("dhruvi")
+                                flag = 1
+                                row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Controller used with get or post"})
+                                incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP3}\t{documentation.strip()}")
+                                ap_count += 1
+                            else:
+                                # print('wrong brunch')
+                                flag = 1
+                                row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": "Controller is not used with get or post"})
+
+                            
+                    if flag != 1:
+                        row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Consistent Arhetypes"})
+                        cosistent_resource_archetype_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
+                        p_count += 1
                 print("->", end=" ")
                 #print(f"{row['inconsistent_archetype']} ---- {row['consistent_archetype']}")
                 json_string = json.dumps(row, ensure_ascii=False)
@@ -1316,8 +1329,9 @@ class ApiAnalyzer:
                 #parts = uri.split('/')
                 #identifiers = [part for part in parts if part and not part.isdigit()]
                 #identifiers = [subpart for part in parts.split('/') if part and not part.isdigit() for subpart in part.split('.')]
+                uri = uri.strip()
                 identifiers = [subpart for part in uri.split('/') if part and not part.isdigit() for subpart in re.split(r'[.?]', part)]
-                #print(identifiers)
+                # print(identifiers)
                 flag = 0
                 for identifier in identifiers:
                     identifier = identifier.strip()
@@ -1330,7 +1344,7 @@ class ApiAnalyzer:
                         p_count += 1
 
                 if flag != 1:
-                    if "Id" in uri.lower() or "ID" in uri or "key" in uri:# or {" in uri or "}" in uri or "<" in uri or ">" in uri or ":" in uri:
+                    if "_Id" in uri.lower() or "_ID" in uri :# or {" in uri or "}" in uri or "<" in uri or ">" in uri or ":" in uri:
                         #return "Identifier Ambiguity antipattern"
                         row.update({"identifier_ambiguity": 1, "identifier_annotation": 0, "identifier_ambiguity_comment": AP})
                         identifier_ambiguity_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
@@ -1339,7 +1353,9 @@ class ApiAnalyzer:
                         row.update({"identifier_ambiguity": 0, "identifier_annotation": 1, "identifier_ambiguity_comment": P2})
                         identifier_annotation_P.append(f"{method.strip()}\t{uri}\t{P2}\t{documentation.strip()}")
                         p_count += 1
-                    print("->", end=" ")
+                
+                
+                print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
 
@@ -1365,6 +1381,7 @@ class ApiAnalyzer:
                 row = json.loads(line)
 
                 flag = 0
+                uri = uri.split('?')[0]
                 nodes = uri.split('/')
                 #print(nodes)
                 for node in nodes:

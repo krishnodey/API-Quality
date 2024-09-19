@@ -1,40 +1,21 @@
 ***Anti-Pattern*** 
-Count: 127
+Count: 89
 GET	 /autoFillFields 	Singular Nouns Found in Consecutive Nodes	Lookup the values that will automatically fill the child-card's start form fields
 GET	 /cardsImportations/{pipeId}	Plural Nouns Found in Consecutive Nodes	Lookup the cards importer history by the pipe ID
-GET	 /cardsImportations/{pipeId}	Singular Nouns Found in Consecutive Nodes	Lookup the cards importer history by the pipe ID
-GET	 /findCards/{pipeId} 	Singular Nouns Found in Consecutive Nodes	Fetch cards based on fields' inputs
-GET	 /findCards/{tableId}	Singular Nouns Found in Consecutive Nodes	Fetch records based on fields' inputs
-GET	 /inbox_emails/card_id 	Singular Nouns Found in Consecutive Nodes	Lookup the card's emails by its ID
-GET	 /organization/{id} 	Singular Nouns Found in Consecutive Nodes	Lookup an organization by its ID
-GET	 /organizations/{ids} 	Plural Nouns Found in Consecutive Nodes	Lookup organizations by their ID
-GET	 /phase/{id} 	Singular Nouns Found in Consecutive Nodes	Lookup a phase by its ID
-GET	 /pipe/{id} 	Singular Nouns Found in Consecutive Nodes	Lookup a pipe by its ID
-GET	 /pipeReportExport/{id}	Singular Nouns Found in Consecutive Nodes	Lookup a pipe report export by its ID
 GET	 /pipeReportExport/{id}	Singular Nouns Found in Consecutive Nodes	Lookup a pipe report export by its ID
 GET	 /pipeReportExport/{id}	Singular Nouns Found in Consecutive Nodes	Lookup a pipe report export by its ID
 GET	 /recordsImportations/{tableID} 	Plural Nouns Found in Consecutive Nodes	Lookup the records importer history by the table ID
-GET	 /table/{id}	Singular Nouns Found in Consecutive Nodes	Lookup a database table by its ID
-GET	 /table_record/{id} 	Singular Nouns Found in Consecutive Nodes	Lookup a record by its ID
-GET	 /table_record/{id} 	Singular Nouns Found in Consecutive Nodes	Lookup a record by its ID
-GET	 /table_records/{table_id} 	Singular Nouns Found in Consecutive Nodes	Fetches a group of records based on arguments
 GET	 /table_relations/{ids} 	Plural Nouns Found in Consecutive Nodes	Lookup table relations by their ID
-POST	 /createCard  	Singular Nouns Found in Consecutive Nodes	Creates a card
 POST	 /createCardRelation 	Singular Nouns Found in Consecutive Nodes	Creates a card relation
 POST	 /createCardRelation 	Singular Nouns Found in Consecutive Nodes	Creates a card relation
-POST	 /createComment	Singular Nouns Found in Consecutive Nodes	Creates a comment
 POST	 /createFieldCondition	Singular Nouns Found in Consecutive Nodes	Creates a field condition
 POST	 /createFieldCondition	Singular Nouns Found in Consecutive Nodes	Creates a field condition
 POST	 /createInboxEmail 	Singular Nouns Found in Consecutive Nodes	Creates an email
 POST	 /createInboxEmail 	Singular Nouns Found in Consecutive Nodes	Creates an email
-POST	 /createLabel 	Singular Nouns Found in Consecutive Nodes	Creates a label
-POST	 /createOrganization	Singular Nouns Found in Consecutive Nodes	Creates an organization
 POST	 /createOrganizationWebhook 	Singular Nouns Found in Consecutive Nodes	Creates an organization-level webhook
 POST	 /createOrganizationWebhook 	Singular Nouns Found in Consecutive Nodes	Creates an organization-level webhook
-POST	 /createPhase 	Singular Nouns Found in Consecutive Nodes	Creates a phase
 POST	 /createPhaseField 	Singular Nouns Found in Consecutive Nodes	Creates a phase field
 POST	 /createPhaseField 	Singular Nouns Found in Consecutive Nodes	Creates a phase field
-POST	/createPipe 	Singular Nouns Found in Consecutive Nodes	Creates a pipe
 POST	/createPipeRelation 	Singular Nouns Found in Consecutive Nodes	Creates a pipe relation
 POST	/createPipeRelation 	Singular Nouns Found in Consecutive Nodes	Creates a pipe relation
 POST	 /createPresignedUrl 	Singular Nouns Found in Consecutive Nodes	Returns a temporary S3 presigned url to upload a file
@@ -44,7 +25,6 @@ POST	 /createPresignedUrlForPipePdfTemplate 	Singular Nouns Found in Consecutive
 POST	 /createPresignedUrlForPipePdfTemplate 	Singular Nouns Found in Consecutive Nodes	Returns a temporary S3 presigned url to upload a pdf template image
 POST	 /createPresignedUrlForPipePdfTemplate 	Singular Nouns Found in Consecutive Nodes	Returns a temporary S3 presigned url to upload a pdf template image
 POST	 /createPresignedUrlForPipePdfTemplate 	Singular Nouns Found in Consecutive Nodes	Returns a temporary S3 presigned url to upload a pdf template image
-POST	 /createTable 	Singular Nouns Found in Consecutive Nodes	Creates a table
 POST	 /createTableField 	Singular Nouns Found in Consecutive Nodes	Creates a table field
 POST	 /createTableField 	Singular Nouns Found in Consecutive Nodes	Creates a table field
 POST	 /createTableRecord 	Singular Nouns Found in Consecutive Nodes	Creates a record
@@ -57,31 +37,22 @@ POST	 /deleteFieldCondition 	Singular Nouns Found in Consecutive Nodes	Deletes a
 POST	 /deleteFieldCondition 	Singular Nouns Found in Consecutive Nodes	Deletes a field condition
 POST	 /deleteInboxEmail 	Singular Nouns Found in Consecutive Nodes	Deletes an email
 POST	 /deleteInboxEmail 	Singular Nouns Found in Consecutive Nodes	Deletes an email
-POST	 /deleteLabel 	Singular Nouns Found in Consecutive Nodes	Deletes a label
-POST	 /deleteOrganization 	Singular Nouns Found in Consecutive Nodes	Deletes an organization
 POST	 /deleteOrganizationWebhook 	Singular Nouns Found in Consecutive Nodes	Deletes a webhook
 POST	 /deleteOrganizationWebhook 	Singular Nouns Found in Consecutive Nodes	Deletes a webhook
 POST	 /deletePhaseField 	Singular Nouns Found in Consecutive Nodes	Deletes a phase field
 POST	 /deletePhaseField 	Singular Nouns Found in Consecutive Nodes	Deletes a phase field
-POST	 /deletePipe 	Singular Nouns Found in Consecutive Nodes	Deletes a pipe
 POST	 /deletePipeRelation 	Singular Nouns Found in Consecutive Nodes	Deletes a pipe relation
 POST	 /deletePipeRelation 	Singular Nouns Found in Consecutive Nodes	Deletes a pipe relation
-POST	 /deleteTable 	Singular Nouns Found in Consecutive Nodes	Deletes a table
 POST	 /deleteTableField 	Singular Nouns Found in Consecutive Nodes	Deletes a table field
 POST	 /deleteTableField 	Singular Nouns Found in Consecutive Nodes	Deletes a table field
 POST	 /deleteTableRecord 	Singular Nouns Found in Consecutive Nodes	Deletes a record
 POST	 /deleteTableRecord 	Singular Nouns Found in Consecutive Nodes	Deletes a record
 POST	 /deleteTableRelation 	Singular Nouns Found in Consecutive Nodes	Deletes a table relation
 POST	 /deleteTableRelation 	Singular Nouns Found in Consecutive Nodes	Deletes a table relation
-POST	 /deleteWebhook 	Singular Nouns Found in Consecutive Nodes	Deletes a webhook (pipe or table level)
 POST	 /exportPipeReport	Singular Nouns Found in Consecutive Nodes	Exports a pipe report
 POST	 /exportPipeReport	Singular Nouns Found in Consecutive Nodes	Exports a pipe report
 POST	 /createTableRelation 	Singular Nouns Found in Consecutive Nodes	Creates a table relation
 POST	 /createTableRelation 	Singular Nouns Found in Consecutive Nodes	Creates a table relation
-POST	 /createWebhook 	Singular Nouns Found in Consecutive Nodes	Creates a webhook at a pipe or table level
-POST	 /deleteCard 	Singular Nouns Found in Consecutive Nodes	Deletes a card
-POST	 /deleteComment 	Singular Nouns Found in Consecutive Nodes	Deletes a comment
-POST	 /deletePipe	Singular Nouns Found in Consecutive Nodes	Deletes a pipe
 POST	 /interfaceEmbedCreat	Singular Nouns Found in Consecutive Nodes	Create a new Interface
 POST	 /interfaceEmbedCreat	Singular Nouns Found in Consecutive Nodes	Create a new Interface
 POST	 /moveCardToPhase 	Singular Nouns Found in Consecutive Nodes	Moves a card to another phase
@@ -97,7 +68,6 @@ POST	 /sendInboxEmail 	Singular Nouns Found in Consecutive Nodes	Sends an email
 POST	 /setFieldConditionOrder 	Singular Nouns Found in Consecutive Nodes	Sets field condition order
 POST	 /setFieldConditionOrder 	Singular Nouns Found in Consecutive Nodes	Sets field condition order
 POST	 /setFieldConditionOrder 	Singular Nouns Found in Consecutive Nodes	Sets field condition order
-POST	 /setRole 	Singular Nouns Found in Consecutive Nodes	Sets the role of a user
 POST	 /setSummaryAttributes 	Singular Nouns Found in Consecutive Nodes	Sets summary attributes
 POST	 /setTableFieldOrder	Singular Nouns Found in Consecutive Nodes	Sets table field order
 POST	 /setTableFieldOrder	Singular Nouns Found in Consecutive Nodes	Sets table field order
@@ -106,39 +76,66 @@ POST	 /setTableRecordFieldValue	Singular Nouns Found in Consecutive Nodes	Sets r
 POST	 /setTableRecordFieldValue	Singular Nouns Found in Consecutive Nodes	Sets record field value
 POST	 /setTableRecordFieldValue	Singular Nouns Found in Consecutive Nodes	Sets record field value
 POST	 /setTableRecordFieldValue	Singular Nouns Found in Consecutive Nodes	Sets record field value
-POST	 /updateCard 	Singular Nouns Found in Consecutive Nodes	Updates an existing card
 POST	 /updateCardField 	Singular Nouns Found in Consecutive Nodes	Updates an existing card field
 POST	 /updateCardField 	Singular Nouns Found in Consecutive Nodes	Updates an existing card field
-POST	 /updateComment	Singular Nouns Found in Consecutive Nodes	Updates an existing comment
 POST	 /updateFieldsValues 	Plural Nouns Found in Consecutive Nodes	Update one or many values of fields inside a Card or Table record.
-POST	 /updateLabel 	Singular Nouns Found in Consecutive Nodes	Updates an existing label
-POST	 /updateOrganization 	Singular Nouns Found in Consecutive Nodes	Updates an existing organization
 POST	 /updateOrganizationWebhook 	Singular Nouns Found in Consecutive Nodes	Updates an existing organization-level webhook
 POST	 /updateOrganizationWebhook 	Singular Nouns Found in Consecutive Nodes	Updates an existing organization-level webhook
-POST	 /updatePhase	Singular Nouns Found in Consecutive Nodes	Updates an existing phase
 POST	 /updatePhaseField 	Singular Nouns Found in Consecutive Nodes	Updates an existing phase field
 POST	 /updatePhaseField 	Singular Nouns Found in Consecutive Nodes	Updates an existing phase field
-POST	 /updatePipe 	Singular Nouns Found in Consecutive Nodes	Updates an existing pipe
 POST	 /updatePipeRelation 	Singular Nouns Found in Consecutive Nodes	Updates an existing pipe relation
 POST	 /updatePipeRelation 	Singular Nouns Found in Consecutive Nodes	Updates an existing pipe relation
-POST	 /updateTable 	Singular Nouns Found in Consecutive Nodes	Updates an existing table
 POST	 /updateTableField 	Singular Nouns Found in Consecutive Nodes	Updates an existing table field
 POST	 /updateTableField 	Singular Nouns Found in Consecutive Nodes	Updates an existing table field
 POST	 /updateTableRecord 	Singular Nouns Found in Consecutive Nodes	Updates an existing record
 POST	 /updateTableRecord 	Singular Nouns Found in Consecutive Nodes	Updates an existing record
-POST	 /updateWebhook	Singular Nouns Found in Consecutive Nodes	Updates an existing webhook (pipe or table level)
 
 ***Patterns*** 
-Count: 12
+Count: 47
 GET	 /allCards 	Cosistent Resource Archetype	Fetches all pipe cards based on arguments
 GET	 /card 	Cosistent Resource Archetype	Lookup a card by its ID
 GET	 /cards	Cosistent Resource Archetype	Fetches a group of cards based on arguments
+GET	 /findCards/{pipeId} 	Cosistent Resource Archetype	Fetch cards based on fields' inputs
+GET	 /findCards/{tableId}	Cosistent Resource Archetype	Fetch records based on fields' inputs
+GET	 /inbox_emails/card_id 	Cosistent Resource Archetype	Lookup the card's emails by its ID
 GET	 /me 	Cosistent Resource Archetype	Returns informations of the current authenticated user
+GET	 /organization/{id} 	Cosistent Resource Archetype	Lookup an organization by its ID
+GET	 /organizations/{ids} 	Cosistent Resource Archetype	Lookup organizations by their ID
+GET	 /phase/{id} 	Cosistent Resource Archetype	Lookup a phase by its ID
+GET	 /pipe/{id} 	Cosistent Resource Archetype	Lookup a pipe by its ID
 GET	 /pipe/{ids} 	Cosistent Resource Archetype	Lookup a pipe by their ID
 GET	 /pipe_relations/{id} 	Cosistent Resource Archetype	Lookup pipe relations by their ID
 GET	 /pipe_templates 	Cosistent Resource Archetype	Lookup all pipe templates available on Pipefy
+GET	 /table/{id}	Cosistent Resource Archetype	Lookup a database table by its ID
 GET	 /table/{ids}	Cosistent Resource Archetype	Lookup a database tables by their ID
+GET	 /table_record/{id} 	Cosistent Resource Archetype	Lookup a record by its ID
+GET	 /table_records/{table_id} 	Cosistent Resource Archetype	Fetches a group of records based on arguments
 POST	 /clonePipes 	Cosistent Resource Archetype	Clones a pipe
+POST	 /createCard  	Cosistent Resource Archetype	Creates a card
+POST	 /createComment	Cosistent Resource Archetype	Creates a comment
+POST	 /createLabel 	Cosistent Resource Archetype	Creates a label
+POST	 /createOrganization	Cosistent Resource Archetype	Creates an organization
+POST	 /createPhase 	Cosistent Resource Archetype	Creates a phase
+POST	/createPipe 	Cosistent Resource Archetype	Creates a pipe
+POST	 /createTable 	Cosistent Resource Archetype	Creates a table
+POST	 /deleteLabel 	Cosistent Resource Archetype	Deletes a label
+POST	 /deleteOrganization 	Cosistent Resource Archetype	Deletes an organization
+POST	 /deletePipe 	Cosistent Resource Archetype	Deletes a pipe
+POST	 /deleteTable 	Cosistent Resource Archetype	Deletes a table
+POST	 /deleteWebhook 	Cosistent Resource Archetype	Deletes a webhook (pipe or table level)
+POST	 /createWebhook 	Cosistent Resource Archetype	Creates a webhook at a pipe or table level
+POST	 /deleteCard 	Cosistent Resource Archetype	Deletes a card
+POST	 /deleteComment 	Cosistent Resource Archetype	Deletes a comment
+POST	 /deletePipe	Cosistent Resource Archetype	Deletes a pipe
 POST	 /inviteMembers 	Cosistent Resource Archetype	Invites new members for the organization
 POST	 /recordsImporter 	Cosistent Resource Archetype	Create new records from a xlsx file
+POST	 /setRole 	Cosistent Resource Archetype	Sets the role of a user
 POST	 /setRoles 	Cosistent Resource Archetype	Sets role of multiple users
+POST	 /updateCard 	Cosistent Resource Archetype	Updates an existing card
+POST	 /updateComment	Cosistent Resource Archetype	Updates an existing comment
+POST	 /updateLabel 	Cosistent Resource Archetype	Updates an existing label
+POST	 /updateOrganization 	Cosistent Resource Archetype	Updates an existing organization
+POST	 /updatePhase	Cosistent Resource Archetype	Updates an existing phase
+POST	 /updatePipe 	Cosistent Resource Archetype	Updates an existing pipe
+POST	 /updateTable 	Cosistent Resource Archetype	Updates an existing table
+POST	 /updateWebhook	Cosistent Resource Archetype	Updates an existing webhook (pipe or table level)

@@ -1,23 +1,23 @@
 ***Anti-Pattern*** 
-Count: 10
-POST	 /v1/authentication_keys 	Parameter Tunneling	Obtain the KeyId. API to retrieve the KeyId
-POST	 /v1/payments  	Parameter Tunneling	Create payment
-GET	 /v1/payments 	Parameter Tunneling	Get shop-payments list
-POST	 /v1/pre_authorized_payment_tokens 	Parameter Tunneling	Create authorization
-PUT	 /v1/pre_authorized_payment_tokens/id 	Parameter Tunneling	Update authorization
-POST	 /v1/mqtt_certificates 	Parameter Tunneling	Create mqtt certificates
-POST	 /v1/reports 	Parameter Tunneling	Create new report
-GET	 /v1/reports 	Parameter Tunneling	Get list of reports
+Count: 15
 
 ***Patterns*** 
-Count: 8
+Count: 3
+POST	 /v1/authentication_keys 	Parameter Adherence	Obtain the KeyId. API to retrieve the KeyId
 POST	 /wally-services/protocol/tests/signature 	Parameter Adherence	Test the Authentication
+POST	 /v1/payments  	Parameter Adherence	Create payment
 GET	 /v1/payments/{id} 	Parameter Adherence	Get payment details
+GET	 /v1/payments 	Parameter Adherence	Get shop-payments list
 PUT	 /v1/payments/{id} 	Parameter Adherence	Update payment
 GET	 /v1/daily_closure/{daily_closure_date} 	Parameter Adherence	Retrieve daily closure
+POST	 /v1/pre_authorized_payment_tokens 	Parameter Adherence	Create authorization
 GET	 /v1/pre_authorized_payment_tokens/{id} 	Parameter Adherence	Get authorization
+PUT	 /v1/pre_authorized_payment_tokens/id 	Parameter Adherence	Update authorization
+POST	 /v1/mqtt_certificates 	Parameter Adherence	Create mqtt certificates
 POST	 /v1/sessions 	Parameter Adherence	Open session
 POST	 /v1/sessions/{id}/events 	Parameter Adherence	Create session event
 GET	 /v1/sessions/{id} 	Parameter Adherence	Get session details
 PATCH	 /v1/sessions/{id} 	Parameter Adherence	Update session >
+POST	 /v1/reports 	Parameter Adherence	Create new report
+GET	 /v1/reports 	Parameter Adherence	Get list of reports
 GET	 /v1/reports/{report_id} 	Parameter Adherence	Retrieve a Report

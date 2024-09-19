@@ -3,33 +3,33 @@ Count: 0
 
 ***Patterns*** 
 Count: 30
-POST	 /createEventDocument/{eventId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create swapcard event document
-POST	 /createEventGroup/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Create a new group on the event
-POST	 /createEventPlanningLink/{eventId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create swapcard event planning link
-POST	 /createEventSponsor/{eventId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Create swapcard event sponsor
-POST	 /createExhibitorLinkRelation	[Regular Endpoints]	Create a relation between two exhibitors in an exhibitor link
-POST	 /createExhibitorLink	[Regular Endpoints]	Create an exhibitor link in an event
-POST	 /createFieldDefinition	[Regular Endpoints]	Create a new field definition in an event, which is required for custom fields.
-POST	 /createProduct 	[Regular Endpoints]	Create a new product in an event.
-POST	 /createPushNotification 	[Regular Endpoints]	Create a push notification
-POST	 /createRole 	[Regular Endpoints]	Create a role
-POST	 /deleteEventExhibitors/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deprecated, use updateExhibitor with withEvent.data set to null instead
-POST	 /deleteEventNotifications/{eventId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a swapcard event notification
-POST	 /deleteExhibitorLinkRelation 	[Regular Endpoints]	Delete a relation between two exhibitors in an exhibitor link
-POST	 /deleteExhibitorLink 	[Regular Endpoints]	Delete an exhibitor link and all its relations.
-POST	 /deleteFieldDefinitions	[Regular Endpoints]	Delete field definitions from an event. All values associated will be removed as well.
-POST	 /deletePlanningViews 	[Regular Endpoints]	Delete views from a planning.
-POST	 /deleteProducts 	[Regular Endpoints]	Delete one or more products from a event, and return product IDs successfully deleted.
-POST	 /deleteRoles	[Regular Endpoints]	Delete one or more roles.
-POST	 /deleteSelectFieldValues	[Regular Endpoints]	Delete values from a select field definition.
-POST	 /setSelectFieldValue	[Regular Endpoints]	Create or update a value for a select field definition.
-POST	 /updateEventPerson 	[Regular Endpoints]	Update an existing person in an event.
-POST	 /updateExhibitorMemberRoles 	[Regular Endpoints]	Update a role
-POST	 /updateExhibitor	[Regular Endpoints]	Update an exhibitor.
-POST	 /updateFieldDefinition	[Regular Endpoints]	Update an existing field definition.
-POST	 /updateProduct	[Regular Endpoints]	Update an existing product.
-POST	 /updateProducts	[Regular Endpoints]	Update an existing product.
-POST	 /updateRole 	[Regular Endpoints]	Update a role
-POST	 updateTicketType	[Regular Endpoints]	Update an existing ticket type.
-POST	 updateUserTerm	[Regular Endpoints]	Update an existing user term.
-POST	 /upsertEventNotification	[Regular Endpoints]	Upsert a notification for an event
+POST	/createEventDocument/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Create swapcard event document
+POST	/createEventGroup/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Create a new group on the event
+POST	/createEventPlanningLink/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Create swapcard event planning link
+POST	/createEventSponsor/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Create swapcard event sponsor
+POST	/createExhibitorLinkRelation	[Regular Endpoints]	Create a relation between two exhibitors in an exhibitor link
+POST	/createExhibitorLink	[Regular Endpoints]	Create an exhibitor link in an event
+POST	/createFieldDefinition	[Regular Endpoints]	Create a new field definition in an event, which is required for custom fields.
+POST	/createProduct	[Regular Endpoints]	Create a new product in an event.
+POST	/createPushNotification	[Regular Endpoints]	Create a push notification
+POST	/createRole	[Regular Endpoints]	Create a role
+POST	/deleteEventExhibitors/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Deprecated, use updateExhibitor with withEvent.data set to null instead
+POST	/deleteEventNotifications/{eventId}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete a swapcard event notification
+POST	/deleteExhibitorLinkRelation	[Regular Endpoints]	Delete a relation between two exhibitors in an exhibitor link
+POST	/deleteExhibitorLink	[Regular Endpoints]	Delete an exhibitor link and all its relations.
+POST	/deleteFieldDefinitions	[Regular Endpoints]	Delete field definitions from an event. All values associated will be removed as well.
+POST	/deletePlanningViews	[Regular Endpoints]	Delete views from a planning.
+POST	/deleteProducts	[Regular Endpoints]	Delete one or more products from a event, and return product IDs successfully deleted.
+POST	/deleteRoles	[Regular Endpoints]	Delete one or more roles.
+POST	/deleteSelectFieldValues	[Regular Endpoints]	Delete values from a select field definition.
+POST	/setSelectFieldValue	[Regular Endpoints]	Create or update a value for a select field definition.
+POST	/updateEventPerson	[Regular Endpoints]	Update an existing person in an event.
+POST	/updateExhibitorMemberRoles	[Regular Endpoints]	Update a role
+POST	/updateExhibitor	[Regular Endpoints]	Update an exhibitor.
+POST	/updateFieldDefinition	[Regular Endpoints]	Update an existing field definition.
+POST	/updateProduct	[Regular Endpoints]	Update an existing product.
+POST	/updateProducts	[Regular Endpoints]	Update an existing product.
+POST	/updateRole	[Regular Endpoints]	Update a role
+POST	updateTicketType	[Regular Endpoints]	Update an existing ticket type.
+POST	updateUserTerm	[Regular Endpoints]	Update an existing user term.
+POST	/upsertEventNotification	[Regular Endpoints]	Upsert a notification for an event

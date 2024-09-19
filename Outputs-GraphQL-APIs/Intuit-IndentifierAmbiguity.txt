@@ -3,44 +3,44 @@ Count: 0
 
 ***Patterns*** 
 Count: 41
-POST	 /fetchBill/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Read a Bill by Id
-POST	 /createBill/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateBill/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateBill/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteBill/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /fetchCreditMemo/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Read an Credit Memo by Id
-POST	 /createCreditMemo/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateCreditMemo/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteCreditMemo/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteCreditMemo/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /createInvoiceDraft 	[Regular Endpoints]	Mutation for defining value of field within an Invoice Draft
-POST	 /transactionDraft/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
-POST	 /createCustomer 	[Regular Endpoints]	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
-POST	 /fetchCustomer/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Use queries to read customers. Apps can query the Customer entity by id or displayName.
-POST	 /fetchDelayedCharge/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Read an DelayedCharge by Id
-POST	 /createDelayedCharge 	[Regular Endpoints]	
-POST	 /deleteDelayedCharge 	[Regular Endpoints]	
-POST	 /fetchDelayedCredit/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an DelayedCredit by Id
-POST	 /createDelayedCredit/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateDelayedCredit/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteDelayedCredit/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /verificationOfEmployment 	[Regular Endpoints]	Verification of Employment
-POST	 /verificationOfIncome 	[Regular Endpoints]	Verification of Income
-POST	 /socialServiceVerification 	[Regular Endpoints]	Social Service Verification
-POST	 /fetchEstimate/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Read an Estimate by Id
-POST	 /createEstimate/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteEstimate/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	id: ID of an existing estimate
-POST	 /createEstimateDraft 	[Regular Endpoints]	Estimate Draft
-POST	 /fetchExpense 	[Regular Endpoints]	Read an Expense by Id
-POST	 /createExpense/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateExpense/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteExpense/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /fetchInvoice/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Read an invoice by Id
-POST	 /createInvoice/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateInvoice/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteInvoice/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /createInvoiceDraft 	[Regular Endpoints]	Invoice Draft
-POST	 /fetchInvoicePayment/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Read an InvoicePayment by Id
-POST	 /createInvoicePayment/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /updateInvoicePayment/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
-POST	 /deleteInvoicePayment/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/fetchBill/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read a Bill by Id
+POST	/createBill/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateBill/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateBill/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteBill/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/fetchCreditMemo/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an Credit Memo by Id
+POST	/createCreditMemo/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateCreditMemo/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteCreditMemo/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteCreditMemo/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/createInvoiceDraft	[Regular Endpoints]	Mutation for defining value of field within an Invoice Draft
+POST	/transactionDraft/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Query for reading custom fields within an Invoice Draft This query retrieves the string representation of the values taken by each of the defined custom field for the Invoice Draft.
+POST	/createCustomer	[Regular Endpoints]	Use mutations to create customers Apps can new customers in QuickBooks. The displayName field in the mutation should have a unique value.
+POST	/fetchCustomer/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Use queries to read customers. Apps can query the Customer entity by id or displayName.
+POST	/fetchDelayedCharge/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an DelayedCharge by Id
+POST	/createDelayedCharge	[Regular Endpoints]	
+POST	/deleteDelayedCharge	[Regular Endpoints]	
+POST	/fetchDelayedCredit/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an DelayedCredit by Id
+POST	/createDelayedCredit/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateDelayedCredit/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteDelayedCredit/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/verificationOfEmployment	[Regular Endpoints]	Verification of Employment
+POST	/verificationOfIncome	[Regular Endpoints]	Verification of Income
+POST	/socialServiceVerification	[Regular Endpoints]	Social Service Verification
+POST	/fetchEstimate/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an Estimate by Id
+POST	/createEstimate/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteEstimate/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	id: ID of an existing estimate
+POST	/createEstimateDraft	[Regular Endpoints]	Estimate Draft
+POST	/fetchExpense	[Regular Endpoints]	Read an Expense by Id
+POST	/createExpense/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateExpense/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteExpense/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/fetchInvoice/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an invoice by Id
+POST	/createInvoice/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateInvoice/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteInvoice/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/createInvoiceDraft	[Regular Endpoints]	Invoice Draft
+POST	/fetchInvoicePayment/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Read an InvoicePayment by Id
+POST	/createInvoicePayment/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/updateInvoicePayment/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	
+POST	/deleteInvoicePayment/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	

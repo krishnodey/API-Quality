@@ -3,60 +3,60 @@ Count: 0
 
 ***Patterns*** 
 Count: 57
-DELETE	 /v2/users/:id/bookmarks/:tweet_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
-DELETE	 /v2/users/:id/bookmarks/:tweet_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
-GET	 /v2/users/:id/bookmarks	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get an authenticated user's 800 most recent bookmarked Tweets.
-POST	 /v2/users/:id/bookmarks	[Identifier is Enclosed in {} or <> or Starts with :]	Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
-GET	 /v2/tweets/search/stream	[Regular Endpoints]	Streams Tweets in real-time that match the rules that you added to the stream using the POST /tweets/search/stream/rules endpoint. If you haven't added any rules to your stream, you will not receive any Tweets.
-POST	/v2/tweets/search/stream/rules 	[Regular Endpoints]	Add or delete rules to your stream. Once you've added a rule or rules to your stream, you can retrieve all of the Tweets that match these rules by using the
-GET	 /tweets/search/stream 	[Regular Endpoints]	Return either a single rule, or a list of rules that have been added to the stream.
-PUT	 /v2/tweets/:id/hidden 	[Identifier is Enclosed in {} or <> or Starts with :]	Hides or unhides a reply to a Tweet.
-DELETE	 /v2/users/:id/likes/:tweet_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to unlike a Tweet.
-DELETE	 /v2/users/:id/likes/:tweet_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to unlike a Tweet.
-GET	 /v2/tweets/:id/liking_users 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get information about a Tweetâ€™s liking users.
-GET	 /v2/users/:id/liked_tweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get information about a userâ€™s liked Tweets
-POST	 /v2/users/:id/likes 	[Identifier is Enclosed in {} or <> or Starts with :]	Causes the user ID identified in the path parameter to Like the target Tweet.
-DELETE	 /v2/tweets/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to delete a Tweet.
-POST	 /v2/tweets 	[Regular Endpoints]	Creates a Tweet on behalf of an authenticated user.
-GET	 /v2/tweets/:id/quote_tweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Quote Tweets for a Tweet specified by the requested Tweet ID.
-DELETE	 /v2/users/:id/retweets/:source_tweet_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove the Retweet of a Tweet.
-DELETE	 /v2/users/:id/retweets/:source_tweet_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove the Retweet of a Tweet.
-GET	 /v2/tweets/:id/retweeted_by 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get information about who has Retweeted a Tweet.
-GET	 /v2/tweets/:id/retweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the Retweets for a given Tweet ID.
-POST	/v2/users/:id/retweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Causes the user ID identified in the path parameter to Retweet the target Tweet.
-GET	/v2/tweets/search/all 	[Regular Endpoints]	The full-archive search endpoint returns the complete history of public Tweets matching a search query; since the first Tweet was created March 26, 2006.
-GET	 /v2/tweets/search/recent 	[Regular Endpoints]	The recent search endpoint returns Tweets from the last seven days that match a search query.
-GET	 /v2/users/:id/mentions 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Tweets mentioning a single user specified by the requested user ID. By default, the most recent ten Tweets are returned per request. Using pagination, up to the most recent 800 Tweets can be retrieved.
-GET	 /v2/users/:id/timelines/reverse_chronological 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to retrieve a collection of the most recent Tweets and Retweets posted by you and users you follow. This endpoint can return every Tweet created on a timeline over the last 7 days as well as the most recent 800 regardless of creation date.
-GET	 /v2/users/:id/tweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Tweets composed by a single user, specified by the requested user ID. By default, the most recent ten Tweets are returned per request. Using pagination, the most recent 3,200 Tweets can be retrieved.
-GET	 /v2/tweets/counts/all 	[Regular Endpoints]	The full-archive Tweet counts endpoint returns the count of Tweets that match your query from the complete history of public Tweets; since the first Tweet was created March 26, 2006.
-GET	 /v2/tweets/counts/recent 	[Regular Endpoints]	The recent Tweet counts endpoint returns count of Tweets from the last seven days that match a query.
-GET	 /v2/users/:id/blocking 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are blocked by the specified user ID.
-DELETE	 /v2/users/:source_user_id/following/:target_user_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user ID to unfollow another user. The request succeeds with no action when the authenticated user sends a request to a user they're not following or have already unfollowed.
-DELETE	 /v2/users/:source_user_id/following/:target_user_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user ID to unfollow another user. The request succeeds with no action when the authenticated user sends a request to a user they're not following or have already unfollowed.
-GET	 /v2/users/:id/followers 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are followers of the specified user ID.
-GET	 /v2/users/:id/following 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users the specified user ID is following.
-POST	 /v2/users/:id/following 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user ID to follow another user. If the target user does not have public Tweets, this endpoint will send a follow request. The request succeeds with no action when the authenticated user sends a request to a user they're already following, or if they're sending a follower request to a user that does not have public Tweets.
-DELETE	 /v2/users/:source_user_id/muting/:target_user_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows an authenticated user ID to unmute the target user. The request succeeds with no action when the user sends a request to a user they're not muting or have already unmuted.
-DELETE	 /v2/users/:source_user_id/muting/:target_user_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows an authenticated user ID to unmute the target user. The request succeeds with no action when the user sends a request to a user they're not muting or have already unmuted.
-GET	 /v2/users/:id/muting 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are muted by the specified user ID.
-POST	 /v2/users/:id/muting 	[Identifier is Enclosed in {} or <> or Starts with :]	Allows an authenticated user ID to mute the target user.
-GET	 /v2/users/search 	[Regular Endpoints]	The users endpoint returns Users that match a search query.
-GET	 /v2/users 	[Regular Endpoints]	Returns a variety of information about one or more users specified by the requested IDs.
-GET	 /v2/users/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a variety of information about a single user specified by the requested ID.
-GET	 /v2/users/by 	[Regular Endpoints]	Returns a variety of information about one or more users specified by their usernames.
-GET	 /v2/users/by/username/:username 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a variety of information about one or more users specified by their usernames.
-GET	 /v2/users/me 	[Regular Endpoints]	Returns information about an authorized user.
-GET	 /v2/spaces/search 	[Regular Endpoints]	Return live or scheduled Spaces matching your specified search terms. This endpoint performs a keyword search, meaning that it will return Spaces that are an exact case-insensitive match of the specified search term. The search term will match the original title of the Space.
-GET	 /v2/spaces/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a variety of information about a single Space specified by the requested ID.
-GET	 /v2/spaces/:id/buyers 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of user who purchased a ticket to the requested Space. You must authenticate the request using the Access Token of the creator of the requested Space.
-GET	 /v2/spaces/:id/tweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Tweets shared in the requested Spaces.
-GET	 /v2/spaces/by/creator_ids 	[Regular Endpoints]	Returns live or scheduled Spaces created by the specified user IDs. Up to 100 comma-separated IDs can be looked up using this endpoint.
-GET	 /v2/lists/:id/tweets 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of Tweets from the specified List.
-GET	 /v2/lists/:id 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the details of a specified List.
-GET	 /v2/users/:id/owned_lists 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns all Lists owned by the specified user.
-DELETE	 /v2/lists/:id/members/:user_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Enables the authenticated user to remove a member from a List they own.
-DELETE	 /v2/lists/:id/members/:user_id 	[Identifier is Enclosed in {} or <> or Starts with :]	Enables the authenticated user to remove a member from a List they own.
-GET	 /v2/lists/:id/members 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are members of the specified List.
-GET	 /v2/users/:id/list_memberships 	[Identifier is Enclosed in {} or <> or Starts with :]	Returns all Lists a specified user is a member of.
-POST	  /v2/lists/:id/members 	[Identifier is Enclosed in {} or <> or Starts with :]	Enables the authenticated user to add a member to a List they own.
+DELETE	/v2/users/:id/bookmarks/:tweet_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
+DELETE	/v2/users/:id/bookmarks/:tweet_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
+GET	/v2/users/:id/bookmarks	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get an authenticated user's 800 most recent bookmarked Tweets.
+POST	/v2/users/:id/bookmarks	[Identifier is Enclosed in {} or <> or Starts with :]	Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
+GET	/v2/tweets/search/stream	[Regular Endpoints]	Streams Tweets in real-time that match the rules that you added to the stream using the POST /tweets/search/stream/rules endpoint. If you haven't added any rules to your stream, you will not receive any Tweets.
+POST	/v2/tweets/search/stream/rules	[Regular Endpoints]	Add or delete rules to your stream. Once you've added a rule or rules to your stream, you can retrieve all of the Tweets that match these rules by using the
+GET	/tweets/search/stream	[Regular Endpoints]	Return either a single rule, or a list of rules that have been added to the stream.
+PUT	/v2/tweets/:id/hidden	[Identifier is Enclosed in {} or <> or Starts with :]	Hides or unhides a reply to a Tweet.
+DELETE	/v2/users/:id/likes/:tweet_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to unlike a Tweet.
+DELETE	/v2/users/:id/likes/:tweet_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to unlike a Tweet.
+GET	/v2/tweets/:id/liking_users	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get information about a Tweetâ€™s liking users.
+GET	/v2/users/:id/liked_tweets	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get information about a userâ€™s liked Tweets
+POST	/v2/users/:id/likes	[Identifier is Enclosed in {} or <> or Starts with :]	Causes the user ID identified in the path parameter to Like the target Tweet.
+DELETE	/v2/tweets/:id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to delete a Tweet.
+POST	/v2/tweets	[Regular Endpoints]	Creates a Tweet on behalf of an authenticated user.
+GET	/v2/tweets/:id/quote_tweets	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Quote Tweets for a Tweet specified by the requested Tweet ID.
+DELETE	/v2/users/:id/retweets/:source_tweet_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove the Retweet of a Tweet.
+DELETE	/v2/users/:id/retweets/:source_tweet_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user or authenticated user ID to remove the Retweet of a Tweet.
+GET	/v2/tweets/:id/retweeted_by	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to get information about who has Retweeted a Tweet.
+GET	/v2/tweets/:id/retweets	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the Retweets for a given Tweet ID.
+POST	/v2/users/:id/retweets	[Identifier is Enclosed in {} or <> or Starts with :]	Causes the user ID identified in the path parameter to Retweet the target Tweet.
+GET	/v2/tweets/search/all	[Regular Endpoints]	The full-archive search endpoint returns the complete history of public Tweets matching a search query; since the first Tweet was created March 26, 2006.
+GET	/v2/tweets/search/recent	[Regular Endpoints]	The recent search endpoint returns Tweets from the last seven days that match a search query.
+GET	/v2/users/:id/mentions	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Tweets mentioning a single user specified by the requested user ID. By default, the most recent ten Tweets are returned per request. Using pagination, up to the most recent 800 Tweets can be retrieved.
+GET	/v2/users/:id/timelines/reverse_chronological	[Identifier is Enclosed in {} or <> or Starts with :]	Allows you to retrieve a collection of the most recent Tweets and Retweets posted by you and users you follow. This endpoint can return every Tweet created on a timeline over the last 7 days as well as the most recent 800 regardless of creation date.
+GET	/v2/users/:id/tweets	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Tweets composed by a single user, specified by the requested user ID. By default, the most recent ten Tweets are returned per request. Using pagination, the most recent 3,200 Tweets can be retrieved.
+GET	/v2/tweets/counts/all	[Regular Endpoints]	The full-archive Tweet counts endpoint returns the count of Tweets that match your query from the complete history of public Tweets; since the first Tweet was created March 26, 2006.
+GET	/v2/tweets/counts/recent	[Regular Endpoints]	The recent Tweet counts endpoint returns count of Tweets from the last seven days that match a query.
+GET	/v2/users/:id/blocking	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are blocked by the specified user ID.
+DELETE	/v2/users/:source_user_id/following/:target_user_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user ID to unfollow another user. The request succeeds with no action when the authenticated user sends a request to a user they're not following or have already unfollowed.
+DELETE	/v2/users/:source_user_id/following/:target_user_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user ID to unfollow another user. The request succeeds with no action when the authenticated user sends a request to a user they're not following or have already unfollowed.
+GET	/v2/users/:id/followers	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are followers of the specified user ID.
+GET	/v2/users/:id/following	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users the specified user ID is following.
+POST	/v2/users/:id/following	[Identifier is Enclosed in {} or <> or Starts with :]	Allows a user ID to follow another user. If the target user does not have public Tweets, this endpoint will send a follow request. The request succeeds with no action when the authenticated user sends a request to a user they're already following, or if they're sending a follower request to a user that does not have public Tweets.
+DELETE	/v2/users/:source_user_id/muting/:target_user_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows an authenticated user ID to unmute the target user. The request succeeds with no action when the user sends a request to a user they're not muting or have already unmuted.
+DELETE	/v2/users/:source_user_id/muting/:target_user_id	[Identifier is Enclosed in {} or <> or Starts with :]	Allows an authenticated user ID to unmute the target user. The request succeeds with no action when the user sends a request to a user they're not muting or have already unmuted.
+GET	/v2/users/:id/muting	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are muted by the specified user ID.
+POST	/v2/users/:id/muting	[Identifier is Enclosed in {} or <> or Starts with :]	Allows an authenticated user ID to mute the target user.
+GET	/v2/users/search	[Regular Endpoints]	The users endpoint returns Users that match a search query.
+GET	/v2/users	[Regular Endpoints]	Returns a variety of information about one or more users specified by the requested IDs.
+GET	/v2/users/:id	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a variety of information about a single user specified by the requested ID.
+GET	/v2/users/by	[Regular Endpoints]	Returns a variety of information about one or more users specified by their usernames.
+GET	/v2/users/by/username/:username	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a variety of information about one or more users specified by their usernames.
+GET	/v2/users/me	[Regular Endpoints]	Returns information about an authorized user.
+GET	/v2/spaces/search	[Regular Endpoints]	Return live or scheduled Spaces matching your specified search terms. This endpoint performs a keyword search, meaning that it will return Spaces that are an exact case-insensitive match of the specified search term. The search term will match the original title of the Space.
+GET	/v2/spaces/:id	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a variety of information about a single Space specified by the requested ID.
+GET	/v2/spaces/:id/buyers	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of user who purchased a ticket to the requested Space. You must authenticate the request using the Access Token of the creator of the requested Space.
+GET	/v2/spaces/:id/tweets	[Identifier is Enclosed in {} or <> or Starts with :]	Returns Tweets shared in the requested Spaces.
+GET	/v2/spaces/by/creator_ids	[Regular Endpoints]	Returns live or scheduled Spaces created by the specified user IDs. Up to 100 comma-separated IDs can be looked up using this endpoint.
+GET	/v2/lists/:id/tweets	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of Tweets from the specified List.
+GET	/v2/lists/:id	[Identifier is Enclosed in {} or <> or Starts with :]	Returns the details of a specified List.
+GET	/v2/users/:id/owned_lists	[Identifier is Enclosed in {} or <> or Starts with :]	Returns all Lists owned by the specified user.
+DELETE	/v2/lists/:id/members/:user_id	[Identifier is Enclosed in {} or <> or Starts with :]	Enables the authenticated user to remove a member from a List they own.
+DELETE	/v2/lists/:id/members/:user_id	[Identifier is Enclosed in {} or <> or Starts with :]	Enables the authenticated user to remove a member from a List they own.
+GET	/v2/lists/:id/members	[Identifier is Enclosed in {} or <> or Starts with :]	Returns a list of users who are members of the specified List.
+GET	/v2/users/:id/list_memberships	[Identifier is Enclosed in {} or <> or Starts with :]	Returns all Lists a specified user is a member of.
+POST	/v2/lists/:id/members	[Identifier is Enclosed in {} or <> or Starts with :]	Enables the authenticated user to add a member to a List they own.

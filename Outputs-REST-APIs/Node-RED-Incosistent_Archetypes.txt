@@ -1,18 +1,18 @@
 ***Anti-Pattern*** 
-Count: 6
-GET	 /auth/login 	Singular Nouns Found in Consecutive Nodes	Get the active authentication scheme
-POST	 /auth/token 	Singular Nouns Found in Consecutive Nodes	Exchange credentials for access token
-POST	 /auth/revoke 	Singular Nouns Found in Consecutive Nodes	Revoke an access token
-GET	 /flow/:id 	Singular Nouns Found in Consecutive Nodes	Get an individual flow configuration
-PUT	 /flow/:id 	Singular Nouns Found in Consecutive Nodes	Update an individual flow configuration
-DELETE	 /flow/:id 	Singular Nouns Found in Consecutive Nodes	Delete an individual flow configuration
+Count: 0
 
 ***Patterns*** 
-Count: 9
+Count: 15
+GET	 /auth/login 	Cosistent Resource Archetype	Get the active authentication scheme
+POST	 /auth/token 	Cosistent Resource Archetype	Exchange credentials for access token
+POST	 /auth/revoke 	Cosistent Resource Archetype	Revoke an access token
 GET	 /settings 	Cosistent Resource Archetype	Get the runtime settings
 GET	 /flows 	Cosistent Resource Archetype	Get the active flow configuration
 POST	 /flows 	Cosistent Resource Archetype	Set the active flow configuration
 POST	 /flow 	Cosistent Resource Archetype	Add a flow to the active configuration
+GET	 /flow/:id 	Cosistent Resource Archetype	Get an individual flow configuration
+PUT	 /flow/:id 	Cosistent Resource Archetype	Update an individual flow configuration
+DELETE	 /flow/:id 	Cosistent Resource Archetype	Delete an individual flow configuration
 GET	 /nodes 	Cosistent Resource Archetype	Get a list of the installed nodes
 POST	 /nodes 	Cosistent Resource Archetype	Install a new node module
 GET	 /nodes/:module 	Cosistent Resource Archetype	Get a node module’s information

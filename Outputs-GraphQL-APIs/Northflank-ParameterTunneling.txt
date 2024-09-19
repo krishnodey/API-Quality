@@ -1,79 +1,11 @@
 ***Anti-Pattern*** 
-Count: 73
-GET	 /v1/projects 	Parameter Tunneling	Lists projects for the authenticated user or team.
-POST	 /v1/projects 	Parameter Tunneling	Creates a new project.
-PUT	 /v1/projects 	Parameter Tunneling	Create or update project
-POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Parameter Tunneling	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
-POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Parameter Tunneling	Sets the build arguments for the given service.
-DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Parameter Tunneling	Aborts the given service build
-POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Parameter Tunneling	Pause the given service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Parameter Tunneling	Restarts the given service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Parameter Tunneling	Resumes the given service. Optionally takes several arguments to override resumed settings.
-GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Parameter Tunneling	
-POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Parameter Tunneling	Sets the runtime environment for the given service.
-POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Parameter Tunneling	Modifies the scaling settings for the given service.
-GET	 /v1/domains 	Parameter Tunneling	Lists available domains
-POST	 /v1/domains/{domain}/import 	Parameter Tunneling	Import a certificate for the domain
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/assign 	Parameter Tunneling	Assigns a service port to the given subdomain
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable 	Parameter Tunneling	Enables a CDN integration on the given subdomain
-POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign	Parameter Tunneling	Assign a subdomain path to a port.
-DELETE	  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign 	Parameter Tunneling	Unassign a subdomain path to a port.
-POST	 /v1/domains/{domain}/verify 	Parameter Tunneling	Attempts to verify the domain
-POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Parameter Tunneling	Start a new build for the given job. Given a commit sha, it will build that commit.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Parameter Tunneling	Sets build arguments for the given job.
-DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Parameter Tunneling	Aborts the given job build
-POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Parameter Tunneling	Pause the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Parameter Tunneling	Resumes the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Parameter Tunneling	Starts a new job run for the given job
-DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Parameter Tunneling	Aborts the given job run
-POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Parameter Tunneling	Sets the runtime environment for the given job.
-POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Parameter Tunneling	Modifies the scaling settings for the given job.
-GET	 /v1/addon-types 	Parameter Tunneling	Gets information about the available addon types
-POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Parameter Tunneling	Aborts the in progress backup.
-POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Parameter Tunneling	Aborts an in-progress backup restore.
-GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Parameter Tunneling	Generates a temporary download link for downloading the given backup.
-POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Parameter Tunneling	Imports a database from an external archive or existing live database.
-POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Parameter Tunneling	Attach a volume
-POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Parameter Tunneling	Detach a volume
-POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Parameter Tunneling	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
-POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Parameter Tunneling	Abort the given release flow run
-GET	 /v1/templates 	Parameter Tunneling	Get a list of templates
-POST	 /v1/templates 	Parameter Tunneling	Create a template
-POST	 /v1/templates/{templateId}/runs 	Parameter Tunneling	Run a template
-POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Parameter Tunneling	Abort the given template run.
-GET	 /v1/integrations/log-sinks 	Parameter Tunneling	Gets a list of log sinks added to this account.
-POST	 /v1/integrations/log-sinks 	Parameter Tunneling	Creates a new log sink.
-POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Parameter Tunneling	Pauses a given log sink.
-POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Parameter Tunneling	Resumes a paused log sink.
-GET	 /v1/integrations/notifications 	Parameter Tunneling	Lists notification integrations for the authenticated user or team.
-POST	 /v1/integrations/notifications 	Parameter Tunneling	Create a new notification integration.
-GET	 /v1/integrations/registries 	Parameter Tunneling	Lists the container registry credentials saved to this account. Does not display secrets.
-POST	 /v1/integrations/registries 	Parameter Tunneling	Adds a new set of container registry credentials to this account.
-GET	 /v1/integrations/registries/{credentialId} 	Parameter Tunneling	Views a set of registry credential data.
-POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Parameter Tunneling	Generate a token for a specific VCS link.
-GET	 /v1/integrations/vcs/repos 	Parameter Tunneling	Gets a list of repositories accessible to this account
-GET	 /v1/cloud-providers 	Parameter Tunneling	Lists supported cloud providers
-GET	 /v1/cloud-providers/clusters 	Parameter Tunneling	Lists clusters for the authenticated user or team.
-POST	 /v1/cloud-providers/clusters 	Parameter Tunneling	Creates a new cluster.
-GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Parameter Tunneling	clusterId string required ID of the cluster
-POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Parameter Tunneling	Cordon a node on the cluster to prevent new pods from scheduling on it.
-POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Parameter Tunneling	Drain a node by evicting all running pods.
-GET	 /v1/cloud-providers/docker-registries 	Parameter Tunneling	Lists docker registries for the authenticated user or team.
-POST	 /v1/cloud-providers/docker-registries 	Parameter Tunneling	Creates a new docker registry.
-GET	 /v1/cloud-providers/integrations 	Parameter Tunneling	Lists integrations for the authenticated user or team.
-POST	 /v1/cloud-providers/integrations 	Parameter Tunneling	Creates a new integration.
-GET	 /v1/cloud-providers/node-types 	Parameter Tunneling	Lists supported cloud provider node types
-GET	 /v1/cloud-providers/regions 	Parameter Tunneling	Lists supported cloud provider regions
-GET	 /v1/tags 	Parameter Tunneling	List the resource tags for this entity.
-POST	 /v1/tags 	Parameter Tunneling	Add a new resource tag for this entity.
-PUT	 /v1/tags 	Parameter Tunneling	Update or create a resource tag.
-GET	 /v1/tags/{resourceTagId} 	Parameter Tunneling	View details for a given resource tag.
-PATCH	 /v1/tags/{resourceTagId} 	Parameter Tunneling	Patch a resource tag.
-GET	 /v1/billing/invoices 	Parameter Tunneling	Get a list of past invoices
-GET	 /v1/billing/invoices/details 	Parameter Tunneling	Get details about an invoice.
+Count: 149
 
 ***Patterns*** 
-Count: 152
+Count: 76
+GET	 /v1/projects 	Parameter Adherence	Lists projects for the authenticated user or team.
+POST	 /v1/projects 	Parameter Adherence	Creates a new project.
+PUT	 /v1/projects 	Parameter Adherence	Create or update project
 PATCH	 /v1/projects/{projectId}	Parameter Adherence	Updates a project.
 GET	 /v1/projects/{projectId} 	Parameter Adherence	Get information about the given project
 DELETE	 /v1/projects/{projectId} 	Parameter Adherence	Delete the given project. Fails if the project isn't empty.
@@ -91,13 +23,16 @@ GET	 /v1/projects/{projectId}/services/{serviceId} 	Parameter Adherence	Gets inf
 DELETE	 /v1/projects/{projectId}/services/{serviceId} 	Parameter Adherence	Deletes the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/branches 	Parameter Adherence	Gets information about the branches of the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build 	Parameter Adherence	Lists the builds for the service
+POST	 /v1/projects/{projectId}/services/{serviceId}/build  	Parameter Adherence	Start a new build for the given combined or build service. If given a commit sha, it will build that commit. Otherwise, the most recent relevant commit will be built. If the service provided is a build service, a branch name or pull request to build from is required.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Parameter Adherence	Gets the build arguments of the given service. If the API key does not have the permission 'Project > Secrets > General > Read', secrets inherited from secret groups will not be displayed.
+POST	 /v1/projects/{projectId}/services/{serviceId}/build-arguments 	Parameter Adherence	Sets the build arguments for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-arguments/details 	Parameter Adherence	Get details about the build arguments accessible by the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-logs 	Parameter Adherence	Get logs for a service build
 GET	 /v1/projects/{projectId}/services/{serviceId}/build-metrics 	Parameter Adherence	Get metrics for a service build
 POST	 /v1/projects/{projectId}/services/{serviceId}/build-options 	Parameter Adherence	Updates the build options for a given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/build-source 	Parameter Adherence	Updates the version control source for a given build or combined service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Parameter Adherence	Gets information about a build for the service
+DELETE	 /v1/projects/{projectId}/services/{serviceId}/build/{buildId} 	Parameter Adherence	Aborts the given service build
 GET	 /v1/projects/{projectId}/services/{serviceId}/containers 	Parameter Adherence	Gets a list of containers for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Parameter Adherence	Gets information about the deployment of the given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/deployment 	Parameter Adherence	Updates the deployment settings of the given service.
@@ -105,24 +40,37 @@ GET	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Parameter Adhe
 POST	 /v1/projects/{projectId}/services/{serviceId}/health-checks 	Parameter Adherence	Updates health checks for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/logs 	Parameter Adherence	Get logs for a service
 GET	 /v1/projects/{projectId}/services/{serviceId}/metrics 	Parameter Adherence	Get metrics for a service
+POST	 /v1/projects/{projectId}/services/{serviceId}/pause 	Parameter Adherence	Pause the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/ports 	Parameter Adherence	Lists the ports for the given service.
 POST	 /v1/projects/{projectId}/services/{serviceId}/ports 	Parameter Adherence	Updates the list of ports for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/pull-requests 	Parameter Adherence	Gets information about the pull-requests of the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/restart 	Parameter Adherence	Restarts the given service.
+POST	 /v1/projects/{projectId}/services/{serviceId}/resume 	Parameter Adherence	Resumes the given service. Optionally takes several arguments to override resumed settings.
+GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Parameter Adherence	
+POST	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment 	Parameter Adherence	Sets the runtime environment for the given service.
 GET	 /v1/projects/{projectId}/services/{serviceId}/runtime-environment/details 	Parameter Adherence	Get details about the runtime environment accessible by the given service. Also requires the permission 'Project > Secrets > General > Read'
+POST	 /v1/projects/{projectId}/services/{serviceId}/scale 	Parameter Adherence	Modifies the scaling settings for the given service.
+GET	 /v1/domains 	Parameter Adherence	Lists available domains
 POST	 /v1/domains 	Parameter Adherence	Registers a new domain
 GET	 /v1/domains/{domain} 	Parameter Adherence	Get domain
 DELETE	 /v1/domains/{domain} 	Parameter Adherence	Deletes a domain and each of its registered subdomains.
+POST	 /v1/domains/{domain}/import 	Parameter Adherence	Import a certificate for the domain
 POST	 /v1/domains/{domain}/subdomains 	Parameter Adherence	Adds a new subdomain to the domain.
 GET	 /v1/domains/{domain}/subdomains/{subdomain} 	Parameter Adherence	Gets details about the given subdomain
 DELETE	 /v1/domains/{domain}/subdomains/{subdomain}	Parameter Adherence	Removes a subdomain from a domain.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/assign 	Parameter Adherence	Assigns a service port to the given subdomain
 DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/assign	Parameter Adherence	Removes a subdomain from its assigned service
 POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/disable 	Parameter Adherence	Removes the CDN integration from the given subdomain
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/cdn/enable 	Parameter Adherence	Enables a CDN integration on the given subdomain
 POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths 	Parameter Adherence	Adds a new path to the subdomain.
 GET	 /v1/domains/{domain}/subdomains/{subdomain}/paths	Parameter Adherence	List paths for a given subdomain.
 GET	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}	Parameter Adherence	Get subdomain path details.
 DELETE	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}	Parameter Adherence	Delete a path.
 POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath} 	Parameter Adherence	Update a subdomain path.
+POST	 /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign	Parameter Adherence	Assign a subdomain path to a port.
+DELETE	  /v1/domains/{domain}/subdomains/{subdomain}/paths/{subdomainPath}/assign 	Parameter Adherence	Unassign a subdomain path to a port.
 POST	 /v1/domains/{domain}/subdomains/{subdomain}/verify 	Parameter Adherence	Gets details about the given subdomain
+POST	 /v1/domains/{domain}/verify 	Parameter Adherence	Attempts to verify the domain
 GET	 /v1/projects/{projectId}/jobs 	Parameter Adherence	Gets a list of jobs belonging to the project
 POST	 /v1/projects/{projectId}/jobs/cron 	Parameter Adherence	Creates a new cron job
 PUT	 /v1/projects/{projectId}/jobs/cron 	Parameter Adherence	Creates or updates a cron job
@@ -134,13 +82,16 @@ GET	 /v1/projects/{projectId}/jobs/{jobId} 	Parameter Adherence	Gets information
 DELETE	 /v1/projects/{projectId}/jobs/{jobId} 	Parameter Adherence	Deletes the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/branches 	Parameter Adherence	Gets information about the branches of the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build 	Parameter Adherence	Lists builds for the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build 	Parameter Adherence	Start a new build for the given job. Given a commit sha, it will build that commit.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Parameter Adherence	Gets the build arguments of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments 	Parameter Adherence	Sets build arguments for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-arguments/details 	Parameter Adherence	Get details about the build arguments accessible by the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-logs 	Parameter Adherence	Get logs for a job build
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build-metrics 	Parameter Adherence	Get metrics for a job build
 POST	 /v1/projects/{projectId}/jobs/{jobId}/build-options 	Parameter Adherence	Updates the build options for a given job.
 POST	 /v1/projects/{projectId}/jobs/{jobId}/build-source 	Parameter Adherence	Updates the version control source for a given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/build/{buildId}	Parameter Adherence	Gets information about a build for the job
+DELETE	  /v1/projects/{projectId}/jobs/{jobId}/build/{buildId} 	Parameter Adherence	Aborts the given job build
 GET	 /v1/projects/{projectId}/jobs/{jobId}/containers 	Parameter Adherence	Gets a list of containers for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/deployment 	Parameter Adherence	Gets information about the deployment of the given job.
 POST	 /v1/projects/{projectId}/jobs/{jobId}/deployment	Parameter Adherence	Updates the deployment settings of the given job.
@@ -148,13 +99,20 @@ GET	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Parameter Adherence	Li
 POST	 /v1/projects/{projectId}/jobs/{jobId}/health-checks 	Parameter Adherence	Updates health checks for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/logs 	Parameter Adherence	Get logs for a job
 GET	 /v1/projects/{projectId}/jobs/{jobId}/metrics 	Parameter Adherence	Get metrics for a job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/pause 	Parameter Adherence	Pause the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/pull-requests 	Parameter Adherence	Gets information about the pull-requests of the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/resume 	Parameter Adherence	Resumes the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Parameter Adherence	Fetches run history for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runs 	Parameter Adherence	Starts a new job run for the given job
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Parameter Adherence	Returns data about the given job run
+DELETE	 /v1/projects/{projectId}/jobs/{jobId}/runs/{runId} 	Parameter Adherence	Aborts the given job run
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Parameter Adherence	Returns the runtime environment for the given job
+POST	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment 	Parameter Adherence	Sets the runtime environment for the given job.
 GET	 /v1/projects/{projectId}/jobs/{jobId}/runtime-environment/details 	Parameter Adherence	Get details about the runtime environment accessible by the given job.
+POST	 /v1/projects/{projectId}/jobs/{jobId}/scale 	Parameter Adherence	Modifies the scaling settings for the given job.
 POST	 /v1/projects/{projectId}/jobs/{jobId}/settings 	Parameter Adherence	Updates settings for the job
 POST	 /v1/projects/{projectId}/jobs/{jobId}/suspend 	Parameter Adherence	Modify cron job to toggle suspending of its schedule.
+GET	 /v1/addon-types 	Parameter Adherence	Gets information about the available addon types
 GET	 /v1/projects/{projectId}/addons 	Parameter Adherence	Gets a list of addons belonging to the project
 POST	 /v1/projects/{projectId}/addons 	Parameter Adherence	Creates a new addon
 PUT	 /v1/projects/{projectId}/addons 	Parameter Adherence	Creates or updates an addon
@@ -168,6 +126,9 @@ GET	 /v1/projects/{projectId}/addons/{addonId}/backups 	Parameter Adherence	Retu
 POST	 /v1/projects/{projectId}/addons/{addonId}/backups 	Parameter Adherence	Initiates a backup for the given addon
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Parameter Adherence	Gets details about a given backup.
 DELETE	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId} 	Parameter Adherence	Deletes a given backup
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort 	Parameter Adherence	Aborts the in progress backup.
+POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/abort-restore 	Parameter Adherence	Aborts an in-progress backup restore.
+GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/download-link 	Parameter Adherence	Generates a temporary download link for downloading the given backup.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/logs 	Parameter Adherence	Get logs for an addon backup
 POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restore 	Parameter Adherence	Restores the given addon to the given backup state.
 GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores 	Parameter Adherence	Gets a list of restores for the given backup.
@@ -175,6 +136,7 @@ GET	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/restores/{rest
 POST	 /v1/projects/{projectId}/addons/{addonId}/backups/{backupId}/retain 	Parameter Adherence	Flags a temporary backup generated by a backup schedule to be retained indefinitely rather than being deleted after the expiry date.
 GET	 /v1/projects/{projectId}/addons/{addonId}/containers 	Parameter Adherence	Gets a list of containers for the given addon.
 GET	 /v1/projects/{projectId}/addons/{addonId}/credentials	Parameter Adherence	Returns the credentials for connecting to the given addon.
+POST	 /v1/projects/{projectId}/addons/{addonId}/import 	Parameter Adherence	Imports a database from an external archive or existing live database.
 GET	 /v1/projects/{projectId}/addons/{addonId}/logs 	Parameter Adherence	Get logs for an addon
 GET	 /v1/projects/{projectId}/addons/{addonId}/metrics 	Parameter Adherence	Get metrics for an addon
 POST	 /v1/projects/{projectId}/addons/{addonId}/network-settings 	Parameter Adherence	Updates the network settings for the addon.
@@ -192,6 +154,8 @@ POST	 /v1/projects/{projectId}/volumes 	Parameter Adherence	Creates a volume wit
 GET	 /v1/projects/{projectId}/volumes/{volumeId} 	Parameter Adherence	Retrieve a volume
 POST	 /v1/projects/{projectId}/volumes/{volumeId} 	Parameter Adherence	Update volume mounts and storage size
 DELETE	 /v1/projects/{projectId}/volumes/{volumeId} 	Parameter Adherence	Deletes this volume and its associated data.
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/attach 	Parameter Adherence	Attach a volume
+POST	 /v1/projects/{projectId}/volumes/{volumeId}/detach	Parameter Adherence	Detach a volume
 GET	 /v1/projects/{projectId}/pipelines 	Parameter Adherence	Lists all pipelines for a project
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId} 	Parameter Adherence	Get details about a pipeline
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs 	Parameter Adherence	Get information about the given preview template.
@@ -202,29 +166,65 @@ GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs 	Paramete
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/preview-envs/runs/{templateRunId} 	Parameter Adherence	Get information about the given preview template run.
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Parameter Adherence	Gets details about a release flow
 POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage} 	Parameter Adherence	Updates a release flow
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Parameter Adherence	Runs a given release flow with given arguments. This endpoint can be used as part of a CI pipeline to automatically trigger a release process.
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs 	Parameter Adherence	Lists runs of a release flow
 GET	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId} 	Parameter Adherence	Get information about the given release flow run
+POST	 /v1/projects/{projectId}/pipelines/{pipelineId}/release-flows/{stage}/runs/{runId}/abort 	Parameter Adherence	Abort the given release flow run
+GET	 /v1/templates 	Parameter Adherence	Get a list of templates
+POST	 /v1/templates 	Parameter Adherence	Create a template
 GET	 /v1/templates/{templateId} 	Parameter Adherence	Get information about the given template.
 POST	 /v1/templates/{templateId} 	Parameter Adherence	Update a template
 DELETE	 /v1/templates/{templateId} 	Parameter Adherence	Delete a template
+POST	 /v1/templates/{templateId}/runs 	Parameter Adherence	Run a template
 GET	 /v1/templates/{templateId}/runs 	Parameter Adherence	Get a list of template runs
 GET	 /v1/templates/{templateId}/runs/{templateRunId} 	Parameter Adherence	Get information about the given template run.
+POST	 /v1/templates/{templateId}/runs/{templateRunId}/abort 	Parameter Adherence	Abort the given template run.
+GET	 /v1/integrations/log-sinks 	Parameter Adherence	Gets a list of log sinks added to this account.
+POST	 /v1/integrations/log-sinks 	Parameter Adherence	Creates a new log sink.
 GET	 /v1/integrations/log-sinks/{logSinkId} 	Parameter Adherence	Gets details about a given log sink.
 DELETE	 /v1/integrations/log-sinks/{logSinkId}	Parameter Adherence	Deletes a log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/pause 	Parameter Adherence	Pauses a given log sink.
+POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Parameter Adherence	Resumes a paused log sink.
 POST	 /v1/integrations/log-sinks/{logSinkId}/settings 	Parameter Adherence	Updates the settings for a log sink.
+GET	 /v1/integrations/notifications 	Parameter Adherence	Lists notification integrations for the authenticated user or team.
+POST	 /v1/integrations/notifications 	Parameter Adherence	Create a new notification integration.
 GET	 /v1/integrations/notifications/{notificationId} 	Parameter Adherence	Get details about a notification integration.
 POST	 /v1/integrations/notifications/{notificationId} 	Parameter Adherence	Updates a notification integration
 DELETE	 /v1/integrations/notifications/{notificationId} 	Parameter Adherence	Deletes a notification integration
+GET	 /v1/integrations/registries 	Parameter Adherence	Lists the container registry credentials saved to this account. Does not display secrets.
+POST	 /v1/integrations/registries 	Parameter Adherence	Adds a new set of container registry credentials to this account.
+GET	 /v1/integrations/registries/{credentialId} 	Parameter Adherence	Views a set of registry credential data.
 DELETE	 /v1/integrations/registries/{credentialId} 	Parameter Adherence	Deletes a set of registry credential data.
 POST	 /v1/integrations/registries/{credentialId}/modify 	Parameter Adherence	Updates a set of registry credential data.
 GET	 /v1/integrations/vcs Lists linked version control providers 	Parameter Adherence	
+POST	 /v1/integrations/vcs/custom/{customVCSId}/token/{vcsLinkId} 	Parameter Adherence	Generate a token for a specific VCS link.
+GET	 /v1/integrations/vcs/repos 	Parameter Adherence	Gets a list of repositories accessible to this account
 GET	 /v1/integrations/vcs/repos/{vcsService}/{repositoryOwner}/{repositoryName}/branches 	Parameter Adherence	Gets a list of branches for the repo
+GET	 /v1/cloud-providers 	Parameter Adherence	Lists supported cloud providers
+GET	 /v1/cloud-providers/clusters 	Parameter Adherence	Lists clusters for the authenticated user or team.
+POST	 /v1/cloud-providers/clusters 	Parameter Adherence	Creates a new cluster.
+GET	 /v1/cloud-providers/clusters/{clusterId} << Get information about the given cluster 	Parameter Adherence	clusterId string required ID of the cluster
 POST	 /v1/cloud-providers/clusters/{clusterId} 	Parameter Adherence	Update an existing cluster.
 DELETE	 /v1/cloud-providers/clusters/{clusterId} 	Parameter Adherence	Delete the given cluster. Fails if the cluster has associated projects.
 GET	 /v1/cloud-providers/clusters/{clusterId}/nodes 	Parameter Adherence	Get a list of nodes for the given cluster
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/cordon 	Parameter Adherence	Cordon a node on the cluster to prevent new pods from scheduling on it.
+POST	 /v1/cloud-providers/clusters/{clusterId}/nodes/{nodeId}/drain 	Parameter Adherence	Drain a node by evicting all running pods.
+GET	 /v1/cloud-providers/docker-registries 	Parameter Adherence	Lists docker registries for the authenticated user or team.
+POST	 /v1/cloud-providers/docker-registries 	Parameter Adherence	Creates a new docker registry.
 GET	 /v1/cloud-providers/docker-registries/{registryId} 	Parameter Adherence	Get information about the given docker registry
 DELETE	 /v1/cloud-providers/docker-registries/{registryId} 	Parameter Adherence	Delete the given docker registry. Fails if the docker registry is associated with existing clusters.
+GET	 /v1/cloud-providers/integrations 	Parameter Adherence	Lists integrations for the authenticated user or team.
+POST	 /v1/cloud-providers/integrations 	Parameter Adherence	Creates a new integration.
 GET	 /v1/cloud-providers/integrations/{integrationId} 	Parameter Adherence	Get information about the given integration
 POST	 /v1/cloud-providers/integrations/{integrationId} 	Parameter Adherence	Update information about the given integration
 DELETE	 /v1/cloud-providers/integrations/{integrationId} 	Parameter Adherence	Delete the given integration. Fails if the integration is associated with existing clusters.
+GET	 /v1/cloud-providers/node-types 	Parameter Adherence	Lists supported cloud provider node types
+GET	 /v1/cloud-providers/regions 	Parameter Adherence	Lists supported cloud provider regions
+GET	 /v1/tags 	Parameter Adherence	List the resource tags for this entity.
+POST	 /v1/tags 	Parameter Adherence	Add a new resource tag for this entity.
+PUT	 /v1/tags 	Parameter Adherence	Update or create a resource tag.
+GET	 /v1/tags/{resourceTagId} 	Parameter Adherence	View details for a given resource tag.
+PATCH	 /v1/tags/{resourceTagId} 	Parameter Adherence	Patch a resource tag.
 DELETE	 /v1/tags/{resourceTagId} 	Parameter Adherence	Delete a resource tag.
+GET	 /v1/billing/invoices 	Parameter Adherence	Get a list of past invoices
+GET	 /v1/billing/invoices/details 	Parameter Adherence	Get details about an invoice.

@@ -1,11 +1,11 @@
 ***Anti-Pattern*** 
 Count: 6
-GET	 /balances 	Parameter Tunneling	Get current balances.
-POST	 /order/{pairs} 	Parameter Tunneling	Register your order.
-POST	 /cancel/{pairs} 	Parameter Tunneling	Cancel the registered order.
-GET	 /openOrders 	Parameter Tunneling	Get your open orders.
-GET	 /tradeHistories 	Parameter Tunneling	Get your completed order.
-GET	 /balanceHistories 	Parameter Tunneling	Get your balance History.
 
 ***Patterns*** 
 Count: 0
+GET	 /balances 	Parameter Adherence	Get current balances.
+POST	 /order/{pairs} 	Parameter Adherence	Register your order.
+POST	 /cancel/{pairs} 	Parameter Adherence	Cancel the registered order.
+GET	 /openOrders 	Parameter Adherence	Get your open orders.
+GET	 /tradeHistories 	Parameter Adherence	Get your completed order.
+GET	 /balanceHistories 	Parameter Adherence	Get your balance History.

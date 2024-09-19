@@ -4,7 +4,7 @@ Count: 0
 ***Patterns*** 
 Count: 34
 POST	 /admin/tenantKeys 	Structed Endpoint	Adds an encryption key for Power BI workspaces assigned to a capacity.
-GET	 /admin/apps?$top={$top} 	Structed Endpoint	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
+GET	 /admin/apps	Structed Endpoint	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
 GET	 /admin/apps/{appId}/users 	Structed Endpoint	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
 POST	 /admin/capacities/AssignWorkspaces 	Structed Endpoint	Assigns the provided workspaces to the specified premium capacity.
 POST	 /admin/capacities/UnassignWorkspaces 	Structed Endpoint	Unassigns the provided workspaces from capacity.

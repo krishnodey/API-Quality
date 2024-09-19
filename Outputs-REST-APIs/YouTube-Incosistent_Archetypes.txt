@@ -1,16 +1,15 @@
 ***Anti-Pattern*** 
-Count: 8
+Count: 7
 POST	 /comments/setModerationStatus 	Singular Nouns Found in Consecutive Nodes	Sets the moderation status of one or more comments. The API request must be authorized by the owner of the channel or video associated with the comments.
 POST	 /comments/setModerationStatus 	Singular Nouns Found in Consecutive Nodes	Sets the moderation status of one or more comments. The API request must be authorized by the owner of the channel or video associated with the comments.
 POST	 /comments/markAsSpam 	Singular Nouns Found in Consecutive Nodes	Expresses the caller's opinion that one or more comments should be flagged as spam.
-GET	 /membershipsLevels 	Plural Nouns Found in Consecutive Nodes	Returns a collection of zero or more membershipsLevel resources owned by the channel that authorized the API request. Levels are returned in implicit display order.
 GET	 /videoAbuseReportReasons 	Singular Nouns Found in Consecutive Nodes	Retrieve a list of reasons that can be used to report abusive videos.
 GET	 /videoAbuseReportReasons 	Singular Nouns Found in Consecutive Nodes	Retrieve a list of reasons that can be used to report abusive videos.
 GET	 /videos/getRating 	Singular Nouns Found in Consecutive Nodes	Retrieves the ratings that the authorized user gave to a list of specified videos.
 POST	 /videos/reportAbuse 	Singular Nouns Found in Consecutive Nodes	Report a video for containing abusive content.
 
 ***Patterns*** 
-Count: 44
+Count: 45
 GET	 /activities 	Cosistent Resource Archetype	Returns a list of channel activity events that match the request criteria. For example, you can retrieve events associated with a particular channel or with the user's own channel.
 DELETE	 /captions 	Cosistent Resource Archetype	Deletes the specified caption track.
 GET	 /captions/id 	Cosistent Resource Archetype	Downloads a caption track. The caption track is returned in its original format unless the request specifies a value for the tfmt parameter and in its original language unless the request specifies a value for the tlang parameter.
@@ -34,6 +33,7 @@ GET	 /guideCategories 	Cosistent Resource Archetype	Returns a list of categories
 GET	 /i18nLanguages 	Cosistent Resource Archetype	Returns a list of application languages that the YouTube website supports.
 GET	 /i18nRegions 	Cosistent Resource Archetype	Returns a list of content regions that the YouTube website supports.
 GET	 /members 	Cosistent Resource Archetype	Lists members (formerly known as "sponsors") for a channel. The API request must be authorized by the channel owner.
+GET	 /membershipsLevels 	Cosistent Resource Archetype	Returns a collection of zero or more membershipsLevel resources owned by the channel that authorized the API request. Levels are returned in implicit display order.
 DELETE	 /playlistItems 	Cosistent Resource Archetype	Deletes a playlist item.
 POST	 /playlistItems 	Cosistent Resource Archetype	Adds a resource to a playlist.
 GET	 /playlistItems 	Cosistent Resource Archetype	Returns a collection of playlist items that match the API request parameters. You can retrieve all of the playlist items in a specified playlist or retrieve one or more playlist items by their unique IDs.

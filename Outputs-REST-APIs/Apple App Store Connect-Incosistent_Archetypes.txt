@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 33
+Count: 29
 GET	 /appEncryptionDeclarations 	Singular Nouns Found in Consecutive Nodes	filter by attribute platform
 GET	 /appEncryptionDeclarations/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appEncryptionDeclarations
 GET	 /appInfoLocalizations/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appInfoLocalizations
@@ -23,15 +23,11 @@ GET	 /endUserLicenseAgreements/{id} 	Singular Nouns Found in Consecutive Nodes	t
 GET	 /endUserLicenseAgreements/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type endUserLicenseAgreements
 GET	 /preReleaseVersions 	Singular Nouns Found in Consecutive Nodes	filter by attribute builds.expired
 GET	 /routingAppCoverages/{id} 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type routingAppCoverages
-GET	 /salesReports 	Plural Nouns Found in Consecutive Nodes	filter by attribute frequency
+GET	 /appCategories/{id}/subcategories 	Plural Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appCategories
 GET	 /appEncryptionDeclarations/{id}/app 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type apps
-GET	 /appEncryptionDeclarations/{id}/app 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type apps
-GET	 /appInfos/{id}/ageRatingDeclaration 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type ageRatingDeclarations
 GET	 /appInfos/{id}/ageRatingDeclaration 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type ageRatingDeclarations
 GET	 /appInfos/{id}/ageRatingDeclaration 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type ageRatingDeclarations
 GET	 /appInfos/{id}/appInfoLocalizations 	Singular Nouns Found in Consecutive Nodes	filter by attribute locale
-GET	 /appInfos/{id}/appInfoLocalizations 	Singular Nouns Found in Consecutive Nodes	filter by attribute locale
-GET	 /appInfos/{id}/primaryCategory 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appCategories
 GET	 /appInfos/{id}/primaryCategory 	Singular Nouns Found in Consecutive Nodes	the fields to include for returned resources of type appCategories
 
 ***Patterns*** 
@@ -43,4 +39,4 @@ GET	 /appPreviews/{id} 	Cosistent Resource Archetype	the fields to include for r
 GET	 /appPrices/{id} 	Cosistent Resource Archetype	the fields to include for returned resources of type appPrices
 GET	 /apps 	Cosistent Resource Archetype	filter by attribute 'appStoreVersions.appStoreState
 GET	 /financeReports 	Cosistent Resource Archetype	filter by attribute regionCode
-GET	 /appCategories/{id}/subcategories 	Cosistent Resource Archetype	the fields to include for returned resources of type appCategories
+GET	 /salesReports 	Cosistent Resource Archetype	filter by attribute frequency

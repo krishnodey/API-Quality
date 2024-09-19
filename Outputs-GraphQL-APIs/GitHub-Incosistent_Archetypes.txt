@@ -1,16 +1,10 @@
 ***Anti-Pattern*** 
-Count: 464
-GET	 /codeOfConduct 	Singular Nouns Found in Consecutive Nodes	Look up a code of conduct by its key.
+Count: 401
 GET	 /enterpriseAdministratorInvitation 	Singular Nouns Found in Consecutive Nodes	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
 GET	 /enterpriseAdministratorInvitation 	Singular Nouns Found in Consecutive Nodes	Look up a pending enterprise administrator invitation by invitee, enterprise and role.
 GET	 /enterpriseAdministratorInvitationByToken 	Singular Nouns Found in Consecutive Nodes	Look up a pending enterprise administrator invitation by invitation token.
 GET	 /enterpriseAdministratorInvitationByToken 	Singular Nouns Found in Consecutive Nodes	Look up a pending enterprise administrator invitation by invitation token.
 GET	 /enterpriseAdministratorInvitationByToken 	Singular Nouns Found in Consecutive Nodes	Look up a pending enterprise administrator invitation by invitation token.
-GET	 /marketplaceCategory 	Singular Nouns Found in Consecutive Nodes	Look up a Marketplace category by its slug.
-GET	 /marketplaceListing 	Singular Nouns Found in Consecutive Nodes	Look up a single Marketplace listing.
-GET	 /rateLimit 	Singular Nouns Found in Consecutive Nodes	The client's rate limit information.
-GET	 /repositoryOwner 	Singular Nouns Found in Consecutive Nodes	Lookup a repository owner (ie. either a User or an Organization) by login.
-GET	 /securityAdvisory 	Singular Nouns Found in Consecutive Nodes	Fetch a Security Advisory by its GHSA ID.
 POST	 /abortQueuedMigrations 	Singular Nouns Found in Consecutive Nodes	Clear all of a customer's queued migrations.
 POST	 /abortRepositoryMigration 	Singular Nouns Found in Consecutive Nodes	Abort a repository migration queued or in progress.
 POST	 /abortRepositoryMigration 	Singular Nouns Found in Consecutive Nodes	Abort a repository migration queued or in progress.
@@ -19,7 +13,6 @@ POST	 /acceptEnterpriseAdministratorInvitation 	Singular Nouns Found in Consecut
 POST	 /acceptEnterpriseAdministratorInvitation 	Singular Nouns Found in Consecutive Nodes	Accepts a pending invitation for a user to become an administrator of an enterprise.
 POST	 /acceptTopicSuggestion 	Singular Nouns Found in Consecutive Nodes	Applies a suggested topic to the repository.
 POST	 /acceptTopicSuggestion 	Singular Nouns Found in Consecutive Nodes	Applies a suggested topic to the repository.
-POST	 /addComment 	Singular Nouns Found in Consecutive Nodes	Adds a comment to an Issue or Pull Request.
 POST	 /addDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Adds a comment to a Discussion, possibly as a reply to another comment.
 POST	 /addDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Adds a comment to a Discussion, possibly as a reply to another comment.
 POST	 /addDiscussionPollVote 	Singular Nouns Found in Consecutive Nodes	Vote for an option in a discussion poll.
@@ -40,7 +33,6 @@ POST	 /addProjectV2DraftIssue 	Singular Nouns Found in Consecutive Nodes	Creates
 POST	 /addProjectV2DraftIssue 	Singular Nouns Found in Consecutive Nodes	Creates a new draft issue and add it to a Project.
 POST	 /addProjectV2ItemById 	Singular Nouns Found in Consecutive Nodes	Links an existing content instance to a Project.
 POST	 /addProjectV2ItemById 	Singular Nouns Found in Consecutive Nodes	Links an existing content instance to a Project.
-POST	 /addProjectV2ItemById 	Singular Nouns Found in Consecutive Nodes	Links an existing content instance to a Project.
 POST	 /addPullRequestReview 	Singular Nouns Found in Consecutive Nodes	Adds a review to a Pull Request.
 POST	 /addPullRequestReview 	Singular Nouns Found in Consecutive Nodes	Adds a review to a Pull Request.
 POST	 /addPullRequestReview 	Singular Nouns Found in Consecutive Nodes	Adds a review to a Pull Request.
@@ -57,31 +49,23 @@ POST	 /addPullRequestReviewThreadReply 	Singular Nouns Found in Consecutive Node
 POST	 /addPullRequestReviewThreadReply 	Singular Nouns Found in Consecutive Nodes	Adds a reply to an existing Pull Request Review Thread.
 POST	 /addPullRequestReviewThreadReply 	Singular Nouns Found in Consecutive Nodes	Adds a reply to an existing Pull Request Review Thread.
 POST	 /addPullRequestReviewThreadReply 	Singular Nouns Found in Consecutive Nodes	Adds a reply to an existing Pull Request Review Thread.
-POST	 /addReaction 	Singular Nouns Found in Consecutive Nodes	Adds a reaction to a subject.
-POST	 /addStar 	Singular Nouns Found in Consecutive Nodes	Adds a star to a Starrable.
-POST	 /addUpvote 	Singular Nouns Found in Consecutive Nodes	Add an upvote to a discussion or discussion comment.
 POST	 /addVerifiableDomain 	Singular Nouns Found in Consecutive Nodes	Adds a verifiable domain to an owning account.
 POST	 /addVerifiableDomain 	Singular Nouns Found in Consecutive Nodes	Adds a verifiable domain to an owning account.
 POST	 /approveVerifiableDomain 	Singular Nouns Found in Consecutive Nodes	Approve a verifiable domain for notification delivery.
 POST	 /approveVerifiableDomain 	Singular Nouns Found in Consecutive Nodes	Approve a verifiable domain for notification delivery.
 POST	 /archiveProjectV2Item 	Singular Nouns Found in Consecutive Nodes	Archives a ProjectV2Item.
 POST	 /archiveProjectV2Item 	Singular Nouns Found in Consecutive Nodes	Archives a ProjectV2Item.
-POST	 /archiveRepository 	Singular Nouns Found in Consecutive Nodes	Marks a repository as archived.
 POST	 /cancelEnterpriseAdminInvitation 	Singular Nouns Found in Consecutive Nodes	Cancels a pending invitation for an administrator to join an enterprise.
 POST	 /cancelEnterpriseAdminInvitation 	Singular Nouns Found in Consecutive Nodes	Cancels a pending invitation for an administrator to join an enterprise.
 POST	 /cancelEnterpriseAdminInvitation 	Singular Nouns Found in Consecutive Nodes	Cancels a pending invitation for an administrator to join an enterprise.
-POST	 /cancelSponsorship 	Singular Nouns Found in Consecutive Nodes	Cancel an active sponsorship.
 POST	 /changeUserStatus 	Singular Nouns Found in Consecutive Nodes	Update your status on GitHub.
 POST	 /changeUserStatus 	Singular Nouns Found in Consecutive Nodes	Update your status on GitHub.
 POST	 /clearProjectV2ItemFieldValue 	Singular Nouns Found in Consecutive Nodes	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
 POST	 /clearProjectV2ItemFieldValue 	Singular Nouns Found in Consecutive Nodes	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
 POST	 /clearProjectV2ItemFieldValue 	Singular Nouns Found in Consecutive Nodes	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
 POST	 /clearProjectV2ItemFieldValue 	Singular Nouns Found in Consecutive Nodes	This mutation clears the value of a field for an item in a Project. Currentlyonly text, number, date, assignees, labels, single-select, iteration andmilestone fields are supported.
-POST	 /cloneProject 	Singular Nouns Found in Consecutive Nodes	Creates a new project by cloning configuration from an existing project.
 POST	 /cloneTemplateRepository 	Singular Nouns Found in Consecutive Nodes	Create a new repository with the same files and directory structure as a template repository.
 POST	 /cloneTemplateRepository 	Singular Nouns Found in Consecutive Nodes	Create a new repository with the same files and directory structure as a template repository.
-POST	 /closeDiscussion 	Singular Nouns Found in Consecutive Nodes	Close a discussion.
-POST	 /closeIssue 	Singular Nouns Found in Consecutive Nodes	Close an issue.
 POST	 /closePullRequest 	Singular Nouns Found in Consecutive Nodes	Close a pull request.
 POST	 /closePullRequest 	Singular Nouns Found in Consecutive Nodes	Close a pull request.
 POST	 /convertProjectCardNoteToIssue 	Singular Nouns Found in Consecutive Nodes	Convert a project note card to one associated with a newly created issue.
@@ -91,7 +75,6 @@ POST	 /convertProjectCardNoteToIssue 	Singular Nouns Found in Consecutive Nodes	
 POST	 /convertPullRequestToDraft 	Singular Nouns Found in Consecutive Nodes	Converts a pull request to draft.
 POST	 /convertPullRequestToDraft 	Singular Nouns Found in Consecutive Nodes	Converts a pull request to draft.
 POST	 /convertPullRequestToDraft 	Singular Nouns Found in Consecutive Nodes	Converts a pull request to draft.
-POST	 /copyProjectV2 	Singular Nouns Found in Consecutive Nodes	Copy a project.
 POST	 /createAttributionInvitation 	Singular Nouns Found in Consecutive Nodes	Invites a user to claim reattributable data.
 POST	 /createAttributionInvitation 	Singular Nouns Found in Consecutive Nodes	Invites a user to claim reattributable data.
 POST	 /createBranchProtectionRule 	Singular Nouns Found in Consecutive Nodes	Create a new branch protection rule.
@@ -103,34 +86,24 @@ POST	 /createCheckSuite 	Singular Nouns Found in Consecutive Nodes	Create a chec
 POST	 /createCheckSuite 	Singular Nouns Found in Consecutive Nodes	Create a check suite.
 POST	 /createCommitOnBranch 	Singular Nouns Found in Consecutive Nodes	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
 POST	 /createCommitOnBranch 	Singular Nouns Found in Consecutive Nodes	Appends a commit to the given branch as the authenticated user.This mutation creates a commit whose parent is the HEAD of the providedbranch and also updates that branch to point to the new commit.It can be thought of as similar to git commit.Locating a BranchCommits are appended to a branch of type Ref.This must refer to a git branch (i.e.  the fully qualified path mustbegin with refs/heads/, although including this prefix is optional.Callers may specify the branch to commit to either by its global nodeID or by passing both of repositoryNameWithOwner and refName.  Formore details see the documentation for CommittableBranch.Describing ChangesfileChanges are specified as a FilesChanges object describingFileAdditions and FileDeletions.Please see the documentation for FileChanges for more information onhow to use this argument to describe any set of file changes.AuthorshipSimilar to the web commit interface, this mutation does not supportspecifying the author or committer of the commit and will not addsupport for this in the future.A commit created by a successful execution of this mutation will beauthored by the owner of the credential which authenticates the APIrequest.  The committer will be identical to that of commits authoredusing the web interface.If you need full control over author and committer information, pleaseuse the Git Database REST API instead.Commit SigningCommits made using this mutation are automatically signed by GitHub ifsupported and will be marked as verified in the user interface.
-POST	 /createDeployment 	Singular Nouns Found in Consecutive Nodes	Creates a new deployment event.
 POST	 /createDeploymentStatus 	Singular Nouns Found in Consecutive Nodes	Create a deployment status.
 POST	 /createDeploymentStatus 	Singular Nouns Found in Consecutive Nodes	Create a deployment status.
-POST	 /createDiscussion 	Singular Nouns Found in Consecutive Nodes	Create a discussion.
 POST	 /createEnterpriseOrganization 	Singular Nouns Found in Consecutive Nodes	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
 POST	 /createEnterpriseOrganization 	Singular Nouns Found in Consecutive Nodes	Creates an organization as part of an enterprise account. A personal accesstoken used to create an organization is implicitly permitted to update theorganization it created, if the organization is part of an enterprise that hasSAML enabled or uses Enterprise Managed Users. If the organization is not partof such an enterprise, and instead has SAML enabled for it individually, thetoken will then require SAML authorization to continue working against that organization.
-POST	 /createEnvironment 	Singular Nouns Found in Consecutive Nodes	Creates an environment or simply returns it if already exists.
 POST	 /createIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Creates a new IP allow list entry.
 POST	 /createIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Creates a new IP allow list entry.
 POST	 /createIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Creates a new IP allow list entry.
 POST	 /createIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Creates a new IP allow list entry.
-POST	 /createIssue 	Singular Nouns Found in Consecutive Nodes	Creates a new issue.
-POST	 /createLabel 	Singular Nouns Found in Consecutive Nodes	Creates a new label.
 POST	 /createLinkedBranch 	Singular Nouns Found in Consecutive Nodes	Create a branch linked to an issue.
 POST	 /createLinkedBranch 	Singular Nouns Found in Consecutive Nodes	Create a branch linked to an issue.
 POST	 /createMigrationSource 	Singular Nouns Found in Consecutive Nodes	Creates a GitHub Enterprise Importer (GEI) migration source.
 POST	 /createMigrationSource 	Singular Nouns Found in Consecutive Nodes	Creates a GitHub Enterprise Importer (GEI) migration source.
-POST	 /createProject 	Singular Nouns Found in Consecutive Nodes	Creates a new project.
-POST	 /createProjectV2 	Singular Nouns Found in Consecutive Nodes	Creates a new project.
 POST	 /createProjectV2Field 	Singular Nouns Found in Consecutive Nodes	Create a new project field.
 POST	 /createProjectV2Field 	Singular Nouns Found in Consecutive Nodes	Create a new project field.
 POST	 /createPullRequest 	Singular Nouns Found in Consecutive Nodes	Create a new pull request.
 POST	 /createPullRequest 	Singular Nouns Found in Consecutive Nodes	Create a new pull request.
-POST	 /createRef 	Singular Nouns Found in Consecutive Nodes	Create a new Git Ref.
-POST	 /createRepository 	Singular Nouns Found in Consecutive Nodes	Create a new repository.
 POST	 /createRepositoryRuleset 	Singular Nouns Found in Consecutive Nodes	Create a repository ruleset.
 POST	 /createRepositoryRuleset 	Singular Nouns Found in Consecutive Nodes	Create a repository ruleset.
-POST	 /createSponsorship 	Singular Nouns Found in Consecutive Nodes	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
 POST	 /createTeamDiscussion 	Singular Nouns Found in Consecutive Nodes	Creates a new team discussion.
 POST	 /createTeamDiscussion 	Singular Nouns Found in Consecutive Nodes	Creates a new team discussion.
 POST	 /createTeamDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Creates a new team discussion comment.
@@ -141,29 +114,22 @@ POST	 /declineTopicSuggestion 	Singular Nouns Found in Consecutive Nodes	Rejects
 POST	 /deleteBranchProtectionRule 	Singular Nouns Found in Consecutive Nodes	Delete a branch protection rule.
 POST	 /deleteBranchProtectionRule 	Singular Nouns Found in Consecutive Nodes	Delete a branch protection rule.
 POST	 /deleteBranchProtectionRule 	Singular Nouns Found in Consecutive Nodes	Delete a branch protection rule.
-POST	 /deleteDeployment 	Singular Nouns Found in Consecutive Nodes	Deletes a deployment.
-POST	 /deleteDiscussion 	Singular Nouns Found in Consecutive Nodes	Delete a discussion and all of its replies.
 POST	 /deleteDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Delete a discussion comment. If it has replies, wipe it instead.
 POST	 /deleteDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Delete a discussion comment. If it has replies, wipe it instead.
-POST	 /deleteEnvironment 	Singular Nouns Found in Consecutive Nodes	Deletes an environment.
 POST	 /deleteIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Deletes an IP allow list entry.
 POST	 /deleteIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Deletes an IP allow list entry.
 POST	 /deleteIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Deletes an IP allow list entry.
 POST	 /deleteIpAllowListEntry 	Singular Nouns Found in Consecutive Nodes	Deletes an IP allow list entry.
-POST	 /deleteIssue 	Singular Nouns Found in Consecutive Nodes	Deletes an Issue object.
 POST	 /deleteIssueComment 	Singular Nouns Found in Consecutive Nodes	Deletes an IssueComment object.
 POST	 /deleteIssueComment 	Singular Nouns Found in Consecutive Nodes	Deletes an IssueComment object.
-POST	 /deleteLabel 	Singular Nouns Found in Consecutive Nodes	Deletes a label.
 POST	 /deleteLinkedBranch 	Singular Nouns Found in Consecutive Nodes	Unlink a branch from an issue.
 POST	 /deleteLinkedBranch 	Singular Nouns Found in Consecutive Nodes	Unlink a branch from an issue.
 POST	 /deletePackageVersion 	Singular Nouns Found in Consecutive Nodes	Delete a package version.
 POST	 /deletePackageVersion 	Singular Nouns Found in Consecutive Nodes	Delete a package version.
-POST	 /deleteProject 	Singular Nouns Found in Consecutive Nodes	Deletes a project.
 POST	 /deleteProjectCard 	Singular Nouns Found in Consecutive Nodes	Deletes a project card.
 POST	 /deleteProjectCard 	Singular Nouns Found in Consecutive Nodes	Deletes a project card.
 POST	 /deleteProjectColumn 	Singular Nouns Found in Consecutive Nodes	Deletes a project column.
 POST	 /deleteProjectColumn 	Singular Nouns Found in Consecutive Nodes	Deletes a project column.
-POST	 /deleteProjectV2 	Singular Nouns Found in Consecutive Nodes	Delete a project.
 POST	 /deleteProjectV2Field 	Singular Nouns Found in Consecutive Nodes	Delete a project field.
 POST	 /deleteProjectV2Field 	Singular Nouns Found in Consecutive Nodes	Delete a project field.
 POST	 /deleteProjectV2Item 	Singular Nouns Found in Consecutive Nodes	Deletes an item from a Project.
@@ -177,7 +143,6 @@ POST	 /deletePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes
 POST	 /deletePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes	Deletes a pull request review comment.
 POST	 /deletePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes	Deletes a pull request review comment.
 POST	 /deletePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes	Deletes a pull request review comment.
-POST	 /deleteRef 	Singular Nouns Found in Consecutive Nodes	Delete a Git Ref.
 POST	 /deleteRepositoryRuleset 	Singular Nouns Found in Consecutive Nodes	Delete a repository ruleset.
 POST	 /deleteRepositoryRuleset 	Singular Nouns Found in Consecutive Nodes	Delete a repository ruleset.
 POST	 /deleteTeamDiscussion 	Singular Nouns Found in Consecutive Nodes	Deletes a team discussion.
@@ -203,13 +168,10 @@ POST	 /enablePullRequestAutoMerge 	Singular Nouns Found in Consecutive Nodes	Ena
 POST	 /enablePullRequestAutoMerge 	Singular Nouns Found in Consecutive Nodes	Enable the default auto-merge on a pull request.
 POST	 /enqueuePullRequest 	Singular Nouns Found in Consecutive Nodes	Add a pull request to the merge queue.
 POST	 /enqueuePullRequest 	Singular Nouns Found in Consecutive Nodes	Add a pull request to the merge queue.
-POST	 /followOrganization 	Singular Nouns Found in Consecutive Nodes	Follow an organization.
-POST	 /followUser 	Singular Nouns Found in Consecutive Nodes	Follow a user.
 POST	 /grantEnterpriseOrganizationsMigratorRole 	Singular Nouns Found in Consecutive Nodes	Grant the migrator role to a user for all organizations under an enterprise account.
 POST	 /grantEnterpriseOrganizationsMigratorRole 	Singular Nouns Found in Consecutive Nodes	Grant the migrator role to a user for all organizations under an enterprise account.
 POST	 /grantMigratorRole 	Singular Nouns Found in Consecutive Nodes	Grant the migrator role to a user or a team.
 POST	 /grantMigratorRole 	Singular Nouns Found in Consecutive Nodes	Grant the migrator role to a user or a team.
-POST	 /importProject 	Singular Nouns Found in Consecutive Nodes	Creates a new project by importing columns and a list of issues/PRs.
 POST	 /inviteEnterpriseAdmin 	Singular Nouns Found in Consecutive Nodes	Invite someone to become an administrator of the enterprise.
 POST	 /inviteEnterpriseAdmin 	Singular Nouns Found in Consecutive Nodes	Invite someone to become an administrator of the enterprise.
 POST	 /linkProjectV2ToRepository 	Singular Nouns Found in Consecutive Nodes	Links a project to a repository.
@@ -218,7 +180,6 @@ POST	 /linkProjectV2ToTeam 	Singular Nouns Found in Consecutive Nodes	Links a pr
 POST	 /linkProjectV2ToTeam 	Singular Nouns Found in Consecutive Nodes	Links a project to a team.
 POST	 /linkRepositoryToProject 	Singular Nouns Found in Consecutive Nodes	Creates a repository link for a project.
 POST	 /linkRepositoryToProject 	Singular Nouns Found in Consecutive Nodes	Creates a repository link for a project.
-POST	 /lockLockable 	Singular Nouns Found in Consecutive Nodes	Lock a lockable object.
 POST	 /markDiscussionCommentAsAnswer 	Singular Nouns Found in Consecutive Nodes	Mark a discussion comment as the chosen answer for discussions in an answerable category.
 POST	 /markDiscussionCommentAsAnswer 	Singular Nouns Found in Consecutive Nodes	Mark a discussion comment as the chosen answer for discussions in an answerable category.
 POST	 /markDiscussionCommentAsAnswer 	Singular Nouns Found in Consecutive Nodes	Mark a discussion comment as the chosen answer for discussions in an answerable category.
@@ -230,15 +191,12 @@ POST	 /markPullRequestReadyForReview 	Singular Nouns Found in Consecutive Nodes	
 POST	 /markPullRequestReadyForReview 	Singular Nouns Found in Consecutive Nodes	Marks a pull request ready for review.
 POST	 /markPullRequestReadyForReview 	Singular Nouns Found in Consecutive Nodes	Marks a pull request ready for review.
 POST	 /markPullRequestReadyForReview 	Singular Nouns Found in Consecutive Nodes	Marks a pull request ready for review.
-POST	 /mergeBranch 	Singular Nouns Found in Consecutive Nodes	Merge a head into a branch.
 POST	 /mergePullRequest 	Singular Nouns Found in Consecutive Nodes	Merge a pull request.
 POST	 /mergePullRequest 	Singular Nouns Found in Consecutive Nodes	Merge a pull request.
-POST	 /minimizeComment 	Singular Nouns Found in Consecutive Nodes	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
 POST	 /moveProjectCard 	Singular Nouns Found in Consecutive Nodes	Moves a project card to another place.
 POST	 /moveProjectCard 	Singular Nouns Found in Consecutive Nodes	Moves a project card to another place.
 POST	 /moveProjectColumn 	Singular Nouns Found in Consecutive Nodes	Moves a project column to another place.
 POST	 /moveProjectColumn 	Singular Nouns Found in Consecutive Nodes	Moves a project column to another place.
-POST	 /pinIssue 	Singular Nouns Found in Consecutive Nodes	Pin an issue to a repository.
 POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Singular Nouns Found in Consecutive Nodes	Regenerates the identity provider recovery codes for an enterprise.
 POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Singular Nouns Found in Consecutive Nodes	Regenerates the identity provider recovery codes for an enterprise.
 POST	 /regenerateEnterpriseIdentityProviderRecoveryCodes 	Singular Nouns Found in Consecutive Nodes	Regenerates the identity provider recovery codes for an enterprise.
@@ -260,11 +218,6 @@ POST	 /removeEnterpriseSupportEntitlement 	Singular Nouns Found in Consecutive N
 POST	 /removeEnterpriseSupportEntitlement 	Singular Nouns Found in Consecutive Nodes	Removes a support entitlement from an enterprise member.
 POST	 /removeOutsideCollaborator 	Singular Nouns Found in Consecutive Nodes	Removes outside collaborator from all repositories in an organization.
 POST	 /removeOutsideCollaborator 	Singular Nouns Found in Consecutive Nodes	Removes outside collaborator from all repositories in an organization.
-POST	 /removeReaction 	Singular Nouns Found in Consecutive Nodes	Removes a reaction from a subject.
-POST	 /removeStar 	Singular Nouns Found in Consecutive Nodes	Removes a star from a Starrable.
-POST	 /removeUpvote 	Singular Nouns Found in Consecutive Nodes	Remove an upvote to a discussion or discussion comment.
-POST	 /reopenDiscussion 	Singular Nouns Found in Consecutive Nodes	Reopen a discussion.
-POST	 /reopenIssue 	Singular Nouns Found in Consecutive Nodes	Reopen a issue.
 POST	 /reopenPullRequest 	Singular Nouns Found in Consecutive Nodes	Reopen a pull request.
 POST	 /reopenPullRequest 	Singular Nouns Found in Consecutive Nodes	Reopen a pull request.
 POST	 /rerequestCheckSuite 	Singular Nouns Found in Consecutive Nodes	Rerequests an existing check suite.
@@ -298,19 +251,14 @@ POST	 /submitPullRequestReview 	Singular Nouns Found in Consecutive Nodes	Submit
 POST	 /submitPullRequestReview 	Singular Nouns Found in Consecutive Nodes	Submits a pending pull request review.
 POST	 /transferEnterpriseOrganization 	Singular Nouns Found in Consecutive Nodes	Transfer an organization from one enterprise to another enterprise.
 POST	 /transferEnterpriseOrganization 	Singular Nouns Found in Consecutive Nodes	Transfer an organization from one enterprise to another enterprise.
-POST	 /transferIssue 	Singular Nouns Found in Consecutive Nodes	Transfer an issue to a different repository.
 POST	 /unarchiveProjectV2Item 	Singular Nouns Found in Consecutive Nodes	Unarchives a ProjectV2Item.
 POST	 /unarchiveProjectV2Item 	Singular Nouns Found in Consecutive Nodes	Unarchives a ProjectV2Item.
-POST	 /unarchiveRepository 	Singular Nouns Found in Consecutive Nodes	Unarchives a repository.
-POST	 /unfollowOrganization 	Singular Nouns Found in Consecutive Nodes	Unfollow an organization.
-POST	 /unfollowUser 	Singular Nouns Found in Consecutive Nodes	Unfollow a user.
 POST	 /unlinkProjectV2FromRepository 	Singular Nouns Found in Consecutive Nodes	Unlinks a project from a repository.
 POST	 /unlinkProjectV2FromRepository 	Singular Nouns Found in Consecutive Nodes	Unlinks a project from a repository.
 POST	 /unlinkProjectV2FromTeam 	Singular Nouns Found in Consecutive Nodes	Unlinks a project to a team.
 POST	 /unlinkProjectV2FromTeam 	Singular Nouns Found in Consecutive Nodes	Unlinks a project to a team.
 POST	 /unlinkRepositoryFromProject 	Singular Nouns Found in Consecutive Nodes	Deletes a repository link from a project.
 POST	 /unlinkRepositoryFromProject 	Singular Nouns Found in Consecutive Nodes	Deletes a repository link from a project.
-POST	 /unlockLockable 	Singular Nouns Found in Consecutive Nodes	Unlock a lockable object.
 POST	 /unmarkDiscussionCommentAsAnswer 	Singular Nouns Found in Consecutive Nodes	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
 POST	 /unmarkDiscussionCommentAsAnswer 	Singular Nouns Found in Consecutive Nodes	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
 POST	 /unmarkDiscussionCommentAsAnswer 	Singular Nouns Found in Consecutive Nodes	Unmark a discussion comment as the chosen answer for discussions in an answerable category.
@@ -320,8 +268,6 @@ POST	 /unmarkIssueAsDuplicate 	Singular Nouns Found in Consecutive Nodes	Unmark 
 POST	 /unmarkIssueAsDuplicate 	Singular Nouns Found in Consecutive Nodes	Unmark an issue as a duplicate of another issue.
 POST	 /unmarkProjectV2AsTemplate 	Singular Nouns Found in Consecutive Nodes	Unmark a project as a template.
 POST	 /unmarkProjectV2AsTemplate 	Singular Nouns Found in Consecutive Nodes	Unmark a project as a template.
-POST	 /unminimizeComment 	Singular Nouns Found in Consecutive Nodes	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
-POST	 /unpinIssue 	Singular Nouns Found in Consecutive Nodes	Unpin a pinned issue from a repository.
 POST	 /unresolveReviewThread 	Singular Nouns Found in Consecutive Nodes	Marks a review thread as unresolved.
 POST	 /unresolveReviewThread 	Singular Nouns Found in Consecutive Nodes	Marks a review thread as unresolved.
 POST	 /updateBranchProtectionRule 	Singular Nouns Found in Consecutive Nodes	Update a branch protection rule.
@@ -331,7 +277,6 @@ POST	 /updateCheckRun 	Singular Nouns Found in Consecutive Nodes	Update a check 
 POST	 /updateCheckRun 	Singular Nouns Found in Consecutive Nodes	Update a check run.
 POST	 /updateCheckSuitePreferences 	Singular Nouns Found in Consecutive Nodes	Modifies the settings of an existing check suite.
 POST	 /updateCheckSuitePreferences 	Singular Nouns Found in Consecutive Nodes	Modifies the settings of an existing check suite.
-POST	 /updateDiscussion 	Singular Nouns Found in Consecutive Nodes	Update a discussion.
 POST	 /updateDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Update the contents of a comment on a Discussion.
 POST	 /updateDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Update the contents of a comment on a Discussion.
 POST	 /updateEnterpriseAdministratorRole 	Singular Nouns Found in Consecutive Nodes	Updates the role of an enterprise administrator.
@@ -379,7 +324,6 @@ POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Singular Nouns Fo
 POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether two factor authentication is required for all users in an enterprise.
 POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether two factor authentication is required for all users in an enterprise.
 POST	 /updateEnterpriseTwoFactorAuthenticationRequiredSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether two factor authentication is required for all users in an enterprise.
-POST	 /updateEnvironment 	Singular Nouns Found in Consecutive Nodes	Updates an environment.
 POST	 /updateIpAllowListEnabledSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether an IP allow list is enabled on an owner.
 POST	 /updateIpAllowListEnabledSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether an IP allow list is enabled on an owner.
 POST	 /updateIpAllowListEnabledSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether an IP allow list is enabled on an owner.
@@ -394,10 +338,8 @@ POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Singular Nouns Found in 
 POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
 POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
 POST	 /updateIpAllowListForInstalledAppsEnabledSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether IP allow list configuration for installed GitHub Apps is enabled on an owner.
-POST	 /updateIssue 	Singular Nouns Found in Consecutive Nodes	Updates an Issue.
 POST	 /updateIssueComment 	Singular Nouns Found in Consecutive Nodes	Updates an IssueComment object.
 POST	 /updateIssueComment 	Singular Nouns Found in Consecutive Nodes	Updates an IssueComment object.
-POST	 /updateLabel 	Singular Nouns Found in Consecutive Nodes	Updates an existing label.
 POST	 /updateNotificationRestrictionSetting 	Singular Nouns Found in Consecutive Nodes	Update the setting to restrict notifications to only verified or approved domains available to an owner.
 POST	 /updateNotificationRestrictionSetting 	Singular Nouns Found in Consecutive Nodes	Update the setting to restrict notifications to only verified or approved domains available to an owner.
 POST	 /updateNotificationRestrictionSetting 	Singular Nouns Found in Consecutive Nodes	Update the setting to restrict notifications to only verified or approved domains available to an owner.
@@ -414,12 +356,10 @@ POST	 /updateOrganizationWebCommitSignoffSetting 	Singular Nouns Found in Consec
 POST	 /updateOrganizationWebCommitSignoffSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether contributors are required to sign off on web-based commits for repositories in an organization.
 POST	 /updatePatreonSponsorability 	Singular Nouns Found in Consecutive Nodes	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
 POST	 /updatePatreonSponsorability 	Singular Nouns Found in Consecutive Nodes	Toggle the setting for your GitHub Sponsors profile that allows other GitHubaccounts to sponsor you on GitHub while paying for the sponsorship on Patreon.Only applicable when you have a GitHub Sponsors profile and have connectedyour GitHub account with Patreon.
-POST	 /updateProject 	Singular Nouns Found in Consecutive Nodes	Updates an existing project.
 POST	 /updateProjectCard 	Singular Nouns Found in Consecutive Nodes	Updates an existing project card.
 POST	 /updateProjectCard 	Singular Nouns Found in Consecutive Nodes	Updates an existing project card.
 POST	 /updateProjectColumn 	Singular Nouns Found in Consecutive Nodes	Updates an existing project column.
 POST	 /updateProjectColumn 	Singular Nouns Found in Consecutive Nodes	Updates an existing project column.
-POST	 /updateProjectV2 	Singular Nouns Found in Consecutive Nodes	Updates an existing project (beta).
 POST	 /updateProjectV2Collaborators 	Singular Nouns Found in Consecutive Nodes	Update the collaborators on a team or a project.
 POST	 /updateProjectV2DraftIssue 	Singular Nouns Found in Consecutive Nodes	Updates a draft issue within a Project.
 POST	 /updateProjectV2DraftIssue 	Singular Nouns Found in Consecutive Nodes	Updates a draft issue within a Project.
@@ -443,8 +383,6 @@ POST	 /updatePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes
 POST	 /updatePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes	Updates a pull request review comment.
 POST	 /updatePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes	Updates a pull request review comment.
 POST	 /updatePullRequestReviewComment 	Singular Nouns Found in Consecutive Nodes	Updates a pull request review comment.
-POST	 /updateRef 	Singular Nouns Found in Consecutive Nodes	Update a Git Ref.
-POST	 /updateRepository 	Singular Nouns Found in Consecutive Nodes	Update information about a repository.
 POST	 /updateRepositoryRuleset 	Singular Nouns Found in Consecutive Nodes	Update a repository ruleset.
 POST	 /updateRepositoryRuleset 	Singular Nouns Found in Consecutive Nodes	Update a repository ruleset.
 POST	 /updateRepositoryWebCommitSignoffSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether contributors are required to sign off on web-based commits for a repository.
@@ -453,7 +391,6 @@ POST	 /updateRepositoryWebCommitSignoffSetting 	Singular Nouns Found in Consecut
 POST	 /updateRepositoryWebCommitSignoffSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether contributors are required to sign off on web-based commits for a repository.
 POST	 /updateRepositoryWebCommitSignoffSetting 	Singular Nouns Found in Consecutive Nodes	Sets whether contributors are required to sign off on web-based commits for a repository.
 POST	 /updateSponsorshipPreferences 	Singular Nouns Found in Consecutive Nodes	Change visibility of your sponsorship and opt in or out of email updates from the maintainer.
-POST	 /updateSubscription 	Singular Nouns Found in Consecutive Nodes	Updates the state for subscribable subjects.
 POST	 /updateTeamDiscussion 	Singular Nouns Found in Consecutive Nodes	Updates a team discussion.
 POST	 /updateTeamDiscussion 	Singular Nouns Found in Consecutive Nodes	Updates a team discussion.
 POST	 /updateTeamDiscussionComment 	Singular Nouns Found in Consecutive Nodes	Updates a discussion comment.
@@ -466,41 +403,103 @@ POST	 /verifyVerifiableDomain 	Singular Nouns Found in Consecutive Nodes	Verify 
 POST	 /verifyVerifiableDomain 	Singular Nouns Found in Consecutive Nodes	Verify that a verifiable domain has the expected DNS record.
 
 ***Patterns*** 
-Count: 37
+Count: 99
+GET	 /codeOfConduct 	Cosistent Resource Archetype	Look up a code of conduct by its key.
 GET	 /codesOfConduct 	Cosistent Resource Archetype	Look up a code of conduct by its key.
 GET	 /enterprise 	Cosistent Resource Archetype	Look up an enterprise by URL slug.
 GET	 /license 	Cosistent Resource Archetype	Look up an open source license by its key.
 GET	 /licenses 	Cosistent Resource Archetype	Return a list of known open source licenses.
 GET	 /marketplaceCategories 	Cosistent Resource Archetype	Get alphabetically sorted list of Marketplace categories.
+GET	 /marketplaceCategory 	Cosistent Resource Archetype	Look up a Marketplace category by its slug.
+GET	 /marketplaceListing 	Cosistent Resource Archetype	Look up a single Marketplace listing.
 GET	 /marketplaceListings 	Cosistent Resource Archetype	Look up Marketplace listings.
 GET	 /meta 	Cosistent Resource Archetype	Return information about the GitHub instance.
 GET	 /node 	Cosistent Resource Archetype	Fetches an object given its ID.
 GET	 /nodes 	Cosistent Resource Archetype	Lookup nodes by a list of IDs.
 GET	 /organization 	Cosistent Resource Archetype	Lookup a organization by login.
+GET	 /rateLimit 	Cosistent Resource Archetype	The client's rate limit information.
 GET	 /relay 	Cosistent Resource Archetype	Workaround for re-exposing the root query object. (Refer tohttps://github.com/facebook/relay/issues/112 for more information.).
 GET	 /repository 	Cosistent Resource Archetype	Lookup a given repository by the owner and repository name.
+GET	 /repositoryOwner 	Cosistent Resource Archetype	Lookup a repository owner (ie. either a User or an Organization) by login.
 GET	 /resource 	Cosistent Resource Archetype	Lookup resource by a URL.
 GET	 /search 	Cosistent Resource Archetype	Perform a search across resources, returning a maximum of 1,000 results.
 GET	 /securityAdvisories 	Cosistent Resource Archetype	GitHub Security Advisories.
+GET	 /securityAdvisory 	Cosistent Resource Archetype	Fetch a Security Advisory by its GHSA ID.
 GET	 /securityVulnerabilities 	Cosistent Resource Archetype	Software Vulnerabilities documented by GitHub Security Advisories.
 GET	 /sponsorables 	Cosistent Resource Archetype	Users and organizations who can be sponsored via GitHub Sponsors.
 GET	 /topic 	Cosistent Resource Archetype	Look up a topic by name.
 GET	 /user 	Cosistent Resource Archetype	Lookup a user by login.
 GET	 /viewer 	Cosistent Resource Archetype	The currently authenticated user.
 POST	 /addAssigneesToAssignable 	Cosistent Resource Archetype	Adds assignees to an assignable object.
+POST	 /addComment 	Cosistent Resource Archetype	Adds a comment to an Issue or Pull Request.
 POST	 /addLabelsToLabelable 	Cosistent Resource Archetype	Adds labels to a labelable object.
+POST	 /addReaction 	Cosistent Resource Archetype	Adds a reaction to a subject.
+POST	 /addStar 	Cosistent Resource Archetype	Adds a star to a Starrable.
+POST	 /addUpvote 	Cosistent Resource Archetype	Add an upvote to a discussion or discussion comment.
 POST	 /approveDeployments 	Cosistent Resource Archetype	Approve all pending deployments under one or more environments.
+POST	 /archiveRepository 	Cosistent Resource Archetype	Marks a repository as archived.
+POST	 /cancelSponsorship 	Cosistent Resource Archetype	Cancel an active sponsorship.
 POST	 /clearLabelsFromLabelable 	Cosistent Resource Archetype	Clears all labels from a labelable object.
+POST	 /cloneProject 	Cosistent Resource Archetype	Creates a new project by cloning configuration from an existing project.
+POST	 /closeDiscussion 	Cosistent Resource Archetype	Close a discussion.
+POST	 /closeIssue 	Cosistent Resource Archetype	Close an issue.
+POST	 /copyProjectV2 	Cosistent Resource Archetype	Copy a project.
+POST	 /createDeployment 	Cosistent Resource Archetype	Creates a new deployment event.
+POST	 /createDiscussion 	Cosistent Resource Archetype	Create a discussion.
+POST	 /createEnvironment 	Cosistent Resource Archetype	Creates an environment or simply returns it if already exists.
+POST	 /createIssue 	Cosistent Resource Archetype	Creates a new issue.
+POST	 /createLabel 	Cosistent Resource Archetype	Creates a new label.
+POST	 /createProject 	Cosistent Resource Archetype	Creates a new project.
+POST	 /createProjectV2 	Cosistent Resource Archetype	Creates a new project.
+POST	 /createRef 	Cosistent Resource Archetype	Create a new Git Ref.
+POST	 /createRepository 	Cosistent Resource Archetype	Create a new repository.
 POST	 /createSponsorsListing 	Cosistent Resource Archetype	Create a GitHub Sponsors profile to allow others to sponsor you or your organization.
 POST	 /createSponsorsTier 	Cosistent Resource Archetype	Create a new payment tier for your GitHub Sponsors profile.
+POST	 /createSponsorship 	Cosistent Resource Archetype	Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship.
 POST	 /createSponsorships 	Cosistent Resource Archetype	Make many one-time sponsorships for different sponsorable users ororganizations at once. Can only sponsor those who have a public GitHubSponsors profile.
+POST	 /deleteDeployment 	Cosistent Resource Archetype	Deletes a deployment.
+POST	 /deleteDiscussion 	Cosistent Resource Archetype	Delete a discussion and all of its replies.
+POST	 /deleteEnvironment 	Cosistent Resource Archetype	Deletes an environment.
+POST	 /deleteIssue 	Cosistent Resource Archetype	Deletes an Issue object.
+POST	 /deleteLabel 	Cosistent Resource Archetype	Deletes a label.
+POST	 /deleteProject 	Cosistent Resource Archetype	Deletes a project.
+POST	 /deleteProjectV2 	Cosistent Resource Archetype	Delete a project.
+POST	 /deleteRef 	Cosistent Resource Archetype	Delete a Git Ref.
+POST	 /followOrganization 	Cosistent Resource Archetype	Follow an organization.
+POST	 /followUser 	Cosistent Resource Archetype	Follow a user.
+POST	 /importProject 	Cosistent Resource Archetype	Creates a new project by importing columns and a list of issues/PRs.
+POST	 /lockLockable 	Cosistent Resource Archetype	Lock a lockable object.
+POST	 /mergeBranch 	Cosistent Resource Archetype	Merge a head into a branch.
+POST	 /minimizeComment 	Cosistent Resource Archetype	Minimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /pinIssue 	Cosistent Resource Archetype	Pin an issue to a repository.
 POST	 /publishSponsorsTier 	Cosistent Resource Archetype	Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile.
 POST	 /rejectDeployments 	Cosistent Resource Archetype	Reject all pending deployments under one or more environments.
 POST	 /removeAssigneesFromAssignable 	Cosistent Resource Archetype	Removes assignees from an assignable object.
 POST	 /removeLabelsFromLabelable 	Cosistent Resource Archetype	Removes labels from a Labelable object.
+POST	 /removeReaction 	Cosistent Resource Archetype	Removes a reaction from a subject.
+POST	 /removeStar 	Cosistent Resource Archetype	Removes a star from a Starrable.
+POST	 /removeUpvote 	Cosistent Resource Archetype	Remove an upvote to a discussion or discussion comment.
+POST	 /reopenDiscussion 	Cosistent Resource Archetype	Reopen a discussion.
+POST	 /reopenIssue 	Cosistent Resource Archetype	Reopen a issue.
 POST	 /requestReviews 	Cosistent Resource Archetype	Set review requests on a pull request.
 POST	 /retireSponsorsTier 	Cosistent Resource Archetype	Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships.
+POST	 /transferIssue 	Cosistent Resource Archetype	Transfer an issue to a different repository.
+POST	 /unarchiveRepository 	Cosistent Resource Archetype	Unarchives a repository.
+POST	 /unfollowOrganization 	Cosistent Resource Archetype	Unfollow an organization.
+POST	 /unfollowUser 	Cosistent Resource Archetype	Unfollow a user.
+POST	 /unlockLockable 	Cosistent Resource Archetype	Unlock a lockable object.
+POST	 /unminimizeComment 	Cosistent Resource Archetype	Unminimizes a comment on an Issue, Commit, Pull Request, or Gist.
+POST	 /unpinIssue 	Cosistent Resource Archetype	Unpin a pinned issue from a repository.
 POST	 /unsubscribeFromNotifications 	Cosistent Resource Archetype	Unsubscribes from notifications.
+POST	 /updateDiscussion 	Cosistent Resource Archetype	Update a discussion.
+POST	 /updateEnvironment 	Cosistent Resource Archetype	Updates an environment.
+POST	 /updateIssue 	Cosistent Resource Archetype	Updates an Issue.
+POST	 /updateLabel 	Cosistent Resource Archetype	Updates an existing label.
+POST	 /updateProject 	Cosistent Resource Archetype	Updates an existing project.
+POST	 /updateProjectV2 	Cosistent Resource Archetype	Updates an existing project (beta).
+POST	 /updateRef 	Cosistent Resource Archetype	Update a Git Ref.
 POST	 /updateRefs 	Cosistent Resource Archetype	Creates, updates and/or deletes multiple refs in a repository.This mutation takes a list of RefUpdates and performs these updateson the repository. All updates are performed atomically, meaning thatif one of them is rejected, no other ref will be modified.RefUpdate.beforeOid specifies that the given reference needs to pointto the given value before performing any updates. A value of0000000000000000000000000000000000000000 can be used to verify thatthe references should not exist.RefUpdate.afterOid specifies the value that the given referencewill point to after performing all updates. A value of0000000000000000000000000000000000000000 can be used to delete areference.If RefUpdate.force is set to true, a non-fast-forward updatesfor the given reference will be allowed.
+POST	 /updateRepository 	Cosistent Resource Archetype	Update information about a repository.
+POST	 /updateSubscription 	Cosistent Resource Archetype	Updates the state for subscribable subjects.
 POST	 /updateTeamsRepository 	Cosistent Resource Archetype	Update team repository.
 POST	 /updateTopics 	Cosistent Resource Archetype	Replaces the repository's topics with the given topics.

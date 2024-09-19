@@ -78,11 +78,11 @@ def run(selected, uri_path, base_path, api_type):
     # uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
     # print("\nFinished Detection of LessCohisiveDocumentation:\n")
 
-    print("Detection of Non_FilteringEndpoint:")
-    result_AP, result_P, p_count, ap_count= analyzer_obj.detect_non_filtering_endpoint()
-    pattern_type = "Non-Filtering-Endpoint"
-    uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
-    print("\nFinished Detection of Non_FilteringEndpoint:\n")
+    # print("Detection of Non_FilteringEndpoint:")
+    # result_AP, result_P, p_count, ap_count= analyzer_obj.detect_non_filtering_endpoint()
+    # pattern_type = "Non-Filtering-Endpoint"
+    # uri_obj.write_data(result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path)
+    # print("\nFinished Detection of Non_FilteringEndpoint:\n")
 
 
     print("Detection of ParameterTunneling:")
@@ -168,5 +168,29 @@ with open(output_file, 'w', encoding='utf-8') as outfile:
                     i = i + 1
             
     #print(f'Merged all files into {output_file}')
+
+
+
+# Function to convert JSONL to CSV
+def jsonl_to_csv(jsonl_file, csv_file):
+    with open(jsonl_file, 'r', encoding='utf-8') as f_jsonl, open(csv_file, 'w', newline='', encoding='utf-8') as f_csv:
+        csv_writer = None
+        for line in f_jsonl:
+            # Load each line as a JSON object
+            json_obj = json.loads(line.strip())
+            
+            # If this is the first line, create CSV headers
+            if csv_writer is None:
+                headers = json_obj.keys()
+                csv_writer = csv.DictWriter(f_csv, fieldnames=headers)
+                csv_writer.writeheader()
+            
+            # Write each JSON object as a row in the CSV
+            csv_writer.writerow(json_obj)
+import json
+import csv
+jsonl_file = 'All-Data\output_data.jsonl'  # Your input JSONL file
+csv_file = 'All-Data\output_data_update.csv'     # Your output CSV file
+jsonl_to_csv(jsonl_file, csv_file)
 
 

@@ -1,29 +1,14 @@
 ***Anti-Pattern*** 
-Count: 34
-DELETE	 /application/{id} 	Singular Nouns Found in Consecutive Nodes	Deletes an existing application.
-GET	 /application/{id} 	Singular Nouns Found in Consecutive Nodes	Returns the application that matches your query.
-PUT	 /application/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing application and returns a 200 message if the call is successful.
-POST	 /billofmaterial/bulk 	Singular Nouns Found in Consecutive Nodes	Retrieve and modify bill of material records in bulk.
-DELETE	 /billofmaterial/{id} 	Singular Nouns Found in Consecutive Nodes	Deletes an existing bill of material.
-GET	 /billofmaterial/{id} 	Singular Nouns Found in Consecutive Nodes	Retrieves the details of a bill of material that matches the ID.
-PATCH	 /billofmaterial/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing bill of material and returns a 200 message if the call is successful.
-PUT	 /billofmaterial/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing bill of material and returns a 200 message if the call is successful.
+Count: 19
 GET	 /kpis/{kpi}/score 	Singular Nouns Found in Consecutive Nodes	Retrieves the details for one or more KPI scores that match your query.
 GET	 /kpis/{kpi}/score 	Singular Nouns Found in Consecutive Nodes	Retrieves the details for one or more KPI scores that match your query.
 GET	 /kpis/{kpi}/score 	Singular Nouns Found in Consecutive Nodes	Retrieves the details for one or more KPI scores that match your query.
-POST	 /salesplan/bulk 	Singular Nouns Found in Consecutive Nodes	Retrieve and modify sales plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-DELETE	 /salesplan/{id} 	Singular Nouns Found in Consecutive Nodes	Deletes an existing sales plan. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-GET	 /salesplan/{id} 	Singular Nouns Found in Consecutive Nodes	Retrieves the details of a sales plan that matches the ID.
-PATCH	 /salesplan/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-PUT	 /salesplan/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /supplyplan/bulk 	Singular Nouns Found in Consecutive Nodes	Retrieve and modify supply plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /supplyplan/bulk 	Singular Nouns Found in Consecutive Nodes	Retrieve and modify supply plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
-POST	 /supplyplan 	Singular Nouns Found in Consecutive Nodes	Adds a supply plan to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Deletes an existing supply plan from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Deletes an existing supply plan from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Retrieves the details of a supply plan that matches the ID.
 GET	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Retrieves the details of a supply plan that matches the ID.
-GET	 /supplyplan 	Singular Nouns Found in Consecutive Nodes	Retrieves the details for one or more supply plans that match your query.
 PATCH	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing supply plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PATCH	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing supply plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyplan/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing supply plan and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
@@ -36,11 +21,19 @@ PATCH	 /{dataObject}/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an 
 PUT	 /{dataObject}/{id} 	Singular Nouns Found in Consecutive Nodes	Updates an existing custom data record and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 
 ***Patterns*** 
-Count: 167
+Count: 182
 POST	 /application 	Cosistent Resource Archetype	Creates a new application and returns the location of the created resource.
+DELETE	 /application/{id} 	Cosistent Resource Archetype	Deletes an existing application.
 GET	 /application 	Cosistent Resource Archetype	Returns any existing application that match your query.
+GET	 /application/{id} 	Cosistent Resource Archetype	Returns the application that matches your query.
+PUT	 /application/{id} 	Cosistent Resource Archetype	Updates an existing application and returns a 200 message if the call is successful.
 POST	 /billofmaterial 	Cosistent Resource Archetype	Creates a new bill of material and returns the location of the created resource.
+POST	 /billofmaterial/bulk 	Cosistent Resource Archetype	Retrieve and modify bill of material records in bulk.
+DELETE	 /billofmaterial/{id} 	Cosistent Resource Archetype	Deletes an existing bill of material.
 GET	 /billofmaterial 	Cosistent Resource Archetype	Returns any existing bills of material that match your query.
+GET	 /billofmaterial/{id} 	Cosistent Resource Archetype	Retrieves the details of a bill of material that matches the ID.
+PATCH	 /billofmaterial/{id} 	Cosistent Resource Archetype	Updates an existing bill of material and returns a 200 message if the call is successful.
+PUT	 /billofmaterial/{id} 	Cosistent Resource Archetype	Updates an existing bill of material and returns a 200 message if the call is successful.
 POST	 /carriers 	Cosistent Resource Archetype	Creates a new carrier and returns the location of the created resource.
 POST	 /carriers/bulk 	Cosistent Resource Archetype	Retrieve and modify carrier records in bulk.
 DELETE	 /carriers/{id} 	Cosistent Resource Archetype	Deletes an existing carrier.
@@ -133,7 +126,12 @@ GET	 /salesorders 	Cosistent Resource Archetype	Retrieves the details for one or
 PATCH	 /salesorders/{id} 	Cosistent Resource Archetype	
 PUT	 /salesorders/{id} 	Cosistent Resource Archetype	Updates an existing sales order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /salesplan 	Cosistent Resource Archetype	Creates a new sales plan and returns the location of the created resource. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /salesplan/bulk 	Cosistent Resource Archetype	Retrieve and modify sales plan records in bulk. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+DELETE	 /salesplan/{id} 	Cosistent Resource Archetype	Deletes an existing sales plan. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 GET	 /salesplan 	Cosistent Resource Archetype	Returns any existing sales plans that match your query.
+GET	 /salesplan/{id} 	Cosistent Resource Archetype	Retrieves the details of a sales plan that matches the ID.
+PATCH	 /salesplan/{id} 	Cosistent Resource Archetype	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+PUT	 /salesplan/{id} 	Cosistent Resource Archetype	Updates an existing sales plan and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /salesshipmentlines/bulk 	Cosistent Resource Archetype	Bulk process sales shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /salesshipmentlines 	Cosistent Resource Archetype	Adds a sales shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /salesshipmentlines/{id} 	Cosistent Resource Archetype	Deletes an existing sales shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
@@ -176,6 +174,8 @@ GET	 /supplyorders/{id} 	Cosistent Resource Archetype	Retrieves the details of a
 GET	 /supplyorders 	Cosistent Resource Archetype	Retrieves the details for one or more purchase orders that match your query.
 PATCH	 /supplyorders/{id} 	Cosistent Resource Archetype	Updates an existing supply order and returns a 200 message if the call is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 PUT	 /supplyorders/{id} 	Cosistent Resource Archetype	Updates an existing supply order and returns a 200 message if the update is successful. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+POST	 /supplyplan 	Cosistent Resource Archetype	Adds a supply plan to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
+GET	 /supplyplan 	Cosistent Resource Archetype	Retrieves the details for one or more supply plans that match your query.
 POST	 /supplyshipmentlines/bulk 	Cosistent Resource Archetype	Bulk process supply shipment lines. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 POST	 /supplyshipmentlines 	Cosistent Resource Archetype	Adds a supply shipment line to the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin
 DELETE	 /supplyshipmentlines/{id} 	Cosistent Resource Archetype	Deletes an existing supply shipment line from the system. Caller must be a member of one or more of the following roles in order to invoke this method: dataAdmin

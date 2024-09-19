@@ -1,32 +1,23 @@
 ***Anti-Pattern*** 
-Count: 134
+Count: 94
 DELETE	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete an application. Only applications that are in a NEW state can be deleted.
-DELETE	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete an application. Only applications that are in a NEW state can be deleted.
 DELETE	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Delete the banner for the application.
 DELETE	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Delete the banner for the application.
-DELETE	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Delete the banner for the application.
-DELETE	 /applications/{listingVersionId}/comments/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a status comment.
 DELETE	 /applications/{listingVersionId}/comments/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a status comment.
 DELETE	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
 DELETE	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
 DELETE	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
-DELETE	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
-DELETE	 /applications/{listingVersionId}/relateddocs/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a related document for an existing application.
 DELETE	 /applications/{listingVersionId}/relateddocs/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a related document for an existing application.
 DELETE	 /applications/{listingVersionId}/relateddocs/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a related document for an existing application.
 DELETE	 /applications/{listingVersionId}/screenshots/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a screenshot for an existing application.
 DELETE	 /applications/{listingVersionId}/screenshots/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a screenshot for an existing application.
-DELETE	 /applications/{listingVersionId}/screenshots/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a screenshot for an existing application.
 DELETE	 /applications/{listingVersionId}/supportingdocs/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a supporting document for an existing application.
 DELETE	 /applications/{listingVersionId}/supportingdocs/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a supporting document for an existing application.
-DELETE	 /applications/{listingVersionId}/supportingdocs/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a supporting document for an existing application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
-DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Delete the package of an application.
-DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Singular Nouns Found in Consecutive Nodes	Delete a specific resource of the application's package.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Singular Nouns Found in Consecutive Nodes	Delete a specific resource of the application's package.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Singular Nouns Found in Consecutive Nodes	Delete a specific resource of the application's package.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Singular Nouns Found in Consecutive Nodes	Delete a specific resource of the application's package.
@@ -34,37 +25,27 @@ DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{package
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Singular Nouns Found in Consecutive Nodes	Delete a specific resource of the application's package.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Singular Nouns Found in Consecutive Nodes	Delete a specific resource of the application's package.
 GET	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the application with the specified listing ID.
-GET	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the application with the specified listing ID.
-GET	 /applications/{listingVersionId}/availableservices 	Singular Nouns Found in Consecutive Nodes	Get a list of service integrators. Publishers can recommend particular service integrators for their application listings by adding them to each application listing as recommended services.
 GET	 /applications/{listingVersionId}/availableservices 	Singular Nouns Found in Consecutive Nodes	Get a list of service integrators. Publishers can recommend particular service integrators for their application listings by adding them to each application listing as recommended services.
 GET	 /applications/{listingVersionId}/availableservices 	Singular Nouns Found in Consecutive Nodes	Get a list of service integrators. Publishers can recommend particular service integrators for their application listings by adding them to each application listing as recommended services.
 GET	 /applications/{listingVersionId}/comments 	Singular Nouns Found in Consecutive Nodes	Get the status comments for the application.
-GET	 /applications/{listingVersionId}/comments 	Singular Nouns Found in Consecutive Nodes	Get the status comments for the application.
-GET	 /applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Get the package configured for the application. A package describes the install/uninstall steps and the resources required for the application.
 GET	 /applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Get the package configured for the application. A package describes the install/uninstall steps and the resources required for the application.
 GET	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
 GET	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
 GET	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
-GET	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
-GET	 /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package logs( validation / test install).
 GET	 /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package logs( validation / test install).
 GET	 /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package logs( validation / test install).
 GET	 /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package logs( validation / test install).
 GET	 /applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package logs( validation / test install).
 GET	 /applications/{listingVersionId}/recommendedservices 	Singular Nouns Found in Consecutive Nodes	Get the list of all the recommended services configured for a listing.
 GET	 /applications/{listingVersionId}/recommendedservices 	Singular Nouns Found in Consecutive Nodes	Get the list of all the recommended services configured for a listing.
-GET	 /applications/{listingVersionId}/recommendedservices 	Singular Nouns Found in Consecutive Nodes	Get the list of all the recommended services configured for a listing.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Get the package configured for the application. A package describes the resources and its properties required for the application.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Get the package configured for the application. A package describes the resources and its properties required for the application.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Get the package configured for the application. A package describes the resources and its properties required for the application.
-GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Get the package configured for the application. A package describes the resources and its properties required for the application.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
-GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Get the details of the specified package.
-GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Fetches the packagelogs of an applications's package version id.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Fetches the packagelogs of an applications's package version id.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Fetches the packagelogs of an applications's package version id.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Fetches the packagelogs of an applications's package version id.
@@ -72,21 +53,15 @@ GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVer
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Fetches the packagelogs of an applications's package version id.
 GET	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/packagelogs 	Singular Nouns Found in Consecutive Nodes	Fetches the packagelogs of an applications's package version id.
 PATCH	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	This method can be used to perform a partial update operation on application attributes or perform a state change operation in the application life-cycle. In order to perform a partial update, provide any root-level attribute in the payload. The content of that specified attribute will be completely replaced, while keeping the values of the other attributes same as before.
-PATCH	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	This method can be used to perform a partial update operation on application attributes or perform a state change operation in the application life-cycle. In order to perform a partial update, provide any root-level attribute in the payload. The content of that specified attribute will be completely replaced, while keeping the values of the other attributes same as before.
 PATCH	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Partially Update the banner for the application.
 PATCH	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Partially Update the banner for the application.
-PATCH	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Partially Update the banner for the application.
-PATCH	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
 PATCH	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
 PATCH	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
 PATCH	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
 PATCH	 /applications/{listingVersionId}/relateddocs/{id} 	Singular Nouns Found in Consecutive Nodes	Partially Update a related document for the application.
 PATCH	 /applications/{listingVersionId}/relateddocs/{id} 	Singular Nouns Found in Consecutive Nodes	Partially Update a related document for the application.
-PATCH	 /applications/{listingVersionId}/relateddocs/{id} 	Singular Nouns Found in Consecutive Nodes	Partially Update a related document for the application.
 PATCH	 /applications/{listingVersionId}/screenshots 	Singular Nouns Found in Consecutive Nodes	Partially Update the Screenshot for an application.
 PATCH	 /applications/{listingVersionId}/screenshots 	Singular Nouns Found in Consecutive Nodes	Partially Update the Screenshot for an application.
-PATCH	 /applications/{listingVersionId}/screenshots 	Singular Nouns Found in Consecutive Nodes	Partially Update the Screenshot for an application.
-PATCH	 /applications/{listingVersionId}/supportingdocs/{id} 	Singular Nouns Found in Consecutive Nodes	Partially Update a supporting document for the application.
 PATCH	 /applications/{listingVersionId}/supportingdocs/{id} 	Singular Nouns Found in Consecutive Nodes	Partially Update a supporting document for the application.
 PATCH	 /applications/{listingVersionId}/supportingdocs/{id} 	Singular Nouns Found in Consecutive Nodes	Partially Update a supporting document for the application.
 PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
@@ -94,44 +69,29 @@ PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageV
 PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
 PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
 PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
-PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
-POST	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Create a banner for the application.
 POST	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Create a banner for the application.
 POST	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Create a banner for the application.
 POST	 /applications/{listingVersionId}/comments 	Singular Nouns Found in Consecutive Nodes	Create a status comment for the application.
-POST	 /applications/{listingVersionId}/comments 	Singular Nouns Found in Consecutive Nodes	Create a status comment for the application.
-POST	 /applications/{listingVersionId}/icon 	Singular Nouns Found in Consecutive Nodes	Upload an icon for the application listing. The icon dimensions must be 130 X 130 px. The following extensions are allowed: png, jpg.
 POST	 /applications/{listingVersionId}/icon 	Singular Nouns Found in Consecutive Nodes	Upload an icon for the application listing. The icon dimensions must be 130 X 130 px. The following extensions are allowed: png, jpg.
 POST	 /applications/{listingVersionId}/icon 	Singular Nouns Found in Consecutive Nodes	Upload an icon for the application listing. The icon dimensions must be 130 X 130 px. The following extensions are allowed: png, jpg.
 POST	 /applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Create a package for the given application. A package is an orchestration template that describes the application install/uninstall/upgrade steps.
-POST	 /applications/{listingVersionId}/packages 	Singular Nouns Found in Consecutive Nodes	Create a package for the given application. A package is an orchestration template that describes the application install/uninstall/upgrade steps.
-POST	 /applications/{listingVersionId}/relateddocs 	Singular Nouns Found in Consecutive Nodes	Creates related documents for the an application with the specified ID.
 POST	 /applications/{listingVersionId}/relateddocs 	Singular Nouns Found in Consecutive Nodes	Creates related documents for the an application with the specified ID.
 POST	 /applications/{listingVersionId}/relateddocs 	Singular Nouns Found in Consecutive Nodes	Creates related documents for the an application with the specified ID.
 POST	 /applications/{listingVersionId}/screenshots 	Singular Nouns Found in Consecutive Nodes	Create screenshots for an application.
 POST	 /applications/{listingVersionId}/screenshots 	Singular Nouns Found in Consecutive Nodes	Create screenshots for an application.
-POST	 /applications/{listingVersionId}/screenshots 	Singular Nouns Found in Consecutive Nodes	Create screenshots for an application.
 POST	 /applications/{listingVersionId}/supportingdocs 	Singular Nouns Found in Consecutive Nodes	Creates supporting documents for the an application with the specified ID.
 POST	 /applications/{listingVersionId}/supportingdocs 	Singular Nouns Found in Consecutive Nodes	Creates supporting documents for the an application with the specified ID.
-POST	 /applications/{listingVersionId}/supportingdocs 	Singular Nouns Found in Consecutive Nodes	Creates supporting documents for the an application with the specified ID.
-POST	 /applications/{listingVersionId}/version 	Singular Nouns Found in Consecutive Nodes	Create a new version for an already published application listing. A new version is necessary to make edits to an already published listing.The new version has to go though the same life cycle and approval workflow to get published to the Marketplace. Publishing the new version automatically archives the older version from the Marketplace. At any given point only one version of the application is active on the Marketplace.
 POST	 /applications/{listingVersionId}/version 	Singular Nouns Found in Consecutive Nodes	Create a new version for an already published application listing. A new version is necessary to make edits to an already published listing.The new version has to go though the same life cycle and approval workflow to get published to the Marketplace. Publishing the new version automatically archives the older version from the Marketplace. At any given point only one version of the application is active on the Marketplace.
 POST	 /applications/{listingVersionId}/version 	Singular Nouns Found in Consecutive Nodes	Create a new version for an already published application listing. A new version is necessary to make edits to an already published listing.The new version has to go though the same life cycle and approval workflow to get published to the Marketplace. Publishing the new version automatically archives the older version from the Marketplace. At any given point only one version of the application is active on the Marketplace.
 PUT	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	Update the Application listing. Only applications in a NEW or REJECTED state can be updated. To update a listing that is published, a new version of the listing must be created.
-PUT	 /applications/{listingVersionId} 	Singular Nouns Found in Consecutive Nodes	Update the Application listing. Only applications in a NEW or REJECTED state can be updated. To update a listing that is published, a new version of the listing must be created.
-PUT	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Update the banner for the application.
 PUT	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Update the banner for the application.
 PUT	 /applications/{listingVersionId}/banner 	Singular Nouns Found in Consecutive Nodes	Update the banner for the application.
 PUT	 /applications/{listingVersionId}/comments/{id} 	Singular Nouns Found in Consecutive Nodes	Update status comment.
-PUT	 /applications/{listingVersionId}/comments/{id} 	Singular Nouns Found in Consecutive Nodes	Update status comment.
 PUT	 /applications/{listingVersionId}/icon 	Singular Nouns Found in Consecutive Nodes	Update the icon for the application.
 PUT	 /applications/{listingVersionId}/icon 	Singular Nouns Found in Consecutive Nodes	Update the icon for the application.
-PUT	 /applications/{listingVersionId}/icon 	Singular Nouns Found in Consecutive Nodes	Update the icon for the application.
 PUT	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Update the specified package. If the package was validated it will need to be validated again after the update.Packages of an already published listing cannot be updated.
 PUT	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Update the specified package. If the package was validated it will need to be validated again after the update.Packages of an already published listing cannot be updated.
 PUT	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Update the specified package. If the package was validated it will need to be validated again after the update.Packages of an already published listing cannot be updated.
-PUT	 /applications/{listingVersionId}/packages/{packageVersionId} 	Singular Nouns Found in Consecutive Nodes	Update the specified package. If the package was validated it will need to be validated again after the update.Packages of an already published listing cannot be updated.
-PUT	 /applications/{listingVersionId}/recommendedservices 	Singular Nouns Found in Consecutive Nodes	Creates a list of recommended service integrators for an application with specified id. If the call is made with an empty list, it clears the entire existing list of recommended services associated with this application, if any.
 PUT	 /applications/{listingVersionId}/recommendedservices 	Singular Nouns Found in Consecutive Nodes	Creates a list of recommended service integrators for an application with specified id. If the call is made with an empty list, it clears the entire existing list of recommended services associated with this application, if any.
 PUT	 /applications/{listingVersionId}/recommendedservices 	Singular Nouns Found in Consecutive Nodes	Creates a list of recommended service integrators for an application with specified id. If the call is made with an empty list, it clears the entire existing list of recommended services associated with this application, if any.
 

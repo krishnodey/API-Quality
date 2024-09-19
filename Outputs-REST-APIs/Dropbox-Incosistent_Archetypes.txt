@@ -1,19 +1,16 @@
 ***Anti-Pattern*** 
-Count: 115
+Count: 112
 POST	 /2/account/set_profile_photo 	Singular Nouns Found in Consecutive Nodes	Sets a user's profile photo.
 POST	 /2/account/set_profile_photo 	Singular Nouns Found in Consecutive Nodes	Sets a user's profile photo.
 POST	 /2/account/set_profile_photo 	Singular Nouns Found in Consecutive Nodes	Sets a user's profile photo.
 POST	 /2/auth/token/revoke 	Singular Nouns Found in Consecutive Nodes	Disables the access token used to authenticate the call. If there is a corresponding refresh token for the access token, this disables that refresh token, as well as any other access tokens for that refresh token.
 POST	 /2/auth/token/revoke 	Singular Nouns Found in Consecutive Nodes	Disables the access token used to authenticate the call. If there is a corresponding refresh token for the access token, this disables that refresh token, as well as any other access tokens for that refresh token.
-POST	 /2/check/app 	Singular Nouns Found in Consecutive Nodes	This endpoint performs App Authentication, validating the supplied app key and secret, and returns the supplied string, to allow you to test your code and connection to the Dropbox API. It has no other effect. If you receive an HTTP 200 response with the supplied query, it indicates at least part of the Dropbox API infrastructure is working and that the app key and secret valid.
-POST	 /2/check/user 	Singular Nouns Found in Consecutive Nodes	This endpoint performs User Authentication, validating the supplied access token, and returns the supplied string, to allow you to test your code and connection to the Dropbox API. It has no other effect. If you receive an HTTP 200 response with the supplied query, it indicates at least part of the Dropbox API infrastructure is working and that the access token is valid.
 POST	 /2/contacts/delete_manual_contacts 	Singular Nouns Found in Consecutive Nodes	Removes all manually added contacts. You'll still keep contacts who are on your team or who you imported. New contacts will be added when you share.
 POST	 /2/contacts/delete_manual_contacts_batch 	Singular Nouns Found in Consecutive Nodes	Removes manually added contacts from the given list.
 POST	 /2/file_properties/properties/add 	Plural Nouns Found in Consecutive Nodes	Add property groups to a Dropbox file. See templates/add_for_user or templates/add_for_team to create new templates.
 POST	 /2/file_properties/properties/add 	Controller is not a Verb	Add property groups to a Dropbox file. See templates/add_for_user or templates/add_for_team to create new templates.
 PSOT	 /2/file_properties/properties/overwrite 	Plural Nouns Found in Consecutive Nodes	Overwrite property groups associated with a file. This endpoint should be used instead of properties/update when property groups are being updated via a "snapshot" instead of via a "delta". In other words, this endpoint will delete all omitted fields from a property group, whereas properties/update will only delete fields that are explicitly marked for deletion.
 PSOT	 /2/file_properties/properties/remove 	Plural Nouns Found in Consecutive Nodes	Permanently removes the specified property group from the file. To remove specific property field key value pairs, see properties/update. To update a template, see templates/update_for_user or templates/update_for_team. To remove a template, see templates/remove_for_user or templates/remove_for_team.
-PSOT	 /2/file_properties/properties/remove 	Controller is not a Verb	Permanently removes the specified property group from the file. To remove specific property field key value pairs, see properties/update. To update a template, see templates/update_for_user or templates/update_for_team. To remove a template, see templates/remove_for_user or templates/remove_for_team.
 POST	 /2/file_properties/properties/search 	Plural Nouns Found in Consecutive Nodes	Search across property templates for particular property field values.
 POST	 /2/file_properties/properties/search/continue 	Plural Nouns Found in Consecutive Nodes	Once a cursor has been retrieved from properties/search, use this to paginate through all search results.
 POST	 /2/file_properties/properties/search/continue 	Singular Nouns Found in Consecutive Nodes	Once a cursor has been retrieved from properties/search, use this to paginate through all search results.
@@ -117,7 +114,9 @@ POST	 /2/files/upload_session/start_batch 	Singular Nouns Found in Consecutive N
 POST	 /2/files/upload_session/start_batch 	Singular Nouns Found in Consecutive Nodes	This route starts batch of upload_sessions. Please refer to `upload_session/start` usage. Calls to this endpoint will count as data transport calls for any Dropbox Business teams with a limit on the number of data transport calls allowed per month. For more information, see the Data transport limit page.
 
 ***Patterns*** 
-Count: 12
+Count: 14
+POST	 /2/check/app 	Cosistent Resource Archetype	This endpoint performs App Authentication, validating the supplied app key and secret, and returns the supplied string, to allow you to test your code and connection to the Dropbox API. It has no other effect. If you receive an HTTP 200 response with the supplied query, it indicates at least part of the Dropbox API infrastructure is working and that the app key and secret valid.
+POST	 /2/check/user 	Cosistent Resource Archetype	This endpoint performs User Authentication, validating the supplied access token, and returns the supplied string, to allow you to test your code and connection to the Dropbox API. It has no other effect. If you receive an HTTP 200 response with the supplied query, it indicates at least part of the Dropbox API infrastructure is working and that the access token is valid.
 POST	 /2/file_requests/count 	Cosistent Resource Archetype	This namespace contains endpoints and data types for file request operations.
 POST	 /2/file_requests/list_v2 	Cosistent Resource Archetype	Returns a list of file requests owned by this user. For apps with the app folder permission, this will only return file requests with destinations in the app folder.
 POST	 /2/files/copy_v2 	Cosistent Resource Archetype	Copy a file or folder to a different location in the user's Dropbox. If the source path is a folder all its contents will be copied.

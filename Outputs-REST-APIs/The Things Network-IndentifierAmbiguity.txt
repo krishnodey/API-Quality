@@ -3,18 +3,18 @@ Count: 0
 
 ***Patterns*** 
 Count: 15
-DELETE	 /applications/{app_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Application. deletes the application with the given identifier (app_id) Request: ApplicationIdentifier Response: Empty
-DELETE	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Device deletes the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Empty
-DELETE	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Device deletes the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Empty
-GET	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Device returns the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Device
-GET	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get Device returns the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Device
-GET	 /applications/{app_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Get DevicesForApplication returns all devices that belong to the application with the given identifier (app_id) Request: ApplicationIdentifier Response: DeviceList
-POST	 /applications 	[Regular Endpoints]	Applications should first be registered to the Handler with the RegisterApplication method Request: ApplicationIdentifier Response: Empty
-PUT	 /applications/{app_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Application updates the settings for the application. All fields must be supplied. Request: Application Response: Empty
-POST	 /applications/{app_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Application updates the settings for the application. All fields must be supplied. Request: Application Response: Empty
-PUT	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
-PUT	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
-POST	 /applications/{app_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
-PUT	 /applications/{app_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
-POST	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
-POST	 /applications/{app_id}/devices/{dev_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+DELETE	/applications/{app_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Application. deletes the application with the given identifier (app_id) Request: ApplicationIdentifier Response: Empty
+DELETE	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Device deletes the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Empty
+DELETE	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete Device deletes the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Empty
+GET	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get Device returns the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Device
+GET	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get Device returns the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Device
+GET	/applications/{app_id}/devices	[Identifier is Enclosed in {} or <> or Starts with :]	Get DevicesForApplication returns all devices that belong to the application with the given identifier (app_id) Request: ApplicationIdentifier Response: DeviceList
+POST	/applications	[Regular Endpoints]	Applications should first be registered to the Handler with the RegisterApplication method Request: ApplicationIdentifier Response: Empty
+PUT	/applications/{app_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Set Application updates the settings for the application. All fields must be supplied. Request: Application Response: Empty
+POST	/applications/{app_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Set Application updates the settings for the application. All fields must be supplied. Request: Application Response: Empty
+PUT	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+PUT	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+POST	/applications/{app_id}/devices	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+PUT	/applications/{app_id}/devices	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+POST	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty
+POST	/applications/{app_id}/devices/{dev_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Set Device creates or updates a device. All fields must be supplied. Request: Device Response: Empty

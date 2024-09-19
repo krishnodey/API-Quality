@@ -7,7 +7,7 @@ PUT	 /deployment/resources/addresses/<addressUUID> 	Complex Words Present in End
 DELETE	 /deployment/resources/addresses/<addressUUID> 	Complex Words Present in Endpoint	Deleting an address. You can use the representational state transfer (REST) application programming interface (API) to delete an address.
 DELETE	 /deployment/resources/credentials/<credentialUUID> 	Complex Words Present in Endpoint	Deleting a credential
 PUT	 /deployment/resources/groups/<groupUUID> 	Complex Words Present in Endpoint	Updating a group
-GET	 /deployment/resources/groups/group<UUID>?showNested=true 	Complex Words Present in Endpoint	Retrieving nested and parent groups
+GET	 /deployment/resources/groups/group<UUID>	Complex Words Present in Endpoint	Retrieving nested and parent groups
 PUT	 /deployment/resources/instances/<instanceUUID> 	Complex Words Present in Endpoint	Stopping, starting, or and restarting virtual machines
 DELETE	 /deployment/resources/instances/<instanceUUID> 	Complex Words Present in Endpoint	Deleting currently deployed virtual machines
 DELETE	 /deployment/resources/volumes/<volumeUUID> 	Complex Words Present in Endpoint	Deleting a volume
@@ -26,7 +26,7 @@ POST	 /deployment/resources/addresses 	Structed Endpoint	Create a new address.
 POST	 /deployment/resources/credentials 	Structed Endpoint	Creating a new credential
 DELETE	 /deployment/resources/images/<imageID> 	Structed Endpoint	Deleting images from the system
 POST	 /deployment/resources/groups 	Structed Endpoint	Creating a group
-GET	 /deployment/resources/groups?isMaster=true 	Structed Endpoint	Retrieving master groups
+GET	 /deployment/resources/groups	Structed Endpoint	Retrieving master groups
 GET	 /deployment/resources/instances 	Structed Endpoint	Viewing currently deployed virtual machines
 GET	 /deployment/resources/addresses 	Structed Endpoint	Getting a new address
 POST	 /deployment/resources/volumes 	Structed Endpoint	Creating a volume

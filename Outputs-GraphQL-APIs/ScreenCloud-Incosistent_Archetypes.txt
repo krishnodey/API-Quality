@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 66
+Count: 50
 GET	 /v2.10.0/allBillingAddonPlans 	Singular Nouns Found in Consecutive Nodes	Reads and enables pagination through a set of BillingAddonPlan.
 GET	 /v2.10.0/allBillingAddonSubscriptionFutures 	Singular Nouns Found in Consecutive Nodes	Reads and enables pagination through a set of BillingAddonSubscriptionFuture.
 GET	 /v2.10.0/allBillingAddonSubscriptionFutures 	Singular Nouns Found in Consecutive Nodes	Reads and enables pagination through a set of BillingAddonSubscriptionFuture.
@@ -27,35 +27,20 @@ GET	 /v2.10.0/allLogsV2ByUserId 	Singular Nouns Found in Consecutive Nodes	Get a
 GET	 /v2.10.0/allLogsV2ByUserIdCount 	Singular Nouns Found in Consecutive Nodes	Total count of all audit logs by user ID
 GET	 /v2.10.0/allLogsV2ByUserIdCount 	Singular Nouns Found in Consecutive Nodes	Total count of all audit logs by user ID
 GET	 /v2.10.0/allScreenContentHistories 	Singular Nouns Found in Consecutive Nodes	Reads and enables pagination through a set of ScreenContentHistory.
-GET	 /v2.10.0/appInstall 	Singular Nouns Found in Consecutive Nodes	Reads a single AppInstall using its globally unique ID.
-GET	 /v2.10.0/appInstance 	Singular Nouns Found in Consecutive Nodes	Reads a single AppInstance using its globally unique ID.
 GET	 /v2.10.0/appInstancesByAppIdAndSpaceId 	Singular Nouns Found in Consecutive Nodes	Get all app instances by app ID and space ID.
 GET	 /v2.10.0/appInstancesByAppIdAndSpaceId 	Singular Nouns Found in Consecutive Nodes	Get all app instances by app ID and space ID.
 GET	 /v2.10.0/appInstancesByAppIdAndSpaceId 	Singular Nouns Found in Consecutive Nodes	Get all app instances by app ID and space ID.
-GET	 /v2.10.0/appVersion 	Singular Nouns Found in Consecutive Nodes	Reads a single AppVersion using its globally unique ID.
 GET	 /v2.10.0/availableChannelsBySpaceId 	Singular Nouns Found in Consecutive Nodes	Get available channels by space's id.
-GET	 /v2.10.0/billingAddon 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingAddon using its globally unique ID.
 GET	 /v2.10.0/billingAddonPlan 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingAddonPlan using its globally unique ID.
 GET	 /v2.10.0/billingAddonPlan 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingAddonPlan using its globally unique ID.
 GET	 /v2.10.0/billingAddonSubscription 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingAddonSubscription using its globally unique ID.
 GET	 /v2.10.0/billingAddonSubscription 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingAddonSubscription using its globally unique ID.
-GET	 /v2.10.0/billingCoupon 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingCoupon using its globally unique ID.
-GET	 /v2.10.0/billingCustomer 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingCustomer using its globally unique ID.
-GET	 /v2.10.0/billingDistributor 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingDistributor using its globally unique ID.
-GET	 /v2.10.0/billingHierarchy 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingHierarchy using its globally unique ID.
 GET	 /v2.10.0/billingPaymentSource 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingPaymentSource using its globally unique ID.
 GET	 /v2.10.0/billingPaymentSource 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingPaymentSource using its globally unique ID.
-GET	 /v2.10.0/billingPlan 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingPlan using its globally unique ID.
-GET	 /v2.10.0/billingRenewal 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingRenewal using its globally unique ID.
 GET	 /v2.10.0/billingRenewalFuture 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingRenewalFuture using its globally unique ID.
 GET	 /v2.10.0/billingRenewalFuture 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingRenewalFuture using its globally unique ID.
-GET	 /v2.10.0/billingReseller 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingReseller using its globally unique ID.
-GET	 /v2.10.0/billingSubscription 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingSubscription using its globally unique ID.
 GET	 /v2.10.0/billingSubscriptionFuture 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingSubscriptionFuture using its globally unique ID.
 GET	 /v2.10.0/billingSubscriptionFuture 	Singular Nouns Found in Consecutive Nodes	Reads a single BillingSubscriptionFuture using its globally unique ID.
-GET	 /v2.10.0/canPairScreen 	Singular Nouns Found in Consecutive Nodes	Returns a code based on the permissions and billing state
-GET	 /v2.10.0/commonFont 	Singular Nouns Found in Consecutive Nodes	Reads a single CommonFont using its globally unique ID.
-GET	 /v2.10.0/commonLayout 	Singular Nouns Found in Consecutive Nodes	Reads a single CommonLayout using its globally unique ID.
 GET	 /v2.10.0/commonPermissionSet 	Singular Nouns Found in Consecutive Nodes	Reads a single CommonPermissionSet using its globally unique ID.
 GET	 /v2.10.0/commonPermissionSet 	Singular Nouns Found in Consecutive Nodes	Reads a single CommonPermissionSet using its globally unique ID.
 GET	 /v2.10.0/currentBillingFeatureFlags 	Singular Nouns Found in Consecutive Nodes	Get the billing feature flags for the given space.
@@ -65,10 +50,9 @@ GET	 /v2.10.0/currentFeatureFlag 	Singular Nouns Found in Consecutive Nodes	Get 
 GET	 /v2.10.0/currentFeatureFlags 	Singular Nouns Found in Consecutive Nodes	Get the currently logged in user (org) feature flags
 GET	 /v2.10.0/currentOrgId 	Singular Nouns Found in Consecutive Nodes	Get current org id from the current session.
 GET	 /v2.10.0/currentOrgId 	Singular Nouns Found in Consecutive Nodes	Get current org id from the current session.
-GET	 /v2.10.0/currentProvider 	Singular Nouns Found in Consecutive Nodes	Get current provider from user JWT Claims.
 
 ***Patterns*** 
-Count: 56
+Count: 72
 GET	 /v2.10.0/allAppCategories 	Cosistent Resource Archetype	Get list of app's categories.
 GET	 /v2.10.0/allAppInstalls 	Cosistent Resource Archetype	Reads and enables pagination through a set of AppInstall.
 GET	 /v2.10.0/allAppInstances 	Cosistent Resource Archetype	Reads and enables pagination through a set of AppInstance.
@@ -120,8 +104,24 @@ GET	 /v2.10.0/allTokens 	Cosistent Resource Archetype	Reads and enables paginati
 GET	 /v2.10.0/allUserGroups 	Cosistent Resource Archetype	Reads and enables pagination through a set of UserGroup.
 GET	 /v2.10.0/allUsers 	Cosistent Resource Archetype	Reads and enables pagination through a set of User.
 GET	 /v2.10.0/app 	Cosistent Resource Archetype	Reads a single App using its globally unique ID.
+GET	 /v2.10.0/appInstall 	Cosistent Resource Archetype	Reads a single AppInstall using its globally unique ID.
+GET	 /v2.10.0/appInstance 	Cosistent Resource Archetype	Reads a single AppInstance using its globally unique ID.
+GET	 /v2.10.0/appVersion 	Cosistent Resource Archetype	Reads a single AppVersion using its globally unique ID.
 GET	 /v2.10.0/availableLayoutsForSize 	Cosistent Resource Archetype	Get list of available layouts that compatible with the size.
+GET	 /v2.10.0/billingAddon 	Cosistent Resource Archetype	Reads a single BillingAddon using its globally unique ID.
 GET	 /v2.10.0/billingAddress 	Cosistent Resource Archetype	Reads a single BillingAddress using its globally unique ID.
+GET	 /v2.10.0/billingCoupon 	Cosistent Resource Archetype	Reads a single BillingCoupon using its globally unique ID.
+GET	 /v2.10.0/billingCustomer 	Cosistent Resource Archetype	Reads a single BillingCustomer using its globally unique ID.
+GET	 /v2.10.0/billingDistributor 	Cosistent Resource Archetype	Reads a single BillingDistributor using its globally unique ID.
+GET	 /v2.10.0/billingHierarchy 	Cosistent Resource Archetype	Reads a single BillingHierarchy using its globally unique ID.
+GET	 /v2.10.0/billingPlan 	Cosistent Resource Archetype	Reads a single BillingPlan using its globally unique ID.
+GET	 /v2.10.0/billingRenewal 	Cosistent Resource Archetype	Reads a single BillingRenewal using its globally unique ID.
+GET	 /v2.10.0/billingReseller 	Cosistent Resource Archetype	Reads a single BillingReseller using its globally unique ID.
+GET	 /v2.10.0/billingSubscription 	Cosistent Resource Archetype	Reads a single BillingSubscription using its globally unique ID.
+GET	 /v2.10.0/canPairScreen 	Cosistent Resource Archetype	Returns a code based on the permissions and billing state
 GET	 /v2.10.0/cast 	Cosistent Resource Archetype	Reads a single Cast using its globally unique ID.
 GET	 /v2.10.0/channel 	Cosistent Resource Archetype	Reads a single Channel using its globally unique ID.
+GET	 /v2.10.0/commonFont 	Cosistent Resource Archetype	Reads a single CommonFont using its globally unique ID.
+GET	 /v2.10.0/commonLayout 	Cosistent Resource Archetype	Reads a single CommonLayout using its globally unique ID.
 GET	 /v2.10.0/credential 	Cosistent Resource Archetype	Reads a single Credential using its globally unique ID.
+GET	 /v2.10.0/currentProvider 	Cosistent Resource Archetype	Get current provider from user JWT Claims.

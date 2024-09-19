@@ -1,18 +1,8 @@
 ***Anti-Pattern*** 
-Count: 10
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments		Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments		Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-GET	 /api/businesses.v1/{orgId} 	Parameter Tunneling	BusinessOrganizationUser
-GET	 /api/businesses.v1/{orgId} 	Parameter Tunneling	BusinessProgram
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
-POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments		Parameter Tunneling	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
+Count: 174
 
 ***Patterns*** 
-Count: 220
+Count: 56
 GET	 /api/businesses.v1/{orgId}/contents 	Parameter Adherence	Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it
 GET	 /api/businesses.v1/{orgId}/contents/{id}		Parameter Adherence	Returns a list that contains one object.
 GET	 /api/businesses.v1/{orgId}/courseGradebookReports 	Parameter Adherence	Retrieve course item-specific grading information with search criteria
@@ -25,6 +15,7 @@ POST	 /api/businesses.v1/{orgId}/programs/{programId}/invitations?action=multiCr
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Returns a paginated list of accepted members in your program.
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId}		Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments		Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments/{external_id~content_type~content_id}		Parameter Adherence	For a specific user, return whether they are currently enrolled in a specific course
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/users		Parameter Adherence	Update a user data in organization's program by email or externalId.
 GET	 /api/businesses.v1/{orgId}/users	 	Parameter Adherence	Returns a paginated list of users within your organiation.
@@ -50,6 +41,7 @@ GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adhe
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 DELETE	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId}		Parameter Adherence	Delete a user from the program. The membership id here is the id returned by the API call to list of memberships. The learner will need to be reinvited to rejoin the program.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId}		Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments		Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments/{external_id~content_type~content_id}	 	Parameter Adherence	For a specific user, return whether they are currently enrolled in a specific course
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/users 	Parameter Adherence	Update a user data in organization's program by email or externalId.
 GET	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Returns a paginated list of users within your organiation.
@@ -79,6 +71,7 @@ GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adhe
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 DELETE	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	Delete a user from the program. The membership id here is the id returned by the API call to list of memberships. The learner will need to be reinvited to rejoin the program.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments/{external_id~content_type~content_id} 	Parameter Adherence	For a specific user, return whether they are currently enrolled in a specific course
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/users 	Parameter Adherence	Update a user data in organization's program by email or externalId.
 GET	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Returns a paginated list of users within your organiation.
@@ -117,7 +110,9 @@ GET	 /api/rest/v1/enterprise/programs/{programId}/skillsets 	Parameter Adherence
 GET	 /api/rest/v1/enterprise/programs/{programId}/skillsets/learner-progress 	Parameter Adherence	Returns the Skillset progress of a single learner in your learning program.
 GET	 /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/recommendations		Parameter Adherence	Returns a paginated list of all content recommendations for a SkillSet.
 GET	 /api/rest/v1/enterprise/programs/{programId}/skillsets/{skillsetId}/skills/{skillId}/recommendations 	Parameter Adherence	Returns a paginated list of all content recommendations for a skill within a SkillSet.
+GET	 /api/businesses.v1/{orgId} 	Parameter Adherence	BusinessOrganizationUser
 GET	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Returns a paginated list of users within your organiation.
+GET	 /api/businesses.v1/{orgId} 	Parameter Adherence	BusinessProgram
 GET	 /api/businesses.v1/{orgId}/programs		Parameter Adherence	Returns a paginated list of active learning programs created within your account.
 GET	 /api/businesses.v1/{orgId}/contents		Parameter Adherence	Returns a paginated list of courses and specializations that are available through your learning programs. If a program has a specialization, we also include the courses within it
 GET	 /api/businesses.v1/{orgId}/contents/{id}		Parameter Adherence	Returns a list that contains one object.
@@ -147,6 +142,7 @@ GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adhe
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 DELETE	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	Delete a user from the program. The membership id here is the id returned by the API call to list of memberships. The learner will need to be reinvited to rejoin the program.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/users 	Parameter Adherence	Update a user data in organization's program by email or externalId.
 GET	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Returns a paginated list of users within your organiation.
 POST	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Updates or deletes a user in the organization by email.
@@ -175,6 +171,7 @@ GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships 	Parameter Adhe
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 DELETE	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	Delete a user from the program. The membership id here is the id returned by the API call to list of memberships. The learner will need to be reinvited to rejoin the program.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments/{external_id~content_type~content_id} 	Parameter Adherence	For a specific user, return whether they are currently enrolled in a specific course
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/users 	Parameter Adherence	Update a user data in organization's program by email or externalId.
 GET	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Returns a paginated list of users within your organiation.
@@ -205,6 +202,7 @@ GET	 /api/businesses.v1/{orgId}/programs/{programId}/invitations		Parameter Adhe
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships 	Parameter Adherence	Returns a paginated list of accepted members in your program.
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments/{external_id~content_type~content_id} 	Parameter Adherence	For a specific user, return whether they are currently enrolled in a specific course
 GET	 /api/businesses.v1/{orgId}/users 	Parameter Adherence	Returns a paginated list of users within your organiation.
 GET	 /api/rest/v1/enterprise/organizations/{orgId}/skillsetReport 	Parameter Adherence	Returns a paginated list of Skillsets reports of the given organization.
@@ -231,5 +229,7 @@ POST	 /api/businesses.v1/{orgId}/programs/{programId}/invitations		Parameter Adh
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/invitations?action=multiCreate 	Parameter Adherence	This adds multiple users as invitees to a program. The external user id in the request can be an LMS / App specific identifier that can be later used for downstream calls. You can also trigger the invitation email to be sent automatically by specifying true for sendEmail in the request.
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments 	Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.
 POST	 /api/businesses.v1/{orgId}/programs/{programId}/memberships		Parameter Adherence	Creates a program membership for the user. Note that this will only work if the user already has a Coursera account.
 GET	 /api/businesses.v1/{orgId}/programs/{programId}/memberships/{programId~externalId} 	Parameter Adherence	This checks whether a user is a member of a specified program. The external user id in the request will be set either via SSO, or added when inviting the user.
+POST	 /api/businesses.v1/{orgId}/programs/{programId}/programEnrollments		Parameter Adherence	Enrolls a selected user into a specific course. Note that this will only work if the user already has a Coursera account and a current program membership.

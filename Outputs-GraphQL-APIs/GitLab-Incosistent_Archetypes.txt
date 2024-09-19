@@ -1,15 +1,8 @@
 ***Anti-Pattern*** 
-Count: 75
-GET	 /abuseReport/{id} 	Singular Nouns Found in Consecutive Nodes	Find an abuse report.
-GET	 /abuseReport/{id} 	Singular Nouns Found in Consecutive Nodes	Find an abuse report.
+Count: 39
 GET	 /abuseReportLabels 	Singular Nouns Found in Consecutive Nodes	Abuse report labels.
-GET	 /addOnPurchase/{id} 	Singular Nouns Found in Consecutive Nodes	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
-GET	 /addOnPurchase/{id} 	Singular Nouns Found in Consecutive Nodes	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
 GET	 /auditEventDefinitions 	Singular Nouns Found in Consecutive Nodes	Definitions for all audit events available on the instance.
 GET	 /auditEventsInstanceAmazonS3Configurations 	Singular Nouns Found in Consecutive Nodes	Instance-level Amazon S3 configurations for audit events.
-GET	 /boardList/{id} 	Singular Nouns Found in Consecutive Nodes	Find an issue board list.
-GET	 /boardList/{id} 	Singular Nouns Found in Consecutive Nodes	Find an issue board list.
-GET	 /ciCatalogResource/{id}	Singular Nouns Found in Consecutive Nodes	A single CI/CD Catalog resource visible to an authorized user.
 GET	 /ciCatalogResource/{id}	Singular Nouns Found in Consecutive Nodes	A single CI/CD Catalog resource visible to an authorized user.
 GET	 /ciCatalogResource/{id}	Singular Nouns Found in Consecutive Nodes	A single CI/CD Catalog resource visible to an authorized user.
 GET	 /ciCatalogResources/{projectPath}	Singular Nouns Found in Consecutive Nodes	All CI/CD Catalog resources under a common namespace, visible to an authorized user.
@@ -18,29 +11,17 @@ GET	 /ciConfig/{projectPath} 	Singular Nouns Found in Consecutive Nodes	Linted a
 GET	 /ciConfig/{projectPath} 	Singular Nouns Found in Consecutive Nodes	Linted and processed contents of a CI config. Should not be requested more than once per request
 GET	 /ciConfig/{projectPath} 	Singular Nouns Found in Consecutive Nodes	Linted and processed contents of a CI config. Should not be requested more than once per request
 GET	 /ciMinutesUsage/{namespaceId} 	Singular Nouns Found in Consecutive Nodes	Compute usage data for a namespace.
-GET	 /ciMinutesUsage/{namespaceId} 	Singular Nouns Found in Consecutive Nodes	Compute usage data for a namespace.
-GET	 /ciPipelineStage/{id} 	Singular Nouns Found in Consecutive Nodes	Stage belonging to a CI pipeline.
 GET	 /ciPipelineStage/{id} 	Singular Nouns Found in Consecutive Nodes	Stage belonging to a CI pipeline.
 GET	 /ciPipelineStage/{id} 	Singular Nouns Found in Consecutive Nodes	Stage belonging to a CI pipeline.
 GET	 /ciQueueingHistory 	Singular Nouns Found in Consecutive Nodes	Time it took for ci job to be picked up by runner in percentiles.
 GET	 /ciQueueingHistory 	Singular Nouns Found in Consecutive Nodes	Time it took for ci job to be picked up by runner in percentiles.
-GET	 /containerRepository/{id} 	Singular Nouns Found in Consecutive Nodes	Find a container repository.
-GET	 /containerRepository/{id} 	Singular Nouns Found in Consecutive Nodes	Find a container repository.
-GET	 /currentLicense 	Singular Nouns Found in Consecutive Nodes	Fields related to the current license.
-GET	 /currentUser 	Singular Nouns Found in Consecutive Nodes	Get information about current user.
-GET	 /designManagement 	Singular Nouns Found in Consecutive Nodes	Fields related to design management.
-GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Singular Nouns Found in Consecutive Nodes	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
 GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Singular Nouns Found in Consecutive Nodes	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
 GET	 /devopsAdoptionEnabledNamespaces/{displayNamespaceId} 	Singular Nouns Found in Consecutive Nodes	Get configured DevOps adoption namespaces. BETA This endpoint is subject to change without notice.
 GET	 /epicBoardList/{id} 	Singular Nouns Found in Consecutive Nodes	Returns EpicList.
 GET	 /epicBoardList/{id} 	Singular Nouns Found in Consecutive Nodes	Returns EpicList.
-GET	 /epicBoardList/{id} 	Singular Nouns Found in Consecutive Nodes	Returns EpicList.
 GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Singular Nouns Found in Consecutive Nodes	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
 GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Singular Nouns Found in Consecutive Nodes	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
 GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Singular Nouns Found in Consecutive Nodes	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
-GET	 /explainVulnerabilityPrompt/{vulnerabilityId} 	Singular Nouns Found in Consecutive Nodes	GitLab Duo Vulnerability summary prompt for a specified vulnerability.
-GET	 /geoNode 	Singular Nouns Found in Consecutive Nodes	Find a Geo node
-GET	 /gitpodEnabled 	Singular Nouns Found in Consecutive Nodes	Whether Gitpod is enabled in application settings.
 GET	 /instanceExternalAuditEventDestinations 	Singular Nouns Found in Consecutive Nodes	Instance level external audit event destinations.
 GET	 /instanceExternalAuditEventDestinations 	Singular Nouns Found in Consecutive Nodes	Instance level external audit event destinations.
 GET	 /instanceExternalAuditEventDestinations 	Singular Nouns Found in Consecutive Nodes	Instance level external audit event destinations.
@@ -49,44 +30,50 @@ GET	 /instanceGoogleCloudLoggingConfigurations 	Singular Nouns Found in Consecut
 GET	 /instanceGoogleCloudLoggingConfigurations 	Singular Nouns Found in Consecutive Nodes	Instance level google cloud logging configurations.
 GET	 /instanceSecurityDashboard 	Singular Nouns Found in Consecutive Nodes	Fields related to Instance Security Dashboard.
 GET	 /instanceSecurityDashboard 	Singular Nouns Found in Consecutive Nodes	Fields related to Instance Security Dashboard.
-GET	 /issue/{id} 	Singular Nouns Found in Consecutive Nodes	Find an issue.
-GET	 /issues/{assigneeId} 	Singular Nouns Found in Consecutive Nodes	Find issues visible to the current user. At least one filter must be provided.
-GET	 /iteration/{id} 	Singular Nouns Found in Consecutive Nodes	Find an iteration.
 GET	 /licenseHistoryEntries 	Singular Nouns Found in Consecutive Nodes	Fields related to entries in the license history.
-GET	 /memberRole/{id} 	Singular Nouns Found in Consecutive Nodes	Finds a single custom role.
-GET	 /memberRole/{id} 	Singular Nouns Found in Consecutive Nodes	Finds a single custom role.
 GET	 /memberRolePermissions 	Singular Nouns Found in Consecutive Nodes	List of all customizable permissions.
-GET	 /mergeRequest/{id} 	Singular Nouns Found in Consecutive Nodes	Find a merge request.
-GET	 /mergeRequest/{id} 	Singular Nouns Found in Consecutive Nodes	Find a merge request.
-GET	 /milestone/{id} 	Singular Nouns Found in Consecutive Nodes	Find a milestone.
 GET	 /mlModel/{id} 	Singular Nouns Found in Consecutive Nodes	Find machine learning models.
 GET	 /mlModel/{id} 	Singular Nouns Found in Consecutive Nodes	Find machine learning models.
-GET	 /mlModel/{id} 	Singular Nouns Found in Consecutive Nodes	Find machine learning models.
-GET	 /note/{id} 	Singular Nouns Found in Consecutive Nodes	Find a note.
-GET	 /organization/{id} 	Singular Nouns Found in Consecutive Nodes	Find an organization.
-GET	 /package/{id} 	Singular Nouns Found in Consecutive Nodes	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
 GET	 /project/{fullPath} 	Singular Nouns Found in Consecutive Nodes	Find a project.
 GET	 /project/{fullPath} 	Singular Nouns Found in Consecutive Nodes	Find a project.
-GET	 /projects/{ids} 	Plural Nouns Found in Consecutive Nodes	Find projects visible to the current user.
-GET	 /queryComplexity 	Singular Nouns Found in Consecutive Nodes	Information about the complexity of the GraphQL query.
-GET	 /runner/{id} 	Singular Nouns Found in Consecutive Nodes	Find a runner.
-GET	 /runnerSetup 	Singular Nouns Found in Consecutive Nodes	Runner setup instructions.
-GET	 /runners/{creatorId}  	Singular Nouns Found in Consecutive Nodes	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.
 GET	 /selfManagedAddOnEligibleUsers 	Singular Nouns Found in Consecutive Nodes	Users within the self-managed instance who are eligible for add-ons
 GET	 /selfManagedAddOnEligibleUsers 	Singular Nouns Found in Consecutive Nodes	Users within the self-managed instance who are eligible for add-ons
 GET	 /selfManagedAddOnEligibleUsers 	Singular Nouns Found in Consecutive Nodes	Users within the self-managed instance who are eligible for add-ons
 
 ***Patterns*** 
-Count: 12
+Count: 35
+GET	 /abuseReport/{id} 	Cosistent Resource Archetype	Find an abuse report.
+GET	 /addOnPurchase/{id} 	Cosistent Resource Archetype	Retrieve the active add-on purchase. This query can be used in GitLab SaaS and self-managed environments addOnType	GitlabSubscriptionsAddOnType!	Type of add-on for the add-on purchase. namespaceId	NamespaceID	ID of namespace that the add-on was purchased for.
 GET	 /aiMessages 	Cosistent Resource Archetype	Find GitLab Duo Chat messages.
+GET	 /boardList/{id} 	Cosistent Resource Archetype	Find an issue board list.
 GET	 /ciVariables 	Cosistent Resource Archetype	List of the instanceâ€™s CI/CD variables.
+GET	 /containerRepository/{id} 	Cosistent Resource Archetype	Find a container repository.
+GET	 /currentLicense 	Cosistent Resource Archetype	Fields related to the current license.
+GET	 /currentUser 	Cosistent Resource Archetype	Get information about current user.
+GET	 /designManagement 	Cosistent Resource Archetype	Fields related to design management.
 GET	 /echo 	Cosistent Resource Archetype	Testing endpoint to validate the API with.
 GET	 /frecentGroups 	Cosistent Resource Archetype	A userâ€™s frecently visited groups.
 GET	 /frecentProjects 	Cosistent Resource Archetype	A userâ€™s frecently visited projects.
+GET	 /geoNode 	Cosistent Resource Archetype	Find a Geo node
+GET	 /gitpodEnabled 	Cosistent Resource Archetype	Whether Gitpod is enabled in application settings.
 GET	 /group 	Cosistent Resource Archetype	Find a group
 GET	 groups 	Cosistent Resource Archetype	Find groups.
+GET	 /issue/{id} 	Cosistent Resource Archetype	Find an issue.
+GET	 /issues/{assigneeId} 	Cosistent Resource Archetype	Find issues visible to the current user. At least one filter must be provided.
+GET	 /iteration/{id} 	Cosistent Resource Archetype	Find an iteration.
 GET	 /jobs 	Cosistent Resource Archetype	All jobs on this GitLab instance. Returns an empty result for users without administrator access.
+GET	 /memberRole/{id} 	Cosistent Resource Archetype	Finds a single custom role.
 GET	 /memberRoles/{id} 	Cosistent Resource Archetype	Member roles available for the instance.
+GET	 /mergeRequest/{id} 	Cosistent Resource Archetype	Find a merge request.
 GET	 /metadata 	Cosistent Resource Archetype	Metadata about GitLab.
+GET	 /milestone/{id} 	Cosistent Resource Archetype	Find a milestone.
 GET	 /namespace 	Cosistent Resource Archetype	Find a namespace.
+GET	 /note/{id} 	Cosistent Resource Archetype	Find a note.
+GET	 /organization/{id} 	Cosistent Resource Archetype	Find an organization.
 GET	 /organizations 	Cosistent Resource Archetype	List organizations.
+GET	 /package/{id} 	Cosistent Resource Archetype	Find a package. This field can only be resolved for one query in any single request. Returns null if a package has no default status.
+GET	 /projects/{ids} 	Cosistent Resource Archetype	Find projects visible to the current user.
+GET	 /queryComplexity 	Cosistent Resource Archetype	Information about the complexity of the GraphQL query.
+GET	 /runner/{id} 	Cosistent Resource Archetype	Find a runner.
+GET	 /runnerSetup 	Cosistent Resource Archetype	Runner setup instructions.
+GET	 /runners/{creatorId}  	Cosistent Resource Archetype	Get all runners in the GitLab instance (project and shared). Access is restricted to users with administrator access.

@@ -1,9 +1,8 @@
 ***Anti-Pattern*** 
-Count: 1
-GET	 v2/collections?user_id=USER_ID&private=true 	Complex Words Present in Endpoint	You can retrieve a user's public collections by following the "public_collections" link from a user. Users can retrieve their own public and private collections by following the collections link from user details.
+Count: 0
 
 ***Patterns*** 
-Count: 20
+Count: 21
 GET	 v2/applications/{id} 	Structed Endpoint	Users can retrieve a specific application by ID by rendering the "application" link template from root.
 GET	 v2/artists/{id} 	Structed Endpoint	Users can retrieve a specific artist by ID by rendering the "artist" link template from root.
 GET	 v2/artworks/{id} 	Structed Endpoint	Users can retrieve a specific artwork by ID by rendering the "artwork" link template from root.
@@ -11,6 +10,7 @@ GET	 v2/bidders/{id} 	Structed Endpoint	Authorized users and applications can re
 GET	 v2/bidder_positions/{id} 	Structed Endpoint	Users can retrieve a specific bidder position by ID by rendering the "bidder_position" link template from root.
 GET	 v2/bids/{id} 	Structed Endpoint	Users can retrieve a specific bid by ID by rendering the "bid" link template from root.
 GET	 v2/collection_items/{id} 	Structed Endpoint	Users can retrieve a specific collection item by ID by rendering the "collection_item" link template from root.
+GET	 v2/collections	Structed Endpoint	You can retrieve a user's public collections by following the "public_collections" link from a user. Users can retrieve their own public and private collections by following the collections link from user details.
 GET	 v2/edition/{id} 	Structed Endpoint	Editions are embedded within an artwork, but can also be retrieved individually by ID by rendering the "edition" link template from root.
 GET	 v2/fairs/{id} 	Structed Endpoint	Users can retrieve a specific fair by ID by rendering the "fair" link template from root.
 GET	 v2/genes/{id} 	Structed Endpoint	Retrieve genes by following the genes link from root, or the "genes" links within an artwork or artist.
@@ -18,7 +18,7 @@ GET	 v2/images/{id} 	Structed Endpoint	show_id	Retrieve images for a given show,
 GET	 v2/partners/{id} 	Structed Endpoint	Users can retrieve a specific partner by ID by rendering the "partner" link template from root.
 GET	 v2/profiles/{id} 	Structed Endpoint	Users can retrieve a specific profile by ID by rendering the "profile" link template from root.
 GET	 v2/sales 	Structed Endpoint	Users can retrieve sales by following the sales link from root.live	Boolean- filter live auctions only is_auction	Boolean- filter auctions only published	Boolean- limit to published sales
-GET	 v2/search?q=Andy+Warhol 	Structed Endpoint	Search for anything by following the search link from root with a query parameter.
+GET	 v2/search	Structed Endpoint	Search for anything by following the search link from root with a query parameter.
 GET	 v2/shows/{id} 	Structed Endpoint	Retrieve shows by following the shows link from root, or the "shows" links within a partner.
 GET	 v2/status 	Structed Endpoint	This API retrieves the system status.
 GET	 v2/user_details/{id} 	Structed Endpoint	Users can retrieve a specific user by following the "user_details" link from a user.

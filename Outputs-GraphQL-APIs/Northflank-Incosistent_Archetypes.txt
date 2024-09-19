@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 510
+Count: 506
 PATCH	 /v1/projects/{projectId}	Singular Nouns Found in Consecutive Nodes	Updates a project.
 GET	 /v1/projects/{projectId} 	Singular Nouns Found in Consecutive Nodes	Get information about the given project
 DELETE	 /v1/projects/{projectId} 	Singular Nouns Found in Consecutive Nodes	Delete the given project. Fails if the project isn't empty.
@@ -434,16 +434,12 @@ POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Singular Nouns Found in Con
 POST	 /v1/integrations/log-sinks/{logSinkId}/resume 	Singular Nouns Found in Consecutive Nodes	Resumes a paused log sink.
 POST	 /v1/integrations/log-sinks/{logSinkId}/settings 	Singular Nouns Found in Consecutive Nodes	Updates the settings for a log sink.
 POST	 /v1/integrations/log-sinks/{logSinkId}/settings 	Singular Nouns Found in Consecutive Nodes	Updates the settings for a log sink.
-GET	 /v1/integrations/notifications 	Plural Nouns Found in Consecutive Nodes	Lists notification integrations for the authenticated user or team.
-POST	 /v1/integrations/notifications 	Plural Nouns Found in Consecutive Nodes	Create a new notification integration.
 GET	 /v1/integrations/notifications/{notificationId} 	Plural Nouns Found in Consecutive Nodes	Get details about a notification integration.
 GET	 /v1/integrations/notifications/{notificationId} 	Singular Nouns Found in Consecutive Nodes	Get details about a notification integration.
 POST	 /v1/integrations/notifications/{notificationId} 	Plural Nouns Found in Consecutive Nodes	Updates a notification integration
 POST	 /v1/integrations/notifications/{notificationId} 	Singular Nouns Found in Consecutive Nodes	Updates a notification integration
 DELETE	 /v1/integrations/notifications/{notificationId} 	Plural Nouns Found in Consecutive Nodes	Deletes a notification integration
 DELETE	 /v1/integrations/notifications/{notificationId} 	Singular Nouns Found in Consecutive Nodes	Deletes a notification integration
-GET	 /v1/integrations/registries 	Plural Nouns Found in Consecutive Nodes	Lists the container registry credentials saved to this account. Does not display secrets.
-POST	 /v1/integrations/registries 	Plural Nouns Found in Consecutive Nodes	Adds a new set of container registry credentials to this account.
 GET	 /v1/integrations/registries/{credentialId} 	Plural Nouns Found in Consecutive Nodes	Views a set of registry credential data.
 GET	 /v1/integrations/registries/{credentialId} 	Singular Nouns Found in Consecutive Nodes	Views a set of registry credential data.
 DELETE	 /v1/integrations/registries/{credentialId} 	Plural Nouns Found in Consecutive Nodes	Deletes a set of registry credential data.
@@ -512,7 +508,7 @@ DELETE	 /v1/tags/{resourceTagId} 	Singular Nouns Found in Consecutive Nodes	Dele
 GET	 /v1/billing/invoices/details 	Plural Nouns Found in Consecutive Nodes	Get details about an invoice.
 
 ***Patterns*** 
-Count: 25
+Count: 29
 GET	 /v1/projects 	Cosistent Resource Archetype	Lists projects for the authenticated user or team.
 POST	 /v1/projects 	Cosistent Resource Archetype	Creates a new project.
 PUT	 /v1/projects 	Cosistent Resource Archetype	Create or update project
@@ -530,6 +526,10 @@ GET	 /v1/templates 	Cosistent Resource Archetype	Get a list of templates
 POST	 /v1/templates 	Cosistent Resource Archetype	Create a template
 GET	 /v1/integrations/log-sinks 	Cosistent Resource Archetype	Gets a list of log sinks added to this account.
 POST	 /v1/integrations/log-sinks 	Cosistent Resource Archetype	Creates a new log sink.
+GET	 /v1/integrations/notifications 	Cosistent Resource Archetype	Lists notification integrations for the authenticated user or team.
+POST	 /v1/integrations/notifications 	Cosistent Resource Archetype	Create a new notification integration.
+GET	 /v1/integrations/registries 	Cosistent Resource Archetype	Lists the container registry credentials saved to this account. Does not display secrets.
+POST	 /v1/integrations/registries 	Cosistent Resource Archetype	Adds a new set of container registry credentials to this account.
 GET	 /v1/cloud-providers 	Cosistent Resource Archetype	Lists supported cloud providers
 GET	 /v1/cloud-providers/docker-registries 	Cosistent Resource Archetype	Lists docker registries for the authenticated user or team.
 POST	 /v1/cloud-providers/docker-registries 	Cosistent Resource Archetype	Creates a new docker registry.

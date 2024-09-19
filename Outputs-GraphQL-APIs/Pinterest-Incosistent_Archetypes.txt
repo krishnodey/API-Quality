@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 212
+Count: 211
 GET	 /v5/pins/{pin_id} 	Singular Nouns Found in Consecutive Nodes	Get a Pin owned by the "operation user_account" - or on a group board that has been shared with this account.
 DELETE	 /v5/pins/{pin_id} 	Singular Nouns Found in Consecutive Nodes	Delete a Pins owned by the "operation user_account" - or on a group board that has been shared with this account.
 PATCH	 /v5/pins/{pin_id} 	Singular Nouns Found in Consecutive Nodes	Update a pin owned by the "operating user_account".
@@ -18,7 +18,6 @@ GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Singular Nouns Found in C
 GET	 /v5/boards/{board_id}/sections/{section_id}/pins 	Singular Nouns Found in Consecutive Nodes	Get a list of the Pins on a board section of a board owned by the "operation user_account" - or on a group board that has been shared with this account. Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
 GET	 /v5/media/{media_id} 	Singular Nouns Found in Consecutive Nodes	Get details for a registered media upload, including its current status.
 GET	 /v5/media/{media_id} 	Singular Nouns Found in Consecutive Nodes	Get details for a registered media upload, including its current status.
-GET	 /v5//user_account 	Singular Nouns Found in Consecutive Nodes	Get account information for the "operation user_account"
 GET	 /v5//user_account/analytics 	Singular Nouns Found in Consecutive Nodes	Get analytics for the "operation user_account"
 GET	 /v5//user_account/analytics/top_pins 	Singular Nouns Found in Consecutive Nodes	Gets analytics data about a user's top pins (limited to the top 50).
 GET	 /user_account/analytics/top_video_pins 	Singular Nouns Found in Consecutive Nodes	Gets analytics data about a user's top video pins (limited to the top 50).
@@ -214,13 +213,14 @@ PATCH	 /ad_accounts/{ad_account_id}/targeting_templates 	Singular Nouns Found in
 PATCH	 /ad_accounts/{ad_account_id}/targeting_templates 	Singular Nouns Found in Consecutive Nodes	Update the targeting template given advertiser ID and targeting template ID
 
 ***Patterns*** 
-Count: 9
+Count: 10
 GET	 /v5//pins 	Cosistent Resource Archetype	View, create, update, or delete information about Pins.
 POST	 /v5//pins 	Cosistent Resource Archetype	Create a Pin on a board or board section owned by the "operation user_account".
 GET	 /v5/boards 	Cosistent Resource Archetype	View, create, update, or delete information about boards.
 POST	 /v5/boards 	Cosistent Resource Archetype	Create a board owned by the "operation user_account". Optional: Business Access: Specify an ad_account_id to use the owner of that ad_account as the "operation user_account".
 GET	 /v5/media 	Cosistent Resource Archetype	List media uploads filtered by given parameters.
 POST	 /v5/media 	Cosistent Resource Archetype	Register your intent to upload media
+GET	 /v5//user_account 	Cosistent Resource Archetype	Get account information for the "operation user_account"
 GET	 /users/{username}/interests/follow 	Cosistent Resource Archetype	Get a list of a user's following interests in one place.
 GET	 /ad_accounts 	Cosistent Resource Archetype	Get a list of the ad_accounts that the "operation user_account" has access to.
 POST	 /ad_accounts 	Cosistent Resource Archetype	Create a new ad account. Different ad accounts can support different currencies, payment methods, etc.

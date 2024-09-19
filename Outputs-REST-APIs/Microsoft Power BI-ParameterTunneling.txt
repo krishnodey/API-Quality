@@ -1,24 +1,16 @@
 ***Anti-Pattern*** 
-Count: 14
-POST	 /admin/tenantKeys 	Parameter Tunneling	Adds an encryption key for Power BI workspaces assigned to a capacity.
-GET	 /admin/dashboards 	Parameter Tunneling	Returns a list of dashboards for the organization.
-GET	 /admin/dataflows/{dataflowId}/export 	Parameter Tunneling	Exports the specified dataflow definition to a .json file.
-GET	 /admin/capacities 	Parameter Tunneling	Returns a list of capacities for the organization.
-POST	 /admin/groups/{groupId}/users 	Parameter Tunneling	Grants user permissions to the specified workspace.
-POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Parameter Tunneling	Rotate the encryption key for Power BI workspaces assigned to a capacity.
-GET	 /admin/workspaces/modified 	Parameter Tunneling	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
-POST	 /admin/workspaces/getInfo 	Parameter Tunneling	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
-GET	 /availableFeatures 	Parameter Tunneling	Returns a list of available features for the user
-GET	 /capacities 	Parameter Tunneling	Returns a list of capacities the user has access to.
-POST	 /groups/{groupId}/AssignToCapacity 	Parameter Tunneling	Assigns the specified workspace to the specified capacity.
+Count: 32
 
 ***Patterns*** 
-Count: 20
+Count: 2
+POST	 /admin/tenantKeys 	Parameter Adherence	Adds an encryption key for Power BI workspaces assigned to a capacity.
 GET	 /admin/apps?$top={$top} 	Parameter Adherence	Returns a list of apps in the orginization (Preview). This API allows 200 requests per hour at maximum.
 GET	 /admin/apps/{appId}/users 	Parameter Adherence	Returns a list of users that have access to the specified app (Preview). This API allows 200 requests per hour at maximum.
 POST	 /admin/capacities/AssignWorkspaces 	Parameter Adherence	Assigns the provided workspaces to the specified premium capacity.
 POST	 /admin/capacities/UnassignWorkspaces 	Parameter Adherence	Unassigns the provided workspaces from capacity.
+GET	 /admin/dashboards 	Parameter Adherence	Returns a list of dashboards for the organization.
 GET	 /admin/groups/{groupId}/dashboards 	Parameter Adherence	Returns a list of dashboards from the specified workspace.
+GET	 /admin/dataflows/{dataflowId}/export 	Parameter Adherence	Exports the specified dataflow definition to a .json file.
 GET	 /admin/dataflows/{dataflowId}/datasources 	Parameter Adherence	Returns a list of datasources for the specified dataflow.
 GET	 /admin/groups/{groupId}/dataflows 	Parameter Adherence	Returns a list of dataflows from the specified workspace.
 GET	 /admin/dataflows/{dataflowId}/users 	Parameter Adherence	Returns a list of users that have access to the specified dataflow (Preview).
@@ -26,14 +18,22 @@ GET	 /admin/groups/{groupId}/dataflows/{dataflowId}/upstreamDataflows 	Parameter
 GET	 /admin/groups/{groupId}/datasets 	Parameter Adherence	Returns a list of datasets from the specified workspace.
 GET	 /admin/groups/{groupId}/datasets/upstreamDataflows 	Parameter Adherence	Returns a list of upstream dataflows for datasets from the specified workspace.
 GET	 /admin/datasets/{datasetId}/datasources 	Parameter Adherence	Returns a list of datasources for the specified dataset.
+GET	 /admin/capacities 	Parameter Adherence	Returns a list of capacities for the organization.
+POST	 /admin/groups/{groupId}/users 	Parameter Adherence	Grants user permissions to the specified workspace.
 DELETE	 /admin/pipelines/{pipelineId}/users/{identifier} 	Parameter Adherence	Remove user permissions from a specified deployment pipeline.
+POST	 /admin/tenantKeys/{tenantKeyId}/Default.Rotate 	Parameter Adherence	Rotate the encryption key for Power BI workspaces assigned to a capacity.
+GET	 /admin/workspaces/modified 	Parameter Adherence	Gets a list of workspace IDs in the organization. When using modifiedSince, returns only the IDs of workspaces that had changed since the time specified in the modifiedSince parameter.
+POST	 /admin/workspaces/getInfo 	Parameter Adherence	Initiate a call to receive metadata for the requested list of workspaces. (Preview)
 GET	 /apps/{appId} 	Parameter Adherence	Returns the specified installed app.
 GET	 /apps/{appId}/dashboards/{dashboardId} 	Parameter Adherence	Returns the specified dashboard from the specified app.
 GET	 /apps/{appId}/reports/{reportId} 	Parameter Adherence	Returns the specified report from the specified app.
 GET	 /apps/{appId}/dashboards/{dashboardId}/tiles/{tileId} 	Parameter Adherence	Returns the specified tile within the specified dashboard from the specified app.
 GET	 /apps/{appId}/dashboards/{dashboardId}/tiles 	Parameter Adherence	Returns a list of tiles within the specified dashboard from the specified app.
+GET	 /availableFeatures 	Parameter Adherence	Returns a list of available features for the user
+GET	 /capacities 	Parameter Adherence	Returns a list of capacities the user has access to.
 GET	 /capacities/{capacityId}/refreshables/{refreshableId} 	Parameter Adherence	Returns the specified refreshable for the specified capacity the user has access to.
 GET	 /capacities/{capacityId}/Workloads/{workloadName} 	Parameter Adherence	Returns the current state of a workload and if the workload is enabled also returns the maximum memory percentage that the workload can consume.
 GET	 /capacities/{capacityId}/Workloads 	Parameter Adherence	Returns the current state of the specified capacity workloads, if a workload is enabled also returns the maximum memory percentage that the workload can consume.
 POST	 /AssignToCapacity 	Parameter Adherence	Assigns "My Workspace" to the specified capacity.
+POST	 /groups/{groupId}/AssignToCapacity 	Parameter Adherence	Assigns the specified workspace to the specified capacity.
 POST	 /groups/{groupId}/dashboards 	Parameter Adherence	Creates a new empty dashboard on the specified workspace.

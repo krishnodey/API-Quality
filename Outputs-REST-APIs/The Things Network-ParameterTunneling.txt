@@ -1,8 +1,8 @@
 ***Anti-Pattern*** 
-Count: 1
+Count: 3
 
 ***Patterns*** 
-Count: 10
+Count: 8
 DELETE	 /applications/{app_id} 	Parameter Adherence	Delete Application. deletes the application with the given identifier (app_id) Request: ApplicationIdentifier Response: Empty
 DELETE	 /applications/{app_id}/devices/{dev_id} 	Parameter Adherence	Delete Device deletes the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Empty
 GET	 /applications/{app_id}/devices/{dev_id} 	Parameter Adherence	Get Device returns the device with the given identifier (app_id and dev_id) Request: DeviceIdentifier Response: Device

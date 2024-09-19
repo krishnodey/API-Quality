@@ -3,24 +3,24 @@ Count: 0
 
 ***Patterns*** 
 Count: 21
-GET	 /accounts/[account_id]/addons?apikey=[value] 	Structed Endpoint	Get all account add-ons with validity info
+GET	 /accounts/[account_id]/addons	Structed Endpoint	Get all account add-ons with validity info
 POST	 /accounts/[account_id]/addons 	Structed Endpoint	Add addon to account
-GET	 /accounts?apikey=[value] 	Structed Endpoint	Get accounts info for reseller
-GET	 /accounts/[account_id]?apikey=[value] 	Structed Endpoint	Get account info
+GET	 /accounts	Structed Endpoint	Get accounts info for reseller
+GET	 /accounts/[account_id]	Structed Endpoint	Get account info
 POST	 /accounts 	Structed Endpoint	Create new account
-GET	 /accounts/[account_id]/status?apikey=[value] 	Structed Endpoint	Get account status
+GET	 /accounts/[account_id]/status	Structed Endpoint	Get account status
 PUT	 /accounts/[account_id]/status 	Structed Endpoint	Change account status (suspend, unsuspend or terminate)
 PUT	 /accounts/[account_id]/variation 	Structed Endpoint	Change account variation
-GET	 /signupcheck/domain?productid=[value]&subdomain=[value]&apikey=[value] 	Structed Endpoint	Check account domain before signup
-GET	 /signupcheck/email?productid=[value]&email=[value]&apikey=[value] 	Structed Endpoint	Check email validity before signup
-GET	 /variations?apikey=[value] 	Structed Endpoint	Get all reseller variations
-GET	 /accounts/[account_id]/attributes/[attribute_name]?apikey=[value] 	Structed Endpoint	Get account attribute
+GET	 /signupcheck/domain	Structed Endpoint	Check account domain before signup
+GET	 /signupcheck/email	Structed Endpoint	Check email validity before signup
+GET	 /variations	Structed Endpoint	Get all reseller variations
+GET	 /accounts/[account_id]/attributes/[attribute_name]	Structed Endpoint	Get account attribute
 PUT	 /accounts/[account_id]/attributes/[attribute_name] 	Structed Endpoint	Change account attribute
-DELETE	 /accounts/[account_id]/users/[userid]?apikey=[value] 	Structed Endpoint	Remove user from account
-GET	 /accounts/[account_id]/users?apikey=[value] 	Structed Endpoint	Get users list from account
-GET	 /licenses/[license_code]/addons?apikey=[value] 	Structed Endpoint	Get all license add-ons with validity info
+DELETE	 /accounts/[account_id]/users/[userid]	Structed Endpoint	Remove user from account
+GET	 /accounts/[account_id]/users	Structed Endpoint	Get users list from account
+GET	 /licenses/[license_code]/addons	Structed Endpoint	Get all license add-ons with validity info
 POST	 /licenses/[license_code]/addons 	Structed Endpoint	Add addon to license
 PUT	 /licenses/[license_code]/addons/[addon_license]/validity 	Structed Endpoint	Change addon validity on owned license
-GET	 /licenses?apikey=[value] 	Structed Endpoint	Get all licenses info for reseller
-GET	 /licenses/[license_code]/attributes/[attribute_name]?apikey=[value] 	Structed Endpoint	Get license attribute
+GET	 /licenses	Structed Endpoint	Get all licenses info for reseller
+GET	 /licenses/[license_code]/attributes/[attribute_name]	Structed Endpoint	Get license attribute
 PUT	 /licenses/[license_code]/attributes/[attribute_name] 	Structed Endpoint	Change license attribute

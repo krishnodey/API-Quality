@@ -1,43 +1,32 @@
 ***Anti-Pattern*** 
-Count: 25
-GET	 /models 	Parameter Tunneling	Returns an array of algorithmic models and their summary.
-POST	 /models 	Parameter Tunneling	Creates an algorithmic model.
-POST	 /models/bulk-delete 	Parameter Tunneling	Delete multiple algorithmic models with a single operation.
-GET	 /models/limits 	Parameter Tunneling	Returns a count of the maximum number of algorithmic models you can create.
-GET	 /algorithms 	Parameter Tunneling	Returns ID, name, and description for the available algorithms.
-GET	 /available-data-feeds/ 	Parameter Tunneling	Gets the 'Available Data Feed' resources for a buyer.
-GET	 /data-feeds/billing-report 	Parameter Tunneling	Gets the billing report for last month
-POST	 /data-feeds/billing-report 	Parameter Tunneling	Gets the billing report for last month in CSV format
-POST	 /data-feeds/usage 	Parameter Tunneling	Inserts impression data for the plan subscription for last month.
-POST	 /data-feeds/bulk-usage 	Parameter Tunneling	Inserts bulk impression data for multiple plan subscriptions for last month.
-GET	 /destinations/segment-impressions/ 	Parameter Tunneling	Returns all the segments and corresponding impression counts for all destinations
-PATCH	 /destinations/segment-impressions/ 	Parameter Tunneling	Updates the segments and corresponding impression counts for destinations
-GET	 /data-feeds/ 	Parameter Tunneling	Gets the `Data Feed` resources.
-POST	 /data-feeds/ 	Parameter Tunneling	Creates a new `Data Feed`.
-GET	 /datasources/ 	Parameter Tunneling	Returns details about all GENERAL data sources.
-POST	 /datasources/ 	Parameter Tunneling	Creates a Data Source of the type GENERAL or MERGE RULE.
-POST	 /datasources/bulk-delete 	Parameter Tunneling	Bulk delete multiple data sources.
-GET	 /datasources/configurations/available-id-types 	Parameter Tunneling	Returns all available data source ID types.
-GET	 /datasources/configurations/marketing-cloud-visitorid-versions 	Parameter Tunneling	Returns a list of all active Experience Cloud visitor ID versions.
-GET	 /signals/derived 	Parameter Tunneling	Returns an array of derived signals and their information.
-POST	 /signals/derived 	Parameter Tunneling	Creates a new derived signal
-GET	 /signals/derived/limits 	Parameter Tunneling	Returns a count of the maximum number of derived signals you can create.
-POST	 /destinations/ 	Parameter Tunneling	Creates a new destination.
-GET	 /destinations/ 	Parameter Tunneling	Returns data for all your destinations.
-GET	 /destinations/limits 	Parameter Tunneling	Returns a count of the maximum number of destinations you can create.
+Count: 46
 
 ***Patterns*** 
-Count: 40
+Count: 19
 PUT	 /models/{modelId} 	Parameter Adherence	Updates an algorithmic model.
 DELETE	 /models/{modelId} 	Parameter Adherence	Deletes an algorithmic model.
+GET	 /models 	Parameter Adherence	Returns an array of algorithmic models and their summary.
+POST	 /models 	Parameter Adherence	Creates an algorithmic model.
 GET	 /models/{modelId}/processing-history 	Parameter Adherence	Returns an array of UNIX time stamps (UTC) of successful data runs for your model.
 GET	 /models/{modelId}/runs/latest/traits 	Parameter Adherence	Returns a list of your most influential (accurate) traits for your algorithmic model.
 GET	 /models/{modelId}/runs/latest/stats 	Parameter Adherence	Returns accuracy and reach values for your algorithmic model.
+POST	 /models/bulk-delete 	Parameter Adherence	Delete multiple algorithmic models with a single operation.
+GET	 /models/limits 	Parameter Adherence	Returns a count of the maximum number of algorithmic models you can create.
 GET	 /algorithms/{algoTypeId} 	Parameter Adherence	Returns ID, name, and description for the algorithm based on the passed in algoTypeId.
+GET	 /algorithms 	Parameter Adherence	Returns ID, name, and description for the available algorithms.
+GET	 /available-data-feeds/ 	Parameter Adherence	Gets the 'Available Data Feed' resources for a buyer.
 GET	 /available-data-feeds/{dataSourceId} 	Parameter Adherence	Gets the data feed from the perspective of the buyer.
 GET	 /available-data-feeds/{dataSourceId}/plans 	Parameter Adherence	Gets the plans which belong to the data feed, from the perspective of the buyer.
 POST	 /available-data-feeds/{dataSourceId}/subscribe 	Parameter Adherence	Creates/Updates subscription to an available data feed.
 POST	 /available-data-feeds/{dataSourceId}/requests 	Parameter Adherence	Creates a request for an available data feed.
+GET	 /data-feeds/billing-report 	Parameter Adherence	Gets the billing report for last month
+POST	 /data-feeds/billing-report 	Parameter Adherence	Gets the billing report for last month in CSV format
+POST	 /data-feeds/usage 	Parameter Adherence	Inserts impression data for the plan subscription for last month.
+POST	 /data-feeds/bulk-usage 	Parameter Adherence	Inserts bulk impression data for multiple plan subscriptions for last month.
+GET	 /destinations/segment-impressions/ 	Parameter Adherence	Returns all the segments and corresponding impression counts for all destinations
+PATCH	 /destinations/segment-impressions/ 	Parameter Adherence	Updates the segments and corresponding impression counts for destinations
+GET	 /data-feeds/ 	Parameter Adherence	Gets the `Data Feed` resources.
+POST	 /data-feeds/ 	Parameter Adherence	Creates a new `Data Feed`.
 GET	 /data-feeds/{dataSourceId} 	Parameter Adherence	Gets the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
 PUT	 /data-feeds/{dataSourceId} 	Parameter Adherence	Updates the 'Data Feed'.
 DELETE	 /data-feeds/{dataSourceId} 	Parameter Adherence	Deletes the 'Data Feed' resource by the 'Feed ID' or 'Data Source ID'.
@@ -53,14 +42,25 @@ GET	 /data-feeds/{dataSourceId}/potential-subscribers/ 	Parameter Adherence	Retu
 GET	 /data-feeds/{dataSourceId}/plans/{planId} 	Parameter Adherence	Gets a 'Data Feed Plan' under a 'Data Feed'.
 PUT	 /data-feeds/{dataSourceId}/plans/{planId} 	Parameter Adherence	Updates a 'Data Feed Plan' under a 'Data Feed'.
 DELETE	 /data-feeds/{dataSourceId}/plans/{planId} 	Parameter Adherence	Deletes a 'Data Feed Plan' under a 'Data Feed'.
+GET	 /datasources/ 	Parameter Adherence	Returns details about all GENERAL data sources.
+POST	 /datasources/ 	Parameter Adherence	Creates a Data Source of the type GENERAL or MERGE RULE.
 GET	 /datasources/{dataSourceId} 	Parameter Adherence	Returns details about a specific data source.
 PUT	 /datasources/{dataSourceId} 	Parameter Adherence	Update a specific GENERAL or MERGE_RULE data source.
 DELETE	 /datasources/{dataSourceId} 	Parameter Adherence	Delete a specific data source.
+POST	 /datasources/bulk-delete 	Parameter Adherence	Bulk delete multiple data sources.
+GET	 /datasources/configurations/available-id-types 	Parameter Adherence	Returns all available data source ID types.
+GET	 /datasources/configurations/marketing-cloud-visitorid-versions 	Parameter Adherence	Returns a list of all active Experience Cloud visitor ID versions.
 GET	 /datasources/{dataSourceId}/history/inbound 	Parameter Adherence	Returns Onboarding Status Report with success and failure rates for inbound data source files.
 GET	 /datasources/{dataSourceId}/history/inbound/sampling-data 	Parameter Adherence	Returns sampling data for a datasource for onboarding (inbound) files.
 GET	 /signals/derived/{derivedSignalId} 	Parameter Adherence	Returns information about a single derived signal.
 PUT	 /signals/derived/{derivedSignalId} 	Parameter Adherence	Updates a single derived signal.
 DELETE	 /signals/derived/{derivedSignalId} 	Parameter Adherence	Deletes a single derived signal.
+GET	 /signals/derived 	Parameter Adherence	Returns an array of derived signals and their information.
+POST	 /signals/derived 	Parameter Adherence	Creates a new derived signal
+GET	 /signals/derived/limits 	Parameter Adherence	Returns a count of the maximum number of derived signals you can create.
+POST	 /destinations/ 	Parameter Adherence	Creates a new destination.
+GET	 /destinations/ 	Parameter Adherence	Returns data for all your destinations.
+GET	 /destinations/limits 	Parameter Adherence	Returns a count of the maximum number of destinations you can create.
 GET	 /destinations/{destinationId}/history/outbound/ 	Parameter Adherence	Returns outbound history for a specific destination by 'destinationId'.
 GET	 /destinations/{destinationId} 	Parameter Adherence	Returns a specific destination by 'destinationId'.
 DELETE	 /destinations/{destinationId} 	Parameter Adherence	Deletes a specific destination by 'destinationId'.

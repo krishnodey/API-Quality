@@ -1,67 +1,66 @@
 ***Anti-Pattern*** 
-Count: 33
-POST	 /v1/chat/completions 	Parameter Tunneling	Creates a model response for the given chat conversation.
-POST	 /v1/embeddings 	Parameter Tunneling	Creates an embedding vector representing the input text.
-POST	 /v1/fine_tuning/jobs 	Parameter Tunneling	Creates a fine-tuning job which begins the process of creating a new model from a given dataset.
-GET	 /v1/fine_tuning/jobs 	Parameter Tunneling	List your organization's fine-tuning jobs
-POST	 /v1/fine_tuning/jobs/{fine_tuning_job_id}/cancel 	Parameter Tunneling	Immediately cancel a fine-tune job.
-POST	 /v1/batches 	Parameter Tunneling	Creates and executes a batch from an uploaded file of requests
-POST	 /v1/batches/{batch_id}/cancel 	Parameter Tunneling	Cancels an in-progress batch. The batch will be in status cancelling for up to 10 minutes, before changing to cancelled, where it will have partial results (if any) available in the output file
-GET	 /v1/batches 	Parameter Tunneling	List your organization's batches.
-GET	 /v1/files 	Parameter Tunneling	Returns a list of files that belong to the user's organization.
-POST	 /v1/uploads 	Parameter Tunneling	Creates an intermediate Upload object that you can add Parts to. Currently, an Upload can accept at most 8 GB in total and expires after an hour after you create it.
-POST	 /v1/images/generations 	Parameter Tunneling	Creates an image given a prompt.
-POST	 /v1/images/edits 	Parameter Tunneling	Creates an edited or extended image given an original image and a prompt.
-POST	 /v1/images/variations 	Parameter Tunneling	Creates a variation of a given image.
-GET	 /v1/models 	Parameter Tunneling	Lists the currently available models, and provides basic information about each one such as the owner and availability.
-POST	 /v1/assistants 	Parameter Tunneling	Create an assistant with a model and instructions.
-GET	 /v1/assistants 	Parameter Tunneling	Returns a list of assistants.
-POST	 /v1/assistants/{assistant_id} 	Parameter Tunneling	Modifies an assistant.
-POST	 /v1/threads 	Parameter Tunneling	Create a thread.
-POST	 /v1/threads/{thread_id} 	Parameter Tunneling	Modifies a thread.
-POST	 /v1/threads/{thread_id}/messages/{message_id} 	Parameter Tunneling	Modifies a message.
-POST	 /v1/threads/runs 	Parameter Tunneling	Create a thread and run it in one request.
-POST	 /v1/threads/{thread_id}/runs/{run_id} 	Parameter Tunneling	Modifies a run.
-POST	 /v1/threads/{thread_id}/runs/{run_id}/submit_tool_outputs 	Parameter Tunneling	When a run has the status: "requires_action" and required_action.type is submit_tool_outputs, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request.
-POST	 /v1/threads/{thread_id}/runs/{run_id}/cancel 	Parameter Tunneling	Cancels a run that is in_progress.
-POST	 /v1/vector_stores 	Parameter Tunneling	Create a vector store.
-GET	 /v1/vector_stores 	Parameter Tunneling	Returns a list of vector stores.
-POST	 /v1/vector_stores/{vector_store_id} 	Parameter Tunneling	Modifies a vector store.
-POST	 /v1/vector_stores/{vector_store_id}/file_batches/{batch_id}/cancel 	Parameter Tunneling	Cancel a vector store file batch. This attempts to cancel the processing of files in this batch as soon as possible.
+Count: 54
 
 ***Patterns*** 
-Count: 34
+Count: 13
 POST	 /v1/audio/speech 	Parameter Adherence	Generates audio from the input text.
 POST	 /v1/audio/transcriptions 	Parameter Adherence	Transcribes audio into the input language.
 POST	 /v1/audio/translations 	Parameter Adherence	Translates audio into English.
+POST	 /v1/chat/completions 	Parameter Adherence	Creates a model response for the given chat conversation.
+POST	 /v1/embeddings 	Parameter Adherence	Creates an embedding vector representing the input text.
+POST	 /v1/fine_tuning/jobs 	Parameter Adherence	Creates a fine-tuning job which begins the process of creating a new model from a given dataset.
+GET	 /v1/fine_tuning/jobs 	Parameter Adherence	List your organization's fine-tuning jobs
 GET	 /v1/fine_tuning/jobs/{fine_tuning_job_id}/events 	Parameter Adherence	Get status updates for a fine-tuning job.
 GET	 /v1/fine_tuning/jobs/{fine_tuning_job_id}/checkpoints 	Parameter Adherence	List checkpoints for a fine-tuning job.
 GET	 /v1/fine_tuning/jobs/{fine_tuning_job_id} 	Parameter Adherence	Get info about a fine-tuning job.
+POST	 /v1/fine_tuning/jobs/{fine_tuning_job_id}/cancel 	Parameter Adherence	Immediately cancel a fine-tune job.
+POST	 /v1/batches 	Parameter Adherence	Creates and executes a batch from an uploaded file of requests
 GET	 /v1/batches/{batch_id} 	Parameter Adherence	Retrieves a batch.
+POST	 /v1/batches/{batch_id}/cancel 	Parameter Adherence	Cancels an in-progress batch. The batch will be in status cancelling for up to 10 minutes, before changing to cancelled, where it will have partial results (if any) available in the output file
+GET	 /v1/batches 	Parameter Adherence	List your organization's batches.
 POST	 /v1/files 	Parameter Adherence	Upload a file that can be used across various endpoints. Individual files can be up to 512 MB, and the size of all files uploaded by one organization can be up to 100 GB.
+GET	 /v1/files 	Parameter Adherence	Returns a list of files that belong to the user's organization.
 GET	 /v1/files/{file_id} 	Parameter Adherence	Returns information about a specific file.
 DELETE	 /v1/files/{file_id} 	Parameter Adherence	Delete a file.
 GET	 /v1/files/{file_id}/content 	Parameter Adherence	Returns the contents of the specified file.
+POST	 /v1/uploads 	Parameter Adherence	Creates an intermediate Upload object that you can add Parts to. Currently, an Upload can accept at most 8 GB in total and expires after an hour after you create it.
 POST	 /v1/uploads/{upload_id}/parts 	Parameter Adherence	Adds a Part to an Upload object. A Part represents a chunk of bytes from the file you are trying to upload. Each Part can be at most 64 MB, and you can add Parts until you hit the Upload maximum of 8 GB.
 POST	 /v1/uploads/{upload_id}/complete 	Parameter Adherence	Completes the Upload. Within the returned Upload object, there is a nested File object that is ready to use in the rest of the platform. You can specify the order of the Parts by passing in an ordered list of the Part IDs.
 POST	 /v1/uploads/{upload_id}/cancel 	Parameter Adherence	Cancels the Upload. No Parts may be added after an Upload is cancelled.
+POST	 /v1/images/generations 	Parameter Adherence	Creates an image given a prompt.
+POST	 /v1/images/edits 	Parameter Adherence	Creates an edited or extended image given an original image and a prompt.
+POST	 /v1/images/variations 	Parameter Adherence	Creates a variation of a given image.
+GET	 /v1/models 	Parameter Adherence	Lists the currently available models, and provides basic information about each one such as the owner and availability.
 GET	 /v1/models/{model} 	Parameter Adherence	Retrieves a model instance, providing basic information about the model such as the owner and permissioning.
 DELETE	 /v1/models/{model} 	Parameter Adherence	Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.
 POST	 /v1/moderations 	Parameter Adherence	Classifies if text is potentially harmful.
+POST	 /v1/assistants 	Parameter Adherence	Create an assistant with a model and instructions.
+GET	 /v1/assistants 	Parameter Adherence	Returns a list of assistants.
 GET	 /v1/assistants/{assistant_id} 	Parameter Adherence	Retrieves an assistant.
+POST	 /v1/assistants/{assistant_id} 	Parameter Adherence	Modifies an assistant.
 DELETE	 /v1/assistants/{assistant_id} 	Parameter Adherence	Delete an assistant.
+POST	 /v1/threads 	Parameter Adherence	Create a thread.
 GET	 /v1/threads/{thread_id} 	Parameter Adherence	Retrieves a thread.
+POST	 /v1/threads/{thread_id} 	Parameter Adherence	Modifies a thread.
 DELETE	 /v1/threads/{thread_id} 	Parameter Adherence	Delete a thread.
 POST	 /v1/threads/{thread_id}/messages 	Parameter Adherence	Create a message.
 GET	 /v1/threads/{thread_id}/messages 	Parameter Adherence	Returns a list of messages for a given thread.
 GET	 /v1/threads/{thread_id}/messages/{message_id} 	Parameter Adherence	Retrieve a message.
+POST	 /v1/threads/{thread_id}/messages/{message_id} 	Parameter Adherence	Modifies a message.
 DELETE	 /v1/threads/{thread_id}/messages/{message_id} 	Parameter Adherence	Deletes a message.
 POST	 /v1/threads/{thread_id}/runs 	Parameter Adherence	Create a run.
+POST	 /v1/threads/runs 	Parameter Adherence	Create a thread and run it in one request.
 GET	 /v1/threads/{thread_id}/runs 	Parameter Adherence	Returns a list of runs belonging to a thread.
 GET	 /v1/threads/{thread_id}/runs/{run_id} 	Parameter Adherence	Retrieves a run.
+POST	 /v1/threads/{thread_id}/runs/{run_id} 	Parameter Adherence	Modifies a run.
+POST	 /v1/threads/{thread_id}/runs/{run_id}/submit_tool_outputs 	Parameter Adherence	When a run has the status: "requires_action" and required_action.type is submit_tool_outputs, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request.
+POST	 /v1/threads/{thread_id}/runs/{run_id}/cancel 	Parameter Adherence	Cancels a run that is in_progress.
 GET	 /v1/threads/{thread_id}/runs/{run_id}/steps 	Parameter Adherence	Returns a list of run steps belonging to a run.
 GET	 /v1/threads/{thread_id}/runs/{run_id}/steps/{step_id} 	Parameter Adherence	Retrieves a run step.
+POST	 /v1/vector_stores 	Parameter Adherence	Create a vector store.
+GET	 /v1/vector_stores 	Parameter Adherence	Returns a list of vector stores.
 GET	 /v1/vector_stores/{vector_store_id} 	Parameter Adherence	Retrieves a vector store.
+POST	 /v1/vector_stores/{vector_store_id} 	Parameter Adherence	Modifies a vector store.
 DELETE	 /v1/vector_stores/{vector_store_id} 	Parameter Adherence	Delete a vector store.
 POST	 /v1/vector_stores/{vector_store_id}/files 	Parameter Adherence	Create a vector store file by attaching a File to a vector store.
 GET	 /v1/vector_stores/{vector_store_id}/files 	Parameter Adherence	Returns a list of vector store files.
@@ -69,4 +68,5 @@ GET	 /v1/vector_stores/{vector_store_id}/files/{file_id} 	Parameter Adherence	Re
 DELETE	 /v1/vector_stores/{vector_store_id}/files/{file_id} 	Parameter Adherence	Delete a vector store file. This will remove the file from the vector store but the file itself will not be deleted. To delete the file, use the delete file endpoint.
 POST	 /v1/vector_stores/{vector_store_id}/file_batches 	Parameter Adherence	Create a vector store file batch.
 GET	 /v1/vector_stores/{vector_store_id}/file_batches/{batch_id} 	Parameter Adherence	Retrieves a vector store file batch.
+POST	 /v1/vector_stores/{vector_store_id}/file_batches/{batch_id}/cancel 	Parameter Adherence	Cancel a vector store file batch. This attempts to cancel the processing of files in this batch as soon as possible.
 GET	 /v1/vector_stores/{vector_store_id}/file_batches/{batch_id}/files 	Parameter Adherence	Returns a list of vector store files in a batch.

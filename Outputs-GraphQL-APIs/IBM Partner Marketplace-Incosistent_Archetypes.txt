@@ -1,15 +1,7 @@
 ***Anti-Pattern*** 
-Count: 62
-POST	 /subscriptions/{subscriptionId}/users 	Singular Nouns Found in Consecutive Nodes	Add user to a subscription
-GET	 /subscriptions/{subscriptionId} 	Singular Nouns Found in Consecutive Nodes	Get subscription
+Count: 54
 GET	 /subscriptions/{subscriptionId}/users/{userId} 	Singular Nouns Found in Consecutive Nodes	Get user for subscription
-GET	 /subscriptions/{subscriptionId}/users/{userId} 	Singular Nouns Found in Consecutive Nodes	Get user for subscription
-GET	 /subscriptions/{subscriptionId}/users 	Singular Nouns Found in Consecutive Nodes	Get users for a subscription
 DELETE	 /subscriptions/{subscriptionId}/users/{userId} 	Singular Nouns Found in Consecutive Nodes	Remove a user from a subscription
-DELETE	 /subscriptions/{subscriptionId}/users/{userId} 	Singular Nouns Found in Consecutive Nodes	Remove a user from a subscription
-DELETE	 /subscriptions/{subscriptionId} 	Singular Nouns Found in Consecutive Nodes	Remove subscription
-PUT	 /subscriptions/{subscriptionId} 	Singular Nouns Found in Consecutive Nodes	Update Subscription
-PUT	 /subscriptions/{subscriptionId}/users/{userId} 	Singular Nouns Found in Consecutive Nodes	Update user in a subscription
 PUT	 /subscriptions/{subscriptionId}/users/{userId} 	Singular Nouns Found in Consecutive Nodes	Update user in a subscription
 PUT	 /orders/{orderReferenceNumber} 	Singular Nouns Found in Consecutive Nodes	Cancel renewal order
 PUT	 /orders/{orderReferenceNumber} 	Singular Nouns Found in Consecutive Nodes	Cancel renewal order
@@ -43,6 +35,7 @@ PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Singular Nouns F
 PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Singular Nouns Found in Consecutive Nodes	Change Renew type of an IBM agreement number.
 GET	 /catalog/category-topics  	Singular Nouns Found in Consecutive Nodes	Get all possible category topics for products.
 GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Singular Nouns Found in Consecutive Nodes	Get configuration for a given plan and product id.
+GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Plural Nouns Found in Consecutive Nodes	Get configuration for a given plan and product id.
 GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Singular Nouns Found in Consecutive Nodes	Get configuration for a given plan and product id.
 GET	 /catalog/reseller/products/{id}/plans/{planId}/config 	Singular Nouns Found in Consecutive Nodes	Get configuration for a given plan and product id.
 GET	 /catalog/service-types > Get all possible service types for products. 	Singular Nouns Found in Consecutive Nodes	
@@ -52,7 +45,6 @@ GET	 /catalog/service-types > Get all possible service types for products. 	Plur
 GET	 /catalog/reseller/products 	Singular Nouns Found in Consecutive Nodes	Get products which can be used by resellers to place orders.
 PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Singular Nouns Found in Consecutive Nodes	Change Renew type of an IBM agreement number.
 PUT	 /quotes/agreementnumber/{agreementnumber}/changerenewtype 	Singular Nouns Found in Consecutive Nodes	Change Renew type of an IBM agreement number.
-POST	 /quotes/orders 	Plural Nouns Found in Consecutive Nodes	Create order from Quote.
 GET	 /quotes/billing/{agreementnumber}/billed 	Singular Nouns Found in Consecutive Nodes	Get billed usage data for an agreement number
 GET	 /quotes/billing/{agreementnumber}/billed 	Singular Nouns Found in Consecutive Nodes	Get billed usage data for an agreement number
 GET	 /quotes/{sapQuoteNumber}	Singular Nouns Found in Consecutive Nodes	Get details of Quote
@@ -64,10 +56,15 @@ GET	 /quotes/orders/{orderReferenceNumber} 	Singular Nouns Found in Consecutive 
 PUT	  /quotes/agreementnumber/{agreementnumber} 	Singular Nouns Found in Consecutive Nodes	Update agreement
 
 ***Patterns*** 
-Count: 16
+Count: 22
 POST	 /entitlements 	Cosistent Resource Archetype	Get Entitlements for Customers
+POST	 /subscriptions/{subscriptionId}/users 	Cosistent Resource Archetype	Add user to a subscription
 POST	 /subscriptions 	Cosistent Resource Archetype	Create subscription >
+GET	 /subscriptions/{subscriptionId} 	Cosistent Resource Archetype	Get subscription
 GET	 /subscriptions 	Cosistent Resource Archetype	Get subscriptions
+GET	 /subscriptions/{subscriptionId}/users 	Cosistent Resource Archetype	Get users for a subscription
+DELETE	 /subscriptions/{subscriptionId} 	Cosistent Resource Archetype	Remove subscription
+PUT	 /subscriptions/{subscriptionId} 	Cosistent Resource Archetype	Update Subscription
 POST	 /orders 	Cosistent Resource Archetype	Create renewal order
 GET	 /orders 	Cosistent Resource Archetype	Get all legacy orders
 POST	 /orders 	Cosistent Resource Archetype	Create Order
@@ -80,4 +77,5 @@ GET	 /catalog/categories 	Cosistent Resource Archetype	Get all possible categori
 GET	  /catalog/locales 	Cosistent Resource Archetype	Get all possible locales for products.
 GET	 /catalog/topics 	Cosistent Resource Archetype	Get all possible topics for products.
 GET	 /catalog/products 	Cosistent Resource Archetype	Get the products for a given locale.
+POST	 /quotes/orders 	Cosistent Resource Archetype	Create order from Quote.
 GET	 /quotes 	Cosistent Resource Archetype	Get All quotesCopied

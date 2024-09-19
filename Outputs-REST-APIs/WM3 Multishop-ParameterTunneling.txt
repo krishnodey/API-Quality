@@ -1,59 +1,59 @@
 ***Anti-Pattern*** 
-Count: 17
-GET	 /shop/admin/price_lists 	Parameter Tunneling	Retrieve Price lists
-POST	 /shop/admin/price_lists 	Parameter Tunneling	Create Price list
-GET	 /shop/admin/products 	Parameter Tunneling	Retrieve Products
-POST	 /shop/admin/products 	Parameter Tunneling	Create Product
-POST	 /shop/admin/products 	Parameter Tunneling	Create multiple Products
-PUT	 /shop/admin/products/:idUpdate Product 	Parameter Tunneling	
-GET	 /shop/admin/properties 	Parameter Tunneling	Retrieve Properties
-GET	 /shop/admin/shipping_categories 	Parameter Tunneling	Retrieve Shipping categories
-POST	 /shop/admin/shipping_categories 	Parameter Tunneling	Create Shipping category
-GET	 /shop/admin/shipping_methods 	Parameter Tunneling	Retrieve Shipping methods
-GET	 /shop/admin/stock_items 	Parameter Tunneling	Retrieve Stock items
-GET	 /shop/admin/tax_categories 	Parameter Tunneling	Retrieve Tax categories
-GET	 /shop/admin/tax_rates 	Parameter Tunneling	Retrieve Tax rates
-GET	 /shop/admin/tax_zones 	Parameter Tunneling	Retrieve Tax zones
-POST	 /shop/admin/tax_zones 	Parameter Tunneling	Create Tax zone
-GET	 /shop/admin/variants 	Parameter Tunneling	Retrieve Variants
-POST	 /shop/admin/variants/update_stock 	Parameter Tunneling	Update Variants stock
+Count: 35
 
 ***Patterns*** 
-Count: 37
+Count: 19
 GET	 /shop/admin/prices?customer_id=:customer_id 	Parameter Adherence	Retrieve Customer Prices
 POST	 /shop/admin/customers/:customer_id/prices 	Parameter Adherence	Create Customer Price
 DELETE	 /shop/admin/customers/:customer_id/prices/:variant_id 	Parameter Adherence	DELETE
+GET	 /shop/admin/price_lists 	Parameter Adherence	Retrieve Price lists
 GET	 /shop/admin/price_lists/:id 	Parameter Adherence	Retrieve Price list
+POST	 /shop/admin/price_lists 	Parameter Adherence	Create Price list
 PUT	 /shop/admin/price_lists/:id 	Parameter Adherence	Update Price list
+GET	 /shop/admin/products 	Parameter Adherence	Retrieve Products
 GET	 /shop/admin/products/:id 	Parameter Adherence	Retrieve Product
+POST	 /shop/admin/products 	Parameter Adherence	Create Product
+POST	 /shop/admin/products 	Parameter Adherence	Create multiple Products
+PUT	 /shop/admin/products/:idUpdate Product 	Parameter Adherence	
+GET	 /shop/admin/properties 	Parameter Adherence	Retrieve Properties
 GET	 /shop/admin/properties/:id 	Parameter Adherence	Retrieve Property
 PUT	 /shop/admin/properties/:id 	Parameter Adherence	Update Property
 GET	 /shop/admin/properties/:property_id/property_values 	Parameter Adherence	Retrieve Property values
 GET	 /shop/admin/properties/:property_id/property_values/:id 	Parameter Adherence	Retrieve Property value
 POST	 /shop/admin/properties/:property_id/property_values 	Parameter Adherence	Create Property value
 PUT	 /shop/admin/properties/:property_id/property_values/:id 	Parameter Adherence	Update Property value
+GET	 /shop/admin/shipping_categories 	Parameter Adherence	Retrieve Shipping categories
 GET	 /shop/admin/shipping_categories/:id 	Parameter Adherence	Retrieve Shipping category
+POST	 /shop/admin/shipping_categories 	Parameter Adherence	Create Shipping category
 PUT	 /shop/admin/shipping_categories/:id 	Parameter Adherence	Update Shipping Category
+GET	 /shop/admin/shipping_methods 	Parameter Adherence	Retrieve Shipping methods
 GET	 /shop/admin/shipping_methods/:id 	Parameter Adherence	Retrieve Shipping method
 GET	 /shop/admin/prices/:price_id/staggered_prices 	Parameter Adherence	Retrieve Staggered prices
 GET	 /shop/admin/prices/:price_id/staggered_prices/:id 	Parameter Adherence	Retrieve Staggered Price
 POST	 /shop/admin/prices/:price_id/staggered_prices 	Parameter Adherence	Create Staggered Price
 PUT	 /shop/admin/prices/:price_id/staggered_prices/:id 	Parameter Adherence	Update Staggered Price
 DELETE	 /shop/admin/prices/:price_id/staggered_prices/:id 	Parameter Adherence	DELETE
+GET	 /shop/admin/stock_items 	Parameter Adherence	Retrieve Stock items
 GET	 /shop/admin/stock_items/:id 	Parameter Adherence	Retrieve Stock Item
 GET	 /shop/admin/variants/:variant_id/stock_item 	Parameter Adherence	Retrieve Stock Item
 PUT	 /shop/admin/stock_items/:id 	Parameter Adherence	Update Stock Item
 PUT	 /shop/admin/variants/:variant_id/stock_item 	Parameter Adherence	Update Stock Item
 POST	 /shop/admin/stock_items/:id/movement 	Parameter Adherence	Create Stock Item movement
 POST	 /shop/admin/variants/:variant_id/stock_item/movement 	Parameter Adherence	Create Stock Item movement
+GET	 /shop/admin/tax_categories 	Parameter Adherence	Retrieve Tax categories
 PUT	 /shop/admin/tax_categories/:id 	Parameter Adherence	Update Tax Category
+GET	 /shop/admin/tax_rates 	Parameter Adherence	Retrieve Tax rates
 GET	 /shop/admin/tax_rates/:id 	Parameter Adherence	Retrieve Tax rate
 PUT	 /shop/admin/tax_rates/:id 	Parameter Adherence	Update Tax rate
+GET	 /shop/admin/tax_zones 	Parameter Adherence	Retrieve Tax zones
 GET	 /shop/admin/tax_zones/:id 	Parameter Adherence	Retrieve Tax zone
+POST	 /shop/admin/tax_zones 	Parameter Adherence	Create Tax zone
 PUT	 /shop/admin/tax_zones/:id 	Parameter Adherence	Update Tax zone
+GET	 /shop/admin/variants 	Parameter Adherence	Retrieve Variants
 GET	 /shop/admin/products/:product_id/variants 	Parameter Adherence	Retrieve Variants
 GET	 /shop/admin/variants/:id 	Parameter Adherence	Retrieve Variant
 GET	 /shop/admin/products/:product_id/variants/:id 	Parameter Adherence	Retrieve Variant
 POST	 /shop/admin/products/:product_id/variants 	Parameter Adherence	Create Variant
 PUT	 /shop/admin/variants/:id 	Parameter Adherence	Update Variant
 PUT	 /shop/admin/products/:product_id/variants/:id 	Parameter Adherence	Update Variant
+POST	 /shop/admin/variants/update_stock 	Parameter Adherence	Update Variants stock

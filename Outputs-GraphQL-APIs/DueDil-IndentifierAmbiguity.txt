@@ -3,92 +3,92 @@ Count: 0
 
 ***Patterns*** 
 Count: 89
-POST	 /v4/search/companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find companies based on search criteria.
-POST	 /v4/search/charities.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find charities based on search criteria.
-POST	 /v4/search/keywords.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
-POST	 /v4/search/regions.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.
-GET	 /v4/company/{countryCode}/{companyId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given company.
-GET	 /v4/company/{countryCode}/{companyId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given company.
-GET	 /v4/company/{countryCode}/{companyId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a company.
-GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a company.
-GET	 /v4/company/{countryCode}/{companyId}/registered-names.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a company.
-GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get industries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get industries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/industries.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get industries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get addresses for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get addresses for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/addresses.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get addresses for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get officers and their appointments for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get officers and their appointments for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get officers and their appointments for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get company financial filings for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get company financial filings for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get company financial filings for a given company.
-GET	 /v4/officer/{officerId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
-GET	 /v4/officer/{officerId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
-GET	 /v4/charity/{countryCode}/{charityId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get trustees for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get trustees for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/trustees.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get trustees for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get status history for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get status history for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/status-history.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get status history for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get geographic areas of activity for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get geographic areas of activity for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get geographic areas of activity for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/classifiers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
-GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get shareholders and their shareholdings for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get shareholders and their shareholdings for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/shareholders.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get shareholders and their shareholdings for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get group parents for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get group parents for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-parents.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get group parents for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get group subsidiaries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get group subsidiaries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/group-subsidiaries.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get group subsidiaries for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get portfolio companies for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get portfolio companies for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/portfolio-companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get portfolio companies for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get bank accounts for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get bank accounts for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/bank-accounts.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get bank accounts for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get gazette notices for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get gazette notices for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/gazette-notices.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get gazette notices for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
-GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
-GET	 /v4/company/{countryCode}/{companyId}/related-companies.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
-GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
-GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
-GET	 /v4/company/{countryCode}/{companyId}/fca-authorisations.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
-GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get charges for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get charges for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/charges.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get charges for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get persons of significant control (PoSC) for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get persons of significant control (PoSC) for a given company.
-GET	 /v4/company/{countryCode}/{companyId}/persons-significant-control.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get persons of significant control (PoSC) for a given company.
-GET	 /v4/officer/{officerId}/related-officers.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get all related officers for a given officer
-GET	 /v4/officer/{officerId}/related-officers.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get all related officers for a given officer
-GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/financials.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
-GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+POST	/v4/search/companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Find companies based on search criteria.
+POST	/v4/search/charities.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Find charities based on search criteria.
+POST	/v4/search/keywords.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
+POST	/v4/search/regions.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.
+GET	/v4/company/{countryCode}/{companyId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given company.
+GET	/v4/company/{countryCode}/{companyId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given company.
+GET	/v4/company/{countryCode}/{companyId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given company.
+GET	/v4/company/{countryCode}/{companyId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a company.
+GET	/v4/company/{countryCode}/{companyId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a company.
+GET	/v4/company/{countryCode}/{companyId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a company.
+GET	/v4/company/{countryCode}/{companyId}/industries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get industries for a given company.
+GET	/v4/company/{countryCode}/{companyId}/industries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get industries for a given company.
+GET	/v4/company/{countryCode}/{companyId}/industries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get industries for a given company.
+GET	/v4/company/{countryCode}/{companyId}/addresses.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get addresses for a given company.
+GET	/v4/company/{countryCode}/{companyId}/addresses.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get addresses for a given company.
+GET	/v4/company/{countryCode}/{companyId}/addresses.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get addresses for a given company.
+GET	/v4/company/{countryCode}/{companyId}/officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get officers and their appointments for a given company.
+GET	/v4/company/{countryCode}/{companyId}/officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get officers and their appointments for a given company.
+GET	/v4/company/{countryCode}/{companyId}/officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get officers and their appointments for a given company.
+GET	/v4/company/{countryCode}/{companyId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get company financial filings for a given company.
+GET	/v4/company/{countryCode}/{companyId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get company financial filings for a given company.
+GET	/v4/company/{countryCode}/{companyId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get company financial filings for a given company.
+GET	/v4/officer/{officerId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
+GET	/v4/officer/{officerId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given officer. Note that an officer can be either a person or a company acting as a corporate officer.
+GET	/v4/charity/{countryCode}/{charityId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get key information for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/trustees.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get trustees for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/trustees.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get trustees for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/trustees.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get trustees for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/status-history.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get status history for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/status-history.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get status history for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/status-history.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get status history for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/areas-of-activity.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get geographic areas of activity for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/areas-of-activity.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get geographic areas of activity for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/areas-of-activity.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get geographic areas of activity for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/registered-names.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get registered names for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/classifiers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/classifiers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/classifiers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	/v4/company/{countryCode}/{companyId}/shareholders.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get shareholders and their shareholdings for a given company.
+GET	/v4/company/{countryCode}/{companyId}/shareholders.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get shareholders and their shareholdings for a given company.
+GET	/v4/company/{countryCode}/{companyId}/shareholders.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get shareholders and their shareholdings for a given company.
+GET	/v4/company/{countryCode}/{companyId}/group-parents.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get group parents for a given company.
+GET	/v4/company/{countryCode}/{companyId}/group-parents.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get group parents for a given company.
+GET	/v4/company/{countryCode}/{companyId}/group-parents.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get group parents for a given company.
+GET	/v4/company/{countryCode}/{companyId}/group-subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get group subsidiaries for a given company.
+GET	/v4/company/{countryCode}/{companyId}/group-subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get group subsidiaries for a given company.
+GET	/v4/company/{countryCode}/{companyId}/group-subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get group subsidiaries for a given company.
+GET	/v4/company/{countryCode}/{companyId}/portfolio-companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get portfolio companies for a given company.
+GET	/v4/company/{countryCode}/{companyId}/portfolio-companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get portfolio companies for a given company.
+GET	/v4/company/{countryCode}/{companyId}/portfolio-companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get portfolio companies for a given company.
+GET	/v4/company/{countryCode}/{companyId}/bank-accounts.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get bank accounts for a given company.
+GET	/v4/company/{countryCode}/{companyId}/bank-accounts.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get bank accounts for a given company.
+GET	/v4/company/{countryCode}/{companyId}/bank-accounts.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get bank accounts for a given company.
+GET	/v4/company/{countryCode}/{companyId}/gazette-notices.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get gazette notices for a given company.
+GET	/v4/company/{countryCode}/{companyId}/gazette-notices.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get gazette notices for a given company.
+GET	/v4/company/{countryCode}/{companyId}/gazette-notices.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get gazette notices for a given company.
+GET	/v4/company/{countryCode}/{companyId}/related-companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	/v4/company/{countryCode}/{companyId}/related-companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	/v4/company/{countryCode}/{companyId}/related-companies.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get potentially related UK and Irish companies based on a number of reasons relating to governance and location. This list intentionally excludes companies that are separately identified as shareholders, group or portfolio companies.
+GET	/v4/company/{countryCode}/{companyId}/fca-authorisations.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	/v4/company/{countryCode}/{companyId}/fca-authorisations.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	/v4/company/{countryCode}/{companyId}/fca-authorisations.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get the Financial Conduct Authority authorisations or registrations for a given UK company. Due to the nature of this regulation, country codes other than 'gb' will not be supported.
+GET	/v4/company/{countryCode}/{companyId}/charges.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get charges for a given company.
+GET	/v4/company/{countryCode}/{companyId}/charges.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get charges for a given company.
+GET	/v4/company/{countryCode}/{companyId}/charges.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get charges for a given company.
+GET	/v4/company/{countryCode}/{companyId}/persons-significant-control.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get persons of significant control (PoSC) for a given company.
+GET	/v4/company/{countryCode}/{companyId}/persons-significant-control.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get persons of significant control (PoSC) for a given company.
+GET	/v4/company/{countryCode}/{companyId}/persons-significant-control.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get persons of significant control (PoSC) for a given company.
+GET	/v4/officer/{officerId}/related-officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get all related officers for a given officer
+GET	/v4/officer/{officerId}/related-officers.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get all related officers for a given officer
+GET	/v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/subsidiaries.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get subsidiaries for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/financials.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get financials for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/areas-of-activity.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/areas-of-activity.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.
+GET	/v4/charity/{countryCode}/{charityId}/areas-of-activity.{format}	[Identifier is Enclosed in {} or <> or Starts with :]	Get classifiers for a given charity.

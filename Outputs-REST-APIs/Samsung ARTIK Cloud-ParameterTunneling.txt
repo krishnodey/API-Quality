@@ -1,34 +1,9 @@
 ***Anti-Pattern*** 
-Count: 29
-GET	 /users/self 	Parameter Tunneling	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
-POST	 /devices 	Parameter Tunneling	Adds a device.
-PUT	 /devices/<deviceID> 	Parameter Tunneling	Modifies a device's parameters.
-POST	 /devices/<deviceID>/providerauth 	Parameter Tunneling	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
-GET	 /devices/status 	Parameter Tunneling	Returns a list of device statuses.
-PUT	 /devices/<deviceID>/status 	Parameter Tunneling	Modifies current status of a device.
-POST	 /devices/<deviceID>/shares 	Parameter Tunneling	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
-POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Parameter Tunneling	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
-GET	 /messages 	Parameter Tunneling	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
-GET	 /actions 	Parameter Tunneling	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
-GET	 /messages/last 	Parameter Tunneling	Returns the most recent normalized messages from a device or devices.
-GET	 /messages/analytics/aggregates 	Parameter Tunneling	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
-GET	 /messages/analytics/histogram 	Parameter Tunneling	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
-GET	 /messages/presence 	Parameter Tunneling	Returns presence of normalized messages.
-GET	 /messages/snapshots 	Parameter Tunneling	Returns last received value for all Manifest fields (aka device state) of a device or devices.
-POST	 /messages/export 	Parameter Tunneling	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
-GET	 /messages/export/history 	Parameter Tunneling	Returns a list of export queries that have been performed.
-GET	 /subscriptions 	Parameter Tunneling	Returns all subscriptions for the current application. This call accepts application tokens as the access token.
-POST	 /subscriptions/<subscriptionID>/validate 	Parameter Tunneling	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
-POST	 /rules 	Parameter Tunneling	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
-GET	 /rules/<ruleID>/actions 	Parameter Tunneling	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
-POST	 /scenes 	Parameter Tunneling	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
-PUT	 /scenes/<sceneID> 	Parameter Tunneling	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
-GET	 /scenes 	Parameter Tunneling	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
-POST	 /scenes/<sceneID> 	Parameter Tunneling	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
-POST	 /ml/models 	Parameter Tunneling	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
+Count: 72
 
 ***Patterns*** 
-Count: 51
+Count: 8
+GET	 /users/self 	Parameter Adherence	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
 GET	 /users/<userID>/properties 	Parameter Adherence	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
 POST	 /users/<userID>/properties 	Parameter Adherence	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
 PUT	 /users/<userID>/properties 	Parameter Adherence	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
@@ -39,15 +14,21 @@ GET	 /users/<userID>/rules 	Parameter Adherence	Returns the user's Rules created
 GET	 /users/<userID>/scenes 	Parameter Adherence	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
 GET	 /users/<userID>/trials 	Parameter Adherence	Returns the trials of a participant or administrator.
 GET	 /devices/<deviceID> 	Parameter Adherence	Returns a specific shared or owned device. Required permissions: READ on the device.
+POST	 /devices 	Parameter Adherence	Adds a device.
+PUT	 /devices/<deviceID> 	Parameter Adherence	Modifies a device's parameters.
 DELETE	 /devices/<deviceID> 	Parameter Adherence	Deletes a device.
 GET	 /devices/<deviceID>/tokens 	Parameter Adherence	Returns the access token of a device.
 PUT	 /devices/<deviceID>/tokens 	Parameter Adherence	Creates a new access token for a device.
 DELETE	 /devices/<deviceID>/tokens 	Parameter Adherence	Deletes the access token of a device.
+POST	 /devices/<deviceID>/providerauth 	Parameter Adherence	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
 DELETE	 /devices/<deviceID>/providerauth 	Parameter Adherence	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
 GET	 /devices/<deviceID>/status 	Parameter Adherence	Returns current status of a device.
+GET	 /devices/status 	Parameter Adherence	Returns a list of device statuses.
+PUT	 /devices/<deviceID>/status 	Parameter Adherence	Modifies current status of a device.
 GET	 /devices/<deviceID>/certificate 	Parameter Adherence	Returns fields for a device's certificates.
 GET	 /devices/<deviceID>/shares 	Parameter Adherence	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
 GET	 /devices/<deviceID>/shares/<shareID> 	Parameter Adherence	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+POST	 /devices/<deviceID>/shares 	Parameter Adherence	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
 GET	 /users/<userID>/shares 	Parameter Adherence	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
 GET	 /devicetypes/<deviceTypeID> 	Parameter Adherence	Returns the device type of a device.
 GET	 /devicetypes/<deviceTypeID> 	Parameter Adherence	Returns a list of device types.
@@ -60,26 +41,45 @@ GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Parameter Ad
 GET	 /devicetypes/<deviceTypeId>/whitelist 	Parameter Adherence	Returns the Approved List for a device type.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Parameter Adherence	Deletes a specified device from a device type's Approved List.
 PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	Parameter Adherence	Enables or disables a device type's Approved List.
+POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Parameter Adherence	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	Parameter Adherence	Deletes an Approved List certificate for a device type.
 GET	 /devicetypes/<deviceTypeID>/whitelist/status 	Parameter Adherence	Returns the enabled/disabled status of an Approved List.
 GET	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Parameter Adherence	Returns details of an Approved List certificate.
 GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Parameter Adherence	Returns a specified vendor device ID.
 POST	 /messages 	Parameter Adherence	Sends a message.
+GET	 /messages 	Parameter Adherence	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
 POST	 /actions 	Parameter Adherence	Sends an Action to the specified device.
+GET	 /actions 	Parameter Adherence	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
+GET	 /messages/last 	Parameter Adherence	Returns the most recent normalized messages from a device or devices.
+GET	 /messages/analytics/aggregates 	Parameter Adherence	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
+GET	 /messages/analytics/histogram 	Parameter Adherence	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
+GET	 /messages/presence 	Parameter Adherence	Returns presence of normalized messages.
+GET	 /messages/snapshots 	Parameter Adherence	Returns last received value for all Manifest fields (aka device state) of a device or devices.
 GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Parameter Adherence	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
 GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Parameter Adherence	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
 GET	 /pricing/devices/<deviceID>/pricingtiers 	Parameter Adherence	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
+POST	 /messages/export 	Parameter Adherence	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
 GET	 /messages/export/<exportID>/status 	Parameter Adherence	Returns the status of the messages export.
 GET	 /messages/export/<exportID>/result 	Parameter Adherence	Returns the result of the export query. The result call returns the response in tgz format.
+GET	 /messages/export/history 	Parameter Adherence	Returns a list of export queries that have been performed.
 POST	 /subscriptions 	Parameter Adherence	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
+GET	 /subscriptions 	Parameter Adherence	Returns all subscriptions for the current application. This call accepts application tokens as the access token.
 GET	 /subscriptions/<subscriptionID> 	Parameter Adherence	Returns a subscription. This call accepts application and user tokens as the access token.
+POST	 /subscriptions/<subscriptionID>/validate 	Parameter Adherence	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
 GET	 /notifications/<notificationID>/messages 	Parameter Adherence	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
 GET	 /rules/<ruleID> 	Parameter Adherence	Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+POST	 /rules 	Parameter Adherence	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 PUT	 /rules/<ruleID> 	Parameter Adherence	Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 DELETE	 /rules/<ruleID> 	Parameter Adherence	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 GET	 /rules/<ruleID>/executions 	Parameter Adherence	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 POST	 /rules/<ruleID>/actions 	Parameter Adherence	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
+GET	 /rules/<ruleID>/actions 	Parameter Adherence	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
+POST	 /scenes 	Parameter Adherence	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
+PUT	 /scenes/<sceneID> 	Parameter Adherence	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
 GET	 /scenes/<sceneID> 	Parameter Adherence	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+GET	 /scenes 	Parameter Adherence	Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
 DELETE	 /scenes/<sceneID> 	Parameter Adherence	Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST	 /scenes/<sceneID> 	Parameter Adherence	Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST	 /ml/models 	Parameter Adherence	Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
 POST	 /ml/models/<modelID>/predict 	Parameter Adherence	Returns the predicted output for a machine learning model.
 GET	 /ml/models/<modelID> 	Parameter Adherence	Returns a model.

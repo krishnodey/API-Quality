@@ -1,53 +1,36 @@
 ***Anti-Pattern*** 
-Count: 72
+Count: 48
 GET	 /channelContent/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelContent represents the various possible contents of channels by content type.
 GET	 /channelContent/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelContent represents the various possible contents of channels by content type.
 GET	 /channelGroup/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelGroup represents a grouping of Channels.
 GET	 /channelGroup/{id} 	Singular Nouns Found in Consecutive Nodes	ChannelGroup represents a grouping of Channels.
 GET	 /channelMembers/{userId} 	Singular Nouns Found in Consecutive Nodes	ChannelMembers represent all members assigned to any Channel on the plan.
-POST	 /addChannel 	Singular Nouns Found in Consecutive Nodes	Create a new Channel.
 POST	 /addChannelGroups 	Singular Nouns Found in Consecutive Nodes	Add one or more Channel Groups.
 POST	 /addChannelMembers 	Singular Nouns Found in Consecutive Nodes	Assign a User to an existing Channel.
 POST	 /addTeamsToChannels 	Plural Nouns Found in Consecutive Nodes	Assign Teams to existing Channels.
-POST	 /archiveChannel 	Singular Nouns Found in Consecutive Nodes	Archive a Channel.
 DELETE	 /deleteChannelGroup 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channel Groups.
 DELETE	 /deleteChannelGroup 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channel Groups.
 DELETE	 /deleteChannelGroupChannels 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
 DELETE	 /deleteChannelGroupChannels 	Singular Nouns Found in Consecutive Nodes	Delete one or more Channels from one or more Channel Groups. Note: if an invalid channelId or channelGroupId is passed, this will return a success of true and not an error
-POST	 /editChannel 	Singular Nouns Found in Consecutive Nodes	Modify Channel details. All edits require both channelId and actorUserId.
 DELETE	 /removeChannelContent 	Singular Nouns Found in Consecutive Nodes	Remove Content from an existing Channel.
 DELETE	 /removeChannelContent 	Singular Nouns Found in Consecutive Nodes	Remove Content from an existing Channel.
 DELETE	 /removeChannelMember 	Singular Nouns Found in Consecutive Nodes	Remove a member or contributor from an existing Channel.
 DELETE	 /removeChannelMember 	Singular Nouns Found in Consecutive Nodes	Remove a member or contributor from an existing Channel.
 PUT	 /updateChannelGroups 	Singular Nouns Found in Consecutive Nodes	Update one or more Channel Groups.
-GET	 /contentCatalog 	Singular Nouns Found in Consecutive Nodes	ContentCatalog represents an aggregate of all of the content types
-GET	 /courseCatalog 	Singular Nouns Found in Consecutive Nodes	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
-GET	 /labCatalog 	Singular Nouns Found in Consecutive Nodes	LabCatalog represents a list of labs available at Pluralsight.
-GET	 /marketTaxonomy 	Singular Nouns Found in Consecutive Nodes	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
-GET	 /pathCatalog 	Singular Nouns Found in Consecutive Nodes	Path Catalog represents a list of available Paths on Pluralsight.com.
-GET	 /programCatalog 	Singular Nouns Found in Consecutive Nodes	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
-GET	 /projectCatalog 	Singular Nouns Found in Consecutive Nodes	ProjectCatalog represents a list of available Projects on Pluralsight.com.
 GET	 /roleIqAssignments 	Singular Nouns Found in Consecutive Nodes	RoleIqAssignments represent Role IQ's that have been assigned to a particular user.
 GET	 /roleIqCatalog 	Singular Nouns Found in Consecutive Nodes	A Role IQ represents a container of skills that define a particular Role.
 GET	 /roleIqCatalog 	Singular Nouns Found in Consecutive Nodes	A Role IQ represents a container of skills that define a particular Role.
 GET	 /roleIqLearnerLevels 	Singular Nouns Found in Consecutive Nodes	RoleIQLearnerLevels represent a learner's score for a particular role.
 GET	 /roleIqLearnerLevels 	Singular Nouns Found in Consecutive Nodes	RoleIQLearnerLevels represent a learner's score for a particular role.
 GET	 /roleIqSkills 	Singular Nouns Found in Consecutive Nodes	RollIqSkills represent individual Skills assigned to a particular Role. A Skill can be assigned to 0 or more Roles and Roles will have 1 or more Skills.
-POST	 /addRole 	Singular Nouns Found in Consecutive Nodes	Create a new Role
-DELETE	 /deleteRole 	Singular Nouns Found in Consecutive Nodes	Delete an existing Role.
-PUT	 /editRole 	Singular Nouns Found in Consecutive Nodes	Edit an existing Role's information.
 GET	 /skillAssessmentCatalog 	Singular Nouns Found in Consecutive Nodes	SkillAssessmentCatalog represents a list of all available Skill Assessments that can be taken by a User.
 GET	 /skillAssessmentCatalog 	Singular Nouns Found in Consecutive Nodes	SkillAssessmentCatalog represents a list of all available Skill Assessments that can be taken by a User.
 GET	 /skillAssessmentResults 	Singular Nouns Found in Consecutive Nodes	SkillAssessmentResults represent the results of an assessment taken by a User. Once the assessment is completed, a User has 48 hours to complete a do-over if they would like. The higher of the two scores is kept.
 GET	 /planPermissionSets 	Singular Nouns Found in Consecutive Nodes	PlanPermissionSets represent a custom permission model for what managers and admins have permissions for on a plan.
-POST	 /addTeam 	Singular Nouns Found in Consecutive Nodes	Create a new Team.
 POST	 /addTeamManager 	Singular Nouns Found in Consecutive Nodes	Makes an existing user on the plan a manager of the Team. Managers can be added to multiple teams. This will have no impact on their license if the manager is a licensed user.
 POST	 /addTeamManager 	Singular Nouns Found in Consecutive Nodes	Makes an existing user on the plan a manager of the Team. Managers can be added to multiple teams. This will have no impact on their license if the manager is a licensed user.
 POST	 /addTeamMember 	Singular Nouns Found in Consecutive Nodes	Add a licensed user to a Team. This will not remove the user from any other Teams.
 POST	 /addTeamMember 	Singular Nouns Found in Consecutive Nodes	Add a licensed user to a Team. This will not remove the user from any other Teams.
-DELETE	 /deleteTeam 	Singular Nouns Found in Consecutive Nodes	Delete a Team.
-GET	 /editTeam 	Singular Nouns Found in Consecutive Nodes	Used to modify the details of a Team.
-POST	 /inviteManager 	Singular Nouns Found in Consecutive Nodes	Invite User to be a manager of a Team on the plan by sending them an email.
 POST	 /moveMemberToTeam 	Singular Nouns Found in Consecutive Nodes	Add or Move licensed User to a Team. This will remove the member from all currently assigned teams and add them to the new teams provided. If no teamIds are provided, the member will be removed from all teams and moved to the unassigned section.
 POST	 /moveMemberToTeam 	Singular Nouns Found in Consecutive Nodes	Add or Move licensed User to a Team. This will remove the member from all currently assigned teams and add them to the new teams provided. If no teamIds are provided, the member will be removed from all teams and moved to the unassigned section.
 DELETE	 /removeTeamManager 	Singular Nouns Found in Consecutive Nodes	Remove a manager from a Team.
@@ -63,30 +46,47 @@ GET	 /programAssessmentUserOptions 	Singular Nouns Found in Consecutive Nodes	Pr
 GET	 /programAssessmentUserOptions 	Singular Nouns Found in Consecutive Nodes	ProgramAssessmentUserOptions represent a list of options for sessions of a User taking a Criterion Assessment.
 GET	 /programUserProgress 	Singular Nouns Found in Consecutive Nodes	programUserProgress represents an aggregate report for every user currently on the plan as a zoomed out view of programAssessmentAttempts.
 GET	 /UserCertificationUploads 	Singular Nouns Found in Consecutive Nodes	represents a list of the certifications that users have uploaded while on the plan.
-DELETE	 /cancelInvite 	Singular Nouns Found in Consecutive Nodes	Cancel an invite sent to a User.
-POST	 /createUser 	Singular Nouns Found in Consecutive Nodes	Create a User.
-PUT	 /editUser 	Singular Nouns Found in Consecutive Nodes	Edit a User's information.
-POST	 /inviteMember 	Singular Nouns Found in Consecutive Nodes	Invite user to a plan.
-DELETE	 /removeLicense 	Singular Nouns Found in Consecutive Nodes	Remove a User's license
-DELETE	 /removeUser 	Singular Nouns Found in Consecutive Nodes	Remove Users from your plan. If User is a manager/plan-admin, their license will be removed but they will stay on the plan.
 GET	 /contentSlugToId 	Singular Nouns Found in Consecutive Nodes	ContentSlugToId represents a mapping from the contentSlug to an id.
 GET	 /contentSlugToId 	Singular Nouns Found in Consecutive Nodes	ContentSlugToId represents a mapping from the contentSlug to an id.
-GET	 /planInfo 	Singular Nouns Found in Consecutive Nodes	Returns information regarding a specific plan(s).
 
 ***Patterns*** 
-Count: 15
+Count: 39
 GET	 /channelProgress 	Cosistent Resource Archetype	ChannelProgress represents consumption of channel content by any user, regardless of whether they are a channel member or not.
 GET	 /channels 	Cosistent Resource Archetype	Channels represent collections of content like Courses, Paths, Projects, Guides, Interactive Courses, External Links, Labs, etc.
+POST	 /addChannel 	Cosistent Resource Archetype	Create a new Channel.
 POST	 /addChannelsToChannelGroups 	Cosistent Resource Archetype	Add one or more Channels to one or more Channel Groups. Note: Adding a Channel that is already on a Channel Group will return success as true and will not duplicate the Channel.
+POST	 /archiveChannel 	Cosistent Resource Archetype	Archive a Channel.
+POST	 /editChannel 	Cosistent Resource Archetype	Modify Channel details. All edits require both channelId and actorUserId.
+GET	 /contentCatalog 	Cosistent Resource Archetype	ContentCatalog represents an aggregate of all of the content types
+GET	 /courseCatalog 	Cosistent Resource Archetype	CourseCatalog represents a list of VideoCourses available on Pluralsight.com. Note: there can be up to a 24 hour delay in updates to this data.
+GET	 /labCatalog 	Cosistent Resource Archetype	LabCatalog represents a list of labs available at Pluralsight.
+GET	 /marketTaxonomy 	Cosistent Resource Archetype	marketTaxonomy represents one or more technology Concepts contained in a three level hierarchical SKOS taxonomy.
+GET	 /pathCatalog 	Cosistent Resource Archetype	Path Catalog represents a list of available Paths on Pluralsight.com.
+GET	 /programCatalog 	Cosistent Resource Archetype	programCatalog represents your plan's instance of the Tech Foundations program. This data will only be available to plans that have the Tech Foundations program. programCatalog contains PROGRAM and SUBJECT information for content related to your TF instance.
+GET	 /projectCatalog 	Cosistent Resource Archetype	ProjectCatalog represents a list of available Projects on Pluralsight.com.
 GET	 /tags 	Cosistent Resource Archetype	Tags represent one or more technology concepts associated with a piece of content.
 GET	 /roleIqsSummary 	Cosistent Resource Archetype	RoleIqsSummary is especially useful for Professional Plans as it represents a summary view of roles for your organization.
+POST	 /addRole 	Cosistent Resource Archetype	Create a new Role
 POST	 /assignTeamsToRole 	Cosistent Resource Archetype	Assign Teams to a Role.
 POST	 /assignUsersToRole 	Cosistent Resource Archetype	Assign Users to a Role.
+DELETE	 /deleteRole 	Cosistent Resource Archetype	Delete an existing Role.
+PUT	 /editRole 	Cosistent Resource Archetype	Edit an existing Role's information.
 GET	 /skillIqsSummary 	Cosistent Resource Archetype	SkillIqsSummary represents a summary view of Skill IQ levels for your organization.
 GET	 /teamManagers 	Cosistent Resource Archetype	TeamManagers represent a list of the plan users on a team who have additional rights to manage a Team that they are assigned to.
 GET	 /teams 	Cosistent Resource Archetype	Teams represents a list of teams (grouping of Users) associated with the provided API key. A User can belong to many Teams.
+POST	 /addTeam 	Cosistent Resource Archetype	Create a new Team.
+DELETE	 /deleteTeam 	Cosistent Resource Archetype	Delete a Team.
+GET	 /editTeam 	Cosistent Resource Archetype	Used to modify the details of a Team.
+POST	 /inviteManager 	Cosistent Resource Archetype	Invite User to be a manager of a Team on the plan by sending them an email.
 GET	 /courseProgress 	Cosistent Resource Archetype	CourseProgress returns course usage data, including current and previously licensed users.
 GET	  /priority 	Cosistent Resource Archetype	Priorities allow you to align your organizationâ€™s skill development to business objectives, accelerate growth, and monitor progress over time.
 GET	 /memberInvites 	Cosistent Resource Archetype	MemberInvites represent all invites that have been sent to Users for plan(s) associated with the provided API key.
 GET	 /planAdmins 	Cosistent Resource Archetype	PlanAdmins represent a list of Users that have special permissions to edit plan details and to create API keys.
 GET	 /users 	Cosistent Resource Archetype	Users represent a list of anyone that is currently using or has ever used a license on the Plan(s) associated with the provided API key. Users may also be team managers or plan admins with a license.
+DELETE	 /cancelInvite 	Cosistent Resource Archetype	Cancel an invite sent to a User.
+POST	 /createUser 	Cosistent Resource Archetype	Create a User.
+PUT	 /editUser 	Cosistent Resource Archetype	Edit a User's information.
+POST	 /inviteMember 	Cosistent Resource Archetype	Invite user to a plan.
+DELETE	 /removeLicense 	Cosistent Resource Archetype	Remove a User's license
+DELETE	 /removeUser 	Cosistent Resource Archetype	Remove Users from your plan. If User is a manager/plan-admin, their license will be removed but they will stay on the plan.
+GET	 /planInfo 	Cosistent Resource Archetype	Returns information regarding a specific plan(s).

@@ -1,54 +1,27 @@
 ***Anti-Pattern*** 
-Count: 115
-GET	 /users/<userID>/properties 	Singular Nouns Found in Consecutive Nodes	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
-POST	 /users/<userID>/properties 	Singular Nouns Found in Consecutive Nodes	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
-PUT	 /users/<userID>/properties 	Singular Nouns Found in Consecutive Nodes	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
-DELETE	 /users/<userID>/properties 	Singular Nouns Found in Consecutive Nodes	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
-GET	 /users/<userID>/devices 	Singular Nouns Found in Consecutive Nodes	Returns all devices owned by a user and/or shared devices on the user's account.
+Count: 68
 GET	 /users/<userID>/devicetypes 	Singular Nouns Found in Consecutive Nodes	Returns the device types owned by a user.
-GET	 /users/<userID>/devicetypes 	Singular Nouns Found in Consecutive Nodes	Returns the device types owned by a user.
-GET	 /users/<userID>/rules 	Singular Nouns Found in Consecutive Nodes	Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
-GET	 /users/<userID>/scenes 	Singular Nouns Found in Consecutive Nodes	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
-GET	 /users/<userID>/trials 	Singular Nouns Found in Consecutive Nodes	Returns the trials of a participant or administrator.
-GET	 /devices/<deviceID>/tokens 	Singular Nouns Found in Consecutive Nodes	Returns the access token of a device.
-PUT	 /devices/<deviceID>/tokens 	Singular Nouns Found in Consecutive Nodes	Creates a new access token for a device.
-DELETE	 /devices/<deviceID>/tokens 	Singular Nouns Found in Consecutive Nodes	Deletes the access token of a device.
 POST	 /devices/<deviceID>/providerauth 	Singular Nouns Found in Consecutive Nodes	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
 POST	 /devices/<deviceID>/providerauth 	Singular Nouns Found in Consecutive Nodes	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
-POST	 /devices/<deviceID>/providerauth 	Singular Nouns Found in Consecutive Nodes	Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
-DELETE	 /devices/<deviceID>/providerauth 	Singular Nouns Found in Consecutive Nodes	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
 DELETE	 /devices/<deviceID>/providerauth 	Singular Nouns Found in Consecutive Nodes	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
 DELETE	 /devices/<deviceID>/providerauth 	Singular Nouns Found in Consecutive Nodes	Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
 GET	 /devices/<deviceID>/status 	Singular Nouns Found in Consecutive Nodes	Returns current status of a device.
-GET	 /devices/<deviceID>/status 	Singular Nouns Found in Consecutive Nodes	Returns current status of a device.
-PUT	 /devices/<deviceID>/status 	Singular Nouns Found in Consecutive Nodes	Modifies current status of a device.
 PUT	 /devices/<deviceID>/status 	Singular Nouns Found in Consecutive Nodes	Modifies current status of a device.
 GET	 /devices/<deviceID>/certificate 	Singular Nouns Found in Consecutive Nodes	Returns fields for a device's certificates.
-GET	 /devices/<deviceID>/certificate 	Singular Nouns Found in Consecutive Nodes	Returns fields for a device's certificates.
-GET	 /devices/<deviceID>/shares 	Singular Nouns Found in Consecutive Nodes	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
-GET	 /devices/<deviceID>/shares/<shareID> 	Singular Nouns Found in Consecutive Nodes	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
-POST	 /devices/<deviceID>/shares 	Singular Nouns Found in Consecutive Nodes	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
-GET	 /users/<userID>/shares 	Singular Nouns Found in Consecutive Nodes	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
 GET	 /devicetypes/<deviceTypeID> 	Singular Nouns Found in Consecutive Nodes	Returns the device type of a device.
 GET	 /devicetypes/<deviceTypeID> 	Singular Nouns Found in Consecutive Nodes	Returns a list of device types.
 GET	 /devicetypes/<deviceTypeID>/manifests/latest/properties 	Singular Nouns Found in Consecutive Nodes	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
-GET	 /devicetypes/<deviceTypeID>/manifests/latest/properties 	Singular Nouns Found in Consecutive Nodes	Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
-GET	 /devicetypes/<deviceTypeID>/manifests/<version>/properties 	Singular Nouns Found in Consecutive Nodes	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
 GET	 /devicetypes/<deviceTypeID>/manifests/<version>/properties 	Singular Nouns Found in Consecutive Nodes	Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
 GET	 /devicetypes/<deviceTypeID>/availablemanifestversions 	Singular Nouns Found in Consecutive Nodes	Returns the available Manifest versions for a device type.
 GET	 /devicetypes/<deviceTypeID>/availablemanifestversions 	Singular Nouns Found in Consecutive Nodes	Returns the available Manifest versions for a device type.
 GET	 /devicetypes/<deviceTypeID>/availablemanifestversions 	Singular Nouns Found in Consecutive Nodes	Returns the available Manifest versions for a device type.
-GET	 /devicetypes/<deviceTypeID>/availablemanifestversions 	Singular Nouns Found in Consecutive Nodes	Returns the available Manifest versions for a device type.
 POST	 /devicetypes/<deviceTypeId>/whitelist 	Singular Nouns Found in Consecutive Nodes	Uploads an Approved List as a CSV file.
 POST	 /devicetypes/<deviceTypeId>/whitelist 	Singular Nouns Found in Consecutive Nodes	Uploads an Approved List as a CSV file.
-POST	 /devicetypes/<deviceTypeId>/whitelist 	Singular Nouns Found in Consecutive Nodes	Uploads an Approved List as a CSV file.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of an uploaded CSV.
-GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of an uploaded CSV.
-GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Singular Nouns Found in Consecutive Nodes	Returns the rows that were rejected in an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Singular Nouns Found in Consecutive Nodes	Returns the rows that were rejected in an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Singular Nouns Found in Consecutive Nodes	Returns the rows that were rejected in an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Singular Nouns Found in Consecutive Nodes	Returns the rows that were rejected in an uploaded CSV.
@@ -56,30 +29,22 @@ GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Singular Nou
 GET	 /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows 	Singular Nouns Found in Consecutive Nodes	Returns the rows that were rejected in an uploaded CSV.
 GET	 /devicetypes/<deviceTypeId>/whitelist 	Singular Nouns Found in Consecutive Nodes	Returns the Approved List for a device type.
 GET	 /devicetypes/<deviceTypeId>/whitelist 	Singular Nouns Found in Consecutive Nodes	Returns the Approved List for a device type.
-GET	 /devicetypes/<deviceTypeId>/whitelist 	Singular Nouns Found in Consecutive Nodes	Returns the Approved List for a device type.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Deletes a specified device from a device type's Approved List.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Deletes a specified device from a device type's Approved List.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Deletes a specified device from a device type's Approved List.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Deletes a specified device from a device type's Approved List.
-DELETE	 /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Deletes a specified device from a device type's Approved List.
-PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	Singular Nouns Found in Consecutive Nodes	Enables or disables a device type's Approved List.
 PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	Singular Nouns Found in Consecutive Nodes	Enables or disables a device type's Approved List.
 PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	Singular Nouns Found in Consecutive Nodes	Enables or disables a device type's Approved List.
 PUT	 /devicetypes/<deviceTypeID>/whitelist/enable 	Singular Nouns Found in Consecutive Nodes	Enables or disables a device type's Approved List.
 POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Singular Nouns Found in Consecutive Nodes	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
 POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Singular Nouns Found in Consecutive Nodes	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
-POST	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Singular Nouns Found in Consecutive Nodes	Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	Singular Nouns Found in Consecutive Nodes	Deletes an Approved List certificate for a device type.
 DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	Singular Nouns Found in Consecutive Nodes	Deletes an Approved List certificate for a device type.
-DELETE	 /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> 	Singular Nouns Found in Consecutive Nodes	Deletes an Approved List certificate for a device type.
-GET	 /devicetypes/<deviceTypeID>/whitelist/status 	Singular Nouns Found in Consecutive Nodes	Returns the enabled/disabled status of an Approved List.
 GET	 /devicetypes/<deviceTypeID>/whitelist/status 	Singular Nouns Found in Consecutive Nodes	Returns the enabled/disabled status of an Approved List.
 GET	 /devicetypes/<deviceTypeID>/whitelist/status 	Singular Nouns Found in Consecutive Nodes	Returns the enabled/disabled status of an Approved List.
 GET	 /devicetypes/<deviceTypeID>/whitelist/status 	Singular Nouns Found in Consecutive Nodes	Returns the enabled/disabled status of an Approved List.
 GET	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Singular Nouns Found in Consecutive Nodes	Returns details of an Approved List certificate.
 GET	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Singular Nouns Found in Consecutive Nodes	Returns details of an Approved List certificate.
-GET	 /devicetypes/<deviceTypeID>/whitelist/certificates 	Singular Nouns Found in Consecutive Nodes	Returns details of an Approved List certificate.
-GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Returns a specified vendor device ID.
 GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Returns a specified vendor device ID.
 GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Returns a specified vendor device ID.
 GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Singular Nouns Found in Consecutive Nodes	Returns a specified vendor device ID.
@@ -88,56 +53,64 @@ GET	 /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> 	Singular Nouns
 GET	 /messages/analytics/aggregates 	Plural Nouns Found in Consecutive Nodes	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
 GET	 /messages/analytics/aggregates 	Plural Nouns Found in Consecutive Nodes	Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
 GET	 /messages/analytics/histogram 	Plural Nouns Found in Consecutive Nodes	Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
-GET	 /messages/snapshots 	Plural Nouns Found in Consecutive Nodes	Returns last received value for all Manifest fields (aka device state) of a device or devices.
 GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Singular Nouns Found in Consecutive Nodes	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
 GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Singular Nouns Found in Consecutive Nodes	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
 GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Singular Nouns Found in Consecutive Nodes	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
 GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Singular Nouns Found in Consecutive Nodes	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
-GET	 /pricing/devices/<deviceID>/revenueshare/upgradepath 	Singular Nouns Found in Consecutive Nodes	If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
-GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Singular Nouns Found in Consecutive Nodes	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
 GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Singular Nouns Found in Consecutive Nodes	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
 GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Singular Nouns Found in Consecutive Nodes	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
 GET	 /pricing/devicetypes/<deviceTypeID>/pricingtiers 	Singular Nouns Found in Consecutive Nodes	Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
 GET	 /pricing/devices/<deviceID>/pricingtiers 	Singular Nouns Found in Consecutive Nodes	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
-GET	 /pricing/devices/<deviceID>/pricingtiers 	Singular Nouns Found in Consecutive Nodes	Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
 GET	 /messages/export/<exportID>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of the messages export.
 GET	 /messages/export/<exportID>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of the messages export.
-GET	 /messages/export/<exportID>/status 	Singular Nouns Found in Consecutive Nodes	Returns the status of the messages export.
-GET	 /messages/export/<exportID>/result 	Singular Nouns Found in Consecutive Nodes	Returns the result of the export query. The result call returns the response in tgz format.
 GET	 /messages/export/<exportID>/result 	Singular Nouns Found in Consecutive Nodes	Returns the result of the export query. The result call returns the response in tgz format.
 GET	 /messages/export/<exportID>/result 	Singular Nouns Found in Consecutive Nodes	Returns the result of the export query. The result call returns the response in tgz format.
 GET	 /messages/export/history 	Singular Nouns Found in Consecutive Nodes	Returns a list of export queries that have been performed.
 POST	 /subscriptions/<subscriptionID>/validate 	Singular Nouns Found in Consecutive Nodes	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
-POST	 /subscriptions/<subscriptionID>/validate 	Singular Nouns Found in Consecutive Nodes	Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
-GET	 /notifications/<notificationID>/messages 	Singular Nouns Found in Consecutive Nodes	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
-GET	 /rules/<ruleID>/executions 	Singular Nouns Found in Consecutive Nodes	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
-POST	 /rules/<ruleID>/actions 	Singular Nouns Found in Consecutive Nodes	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
-GET	 /rules/<ruleID>/actions 	Singular Nouns Found in Consecutive Nodes	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
-POST	 /ml/models/<modelID>/predict 	Singular Nouns Found in Consecutive Nodes	Returns the predicted output for a machine learning model.
 POST	 /ml/models/<modelID>/predict 	Singular Nouns Found in Consecutive Nodes	Returns the predicted output for a machine learning model.
 
 ***Patterns*** 
-Count: 28
+Count: 48
 GET	 /users/self 	Cosistent Resource Archetype	Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
+GET	 /users/<userID>/properties 	Cosistent Resource Archetype	Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
+POST	 /users/<userID>/properties 	Cosistent Resource Archetype	Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+PUT	 /users/<userID>/properties 	Cosistent Resource Archetype	Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+DELETE	 /users/<userID>/properties 	Cosistent Resource Archetype	Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
+GET	 /users/<userID>/devices 	Cosistent Resource Archetype	Returns all devices owned by a user and/or shared devices on the user's account.
+GET	 /users/<userID>/rules 	Cosistent Resource Archetype	Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+GET	 /users/<userID>/scenes 	Cosistent Resource Archetype	Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+GET	 /users/<userID>/trials 	Cosistent Resource Archetype	Returns the trials of a participant or administrator.
 GET	 /devices/<deviceID> 	Cosistent Resource Archetype	Returns a specific shared or owned device. Required permissions: READ on the device.
 POST	 /devices 	Cosistent Resource Archetype	Adds a device.
 PUT	 /devices/<deviceID> 	Cosistent Resource Archetype	Modifies a device's parameters.
 DELETE	 /devices/<deviceID> 	Cosistent Resource Archetype	Deletes a device.
+GET	 /devices/<deviceID>/tokens 	Cosistent Resource Archetype	Returns the access token of a device.
+PUT	 /devices/<deviceID>/tokens 	Cosistent Resource Archetype	Creates a new access token for a device.
+DELETE	 /devices/<deviceID>/tokens 	Cosistent Resource Archetype	Deletes the access token of a device.
 GET	 /devices/status 	Cosistent Resource Archetype	Returns a list of device statuses.
+GET	 /devices/<deviceID>/shares 	Cosistent Resource Archetype	Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
+GET	 /devices/<deviceID>/shares/<shareID> 	Cosistent Resource Archetype	Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+POST	 /devices/<deviceID>/shares 	Cosistent Resource Archetype	Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
+GET	 /users/<userID>/shares 	Cosistent Resource Archetype	List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
 POST	 /messages 	Cosistent Resource Archetype	Sends a message.
 GET	 /messages 	Cosistent Resource Archetype	Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
 POST	 /actions 	Cosistent Resource Archetype	Sends an Action to the specified device.
 GET	 /actions 	Cosistent Resource Archetype	Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
 GET	 /messages/last 	Cosistent Resource Archetype	Returns the most recent normalized messages from a device or devices.
 GET	 /messages/presence 	Cosistent Resource Archetype	Returns presence of normalized messages.
+GET	 /messages/snapshots 	Cosistent Resource Archetype	Returns last received value for all Manifest fields (aka device state) of a device or devices.
 POST	 /messages/export 	Cosistent Resource Archetype	Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
 POST	 /subscriptions 	Cosistent Resource Archetype	Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
 GET	 /subscriptions 	Cosistent Resource Archetype	Returns all subscriptions for the current application. This call accepts application tokens as the access token.
 GET	 /subscriptions/<subscriptionID> 	Cosistent Resource Archetype	Returns a subscription. This call accepts application and user tokens as the access token.
+GET	 /notifications/<notificationID>/messages 	Cosistent Resource Archetype	Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
 GET	 /rules/<ruleID> 	Cosistent Resource Archetype	Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 POST	 /rules 	Cosistent Resource Archetype	Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 PUT	 /rules/<ruleID> 	Cosistent Resource Archetype	Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
 DELETE	 /rules/<ruleID> 	Cosistent Resource Archetype	Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+GET	 /rules/<ruleID>/executions 	Cosistent Resource Archetype	Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+POST	 /rules/<ruleID>/actions 	Cosistent Resource Archetype	Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
+GET	 /rules/<ruleID>/actions 	Cosistent Resource Archetype	Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
 POST	 /scenes 	Cosistent Resource Archetype	Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
 PUT	 /scenes/<sceneID> 	Cosistent Resource Archetype	Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
 GET	 /scenes/<sceneID> 	Cosistent Resource Archetype	Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.

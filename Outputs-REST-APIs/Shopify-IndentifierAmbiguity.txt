@@ -3,83 +3,83 @@ Count: 0
 
 ***Patterns*** 
 Count: 80
-GET	 /admin/oauth/access_scopes.json 	[Regular Endpoints]	Retrieves a list of access scopes associated to the access token.
-POST	 /storefront_access_tokens.json 	[Regular Endpoints]	Creates a new StorefrontAccessToken
-DELETE	 /storefront_access_tokens/{storefront_access_token_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an existing storefront access token
-GET	 /storefront_access_tokens.json 	[Regular Endpoints]	Retrieves a list of storefront access tokens that have been issued
-GET	 /reports.json 	[Regular Endpoints]	Retrieves a list of reports
-GET	 /reports/{report_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single report
-POST	 /reports.json 	[Regular Endpoints]	Creates a new report
-PUT	 /reports/{report_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a report
-DELETE	 /reports/{report_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a report
-POST	 /application_charges.json 	[Regular Endpoints]	Creates an application charge
-GET	 /application_charges/{application_charge_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves an application charge
-GET	 /application_charges.json?since_id=556467234 	[Regular Endpoints]	Retrieves a list of application charges
-POST	 /application_credits.json 	[Regular Endpoints]	Creates an application credit
-GET	 /application_credits/{application_credit_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single application credit
-GET	 /application_credits.json 	[Regular Endpoints]	Retrieves all application credits
-POST	 /recurring_application_charges.json 	[Regular Endpoints]	Creates a recurring application charge
-GET	 /recurring_application_charges/{recurring_application_charge_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single charge
-GET	 /recurring_application_charges.json 	[Regular Endpoints]	Retrieves a list of recurring application charges
-DELETE	 /recurring_application_charges/{recurring_application_charge_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Cancels a recurring application charge
-PUT	 /recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the capped amount of a recurring application charge
-GET	 /customers.json 	[Regular Endpoints]	Retrieves a list of customers
-GET	 /customers/search.json?query=Bob country:United States 	[Regular Endpoints]	Searches for customers that match a supplied query
-GET	 /customers/{customer_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single customer
-POST	 /customers.json 	[Regular Endpoints]	Creates a customer
-PUT	 /customers/{customer_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a customer
-POST	 /customers/{customer_id}/account_activation_url.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates an account activation URL for a customer
-POST	 /customers/{customer_id}/send_invite.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Sends an account invite to a customer
-DELETE	 /customers/{customer_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a customer.
-GET	 /customers/count.json 	[Regular Endpoints]	Retrieves a count of customers
-GET	 /customers/{customer_id}/orders.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves all orders belonging to a customer
-GET	 /customers/{customer_id}/addresses.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of addresses for a customer
-GET	 /customers/{customer_id}/addresses/{address_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves details for a single customer address
-GET	 /customers/{customer_id}/addresses/{address_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves details for a single customer address
-POST	 /customers/{customer_id}/addresses.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new address for a customer
-PUT	 /customers/{customer_id}/addresses/{address_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing customer address
-PUT	 /customers/{customer_id}/addresses/{address_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing customer address
-DELETE	 /customers/{customer_id}/addresses/{address_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Removes an address from a customer’s address list
-DELETE	 /customers/{customer_id}/addresses/{address_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Removes an address from a customer’s address list
-PUT	 /customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy 	[Identifier is Enclosed in {} or <> or Starts with :]	Performs bulk operations for multiple customer addresses
-PUT	 /customers/{customer_id}/addresses/{address_id}/default.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the default address for a customer
-PUT	 /customers/{customer_id}/addresses/{address_id}/default.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the default address for a customer
-POST	 /price_rules/{price_rule_id}/discount_codes.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a discount code
-PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing discount code
-PUT	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing discount code
-GET	 /price_rules/{price_rule_id}/discount_codes.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of discount codes
-GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single discount code
-GET	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single discount code
-GET	 /discount_codes/lookup.json?code=SUMMERSALE10OFF 	[Regular Endpoints]	Retrieves the location of a discount code
-GET	 /discount_codes/count.json 	[Regular Endpoints]	Retrieves a count of discount codes for a shop
-DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a discount code
-DELETE	 /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a discount code
-POST	 /price_rules/{price_rule_id}/batch.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a discount code creation job
-GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a discount code creation job
-GET	 /price_rules/{price_rule_id}/batch/{batch_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a discount code creation job
-GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of discount codes for a discount code creation job
-GET	 /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of discount codes for a discount code creation job
-POST	 /price_rules.json 	[Regular Endpoints]	Creates a price rule
-PUT	 /price_rules/{price_rule_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing a price rule
-GET	 /price_rules.json 	[Regular Endpoints]	Retrieves a list of price rules
-GET	 /price_rules/{price_rule_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single price rule
-GET	 /price_rules/count.json 	[Regular Endpoints]	Retrieves a count of all price rules
-DELETE	 /price_rules/{price_rule_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an existing PriceRule
-GET	 /events.json 	[Regular Endpoints]	Retrieves a list of events
-GET	 /events/{event_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single event
-GET	 /events/count.json?created_at_min=2008-01-10T13:00:00+00:00 	[Regular Endpoints]	Retrieves a count of events
-GET	 /webhooks.json 	[Regular Endpoints]	Retrieves a list of webhooks
-GET	 /webhooks/count.json 	[Regular Endpoints]	Receive a count of all Webhooks
-GET	 /webhooks/{webhook_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Receive a single Webhook
-POST	 /webhooks.json 	[Regular Endpoints]	Create a new Webhook
-PUT	 /webhooks/{webhook_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Modify an existing Webhook
-DELETE	 /webhooks/{webhook_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an existing Webhook
-GET	 /inventory_items.json?ids=808950810,39072856,457924702 	[Regular Endpoints]	Retrieves a list of inventory items
-GET	 /inventory_items/{inventory_item_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single inventory item by ID
-PUT	 /inventory_items/{inventory_item_id}.json 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing inventory item
-GET	 /inventory_levels.json 	[Regular Endpoints]	Retrieves a list of inventory levels
-POST	 /inventory_levels/adjust.json 	[Regular Endpoints]	Adjusts the inventory level of an inventory item at a location
-DELETE	 /inventory_levels.json?inventory_item_id=808950810&location_id=905684977 	[Regular Endpoints]	Deletes an inventory level from a location
-POST	 /inventory_levels/connect.json 	[Regular Endpoints]	Connects an inventory item to a location
-POST	 /inventory_levels/set.json 	[Regular Endpoints]	Sets the inventory level for an inventory item at a location
-GET	 /locations.json 	[Regular Endpoints]	Retrieves a list of locations
+GET	/admin/oauth/access_scopes.json	[Regular Endpoints]	Retrieves a list of access scopes associated to the access token.
+POST	/storefront_access_tokens.json	[Regular Endpoints]	Creates a new StorefrontAccessToken
+DELETE	/storefront_access_tokens/{storefront_access_token_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes an existing storefront access token
+GET	/storefront_access_tokens.json	[Regular Endpoints]	Retrieves a list of storefront access tokens that have been issued
+GET	/reports.json	[Regular Endpoints]	Retrieves a list of reports
+GET	/reports/{report_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single report
+POST	/reports.json	[Regular Endpoints]	Creates a new report
+PUT	/reports/{report_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a report
+DELETE	/reports/{report_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a report
+POST	/application_charges.json	[Regular Endpoints]	Creates an application charge
+GET	/application_charges/{application_charge_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves an application charge
+GET	/application_charges.json?since_id=556467234	[Regular Endpoints]	Retrieves a list of application charges
+POST	/application_credits.json	[Regular Endpoints]	Creates an application credit
+GET	/application_credits/{application_credit_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single application credit
+GET	/application_credits.json	[Regular Endpoints]	Retrieves all application credits
+POST	/recurring_application_charges.json	[Regular Endpoints]	Creates a recurring application charge
+GET	/recurring_application_charges/{recurring_application_charge_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single charge
+GET	/recurring_application_charges.json	[Regular Endpoints]	Retrieves a list of recurring application charges
+DELETE	/recurring_application_charges/{recurring_application_charge_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Cancels a recurring application charge
+PUT	/recurring_application_charges/{recurring_application_charge_id}/customize.json?recurring_application_charge[capped_amount]=200	[Identifier is Enclosed in {} or <> or Starts with :]	Updates the capped amount of a recurring application charge
+GET	/customers.json	[Regular Endpoints]	Retrieves a list of customers
+GET	/customers/search.json?query=Bob country:United States	[Regular Endpoints]	Searches for customers that match a supplied query
+GET	/customers/{customer_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single customer
+POST	/customers.json	[Regular Endpoints]	Creates a customer
+PUT	/customers/{customer_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a customer
+POST	/customers/{customer_id}/account_activation_url.json	[Identifier is Enclosed in {} or <> or Starts with :]	Creates an account activation URL for a customer
+POST	/customers/{customer_id}/send_invite.json	[Identifier is Enclosed in {} or <> or Starts with :]	Sends an account invite to a customer
+DELETE	/customers/{customer_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a customer.
+GET	/customers/count.json	[Regular Endpoints]	Retrieves a count of customers
+GET	/customers/{customer_id}/orders.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves all orders belonging to a customer
+GET	/customers/{customer_id}/addresses.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of addresses for a customer
+GET	/customers/{customer_id}/addresses/{address_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves details for a single customer address
+GET	/customers/{customer_id}/addresses/{address_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves details for a single customer address
+POST	/customers/{customer_id}/addresses.json	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a new address for a customer
+PUT	/customers/{customer_id}/addresses/{address_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing customer address
+PUT	/customers/{customer_id}/addresses/{address_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing customer address
+DELETE	/customers/{customer_id}/addresses/{address_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Removes an address from a customer’s address list
+DELETE	/customers/{customer_id}/addresses/{address_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Removes an address from a customer’s address list
+PUT	/customers/{customer_id}/addresses/set.json?address_ids[]=1053317294&operation=destroy	[Identifier is Enclosed in {} or <> or Starts with :]	Performs bulk operations for multiple customer addresses
+PUT	/customers/{customer_id}/addresses/{address_id}/default.json	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the default address for a customer
+PUT	/customers/{customer_id}/addresses/{address_id}/default.json	[Identifier is Enclosed in {} or <> or Starts with :]	Sets the default address for a customer
+POST	/price_rules/{price_rule_id}/discount_codes.json	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a discount code
+PUT	/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing discount code
+PUT	/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing discount code
+GET	/price_rules/{price_rule_id}/discount_codes.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of discount codes
+GET	/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single discount code
+GET	/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single discount code
+GET	/discount_codes/lookup.json?code=SUMMERSALE10OFF	[Regular Endpoints]	Retrieves the location of a discount code
+GET	/discount_codes/count.json	[Regular Endpoints]	Retrieves a count of discount codes for a shop
+DELETE	/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a discount code
+DELETE	/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Deletes a discount code
+POST	/price_rules/{price_rule_id}/batch.json	[Identifier is Enclosed in {} or <> or Starts with :]	Creates a discount code creation job
+GET	/price_rules/{price_rule_id}/batch/{batch_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a discount code creation job
+GET	/price_rules/{price_rule_id}/batch/{batch_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a discount code creation job
+GET	/price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of discount codes for a discount code creation job
+GET	/price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a list of discount codes for a discount code creation job
+POST	/price_rules.json	[Regular Endpoints]	Creates a price rule
+PUT	/price_rules/{price_rule_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing a price rule
+GET	/price_rules.json	[Regular Endpoints]	Retrieves a list of price rules
+GET	/price_rules/{price_rule_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single price rule
+GET	/price_rules/count.json	[Regular Endpoints]	Retrieves a count of all price rules
+DELETE	/price_rules/{price_rule_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an existing PriceRule
+GET	/events.json	[Regular Endpoints]	Retrieves a list of events
+GET	/events/{event_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single event
+GET	/events/count.json?created_at_min=2008-01-10T13:00:00+00:00	[Regular Endpoints]	Retrieves a count of events
+GET	/webhooks.json	[Regular Endpoints]	Retrieves a list of webhooks
+GET	/webhooks/count.json	[Regular Endpoints]	Receive a count of all Webhooks
+GET	/webhooks/{webhook_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Receive a single Webhook
+POST	/webhooks.json	[Regular Endpoints]	Create a new Webhook
+PUT	/webhooks/{webhook_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Modify an existing Webhook
+DELETE	/webhooks/{webhook_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Remove an existing Webhook
+GET	/inventory_items.json?ids=808950810,39072856,457924702	[Regular Endpoints]	Retrieves a list of inventory items
+GET	/inventory_items/{inventory_item_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Retrieves a single inventory item by ID
+PUT	/inventory_items/{inventory_item_id}.json	[Identifier is Enclosed in {} or <> or Starts with :]	Updates an existing inventory item
+GET	/inventory_levels.json	[Regular Endpoints]	Retrieves a list of inventory levels
+POST	/inventory_levels/adjust.json	[Regular Endpoints]	Adjusts the inventory level of an inventory item at a location
+DELETE	/inventory_levels.json?inventory_item_id=808950810&location_id=905684977	[Regular Endpoints]	Deletes an inventory level from a location
+POST	/inventory_levels/connect.json	[Regular Endpoints]	Connects an inventory item to a location
+POST	/inventory_levels/set.json	[Regular Endpoints]	Sets the inventory level for an inventory item at a location
+GET	/locations.json	[Regular Endpoints]	Retrieves a list of locations

@@ -1,12 +1,12 @@
 ***Anti-Pattern*** 
-Count: 2
-GET	 /environments 	Parameter Tunneling	List environments. Gets a list of all environments.
-POST	 /environments 	Parameter Tunneling	New environment Creates a new environment from the template.
+Count: 17
 
 ***Patterns*** 
-Count: 23
+Count: 8
+GET	 /environments 	Parameter Adherence	List environments. Gets a list of all environments.
 GET	 /environments?latitude={latitude}&longitude={longitude} 	Parameter Adherence	Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
 GET	 /environments?key={key}&value={value} 	Parameter Adherence	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
+POST	 /environments 	Parameter Adherence	New environment Creates a new environment from the template.
 GET	 /environments/{environment_id} 	Parameter Adherence	Get environment. Gets an environment.
 PUT	 /environments/{environment_id} 	Parameter Adherence	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
 DELETE	 /environments/{environment_id} 	Parameter Adherence	Delete environment. Deletes an environment.

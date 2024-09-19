@@ -1,19 +1,15 @@
 ***Anti-Pattern*** 
-Count: 59
-POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
+Count: 48
 POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
 POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
 POST	 /createEventDocument/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event document
 POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
 POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
 POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
-POST	 /createEventGroup/{eventId}	Singular Nouns Found in Consecutive Nodes	Create a new group on the event
 POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
 POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
 POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
 POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
-POST	 /createEventPlanningLink/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event planning link
-POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
 POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
 POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
 POST	 /createEventSponsor/{eventId} 	Singular Nouns Found in Consecutive Nodes	Create swapcard event sponsor
@@ -24,13 +20,9 @@ POST	 /createExhibitorLink	Singular Nouns Found in Consecutive Nodes	Create an e
 POST	 /createExhibitorLink	Singular Nouns Found in Consecutive Nodes	Create an exhibitor link in an event
 POST	 /createFieldDefinition	Singular Nouns Found in Consecutive Nodes	Create a new field definition in an event, which is required for custom fields.
 POST	 /createFieldDefinition	Singular Nouns Found in Consecutive Nodes	Create a new field definition in an event, which is required for custom fields.
-POST	 /createProduct 	Singular Nouns Found in Consecutive Nodes	Create a new product in an event.
 POST	 /createPushNotification 	Singular Nouns Found in Consecutive Nodes	Create a push notification
 POST	 /createPushNotification 	Singular Nouns Found in Consecutive Nodes	Create a push notification
-POST	 /createRole 	Singular Nouns Found in Consecutive Nodes	Create a role
 POST	 /deleteEventExhibitors/{eventId}	Singular Nouns Found in Consecutive Nodes	Deprecated, use updateExhibitor with withEvent.data set to null instead
-POST	 /deleteEventExhibitors/{eventId}	Singular Nouns Found in Consecutive Nodes	Deprecated, use updateExhibitor with withEvent.data set to null instead
-POST	 /deleteEventNotifications/{eventId} 	Singular Nouns Found in Consecutive Nodes	Delete a swapcard event notification
 POST	 /deleteEventNotifications/{eventId} 	Singular Nouns Found in Consecutive Nodes	Delete a swapcard event notification
 POST	 /deleteExhibitorLinkRelation 	Singular Nouns Found in Consecutive Nodes	Delete a relation between two exhibitors in an exhibitor link
 POST	 /deleteExhibitorLinkRelation 	Singular Nouns Found in Consecutive Nodes	Delete a relation between two exhibitors in an exhibitor link
@@ -48,11 +40,8 @@ POST	 /updateEventPerson 	Singular Nouns Found in Consecutive Nodes	Update an ex
 POST	 /updateEventPerson 	Singular Nouns Found in Consecutive Nodes	Update an existing person in an event.
 POST	 /updateExhibitorMemberRoles 	Singular Nouns Found in Consecutive Nodes	Update a role
 POST	 /updateExhibitorMemberRoles 	Singular Nouns Found in Consecutive Nodes	Update a role
-POST	 /updateExhibitor	Singular Nouns Found in Consecutive Nodes	Update an exhibitor.
 POST	 /updateFieldDefinition	Singular Nouns Found in Consecutive Nodes	Update an existing field definition.
 POST	 /updateFieldDefinition	Singular Nouns Found in Consecutive Nodes	Update an existing field definition.
-POST	 /updateProduct	Singular Nouns Found in Consecutive Nodes	Update an existing product.
-POST	 /updateRole 	Singular Nouns Found in Consecutive Nodes	Update a role
 POST	 updateTicketType	Singular Nouns Found in Consecutive Nodes	Update an existing ticket type.
 POST	 updateTicketType	Singular Nouns Found in Consecutive Nodes	Update an existing ticket type.
 POST	 updateUserTerm	Singular Nouns Found in Consecutive Nodes	Update an existing user term.
@@ -61,7 +50,12 @@ POST	 /upsertEventNotification	Singular Nouns Found in Consecutive Nodes	Upsert 
 POST	 /upsertEventNotification	Singular Nouns Found in Consecutive Nodes	Upsert a notification for an event
 
 ***Patterns*** 
-Count: 3
+Count: 8
+POST	 /createProduct 	Cosistent Resource Archetype	Create a new product in an event.
+POST	 /createRole 	Cosistent Resource Archetype	Create a role
 POST	 /deleteProducts 	Cosistent Resource Archetype	Delete one or more products from a event, and return product IDs successfully deleted.
 POST	 /deleteRoles	Cosistent Resource Archetype	Delete one or more roles.
+POST	 /updateExhibitor	Cosistent Resource Archetype	Update an exhibitor.
+POST	 /updateProduct	Cosistent Resource Archetype	Update an existing product.
 POST	 /updateProducts	Cosistent Resource Archetype	Update an existing product.
+POST	 /updateRole 	Cosistent Resource Archetype	Update a role

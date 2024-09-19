@@ -1,91 +1,76 @@
 ***Anti-Pattern*** 
-Count: 87
-GET	 /allCards 	Parameter Tunneling	Fetches all pipe cards based on arguments
-GET	 /cards	Parameter Tunneling	Fetches a group of cards based on arguments
-GET	 /cardsImportations/{pipeId}	Parameter Tunneling	Lookup the cards importer history by the pipe ID
-GET	 /me 	Parameter Tunneling	Returns informations of the current authenticated user
-GET	 /organization/{id} 	Parameter Tunneling	Lookup an organization by its ID
-GET	 /organizations/{ids} 	Parameter Tunneling	Lookup organizations by their ID
-GET	 /phase/{id} 	Parameter Tunneling	Lookup a phase by its ID
-GET	 /pipe/{id} 	Parameter Tunneling	Lookup a pipe by its ID
-GET	 /pipeReportExport/{id}	Parameter Tunneling	Lookup a pipe report export by its ID
-GET	 /pipe/{ids} 	Parameter Tunneling	Lookup a pipe by their ID
-GET	 /pipe_relations/{id} 	Parameter Tunneling	Lookup pipe relations by their ID
-GET	 /recordsImportations/{tableID} 	Parameter Tunneling	Lookup the records importer history by the table ID
-GET	 /table/{id}	Parameter Tunneling	Lookup a database table by its ID
-GET	 /table/{ids}	Parameter Tunneling	Lookup a database tables by their ID
-GET	 /table_record/{id} 	Parameter Tunneling	Lookup a record by its ID
-GET	 /table_relations/{ids} 	Parameter Tunneling	Lookup table relations by their ID
-POST	 /createCard  	Parameter Tunneling	Creates a card
-POST	 /createCardRelation 	Parameter Tunneling	Creates a card relation
-POST	 /createComment	Parameter Tunneling	Creates a comment
-POST	 /createFieldCondition	Parameter Tunneling	Creates a field condition
-POST	 /createInboxEmail 	Parameter Tunneling	Creates an email
-POST	 /createLabel 	Parameter Tunneling	Creates a label
-POST	 /createOrganization	Parameter Tunneling	Creates an organization
-POST	 /createOrganizationWebhook 	Parameter Tunneling	Creates an organization-level webhook
-POST	 /createPhase 	Parameter Tunneling	Creates a phase
-POST	 /createPhaseField 	Parameter Tunneling	Creates a phase field
-POST	/createPipe 	Parameter Tunneling	Creates a pipe
-POST	/createPipeRelation 	Parameter Tunneling	Creates a pipe relation
-POST	 /createPresignedUrl 	Parameter Tunneling	Returns a temporary S3 presigned url to upload a file
-POST	 /createPresignedUrlForPipePdfTemplate 	Parameter Tunneling	Returns a temporary S3 presigned url to upload a pdf template image
-POST	 /createTable 	Parameter Tunneling	Creates a table
-POST	 /createTableField 	Parameter Tunneling	Creates a table field
-POST	 /createTableRecord 	Parameter Tunneling	Creates a record
-POST	 /createTableRecordInRestrictedTable 	Parameter Tunneling	Creates a record in a private table
-POST	 /deleteFieldCondition 	Parameter Tunneling	Deletes a field condition
-POST	 /deleteInboxEmail 	Parameter Tunneling	Deletes an email
-POST	 /deleteLabel 	Parameter Tunneling	Deletes a label
-POST	 /deleteOrganization 	Parameter Tunneling	Deletes an organization
-POST	 /deleteOrganizationWebhook 	Parameter Tunneling	Deletes a webhook
-POST	 /deletePhaseField 	Parameter Tunneling	Deletes a phase field
-POST	 /deletePipe 	Parameter Tunneling	Deletes a pipe
-POST	 /deletePipeRelation 	Parameter Tunneling	Deletes a pipe relation
-POST	 /deleteTable 	Parameter Tunneling	Deletes a table
-POST	 /deleteTableField 	Parameter Tunneling	Deletes a table field
-POST	 /deleteTableRecord 	Parameter Tunneling	Deletes a record
-POST	 /deleteTableRelation 	Parameter Tunneling	Deletes a table relation
-POST	 /deleteWebhook 	Parameter Tunneling	Deletes a webhook (pipe or table level)
-POST	 /createTableRelation 	Parameter Tunneling	Creates a table relation
-POST	 /createWebhook 	Parameter Tunneling	Creates a webhook at a pipe or table level
-POST	 /deleteCard 	Parameter Tunneling	Deletes a card
-POST	 /deleteComment 	Parameter Tunneling	Deletes a comment
-POST	 /deletePipe	Parameter Tunneling	Deletes a pipe
-POST	 /interfaceEmbedCreat	Parameter Tunneling	Create a new Interface
-POST	 /recordsImporter 	Parameter Tunneling	Create new records from a xlsx file
-POST	 /removeUserFromOrg 	Parameter Tunneling	Remove a user from an organization
-POST	 /removeUserFromPipe 	Parameter Tunneling	Removes a user from pipe
-POST	 /removeUserFromTable 	Parameter Tunneling	Removes a user from table
-POST	 /updateCard 	Parameter Tunneling	Updates an existing card
-POST	 /updateCardField 	Parameter Tunneling	Updates an existing card field
-POST	 /updateComment	Parameter Tunneling	Updates an existing comment
-POST	 /updateFieldsValues 	Parameter Tunneling	Update one or many values of fields inside a Card or Table record.
-POST	 /updateLabel 	Parameter Tunneling	Updates an existing label
-POST	 /updateOrganization 	Parameter Tunneling	Updates an existing organization
-POST	 /updateOrganizationWebhook 	Parameter Tunneling	Updates an existing organization-level webhook
-POST	 /updatePhase	Parameter Tunneling	Updates an existing phase
-POST	 /updatePhaseField 	Parameter Tunneling	Updates an existing phase field
-POST	 /updatePipe 	Parameter Tunneling	Updates an existing pipe
-POST	 /updatePipeRelation 	Parameter Tunneling	Updates an existing pipe relation
-POST	 /updateTable 	Parameter Tunneling	Updates an existing table
-POST	 /updateTableField 	Parameter Tunneling	Updates an existing table field
-POST	 /updateTableRecord 	Parameter Tunneling	Updates an existing record
-POST	 /updateWebhook	Parameter Tunneling	Updates an existing webhook (pipe or table level)
+Count: 90
 
 ***Patterns*** 
-Count: 3
+Count: 0
+GET	 /allCards 	Parameter Adherence	Fetches all pipe cards based on arguments
 GET	 /autoFillFields 	Parameter Adherence	Lookup the values that will automatically fill the child-card's start form fields
 GET	 /card 	Parameter Adherence	Lookup a card by its ID
+GET	 /cards	Parameter Adherence	Fetches a group of cards based on arguments
+GET	 /cardsImportations/{pipeId}	Parameter Adherence	Lookup the cards importer history by the pipe ID
 GET	 /findCards/{pipeId} 	Parameter Adherence	Fetch cards based on fields' inputs
 GET	 /findCards/{tableId}	Parameter Adherence	Fetch records based on fields' inputs
 GET	 /inbox_emails/card_id 	Parameter Adherence	Lookup the card's emails by its ID
+GET	 /me 	Parameter Adherence	Returns informations of the current authenticated user
+GET	 /organization/{id} 	Parameter Adherence	Lookup an organization by its ID
+GET	 /organizations/{ids} 	Parameter Adherence	Lookup organizations by their ID
+GET	 /phase/{id} 	Parameter Adherence	Lookup a phase by its ID
+GET	 /pipe/{id} 	Parameter Adherence	Lookup a pipe by its ID
+GET	 /pipeReportExport/{id}	Parameter Adherence	Lookup a pipe report export by its ID
+GET	 /pipe/{ids} 	Parameter Adherence	Lookup a pipe by their ID
+GET	 /pipe_relations/{id} 	Parameter Adherence	Lookup pipe relations by their ID
 GET	 /pipe_templates 	Parameter Adherence	Lookup all pipe templates available on Pipefy
+GET	 /recordsImportations/{tableID} 	Parameter Adherence	Lookup the records importer history by the table ID
+GET	 /table/{id}	Parameter Adherence	Lookup a database table by its ID
+GET	 /table/{ids}	Parameter Adherence	Lookup a database tables by their ID
+GET	 /table_record/{id} 	Parameter Adherence	Lookup a record by its ID
 GET	 /table_records/{table_id} 	Parameter Adherence	Fetches a group of records based on arguments
+GET	 /table_relations/{ids} 	Parameter Adherence	Lookup table relations by their ID
 POST	 /clonePipes 	Parameter Adherence	Clones a pipe
+POST	 /createCard  	Parameter Adherence	Creates a card
+POST	 /createCardRelation 	Parameter Adherence	Creates a card relation
+POST	 /createComment	Parameter Adherence	Creates a comment
+POST	 /createFieldCondition	Parameter Adherence	Creates a field condition
+POST	 /createInboxEmail 	Parameter Adherence	Creates an email
+POST	 /createLabel 	Parameter Adherence	Creates a label
+POST	 /createOrganization	Parameter Adherence	Creates an organization
+POST	 /createOrganizationWebhook 	Parameter Adherence	Creates an organization-level webhook
+POST	 /createPhase 	Parameter Adherence	Creates a phase
+POST	 /createPhaseField 	Parameter Adherence	Creates a phase field
+POST	/createPipe 	Parameter Adherence	Creates a pipe
+POST	/createPipeRelation 	Parameter Adherence	Creates a pipe relation
+POST	 /createPresignedUrl 	Parameter Adherence	Returns a temporary S3 presigned url to upload a file
+POST	 /createPresignedUrlForPipePdfTemplate 	Parameter Adherence	Returns a temporary S3 presigned url to upload a pdf template image
+POST	 /createTable 	Parameter Adherence	Creates a table
+POST	 /createTableField 	Parameter Adherence	Creates a table field
+POST	 /createTableRecord 	Parameter Adherence	Creates a record
+POST	 /createTableRecordInRestrictedTable 	Parameter Adherence	Creates a record in a private table
+POST	 /deleteFieldCondition 	Parameter Adherence	Deletes a field condition
+POST	 /deleteInboxEmail 	Parameter Adherence	Deletes an email
+POST	 /deleteLabel 	Parameter Adherence	Deletes a label
+POST	 /deleteOrganization 	Parameter Adherence	Deletes an organization
+POST	 /deleteOrganizationWebhook 	Parameter Adherence	Deletes a webhook
+POST	 /deletePhaseField 	Parameter Adherence	Deletes a phase field
+POST	 /deletePipe 	Parameter Adherence	Deletes a pipe
+POST	 /deletePipeRelation 	Parameter Adherence	Deletes a pipe relation
+POST	 /deleteTable 	Parameter Adherence	Deletes a table
+POST	 /deleteTableField 	Parameter Adherence	Deletes a table field
+POST	 /deleteTableRecord 	Parameter Adherence	Deletes a record
+POST	 /deleteTableRelation 	Parameter Adherence	Deletes a table relation
+POST	 /deleteWebhook 	Parameter Adherence	Deletes a webhook (pipe or table level)
 POST	 /exportPipeReport	Parameter Adherence	Exports a pipe report
+POST	 /createTableRelation 	Parameter Adherence	Creates a table relation
+POST	 /createWebhook 	Parameter Adherence	Creates a webhook at a pipe or table level
+POST	 /deleteCard 	Parameter Adherence	Deletes a card
+POST	 /deleteComment 	Parameter Adherence	Deletes a comment
+POST	 /deletePipe	Parameter Adherence	Deletes a pipe
+POST	 /interfaceEmbedCreat	Parameter Adherence	Create a new Interface
 POST	 /inviteMembers 	Parameter Adherence	Invites new members for the organization
 POST	 /moveCardToPhase 	Parameter Adherence	Moves a card to another phase
+POST	 /recordsImporter 	Parameter Adherence	Create new records from a xlsx file
+POST	 /removeUserFromOrg 	Parameter Adherence	Remove a user from an organization
+POST	 /removeUserFromPipe 	Parameter Adherence	Removes a user from pipe
+POST	 /removeUserFromTable 	Parameter Adherence	Removes a user from table
 POST	 /sendInboxEmail 	Parameter Adherence	Sends an email
 POST	 /setFieldConditionOrder 	Parameter Adherence	Sets field condition order
 POST	 /setRole 	Parameter Adherence	Sets the role of a user
@@ -93,3 +78,18 @@ POST	 /setRoles 	Parameter Adherence	Sets role of multiple users
 POST	 /setSummaryAttributes 	Parameter Adherence	Sets summary attributes
 POST	 /setTableFieldOrder	Parameter Adherence	Sets table field order
 POST	 /setTableRecordFieldValue	Parameter Adherence	Sets record field value
+POST	 /updateCard 	Parameter Adherence	Updates an existing card
+POST	 /updateCardField 	Parameter Adherence	Updates an existing card field
+POST	 /updateComment	Parameter Adherence	Updates an existing comment
+POST	 /updateFieldsValues 	Parameter Adherence	Update one or many values of fields inside a Card or Table record.
+POST	 /updateLabel 	Parameter Adherence	Updates an existing label
+POST	 /updateOrganization 	Parameter Adherence	Updates an existing organization
+POST	 /updateOrganizationWebhook 	Parameter Adherence	Updates an existing organization-level webhook
+POST	 /updatePhase	Parameter Adherence	Updates an existing phase
+POST	 /updatePhaseField 	Parameter Adherence	Updates an existing phase field
+POST	 /updatePipe 	Parameter Adherence	Updates an existing pipe
+POST	 /updatePipeRelation 	Parameter Adherence	Updates an existing pipe relation
+POST	 /updateTable 	Parameter Adherence	Updates an existing table
+POST	 /updateTableField 	Parameter Adherence	Updates an existing table field
+POST	 /updateTableRecord 	Parameter Adherence	Updates an existing record
+POST	 /updateWebhook	Parameter Adherence	Updates an existing webhook (pipe or table level)

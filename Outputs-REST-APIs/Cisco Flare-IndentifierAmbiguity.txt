@@ -1,50 +1,50 @@
 ***Anti-Pattern*** 
-Count: 1
-GET	 /environments?key={key}&value={value} 	[Identifier is Not Enclosed in {} or <> or does not Start with :]	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
+Count: 0
 
 ***Patterns*** 
-Count: 44
-GET	 /environments 	[Regular Endpoints]	List environments. Gets a list of all environments.
-GET	 /environments?latitude={latitude}&longitude={longitude} 	[Regular Endpoints]	Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
-POST	 /environments 	[Regular Endpoints]	New environment Creates a new environment from the template.
-GET	 /environments/{environment_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get environment. Gets an environment.
-PUT	 /environments/{environment_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
-DELETE	 /environments/{environment_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete environment. Deletes an environment.
-GET	 /environments/{environment_id}/zones 	[Identifier is Enclosed in {} or <> or Starts with :]	List zones. Gets a list of all zones in the environment.
-GET	 /environments/{environment_id}/zones?x={x}&y={y} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of all zones in the environment. Params can include the following: If x and y coordinates are specified, returns a list of all zones in the environment containing the given point.
-GET	 /environments/{environment_id}/zones?key={key}&value={value} 	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of all zones in the environment. Params can include the following: If key and value are specified, returns zones whose data objects contain the given key/value pair.
-POST	 /environments/{environment_id}/zones 	[Identifier is Enclosed in {} or <> or Starts with :]	New zone. Creates a new zone from the template.
-GET	 /environments/{environment_id}/zones/{zone_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get zone. Gets a zone.
-GET	 /environments/{environment_id}/zones/{zone_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get zone. Gets a zone.
-PUT	 /environments/{environment_id}/zones/{zone_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a zone. The message can contain just the properties of the object to be updated.
-PUT	 /environments/{environment_id}/zones/{zone_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a zone. The message can contain just the properties of the object to be updated.
-DELETE	 /environments/{environment_id}/zones/{zone_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete zone. Deletes a zone.
-DELETE	 /environments/{environment_id}/zones/{zone_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete zone. Deletes a zone.
-GET	 /environments/{environment_id}/zones/{zone_id}/things 	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone.
-GET	 /environments/{environment_id}/zones/{zone_id}/things 	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone.
-GET	 /environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} 	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
-GET	 /environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance} 	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
-GET	 /environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} 	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
-GET	 /environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value} 	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
-POST	 /environments/{environment_id}/zones/{zone_id}/things 	[Identifier is Enclosed in {} or <> or Starts with :]	New thing. Creates a new thing from the template.
-POST	 /environments/{environment_id}/zones/{zone_id}/things 	[Identifier is Enclosed in {} or <> or Starts with :]	New thing. Creates a new thing from the template.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing. Gets a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing. Gets a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing. Gets a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key} 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
-GET	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position 	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
-PUT	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
-PUT	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
-PUT	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
-DELETE	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete thing. Deletes a thing.
-DELETE	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete thing. Deletes a thing.
-DELETE	 /environments/{environment_id}/zones/{zone_id}/things/{thing_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Delete thing. Deletes a thing.
-GET	 /environments/{environment_id}/devices 	[Identifier is Enclosed in {} or <> or Starts with :]	List devices. Gets a list of all devices in the environment.
+Count: 45
+GET	/environments	[Regular Endpoints]	List environments. Gets a list of all environments.
+GET	/environments?latitude={latitude}&longitude={longitude}	[Regular Endpoints]	Gets a list of all environments. Params can include the following: If latitude and longitude are specified, gets a list of environments whose geofence contains the given point. The geofence of each environment includes all points within a particular distance from a point on earth.
+GET	/environments?key={key}&value={value}	[Regular Endpoints]	Gets a list of all environments. Params can include the following: If key and value are specified, returns environments whose data objects contain the given key/value pair.
+POST	/environments	[Regular Endpoints]	New environment Creates a new environment from the template.
+GET	/environments/{environment_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get environment. Gets an environment.
+PUT	/environments/{environment_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
+DELETE	/environments/{environment_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete environment. Deletes an environment.
+GET	/environments/{environment_id}/zones	[Identifier is Enclosed in {} or <> or Starts with :]	List zones. Gets a list of all zones in the environment.
+GET	/environments/{environment_id}/zones?x={x}&y={y}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of all zones in the environment. Params can include the following: If x and y coordinates are specified, returns a list of all zones in the environment containing the given point.
+GET	/environments/{environment_id}/zones?key={key}&value={value}	[Identifier is Enclosed in {} or <> or Starts with :]	Gets a list of all zones in the environment. Params can include the following: If key and value are specified, returns zones whose data objects contain the given key/value pair.
+POST	/environments/{environment_id}/zones	[Identifier is Enclosed in {} or <> or Starts with :]	New zone. Creates a new zone from the template.
+GET	/environments/{environment_id}/zones/{zone_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get zone. Gets a zone.
+GET	/environments/{environment_id}/zones/{zone_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get zone. Gets a zone.
+PUT	/environments/{environment_id}/zones/{zone_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a zone. The message can contain just the properties of the object to be updated.
+PUT	/environments/{environment_id}/zones/{zone_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Updates a zone. The message can contain just the properties of the object to be updated.
+DELETE	/environments/{environment_id}/zones/{zone_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete zone. Deletes a zone.
+DELETE	/environments/{environment_id}/zones/{zone_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete zone. Deletes a zone.
+GET	/environments/{environment_id}/zones/{zone_id}/things	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone.
+GET	/environments/{environment_id}/zones/{zone_id}/things	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone.
+GET	/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
+GET	/environments/{environment_id}/zones/{zone_id}/things?x={x}&y={y}&distance={distance}	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If x, y and distance values are specified, returns a list of all things in the zone that are within the given distance from the given point.
+GET	/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
+GET	/environments/{environment_id}/zones/{zone_id}/things?key={key}&value={value}	[Identifier is Enclosed in {} or <> or Starts with :]	List things. Gets a list of all things in a zone. Params can include the following: If key and value are specified, returns things whose data objects contain the given key/value pair.
+POST	/environments/{environment_id}/zones/{zone_id}/things	[Identifier is Enclosed in {} or <> or Starts with :]	New thing. Creates a new thing from the template.
+POST	/environments/{environment_id}/zones/{zone_id}/things	[Identifier is Enclosed in {} or <> or Starts with :]	New thing. Creates a new thing from the template.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing. Gets a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing. Gets a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing. Gets a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data. Gets all data values for a thing by making a REST call. You can also get the data for a thing using the getData Socket.IO call.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/data/{key}	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing data value. Gets a single data value for a thing.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
+GET	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}/position	[Identifier is Enclosed in {} or <> or Starts with :]	Get thing position. Gets the position for a thing by making a REST call. You can also get the position of a thing using the getPosition Socket.IO call.
+PUT	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
+PUT	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
+PUT	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Update thing. Updates a thing. The message can contain just the properties of the object to be updated.
+DELETE	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete thing. Deletes a thing.
+DELETE	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete thing. Deletes a thing.
+DELETE	/environments/{environment_id}/zones/{zone_id}/things/{thing_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Delete thing. Deletes a thing.
+GET	/environments/{environment_id}/devices	[Identifier is Enclosed in {} or <> or Starts with :]	List devices. Gets a list of all devices in the environment.

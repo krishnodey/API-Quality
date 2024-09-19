@@ -1,10 +1,10 @@
 ***Anti-Pattern*** 
 Count: 7
-GET	 /connection-check 	Parameter Tunneling	Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned.
-GET	 /connection-check 	Parameter Tunneling	Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned.
 
 ***Patterns*** 
 Count: 0
+GET	 /connection-check 	Parameter Adherence	Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned.
+GET	 /connection-check 	Parameter Adherence	Check the connection status of the anomaly detection service. If the service is ready, a message of "The anomaly detection service is up." will be returned.
 POST	 /anomaly-detection/timeseries/multivariate/batch 	Parameter Adherence	Detect anomalies on multivariate time series
 POST	 /anomaly-detection/timeseries/univariate/batch 	Parameter Adherence	Detect anomalies on univariate time series
 POST	 /anomaly-detection/timeseries/semi-supervised/model 	Parameter Adherence	Discover anomaly model using semi-supervised approach

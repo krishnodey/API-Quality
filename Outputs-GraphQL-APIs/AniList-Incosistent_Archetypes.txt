@@ -1,7 +1,5 @@
 ***Anti-Pattern*** 
-Count: 43
-POST	 /v2/oauth/token 	Singular Nouns Found in Consecutive Nodes	Converting Authorization Codes To Access Tokens
-POST	 /v2/oauth/pin 	Singular Nouns Found in Consecutive Nodes	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
+Count: 30
 POST	 v2/SaveMediaListEntry	Singular Nouns Found in Consecutive Nodes	Create or update a media list entry
 POST	 v2/SaveMediaListEntry	Singular Nouns Found in Consecutive Nodes	Create or update a media list entry
 POST	 v2/SaveMediaListEntry	Singular Nouns Found in Consecutive Nodes	Create or update a media list entry
@@ -16,7 +14,6 @@ POST	 v2/SaveTextActivity	Singular Nouns Found in Consecutive Nodes	Create or up
 POST	 v2/SaveTextActivity	Singular Nouns Found in Consecutive Nodes	Create or update text activity for the currently authenticated user
 POST	 v2/SaveListActivity	Singular Nouns Found in Consecutive Nodes	Update list activity
 POST	 v2/SaveListActivity	Singular Nouns Found in Consecutive Nodes	Update list activity
-POST	 v2/DeleteActivity	Singular Nouns Found in Consecutive Nodes	Delete an activity item of the authenticated users
 POST	 v2/ToggleActivityPin	Singular Nouns Found in Consecutive Nodes	Toggle activity to be pinned to the top of the user's activity feed
 POST	 v2/ToggleActivityPin	Singular Nouns Found in Consecutive Nodes	Toggle activity to be pinned to the top of the user's activity feed
 POST	 v2/ToggleActivitySubscription	Singular Nouns Found in Consecutive Nodes	Toggle the subscription of an activity item
@@ -25,18 +22,8 @@ POST	 v2/SaveActivityReply	Singular Nouns Found in Consecutive Nodes	Create or u
 POST	 v2/SaveActivityReply	Singular Nouns Found in Consecutive Nodes	Create or update an activity reply
 POST	 v2/DeleteActivityReply	Singular Nouns Found in Consecutive Nodes	Delete an activity reply of the authenticated users
 POST	 v2/DeleteActivityReply	Singular Nouns Found in Consecutive Nodes	Delete an activity reply of the authenticated users
-POST	 v2/ToggleLike	Singular Nouns Found in Consecutive Nodes	Add or remove a like from a likeable type. Returns all the users who liked the same model
-POST	 v2/ToggleLikeV2	Singular Nouns Found in Consecutive Nodes	Add or remove a like from a likeable type.
-POST	 v2/ToggleFollow	Singular Nouns Found in Consecutive Nodes	Toggle the un/following of a user
-POST	 v2/ToggleFavourite	Singular Nouns Found in Consecutive Nodes	Favourite or unfavourite an anime, manga, character, staff member, or studio
 POST	 v2/UpdateFavouriteOrder	Singular Nouns Found in Consecutive Nodes	Update the order favourites are displayed in
 POST	 v2/UpdateFavouriteOrder	Singular Nouns Found in Consecutive Nodes	Update the order favourites are displayed in
-POST	 v2/SaveReview	Singular Nouns Found in Consecutive Nodes	Create or update a review
-POST	 v2/DeleteReview	Singular Nouns Found in Consecutive Nodes	Delete a review
-POST	 v2/RateReview	Singular Nouns Found in Consecutive Nodes	Rate a review
-POST	 v2/SaveRecommendation	Singular Nouns Found in Consecutive Nodes	Recommendation a media
-POST	 v2/SaveThread	Singular Nouns Found in Consecutive Nodes	Create or update a forum thread
-POST	 v2/DeleteThread	Singular Nouns Found in Consecutive Nodes	Delete a thread
 POST	 v2/ToggleThreadSubscription	Singular Nouns Found in Consecutive Nodes	Toggle the subscription of a forum thread
 POST	 v2/ToggleThreadSubscription	Singular Nouns Found in Consecutive Nodes	Toggle the subscription of a forum thread
 POST	 v2/SaveThreadComment	Singular Nouns Found in Consecutive Nodes	Create or update a thread comment
@@ -45,4 +32,17 @@ POST	 v2/DeleteThreadComment	Singular Nouns Found in Consecutive Nodes	Delete a 
 POST	 v2/DeleteThreadComment	Singular Nouns Found in Consecutive Nodes	Delete a thread comment
 
 ***Patterns*** 
-Count: 0
+Count: 13
+POST	 /v2/oauth/token 	Cosistent Resource Archetype	Converting Authorization Codes To Access Tokens
+POST	 /v2/oauth/pin 	Cosistent Resource Archetype	If you are absolutely unable to have a Http or application URI scheme redirection you can use the Auth Pin redirect URL.
+POST	 v2/DeleteActivity	Cosistent Resource Archetype	Delete an activity item of the authenticated users
+POST	 v2/ToggleLike	Cosistent Resource Archetype	Add or remove a like from a likeable type. Returns all the users who liked the same model
+POST	 v2/ToggleLikeV2	Cosistent Resource Archetype	Add or remove a like from a likeable type.
+POST	 v2/ToggleFollow	Cosistent Resource Archetype	Toggle the un/following of a user
+POST	 v2/ToggleFavourite	Cosistent Resource Archetype	Favourite or unfavourite an anime, manga, character, staff member, or studio
+POST	 v2/SaveReview	Cosistent Resource Archetype	Create or update a review
+POST	 v2/DeleteReview	Cosistent Resource Archetype	Delete a review
+POST	 v2/RateReview	Cosistent Resource Archetype	Rate a review
+POST	 v2/SaveRecommendation	Cosistent Resource Archetype	Recommendation a media
+POST	 v2/SaveThread	Cosistent Resource Archetype	Create or update a forum thread
+POST	 v2/DeleteThread	Cosistent Resource Archetype	Delete a thread

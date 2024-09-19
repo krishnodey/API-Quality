@@ -1,9 +1,5 @@
 ***Anti-Pattern*** 
-Count: 151
-POST	 /v4/search/companies.{format} 	Singular Nouns Found in Consecutive Nodes	Find companies based on search criteria.
-POST	 /v4/search/charities.{format} 	Singular Nouns Found in Consecutive Nodes	Find charities based on search criteria.
-POST	 /v4/search/keywords.{format} 	Singular Nouns Found in Consecutive Nodes	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
-POST	 /v4/search/regions.{format} 	Singular Nouns Found in Consecutive Nodes	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.
+Count: 147
 GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
 GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
 GET	 /v4/company/{countryCode}/{companyId}.{format} 	Singular Nouns Found in Consecutive Nodes	Get key information for a given company.
@@ -153,4 +149,8 @@ GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular 
 GET	 /v4/charity/{countryCode}/{charityId}/areas-of-activity.{format} 	Singular Nouns Found in Consecutive Nodes	Get classifiers for a given charity.
 
 ***Patterns*** 
-Count: 0
+Count: 4
+POST	 /v4/search/companies.{format} 	Cosistent Resource Archetype	Find companies based on search criteria.
+POST	 /v4/search/charities.{format} 	Cosistent Resource Archetype	Find charities based on search criteria.
+POST	 /v4/search/keywords.{format} 	Cosistent Resource Archetype	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters
+POST	 /v4/search/regions.{format} 	Cosistent Resource Archetype	Find regions based on search criteria. Region IDs can then be used as a value for company or director search filters.

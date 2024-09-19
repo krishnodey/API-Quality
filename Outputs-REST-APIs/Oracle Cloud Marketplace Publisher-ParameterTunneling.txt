@@ -1,11 +1,9 @@
 ***Anti-Pattern*** 
-Count: 3
-GET	 /installrequests 	Parameter Tunneling	Get the list of application install requests for all your published apps.
-GET	 /applications 	Parameter Tunneling	Get the list of all applications for the publisher.
-POST	 /applications 	Parameter Tunneling	Create a new application listing. The application goes through a state lifecycle. A newly created application starts off in the "New" state. Application edits are allowed in this state. To publish the listing to the Marketplace, the application listing needs to be submitted for approval.
+Count: 20
 
 ***Patterns*** 
-Count: 40
+Count: 23
+GET	 /installrequests 	Parameter Adherence	Get the list of application install requests for all your published apps.
 DELETE	 /applications/{listingVersionId} 	Parameter Adherence	Delete an application. Only applications that are in a NEW state can be deleted.
 DELETE	 /applications/{listingVersionId}/banner 	Parameter Adherence	Delete the banner for the application.
 DELETE	 /applications/{listingVersionId}/comments/{id} 	Parameter Adherence	Delete a status comment.
@@ -15,6 +13,7 @@ DELETE	 /applications/{listingVersionId}/screenshots/{id} 	Parameter Adherence	D
 DELETE	 /applications/{listingVersionId}/supportingdocs/{id} 	Parameter Adherence	Delete a supporting document for an existing application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Parameter Adherence	Delete the package of an application.
 DELETE	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId}/resources/{resourceId} 	Parameter Adherence	Delete a specific resource of the application's package.
+GET	 /applications 	Parameter Adherence	Get the list of all applications for the publisher.
 GET	 /applications/{listingVersionId} 	Parameter Adherence	Get the details of the application with the specified listing ID.
 GET	 /applications/{listingVersionId}/availableservices 	Parameter Adherence	Get a list of service integrators. Publishers can recommend particular service integrators for their application listings by adding them to each application listing as recommended services.
 GET	 /applications/{listingVersionId}/comments 	Parameter Adherence	Get the status comments for the application.
@@ -32,6 +31,7 @@ PATCH	 /applications/{listingVersionId}/relateddocs/{id} 	Parameter Adherence	Pa
 PATCH	 /applications/{listingVersionId}/screenshots 	Parameter Adherence	Partially Update the Screenshot for an application.
 PATCH	 /applications/{listingVersionId}/supportingdocs/{id} 	Parameter Adherence	Partially Update a supporting document for the application.
 PATCH	 /appstore/publisher/v2/applications/{listingVersionId}/packages/{packageVersionId} 	Parameter Adherence	Validate the specified package. A listing with a package cannot be submitted for approval if the corresponding package is not validated.
+POST	 /applications 	Parameter Adherence	Create a new application listing. The application goes through a state lifecycle. A newly created application starts off in the "New" state. Application edits are allowed in this state. To publish the listing to the Marketplace, the application listing needs to be submitted for approval.
 POST	 /applications/{listingVersionId}/banner 	Parameter Adherence	Create a banner for the application.
 POST	 /applications/{listingVersionId}/comments 	Parameter Adherence	Create a status comment for the application.
 POST	 /applications/{listingVersionId}/icon 	Parameter Adherence	Upload an icon for the application listing. The icon dimensions must be 130 X 130 px. The following extensions are allowed: png, jpg.

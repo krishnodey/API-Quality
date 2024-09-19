@@ -3,93 +3,93 @@ Count: 0
 
 ***Patterns*** 
 Count: 90
-GET	 /allCards 	[Regular Endpoints]	Fetches all pipe cards based on arguments
-GET	 /autoFillFields 	[Regular Endpoints]	Lookup the values that will automatically fill the child-card's start form fields
-GET	 /card 	[Regular Endpoints]	Lookup a card by its ID
-GET	 /cards	[Regular Endpoints]	Fetches a group of cards based on arguments
-GET	 /cardsImportations/{pipeId}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup the cards importer history by the pipe ID
-GET	 /findCards/{pipeId} 	[Identifier is Enclosed in {} or <> or Starts with :]	Fetch cards based on fields' inputs
-GET	 /findCards/{tableId}	[Identifier is Enclosed in {} or <> or Starts with :]	Fetch records based on fields' inputs
-GET	 /inbox_emails/card_id 	[Regular Endpoints]	Lookup the card's emails by its ID
-GET	 /me 	[Regular Endpoints]	Returns informations of the current authenticated user
-GET	 /organization/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup an organization by its ID
-GET	 /organizations/{ids} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup organizations by their ID
-GET	 /phase/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a phase by its ID
-GET	 /pipe/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a pipe by its ID
-GET	 /pipeReportExport/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a pipe report export by its ID
-GET	 /pipe/{ids} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a pipe by their ID
-GET	 /pipe_relations/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup pipe relations by their ID
-GET	 /pipe_templates 	[Regular Endpoints]	Lookup all pipe templates available on Pipefy
-GET	 /recordsImportations/{tableID} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup the records importer history by the table ID
-GET	 /table/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a database table by its ID
-GET	 /table/{ids}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a database tables by their ID
-GET	 /table_record/{id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a record by its ID
-GET	 /table_records/{table_id} 	[Identifier is Enclosed in {} or <> or Starts with :]	Fetches a group of records based on arguments
-GET	 /table_relations/{ids} 	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup table relations by their ID
-POST	 /clonePipes 	[Regular Endpoints]	Clones a pipe
-POST	 /createCard  	[Regular Endpoints]	Creates a card
-POST	 /createCardRelation 	[Regular Endpoints]	Creates a card relation
-POST	 /createComment	[Regular Endpoints]	Creates a comment
-POST	 /createFieldCondition	[Regular Endpoints]	Creates a field condition
-POST	 /createInboxEmail 	[Regular Endpoints]	Creates an email
-POST	 /createLabel 	[Regular Endpoints]	Creates a label
-POST	 /createOrganization	[Regular Endpoints]	Creates an organization
-POST	 /createOrganizationWebhook 	[Regular Endpoints]	Creates an organization-level webhook
-POST	 /createPhase 	[Regular Endpoints]	Creates a phase
-POST	 /createPhaseField 	[Regular Endpoints]	Creates a phase field
-POST	/createPipe 	[Regular Endpoints]	Creates a pipe
-POST	/createPipeRelation 	[Regular Endpoints]	Creates a pipe relation
-POST	 /createPresignedUrl 	[Regular Endpoints]	Returns a temporary S3 presigned url to upload a file
-POST	 /createPresignedUrlForPipePdfTemplate 	[Regular Endpoints]	Returns a temporary S3 presigned url to upload a pdf template image
-POST	 /createTable 	[Regular Endpoints]	Creates a table
-POST	 /createTableField 	[Regular Endpoints]	Creates a table field
-POST	 /createTableRecord 	[Regular Endpoints]	Creates a record
-POST	 /createTableRecordInRestrictedTable 	[Regular Endpoints]	Creates a record in a private table
-POST	 /deleteFieldCondition 	[Regular Endpoints]	Deletes a field condition
-POST	 /deleteInboxEmail 	[Regular Endpoints]	Deletes an email
-POST	 /deleteLabel 	[Regular Endpoints]	Deletes a label
-POST	 /deleteOrganization 	[Regular Endpoints]	Deletes an organization
-POST	 /deleteOrganizationWebhook 	[Regular Endpoints]	Deletes a webhook
-POST	 /deletePhaseField 	[Regular Endpoints]	Deletes a phase field
-POST	 /deletePipe 	[Regular Endpoints]	Deletes a pipe
-POST	 /deletePipeRelation 	[Regular Endpoints]	Deletes a pipe relation
-POST	 /deleteTable 	[Regular Endpoints]	Deletes a table
-POST	 /deleteTableField 	[Regular Endpoints]	Deletes a table field
-POST	 /deleteTableRecord 	[Regular Endpoints]	Deletes a record
-POST	 /deleteTableRelation 	[Regular Endpoints]	Deletes a table relation
-POST	 /deleteWebhook 	[Regular Endpoints]	Deletes a webhook (pipe or table level)
-POST	 /exportPipeReport	[Regular Endpoints]	Exports a pipe report
-POST	 /createTableRelation 	[Regular Endpoints]	Creates a table relation
-POST	 /createWebhook 	[Regular Endpoints]	Creates a webhook at a pipe or table level
-POST	 /deleteCard 	[Regular Endpoints]	Deletes a card
-POST	 /deleteComment 	[Regular Endpoints]	Deletes a comment
-POST	 /deletePipe	[Regular Endpoints]	Deletes a pipe
-POST	 /interfaceEmbedCreat	[Regular Endpoints]	Create a new Interface
-POST	 /inviteMembers 	[Regular Endpoints]	Invites new members for the organization
-POST	 /moveCardToPhase 	[Regular Endpoints]	Moves a card to another phase
-POST	 /recordsImporter 	[Regular Endpoints]	Create new records from a xlsx file
-POST	 /removeUserFromOrg 	[Regular Endpoints]	Remove a user from an organization
-POST	 /removeUserFromPipe 	[Regular Endpoints]	Removes a user from pipe
-POST	 /removeUserFromTable 	[Regular Endpoints]	Removes a user from table
-POST	 /sendInboxEmail 	[Regular Endpoints]	Sends an email
-POST	 /setFieldConditionOrder 	[Regular Endpoints]	Sets field condition order
-POST	 /setRole 	[Regular Endpoints]	Sets the role of a user
-POST	 /setRoles 	[Regular Endpoints]	Sets role of multiple users
-POST	 /setSummaryAttributes 	[Regular Endpoints]	Sets summary attributes
-POST	 /setTableFieldOrder	[Regular Endpoints]	Sets table field order
-POST	 /setTableRecordFieldValue	[Regular Endpoints]	Sets record field value
-POST	 /updateCard 	[Regular Endpoints]	Updates an existing card
-POST	 /updateCardField 	[Regular Endpoints]	Updates an existing card field
-POST	 /updateComment	[Regular Endpoints]	Updates an existing comment
-POST	 /updateFieldsValues 	[Regular Endpoints]	Update one or many values of fields inside a Card or Table record.
-POST	 /updateLabel 	[Regular Endpoints]	Updates an existing label
-POST	 /updateOrganization 	[Regular Endpoints]	Updates an existing organization
-POST	 /updateOrganizationWebhook 	[Regular Endpoints]	Updates an existing organization-level webhook
-POST	 /updatePhase	[Regular Endpoints]	Updates an existing phase
-POST	 /updatePhaseField 	[Regular Endpoints]	Updates an existing phase field
-POST	 /updatePipe 	[Regular Endpoints]	Updates an existing pipe
-POST	 /updatePipeRelation 	[Regular Endpoints]	Updates an existing pipe relation
-POST	 /updateTable 	[Regular Endpoints]	Updates an existing table
-POST	 /updateTableField 	[Regular Endpoints]	Updates an existing table field
-POST	 /updateTableRecord 	[Regular Endpoints]	Updates an existing record
-POST	 /updateWebhook	[Regular Endpoints]	Updates an existing webhook (pipe or table level)
+GET	/allCards	[Regular Endpoints]	Fetches all pipe cards based on arguments
+GET	/autoFillFields	[Regular Endpoints]	Lookup the values that will automatically fill the child-card's start form fields
+GET	/card	[Regular Endpoints]	Lookup a card by its ID
+GET	/cards	[Regular Endpoints]	Fetches a group of cards based on arguments
+GET	/cardsImportations/{pipeId}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup the cards importer history by the pipe ID
+GET	/findCards/{pipeId}	[Identifier is Enclosed in {} or <> or Starts with :]	Fetch cards based on fields' inputs
+GET	/findCards/{tableId}	[Identifier is Enclosed in {} or <> or Starts with :]	Fetch records based on fields' inputs
+GET	/inbox_emails/card_id	[Regular Endpoints]	Lookup the card's emails by its ID
+GET	/me	[Regular Endpoints]	Returns informations of the current authenticated user
+GET	/organization/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup an organization by its ID
+GET	/organizations/{ids}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup organizations by their ID
+GET	/phase/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a phase by its ID
+GET	/pipe/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a pipe by its ID
+GET	/pipeReportExport/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a pipe report export by its ID
+GET	/pipe/{ids}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a pipe by their ID
+GET	/pipe_relations/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup pipe relations by their ID
+GET	/pipe_templates	[Regular Endpoints]	Lookup all pipe templates available on Pipefy
+GET	/recordsImportations/{tableID}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup the records importer history by the table ID
+GET	/table/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a database table by its ID
+GET	/table/{ids}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a database tables by their ID
+GET	/table_record/{id}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup a record by its ID
+GET	/table_records/{table_id}	[Identifier is Enclosed in {} or <> or Starts with :]	Fetches a group of records based on arguments
+GET	/table_relations/{ids}	[Identifier is Enclosed in {} or <> or Starts with :]	Lookup table relations by their ID
+POST	/clonePipes	[Regular Endpoints]	Clones a pipe
+POST	/createCard	[Regular Endpoints]	Creates a card
+POST	/createCardRelation	[Regular Endpoints]	Creates a card relation
+POST	/createComment	[Regular Endpoints]	Creates a comment
+POST	/createFieldCondition	[Regular Endpoints]	Creates a field condition
+POST	/createInboxEmail	[Regular Endpoints]	Creates an email
+POST	/createLabel	[Regular Endpoints]	Creates a label
+POST	/createOrganization	[Regular Endpoints]	Creates an organization
+POST	/createOrganizationWebhook	[Regular Endpoints]	Creates an organization-level webhook
+POST	/createPhase	[Regular Endpoints]	Creates a phase
+POST	/createPhaseField	[Regular Endpoints]	Creates a phase field
+POST	/createPipe	[Regular Endpoints]	Creates a pipe
+POST	/createPipeRelation	[Regular Endpoints]	Creates a pipe relation
+POST	/createPresignedUrl	[Regular Endpoints]	Returns a temporary S3 presigned url to upload a file
+POST	/createPresignedUrlForPipePdfTemplate	[Regular Endpoints]	Returns a temporary S3 presigned url to upload a pdf template image
+POST	/createTable	[Regular Endpoints]	Creates a table
+POST	/createTableField	[Regular Endpoints]	Creates a table field
+POST	/createTableRecord	[Regular Endpoints]	Creates a record
+POST	/createTableRecordInRestrictedTable	[Regular Endpoints]	Creates a record in a private table
+POST	/deleteFieldCondition	[Regular Endpoints]	Deletes a field condition
+POST	/deleteInboxEmail	[Regular Endpoints]	Deletes an email
+POST	/deleteLabel	[Regular Endpoints]	Deletes a label
+POST	/deleteOrganization	[Regular Endpoints]	Deletes an organization
+POST	/deleteOrganizationWebhook	[Regular Endpoints]	Deletes a webhook
+POST	/deletePhaseField	[Regular Endpoints]	Deletes a phase field
+POST	/deletePipe	[Regular Endpoints]	Deletes a pipe
+POST	/deletePipeRelation	[Regular Endpoints]	Deletes a pipe relation
+POST	/deleteTable	[Regular Endpoints]	Deletes a table
+POST	/deleteTableField	[Regular Endpoints]	Deletes a table field
+POST	/deleteTableRecord	[Regular Endpoints]	Deletes a record
+POST	/deleteTableRelation	[Regular Endpoints]	Deletes a table relation
+POST	/deleteWebhook	[Regular Endpoints]	Deletes a webhook (pipe or table level)
+POST	/exportPipeReport	[Regular Endpoints]	Exports a pipe report
+POST	/createTableRelation	[Regular Endpoints]	Creates a table relation
+POST	/createWebhook	[Regular Endpoints]	Creates a webhook at a pipe or table level
+POST	/deleteCard	[Regular Endpoints]	Deletes a card
+POST	/deleteComment	[Regular Endpoints]	Deletes a comment
+POST	/deletePipe	[Regular Endpoints]	Deletes a pipe
+POST	/interfaceEmbedCreat	[Regular Endpoints]	Create a new Interface
+POST	/inviteMembers	[Regular Endpoints]	Invites new members for the organization
+POST	/moveCardToPhase	[Regular Endpoints]	Moves a card to another phase
+POST	/recordsImporter	[Regular Endpoints]	Create new records from a xlsx file
+POST	/removeUserFromOrg	[Regular Endpoints]	Remove a user from an organization
+POST	/removeUserFromPipe	[Regular Endpoints]	Removes a user from pipe
+POST	/removeUserFromTable	[Regular Endpoints]	Removes a user from table
+POST	/sendInboxEmail	[Regular Endpoints]	Sends an email
+POST	/setFieldConditionOrder	[Regular Endpoints]	Sets field condition order
+POST	/setRole	[Regular Endpoints]	Sets the role of a user
+POST	/setRoles	[Regular Endpoints]	Sets role of multiple users
+POST	/setSummaryAttributes	[Regular Endpoints]	Sets summary attributes
+POST	/setTableFieldOrder	[Regular Endpoints]	Sets table field order
+POST	/setTableRecordFieldValue	[Regular Endpoints]	Sets record field value
+POST	/updateCard	[Regular Endpoints]	Updates an existing card
+POST	/updateCardField	[Regular Endpoints]	Updates an existing card field
+POST	/updateComment	[Regular Endpoints]	Updates an existing comment
+POST	/updateFieldsValues	[Regular Endpoints]	Update one or many values of fields inside a Card or Table record.
+POST	/updateLabel	[Regular Endpoints]	Updates an existing label
+POST	/updateOrganization	[Regular Endpoints]	Updates an existing organization
+POST	/updateOrganizationWebhook	[Regular Endpoints]	Updates an existing organization-level webhook
+POST	/updatePhase	[Regular Endpoints]	Updates an existing phase
+POST	/updatePhaseField	[Regular Endpoints]	Updates an existing phase field
+POST	/updatePipe	[Regular Endpoints]	Updates an existing pipe
+POST	/updatePipeRelation	[Regular Endpoints]	Updates an existing pipe relation
+POST	/updateTable	[Regular Endpoints]	Updates an existing table
+POST	/updateTableField	[Regular Endpoints]	Updates an existing table field
+POST	/updateTableRecord	[Regular Endpoints]	Updates an existing record
+POST	/updateWebhook	[Regular Endpoints]	Updates an existing webhook (pipe or table level)

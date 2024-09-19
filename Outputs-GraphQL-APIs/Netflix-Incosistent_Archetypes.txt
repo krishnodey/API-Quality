@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 20
+Count: 18
 POST	 /binaries/byteBuf 	Singular Nouns Found in Consecutive Nodes	registerByteBufBinary
 POST	 /binaries/byteArray 	Singular Nouns Found in Consecutive Nodes	registerByteArrayBinary
 POST	 /content/rawContentSource 	Singular Nouns Found in Consecutive Nodes	rawContentSource
@@ -18,15 +18,15 @@ POST	 /content/movieContent 	Singular Nouns Found in Consecutive Nodes	movieCont
 POST	 content/movieContentBroken 	Singular Nouns Found in Consecutive Nodes	movieContentBroken
 POST	 content/movieContentBroken 	Singular Nouns Found in Consecutive Nodes	movieContentBroken
 POST	 content/movieContentBroken 	Singular Nouns Found in Consecutive Nodes	movieContentBroken
-POST	 /users/{userId}/recommendations 	Singular Nouns Found in Consecutive Nodes	updateRecommendation
-GET	 /users/{userId}/recommendations 	Singular Nouns Found in Consecutive Nodes	recommendationsByUserId
 
 ***Patterns*** 
-Count: 7
+Count: 9
 GET	 /movies/{id} 	Cosistent Resource Archetype	findMovieById
 GET	 /rawMovies/{id} 	Cosistent Resource Archetype	findRawMovieById
 GET	 /movies?name={name}&author={author} 	Cosistent Resource Archetype	findMovie
 POST	 /movies 	Cosistent Resource Archetype	registerMovie
 POST	 /titles 	Cosistent Resource Archetype	registerTitle
 DELETE	 /movies/{id} 	Cosistent Resource Archetype	deleteMovie
+POST	 /users/{userId}/recommendations 	Cosistent Resource Archetype	updateRecommendation
+GET	 /users/{userId}/recommendations 	Cosistent Resource Archetype	recommendationsByUserId
 GET	 /recommendations?category={category}&ageGroup={ageGroup} 	Cosistent Resource Archetype	recommendationsBy

@@ -1,8 +1,8 @@
 ***Anti-Pattern*** 
-Count: 0
+Count: 33
 
 ***Patterns*** 
-Count: 33
+Count: 0
 POST	 /v4/search/companies.{format} 	Parameter Adherence	Find companies based on search criteria.
 POST	 /v4/search/charities.{format} 	Parameter Adherence	Find charities based on search criteria.
 POST	 /v4/search/keywords.{format} 	Parameter Adherence	Find keywords based on search criteria. Full keywords can then be used as a value for company or director search filters

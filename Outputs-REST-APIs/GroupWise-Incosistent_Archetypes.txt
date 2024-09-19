@@ -1,13 +1,8 @@
 ***Anti-Pattern*** 
-Count: 33
-GET	 /list/{type} 	Singular Nouns Found in Consecutive Nodes	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
+Count: 27
 GET	 /list/{type}/{base} 	Singular Nouns Found in Consecutive Nodes	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
 GET	 /list/{type}/{base} 	Singular Nouns Found in Consecutive Nodes	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
-GET	 /async/{id} 	Singular Nouns Found in Consecutive Nodes	Get a particular asynchronous job status
-DELETE	 /async/{id} 	Singular Nouns Found in Consecutive Nodes	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
-GET	 /diagnostics/attributes?locale 	Plural Nouns Found in Consecutive Nodes	Return a map of attribute id to names.
 GET	 /diagnostics/index/{index}?attrs 	Singular Nouns Found in Consecutive Nodes	Reads objects from the specified index
-GET	 /diagnostics/object/{id} 	Singular Nouns Found in Consecutive Nodes	Dump an object from the domain database identified by it's DRN and record type.
 GET	 /domains/{domain}/addressbook/view 	Singular Nouns Found in Consecutive Nodes	Returns the address book view defined for the domain
 PUT	 /domains/{domain}/addressbook/view 	Singular Nouns Found in Consecutive Nodes	Returns the address book view defined for the domain
 GET	 /domains/{domain}/administrator 	Singular Nouns Found in Consecutive Nodes	Return the administrator for this domain
@@ -24,7 +19,6 @@ GET	 /domains/{domain}/refaccesscontrols 	Singular Nouns Found in Consecutive No
 GET	 /domains/{domain}/refaccesscontrols 	Plural Nouns Found in Consecutive Nodes	Get the Access Control List for the domain
 PUT	 /domains/{domain}/refaccesscontrols 	Singular Nouns Found in Consecutive Nodes	Update the Access Control List for the domain
 PUT	 /domains/{domain}/refaccesscontrols 	Plural Nouns Found in Consecutive Nodes	Update the Access Control List for the domain
-GET	 /domains/attributes 	Plural Nouns Found in Consecutive Nodes	Get all available Domain Attributes
 GET	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Singular Nouns Found in Consecutive Nodes	Get a specific Gateway given the name
 PUT	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Singular Nouns Found in Consecutive Nodes	Update a specific Class of Service given the name
 DELETE	 /domains/{domain}/gateways/{gateway}/classofservice/{cosname} 	Singular Nouns Found in Consecutive Nodes	Delete a specific Class of Service given the name
@@ -35,10 +29,15 @@ POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	Singular Nouns Found in Co
 POST	 /domains/{domain}/gateways/{gateway}/recoverDb 	Singular Nouns Found in Consecutive Nodes	Recover the Access Control database for the specified gateway. This command will recover the database in place.
 
 ***Patterns*** 
-Count: 27
+Count: 33
+GET	 /list/{type} 	Cosistent Resource Archetype	Get a list of Objects given the type For example: /gwadmin-service/list/USER (will return all users)
 GET	 /application 	Cosistent Resource Archetype	Generates and displays the API documentation (this document) taken from the WADL and programming documentation. Note: You can also use "application.wadl" resource to get the actual WADL document.
 GET	 /async?state 	Cosistent Resource Archetype	Used to run and track asynchronous operations. Use AsyncApi.run() to schedule a new asynchronous job. The job will be registered in the list of running jobs and will be queryable through the /async/{jobId} resource. After the jobs completes it will remain in the list of active jobs for REMOVE_DELAY (currently 60 seconds) at which time it is auto-removed. It can be removed before that time using the DELETE on /async/{jobId}.
+GET	 /async/{id} 	Cosistent Resource Archetype	Get a particular asynchronous job status
+DELETE	 /async/{id} 	Cosistent Resource Archetype	Delete a job. If the job is done, then it is removed. If the job is not yet done then a request will be sent to the thread executing the job to cancel it. Once the job is canceled it will remove itself from the job list.
+GET	 /diagnostics/attributes?locale 	Cosistent Resource Archetype	Return a map of attribute id to names.
 GET	 /diagnostics/index 	Cosistent Resource Archetype	Returns the list of available indices to query
+GET	 /diagnostics/object/{id} 	Cosistent Resource Archetype	Dump an object from the domain database identified by it's DRN and record type.
 GET	 /domains 	Cosistent Resource Archetype	Get a list of Domains for this system.
 POST	 /domains 	Cosistent Resource Archetype	Create a domain given the data. Note: The "rebuild" resource should be used to create the related database file (wpdomain.db) afterwards.
 DELETE	 /domains/{domain} 	Cosistent Resource Archetype	Delete a specific Domain given the domain name
@@ -51,6 +50,7 @@ DELETE	 /domains/{domain}/addressbook/labels/{field} 	Cosistent Resource Archety
 GET	 /domains/{domain}/links?direction 	Cosistent Resource Archetype	List the links for this domain. Specify a 'direction' query parameter to read either the inbound or outbound links. If no direction is specified then all links are read (both inbound and outbound).
 GET	 /domains/{domain}/links/{link} 	Cosistent Resource Archetype	Get the domain link between domainName and linkName
 PUT	 /domains/{domain}/links/{link} 	Cosistent Resource Archetype	Update the domain link between domainName and linkName
+GET	 /domains/attributes 	Cosistent Resource Archetype	Get all available Domain Attributes
 GET	 /domains/{domain}/gateways 	Cosistent Resource Archetype	Performs a query to find all the Gateways for this GroupWise system.
 POST	 /domains/{domain}/gateways 	Cosistent Resource Archetype	Create an Gateway given the Gateway data
 DELETE	 /domains/{domain}/gateways/{gateway} 	Cosistent Resource Archetype	Delete a specific Gateway given the name

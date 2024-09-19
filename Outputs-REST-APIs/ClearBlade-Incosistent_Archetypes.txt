@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 172
+Count: 169
 POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
 POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
 POST	 /api/user/reg 	Singular Nouns Found in Consecutive Nodes	Register user
@@ -155,9 +155,6 @@ DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Dele
 DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
 DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
 DELETE	 /api/message/{systemKey} 	Singular Nouns Found in Consecutive Nodes	Delete message history
-POST	 /admin/reg 	Singular Nouns Found in Consecutive Nodes	Registers a new developer account with the CB platform
-POST	 /admin/auth 	Singular Nouns Found in Consecutive Nodes	Authorizes a CB Developer account
-POST	 /admin/logout 	Singular Nouns Found in Consecutive Nodes	Logs a CB developer out of their session
 POST	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a new system in a developers account
 POST	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a new system in a developers account
 GET	 /admin/systemmanagement 	Singular Nouns Found in Consecutive Nodes	Gets a systems info
@@ -174,4 +171,7 @@ PUT	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Crea
 PUT	 /admin/collectionmanagement 	Singular Nouns Found in Consecutive Nodes	Creates a column within an existing collection
 
 ***Patterns*** 
-Count: 0
+Count: 3
+POST	 /admin/reg 	Cosistent Resource Archetype	Registers a new developer account with the CB platform
+POST	 /admin/auth 	Cosistent Resource Archetype	Authorizes a CB Developer account
+POST	 /admin/logout 	Cosistent Resource Archetype	Logs a CB developer out of their session

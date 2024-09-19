@@ -1,5 +1,5 @@
 ***Anti-Pattern*** 
-Count: 99
+Count: 92
 POST	 /api/getAccess 	Singular Nouns Found in Consecutive Nodes	Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct.
 POST	 /api/getAccess 	Singular Nouns Found in Consecutive Nodes	Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct.
 POST	 /api/getAccess 	Singular Nouns Found in Consecutive Nodes	Returns the Authentication Token X-AccessToken, as part of response headers, if the provided user name and password is correct.
@@ -27,7 +27,6 @@ POST	 /bui/changeStatus/{factory}({persid}) 	Singular Nouns Found in Consecutive
 GET	 /bui/allFeeds({persid}) 	Singular Nouns Found in Consecutive Nodes	Returns Activity Log Information for the provided ticket
 GET	 /bui/allFeeds({persid}) 	Singular Nouns Found in Consecutive Nodes	Returns Activity Log Information for the provided ticket
 GET	 /bui/allFeeds({persid}) 	Singular Nouns Found in Consecutive Nodes	Returns Activity Log Information for the provided ticket
-POST	 /bui/attmnt 	Singular Nouns Found in Consecutive Nodes	Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.
 GET	 /bui/getBopSID 	Singular Nouns Found in Consecutive Nodes	Returns BOP session ID, which can be used to download file.
 GET	 /bui/getBopSID 	Singular Nouns Found in Consecutive Nodes	Returns BOP session ID, which can be used to download file.
 GET	 /bui/getBopSID 	Singular Nouns Found in Consecutive Nodes	Returns BOP session ID, which can be used to download file.
@@ -82,7 +81,6 @@ POST	 /bui/unLinkSolution({id}) 	Singular Nouns Found in Consecutive Nodes	Marks
 POST	 /bui/unLinkSolution({id}) 	Singular Nouns Found in Consecutive Nodes	Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket
 POST	 /bui/unLinkSolution({id}) 	Singular Nouns Found in Consecutive Nodes	Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket
 POST	 /bui/unLinkSolution({id}) 	Singular Nouns Found in Consecutive Nodes	Marks the knowledge document as not an accepted solution for the problem mentioned in the ticket
-GET	 /bui/helpAbout 	Singular Nouns Found in Consecutive Nodes	Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned
 GET	 /bui/getEEMAuth 	Singular Nouns Found in Consecutive Nodes	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests)
 GET	 /bui/getEEMAuth 	Singular Nouns Found in Consecutive Nodes	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests)
 GET	 /bui/getEEMAuth 	Singular Nouns Found in Consecutive Nodes	Returns EEM Artifact to be used for EEM integrated solutions requests (e.g. ITPAM tasks and Catalog requests)
@@ -92,17 +90,19 @@ GET	 /bui/{factory}({persid}) 	Singular Nouns Found in Consecutive Nodes	Returns
 PUT	 /bui/{factory}({persid}) 	Singular Nouns Found in Consecutive Nodes	Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory.
 PUT	 /bui/{factory}({persid}) 	Singular Nouns Found in Consecutive Nodes	Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory.
 PUT	 /bui/{factory}({persid}) 	Singular Nouns Found in Consecutive Nodes	Updates an object with passed in details as part of form data specified by the persid parameter for the provided factory.
-GET	 /bui/{factory} 	Singular Nouns Found in Consecutive Nodes	Returns the objects based on the parameters for the mentioned factory
-POST	 /bui/{factory} 	Singular Nouns Found in Consecutive Nodes	Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.)
-GET	 /gs/mytkt_active 	Singular Nouns Found in Consecutive Nodes	Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
-GET	 /gs/mytkt_inactive 	Singular Nouns Found in Consecutive Nodes	Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
 GET	 /getServiceRequest 	Singular Nouns Found in Consecutive Nodes	Returns service requests of logged in user, if Service Catalog is integrated.
 GET	 /getServiceRequest 	Singular Nouns Found in Consecutive Nodes	Returns service requests of logged in user, if Service Catalog is integrated.
-GET	 /pcatSearch 	Singular Nouns Found in Consecutive Nodes	Returns relevant categories(and offerings if Service Catalog is integrated) based on configured parameters in Service Point configuration.
 
 ***Patterns*** 
-Count: 4
+Count: 11
 GET	 /bui/attrInfo 	Cosistent Resource Archetype	Returns the required attributes and custom attributes for cr factory defined in service point configuration at SDM admnistrative page.
 GET	 /bui/attrCtrl 	Cosistent Resource Archetype	Returns all dependent attributes for the provided ticket attribute ($attrname parameter)
+POST	 /bui/attmnt 	Cosistent Resource Archetype	Upload an attachment to SDM and also links the attachment to the specified factory object if parentFactory and parentId parameter values are provided, else simply uploads the file.
+GET	 /bui/helpAbout 	Cosistent Resource Archetype	Returns the help about text. First priority is tenanted if not found(text is empty or config itself is not defined), public about text is returned
+GET	 /bui/{factory} 	Cosistent Resource Archetype	Returns the objects based on the parameters for the mentioned factory
+POST	 /bui/{factory} 	Cosistent Resource Archetype	Creates a new object for the provided factory with passed in details as part of form data. (We can provide multiple child details.)
+GET	 /gs/mytkt_active 	Cosistent Resource Archetype	Returns active tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
+GET	 /gs/mytkt_inactive 	Cosistent Resource Archetype	Returns inactive tickets of the logged-in user. It tries to fetch maximum 100 tickets with authorization using elastic search. In case you want to fetch more, use generic factory api.
+GET	 /pcatSearch 	Cosistent Resource Archetype	Returns relevant categories(and offerings if Service Catalog is integrated) based on configured parameters in Service Point configuration.
 GET	 /getOfferings 	Cosistent Resource Archetype	Returns featured offerings for the loggedin users domain, if Service Catalog is integrated.
 GET	 /suggestedSolutions 	Cosistent Resource Archetype	Returns all probable solutions for the provided search string.
