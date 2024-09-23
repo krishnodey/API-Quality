@@ -131,38 +131,31 @@ NON-FILTERING-ENDPOINT(HTTP-Method, Request-Endpoint)
 
 
 12. Parameters Tunneling vs Parameters Adherence (When to use Path-Parameters vs. Query-Parameters)
-    
-PARAMETERS-TUNNELING(Request-Endpoint, API-Documentation):
-    Intention <- Extract-Intention(API-Documentation)
+
+PARAMETERS-TUNNELING(Request-Endpoint, HTTP-Mehtod):
     HasQueryParam <- Query Parameter in Request-Endpoint
     HasPathParam <- Path Parameter in Request-Endpoint
-    SortIntention <- Intention in ["Sorting", "Filtering", "Pagination"]
-    IdentifyIntention <- Intention in ["Delete", "Update", 'Get', 'Fetch', 'Return']
-
-    if HasQueryParam and SortIntention:
+    if HasQueryParam and HTTP-Method is not GET:
+        return 'Parameter Tunneling' antipattern
+    elseif HasPathParam:
         return 'Parameter Adherence' pattern
-    elseif HasPathParam and IdentifyIntention:
-        return 'Parameter Adherence' pattern
-    elseif (HasQueryParam and IdentifyIntention) or (HasPathPram and SortIntention) :
-        return 'Parameters Tunneling' antipattern
-    elseif (Intention and not HasParam) or (not Intention and HasParam))
-        return 'Parameters Tunneling' antipattern
+    elseif Endpoint does not have any Parameter: 
+        return 'Regular Endpoints' 
     endif
     
 
 13. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
-IMPROPER_NOUN(Request-Endpoint)
+Inconsistent-Resource-Archetype(Request-Endpoint)
     Nodes <- Split(Request-Endpoint)
-    Document, Collections <- CatagorizeNodes(Nodes) #based on the positions of the nodes.# 
-    if Document is singular:
-        return 'Consistent Resource Archetype' pattern
-    elseif Collections or Stores are plural:
-        return 'Consistent Resource Archetype' pattern
-    elseif Controller is Verb:  
-        return 'Consistent Resource Archetype' pattern
+
+    if "Singular/Singular" or "Plural/Plural" Nouns in Request-Endpoint:
+        return 'Inconsistent Resource Archetype' antipattern
+    elseif Controller used without "POST" method:
+        return 'Inconsistent Resource Archetype' antipattern
+    else:
+        return 'Consistent Resource Archetype' antipattern
     endif
-    return 'Inconsistent Resource Archetype' antipattern
     
 
 14. Identifier Ambiguity vs Identifier Annotation
