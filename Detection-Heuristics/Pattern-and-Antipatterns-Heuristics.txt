@@ -71,7 +71,7 @@ NonHierarchicalNodes(Request-Endpoint):
     if Relationship_Type not in Reversed-Hierarchy
 	    return 'Hierarchical' pattern
     end if
-    retunr 'Non-Hierarchical' pattern
+    return 'Non-Hierarchical' pattern
                        
 
 
@@ -94,7 +94,7 @@ NON-STANDARD-RESOURCE(Request-Endpoint):
     if Non-English-Characters or Space or Double-Hyphens or Unknown-Characters Є Rquest-Endpoint
         retrun 'Non-Standard Endpoint' antipattern
     end if
-    retrun 'Standard Endpoint' pattern
+    return 'Standard Endpoint' pattern
 
 9. Pluralized vs Singularized
 
@@ -137,7 +137,7 @@ PARAMETERS-TUNNELING(Request-Endpoint, HTTP-Mehtod):
     HasPathParam <- Path Parameter in Request-Endpoint
     if HasQueryParam and HTTP-Method is not GET:
         return 'Parameter Tunneling' antipattern
-    elseif HasPathParam:
+    elseif HasPathParam with any HTTP-Method:
         return 'Parameter Adherence' pattern
     elseif Endpoint does not have any Parameter: 
         return 'Regular Endpoints' 
@@ -147,8 +147,6 @@ PARAMETERS-TUNNELING(Request-Endpoint, HTTP-Mehtod):
 13. Inconsistent vs Consistent Resource Archetype Names (Doucment should be singular noun and Collections should be plural)
 
 Inconsistent-Resource-Archetype(Request-Endpoint)
-    Nodes <- Split(Request-Endpoint)
-
     if "Singular/Singular" or "Plural/Plural" Nouns in Request-Endpoint:
         return 'Inconsistent Resource Archetype' antipattern
     elseif Controller used without "POST" method:

@@ -41,28 +41,28 @@ class FileReadWrite:
         except Exception as e:
             print(f"Error writing to file: {e}")
 
-    def write_data(self, result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path):
-        try:
-            data_to_write = f"***Anti-Pattern*** \nCount: {ap_count}\n"
-            for item in result_AP:
-                data_to_write += item + "\n"
-            data_to_write += f"\n***Patterns*** \nCount: {p_count}\n"
-            for item in result_P:
-                data_to_write += item + "\n"
+    # def write_data(self, result_AP, result_P, p_count, ap_count, selected, pattern_type, base_path):
+    #     try:
+    #         data_to_write = f"***Anti-Pattern*** \nCount: {ap_count}\n"
+    #         for item in result_AP:
+    #             data_to_write += item + "\n"
+    #         data_to_write += f"\n***Patterns*** \nCount: {p_count}\n"
+    #         for item in result_P:
+    #             data_to_write += item + "\n"
 
-            out_path = f"Outputs-{base_path}/{selected}-{pattern_type}.txt"
-            self.write_file(data_to_write, out_path)
-        except Exception as e:
-            print(f"Error writing AmorphousURI data to file: {e}")
+    #         out_path = f"Outputs-{base_path}/{selected}-{pattern_type}.txt"
+    #         self.write_file(data_to_write, out_path)
+    #     except Exception as e:
+    #         print(f"Error writing AmorphousURI data to file: {e}")
 
-    def write_out_data(self, result, selected, pattern_type, base_path):
-        try:
-            api_type = 'REST-' if 'REST-API' in base_path else 'GraphQL-'
-            data_to_write = ""
-            for item in result:
-                data_to_write += item + "\n"
-            out_path = f"Out_All/{api_type}{selected}-{pattern_type}.txt"
-            self.write_file(data_to_write, out_path)
-        except Exception as e:
-            print(f"Error writing AmorphousURI data to file: {e}")
+    # def write_out_data(self, result, selected, pattern_type, base_path):
+    #     try:
+    #         api_type = 'REST-' if 'REST-API' in base_path else 'GraphQL-'
+    #         data_to_write = ""
+    #         for item in result:
+    #             data_to_write += item + "\n"
+    #         out_path = f"Out_All/{api_type}{selected}-{pattern_type}.txt"
+    #         self.write_file(data_to_write, out_path)
+    #     except Exception as e:
+    #         print(f"Error writing AmorphousURI data to file: {e}")
 

@@ -86,20 +86,6 @@ class ApiAnalyzer:
                     json_string=json.dumps(line_dict,ensure_ascii=False)
                     pro_file.write(json_string+"\n")        
                 
-        #print(self.uris)
-    
-
-        #self.clean = UriCleaning()
-        #splitted_nodes = clean.get_uri_nodes(line)
-
-        # self.processed_des =[]
-        # for des, para in zip (self.descriptions, self.parameters):
-        #     self.processed_des.append(self.clean.preprocess_documentation(des+para))
-        # self.processed_nodes =[]
-        # for uri in self.uris:
-        #     self.processed_nodes.append(self.clean.get_uri_nodes(uri))
-
-        #self.clean_description = extend(processed_des)
         
 
 
@@ -108,10 +94,7 @@ class ApiAnalyzer:
         P = "Tidy End-point"
         AP = "Amorphous End-point"
         found_AP = 0
-        p_count = 0
-        ap_count = 0
-        amorphus_result_AP = []
-        amorphus_result_P = []
+    
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
         def has_consecutive_uppercase(s):
             for i in range(len(s)-1):
@@ -173,20 +156,14 @@ class ApiAnalyzer:
                         break
                 if found_AP == 1:
                     row.update({"amorphous_uri": 1, "tidy_uri": 0, 'amorphous_comment': comment})
-                    ap_count = ap_count + 1
-                    amorphus_result_AP.append(uri.strip() + "\t" + AP + "\t" + comment)
                 else:
-                    row.update({"amorphous_uri": 0, "tidy_uri": 1, 'amorphous_comment': comment})
-                    p_count = p_count + 1
                     comment = "Tidy Endpoint"
-                    amorphus_result_P.append(uri.strip() + "\t" + P + "\t" + comment)
+                    row.update({"amorphous_uri": 0, "tidy_uri": 1, 'amorphous_comment': comment})
                 print("->", end=" ")
                 i = i +1
 
                 json_string=json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")     
-            
-        return amorphus_result_AP, amorphus_result_P, p_count, ap_count
     
 
 
@@ -195,10 +172,6 @@ class ApiAnalyzer:
     def detect_non_standard_uri(self):
         P = "Standard End-point"
         AP = "Non-standard End-point"
-        standard_uri_result_AP = []
-        standard_uri_result_P = []
-        p_count = 0
-        ap_count = 0
         # Common European languages
         european_languages = [
             # French
@@ -245,7 +218,7 @@ class ApiAnalyzer:
         ]
         #unknown_characters = ['!', '@', '#', '$', '~', '^', '*', '>', '<', '|', '%', '&', '+', '=', '`', '?', ',', ';', ':', '.']
 
-        #for method, uris, doc in zip(self.http_method, self.nodes, self.description):
+        
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
@@ -285,19 +258,13 @@ class ApiAnalyzer:
 
                 if found_AP == 1:
                     row.update({"non_standard_uri": 1, "standard_uri": 0, "non_standard_comment": comment})
-                    standard_uri_result_AP.append(f"{uri.strip()}\t{AP}\t{comment}")
-                    ap_count += 1
                 else:
-                    row.update({"non_standard_uri": 0, "standard_uri": 1, "non_standard_comment": comment})
                     comment = "Standard Endpoint"
-                    standard_uri_result_P.append(f"{uri.strip()}\t{P}\t{comment}")
-                    p_count += 1
+                    row.update({"non_standard_uri": 0, "standard_uri": 1, "non_standard_comment": comment})
                 print("->", end=" ")
             
                 json_string=json.dumps(row, ensure_ascii=False)
-                file.write(json_string+"\n")
-
-        return standard_uri_result_AP, standard_uri_result_P, p_count, ap_count
+                file.write(json_string+"\n") 
     
     
 
@@ -305,17 +272,13 @@ class ApiAnalyzer:
         P = "Verbless End-point"
         AP = "CRUDy End-point"
         crudyWords = ["create", "make", "write", "read", "search", "show", "take", "delete", "destroy", "cancel", "remove", "update", "copy", "move", "upgrade", "notify"]
-        crudyURIResult_AP = []
-        crudyURIResult_P = []
-        p_count = 0
-        ap_count = 0
 
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
-            for line, uri, nodes in zip(lines, self.uris, self.processed_nodes):
+            for line, nodes in zip(lines, self.processed_nodes):
                 row = json.loads(line)
 
                 good_type = False
@@ -340,36 +303,22 @@ class ApiAnalyzer:
 
                 if not good_type:
                     row.update({"crudy_uri": 1, "verbless_uri": 0, "crudy_comment": comment})
-                    ap_count = ap_count + 1
-                    crudyURIResult_AP.append(f"{uri.strip()}\t{AP}\t{comment}")
                 else:
                     row.update({"crudy_uri": 0, "verbless_uri": 1, "crudy_comment": comment})
-                    p_count = p_count + 1
-                    crudyURIResult_P.append(f"{uri.strip()}\t{P}\t{comment}")
                 print("->", end=" ")
         
                 json_string=json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
-
-        return crudyURIResult_AP, crudyURIResult_P, p_count, ap_count
     
     
 
     def detect_unversioned_uris(self):
-        versioned_result_P = []
-        unversioned_result_AP = []
-        p_count = 0
-        ap_count = 0
-        #print(URI)
-        #for method, uris, doc in zip(self.http_method, self.nodes, self.description):
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             for line, uri in zip(lines, self.uris):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uris = row['uri']
                 regex_list = [
                     ".*v\d+.*",         # Matches any string containing "v" followed by digits
                     ".*v\d+.*",         # Matches any string containing "v" followed by digits
@@ -384,34 +333,23 @@ class ApiAnalyzer:
                 matches = any(re.match(regex, uri) for regex in regex_list)
 
                 if matches:
-                    # row['unversioned_uri'] = 1
-                    # row['versioned_uri'] = 0
                     comment = "Version Found"
                     row.update({"unversioned_uri": 0, "versioned_uri": 1, "unversioned_comment": comment})
-                    versioned_result_P.append(f"{uri.strip()} \t {comment}")
-                    p_count += 1
                 else:
-                    # row['unversioned_uri'] = 1
-                    # row['versioned_uri'] = 0
+                    
                     comment = "No Version Found"
                     row.update({"unversioned_uri": 1, "versioned_uri": 0, "unversioned_comment": comment})
-                    unversioned_result_AP.append(f"{uri.strip()} \t {comment}")
-                    ap_count += 1
+                    
                 #row['unversioned_comment'] = comment
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
                 
-        return unversioned_result_AP, versioned_result_P , p_count, ap_count
 
 
     def detect_pluralized_node(self):
-        pluralised_result_AP = []
-        pluralised_result_P = []
         P = "Singularized Nodes"
         AP = "Pluralized Nodes"
-        p_count = 0
-        ap_count = 0
     
         def is_plural(word):
             lemmatizer = WordNetLemmatizer()
@@ -424,84 +362,45 @@ class ApiAnalyzer:
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
-            for line, method, uri, nodes in zip(lines, self.http_verb, self.uris, self.processed_nodes):
+            for line, method, nodes in zip(lines, self.http_verb, self.processed_nodes):
                 row = json.loads(line)
-                #if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                    # uris = row['uri']  
-                    # method = row['method']
-                    # nodes = self.clean.get_uri_nodes(uris)
                 comment1 = "Singular last node with POST method"
                 comment2 = "Pluralized last node with POST method"
                 comment3 = "Pluralized last node with PUT and DELETE method"
                 comment4 = "Singular last node with PUT and DELETE method"
                 comment5 = "Regular methods"
 
-                #if no nodes in uri
-                #print(nodes)
                 if len(nodes) < 1:
-                    row['pluralized_nodes'] = 0
-                    row['singularized_nodes'] = 1
-                    row['pluralized_comment'] = comment5
-                    p_count += 1
-                    pluralised_result_P.append(f"{method}\t{uri.strip()}\t{P}\t {comment5}")
+                    row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment5})
                     continue
                 last_node = nodes[-1]
 
                 if method.strip() == "POST":
                     if is_plural(last_node):
-                        p_count += 1
-                        # row['pluralized_nodes'] = 0
-                        # row['singularized_nodes'] = 1
-                        # row['pluralized_comment'] = comment2
                         row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment2})
-                        pluralised_result_P.append(f"{method}\t{uri.strip()}\t{P}\t{comment2}")
                     else:
-                        # row['pluralized_nodes'] = 1
-                        # row['singularized_nodes'] = 0
-                        # row['pluralized_comment'] = comment1
                         row.update({"pluralized_nodes": 1, "singularized_nodes": 0, "pluralized_comment": comment1})
-                        ap_count += 1
-                        pluralised_result_AP.append(f"{method}\t{uri.strip()}\t{AP}\t{comment1}")
+                        
 
                 elif method.strip() == "DELETE" or method.strip() == "PUT":
                     if is_plural(last_node):
-                        # row['pluralized_nodes'] = 1
-                        # row['singularized_nodes'] = 0
-                        # row['pluralized_comment'] = comment3
                         row.update({"pluralized_nodes": 1, "singularized_nodes": 0, "pluralized_comment": comment3})
-                        ap_count += 1
-                        pluralised_result_AP.append(f"{method}\t{uri.strip()}\t{AP}\t{comment3}")
                     else:
-                        # row['pluralized_nodes'] = 0
-                        # row['singularized_nodes'] = 1
-                        # row['pluralized_comment'] = comment4
                         row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment4})
-                        p_count += 1
-                        pluralised_result_P.append(f"{method}\t{uri.strip()}\t{P}\t{comment4}")
                 else:
-                    # row['pluralized_nodes'] = 0
-                    # row['singularized_nodes'] = 1
-                    # row['pluralized_comment'] = comment5  
                     row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment5})  
-                    p_count += 1
-                    pluralised_result_P.append(f"{method}\t{uri.strip()}\t {comment5}")
+                    
                 print("->", end=" ")
                 
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
-        return pluralised_result_AP, pluralised_result_P, p_count, ap_count
+ 
     
 
     def detect_non_descriptive_uri(self):
-        non_descriptive_AP = []
-        self_descriptive_P = []
         P = "Self-descriptive End-point"
         AP = "Non-descriptive End-point"
-        p_count = 0
-        ap_count = 0
-
-
-        #for method, uris,nodes, doc in zip(self.http_method, self.nodes, self.processed_nodes, self.description):
+    
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
@@ -522,26 +421,18 @@ class ApiAnalyzer:
 
                 if not pattern:
                     row.update({"non_descriptive_uri" : 1, "descriptive_uri": 0, "non_descriptive_comment": AP})
-                    ap_count = ap_count + 1
-                    non_descriptive_AP.append(f"{uris.strip()}\t {AP}")
                 elif pattern:
-                    row.update({"non_descriptive_uri" : 0, "descriptive_uri": 1, "non_descriptive_comment": P})
-                    p_count = p_count + 1
-                    self_descriptive_P.append(f"{uris.strip()}\t {P}")                    
+                    row.update({"non_descriptive_uri" : 0, "descriptive_uri": 1, "non_descriptive_comment": P})                   
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
-
-        return non_descriptive_AP, self_descriptive_P, p_count, ap_count
     
 
     def detect_contextless(self):
-        contextless_AP = []
-        contextual_P = []
+        
         P = "Contextual Resource Names"
         AP = "Contextless Resource Names"
-        p_count = 0
-        ap_count = 0
+        
         # Tokenize, remove stopwords, and lemmatize the descriptions
         nlp = spacy.load("en_core_web_lg")
         #stop_words = set(stopwords.words('english'))
@@ -583,27 +474,17 @@ class ApiAnalyzer:
                 similarity_scores[f"Topic {idx}"] = word_similarity
             return similarity_scores
 
-        #for method, combined_node, origianl_node, des in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
-            #print(f"{method}---{combined_node}---{des}")
+       
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             for line, uris, combined_node in zip(lines, self.uris, self.processed_nodes):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uris = row['uri']  
-                #     method = row['method']
-                #     des = row['description']
-                #     combined_node = self.clean.get_uri_nodes(uris)
         
-                if len(combined_node)<1:
-                    # row['contextless_resource'] = 0
-                    # row['contextual_resouce'] = 1
-                    # row['contextless_comment'] = P
+                if len(combined_node) < 1:
                     row.update({"contextless_resource": 0, "contextual_resouce": 1, "contextless_comment": P})
-                    p_count = p_count + 1
-                    contextual_P.append(f"-{uris}\t{P}")
+                    
                     continue
                 # Calculate similarity for each individual node
                 node_word_similarity = {}
@@ -636,27 +517,16 @@ class ApiAnalyzer:
                 
                 #print(max(topic_avg))
                 if round(max(topic_avg),1) >= 0.5:
-                    # row['contextless_resource'] = 0
-                    # row['contextual_resouce'] = 1
-                    # row['contextless_comment'] = P
-                    # #print("contextual")
+                    #print("contextual")
                     row.update({"contextless_resource": 0, "contextual_resouce": 1, "contextless_comment": P})
-                    p_count = p_count + 1
-                    contextual_P.append(f"{uris.strip()}\t {P}")
                 else:
-                    # row['contextless_resource'] = 1
-                    # row['contextual_resouce'] = 0
-                    # row['contextless_comment'] = AP
-                    # #print("contextless")
                     row.update({"contextless_resource": 1, "contextual_resouce": 0, "contextless_comment": AP})
-                    ap_count = ap_count + 1
-                    contextless_AP.append(f"{uris.strip()}\t {AP}")
         
                 print("->", end=" ")
             
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
-        return contextless_AP, contextual_P, p_count, ap_count
+       
     
 
 
@@ -706,31 +576,20 @@ class ApiAnalyzer:
 
         P = "Hierarchical Nodes"
         AP = "Non-hierarchical Nodes"
-        non_hierarchy_result_AP = []
-        non_hierarchy_result_P = []
-        p_count = 0
-        ap_count = 0
 
-        #for method, nodes, uri, doc in zip(self.http_method, self.processed_nodes, self.nodes, self.description):
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             for line, uris, nodes in zip(lines, self.uris, self.processed_nodes):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uris = row['uri']  
-                #     #method = row['method']
-                #     #des = row['description']
-                #     nodes = self.clean.get_uri_nodes(uris)
-                #     #reliability = LexicalResult.Reliability()
+                
                 result_information = ""
                 hierarchies = 0
                 good_type = True
                 P_detection = False
                 AP_detection = False
 
-                #hier_matric = HierarchicalMetrics()
 
                 if len(nodes) >= 2:
                     for j in range(len(nodes) - 1):
@@ -757,43 +616,29 @@ class ApiAnalyzer:
                         if AP_detection:
                             if hierarchies == 0:
                                 good_type = False
-                                result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
+                                #result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
                         elif P_detection:
                             if hierarchies >= 1:
                                 good_type = True
-                                result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
+                                #result_information += f"{hierarchies} hierarchical relations were detected out of {max_chain_length}"
 
                 if not good_type:
-                    # row['non_hierarchical_nodes'] = 1
-                    # row['hierarchical_nodes'] = 0
-                    # row['non_hierarchical_comment'] = AP
                     row.update({"non_hierarchical_nodes" : 1, "hierarchical_nodes": 0, "non_hierarchical_comment": AP})
-                    ap_count = ap_count + 1
-                    non_hierarchy_result_AP.append(f"{uris.strip()}\t{AP}\t{result_information}")
                 
                 else:
-                    # row['non_hierarchical_nodes'] = 0
-                    # row['hierarchical_nodes'] = 1
-                    # row['non_hierarchical_comment'] = P
                     row.update({"non_hierarchical_nodes" : 0, "hierarchical_nodes": 1, "non_hierarchical_comment": P})
-                    p_count = p_count + 1
-                    non_hierarchy_result_P.append(f"{uris.strip()}\t{P}\t{result_information}")
                     
                 print("->", end=" ")
         
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
-        return non_hierarchy_result_AP, non_hierarchy_result_P, p_count, ap_count
     
 
 
     def detect_less_cohesive_documentation(self):    
         P="Pertinent Documentation"
         AP="Non-pertinent Documentation"
-        less_cohesive_AP = []
-        less_cohesive_P = []
-        p_count = 0
-        ap_count = 0
+        
         # Tokenize, remove stopwords, and lemmatize the descriptions
         nlp = spacy.load("en_core_web_lg")
         #stop_words = set(stopwords.words('english'))
@@ -816,29 +661,20 @@ class ApiAnalyzer:
                 similarity_scores[f"Topic {idx}"] = word_similarity
             return similarity_scores
 
-        #for method, combined_node, documentation, node_uri, des in zip(self.http_method, self.processed_nodes,self.processed_des, self.nodes, self.description):
-            #print(f"\nn {method}---{combined_node}----{documentation}-{des}")
-            # Calculate similarity for each individual node
+        
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             for line, uris, des, combined_node, documentation in zip(lines, self.uris, self.descriptions, self.processed_nodes, self.processed_des):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uris = row['uri']  
-                #     #method = row['method']
-                #     des = row['description']
-                #     documentation = self.clean.preprocess_documentation(des)
-                #     combined_node = self.clean.get_uri_nodes(uris)
         
                 topics = len(combined_node)
                 #print(topics)
                 #print(combined_node)
                 #print(documentation)
                 if len(documentation)<1 or len(combined_node) < 1 :
-                    p_count = p_count + 1
-                    less_cohesive_P.append(f"-{uris.strip()}\t{P}\t{des}")
+                    row.update({"less_cohesive_doc": 0, "cohesive_doc": 1, "less_cohesive_comment": AP})
                     continue
                     
                 # Create a dictionary and corpus for LDA modeling
@@ -891,27 +727,16 @@ class ApiAnalyzer:
                 #for avg in topic_avg:
                 #print(max(topic_avg))
                 if round(max(topic_avg), 1) >= 0.5:
-                    # row['less_cohesive_doc'] = 0
-                    # row['cohesive_doc'] = 1
-                    # row['less_cohesive_comment'] = P
                     row.update({"less_cohesive_doc": 0, "cohesive_doc": 1, "less_cohesive_comment": P})
                     #print("cohisive")
-                    p_count = p_count + 1
-                    less_cohesive_P.append(f"-{uris.strip()}\t{P}\t{des.strip()}")
                 else:
-                    # row['less_cohesive_doc'] = 1
-                    # row['cohesive_doc'] = 0
-                    # row['less_cohesive_comment'] = AP
                     row.update({"less_cohesive_doc": 1, "cohesive_doc": 0, "less_cohesive_comment": AP})
                     #print("less_cohisive")
-                    ap_count = ap_count + 1
-                    less_cohesive_AP.append(f"-{uris.strip()}\t{AP}\t{des.strip()}")
                 print("->", end=" ")
             
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
                         
-        return less_cohesive_AP, less_cohesive_P, p_count, ap_count
     
 
 
@@ -920,12 +745,6 @@ class ApiAnalyzer:
         delete = ["get", "gets", "find", "finds", "search", "check", "list", "verify", "get", "gets"]
         put = ["delete", "deletes", "creates", "finds", "create", "find", "search", "checks", "lists", "check", "list"]
         get = ["delete", "deletes", "updates", "update", "creates", "create"]
-        
-        #description = []
-        #nodes = []
-        #http_method = []
-        
-
         
         # Tokenize, remove stopwords, and lemmatize the descriptions
         #nlp = spacy.load("en_core_web_lg")
@@ -941,102 +760,66 @@ class ApiAnalyzer:
         P = "Consistent Documentation"
         AP = "Inconsistent Documentation"
 
-        inconsistent_documentation_AP = []
-        inconsistent_documentation_P = []
-        p_count = 0
-        ap_count = 0
-        
-
-        #for h_method, uri, documentation in zip(self.http_method, self.nodes, self.description):
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
-            for line, h_method, uri, documentation, words in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters, self.processed_des):
+            for line, h_method,  words in zip(lines, self.http_verb, self.processed_des):
                 row = json.loads(line)
-                # if row["api_type"] == self.api_type and row["api_name"] == self.api_name:
-                #     uri = row['uri']  
-                #     h_method = row['method']
-                #     documentation = row['description']
-                #     #documentation = self.clean.preprocess_documentation(des)
-                #     #combined_node = self.clean.get_uri_nodes(uris)
         
                 method = h_method.lower().strip()
                 #words = preprocess_data(documentation)
-                
-                
                 if method == "get":
                     if any(item in get for item in words):
                         # row['inconsistent_doc'] = 1
                         # row['consistent_doc'] = 0
                         # row['inconsistent_comment'] = AP
                         row.update({"inconsistent_doc": 1, "consistent_doc": 0, "inconsistent_comment": AP})
-                        inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
-                        ap_count += 1
                     else:
                         # row['inconsistent_doc'] = 0
                         # row['consistent_doc'] = 1
                         # row['inconsistent_comment'] = P
                         row.update({"inconsistent_doc": 0, "consistent_doc": 1, "inconsistent_comment": P})
-                        inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P.strip()}\t{documentation.strip()}")
-                        p_count += 1
                 elif method == "delete":
                     if any(item in delete for item in words):
-                        # row['inconsistent_doc'] = 1
-                        # row['consistent_doc'] = 0
-                        # row['inconsistent_comment'] = AP
                         row.update({"inconsistent_doc": 1, "consistent_doc": 0, "inconsistent_comment": AP})
-                        inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri.strip()}\t{AP}\t{documentation.strip()}")
-                        ap_count += 1
                     else:
                         # row['inconsistent_doc'] = 0
                         # row['consistent_doc'] = 1
                         # row['inconsistent_comment'] = P
                         row.update({"inconsistent_doc": 0, "consistent_doc": 1, "inconsistent_comment": P})
-                        inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
-                        p_count += 1
                 elif method == "put":
                     if any(item in put for item in words):
                         # row['inconsistent_doc'] = 1
                         # row['consistent_doc'] = 0
                         # row['inconsistent_comment'] = AP
                         row.update({"inconsistent_doc": 1, "consistent_doc": 0, "inconsistent_comment": AP})
-                        inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                        ap_count += 1
                     else:
                         # row['inconsistent_doc'] = 0
                         # row['consistent_doc'] = 1
                         # row['inconsistent_comment'] = P
                         row.update({"inconsistent_doc": 0, "consistent_doc": 1, "inconsistent_comment": P})
-                        inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                        p_count += 1
                 elif method == "post":
                     if any(item in post for item in words):
                         # row['inconsistent_doc'] = 1
                         # row['consistent_doc'] = 0
                         # row['inconsistent_comment'] = AP
                         row.update({"inconsistent_doc": 1, "consistent_doc": 0, "inconsistent_comment": AP})
-                        inconsistent_documentation_AP.append(f"{h_method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                        ap_count += 1
                     else:
-                        row['inconsistent_doc'] = 0
-                        row['consistent_doc'] = 1
-                        row['inconsistent_comment'] = P
+                        # row['inconsistent_doc'] = 0
+                        # row['consistent_doc'] = 1
+                        # row['inconsistent_comment'] = P
                         row.update({"inconsistent_doc": 0, "consistent_doc": 1, "inconsistent_comment": P})
-                        inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                        p_count += 1
                 else:
                     # row['inconsistent_doc'] = 0
                     # row['consistent_doc'] = 1
                     # row['inconsistent_comment'] = P
                     row.update({"inconsistent_doc": 0, "consistent_doc": 1, "inconsistent_comment": P})
-                    inconsistent_documentation_P.append(f"{h_method.strip()}\t{uri.strip()}\t{P}\t{documentation.strip()}")
-                    p_count += 1
+                   
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
 
-        return inconsistent_documentation_AP, inconsistent_documentation_P, p_count, ap_count
 
 
     # def detect_non_filtering_endpoint(self):
@@ -1116,106 +899,27 @@ class ApiAnalyzer:
     def detect_parameters_tunneling(self):
         P = "Parameter Adherence"
         AP = "Parameter Tunneling"
-
-        parameter_tunneling_AP = []
-        parameter_adherence_P = []
-        p_count = 0
-        ap_count = 0
-        
-        def extract_intention(api_documentation):
-            fetch_keywords = ["fetch", "return", "get", "retrieve", "list", "find"]
-            update_keywords = ["update", "modify", "change", "edit"]
-            create_keywords = ["create", "add", "post", "insert"]
-            delete_keywords = ["delete", "remove", "destroy"]
-            spf_keywords = ['sort', 'pagination', 'filter', 'paginate', 'filtering', 'rearrange']
-
-            intention = ""
-            api_doc_lower = api_documentation.lower()
-
-            for word in fetch_keywords:
-                if word in api_doc_lower:
-                    intention = "Fetch"
-                    break
-            if not intention:
-                for word in update_keywords:
-                    if word in api_doc_lower:
-                        intention = "Update"
-                        break
-            if not intention:
-                for word in create_keywords:
-                    if word in api_doc_lower:
-                        intention = "Create"
-                        break
-            if not intention:
-                for word in delete_keywords:
-                    if word in api_doc_lower:
-                        intention = "Delete"
-                        break
-            if not intention:
-                for word in spf_keywords:
-                    if word in api_doc_lower:
-                        intention = 'spf'
-
-            return intention
-        
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
-            for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
+            for line, method, uri in zip(lines, self.http_verb, self.uris):
                 row = json.loads(line)
-        
-        
-                intention = extract_intention(documentation)
                 query_param = '?' in uri
                 path_param = ('{' in uri and '}' in uri) or ('<' in uri and '>' in uri) or ':' in uri
 
-                sort_intention = False
-                identify_intention = False
-
-                if intention == "spf":
-                    sort_intention = True
-                elif intention in ["Delete", "Update", "Delete", "Create"]:
-                    identify_intention = True
-
-                if (query_param and sort_intention) or (path_param and identify_intention):
-                    #return 'Parameter Adherence pattern'
-                    # row['parameter_tunneling'] = 0 
-                    # row['parameter_adherence'] = 1
-                    # row['parameter_tunneling_comment'] = P
-                    row.update({"parameter_tunneling": 0, "parameter_adherence": 1, "parameter_tunneling_comment": P})
-                    parameter_adherence_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    p_count += 1
-                elif (query_param and identify_intention) or (path_param and sort_intention):
-                    # row['parameter_tunneling'] = 1
-                    # row['parameter_adherence'] = 0
-                    # row['parameter_tunneling_comment'] = AP   
-                    row.update({"parameter_tunneling": 1, "parameter_adherence": 0, "parameter_tunneling_comment": AP})                
-                    parameter_tunneling_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                    ap_count += 1
-                    #return 'Parameters Tunneling antipattern'
-                # elif (intention and not (query_param or path_param)) or (not intention and (query_param or path_param)):
-                #     #return 'Parameters Tunneling antipattern'
-                #     # row['parameter_tunneling'] = 1
-                #     # row['parameter_adherence'] = 0
-                #     # row['parameter_tunneling_comment'] = AP     
-                #     row.update({"parameter_tunneling": 1, "parameter_adherence": 0, "parameter_tunneling_comment": AP})                   
-                #     parameter_tunneling_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                #     ap_count += 1
+                if (query_param and method.strip().upper() != 'GET'):
+                    row.update({"parameter_tunneling": 1, "parameter_adherence": 0, "parameter_tunneling_comment": AP})
+                elif (path_param and method.strip().upper() in ['POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS', 'CONNECT', 'TRACE']):
+                    row.update({"parameter_tunneling": 0, "parameter_adherence": 1, "parameter_tunneling_comment": P})                
                 else:
-                    # row['parameter_tunneling'] = 0
-                    # row['parameter_adherence'] = 1
                     comm = 'Regular Endpoints' 
                     row.update({"parameter_tunneling": 0, "parameter_adherence": 1, "parameter_tunneling_comment": comm})                       
-                    parameter_adherence_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    ap_count += 1
-                #return 'No specific pattern detected'
+                    
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
-
-        return parameter_tunneling_AP, parameter_adherence_P, p_count, ap_count
 
 
 
@@ -1233,10 +937,6 @@ class ApiAnalyzer:
         AP2 = "Plural Nouns Found in Consecutive Nodes"
         AP3 = "Controller is not a Verb"
 
-        incosistent_resource_archetype_AP = []
-        cosistent_resource_archetype_P = []
-        p_count = 0
-        ap_count = 0
         
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
@@ -1257,8 +957,6 @@ class ApiAnalyzer:
                 #print(nodes)
                 if len(nodes) <= 2:
                     row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Less than 3 nodes present in endpoint"})
-                    cosistent_resource_archetype_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    p_count += 1
                 else:
                     flag = 0
                     # Check for singular/plural pattern violations
@@ -1267,14 +965,11 @@ class ApiAnalyzer:
                             #return ['Inconsistent Resource Archetype Names antipattern', 'Violation: collection and store archetypes are not plural']
                             flag = 1
                             row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP1})
-                            incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP1}\t{documentation.strip()}")
-                            ap_count += 1
                         if (is_plural(nodes[i]) and is_plural(nodes[i + 1])): # both plural
                             #return ['Inconsistent Resource Archetype Names antipattern', 'Document is not singular'
                             flag = 1
                             row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": AP2})
-                            incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP2}\t{documentation.strip()}")
-                            ap_count += 1
+                            
 
                     # Analyze the last path segment for Controller
                     verbs = ["get", "post", "put", "delete", "update", "create", "fetch", "remove", "add", "edit", "patch"]
@@ -1286,44 +981,32 @@ class ApiAnalyzer:
                         if (first_word.lower() in verbs):
                             # print(method.upper())
                             if (method.upper().strip() in ["GET", "POST"]):
-                                # print("dhruvi")
                                 flag = 1
                                 row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Controller used with get or post"})
-                                incosistent_resource_archetype_AP.append(f"{method.strip()}\t{uri}\t{AP3}\t{documentation.strip()}")
-                                ap_count += 1
                             else:
                                 # print('wrong brunch')
                                 flag = 1
                                 row.update({"inconsistent_archetype": 1, "consistent_archetype": 0, "inconsistent_archetype_comment": "Controller is not used with get or post"})
-
-                            
                     if flag != 1:
                         row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Consistent Arhetypes"})
-                        cosistent_resource_archetype_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                        p_count += 1
+                        
                 print("->", end=" ")
                 #print(f"{row['inconsistent_archetype']} ---- {row['consistent_archetype']}")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
 
-        return incosistent_resource_archetype_AP, cosistent_resource_archetype_P, p_count, ap_count
     
     def detect_identifier_ambiguity(self):
         P = "[Identifier is Enclosed in {} or <> or Starts with :]"
         P2 = "[Regular Endpoints]"
         AP = "[Identifier is Not Enclosed in {} or <> or does not Start with :]"
-
-        identifier_ambiguity_AP = []
-        identifier_annotation_P = []
-        p_count = 0
-        ap_count = 0
         
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
-            for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
+            for line, uri in zip(lines, self.uris):
                 row = json.loads(line)
 
                 #parts = uri.split('/')
@@ -1340,44 +1023,31 @@ class ApiAnalyzer:
                         #print(True)
                         flag = 1
                         row.update({"identifier_ambiguity": 0, "identifier_annotation": 1, "identifier_ambiguity_comment": P})
-                        identifier_annotation_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                        p_count += 1
 
                 if flag != 1:
                     if "_Id" in uri.lower() or "_ID" in uri :# or {" in uri or "}" in uri or "<" in uri or ">" in uri or ":" in uri:
                         #return "Identifier Ambiguity antipattern"
                         row.update({"identifier_ambiguity": 1, "identifier_annotation": 0, "identifier_ambiguity_comment": AP})
-                        identifier_ambiguity_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                        ap_count += 1
                     else:
                         row.update({"identifier_ambiguity": 0, "identifier_annotation": 1, "identifier_ambiguity_comment": P2})
-                        identifier_annotation_P.append(f"{method.strip()}\t{uri}\t{P2}\t{documentation.strip()}")
-                        p_count += 1
-                
-                
+                        
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
 
-        return identifier_ambiguity_AP, identifier_annotation_P, p_count, ap_count
+ 
 
     
     def detect_flat_endpoint(self):
 
         P = "Structed Endpoint"
         AP = "Complex Words Present in Endpoint"
-
-        flat_endpoint_AP = []
-        structed_endpoint_P = []
-        p_count = 0
-        ap_count = 0
-        
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
-            for line, method, uri, documentation in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters):
+            for line, uri in zip(lines, self.uris):
                 row = json.loads(line)
 
                 flag = 0
@@ -1391,15 +1061,11 @@ class ApiAnalyzer:
                         #return "Flat Endpoint antipattern"
                         flag = 1
                         row.update({"flat_endpoint": 1, "structured_endpoint": 0, "flat_endpoint_comment": AP})
-                        flat_endpoint_AP.append(f"{method.strip()}\t{uri}\t{AP}\t{documentation.strip()}")
-                        ap_count += 1
                 if flag == 0:
                     #return "Structured Endpoint pattern"
                     row.update({"flat_endpoint": 0, "structured_endpoint": 1, "flat_endpoint_comment": P})
-                    structed_endpoint_P.append(f"{method.strip()}\t{uri}\t{P}\t{documentation.strip()}")
-                    p_count += 1
-                    print("->", end=" ")
+                print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
 
-        return flat_endpoint_AP, structed_endpoint_P, p_count, ap_count
+  
