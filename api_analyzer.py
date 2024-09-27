@@ -937,26 +937,54 @@ class ApiAnalyzer:
         AP2 = "Plural Nouns Found in Consecutive Nodes"
         AP3 = "Controller is not a Verb"
 
+        def split_uri(uri):
+            extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip", ".v1", ".v2", ".v3"]
+            pattern = re.compile('|'.join([re.escape(ext) for ext in extensions]))
+            uri = pattern.sub('', uri)
+            
+            # Remove parts enclosed in {}, <>, followed by :, and parts after ?
+            cleaned_uri = re.sub(r'\{.*?\}|\<.*?\>|:[^/]*|\?.*', '', uri)
+            
+            # Split the URI by slashes
+            parts = cleaned_uri.strip().split('/')
+            
+            clean_nodes = []
+            for part in parts:
+                if part:  # Skip empty parts
+                    # Remove unwanted characters (digits, $, %, ., etc.)
+                    part = re.sub(r'[^a-zA-Z_-]', '', part)  # Keep letters, _, and -
+                    
+                    # Split by underscore, hyphen, or camelCase
+                    last_part = re.split(r'_|-|(?<!^)(?=[A-Z])', part)
+                    
+                    # Add the last part if there are multiple segments
+                    if len(last_part) > 1:
+                        clean_nodes.append(last_part[-1].lower())
+                    elif part:  # Ensure part is not empty after cleaning
+                        clean_nodes.append(part.lower())  # Add the part as-is if no split is needed
+                    if "api" in clean_nodes:
+                        clean_nodes.remove("api")
+            
+            return clean_nodes
+
         
         path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
-            for line, method, uri, documentation, nodes in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters, self.processed_nodes):
+            for line, method, uri, documentation, clean_nodes in zip(lines, self.http_verb, self.uris, self.descriptions+self.parameters, self.processed_nodes):
                 row = json.loads(line)
 
                 
                 #nodes = [node for node in uri.split('/') if node.isalpha()]
-                # print(uri)
-                # print(nodes)
-                #print(proc_uri)
-                #nodes = [subpart for part in uri.split('/') if part and not part.isdigit() for subpart in re.split(r'[._-]', part)]
-                if "identification" in nodes:
-                    nodes.remove("identification")
-                #print(nodes)
+                print(uri)
+                print(clean_nodes)
+                
+                nodes = split_uri(uri)
+                print(nodes)
                 if len(nodes) <= 2:
-                    row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Less than 3 nodes present in endpoint"})
+                     row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Less than 3 nodes present in endpoint"})
                 else:
                     flag = 0
                     # Check for singular/plural pattern violations
@@ -974,13 +1002,13 @@ class ApiAnalyzer:
                     # Analyze the last path segment for Controller
                     verbs = ["get", "post", "put", "delete", "update", "create", "fetch", "remove", "add", "edit", "patch"]
                     if len(nodes) > 2:
-                        last_segment = nodes[-1]
+                        last_segment = uri.split('/')[-1]
                         # print(last_segment)
-                        first_word = re.split(r'[-_]', last_segment)[0]
+                        first_word = re.split(r'_|-|(?<!^)(?=[A-Z])', last_segment)[0]
                         #print(first_word)
                         if (first_word.lower() in verbs):
                             # print(method.upper())
-                            if (method.upper().strip() in ["GET", "POST"]):
+                            if (method.upper().strip() == "POST"):
                                 flag = 1
                                 row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Controller used with get or post"})
                             else:
