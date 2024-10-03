@@ -69,20 +69,21 @@ class ApiAnalyzer:
                     #print(line)
                     line  = line.split(">>")
                     if len(line) == 4:
-                        verb, uri, des, para = line[0], line[1], line[2], line[3]
+                        verb, uri, des, para = line[0].strip(), line[1].strip(), line[2].strip(), line[3].strip()
                     else:
-                        verb, uri, des, para = line[0], line[1], line[2], ''
-                    self.http_verb.append(verb)
-                    self.uris.append(uri)
+                        verb, uri, des, para = line[0].strip(), line[1].strip(), line[2].strip(), ''
+
+                    self.http_verb.append(verb.strip())
+                    self.uris.append(uri.strip())
                     self.descriptions.append(des.strip())
                     self.parameters.append(para.strip())
 
-                    pro_nodes = self.clean.get_uri_nodes(uri)
-                    pro_des = self.clean.preprocess_documentation(f"{des} {para}")
+                    pro_nodes = self.clean.get_uri_nodes(uri.strip())
+                    pro_des = self.clean.preprocess_documentation(f"{des.strip()} {para.strip()}")
                     self.processed_nodes.append(pro_nodes)
                     self.processed_des.append(pro_des)
 
-                    line_dict = {"http_verb": verb, "uri": uri, "processed_uri": pro_nodes, "description": des, "parameter": para, "processed_des_para": pro_des}
+                    line_dict = {"http_verb": verb.strip(), "uri": uri.strip(), "processed_uri" : pro_nodes, "description": des.strip(), "parameter": para.strip(), "processed_des_para": pro_des}
                     json_string=json.dumps(line_dict,ensure_ascii=False)
                     pro_file.write(json_string+"\n")        
                 
@@ -91,8 +92,6 @@ class ApiAnalyzer:
 
 
     def detect_amorphous_uri(self):
-        P = "Tidy End-point"
-        AP = "Amorphous End-point"
         found_AP = 0
     
         extensions = [".json", ".html", ".pdf", ".txt", ".xml", ".jpg", ".jpeg", ".png", ".gif", ".csv", ".htm", ".zip"]
