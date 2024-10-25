@@ -977,11 +977,11 @@ class ApiAnalyzer:
 
                 
                 #nodes = [node for node in uri.split('/') if node.isalpha()]
-                print(uri)
-                print(clean_nodes)
+                #print(uri)
+                #print(clean_nodes)
                 
                 nodes = split_uri(uri)
-                print(nodes)
+                #print(nodes)
                 if len(nodes) <= 2:
                      row.update({"inconsistent_archetype": 0, "consistent_archetype": 1, "inconsistent_archetype_comment": "Less than 3 nodes present in endpoint"})
                 else:
@@ -1084,7 +1084,7 @@ class ApiAnalyzer:
                 for node in nodes:
                     splitted_nodes = re.split(r'(?=[A-Z])|_|-', node)
                     # print(splitted_nodes)
-                    if len(splitted_nodes) > 4:
+                    if len(splitted_nodes) > 2:
                         #return "Flat Endpoint antipattern"
                         flag = 1
                         row.update({"flat_endpoint": 1, "structured_endpoint": 0, "flat_endpoint_comment": AP})

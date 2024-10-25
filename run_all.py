@@ -12,50 +12,50 @@ def run(selected, api_type):
     print("\nFinished Detection of AmorphousURI.\n")
 
 
-    # print("Detection of NonStandardURI:")
-    # analyzer_obj.detect_non_standard_uri()
-    # print("\nFinished Detection of NonStandardURI:\n")
+    print("Detection of NonStandardURI:")
+    analyzer_obj.detect_non_standard_uri()
+    print("\nFinished Detection of NonStandardURI:\n")
 
 
 
-    # print("Detection of CRUDyURI:")
-    # analyzer_obj.detect_crudy_uri()
-    # print("\nFinished Detection of CRUDyURI:\n")
+    print("Detection of CRUDyURI:")
+    analyzer_obj.detect_crudy_uri()
+    print("\nFinished Detection of CRUDyURI:\n")
 
 
-    # print("Detection of UnversionedURIs:")
-    # analyzer_obj.detect_unversioned_uris()
-    # print("\nFinished Detection of UnversionedURIs:\n")
+    print("Detection of UnversionedURIs:")
+    analyzer_obj.detect_unversioned_uris()
+    print("\nFinished Detection of UnversionedURIs:\n")
 
 
-    # print("Detection of PluralisedNodes:")
-    # analyzer_obj.detect_pluralized_node()
-    # print("\nFinished Detection of PluralisedNodes:\n")
+    print("Detection of PluralisedNodes:")
+    analyzer_obj.detect_pluralized_node()
+    print("\nFinished Detection of PluralisedNodes:\n")
 
 
-    # print("Detection of Non-descriptive:")
-    # analyzer_obj.detect_non_descriptive_uri()
-    # print("\nFinished Detection of Non-descriptiveURI:\n")
+    print("Detection of Non-descriptive:")
+    analyzer_obj.detect_non_descriptive_uri()
+    print("\nFinished Detection of Non-descriptiveURI:\n")
 
 
-    # print("Detection of NonHierarchicalNodes:")
-    # analyzer_obj.detect_non_hierarchical_nodes()
-    # print("\nFinished Detection of NonHierarchicalNodes:\n")
+    print("Detection of NonHierarchicalNodes:")
+    analyzer_obj.detect_non_hierarchical_nodes()
+    print("\nFinished Detection of NonHierarchicalNodes:\n")
 
-    # print("Detection of InconsistantDocumentation:")
-    # analyzer_obj.detect_inconsistent_documentations()
-    # print("\nFinished Detection of InconsistantDocumentation:\n")
-
-
-    # print("Detection of ContextlessResource:")
-    # analyzer_obj.detect_contextless()
-    # print("\nFinished Detection of ContextlessResource:\n")
+    print("Detection of InconsistantDocumentation:")
+    analyzer_obj.detect_inconsistent_documentations()
+    print("\nFinished Detection of InconsistantDocumentation:\n")
 
 
+    print("Detection of ContextlessResource:")
+    analyzer_obj.detect_contextless()
+    print("\nFinished Detection of ContextlessResource:\n")
 
-    # print("Detection of LessCohisiveDocumentation:")
-    # analyzer_obj.detect_less_cohesive_documentation()
-    # print("\nFinished Detection of LessCohisiveDocumentation:\n")
+
+
+    print("Detection of LessCohisiveDocumentation:")
+    analyzer_obj.detect_less_cohesive_documentation()
+    print("\nFinished Detection of LessCohisiveDocumentation:\n")
 
     # print("Detection of Non_FilteringEndpoint:")
     # analyzer_obj.detect_non_filtering_endpoint()

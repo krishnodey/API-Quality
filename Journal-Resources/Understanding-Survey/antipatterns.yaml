@@ -1,0 +1,297 @@
+swagger: "2.0"
+info:
+  description: "This is a project to test the impact of design practices on the understandability of APIs"
+  version: "1.0.0"
+  title: "Ignoring API Practices"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+tags:
+- name: "Amorphous Endpoint"
+- name: "Contextless Resource Names"
+- name: "CRUDy Endpoint"
+- name: "Inconsistent Documentation"
+- name: "Non-descriptive Endpoint"
+- name: "Non-hierarchical Nodes"
+- name: "Non-pertinent Documentation"
+- name: "Non-standard Endpoint"
+- name: "Pluralized Nodes"
+- name: "Unversioned Endpoint"
+- name: "Parameters Tunneling"
+- name: "Inconsistent Resource Archetype Names"
+- name: "Identifier Ambiguity"
+- name: "Flat Endpoint"
+schemes:
+- "https"
+paths:
+  /ad_accounts/{ad_account_id}/targeting_templates: #pinterest
+    patch:
+      tags:
+      - "Amorphous Endpoint"
+      #description: "Update the targeting template given advertiser ID and targeting template ID"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "ad_account_id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Unique identifier of an ad account."
+      responses:
+        default:
+          description: "General response for this operation."
+  
+  /shop/book/player/{book_id}: #dummy
+    get:
+      tags:
+      - "Contextless Resource Names"
+      #description: "Returns a book information for a specfic id"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "book_id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Unique identifier of a book."
+      responses:
+        default:
+          description: "General response for this operation."      
+          
+  /datasources/bulk-delete: #Adobe Audience Manager	POST	/datasources/bulk-delete	Bulk delete multiple data sources.
+    post:
+      tags:
+      - "CRUDy Endpoint"
+      description: "Bulk delete multiple data sources."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."     
+
+  /deleteDisputeEvidence: #Braintree	POST	/deleteDisputeEvidence	Deletes evidence from a dispute.  n/a
+    post:
+      tags:
+      - "Inconsistent Documentation"
+      description: "Deletes evidence from a dispute."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+
+  /auth/login: #Node-RED	GET	/auth/login	Get the active authentication scheme
+    get:
+      tags:
+      - "Non-descriptive Endpoint"
+      description: "Get the active authentication scheme."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  
+  /faculty/professor/{id}/university/: #dummy
+    get:
+      tags:
+      - "Non-hierarchical Nodes"
+      description: "Returns professor information for a specific id."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The unique identifier for professor"
+      responses:
+        default:
+          description: "General response for this operation."
+
+  /v2/berry-firmness/{names}/: #Pokeapi	GET	/v2/berry-firmness/{names}/	The name of this resource listed in different languages. n/a
+    get:
+      tags:
+      - "Non-pertinent Documentation"
+      description: "The name of this resource listed in different languages."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "names"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The unique identifier for name"
+      responses:
+        default:
+          description: "General response for this operation."
+
+
+  /bui/attmnt({persid})/$value: #BroadCom	GET	/bui/attmnt({persid})/$value	Returns an attachment as binary data.
+    get:
+      tags:
+      - "Non-standard Endpoint"
+      description: "The name of this resource listed in different languages."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "persid"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The unique identifier for persid"
+      responses:
+        default:
+          description: "General response for this operation."
+  
+  /deployment/resources/subnet: #IBM Cloud Pak System	POST	/deployment/resources/subnet	Create a new subnet.
+    post:
+      tags:
+      - "Pluralized Nodes"
+      description: "Create a new subnet."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+          
+  /table_records/{table_id}: #Pipefy	GET	/table_records/{table_id}	Fetches a group of records based on arguments table_id: ID! Required. The table ID
+    get:
+      tags:
+      - "Unversioned Endpoint"
+      description: "Fetches a group of records based on arguments."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "table_id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The table ID"
+      responses:
+        default:
+          description: "General response for this operation."
+  
+  
+  
+
+          
+
+          
+  /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}: #instagram
+    post:
+      tags:
+      - "Parameters Tunneling"
+      description: "Enable or disable comments on an IG Media."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "ig-media-id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "IG Media ID"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /policies/policy/version:      #Amazon AWS Core IoT
+    get:
+      tags:
+      - "Inconsistent Resource Archetype Names"
+      description: "Lists the versions of the specified policy and identifies the default version."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /DIMENSION/PLAYER_ID: #DailyMotion
+    get:
+      tags:
+      - "Identifier Ambiguity"
+      description: "ID(s) of the player(s) used to play your content. The ID(s) listed can be yours or from third parties."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "PLAYER_ID"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        default:
+          description: "General response for this operation."
+  /enterpriseAdministratorInvitationByToken: #GitHub	
+    get:
+      tags:
+      - "Flat Endpoint"
+      description: "Look up a pending enterprise administrator invitation by invitation token."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "invitationToken"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The invitation token sent with the invitation email."
+      responses:
+        default:
+          description: "General response for this operation."
+  

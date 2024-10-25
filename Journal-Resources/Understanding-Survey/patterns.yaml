@@ -1,0 +1,306 @@
+swagger: "2.0"
+info:
+  description: "This is a project to test the impact of design practices on the understandability of APIs"
+  version: "1.0.0"
+  title: "Following API Practices"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+tags:
+- name: "Tidy Endpoint"
+- name: "Contextual Resource Names"
+- name: "Verbless Endpoint"
+- name: "Consistent Documentation"
+- name: "Descriptive Endpoint"
+- name: "Hierarchical Nodes"
+- name: "Pertinent Documentation"
+- name: "Standard Endpoint"
+- name: "Singularized Nodes"
+- name: "Versioned Endpoint"
+- name: "Parameters Adherence"
+- name: "Consistent Resource Archetype Names"
+- name: "Identifier Annotation"
+- name: "Structured Endpoint"
+schemes:
+- "https"
+paths:
+  /v5/pins/{pin-id}: #Pinterest
+    delete:
+      tags:
+      - "Tidy Endpoint"
+      #description: "Delete a Pins owned by the 'operation user_account' - or on a group board that has been shared with this account."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "pin-id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Unique identifier of a Pin."
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /league/team/player/{player_id}: #dummy
+    get:
+      tags:
+      - "Contextual Resource Names"
+      #description: "Returns a player information for a specfic id"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+        - name: "player_id"
+          in: "path"
+          required: true
+          type: "string"
+          description: "Unique identifier of a player."
+      responses:
+        default:
+          description: "General response for this operation."      
+          
+          
+      
+  /datasources/{datasource-id}: #Adobe Audience Manager	POST	/datasources/bulk-delete	Bulk delete multiple data sources.
+    delete:
+      tags:
+      - "Verbless Endpoint"
+      #description: "Delete multiple data sources."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+        - name: "datasource-id"
+          in: "path"
+          required: true
+          type: "string"
+          description: "Unique identifier of datasource."
+      responses:
+        default:
+          description: "General response for this operation."   
+  
+  /createVenmoPaymentContext: #Braintree	Braintree	POST	/createVenmoPaymentContext	Create a Venmo payment context.  n/a
+    post:
+      tags:
+      - "Consistent Documentation"
+      #description: "Create a Venmo payment context."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."  
+          
+  
+  /authentication/login: #Node-RED	GET	/auth/login	Get the active authentication scheme
+    get:
+      tags:
+      - "Descriptive Endpoint"
+      #description: "Get the active authentication scheme."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /university/faculty/professor/{id}: #dummy
+    get:
+      tags:
+      - "Hierarchical Nodes"
+      #description: "Returns professor information for a specific id."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The unique identifier for professor"
+      responses:
+        default:
+          description: "General response for this operation."
+
+  /v2/berry-firmness/{berries}/: #Pokeapi	GET	/v2/berry-firmness/{berries}/	A list of the berries with this firmness. n/a
+    get:
+      tags:
+      - "Pertinent Documentation"
+      #description: "A list of the berries with this firmness."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "berries"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The unique identifier for berries"
+      responses:
+        default:
+          description: "General response for this operation."
+
+
+  /environments/{environment-id}: #Cisco Flare	PUT	/environments/{environment_id}	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
+    get:
+      tags:
+      - "Standard Endpoint"
+      #description: "Update environment. Updates an environment. The message can contain just the properties of the object to be updated."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "environment-id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "Unique environment identifier"
+      responses:
+        default:
+          description: "General response for this operation."
+    
+  /deployment/resources/subnets: #IBM Cloud Pak System	POST	/deployment/resources/subnet	Create a new subnet.
+    post:
+      tags:
+      - "Singularized Nodes"
+      #description: "Create a new subnet."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  
+  /v2.0/table_records/{table_id}: #Pipefy	GET	/table_records/{table_id}	Fetches a group of records based on arguments table_id: ID! Required. The table ID
+    get:
+      tags:
+      - "Versioned Endpoint"
+      #description: "Fetches a group of records based on arguments."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "table_id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The table ID"
+      responses:
+        default:
+          description: "General response for this operation."
+  
+  
+      
+  
+      
+  /{ig-comment-id}?fields={fields}: #instagram		
+    get:
+      tags:
+      - "Parameters Adherence"
+      #description: "Get fields and edges on an IG Comment."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "ig-comment-id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "IG Comment ID"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /policies/policy/versions:      #Amazon AWS Core IoT
+    get:
+      tags:
+      - "Consistent Resource Archetype Names"
+      #description: "Lists the versions of the specified policy and identifies the default version."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /v2/eats/stores/{store_id}/menus: #UberEats	
+    post:
+      tags:
+      - "Identifier Annotation"
+      description: "This Upload Menu endpoint allows a developer to create or override the entire menu for a specific store."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "store_id"
+        in: "path"
+        required: true
+        type: "string"
+        description: "identifying string for a restaurant on Uber Eats, provided by Uber. "
+      responses:
+        default:
+          description: "General response for this operation."
+          
+  /enterprise/administrator/{invitationToken}: #GitHub	
+    get:
+      tags:
+      - "Structured Endpoint"
+      #description: "Look up a pending enterprise administrator invitation by invitation token."
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "invitationToken"
+        in: "path"
+        required: true
+        type: "string"
+        description: "The invitation token sent with the invitation email."
+      responses:
+        default:
+          description: "General response for this operation."
+          
+ 
