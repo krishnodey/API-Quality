@@ -68,7 +68,7 @@ paths:
           description: "General response for this operation."      
           
   /datasources/bulk-delete: #Adobe Audience Manager	POST	/datasources/bulk-delete	Bulk delete multiple data sources.
-    post:
+    delete:
       tags:
       - "CRUDy Endpoint"
       description: "Bulk delete multiple data sources."
@@ -82,11 +82,11 @@ paths:
         default:
           description: "General response for this operation."     
 
-  /deleteDisputeEvidence: #Braintree	POST	/deleteDisputeEvidence	Deletes evidence from a dispute.  n/a
-    post:
+  /createVenmoPaymentContext: #Braintree	Braintree	POST	/createVenmoPaymentContext	Create a Venmo payment context.  n/a
+    get:
       tags:
       - "Inconsistent Documentation"
-      description: "Deletes evidence from a dispute."
+      #description: "Create a Venmo payment context."
       consumes:
       - "application/json"
       - "application/xml"
@@ -95,13 +95,13 @@ paths:
       - "application/json"
       responses:
         default:
-          description: "General response for this operation."
+          description: "General response for this operation."  
 
   /auth/login: #Node-RED	GET	/auth/login	Get the active authentication scheme
     get:
       tags:
       - "Non-descriptive Endpoint"
-      description: "Get the active authentication scheme."
+      #description: "Get the active authentication scheme."
       consumes:
       - "application/json"
       - "application/xml"
@@ -117,7 +117,7 @@ paths:
     get:
       tags:
       - "Non-hierarchical Nodes"
-      description: "Returns professor information for a specific id."
+      #description: "Returns professor information for a specific id."
       consumes:
       - "application/json"
       - "application/xml"
@@ -156,11 +156,11 @@ paths:
           description: "General response for this operation."
 
 
-  /bui/attmnt({persid})/$value: #BroadCom	GET	/bui/attmnt({persid})/$value	Returns an attachment as binary data.
-    get:
+  /environments/${énvironmént-id}: #Cisco Flare	PUT	/environments/{environment_id}	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
+    put:
       tags:
       - "Non-standard Endpoint"
-      description: "The name of this resource listed in different languages."
+      #description: "Update environment. Updates an environment. The message can contain just the properties of the object to be updated."
       consumes:
       - "application/json"
       - "application/xml"
@@ -168,11 +168,11 @@ paths:
       - "application/xml"
       - "application/json"
       parameters:
-      - name: "persid"
+      - name: "énvironmént-id"
         in: "path"
         required: true
         type: "string"
-        description: "The unique identifier for persid"
+        description: "Unique environment identifier"
       responses:
         default:
           description: "General response for this operation."
@@ -181,7 +181,7 @@ paths:
     post:
       tags:
       - "Pluralized Nodes"
-      description: "Create a new subnet."
+      #description: "Create a new subnet."
       consumes:
       - "application/json"
       - "application/xml"
@@ -220,11 +220,11 @@ paths:
           
 
           
-  /{api-version}/{ig-media-id}?comment_enabled={comment-enabled}&access_token={access-token}: #instagram
+  /{ig-comment-id}?fields={fields}: #instagram		
     post:
       tags:
       - "Parameters Tunneling"
-      description: "Enable or disable comments on an IG Media."
+      #description: "Get fields and edges on an IG Comment."
       consumes:
       - "application/json"
       - "application/xml"
@@ -232,11 +232,11 @@ paths:
       - "application/xml"
       - "application/json"
       parameters:
-      - name: "ig-media-id"
+      - name: "ig-comment-id"
         in: "path"
         required: true
         type: "string"
-        description: "IG Media ID"
+        description: "IG Comment ID"
       responses:
         default:
           description: "General response for this operation."
@@ -256,24 +256,27 @@ paths:
         default:
           description: "General response for this operation."
           
-  /DIMENSION/PLAYER_ID: #DailyMotion
-    get:
+  
+  /v2/eats/stores/store_id/menus: #UberEats	
+    post:
       tags:
       - "Identifier Ambiguity"
-      description: "ID(s) of the player(s) used to play your content. The ID(s) listed can be yours or from third parties."
+      description: "This Upload Menu endpoint allows a developer to create or override the entire menu for a specific store."
       consumes:
       - "application/json"
       - "application/xml"
       produces:
       - "application/json"
       parameters:
-      - name: "PLAYER_ID"
-        in: "query"
+      - name: "store_id"
+        in: "path"
         required: true
         type: "string"
+        description: "identifying string for a restaurant on Uber Eats, provided by Uber. "
       responses:
         default:
           description: "General response for this operation."
+          
   /enterpriseAdministratorInvitationByToken: #GitHub	
     get:
       tags:

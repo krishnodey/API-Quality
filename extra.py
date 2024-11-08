@@ -396,6 +396,6 @@ def jsonl_to_csv(jsonl_file, csv_file):
             csv_writer.writerow(json_obj)
 
 # Usage
-jsonl_file = 'All-Data\output_data.jsonl'  # Your input JSONL file
-csv_file = 'All-Data\output_data.csv'     # Your output CSV file
+jsonl_file = 'All-Data\\temp\REST\Validation_Data.jsonl'  # Your input JSONL file
+csv_file = 'All-Data\\temp\REST\Validation_Data.csv'     # Your output CSV file
 jsonl_to_csv(jsonl_file, csv_file)

@@ -165,7 +165,7 @@ paths:
 
 
   /environments/{environment-id}: #Cisco Flare	PUT	/environments/{environment_id}	Update environment. Updates an environment. The message can contain just the properties of the object to be updated.
-    get:
+    put:
       tags:
       - "Standard Endpoint"
       #description: "Update environment. Updates an environment. The message can contain just the properties of the object to be updated."
