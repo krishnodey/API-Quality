@@ -35,6 +35,8 @@ calculateTAU <- function(effectiveness, efficiency, maxEfficiency) {
 # read data ------------
 data <- read.csv("results_survey.csv", na.strings = c("", "NA"), fileEncoding = "UTF-8-BOM")
 
+print(data)
+
 # demographic data
 # distribution of professions
 data %>%
@@ -67,89 +69,78 @@ data %>%
     numCanada = sum(is_Canada)
   )
 
-# variable names for the patterns
-patterns <- c(
-  "Amorphous", "Contextless", "CRUDy",
-  "Inconsistent", "Non-descriptive", "Non-hierarchical",
-  "Non-pertient", "Non-standard", "Pluralized",
-  "Unversioned", "Tunneling", "Inconsistent_Archetype", "Ambiguity", "Flat"
-)
-
 # variable names for the antipatterns
 antipatterns <- c(
+  "Amorphous", "Contextless", "CRUDy",
+  "Inconsistent", "NonDescriptive", "NonHierarchical",
+  "NonPertinent", "NonStandard", "Pluralized",
+  "Unversioned", "Tunneling", "InconArchetype", "Ambiguity", "Flat"
+)
+
+
+
+
+# variable names for the patterns
+patterns <- c(
   "Tidy", "Contextual", "Verbless",
   "Consistent", "Descriptive", "Hierarchical",
   "Pertinent", "Standard", "Singularized",
-  "Versioned", "Adherence", "Consistent_Archetype", "Annotation", "Structured"
+  "Versioned", "Adherence", "ConArchetype", "Annotation", "Structured"
 )
 
-# calculate TAU for every question and both groups
-for (var in patterns) {
-  var <- as.name(var)
-  varFR <- as.name(paste(var, "FR", sep = ""))
-  varFRTime <- as.name(paste(var, "FRTime", sep = ""))
-  varIR <- as.name(paste(var, "IR", sep = ""))
-  varIRTime <- as.name(paste(var, "IRTime", sep = ""))
+
+# calculate TAU for every questions
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varPattern <- as.name(p)
+  varPatternTime <- as.name(paste(p, "Time", sep = ""))
+  varAntipattern <- as.name(ap)
+  varAntipatternTime <- as.name(paste(ap, "Time", sep = ""))
   data <- data %>%
-    mutate("TAUFR_{{var}}" := calculateTAU({{ varFR }}, {{ varFRTime }}, max({{ varFRTime }}, {{ varIRTime }}, na.rm = TRUE))) %>%
-    mutate("TAUIR_{{var}}" := calculateTAU({{ varIR }}, {{ varIRTime }}, max({{ varFRTime }}, {{ varIRTime }}, na.rm = TRUE)))
+    mutate("TAU_{{varPattern}}" := calculateTAU({{ varPattern }}, {{ varPatternTime }}, max({{ varPatternTime }}, {{ varAntipatternTime }}, na.rm = TRUE))) %>%
+    mutate("TAU_{{varAntipattern}}" := calculateTAU({{ varAntipattern }}, {{ varAntipatternTime }}, max({{ varPatternTime }}, {{ varAntipatternTime }}, na.rm = TRUE)))
 }
 
+print(data)
 
-#Iterate through indices of both vectors
+# --> data now has attributes TAU_<Pattern> and TAU_<Antipattern>
+
+# create custom data frame with ratings and TAU for all rules combined
+combinedDf <- data.frame(matrix(ncol = 4, nrow = 0))
+colnames(combinedDf) <- c("Pattern_rating", "Pattern_TAU", "Antipattern_rating", "Antipattern_TAU")
 for (i in seq_along(patterns)) {
   p <- patterns[i]
   ap <- antipatterns[i]
   
-  varFR <- as.name(p)
-  varFRTime <- as.name(paste(p, "Time", sep = ""))
-  varIR <- as.name(ap)
-  varIRTime <- as.name(paste(ap, "Time", sep = ""))
+  varRatingPattern <- paste(p, "URating", sep = "")
+  varRatingAntipattern <- paste(ap, "URating", sep = "")
+  varTAUPattern <- paste("TAU", p, sep = "_")
+  varTAUAntipattern <- paste("TAU", ap, sep = "_")
+  #print(varRatingAntipattern)
+  #print(varTAUPattern)
   
-  # Add TAU calculations to the data frame
-  data <- data %>%
-    mutate(
-      !!paste0("TAUFR_", p) := calculateTAU(
-        {{ varFR }},
-        {{ varFRTime }},
-        max({{ varFRTime }}, {{ varIRTime }}, na.rm = TRUE)
-      )
-    ) %>%
-    mutate(
-      !!paste0("TAUIR_", ap) := calculateTAU(
-        {{ varIR }},
-        {{ varIRTime }},
-        max({{ varFRTime }}, {{ varIRTime }}, na.rm = TRUE)
-      )
-    )
-}
-
-# --> data now has attributes TAUFR_<RuleIdentifier> and TAUIR_<RuleIdentifier>
-
-# create custom data frame with ratings and TAU for all rules combined
-combinedDf <- data.frame(matrix(ncol = 4, nrow = 0))
-colnames(combinedDf) <- c("FR_rating", "FR_TAU", "IR_rating", "IR_TAU")
-for (var in ruleNames) {
-  varRatingFR <- paste(var, "FR_rating", sep = "")
-  varRatingIR <- paste(var, "IR_rating", sep = "")
-  varTAUFR <- paste("TAUFR", var, sep = "_")
-  varTAUIR <- paste("TAUIR", var, sep = "_")
-
   # merge data frames
   combinedDf <- rbind(combinedDf, data.frame(
-    FR_rating = data[[varRatingFR]],
-    FR_TAU = data[[varTAUFR]],
-    IR_rating = data[[varRatingIR]],
-    IR_TAU = data[[varTAUIR]]
+    Pattern_rating = data[[varRatingPattern]],
+    Pattern_TAU = data[[varTAUPattern]],
+    Antipattern_rating = data[[varRatingAntipattern]],
+    Antipattern_TAU = data[[varTAUAntipattern]]
   ))
+  
 }
 
+print(combinedDf)
+
 # Shapiro-Wilk test for non-normal distribution (replace value with the different rule identifiers, i.e., 1 to 12)
-var <- ruleNames[1]
-varFR <- as.name(paste("TAUFR", var, sep = "_"))
-varIR <- as.name(paste("TAUIR", var, sep = "_"))
-checkDataDistribution(data[[varFR]], varFR)
-checkDataDistribution(data[[varIR]], varIR)
+p <- patterns[1]
+ap <- antipatterns[1]
+varP <- as.name(paste("TAU", p, sep = "_"))
+print(varP)
+varAP <- as.name(paste("TAU", ap, sep = "_"))
+print(varAP)
+checkDataDistribution(data[[varP]], varP)
+checkDataDistribution(data[[varAP]], varAP)
 
 # results: every dataset is not normally distributed --> non-parametric test needed
 
@@ -163,32 +154,36 @@ checkDataDistribution(data[[varIR]], varIR)
 # calculate summary stats for all important performance metrics per individual rule
 descriptiveStats <- data.frame()
 
-for (var in ruleNames) {
-  varTAUFR <- as.name(paste("TAUFR", var, sep = "_"))
-  varTAUIR <- as.name(paste("TAUIR", var, sep = "_"))
-  varFR <- as.name(paste(var, "FR", sep = ""))
-  varFRTime <- as.name(paste(var, "FRTime", sep = ""))
-  varIR <- as.name(paste(var, "IR", sep = ""))
-  varIRTime <- as.name(paste(var, "IRTime", sep = ""))
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+
+  varTAUP <- as.name(paste("TAU", p, sep = "_"))
+  varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
+  varP <- as.name(paste(p, "", sep = ""))
+  varPTime <- as.name(paste(p, "Time", sep = ""))
+  varAP <- as.name(paste(ap, "", sep = ""))
+  varAPTime <- as.name(paste(ap, "Time", sep = ""))
 
   descriptiveStats <- rbind(
     descriptiveStats,
     data %>% summarise(
-      rule = var,
-      mean_TAU_FR := mean({{ varTAUFR }}, na.rm = TRUE),
-      mean_TAU_IR := mean({{ varTAUIR }}, na.rm = TRUE),
-      mean_time_FR := mean({{ varFRTime }}, na.rm = TRUE),
-      mean_time_IR := mean({{ varIRTime }}, na.rm = TRUE),
-      correctAnswers_FR := sum({{ varFR }}, na.rm = TRUE),
-      correctAnswers_IR := sum({{ varIR }}, na.rm = TRUE),
-      answers_FR := data %>% filter(!is.na({{ varFR }})) %>% nrow(),
-      answers_IR := data %>% filter(!is.na({{ varIR }})) %>% nrow(),
-      correctPercent_FR := scales::percent(sum({{ varFR }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varFR }})) %>% nrow())),
-      correctPercent_IR := scales::percent(sum({{ varIR }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varIR }})) %>% nrow())),
-      correctness_FR := sum({{ varFR }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varFR }})) %>% nrow()),
-      correctness_IR := sum({{ varIR }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varIR }})) %>% nrow())
+      rule = p,
+      mean_TAU_P := mean({{ varTAUP }}, na.rm = TRUE),
+      mean_TAU_AP := mean({{ varTAUAP }}, na.rm = TRUE),
+      mean_time_P := mean({{ varPTime }}, na.rm = TRUE),
+      mean_time_AP := mean({{ varAPTime }}, na.rm = TRUE),
+      correctAnswers_P := sum({{ varP }}, na.rm = TRUE),
+      correctAnswers_AP := sum({{ varAP }}, na.rm = TRUE),
+      answers_P := data %>% filter(!is.na({{ varP }})) %>% nrow(),
+      answers_AP := data %>% filter(!is.na({{ varAP }})) %>% nrow(),
+      correctPercent_P := scales::percent(sum({{ varP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varP }})) %>% nrow())),
+      correctPercent_AP := scales::percent(sum({{ varAP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varAP }})) %>% nrow())),
+      correctness_P := sum({{ varP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varP }})) %>% nrow()),
+      correctness_AP := sum({{ varAP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varAP }})) %>% nrow())
     )
   )
+
 }
 
 print(descriptiveStats)
@@ -196,30 +191,35 @@ print(descriptiveStats)
 # calculate more detailed descriptive stats per individual rule (min, max, var)
 descriptiveStatsDetails <- data.frame()
 
-for (var in ruleNames) {
-  varTAUFR <- as.name(paste("TAUFR", var, sep = "_"))
-  varTAUIR <- as.name(paste("TAUIR", var, sep = "_"))
-  varFR <- as.name(paste(var, "FR", sep = ""))
-  varFRTime <- as.name(paste(var, "FRTime", sep = ""))
-  varIR <- as.name(paste(var, "IR", sep = ""))
-  varIRTime <- as.name(paste(var, "IRTime", sep = ""))
+
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  
+  varTAUP <- as.name(paste("TAU", p, sep = "_"))
+  varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
+  varP <- as.name(paste(p, "", sep = ""))
+  varPTime <- as.name(paste(p, "Time", sep = ""))
+  varAP <- as.name(paste(ap, "", sep = ""))
+  varAPTime <- as.name(paste(ap, "Time", sep = ""))
+  
 
   descriptiveStatsDetails <- rbind(
     descriptiveStatsDetails,
     data %>% summarise(
-      rule = var,
-      min_TAU_FR := min({{ varTAUFR }}, na.rm = TRUE),
-      min_TAU_IR := min({{ varTAUIR }}, na.rm = TRUE),
-      max_TAU_FR := max({{ varTAUFR }}, na.rm = TRUE),
-      max_TAU_IR := max({{ varTAUIR }}, na.rm = TRUE),
-      var_TAU_FR := var({{ varTAUFR }}, na.rm = TRUE),
-      var_TAU_IR := var({{ varTAUIR }}, na.rm = TRUE),
-      min_time_FR := min({{ varFRTime }}, na.rm = TRUE),
-      min_time_IR := min({{ varIRTime }}, na.rm = TRUE),
-      max_time_FR := max({{ varFRTime }}, na.rm = TRUE),
-      max_time_IR := max({{ varIRTime }}, na.rm = TRUE),
-      var_time_FR := var({{ varFRTime }}, na.rm = TRUE),
-      var_time_IR := var({{ varIRTime }}, na.rm = TRUE)
+      rule = p,
+      min_TAU_P := min({{ varTAUP }}, na.rm = TRUE),
+      min_TAU_AP := min({{ varTAUAP }}, na.rm = TRUE),
+      max_TAU_P := max({{ varTAUP }}, na.rm = TRUE),
+      max_TAU_AP := max({{ varTAUAP }}, na.rm = TRUE),
+      var_TAU_AP := var({{ varTAUP }}, na.rm = TRUE),
+      var_TAU_AP := var({{ varTAUAP }}, na.rm = TRUE),
+      min_time_AP := min({{ varPTime }}, na.rm = TRUE),
+      min_time_AP := min({{ varAPTime }}, na.rm = TRUE),
+      max_time_P := max({{ varPTime }}, na.rm = TRUE),
+      max_time_AP := max({{ varAPTime }}, na.rm = TRUE),
+      var_time_P := var({{ varPTime }}, na.rm = TRUE),
+      var_time_AP := var({{ varAPTime }}, na.rm = TRUE)
     )
   )
 }
@@ -230,15 +230,15 @@ print(descriptiveStatsDetails)
 barplotData <- rbind(
   data.frame(
     rule = descriptiveStats$rule,
-    value = descriptiveStats$correctness_FR,
-    treatment = "rule"
+    value = descriptiveStats$correctness_P,
+    treatment = "pattern"
   ),
   data.frame(
     rule = descriptiveStats$rule,
-    value = descriptiveStats$correctness_IR,
-    treatment = "violation"
+    value = descriptiveStats$correctness_AP,
+    treatment = "antipattern"
   )
-) %>% arrange(factor(rule, levels = rev(ruleNames))) %>%
+) %>% arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
 
 # use ggplot to print the grouped bar chart
@@ -278,15 +278,15 @@ coord_flip()
 barplotData <- rbind(
   data.frame(
     rule = descriptiveStats$rule,
-    value = descriptiveStats$mean_time_FR,
-    treatment = "rule"
+    value = descriptiveStats$mean_time_P,
+    treatment = "pattern"
   ),
   data.frame(
     rule = descriptiveStats$rule,
-    value = descriptiveStats$mean_time_IR,
-    treatment = "violation"
+    value = descriptiveStats$mean_time_AP,
+    treatment = "antipattern"
   )
-) %>% arrange(factor(rule, levels = rev(ruleNames))) %>%
+) %>% arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
 
 # use ggplot to print the grouped bar chart
@@ -326,15 +326,15 @@ coord_flip()
 barplotData <- rbind(
   data.frame(
     rule = descriptiveStats$rule,
-    value = descriptiveStats$mean_TAU_FR,
+    value = descriptiveStats$mean_TAU_P,
     treatment = "rule"
   ),
   data.frame(
     rule = descriptiveStats$rule,
-    value = descriptiveStats$mean_TAU_IR,
+    value = descriptiveStats$mean_TAU_AP,
     treatment = "violation"
   )
-) %>% arrange(factor(rule, levels = rev(ruleNames))) %>%
+) %>% arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
 
 # use ggplot to print the grouped bar chart
@@ -371,18 +371,21 @@ theme(
 coord_flip()
 
 # create 2 new data frames for multiple strip plots in one diagram
-# each with attributes `TAU`, `version` (1 or 2), and `ruleGroup` (1 to 6)
+# each with attributes `TAU`, `version` (1 or 2), and `ruleGroup` (1 to 7)
+
+# "Amorphous", "Contextless", "CRUDy", "Inconsistent", "NonDescriptive", "NonHierarchical", "NonPertinent"
+# "NonStandard", "Pluralized", "Unversioned", "Tunneling", "InconArchetype", "Ambiguity", "Flat"
 
 # rules PluralNoun, VerbController, CRUDNames, PathHierarchy1, PathHierarchy2, and PathHierarchy3
 stripPlotData <- rbind(
-  data %>% select(TAUFR_PluralNoun) %>% filter(!is.na(TAUFR_PluralNoun)) %>%
-    mutate(version = 1, ruleGroup = 1) %>% rename(TAU = TAUFR_PluralNoun),
-  data %>% select(TAUIR_PluralNoun) %>% filter(!is.na(TAUIR_PluralNoun)) %>%
-    mutate(version = 2, ruleGroup = 1) %>% rename(TAU = TAUIR_PluralNoun),
-  data %>% select(TAUFR_VerbController) %>% filter(!is.na(TAUFR_VerbController)) %>%
-    mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAUFR_VerbController),
-  data %>% select(TAUIR_VerbController) %>% filter(!is.na(TAUIR_VerbController)) %>%
-    mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAUIR_VerbController),
+  data %>% select(TAUFR_Tidy) %>% filter(!is.na(TAUFR_Tidy)) %>%
+    mutate(version = 1, ruleGroup = 1) %>% rename(TAU = TAU_Tidy),
+  data %>% select(TAU_Amorphous) %>% filter(!is.na(TAU_Amorphous)) %>%
+    mutate(version = 2, ruleGroup = 1) %>% rename(TAU = TAU_Amorphous),
+  data %>% select(TAU_Contextual) %>% filter(!is.na(TAU_Contextual)) %>%
+    mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAU_Contextual),
+  data %>% select(TAU_Contextless) %>% filter(!is.na(TAU_Contextless)) %>%
+    mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAU_Contextless),
   data %>% select(TAUFR_CRUDNames) %>% filter(!is.na(TAUFR_CRUDNames)) %>%
     mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAUFR_CRUDNames),
   data %>% select(TAUIR_CRUDNames) %>% filter(!is.na(TAUIR_CRUDNames)) %>%

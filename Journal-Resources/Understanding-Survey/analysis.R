@@ -89,6 +89,7 @@ for (var in ruleNames) {
     mutate("TAUIR_{{var}}" := calculateTAU({{ varIR }}, {{ varIRTime }}, max({{ varFRTime }}, {{ varIRTime }}, na.rm = TRUE)))
 }
 
+print(data)
 # --> data now has attributes TAUFR_<RuleIdentifier> and TAUIR_<RuleIdentifier>
 
 # create custom data frame with ratings and TAU for all rules combined
@@ -108,6 +109,7 @@ for (var in ruleNames) {
     IR_TAU = data[[varTAUIR]]
   ))
 }
+print(combinedDf)
 
 # Shapiro-Wilk test for non-normal distribution (replace value with the different rule identifiers, i.e., 1 to 12)
 var <- ruleNames[1]
@@ -135,6 +137,7 @@ for (var in ruleNames) {
   varFRTime <- as.name(paste(var, "FRTime", sep = ""))
   varIR <- as.name(paste(var, "IR", sep = ""))
   varIRTime <- as.name(paste(var, "IRTime", sep = ""))
+  
 
   descriptiveStats <- rbind(
     descriptiveStats,
@@ -469,6 +472,7 @@ for (var in ruleNames) {
     make.row.names = FALSE
   )
 }
+print(testResults)
 # adjust p-values with Holm-Bonferroni and format them
 testResults <- testResults %>%
   mutate(p.value = format.pval(
