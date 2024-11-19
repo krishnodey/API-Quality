@@ -374,11 +374,8 @@ coord_flip()
 # each with attributes `TAU`, `version` (1 or 2), and `ruleGroup` (1 to 7)
 
 # "Amorphous", "Contextless", "CRUDy", "Inconsistent", "NonDescriptive", "NonHierarchical", "NonPertinent"
-# "NonStandard", "Pluralized", "Unversioned", "Tunneling", "InconArchetype", "Ambiguity", "Flat"
-
-# rules PluralNoun, VerbController, CRUDNames, PathHierarchy1, PathHierarchy2, and PathHierarchy3
 stripPlotData <- rbind(
-  data %>% select(TAUFR_Tidy) %>% filter(!is.na(TAUFR_Tidy)) %>%
+  data %>% select(TAU_Tidy) %>% filter(!is.na(TAU_Tidy)) %>%
     mutate(version = 1, ruleGroup = 1) %>% rename(TAU = TAU_Tidy),
   data %>% select(TAU_Amorphous) %>% filter(!is.na(TAU_Amorphous)) %>%
     mutate(version = 2, ruleGroup = 1) %>% rename(TAU = TAU_Amorphous),
@@ -386,25 +383,31 @@ stripPlotData <- rbind(
     mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAU_Contextual),
   data %>% select(TAU_Contextless) %>% filter(!is.na(TAU_Contextless)) %>%
     mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAU_Contextless),
-  data %>% select(TAUFR_CRUDNames) %>% filter(!is.na(TAUFR_CRUDNames)) %>%
-    mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAUFR_CRUDNames),
-  data %>% select(TAUIR_CRUDNames) %>% filter(!is.na(TAUIR_CRUDNames)) %>%
-    mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAUIR_CRUDNames),
-  data %>% select(TAUFR_PathHierarchy1) %>% filter(!is.na(TAUFR_PathHierarchy1)) %>%
-    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAUFR_PathHierarchy1),
-  data %>% select(TAUIR_PathHierarchy1) %>% filter(!is.na(TAUIR_PathHierarchy1)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAUIR_PathHierarchy1),
-  data %>% select(TAUFR_PathHierarchy2) %>% filter(!is.na(TAUFR_PathHierarchy2)) %>%
-    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAUFR_PathHierarchy2),
-  data %>% select(TAUIR_PathHierarchy2) %>% filter(!is.na(TAUIR_PathHierarchy2)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAUIR_PathHierarchy2),
-  data %>% select(TAUFR_PathHierarchy3) %>% filter(!is.na(TAUFR_PathHierarchy3)) %>%
-    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAUFR_PathHierarchy3),
-  data %>% select(TAUIR_PathHierarchy3) %>% filter(!is.na(TAUIR_PathHierarchy3)) %>%
-    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAUIR_PathHierarchy3)
+  data %>% select(TAU_Verbless) %>% filter(!is.na(TAU_Verbless)) %>%
+    mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_Verbless),
+  data %>% select(TAU_CRUDy) %>% filter(!is.na(TAU_CRUDy)) %>%
+    mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAU_CRUDy),
+  data %>% select(TAU_Consistent) %>% filter(!is.na(TAU_Consistent)) %>%
+    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_Consistent),
+  data %>% select(TAU_Inconsistent) %>% filter(!is.na(TAU_Inconsistent)) %>%
+    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_Inconsistent),
+  data %>% select(TAU_Descriptive) %>% filter(!is.na(TAU_Descriptive)) %>%
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_Descriptive),
+  data %>% select(TAU_NonDescriptive) %>% filter(!is.na(TAU_NonDescriptive)) %>%
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_NonDescriptive),
+  data %>% select(TAU_Hierarchical) %>% filter(!is.na(TAU_Hierarchical)) %>%
+    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_Hierarchical),
+  data %>% select(TAU_NonHierarchical) %>% filter(!is.na(TAU_NonHierarchical)) %>%
+    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_NonHierarchical),
+  data %>% select(TAU_Pertinent) %>% filter(!is.na(TAU_Pertinent)) %>%
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_Pertinent),
+  data %>% select(TAU_NonPertinent) %>% filter(!is.na(TAU_NonPertinent)) %>%
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_NonPertinent)
 ) %>%
-  mutate(version = factor(version, levels = c(1, 2), labels = c("Rule", "Violation"))) %>%
-  mutate(ruleGroup = factor(ruleGroup, levels = c(1:6), labels = c("#1: PluralNoun", "#2: VerbController", "#3: CRUDNames", "#4: PathHierarchy1", "#5: PathHierarchy2", "#6: PathHierarchy3")))
+  mutate(version = factor(version, levels = c(1, 2), labels = c("P", "AP"))) %>%
+  mutate(ruleGroup = factor(ruleGroup, levels = c(1:7), labels = c("#1: Tidy", "#2: Contextual", "#3: Verbless", "#4: Consistent", "#5: Descriptive", "#6: NonHierarchical", "#7: Pertinent")))
+
+print(stripPlotData)
 
 ggplot(stripPlotData, aes(x = version, y = TAU, fill = ruleGroup)) +
 geom_jitter(aes(color = version), width = .25) +
@@ -416,45 +419,48 @@ scale_color_manual(values = c("#0077dd", "#dd1100")) +
 # set scale for y axis
 ylim(0.00, 1.00) +
 # add median with special color
-stat_summary(fun = "median", geom = "point", shape = 18, size = 7, color = "#ffa600d8") +
+stat_summary(fun = "median", geom = "point", shape = 16, size = 7, color = "#ffa600d8") +
 labs(x = "Treatment", y = "TAU") +
 theme(
-  text = element_text(size = 18, face = "bold", family = "sans"),
-  axis.title = element_text(size = 18),
-  axis.text.x = element_text(size = 16),
-  axis.text.y = element_text(size = 14),
+  text = element_text(size = 14, face = "bold", family = "sans"),
+  axis.title = element_text(size = 14),
+  axis.text.x = element_text(size = 12),
+  axis.text.y = element_text(size = 10),
   legend.position = "none"
 )
 
 # rules NoTunnel, GETRetrieve, POSTCreate, NoRC200Error, RC401, and RC415
+# "NonStandard", "Pluralized", "Unversioned", "Tunneling", "InconArchetype", "Ambiguity", "Flat"
 stripPlotData <- rbind(
-  data %>% select(TAUFR_NoTunnel) %>% filter(!is.na(TAUFR_NoTunnel)) %>%
-    mutate(version = 1, ruleGroup = 1) %>% rename(TAU = TAUFR_NoTunnel),
-  data %>% select(TAUIR_NoTunnel) %>% filter(!is.na(TAUIR_NoTunnel)) %>%
-    mutate(version = 2, ruleGroup = 1) %>% rename(TAU = TAUIR_NoTunnel),
-  data %>% select(TAUFR_GETRetrieve) %>% filter(!is.na(TAUFR_GETRetrieve)) %>%
-    mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAUFR_GETRetrieve),
-  data %>% select(TAUIR_GETRetrieve) %>% filter(!is.na(TAUIR_GETRetrieve)) %>%
-    mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAUIR_GETRetrieve),
-  data %>% select(TAUFR_POSTCreate) %>% filter(!is.na(TAUFR_POSTCreate)) %>%
-    mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAUFR_POSTCreate),
-  data %>% select(TAUIR_POSTCreate) %>% filter(!is.na(TAUIR_POSTCreate)) %>%
-    mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAUIR_POSTCreate),
-  data %>% select(TAUFR_NoRC200Error) %>% filter(!is.na(TAUFR_NoRC200Error)) %>%
-    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAUFR_NoRC200Error),
-  data %>% select(TAUIR_NoRC200Error) %>% filter(!is.na(TAUIR_NoRC200Error)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAUIR_NoRC200Error),
-  data %>% select(TAUFR_RC401) %>% filter(!is.na(TAUFR_RC401)) %>%
-    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAUFR_RC401),
-  data %>% select(TAUIR_RC401) %>% filter(!is.na(TAUIR_RC401)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAUIR_RC401),
-  data %>% select(TAUFR_RC415) %>% filter(!is.na(TAUFR_RC415)) %>%
-    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAUFR_RC415),
-  data %>% select(TAUIR_RC415) %>% filter(!is.na(TAUIR_RC415)) %>%
-    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAUIR_RC415)
+  data %>% select(TAU_Standard) %>% filter(!is.na(TAU_Standard)) %>%
+    mutate(version = 1, ruleGroup = 1) %>% rename(TAU = TAU_Standard),
+  data %>% select(TAU_NonStandard) %>% filter(!is.na(TAU_NonStandard)) %>%
+    mutate(version = 2, ruleGroup = 1) %>% rename(TAU = TAU_NonStandard),
+  data %>% select(TAU_Singularized) %>% filter(!is.na(TAU_Singularized)) %>%
+    mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAU_Singularized),
+  data %>% select(TAU_Pluralized) %>% filter(!is.na(TAU_Pluralized)) %>%
+    mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAU_Pluralized),
+  data %>% select(TAU_Versioned) %>% filter(!is.na(TAU_Versioned)) %>%
+    mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_Versioned),
+  data %>% select(TAU_Unversioned) %>% filter(!is.na(TAU_Unversioned)) %>%
+    mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_Unversioned),
+  data %>% select(TAU_Adherence) %>% filter(!is.na(TAU_Adherence)) %>%
+    mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAU_Adherence),
+  data %>% select(TAU_Tunneling) %>% filter(!is.na(TAU_Tunneling)) %>%
+    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_Tunneling),
+  data %>% select(TAU_ConArchetype) %>% filter(!is.na(TAU_ConArchetype)) %>%
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_ConArchetype),
+  data %>% select(TAU_Annotation) %>% filter(!is.na(TAU_Annotation)) %>%
+    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_Annotation),
+  data %>% select(TAU_Ambiguity) %>% filter(!is.na(TAU_Ambiguity)) %>%
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_Ambiguity),
+  data %>% select(TAU_Structured) %>% filter(!is.na(TAU_Structured)) %>%
+    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_Structured),
+  data %>% select(TAU_Flat) %>% filter(!is.na(TAU_Flat)) %>%
+    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAU_Flat)
 ) %>%
-  mutate(version = factor(version, levels = c(1, 2), labels = c("Rule", "Violation"))) %>%
-  mutate(ruleGroup = factor(ruleGroup, levels = c(1:6), labels = c("#7: NoTunnel", "#8: GETRetrieve", "#9: POSTCreate", "#10: NoRC200Error", "#11: RC401", "#12: RC415")))
+  mutate(version = factor(version, levels = c(1, 2), labels = c("P", "AP"))) %>%
+  mutate(ruleGroup = factor(ruleGroup, levels = c(1:7), labels = c("#8: Standard", "#9: Singularized", "#10: Versioned", "#11: Adherence", "#12: ConsistentArchetype", "#13: Annotation", "14: Structured")))
 
 ggplot(stripPlotData, aes(x = version, y = TAU, fill = ruleGroup)) +
 geom_jitter(aes(color = version), width = .25) +
@@ -466,13 +472,13 @@ scale_color_manual(values = c("#0077dd", "#dd1100")) +
 # set scale for y axis
 ylim(0.00, 1.00) +
 # add median with special color
-stat_summary(fun = "median", geom = "point", shape = 18, size = 7, color = "#ffa600d8") +
+stat_summary(fun = "median", geom = "point", shape = 16, size = 8, color = "#ffa600d8") +
 labs(x = "Treatment", y = "TAU") +
 theme(
-  text = element_text(size = 16, face = "bold", family = "sans"),
-  axis.title = element_text(size = 18),
-  axis.text.x = element_text(size = 16),
-  axis.text.y = element_text(size = 14),
+  text = element_text(size = 12, face = "bold", family = "sans"),
+  axis.title = element_text(size = 14),
+  axis.text.x = element_text(size = 12),
+  axis.text.y = element_text(size = 10),
   legend.position = "none"
 )
 
@@ -485,20 +491,22 @@ confLevel <- 0.05
 
 # for individual rules
 testResults <- data.frame()
-for (var in ruleNames) {
-  varTAUFR <- paste("TAUFR", var, sep = "_")
-  varTAUIR <- paste("TAUIR", var, sep = "_")
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varTAUP <- paste("TAU", p, sep = "_")
+  varTAUAP <- paste("TAU", ap, sep = "_")
   w <- wilcox.test(
-    x = data[[varTAUFR]],
-    y = data[[varTAUIR]],
+    x = data[[varTAUP]],
+    y = data[[varTAUAP]],
     alternative = "greater",
     conf.level = confLevel
   )
   # calculate the effect size with Cohens d
-  d <- cohens_d(data[[varTAUFR]], data[[varTAUIR]])
+  d <- cohens_d(data[[varTAUP]], data[[varTAUAP]])
 
   # create results data frame
-  rule <- c(var)
+  rule <- c(p)
   U.value <- c(w$statistic)
   p.value <- c(w$p.value)
   cohens.d <- c(d$Cohens_d)
@@ -507,6 +515,10 @@ for (var in ruleNames) {
     make.row.names = FALSE
   )
 }
+
+print(testResults)
+
+
 # adjust p-values with Holm-Bonferroni and format them
 testResults <- testResults %>%
   mutate(p.value = format.pval(
@@ -515,14 +527,16 @@ testResults <- testResults %>%
     )
   )
 
+print(testResults)
+
 # for all rules combined
 w <- wilcox.test(
-  x = combinedDf$FR_TAU,
-  y = combinedDf$IR_TAU,
+  x = combinedDf$Pattern_TAU,
+  y = combinedDf$Antipattern_TAU,
   alternative = "greater",
   conf.level = confLevel
 )
-d <- cohens_d(combinedDf$FR_TAU, combinedDf$IR_TAU)
+d <- cohens_d(combinedDf$Pattern_TAU, combinedDf$Antipattern_TAU)
 rule <- c("All rules combined")
 U.value <- c(w$statistic)
 p.value <- c(format.pval(w$p.value, digits = 4, eps = 0.001))
@@ -536,7 +550,7 @@ print(testResults)
 
 # visualize d values with bar plot
 barplotData <- testResults %>%
-  filter(rule != "All rules combined" & rule != "PathHierarchy3")
+  filter(rule != "All rules combined")
 
 # use ggplot to print the bar chart
 ggplot(barplotData, aes(x = reorder(rule, cohens.d), y = cohens.d)) +

@@ -480,7 +480,7 @@ testResults <- testResults %>%
       digits = 4, eps = 0.001
     )
   )
-
+print(testResults)
 # for all rules combined
 w <- wilcox.test(
   x = combinedDf$FR_TAU,
