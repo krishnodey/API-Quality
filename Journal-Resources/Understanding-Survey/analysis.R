@@ -1004,6 +1004,8 @@ corrMatrix <-
   as.matrix() %>%
   rcorr(type = corrMthd)
 
+print(corrMatrix)
+
 # plot a correlation matrix
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
