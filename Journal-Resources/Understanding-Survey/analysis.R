@@ -611,6 +611,8 @@ for (var in ruleNames) {
   )
 }
 
+print(ratings)
+
 # melt the data frame into long format and create factor for ratings
 ratings_long <- reshape2::melt(ratings, id.vars = "rule")
 ratings_long$variable <- factor(
@@ -618,13 +620,23 @@ ratings_long$variable <- factor(
   levels = c("countFR1", "countFR2", "countIR1", "countIR2"),
   labels = c("Very easy (rule)", "Easy (rule)", "Very easy (violation)", "Easy (violation)")
 )
+
+print(ratings_long)
+
+print(ruleNames)
+
 # order according to categories
 ratings_long <- ratings_long %>%
   arrange(factor(rule, levels = rev(ruleNames))) %>%
   mutate(index = row_number())
 
+
+print(ratings_long)
+
 # create break values to avoid negative numbers
 break_values <- append(pretty(ratings_long$value), c(30, 40, 50))
+
+print(break_values)
 
 # create the plot
 ggplot(ratings_long, aes(x = reorder(rule, index), y = value, fill = variable)) +
@@ -696,6 +708,9 @@ for (var in ruleNames) {
     make.row.names = FALSE
   )
 }
+
+print(testResults)
+
 # adjust p-values with Holm-Bonferroni and format them
 testResults <- testResults %>%
   mutate(p.value = format.pval(
@@ -704,6 +719,7 @@ testResults <- testResults %>%
     )
   )
 
+print(combinedDf)
 # for all rules combined
 w <- wilcox.test(
   x = combinedDf$IR_rating,
@@ -794,6 +810,8 @@ for (var in ruleNames) {
   )
 }
 
+print(correlationResults)
+
 # adjust p-values with Holm-Bonferroni and format them
 correlationResults <- correlationResults %>%
   mutate(FR_p.value = format.pval(
@@ -806,6 +824,7 @@ correlationResults <- correlationResults %>%
       digits = 4, eps = 0.001
     )
   )
+print(correlationResults)
 
 # for all rules combined
 corFR <- cor.test(
@@ -864,12 +883,16 @@ for (var in ruleNames) {
   )
 }
 
+print(df)
+
 df %>% arrange(IR_adjustedR2) %>%
   print
 
 # visualize adjusted R-squared values for violation
 barplotData <- df %>%
   select(rule, IR_adjustedR2)
+
+print(barplotData)
 
 # use ggplot to print the bar chart
 ggplot(barplotData, aes(x = reorder(rule, IR_adjustedR2), y = IR_adjustedR2)) +
@@ -962,6 +985,8 @@ correlationData <- data %>%
     )
   )
 
+print(correlationData)
+
 # Correlation matrix for exploration
 # rcorr does not support kendalls TAU
 # "pearson" for linear correlation of continuous variables
@@ -1006,6 +1031,8 @@ for (d in demographics) {
   )
 }
 
+print(df)
+
 # adjust p-values with Holm-Bonferroni and format them
 df %>%
   mutate(p.value = format.pval(
@@ -1014,7 +1041,8 @@ df %>%
     )
   ) %>%
   arrange(p.value) %>%
-  print
+  
+print(df)
 
 # create 2 linear regression models for predicting TAU (one for following rules and one for violating rules)
 # LM for rule:

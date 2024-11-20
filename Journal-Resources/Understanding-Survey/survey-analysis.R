@@ -78,8 +78,6 @@ antipatterns <- c(
 )
 
 
-
-
 # variable names for the patterns
 patterns <- c(
   "Tidy", "Contextual", "Verbless",
@@ -589,25 +587,27 @@ coord_flip()
 # calculate descriptive statistics for perceived understandability ratings
 descriptiveStats <- data.frame()
 
-for (var in ruleNames) {
-  varTAUFR <- as.name(paste("TAUFR", var, sep = "_"))
-  varTAUIR <- as.name(paste("TAUIR", var, sep = "_"))
-  varFR <- as.name(paste(var, "FR", sep = ""))
-  varIR <- as.name(paste(var, "IR", sep = ""))
-  varFR_rating <- as.name(paste(var, "FR_rating", sep = ""))
-  varIR_rating <- as.name(paste(var, "IR_rating", sep = ""))
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varTAUP <- as.name(paste("TAU", p, sep = "_"))
+  varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
+  varP <- as.name(paste(varP, "", sep = ""))
+  varAP <- as.name(paste(varAP, "", sep = ""))
+  varP_rating <- as.name(paste(varP, "URating", sep = ""))
+  varAP_rating <- as.name(paste(varAP, "URating", sep = ""))
   descriptiveStats <- rbind(
     descriptiveStats,
     data %>% summarise(
-      rule = var,
-      median_rating_FR := median({{ varFR_rating }}, na.rm = TRUE),
-      median_rating_IR := median({{ varIR_rating }}, na.rm = TRUE),
-      mean_rating_FR := round(mean({{ varFR_rating }}, na.rm = TRUE), 2),
-      mean_rating_IR := round(mean({{ varIR_rating }}, na.rm = TRUE), 2),
-      mean_TAU_FR := mean({{ varTAUFR }}, na.rm = TRUE),
-      mean_TAU_IR := mean({{ varTAUIR }}, na.rm = TRUE),
-      correctPercent_FR := scales::percent(sum({{ varFR }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varFR }})) %>% nrow())),
-      correctPercent_IR := scales::percent(sum({{ varIR }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varIR }})) %>% nrow()))
+      rule = p,
+      median_rating_P := median({{ varP_rating }}, na.rm = TRUE),
+      median_rating_AP := median({{ varAP_rating }}, na.rm = TRUE),
+      mean_rating_P := round(mean({{ varP_rating }}, na.rm = TRUE), 2),
+      mean_rating_AP := round(mean({{ varAP_rating }}, na.rm = TRUE), 2),
+      mean_TAU_P := mean({{ varTAUP }}, na.rm = TRUE),
+      mean_TAU_AP := mean({{ varTAUAP }}, na.rm = TRUE),
+      correctPercent_P := scales::percent(sum({{ varP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varP }})) %>% nrow())),
+      correctPercent_AP := scales::percent(sum({{ varAP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varAP }})) %>% nrow()))
     )
   )
 }
@@ -617,20 +617,22 @@ print(descriptiveStats)
 # calculate more detailed descriptive stats per individual rule (min, max, var)
 descriptiveStatsDetails <- data.frame()
 
-for (var in ruleNames) {
-  varFR_rating <- as.name(paste(var, "FR_rating", sep = ""))
-  varIR_rating <- as.name(paste(var, "IR_rating", sep = ""))
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varP_rating <- as.name(paste(p, "URating", sep = ""))
+  varAP_rating <- as.name(paste(ap, "URating", sep = ""))
 
   descriptiveStatsDetails <- rbind(
     descriptiveStatsDetails,
     data %>% summarise(
-      rule = var,
-      min_rating_FR := min({{ varFR_rating }}, na.rm = TRUE),
-      min_rating_IR := min({{ varIR_rating }}, na.rm = TRUE),
-      max_rating_FR := max({{ varFR_rating }}, na.rm = TRUE),
-      max_rating_IR := max({{ varIR_rating }}, na.rm = TRUE),
-      var_rating_FR := var({{ varFR_rating }}, na.rm = TRUE),
-      var_rating_IR := var({{ varIR_rating }}, na.rm = TRUE)
+      rule = p,
+      min_rating_P := min({{ varP_rating }}, na.rm = TRUE),
+      min_rating_AP := min({{ varAP_rating }}, na.rm = TRUE),
+      max_rating_P := max({{ varP_rating }}, na.rm = TRUE),
+      max_rating_AP := max({{ varAP_rating }}, na.rm = TRUE),
+      var_rating_P := var({{ varP_rating }}, na.rm = TRUE),
+      var_rating_AP := var({{ varAP_rating }}, na.rm = TRUE)
     )
   )
 }
@@ -639,37 +641,45 @@ print(descriptiveStatsDetails)
 
 # create custom likert plots for perceived understandability ratings
 ratings <- data.frame()
-for (var in ruleNames) {
-  var <- as.name(var)
-  varRatingFR <- as.name(paste(var, "FR_rating", sep = ""))
-  varRatingIR <- as.name(paste(var, "IR_rating", sep = ""))
-  FR1 <- data %>% filter({{ varRatingFR }} == 1) %>% nrow() * -1
-  FR2 <- data %>% filter({{ varRatingFR }} == 2) %>% nrow() * -1
-  IR1 <- data %>% filter({{ varRatingIR }} == 1) %>% nrow()
-  IR2 <- data %>% filter({{ varRatingIR }} == 2) %>% nrow()
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- as.name(paste(p, "URating", sep = ""))
+  varRatingAP <- as.name(paste(ap, "URating", sep = ""))
+  P1 <- data %>% filter({{ varRatingP }} == 1) %>% nrow() * -1
+  P2 <- data %>% filter({{ varRatingP }} == 2) %>% nrow() * -1
+  AP1 <- data %>% filter({{ varRatingAP }} == 1) %>% nrow()
+  AP2 <- data %>% filter({{ varRatingAP }} == 2) %>% nrow()
 
   ratings <- rbind(ratings,
     data.frame(
-      rule = as.character(var),
-      countFR1 = FR1,
-      countFR2 = FR2,
-      countIR2 = IR2,
-      countIR1 = IR1
+      rule = as.character(p),
+      countP1 = P1,
+      countP2 = P2,
+      countAP1 = AP1,
+      countAP2 = AP2
     )
   )
 }
+
+print(ratings)
 
 # melt the data frame into long format and create factor for ratings
 ratings_long <- reshape2::melt(ratings, id.vars = "rule")
 ratings_long$variable <- factor(
   ratings_long$variable,
-  levels = c("countFR1", "countFR2", "countIR1", "countIR2"),
-  labels = c("Very easy (rule)", "Easy (rule)", "Very easy (violation)", "Easy (violation)")
+  levels = c("countP1", "countP2", "countAP1", "countAP2"),
+  labels = c("Very easy (pattern)", "Easy (pattern)", "Very easy (antipattern)", "Easy (antipattern)")
 )
+
+print(ratings_long)
+
 # order according to categories
 ratings_long <- ratings_long %>%
-  arrange(factor(rule, levels = rev(ruleNames))) %>%
+  arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
+
+print(ratings_long)
 
 # create break values to avoid negative numbers
 break_values <- append(pretty(ratings_long$value), c(30, 40, 50))
@@ -722,20 +732,25 @@ confLevel <- 0.05
 testResults <- data.frame()
 
 # for individual rules
-for (var in ruleNames) {
-  varRatingFR <- paste(var, "FR_rating", sep = "")
-  varRatingIR <- paste(var, "IR_rating", sep = "")
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- paste(p, "URating", sep = "")
+  varRatingAP <- paste(ap, "URating", sep = "")
   w <- wilcox.test(
-    x = data[[varRatingIR]],
-    y = data[[varRatingFR]],
+    x = data[[varRatingAP]],
+    y = data[[varRatingP]],
     alternative = "greater",
     conf.level = confLevel
   )
+  
   # calculate the effect size with Cohens d
-  d <- cohens_d(data[[varRatingIR]], data[[varRatingFR]])
+  d <- cohens_d(data[[varRatingAP]], data[[varRatingP]])
+  #print(d)
+  
 
   # create results data frame
-  rule <- c(var)
+  rule <- c(p)
   U.value <- c(w$statistic)
   p.value <- c(w$p.value)
   cohens.d <- c(d$Cohens_d)
@@ -744,6 +759,9 @@ for (var in ruleNames) {
     make.row.names = FALSE
   )
 }
+
+print(testResults)
+
 # adjust p-values with Holm-Bonferroni and format them
 testResults <- testResults %>%
   mutate(p.value = format.pval(
@@ -752,14 +770,15 @@ testResults <- testResults %>%
     )
   )
 
+print(combinedDf)
 # for all rules combined
 w <- wilcox.test(
-  x = combinedDf$IR_rating,
-  y = combinedDf$FR_rating,
+  x = combinedDf$Pattern_rating,
+  y = combinedDf$Antipattern_rating,
   alternative = "greater",
   conf.level = confLevel
 )
-d <- cohens_d(combinedDf$IR_rating, combinedDf$FR_rating)
+d <- cohens_d(combinedDf$Pattern_rating, combinedDf$Antipattern_rating)
 rule <- c("All rules combined")
 U.value <- c(w$statistic)
 p.value <- c(format.pval(w$p.value, digits = 4, eps = 0.001))
@@ -773,8 +792,7 @@ print(testResults)
 
 # visualize d values with bar plot
 barplotData <- testResults %>%
-  filter(rule != "All rules combined" & rule != "PathHierarchy3" &
-  rule != "VerbController" & rule != "RC415")
+  filter(rule != "All rules combined")
 
 # use ggplot to print the bar chart
 ggplot(barplotData, aes(x = reorder(rule, cohens.d), y = cohens.d)) +
@@ -810,62 +828,67 @@ correlationResults <- data.frame()
 corrMthd <- "kendall"
 
 # for each individual rule
-for (var in ruleNames) {
-  varRatingFR <- paste(var, "FR_rating", sep = "")
-  varRatingIR <- paste(var, "IR_rating", sep = "")
-  varTAUFR <- paste("TAUFR", var, sep = "_")
-  varTAUIR <- paste("TAUIR", var, sep = "_")
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- paste(p, "URating", sep = "")
+  varRatingAP <- paste(ap, "URating", sep = "")
+  varTAUP <- paste("TAU", p, sep = "_")
+  varTAUAP <- paste("TAU", ap, sep = "_")
 
-  corFR <- cor.test(
-    data[[varRatingFR]],
-    data[[varTAUFR]],
+  corP <- cor.test(
+    data[[varRatingP]],
+    data[[varTAUP]],
     method = corrMthd,
     alternative = "less",
     conf.level = confLevel
   )
-  corIR <- cor.test(
-    data[[varRatingIR]],
-    data[[varTAUIR]],
+  corAP <- cor.test(
+    data[[varRatingAP]],
+    data[[varTAUAP]],
     method = corrMthd,
     alternative = "less",
     conf.level = confLevel
   )
   correlationResults <- rbind(correlationResults,
     data.frame(
-      rule = var,
-      FR_correlation = corFR$estimate,
-      FR_p.value = corFR$p.value,
-      IR_correlation = corIR$estimate,
-      IR_p.value = corIR$p.value
+      rule = p,
+      P_correlation = corP$estimate,
+      P_p.value = corP$p.value,
+      AP_correlation = corAP$estimate,
+      AP_p.value = corAP$p.value
     ),
     make.row.names = FALSE
   )
 }
 
+print(correlationResults)
+
 # adjust p-values with Holm-Bonferroni and format them
 correlationResults <- correlationResults %>%
-  mutate(FR_p.value = format.pval(
-      p.adjust(FR_p.value, method = "holm"),
+  mutate(P_p.value = format.pval(
+      p.adjust(P_p.value, method = "holm"),
       digits = 4, eps = 0.001
     )
   ) %>%
-  mutate(IR_p.value = format.pval(
-      p.adjust(IR_p.value, method = "holm"),
+  mutate(AP_p.value = format.pval(
+      p.adjust(AP_p.value, method = "holm"),
       digits = 4, eps = 0.001
     )
   )
+print(correlationResults)
 
 # for all rules combined
 corFR <- cor.test(
-  combinedDf$FR_rating,
-  combinedDf$FR_TAU,
+  combinedDf$Pattern_rating,
+  combinedDf$Pattern_TAU,
   method = corrMthd,
   alternative = "less",
   conf.level = confLevel
 )
 corIR <- cor.test(
-  combinedDf$IR_rating,
-  combinedDf$IR_TAU,
+  combinedDf$Antipattern_rating,
+  combinedDf$Antipattern_TAU,
   method = corrMthd,
   alternative = "less",
   conf.level = confLevel
@@ -873,10 +896,10 @@ corIR <- cor.test(
 correlationResults <- rbind(correlationResults,
   data.frame(
     rule = "All rules combined",
-    FR_correlation = corFR$estimate,
-    FR_p.value = format.pval(corFR$p.value, digits = 4, eps = 0.001),
-    IR_correlation = corIR$estimate,
-    IR_p.value = format.pval(corIR$p.value, digits = 4, eps = 0.001)
+    P_correlation = corP$estimate,
+    P_p.value = format.pval(corP$p.value, digits = 4, eps = 0.001),
+    AP_correlation = corAP$estimate,
+    AP_p.value = format.pval(corAP$p.value, digits = 4, eps = 0.001)
   ),
   make.row.names = FALSE
 )
@@ -886,41 +909,44 @@ print(correlationResults)
 # regression results for each individual rule
 df <- data.frame()
 
-for (var in ruleNames) {
-  varRatingFR <- paste(var, "FR_rating", sep = "")
-  varRatingIR <- paste(var, "IR_rating", sep = "")
-  varTAUFR <- paste("TAUFR", var, sep = "_")
-  varTAUIR <- paste("TAUIR", var, sep = "_")
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- paste(p, "URating", sep = "")
+  varRatingAP <- paste(ap, "URating", sep = "")
+  varTAUP <- paste("TAU", p, sep = "_")
+  varTAUAP <- paste("TAU", ap, sep = "_")
 
-  resFR <- lm(
-    as.formula(paste(varTAUFR, "~", varRatingFR)),
+  resP <- lm(
+    as.formula(paste(varTAUP, "~", varRatingP)),
     data = data
   )
-  resIR <- lm(
-    as.formula(paste(varTAUIR, "~", varRatingIR)),
+  resAP <- lm(
+    as.formula(paste(varTAUAP, "~", varRatingAP)),
     data = data
   )
   df <- rbind(df,
     data.frame(
-      rule = var,
-      FR_adjustedR2 = summary(resFR)$adj.r.squared,
-      FR_p.value = format.pval(summary(resFR)$coefficients[8], digits = 4, eps = 0.001),
-      IR_adjustedR2 = summary(resIR)$adj.r.squared,
-      IR_p.value = format.pval(summary(resIR)$coefficients[8], digits = 4, eps = 0.001)
+      rule = ap,
+      P_adjustedR2 = summary(resP)$adj.r.squared,
+      P_p.value = format.pval(summary(resP)$coefficients[8], digits = 4, eps = 0.001),
+      AP_adjustedR2 = summary(resAP)$adj.r.squared,
+      AP_p.value = format.pval(summary(resAP)$coefficients[8], digits = 4, eps = 0.001)
     ),
     make.row.names = FALSE
   )
 }
+print(df)
 
-df %>% arrange(IR_adjustedR2) %>%
+df %>% arrange(AP_adjustedR2) %>%
   print
 
 # visualize adjusted R-squared values for violation
 barplotData <- df %>%
-  select(rule, IR_adjustedR2)
+  select(rule, AP_adjustedR2)
 
 # use ggplot to print the bar chart
-ggplot(barplotData, aes(x = reorder(rule, IR_adjustedR2), y = IR_adjustedR2)) +
+ggplot(barplotData, aes(x = reorder(rule, AP_adjustedR2), y = AP_adjustedR2)) +
 geom_bar(
   stat = "identity",
   width = 0.8,
@@ -931,9 +957,9 @@ scale_y_continuous(expand = expansion(mult = c(0.01, 0.12))) +
 # bar label text and positioning
 geom_text(
   aes(
-    label = sprintf("%.2f", round(IR_adjustedR2, 2)),
+    label = sprintf("%.2f", round(AP_adjustedR2, 2)),
     # fix label placement for negative numbers
-    y = ifelse(IR_adjustedR2 > 0, IR_adjustedR2 + 0.001, IR_adjustedR2 - 0.025)
+    y = ifelse(AP_adjustedR2 > 0, AP_adjustedR2 + 0.001, AP_adjustedR2 - 0.025)
   ),
   size = 5,
   fontface = "bold",
@@ -955,58 +981,59 @@ coord_flip()
 #########################################################################################################
 # Calculations for RQ3 (How does REST related experience influence the results of RQ1 and RQ2)
 #########################################################################################################
+# variable names for the antipatterns
+
+print(correlationData)
 
 # aggregate mean values for TAU, perceived understandability, correctness, and time (needed for RQ3)
 correlationData <- data %>%
   rowwise() %>%
   mutate(
-    mean_TAU_FR = ifelse(
-      group_id == 1,
-      mean(c(TAUFR_PluralNoun, TAUFR_PathHierarchy2, TAUFR_PathHierarchy3, TAUFR_CRUDNames, TAUFR_NoTunnel, TAUFR_RC401), na.rm = TRUE),
-      mean(c(TAUFR_VerbController, TAUFR_GETRetrieve, TAUFR_POSTCreate, TAUFR_RC415, TAUFR_NoRC200Error, TAUFR_PathHierarchy1), na.rm = TRUE)
+    mean_TAU_P = ifelse(
+      mean(c(TAU_Tidy, TAU_Contextual, TAU_Verbless, TAU_Consistent, TAU_Descriptive, TAU_Hierarchical, TAU_Pertinent), na.rm = TRUE),
+      mean(c(TAU_Standard, TAU_Singularized, TAU_Versioned, TAU_Adherence, TAU_ConArchetype, TAU_Annotation, TAU_Structured), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_TAU_IR = ifelse(
-      group_id == 1,
-      mean(c(TAUIR_VerbController, TAUIR_GETRetrieve, TAUIR_POSTCreate, TAUIR_RC415, TAUIR_NoRC200Error, TAUIR_PathHierarchy1), na.rm = TRUE),
-      mean(c(TAUIR_PluralNoun, TAUIR_PathHierarchy2, TAUIR_PathHierarchy3, TAUIR_CRUDNames, TAUIR_NoTunnel, TAUIR_RC401), na.rm = TRUE)
+    mean_TAU_AP = ifelse(
+      mean(c(TAU_Amorphous, TAU_Contextless, TAU_CRUDy, TAU_Inconsistent, TAU_NonDescriptive, TAU_NonHierarchical, TAU_NonPertinent), na.rm = TRUE),
+      mean(c(TAU_NonStandard, TAU_Pluralized, TAU_Unversioned, TAU_Tunneling, TAU_InconArchetype, TAU_Ambiguity, TAU_Flat), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_perceivedDifficulty_FR = ifelse(group_id == 1,
-      mean(c(PluralNounFR_rating, PathHierarchy2FR_rating, PathHierarchy3FR_rating, CRUDNamesFR_rating, NoTunnelFR_rating, RC401FR_rating), na.rm = TRUE),
-      mean(c(VerbControllerFR_rating, GETRetrieveFR_rating, POSTCreateFR_rating, RC415FR_rating, NoRC200ErrorFR_rating, PathHierarchy1FR_rating), na.rm = TRUE)
+    mean_perceivedDifficulty_P = ifelse(
+      mean(c(TidyURating, ContextualURating, VerblessURating, ConsistentURating, DescriptiveURating, HierarchicalURating, PertinentURating), na.rm = TRUE),
+      mean(c(StandardURating, SingularizedURating, VersionedURating, AdherenceURating, ConArchetypeURating, AnnotationURating, StructuredURating), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_perceivedDifficulty_IR = ifelse(group_id == 1,
-      mean(c(VerbControllerIR_rating, GETRetrieveIR_rating, POSTCreateIR_rating, RC415IR_rating, NoRC200ErrorIR_rating, PathHierarchy1IR_rating), na.rm = TRUE),
-      mean(c(PluralNounIR_rating, PathHierarchy2IR_rating, PathHierarchy3IR_rating, CRUDNamesIR_rating, NoTunnelIR_rating, RC401IR_rating), na.rm = TRUE)
+    mean_perceivedDifficulty_AP = ifelse(
+      mean(c(AmorphousURating, ContextlessURating, CRUDyURating, InconsistentURating, NonDescriptiveURating, NonHierarchicalURating, NonPertinentURating), na.rm = TRUE),
+      mean(c(NonStandardURating, PluralizedURating, UnversionedURating, TunnelingURating, InconArchetypeURating, AmbiguityURating, FlatURating), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_Time_FR = ifelse(group_id == 1,
-      mean(c(PluralNounFRTime, PathHierarchy2FRTime, PathHierarchy3FRTime, CRUDNamesFRTime, NoTunnelFRTime, RC401FRTime), na.rm = TRUE),
-      mean(c(VerbControllerFRTime, GETRetrieveFRTime, POSTCreateFRTime, RC415FRTime, NoRC200ErrorFRTime, PathHierarchy1FRTime), na.rm = TRUE)
+    mean_Time_P = ifelse(
+      mean(c(TidyTime, ContextualURating, VerblessTime, ConsistentTime, DescriptiveTime, HierarchicalTime, PertinentTime), na.rm = TRUE),
+      mean(c(StandardTime, SingularizedTime, VersionedTime, AdherenceTime, ConArchetypeTime, AnnotationTime, StructuredTime), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_Time_IR = ifelse(group_id == 1,
-      mean(c(VerbControllerIRTime, GETRetrieveIRTime, POSTCreateIRTime, RC415IRTime, NoRC200ErrorIRTime, PathHierarchy1IRTime), na.rm = TRUE),
-      mean(c(PluralNounIRTime, PathHierarchy2IRTime, PathHierarchy3IRTime, CRUDNamesIRTime, NoTunnelIRTime, RC401IRTime), na.rm = TRUE)
+    mean_Time_AP = ifelse(
+      mean(c(AmorphousTime, ContextlessTime, CRUDyTime, InconsistentTime, NonDescriptiveTime, NonHierarchicalTime, NonPertinentTime), na.rm = TRUE),
+      mean(c(NonStandardTime, PluralizedTime, VersionedTime, TunnelingTime, InconArchetypeTime, AmbiguityTime, FlatTime), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_Corr_FR = ifelse(group_id == 1,
-      mean(c(PluralNounFR, PathHierarchy2FR, PathHierarchy3FR, CRUDNamesFR, NoTunnelFR, RC401FR), na.rm = TRUE),
-      mean(c(VerbControllerFR, GETRetrieveFR, POSTCreateFR, RC415FR, NoRC200ErrorFR, PathHierarchy1FR), na.rm = TRUE)
+    mean_Corr_P = ifelse(
+      mean(c(Tidy, Contextual, Verbless, Consistent, Descriptive, Hierarchical, Pertinent), na.rm = TRUE),
+      mean(c(Standard, Singularized, Versioned, Adherence, ConArchetype, Annotation, Structured), na.rm = TRUE)
     )
   ) %>%
   mutate(
-    mean_Corr_IR = ifelse(group_id == 1,
-      mean(c(VerbControllerIR, GETRetrieveIR, POSTCreateIR, RC415IR, NoRC200ErrorIR, PathHierarchy1IR), na.rm = TRUE),
-      mean(c(PluralNounIR, PathHierarchy2IR, PathHierarchy3IR, CRUDNamesIR, NoTunnelIR, RC401IR), na.rm = TRUE)
+    mean_Corr_AP = ifelse(
+      mean(c(Amorphous, Contextless, CRUDy, Inconsistent, NonDescriptive, NonHierarchical, NonPertinent), na.rm = TRUE),
+      mean(c(NonStandard, Pluralized, Unversioned, Tunneling, InconArchetype, Ambiguity, Flat), na.rm = TRUE)
     )
   )
 
@@ -1027,15 +1054,17 @@ corrMatrix <-
   as.matrix() %>%
   rcorr(type = corrMthd)
 
+print(corrMatrix)
 # plot a correlation matrix
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
+print(correlationData)
 # caculate separate correlations
 corrMthd <- "kendall"
 df <- data.frame()
 # change to "mean_TAU_FR", "mean_TAU_IR", "mean_perceivedDifficulty_FR", or "mean_perceivedDifficulty_IR"
-dependent <- "mean_TAU_FR"
-demographics <- c("is_Student", "is_Academia", "is_Germany", "YearsOfExperience", "RichardsonMaturity", "MaturityLevel")
+dependent <- "mean_TAU_P"
+demographics <- c("is_Student", "is_Academia", "is_Canada", "YearsOfExperience", "RichardsonMaturity", "MaturityLevel")
 
 for (d in demographics) {
   res <- cor.test(
@@ -1066,25 +1095,25 @@ df %>%
 
 # create 2 linear regression models for predicting TAU (one for following rules and one for violating rules)
 # LM for rule:
-lrFR <- lm(
-  mean_TAU_FR ~
+lrP <- lm(
+  mean_TAU_P ~
     is_Student
     + is_Academia
-    + is_Germany
+    + is_Canada
     + YearsOfExperience
     + MaturityLevel,
   data = correlationData
 )
-summary(lrFR)
+summary(lrP)
 
 # LM for violation:
-lrIR <- lm(
-  mean_TAU_IR ~
+lrAP <- lm(
+  mean_TAU_AP ~
     is_Student
     + is_Academia
-    + is_Germany
+    + is_Canada
     + YearsOfExperience
     + MaturityLevel,
   data = correlationData
 )
-summary(lrIR)
+summary(lrAP)
