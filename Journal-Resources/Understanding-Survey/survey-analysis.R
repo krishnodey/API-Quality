@@ -33,7 +33,7 @@ calculateTAU <- function(effectiveness, efficiency, maxEfficiency) {
 
 
 # read data ------------
-data <- read.csv("results_survey.csv", na.strings = c("", "NA"), fileEncoding = "UTF-8-BOM")
+data <- read.csv("results-survey.csv", na.strings = c("", "NA"), fileEncoding = "UTF-8-BOM")
 
 print(data)
 
@@ -63,6 +63,7 @@ data %>%
     medianYearsOfExperience = median(YearsOfExperience, na.rm = TRUE),
     numKnowledgeOfRichardsonMaturityModel = sum(RichardsonMaturity, na.rm = TRUE),
     medianRichardsonMaturityRating = median(MaturityLevel, na.rm = TRUE),
+    numDeveloper = sum(is_Developer),
     numStudents = sum(is_Student),
     numAcademia = sum(is_Academia),
     numIndustry = n() - numStudents - numAcademia,
@@ -76,8 +77,6 @@ antipatterns <- c(
   "NonPertinent", "NonStandard", "Pluralized",
   "Unversioned", "Tunneling", "InconArchetype", "Ambiguity", "Flat"
 )
-
-
 # variable names for the patterns
 patterns <- c(
   "Tidy", "Contextual", "Verbless",
@@ -102,11 +101,12 @@ for (i in seq_along(patterns)) {
 
 print(data)
 
+
 # --> data now has attributes TAU_<Pattern> and TAU_<Antipattern>
 
-# create custom data frame with ratings and TAU for all rules combined
-combinedDf <- data.frame(matrix(ncol = 4, nrow = 0))
-colnames(combinedDf) <- c("Pattern_rating", "Pattern_TAU", "Antipattern_rating", "Antipattern_TAU")
+# create custom data frame with understandability ratings and TAU for all rules combined
+combinedUndDf <- data.frame(matrix(ncol = 4, nrow = 0))
+colnames(combinedUndDf) <- c("Pattern_rating_Und", "Pattern_TAU", "Antipattern_rating_Und", "Antipattern_TAU")
 for (i in seq_along(patterns)) {
   p <- patterns[i]
   ap <- antipatterns[i]
@@ -119,7 +119,7 @@ for (i in seq_along(patterns)) {
   #print(varTAUPattern)
   
   # merge data frames
-  combinedDf <- rbind(combinedDf, data.frame(
+  combinedUndDf <- rbind(combinedUndDf, data.frame(
     Pattern_rating = data[[varRatingPattern]],
     Pattern_TAU = data[[varTAUPattern]],
     Antipattern_rating = data[[varRatingAntipattern]],
@@ -127,10 +127,9 @@ for (i in seq_along(patterns)) {
   ))
   
 }
+print(combinedUndDf)
 
-print(combinedDf)
-
-# Shapiro-Wilk test for non-normal distribution (replace value with the different rule identifiers, i.e., 1 to 12)
+# Shapiro-Wilk test for non-normal distribution of understandability (replace value with the different rule identifiers, i.e., 1 to 12)
 p <- patterns[1]
 ap <- antipatterns[1]
 varP <- as.name(paste("TAU", p, sep = "_"))
@@ -140,7 +139,34 @@ print(varAP)
 checkDataDistribution(data[[varP]], varP)
 checkDataDistribution(data[[varAP]], varAP)
 
-# results: every dataset is not normally distributed --> non-parametric test needed
+
+
+
+# create custom data frame with readability ratings and TAU for all rules combined
+combinedReadDf <- data.frame(matrix(ncol = 4, nrow = 0))
+colnames(combinedReadDf) <- c("Pattern_rating_Read", "Pattern_TAU", "Antipattern_rating_Read", "Antipattern_TAU")
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  
+  varRatingPattern <- paste(p, "RRating", sep = "")
+  varRatingAntipattern <- paste(ap, "RRating", sep = "")
+  varTAUPattern <- paste("TAU", p, sep = "_")
+  varTAUAntipattern <- paste("TAU", ap, sep = "_")
+ 
+  
+  # merge data frames
+  combinedReadDf <- rbind(combinedReadDf, data.frame(
+    Pattern_rating = data[[varRatingPattern]],
+    Pattern_TAU = data[[varTAUPattern]],
+    Antipattern_rating = data[[varRatingAntipattern]],
+    Antipattern_TAU = data[[varTAUAntipattern]]
+  ))
+  
+}
+print(combinedReadDf)
+
+
 
 
 ####################################################################################################
@@ -247,7 +273,7 @@ geom_bar(
   position = position_dodge(0.6)
 ) +
 # colors for "rule" and "violation"
-scale_fill_manual(values = c("#0077dd", "#dd1100")) +
+scale_fill_manual(values = c("#dd1100", "#0077dd")) +
 # use percent for the scale and control space for the labels
 scale_y_continuous(labels = scales::percent, expand = expansion(mult = c(0, .1))) +
 # bar label text and positioning
@@ -295,7 +321,7 @@ geom_bar(
   position = position_dodge(0.6)
 ) +
 # colors for "rule" and "violation"
-scale_fill_manual(values = c("#0077dd", "#dd1100")) +
+scale_fill_manual(values = c( "#dd1100", "#0077dd")) +
 # control space for the labels
 scale_y_continuous(expand = expansion(mult = c(0, .1))) +
 # bar label text and positioning
@@ -325,12 +351,12 @@ barplotData <- rbind(
   data.frame(
     rule = descriptiveStats$rule,
     value = descriptiveStats$mean_TAU_P,
-    treatment = "rule"
+    treatment = "Pattern"
   ),
   data.frame(
     rule = descriptiveStats$rule,
     value = descriptiveStats$mean_TAU_AP,
-    treatment = "violation"
+    treatment = "Antipattern"
   )
 ) %>% arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
@@ -343,7 +369,7 @@ geom_bar(
   position = position_dodge(0.6)
 ) +
 # colors for "rule" and "violation"
-scale_fill_manual(values = c("#0077dd", "#dd1100")) +
+scale_fill_manual(values = c("#dd1100", "#0077dd")) +
 # control space for the labels
 scale_y_continuous(expand = expansion(mult = c(0, .1))) +
 # bar label text and positioning
@@ -390,17 +416,17 @@ stripPlotData <- rbind(
   data %>% select(TAU_Inconsistent) %>% filter(!is.na(TAU_Inconsistent)) %>%
     mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_Inconsistent),
   data %>% select(TAU_Descriptive) %>% filter(!is.na(TAU_Descriptive)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_Descriptive),
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_Descriptive),
   data %>% select(TAU_NonDescriptive) %>% filter(!is.na(TAU_NonDescriptive)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_NonDescriptive),
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_NonDescriptive),
   data %>% select(TAU_Hierarchical) %>% filter(!is.na(TAU_Hierarchical)) %>%
-    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_Hierarchical),
+    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_Hierarchical),
   data %>% select(TAU_NonHierarchical) %>% filter(!is.na(TAU_NonHierarchical)) %>%
-    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_NonHierarchical),
+    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_NonHierarchical),
   data %>% select(TAU_Pertinent) %>% filter(!is.na(TAU_Pertinent)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_Pertinent),
+    mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_Pertinent),
   data %>% select(TAU_NonPertinent) %>% filter(!is.na(TAU_NonPertinent)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_NonPertinent)
+    mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_NonPertinent)
 ) %>%
   mutate(version = factor(version, levels = c(1, 2), labels = c("P", "AP"))) %>%
   mutate(ruleGroup = factor(ruleGroup, levels = c(1:7), labels = c("#1: Tidy", "#2: Contextual", "#3: Verbless", "#4: Consistent", "#5: Descriptive", "#6: NonHierarchical", "#7: Pertinent")))
@@ -418,7 +444,7 @@ scale_color_manual(values = c("#0077dd", "#dd1100")) +
 ylim(0.00, 1.00) +
 # add median with special color
 stat_summary(fun = "median", geom = "point", shape = 16, size = 7, color = "#ffa600d8") +
-labs(x = "Treatment", y = "TAU") +
+labs(x = "Patterns and Antipatterns", y = "TAU") +
 theme(
   text = element_text(size = 14, face = "bold", family = "sans"),
   axis.title = element_text(size = 14),
@@ -443,19 +469,21 @@ stripPlotData <- rbind(
   data %>% select(TAU_Unversioned) %>% filter(!is.na(TAU_Unversioned)) %>%
     mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_Unversioned),
   data %>% select(TAU_Adherence) %>% filter(!is.na(TAU_Adherence)) %>%
-    mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAU_Adherence),
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_Adherence),
   data %>% select(TAU_Tunneling) %>% filter(!is.na(TAU_Tunneling)) %>%
     mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_Tunneling),
   data %>% select(TAU_ConArchetype) %>% filter(!is.na(TAU_ConArchetype)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_ConArchetype),
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_ConArchetype),
+  data %>% select(TAU_InconArchetype) %>% filter(!is.na(TAU_InconArchetype)) %>%
+    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_InconArchetype),
   data %>% select(TAU_Annotation) %>% filter(!is.na(TAU_Annotation)) %>%
-    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_Annotation),
+    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_Annotation),
   data %>% select(TAU_Ambiguity) %>% filter(!is.na(TAU_Ambiguity)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_Ambiguity),
+    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAU_Ambiguity),
   data %>% select(TAU_Structured) %>% filter(!is.na(TAU_Structured)) %>%
-    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_Structured),
+    mutate(version = 1, ruleGroup = 7) %>% rename(TAU = TAU_Structured),
   data %>% select(TAU_Flat) %>% filter(!is.na(TAU_Flat)) %>%
-    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAU_Flat)
+    mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_Flat)
 ) %>%
   mutate(version = factor(version, levels = c(1, 2), labels = c("P", "AP"))) %>%
   mutate(ruleGroup = factor(ruleGroup, levels = c(1:7), labels = c("#8: Standard", "#9: Singularized", "#10: Versioned", "#11: Adherence", "#12: ConsistentArchetype", "#13: Annotation", "14: Structured")))
@@ -471,7 +499,7 @@ scale_color_manual(values = c("#0077dd", "#dd1100")) +
 ylim(0.00, 1.00) +
 # add median with special color
 stat_summary(fun = "median", geom = "point", shape = 16, size = 8, color = "#ffa600d8") +
-labs(x = "Treatment", y = "TAU") +
+labs(x = "Patterns and Antipatterns", y = "TAU") +
 theme(
   text = element_text(size = 12, face = "bold", family = "sans"),
   axis.title = element_text(size = 14),
@@ -529,12 +557,12 @@ print(testResults)
 
 # for all rules combined
 w <- wilcox.test(
-  x = combinedDf$Pattern_TAU,
-  y = combinedDf$Antipattern_TAU,
+  x = combinedUndDf$Pattern_TAU,
+  y = combinedUndDf$Antipattern_TAU,
   alternative = "greater",
   conf.level = confLevel
 )
-d <- cohens_d(combinedDf$Pattern_TAU, combinedDf$Antipattern_TAU)
+d <- cohens_d(combinedUndDf$Pattern_TAU, combinedDf$Antipattern_TAU)
 rule <- c("All rules combined")
 U.value <- c(w$statistic)
 p.value <- c(format.pval(w$p.value, digits = 4, eps = 0.001))
@@ -723,6 +751,10 @@ theme(
 # flip the chart horizontally
 coord_flip()
 
+
+
+
+
 # start hypothesis testing
 # due to multiple hypotheses, we will use the Holm-Bonferroni correction to adjust the computed p-values; the confidence level is therefore set to 0.05 here
 confLevel <- 0.05
@@ -770,15 +802,16 @@ testResults <- testResults %>%
     )
   )
 
-print(combinedDf)
+
+
 # for all rules combined
 w <- wilcox.test(
-  x = combinedDf$Pattern_rating,
-  y = combinedDf$Antipattern_rating,
+  x = combinedUndDf$Pattern_rating,
+  y = combinedUndDf$Antipattern_rating,
   alternative = "greater",
   conf.level = confLevel
 )
-d <- cohens_d(combinedDf$Pattern_rating, combinedDf$Antipattern_rating)
+d <- cohens_d(combinedUndDf$Pattern_rating, combinedUndDf$Antipattern_rating)
 rule <- c("All rules combined")
 U.value <- c(w$statistic)
 p.value <- c(format.pval(w$p.value, digits = 4, eps = 0.001))
@@ -824,7 +857,7 @@ theme(
 coord_flip()
 
 # calculate correlation between perceived understandability and actual understandability (TAU)
-correlationResults <- data.frame()
+correlationUndResults <- data.frame()
 corrMthd <- "kendall"
 
 # for each individual rule
@@ -850,7 +883,7 @@ for (i in seq_along(patterns)) {
     alternative = "less",
     conf.level = confLevel
   )
-  correlationResults <- rbind(correlationResults,
+  correlationUndResults <- rbind(correlationUndResults,
     data.frame(
       rule = p,
       P_correlation = corP$estimate,
@@ -862,10 +895,10 @@ for (i in seq_along(patterns)) {
   )
 }
 
-print(correlationResults)
+print(correlationUndResults)
 
 # adjust p-values with Holm-Bonferroni and format them
-correlationResults <- correlationResults %>%
+correlationUndResults <- correlationUndResults %>%
   mutate(P_p.value = format.pval(
       p.adjust(P_p.value, method = "holm"),
       digits = 4, eps = 0.001
@@ -876,24 +909,24 @@ correlationResults <- correlationResults %>%
       digits = 4, eps = 0.001
     )
   )
-print(correlationResults)
+print(correlationUndResults)
 
 # for all rules combined
 corFR <- cor.test(
-  combinedDf$Pattern_rating,
-  combinedDf$Pattern_TAU,
+  combinedUndDf$Pattern_rating,
+  combinedUndDf$Pattern_TAU,
   method = corrMthd,
   alternative = "less",
   conf.level = confLevel
 )
 corIR <- cor.test(
-  combinedDf$Antipattern_rating,
-  combinedDf$Antipattern_TAU,
+  combinedUndDf$Antipattern_rating,
+  combinedUndDf$Antipattern_TAU,
   method = corrMthd,
   alternative = "less",
   conf.level = confLevel
 )
-correlationResults <- rbind(correlationResults,
+correlationUndResults <- rbind(correlationUndResults,
   data.frame(
     rule = "All rules combined",
     P_correlation = corP$estimate,
@@ -904,7 +937,7 @@ correlationResults <- rbind(correlationResults,
   make.row.names = FALSE
 )
 
-print(correlationResults)
+print(correlationUndResults)
 
 # regression results for each individual rule
 df <- data.frame()
@@ -978,15 +1011,415 @@ theme(
 # flip the chart horizontally
 coord_flip()
 
+
+###################################################################################################################
+# Calculations for RQ3 (differences in perceived readability and correlations with actual understandability)
+###################################################################################################################
+
+# calculate descriptive statistics for perceived readability ratings
+
+descriptiveStats <- data.frame()
+
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varTAUP <- as.name(paste("TAU", p, sep = "_"))
+  varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
+  varP <- as.name(paste(varP, "", sep = ""))
+  varAP <- as.name(paste(varAP, "", sep = ""))
+  varP_rating <- as.name(paste(varP, "RRating", sep = ""))
+  varAP_rating <- as.name(paste(varAP, "RRating", sep = ""))
+  descriptiveStats <- rbind(
+    descriptiveStats,
+    data %>% summarise(
+      rule = p,
+      median_rating_P := median({{ varP_rating }}, na.rm = TRUE),
+      median_rating_AP := median({{ varAP_rating }}, na.rm = TRUE),
+      mean_rating_P := round(mean({{ varP_rating }}, na.rm = TRUE), 2),
+      mean_rating_AP := round(mean({{ varAP_rating }}, na.rm = TRUE), 2),
+      mean_TAU_P := mean({{ varTAUP }}, na.rm = TRUE),
+      mean_TAU_AP := mean({{ varTAUAP }}, na.rm = TRUE),
+      correctPercent_P := scales::percent(sum({{ varP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varP }})) %>% nrow())),
+      correctPercent_AP := scales::percent(sum({{ varAP }}, na.rm = TRUE) / (data %>% filter(!is.na({{ varAP }})) %>% nrow()))
+    )
+  )
+}
+
+print(descriptiveStats)
+
+# calculate more detailed descriptive stats per individual rule (min, max, var)
+descriptiveStatsDetails <- data.frame()
+
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varP_rating <- as.name(paste(p, "RRating", sep = ""))
+  varAP_rating <- as.name(paste(ap, "RRating", sep = ""))
+  
+  descriptiveStatsDetails <- rbind(
+    descriptiveStatsDetails,
+    data %>% summarise(
+      rule = p,
+      min_rating_P := min({{ varP_rating }}, na.rm = TRUE),
+      min_rating_AP := min({{ varAP_rating }}, na.rm = TRUE),
+      max_rating_P := max({{ varP_rating }}, na.rm = TRUE),
+      max_rating_AP := max({{ varAP_rating }}, na.rm = TRUE),
+      var_rating_P := var({{ varP_rating }}, na.rm = TRUE),
+      var_rating_AP := var({{ varAP_rating }}, na.rm = TRUE)
+    )
+  )
+}
+
+print(descriptiveStatsDetails)
+
+# create custom likert plots for perceived readability ratings
+ratings <- data.frame()
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- as.name(paste(p, "RRating", sep = ""))
+  varRatingAP <- as.name(paste(ap, "RRating", sep = ""))
+  P1 <- data %>% filter({{ varRatingP }} == 1) %>% nrow() * -1
+  P2 <- data %>% filter({{ varRatingP }} == 2) %>% nrow() * -1
+  AP1 <- data %>% filter({{ varRatingAP }} == 1) %>% nrow()
+  AP2 <- data %>% filter({{ varRatingAP }} == 2) %>% nrow()
+  
+  ratings <- rbind(ratings,
+                   data.frame(
+                     rule = as.character(p),
+                     countP1 = P1,
+                     countP2 = P2,
+                     countAP1 = AP1,
+                     countAP2 = AP2
+                   )
+  )
+}
+
+print(ratings)
+
+# melt the data frame into long format and create factor for ratings
+ratings_long <- reshape2::melt(ratings, id.vars = "rule")
+ratings_long$variable <- factor(
+  ratings_long$variable,
+  levels = c("countP1", "countP2", "countAP1", "countAP2"),
+  labels = c("Very easy (pattern)", "Easy (pattern)", "Very easy (antipattern)", "Easy (antipattern)")
+)
+
+print(ratings_long)
+
+# order according to categories
+ratings_long <- ratings_long %>%
+  arrange(factor(rule, levels = rev(p))) %>%
+  mutate(index = row_number())
+
+print(ratings_long)
+
+# create break values to avoid negative numbers
+break_values <- append(pretty(ratings_long$value), c(30, 40, 50))
+
+# create the plot
+ggplot(ratings_long, aes(x = reorder(rule, index), y = value, fill = variable)) +
+  geom_bar(stat = "identity") +
+  theme_classic() +
+  # hide y axis
+  theme(
+    axis.line.y = element_blank(),
+    axis.ticks.y = element_blank()
+  ) +
+  labs(x = "Rule", y = "# of ratings per readability level", fill = "") +
+  # set absolute numbers to avoid negatives and stretch axis the same in both directions
+  scale_y_continuous(
+    limits = c(-51, 51),
+    breaks = break_values,
+    labels = abs(break_values)
+  ) +
+  # colors for the 4 counts
+  scale_fill_manual(values = c("#0077dd", "lightblue", "#dd1100", "#ff7e73")) +
+  # bar label text and positioning
+  geom_text(
+    aes(label = abs(value)),
+    position = position_stack(vjust = 0.5),
+    fontface = "bold",
+    size = 5.5,
+    color = "white"
+  ) +
+  # add vertical line in the middle
+  geom_hline(yintercept = 0, size = 0.75) +
+  theme(
+    text = element_text(size = 16, face = "bold", family = "sans"),
+    axis.title = element_text(size = 18),
+    axis.text.x = element_text(size = 16),
+    axis.text.y = element_text(size = 16),
+    legend.text = element_text(size = 16),
+    legend.position = "top"
+  ) +
+  # flip the chart horizontally
+  coord_flip()
+
+# start hypothesis testing
+# due to multiple hypotheses, we will use the Holm-Bonferroni correction to adjust the computed p-values; the confidence level is therefore set to 0.05 here
+confLevel <- 0.05
+
+# calculate Wilcoxon–Mann–Whitney test
+# standard implementation from the `stats` package (asymptotic approximation with ties)
+testResults <- data.frame()
+
+# for individual rules
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- paste(p, "RRating", sep = "")
+  varRatingAP <- paste(ap, "RRating", sep = "")
+  w <- wilcox.test(
+    x = data[[varRatingAP]],
+    y = data[[varRatingP]],
+    alternative = "greater",
+    conf.level = confLevel
+  )
+  
+  # calculate the effect size with Cohens d
+  d <- cohens_d(data[[varRatingAP]], data[[varRatingP]])
+  #print(d)
+  
+  
+  # create results data frame
+  rule <- c(p)
+  U.value <- c(w$statistic)
+  p.value <- c(w$p.value)
+  cohens.d <- c(d$Cohens_d)
+  testResults <- rbind(testResults,
+                       data.frame(rule, U.value, p.value, cohens.d),
+                       make.row.names = FALSE
+  )
+}
+
+print(testResults)
+
+# adjust p-values with Holm-Bonferroni and format them
+testResults <- testResults %>%
+  mutate(p.value = format.pval(
+    p.adjust(p.value, method = "holm"),
+    digits = 4, eps = 0.001
+  )
+  )
+
+
+
+# for all rules combined
+w <- wilcox.test(
+  x = combinedReadDf$Pattern_rating,
+  y = combinedReadDf$Antipattern_rating,
+  alternative = "greater",
+  conf.level = confLevel
+)
+d <- cohens_d(combinedReadDf$Pattern_rating, combinedReadDf$Antipattern_rating)
+rule <- c("All rules combined")
+U.value <- c(w$statistic)
+p.value <- c(format.pval(w$p.value, digits = 4, eps = 0.001))
+cohens.d <- c(d$Cohens_d)
+testResults <- rbind(testResults,
+                     data.frame(rule, U.value, p.value, cohens.d),
+                     make.row.names = FALSE
+)
+
+print(testResults)
+
+# visualize d values with bar plot
+barplotData <- testResults %>%
+  filter(rule != "All rules combined")
+
+# use ggplot to print the bar chart
+ggplot(barplotData, aes(x = reorder(rule, cohens.d), y = cohens.d)) +
+  geom_bar(
+    stat = "identity",
+    width = 0.8,
+    fill = "#0077dd"
+  ) +
+  # control space for the labels
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  # bar label text and positioning
+  geom_text(
+    aes(label = sprintf("%.2f", round(cohens.d, 2))),
+    size = 5.1,
+    fontface = "bold",
+    hjust = -0.05
+  ) +
+  theme_classic() +
+  labs(x = "Rule", y = "Cohen's d") +
+  theme(
+    text = element_text(size = 16, face = "bold", family = "sans"),
+    axis.title = element_text(size = 16),
+    axis.text.x = element_text(size = 14),
+    axis.text.y = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text = element_text(size = 16)
+  ) +
+  # flip the chart horizontally
+  coord_flip()
+
+# calculate correlation between perceived readability and actual understandability (TAU)
+correlationReadResults <- data.frame()
+corrMthd <- "kendall"
+
+# for each individual rule
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- paste(p, "RRating", sep = "")
+  varRatingAP <- paste(ap, "RRating", sep = "")
+  varTAUP <- paste("TAU", p, sep = "_")
+  varTAUAP <- paste("TAU", ap, sep = "_")
+  
+  corP <- cor.test(
+    data[[varRatingP]],
+    data[[varTAUP]],
+    method = corrMthd,
+    alternative = "less",
+    conf.level = confLevel
+  )
+  corAP <- cor.test(
+    data[[varRatingAP]],
+    data[[varTAUAP]],
+    method = corrMthd,
+    alternative = "less",
+    conf.level = confLevel
+  )
+  correlationReadResults <- rbind(correlationReadResults,
+                              data.frame(
+                                rule = p,
+                                P_correlation = corP$estimate,
+                                P_p.value = corP$p.value,
+                                AP_correlation = corAP$estimate,
+                                AP_p.value = corAP$p.value
+                              ),
+                              make.row.names = FALSE
+  )
+}
+
+print(correlationReadResults)
+
+# adjust p-values with Holm-Bonferroni and format them
+correlationReadResults <- correlationReadResults %>%
+  mutate(P_p.value = format.pval(
+    p.adjust(P_p.value, method = "holm"),
+    digits = 4, eps = 0.001
+  )
+  ) %>%
+  mutate(AP_p.value = format.pval(
+    p.adjust(AP_p.value, method = "holm"),
+    digits = 4, eps = 0.001
+  )
+  )
+print(correlationReadResults)
+
+# for all rules combined
+corFR <- cor.test(
+  combinedReadDf$Pattern_rating,
+  combinedReadDf$Pattern_TAU,
+  method = corrMthd,
+  alternative = "less",
+  conf.level = confLevel
+)
+corIR <- cor.test(
+  combinedReadDf$Antipattern_rating,
+  combinedReadDf$Antipattern_TAU,
+  method = corrMthd,
+  alternative = "less",
+  conf.level = confLevel
+)
+correlationReadResults <- rbind(correlationReadResults,
+                            data.frame(
+                              rule = "All rules combined",
+                              P_correlation = corP$estimate,
+                              P_p.value = format.pval(corP$p.value, digits = 4, eps = 0.001),
+                              AP_correlation = corAP$estimate,
+                              AP_p.value = format.pval(corAP$p.value, digits = 4, eps = 0.001)
+                            ),
+                            make.row.names = FALSE
+)
+
+print(correlationReadResults)
+
+# regression results for each individual rule
+df <- data.frame()
+
+for (i in seq_along(patterns)) {
+  p <- patterns[i]
+  ap <- antipatterns[i]
+  varRatingP <- paste(p, "RRating", sep = "")
+  varRatingAP <- paste(ap, "RRating", sep = "")
+  varTAUP <- paste("TAU", p, sep = "_")
+  varTAUAP <- paste("TAU", ap, sep = "_")
+  
+  resP <- lm(
+    as.formula(paste(varTAUP, "~", varRatingP)),
+    data = data
+  )
+  resAP <- lm(
+    as.formula(paste(varTAUAP, "~", varRatingAP)),
+    data = data
+  )
+  df <- rbind(df,
+              data.frame(
+                rule = ap,
+                P_adjustedR2 = summary(resP)$adj.r.squared,
+                P_p.value = format.pval(summary(resP)$coefficients[8], digits = 4, eps = 0.001),
+                AP_adjustedR2 = summary(resAP)$adj.r.squared,
+                AP_p.value = format.pval(summary(resAP)$coefficients[8], digits = 4, eps = 0.001)
+              ),
+              make.row.names = FALSE
+  )
+}
+print(df)
+
+df %>% arrange(AP_adjustedR2) %>%
+  print
+
+# visualize adjusted R-squared values for violation
+barplotData <- df %>%
+  select(rule, AP_adjustedR2)
+
+# use ggplot to print the bar chart
+ggplot(barplotData, aes(x = reorder(rule, AP_adjustedR2), y = AP_adjustedR2)) +
+  geom_bar(
+    stat = "identity",
+    width = 0.8,
+    fill = "#dd1100"
+  ) +
+  # control space for the labels
+  scale_y_continuous(expand = expansion(mult = c(0.01, 0.12))) +
+  # bar label text and positioning
+  geom_text(
+    aes(
+      label = sprintf("%.2f", round(AP_adjustedR2, 2)),
+      # fix label placement for negative numbers
+      y = ifelse(AP_adjustedR2 > 0, AP_adjustedR2 + 0.001, AP_adjustedR2 - 0.025)
+    ),
+    size = 5,
+    fontface = "bold",
+    hjust = -0.05
+  ) +
+  theme_classic() +
+  labs(x = "Rule", y = "Adjusted R-squared") +
+  theme(
+    text = element_text(size = 16, face = "bold", family = "sans"),
+    axis.title = element_text(size = 16),
+    axis.text.x = element_text(size = 14),
+    axis.text.y = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text = element_text(size = 16)
+  ) +
+  # flip the chart horizontally
+  coord_flip()
+
 #########################################################################################################
-# Calculations for RQ3 (How does REST related experience influence the results of RQ1 and RQ2)
+# Calculations for RQ4 (How does REST related experience influence the results of RQ1, RQ2, and RQ3)
 #########################################################################################################
 # variable names for the antipatterns
 
-print(correlationData)
 
-# aggregate mean values for TAU, perceived understandability, correctness, and time (needed for RQ3)
-correlationData <- data %>%
+# aggregate mean values for TAU, perceived understandability, correctness, and time (needed for RQ4)
+correlationUndData <- data %>%
   rowwise() %>%
   mutate(
     mean_TAU_P = ifelse(
@@ -995,10 +1428,9 @@ correlationData <- data %>%
     )
   ) %>%
   mutate(
-    mean_TAU_AP = ifelse(
+    mean_TAU_AP = 
       mean(c(TAU_Amorphous, TAU_Contextless, TAU_CRUDy, TAU_Inconsistent, TAU_NonDescriptive, TAU_NonHierarchical, TAU_NonPertinent), na.rm = TRUE),
       mean(c(TAU_NonStandard, TAU_Pluralized, TAU_Unversioned, TAU_Tunneling, TAU_InconArchetype, TAU_Ambiguity, TAU_Flat), na.rm = TRUE)
-    )
   ) %>%
   mutate(
     mean_perceivedDifficulty_P = ifelse(
@@ -1019,10 +1451,10 @@ correlationData <- data %>%
     )
   ) %>%
   mutate(
-    mean_Time_AP = ifelse(
+    mean_Time_AP = 
       mean(c(AmorphousTime, ContextlessTime, CRUDyTime, InconsistentTime, NonDescriptiveTime, NonHierarchicalTime, NonPertinentTime), na.rm = TRUE),
       mean(c(NonStandardTime, PluralizedTime, VersionedTime, TunnelingTime, InconArchetypeTime, AmbiguityTime, FlatTime), na.rm = TRUE)
-    )
+    
   ) %>%
   mutate(
     mean_Corr_P = ifelse(
@@ -1031,19 +1463,19 @@ correlationData <- data %>%
     )
   ) %>%
   mutate(
-    mean_Corr_AP = ifelse(
+    mean_Corr_AP = 
       mean(c(Amorphous, Contextless, CRUDy, Inconsistent, NonDescriptive, NonHierarchical, NonPertinent), na.rm = TRUE),
       mean(c(NonStandard, Pluralized, Unversioned, Tunneling, InconArchetype, Ambiguity, Flat), na.rm = TRUE)
-    )
+    
   )
-
+print(correlationUndData)
 # Correlation matrix for exploration
 # rcorr does not support kendalls TAU
 # "pearson" for linear correlation of continuous variables
 # "spearman" for rank-based monotonic correlation (with ordinal variables)
 corrMthd <- "spearman"
 corrMatrix <-
-  correlationData %>%
+  correlationUndData %>%
   select(
     starts_with("mean_"),
     starts_with("is_"),
@@ -1055,21 +1487,24 @@ corrMatrix <-
   rcorr(type = corrMthd)
 
 print(corrMatrix)
+print(dim(corrMatrix$r))  # Dimensions of the correlation matrix
+print(dim(corrMatrix$P))  # Dimensions of the p-value matrix
+
 # plot a correlation matrix
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
-print(correlationData)
+print(correlationUndData)
 # caculate separate correlations
 corrMthd <- "kendall"
 df <- data.frame()
-# change to "mean_TAU_FR", "mean_TAU_IR", "mean_perceivedDifficulty_FR", or "mean_perceivedDifficulty_IR"
+# change to "mean_TAU_P", "mean_TAU_AP", "mean_perceivedDifficulty_P", or "mean_perceivedDifficulty_AP"
 dependent <- "mean_TAU_P"
 demographics <- c("is_Student", "is_Academia", "is_Canada", "YearsOfExperience", "RichardsonMaturity", "MaturityLevel")
 
 for (d in demographics) {
   res <- cor.test(
-      correlationData[[dependent]],
-      correlationData[[d]],
+      correlationUndData[[dependent]],
+      correlationUndData[[d]],
       method = corrMthd,
       exact = FALSE
   )
@@ -1093,7 +1528,7 @@ df %>%
   arrange(p.value) %>%
   print
 
-# create 2 linear regression models for predicting TAU (one for following rules and one for violating rules)
+# create 2 linear regression models for predicting TAU (one for following patterns and one for followng antipatterns)
 # LM for rule:
 lrP <- lm(
   mean_TAU_P ~
@@ -1102,7 +1537,7 @@ lrP <- lm(
     + is_Canada
     + YearsOfExperience
     + MaturityLevel,
-  data = correlationData
+  data = correlationUndData
 )
 summary(lrP)
 
@@ -1114,6 +1549,141 @@ lrAP <- lm(
     + is_Canada
     + YearsOfExperience
     + MaturityLevel,
-  data = correlationData
+  data = correlationUndData
 )
 summary(lrAP)
+
+
+# aggregate mean values for TAU, perceived readability, correctness, and time (needed for RQ3)
+correlationReadData <- data %>%
+  rowwise() %>%
+  mutate(
+    mean_TAU_P = ifelse(
+      mean(c(TAU_Tidy, TAU_Contextual, TAU_Verbless, TAU_Consistent, TAU_Descriptive, TAU_Hierarchical, TAU_Pertinent), na.rm = TRUE),
+      mean(c(TAU_Standard, TAU_Singularized, TAU_Versioned, TAU_Adherence, TAU_ConArchetype, TAU_Annotation, TAU_Structured), na.rm = TRUE)
+    )
+  ) %>%
+  mutate(
+    mean_TAU_AP = 
+      mean(c(TAU_Amorphous, TAU_Contextless, TAU_CRUDy, TAU_Inconsistent, TAU_NonDescriptive, TAU_NonHierarchical, TAU_NonPertinent), na.rm = TRUE),
+    mean(c(TAU_NonStandard, TAU_Pluralized, TAU_Unversioned, TAU_Tunneling, TAU_InconArchetype, TAU_Ambiguity, TAU_Flat), na.rm = TRUE)
+  ) %>%
+  mutate(
+    mean_perceivedReadability_P = ifelse(
+      mean(c(TidyRRating, ContextualRRating, VerblessRRating, ConsistentRRating, DescriptiveRRating, HierarchicalRRating, PertinentRRating), na.rm = TRUE),
+      mean(c(StandardRRating, SingularizedRRating, VersionedRRating, AdherenceRRating, ConArchetypeRRating, AnnotationRRating, StructuredRRating), na.rm = TRUE)
+    )
+  ) %>%
+  mutate(
+    mean_perceivedReadability_AP = ifelse(
+      mean(c(AmorphousRRating, ContextlessRRating, CRUDyRRating, InconsistentRRating, NonDescriptiveRRating, NonHierarchicalRRating, NonPertinentRRating), na.rm = TRUE),
+      mean(c(NonStandardRRating, PluralizedRRating, UnversionedRRating, TunnelingRRating, InconArchetypeRRating, AmbiguityRRating, FlatRRating), na.rm = TRUE)
+    )
+  ) %>%
+  mutate(
+    mean_Time_P = ifelse(
+      mean(c(TidyTime, ContextualURating, VerblessTime, ConsistentTime, DescriptiveTime, HierarchicalTime, PertinentTime), na.rm = TRUE),
+      mean(c(StandardTime, SingularizedTime, VersionedTime, AdherenceTime, ConArchetypeTime, AnnotationTime, StructuredTime), na.rm = TRUE)
+    )
+  ) %>%
+  mutate(
+    mean_Time_AP = 
+      mean(c(AmorphousTime, ContextlessTime, CRUDyTime, InconsistentTime, NonDescriptiveTime, NonHierarchicalTime, NonPertinentTime), na.rm = TRUE),
+    mean(c(NonStandardTime, PluralizedTime, VersionedTime, TunnelingTime, InconArchetypeTime, AmbiguityTime, FlatTime), na.rm = TRUE)
+    
+  ) %>%
+  mutate(
+    mean_Corr_P = ifelse(
+      mean(c(Tidy, Contextual, Verbless, Consistent, Descriptive, Hierarchical, Pertinent), na.rm = TRUE),
+      mean(c(Standard, Singularized, Versioned, Adherence, ConArchetype, Annotation, Structured), na.rm = TRUE)
+    )
+  ) %>%
+  mutate(
+    mean_Corr_AP = 
+      mean(c(Amorphous, Contextless, CRUDy, Inconsistent, NonDescriptive, NonHierarchical, NonPertinent), na.rm = TRUE),
+    mean(c(NonStandard, Pluralized, Unversioned, Tunneling, InconArchetype, Ambiguity, Flat), na.rm = TRUE)
+    
+  )
+print(correlationReadData)
+
+# Correlation matrix for exploration
+# rcorr does not support kendalls TAU
+# "pearson" for linear correlation of continuous variables
+# "spearman" for rank-based monotonic correlation (with ordinal variables)
+corrMthd <- "spearman"
+corrMatrix <-
+  correlationReadData %>%
+  select(
+    starts_with("mean_"),
+    starts_with("is_"),
+    YearsOfExperience,
+    RichardsonMaturity,
+    MaturityLevel
+  ) %>%
+  as.matrix() %>%
+  rcorr(type = corrMthd)
+
+print(corrMatrix)
+# plot a correlation matrix
+corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
+
+print(correlationReadData)
+# caculate separate correlations
+corrMthd <- "kendall"
+df <- data.frame()
+# change to "mean_TAU_P", "mean_TAU_AP", "mean_perceivedDifficulty_P", or "mean_perceivedDifficulty_AP"
+dependent <- "mean_TAU_P"
+demographics <- c("is_Student", "is_Academia", "is_Canada", "YearsOfExperience", "RichardsonMaturity", "MaturityLevel")
+
+for (d in demographics) {
+  res <- cor.test(
+    correlationReadData[[dependent]],
+    correlationReadData[[d]],
+    method = corrMthd,
+    exact = FALSE
+  )
+  df <- rbind(df, data.frame(
+    dependent = dependent,
+    demographic = d,
+    estimate = res$estimate,
+    p.value = res$p.value
+  ),
+  make.row.names = FALSE
+  )
+}
+
+# adjust p-values with Holm-Bonferroni and format them
+df %>%
+  mutate(p.value = format.pval(
+    p.adjust(p.value, method = "holm"),
+    digits = 4, eps = 0.001
+  )
+  ) %>%
+  arrange(p.value) %>%
+  print
+
+# create 2 linear regression models for predicting TAU (one for following patterns and one for followng antipatterns)
+# LM for rule:
+lrP <- lm(
+  mean_TAU_P ~
+    is_Student
+  + is_Academia
+  + is_Canada
+  + YearsOfExperience
+  + MaturityLevel,
+  data = correlationReadData
+)
+summary(lrP)
+
+# LM for violation:
+lrAP <- lm(
+  mean_TAU_AP ~
+    is_Student
+  + is_Academia
+  + is_Canada
+  + YearsOfExperience
+  + MaturityLevel,
+  data = correlationReadData
+)
+summary(lrAP)
+
