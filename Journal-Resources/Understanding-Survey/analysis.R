@@ -1043,8 +1043,9 @@ df %>%
     )
   ) %>%
   arrange(p.value) %>%
+  print
   
-print(df)
+
 
 # create 2 linear regression models for predicting TAU (one for following rules and one for violating rules)
 # LM for rule:

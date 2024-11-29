@@ -11,8 +11,8 @@ from nltk.corpus import wordnet as wn #for nondescritive URI
 from gensim import corpora
 from gensim.models import LdaModel
 #from gensim.models.coherencemodel import CoherenceModel
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
+#from nltk.tokenize import word_tokenize
+#from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 import spacy
 #from collections import defaultdict
