@@ -104,7 +104,7 @@ print(data)
 
 # --> data now has attributes TAU_<Pattern> and TAU_<Antipattern>
 
-# create custom data frame with understandability ratings and TAU for all rules combined
+# create custom data frame with understandability ratings and TAU for patterns and antipatterns
 combinedUndDf <- data.frame(matrix(ncol = 4, nrow = 0))
 colnames(combinedUndDf) <- c("Pattern_rating_Und", "Pattern_TAU", "Antipattern_rating_Und", "Antipattern_TAU")
 for (i in seq_along(patterns)) {
@@ -129,7 +129,7 @@ for (i in seq_along(patterns)) {
 }
 print(combinedUndDf)
 
-# Shapiro-Wilk test for non-normal distribution of understandability (replace value with the different rule identifiers, i.e., 1 to 12)
+# Shapiro-Wilk test for non-normal distribution of understandability (replace value with the patterns or antipatters, i.e., 1 to 14)
 p <- patterns[1]
 ap <- antipatterns[1]
 varP <- as.name(paste("TAU", p, sep = "_"))
@@ -142,7 +142,7 @@ checkDataDistribution(data[[varAP]], varAP)
 
 
 
-# create custom data frame with readability ratings and TAU for all rules combined
+# create custom data frame with readability ratings and TAU for all patterns and antipatterns
 combinedReadDf <- data.frame(matrix(ncol = 4, nrow = 0))
 colnames(combinedReadDf) <- c("Pattern_rating_Read", "Pattern_TAU", "Antipattern_rating_Read", "Antipattern_TAU")
 for (i in seq_along(patterns)) {
@@ -236,7 +236,7 @@ for (i in seq_along(patterns)) {
       min_TAU_AP := min({{ varTAUAP }}, na.rm = TRUE),
       max_TAU_P := max({{ varTAUP }}, na.rm = TRUE),
       max_TAU_AP := max({{ varTAUAP }}, na.rm = TRUE),
-      var_TAU_AP := var({{ varTAUP }}, na.rm = TRUE),
+      var_TAU_P := var({{ varTAUP }}, na.rm = TRUE),
       var_TAU_AP := var({{ varTAUAP }}, na.rm = TRUE),
       min_time_AP := min({{ varPTime }}, na.rm = TRUE),
       min_time_AP := min({{ varAPTime }}, na.rm = TRUE),
@@ -272,7 +272,7 @@ geom_bar(
   width = 0.5,
   position = position_dodge(0.6)
 ) +
-# colors for "rule" and "violation"
+# colors for "antipatterns" and "patterns"
 scale_fill_manual(values = c("#dd1100", "#0077dd")) +
 # use percent for the scale and control space for the labels
 scale_y_continuous(labels = scales::percent, expand = expansion(mult = c(0, .1))) +
@@ -320,7 +320,7 @@ geom_bar(
   width = 0.5,
   position = position_dodge(0.6)
 ) +
-# colors for "rule" and "violation"
+  # colors for "antipatterns" and "patterns"
 scale_fill_manual(values = c( "#dd1100", "#0077dd")) +
 # control space for the labels
 scale_y_continuous(expand = expansion(mult = c(0, .1))) +
@@ -351,12 +351,12 @@ barplotData <- rbind(
   data.frame(
     rule = descriptiveStats$rule,
     value = descriptiveStats$mean_TAU_P,
-    treatment = "Pattern"
+    treatment = "pattern"
   ),
   data.frame(
     rule = descriptiveStats$rule,
     value = descriptiveStats$mean_TAU_AP,
-    treatment = "Antipattern"
+    treatment = "antipattern"
   )
 ) %>% arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
@@ -368,7 +368,7 @@ ggplot(barplotData, aes(x = reorder(rule, index), y = value, fill = treatment)) 
     width = 0.5,
     position = position_dodge(0.6)
   ) +
-  # colors for "rule" and "violation"
+  # colors for "antipatterns" and "patterns"
   scale_fill_manual(values = c("#dd1100", "#0077dd")) +
   # use percent for the scale and control space for the labels
   scale_y_continuous(labels = scales::percent, expand = expansion(mult = c(0, .1))) +
@@ -395,7 +395,7 @@ ggplot(barplotData, aes(x = reorder(rule, index), y = value, fill = treatment)) 
   coord_flip()
 
 # create 2 new data frames for multiple strip plots in one diagram
-# each with attributes `TAU`, `version` (1 or 2), and `ruleGroup` (1 to 7)
+# each with attributes `TAU`, `version` (1 = pattern or 2 = antipatter), and `patterns and antipattern pair group` (1 to 7)
 
 # "Amorphous", "Contextless", "CRUDy", "Inconsistent", "NonDescriptive", "NonHierarchical", "NonPertinent"
 stripPlotData <- rbind(
@@ -414,17 +414,17 @@ stripPlotData <- rbind(
   data %>% select(TAU_ConsistentEndpoint) %>% filter(!is.na(TAU_ConsistentEndpoint)) %>%
     mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_ConsistentEndpoint),
   data %>% select(TAU_InconsistentEndpoint) %>% filter(!is.na(TAU_InconsistentEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_InconsistentEndpoint),
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_InconsistentEndpoint),
   data %>% select(TAU_DescriptiveEndpoint) %>% filter(!is.na(TAU_DescriptiveEndpoint)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_DescriptiveEndpoint),
+    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_DescriptiveEndpoint),
   data %>% select(TAU_NonDescriptiveEndpoint) %>% filter(!is.na(TAU_NonDescriptiveEndpoint)) %>%
     mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_NonDescriptiveEndpoint),
   data %>% select(TAU_HierarchicalEndpoint) %>% filter(!is.na(TAU_HierarchicalEndpoint)) %>%
     mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_HierarchicalEndpoint),
   data %>% select(TAU_NonHierarchicalEndpoint) %>% filter(!is.na(TAU_NonHierarchicalEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_NonHierarchicalEndpoint),
+    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAU_NonHierarchicalEndpoint),
   data %>% select(TAU_PertinentEndpoint) %>% filter(!is.na(TAU_PertinentEndpoint)) %>%
-    mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_PertinentEndpoint),
+    mutate(version = 1, ruleGroup = 7) %>% rename(TAU = TAU_PertinentEndpoint),
   data %>% select(TAU_NonPertinentEndpoint) %>% filter(!is.na(TAU_NonPertinentEndpoint)) %>%
     mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_NonPertinentEndpoint)
 ) %>%
@@ -438,7 +438,7 @@ geom_jitter(aes(color = version), width = .25) +
 theme_classic() +
 # group by rule
 facet_grid(. ~ ruleGroup) +
-# set color scale for versions
+# set color scale for patterns and antipattern
 scale_color_manual(values = c("#0077dd", "#dd1100")) +
 # set scale for y axis
 ylim(0.00, 1.00) +
@@ -453,7 +453,7 @@ theme(
   legend.position = "none"
 )
 
-# rules NoTunnel, GETRetrieve, POSTCreate, NoRC200Error, RC401, and RC415
+
 # "NonStandard", "Pluralized", "Unversioned", "Tunneling", "InconArchetype", "Ambiguity", "Flat"
 stripPlotData <- rbind(
   data %>% select(TAU_StandardEndpoint) %>% filter(!is.na(TAU_StandardEndpoint)) %>%
@@ -467,13 +467,13 @@ stripPlotData <- rbind(
   data %>% select(TAU_VersionedEndpoint) %>% filter(!is.na(TAU_VersionedEndpoint)) %>%
     mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_VersionedEndpoint),
   data %>% select(TAU_UnversionedEndpoint) %>% filter(!is.na(TAU_UnversionedEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_UnversionedEndpoint),
+    mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAU_UnversionedEndpoint),
   data %>% select(TAU_ParameterAdherence) %>% filter(!is.na(TAU_ParameterAdherence)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_ParameterAdherence),
+    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_ParameterAdherence),
   data %>% select(TAU_ParameterTunneling) %>% filter(!is.na(TAU_ParameterTunneling)) %>%
-    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_ParameterTunneling),
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_ParameterTunneling),
   data %>% select(TAU_ConsistentArchetype) %>% filter(!is.na(TAU_ConsistentArchetype)) %>%
-    mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_ConsistentArchetype),
+    mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_ConsistentArchetype),
   data %>% select(TAU_InconsistentArchetype) %>% filter(!is.na(TAU_InconsistentArchetype)) %>%
     mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_InconsistentArchetype),
   data %>% select(TAU_IdentifierAnnotation) %>% filter(!is.na(TAU_IdentifierAnnotation)) %>%
@@ -493,7 +493,7 @@ geom_jitter(aes(color = version), width = .25) +
 theme_classic() +
 # group by rule
 facet_grid(. ~ ruleGroup) +
-# set color scale for versions
+# set color scale for patterns and antipatterns
 scale_color_manual(values = c("#0077dd", "#dd1100")) +
 # set scale for y axis
 ylim(0.00, 1.00) +
@@ -620,8 +620,10 @@ for (i in seq_along(patterns)) {
   ap <- antipatterns[i]
   varTAUP <- as.name(paste("TAU", p, sep = "_"))
   varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
-  varP <- as.name(paste(varP, "", sep = ""))
-  varAP <- as.name(paste(varAP, "", sep = ""))
+  #varP <- as.name(paste(varP, "", sep = ""))
+  #varAP <- as.name(paste(varAP, "", sep = ""))
+  varP <- as.name(paste(p, "", sep = ""))
+  varAP <- as.name(paste(ap, "", sep = ""))
   varP_rating <- as.name(paste(varP, "URating", sep = ""))
   varAP_rating <- as.name(paste(varAP, "URating", sep = ""))
   descriptiveStats <- rbind(
@@ -802,7 +804,7 @@ testResults <- testResults %>%
     )
   )
 
-
+print(testResults)
 
 # for all rules combined
 w <- wilcox.test(
@@ -999,7 +1001,7 @@ geom_text(
   hjust = -0.05
 ) +
 theme_classic() +
-labs(x = "Rule", y = "Adjusted R-squared") +
+labs(x = "", y = "Adjusted R-squared") +
 theme(
   text = element_text(size = 16, face = "bold", family = "sans"),
   axis.title = element_text(size = 16),
@@ -1025,8 +1027,8 @@ for (i in seq_along(patterns)) {
   ap <- antipatterns[i]
   varTAUP <- as.name(paste("TAU", p, sep = "_"))
   varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
-  varP <- as.name(paste(varP, "", sep = ""))
-  varAP <- as.name(paste(varAP, "", sep = ""))
+  varP <- as.name(paste(p, "", sep = ""))
+  varAP <- as.name(paste(ap, "", sep = ""))
   varP_rating <- as.name(paste(varP, "RRating", sep = ""))
   varAP_rating <- as.name(paste(varAP, "RRating", sep = ""))
   descriptiveStats <- rbind(
@@ -1202,7 +1204,7 @@ testResults <- testResults %>%
     digits = 4, eps = 0.001
   )
   )
-
+print(testResults)
 
 
 # for all rules combined
@@ -1400,7 +1402,7 @@ ggplot(barplotData, aes(x = reorder(rule, AP_adjustedR2), y = AP_adjustedR2)) +
     hjust = -0.05
   ) +
   theme_classic() +
-  labs(x = "Rule", y = "Adjusted R-squared") +
+  labs(x = "", y = "Adjusted R-squared") +
   theme(
     text = element_text(size = 16, face = "bold", family = "sans"),
     axis.title = element_text(size = 16),
@@ -1469,6 +1471,8 @@ correlationUndData <- data %>%
     
   )
 print(correlationUndData)
+
+
 # Correlation matrix for exploration
 # rcorr does not support kendalls TAU
 # "pearson" for linear correlation of continuous variables
@@ -1486,20 +1490,20 @@ corrMatrix <-
   as.matrix() %>%
   rcorr(type = corrMthd)
 
-print(corrMatrix)
+#print(corrMatrix)
 #print(dim(corrMatrix$r))  # Dimensions of the correlation matrix
 #print(dim(corrMatrix$P))  # Dimensions of the p-value matrix
 
 # plot a correlation matrix
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
-print(correlationUndData)
+#print(correlationUndData)
 
 # caculate separate correlations
 corrMthd <- "kendall"
 df <- data.frame()
 # change to "mean_TAU_P", "mean_TAU_AP", "mean_perceivedUnderstandabilityDifficulty_P", or "mean_perceivedUnderstandabilityDifficulty_AP"
-dependent <- "mean_TAU_P"
+dependent <- "mean_TAU_AP"
 demographics <- c("is_Student", "is_Academia", "is_Canada", "YearsOfExperience", "RichardsonMaturity", "MaturityLevel")
 
 for (d in demographics) {
@@ -1629,6 +1633,8 @@ print(corrMatrix)
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
 print(correlationReadData)
+
+
 # caculate separate correlations
 corrMthd <- "kendall"
 df <- data.frame()
@@ -1652,7 +1658,7 @@ for (d in demographics) {
   make.row.names = FALSE
   )
 }
-
+print(df)
 # adjust p-values with Holm-Bonferroni and format them
 df %>%
   mutate(p.value = format.pval(
@@ -1662,29 +1668,4 @@ df %>%
   ) %>%
   arrange(p.value) %>%
   print
-
-# create 2 linear regression models for predicting TAU (one for following patterns and one for followng antipatterns)
-# LM for rule:
-lrP <- lm(
-  mean_TAU_P ~
-    is_Student
-  + is_Academia
-  + is_Canada
-  + YearsOfExperience
-  + MaturityLevel,
-  data = correlationReadData
-)
-summary(lrP)
-
-# LM for violation:
-lrAP <- lm(
-  mean_TAU_AP ~
-    is_Student
-  + is_Academia
-  + is_Canada
-  + YearsOfExperience
-  + MaturityLevel,
-  data = correlationReadData
-)
-summary(lrAP)
 
