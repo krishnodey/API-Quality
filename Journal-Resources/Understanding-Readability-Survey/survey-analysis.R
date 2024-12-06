@@ -2,6 +2,13 @@
 # Experiment Results
 ########################################################################
 
+#acknowledgements
+#This scirpt was originally written by Bonger et al. [1]. we updated and used it for our project.
+#Bogner, J., Kotstein, S., & Pfaff, T. (2023). Do RESTful API design rules have an impact on the understandability of Web APIs?. Empirical software engineering, 28(6), 132.
+
+#instructions
+#in order to see the figures of plots, please use the zoom option for better ascpect ratio
+
 # delete current environment variables --------
 rm(list = ls(all.names = TRUE))
 # install and load required packages -------
@@ -35,7 +42,7 @@ calculateTAU <- function(effectiveness, efficiency, maxEfficiency) {
 # read data ------------
 data <- read.csv("results-survey.csv", na.strings = c("", "NA"), fileEncoding = "UTF-8-BOM")
 
-print(data)
+#print(data)
 
 # demographic data
 # distribution of professions
@@ -50,12 +57,9 @@ data %>%
 data %>%
   select(Country) %>%
   table()
-# distribution of groups
-#data %>%
-#  select(group_id) %>%
-#  table()
 
-# median participant stats by task order group
+
+# median participant stats
 data %>%
   #group_by(group_id) %>%
   summarise(
@@ -73,20 +77,22 @@ data %>%
 # variable names for the antipatterns
 antipatterns <- c(
   "AmorphousEndpoint", "ContextlessResource", "CRUDyEndpoint",
-  "InconsistentEndpoint", "NonDescriptiveEndpoint", "NonHierarchicalEndpoint",
-  "NonPertinentEndpoint", "NonStandardEndpoint", "PluralizedEndpoint",
+  "InconsistentDoc", "NonDescriptiveEndpoint", "NonHierarchicalNodes",
+  "NonPertinentDoc", "NonStandardEndpoint", "PluralizedNodes",
   "UnversionedEndpoint", "ParameterTunneling", "InconsistentArchetype", "IdentifierAmbiguity", "FlatEndpoint"
 )
 # variable names for the patterns
 patterns <- c(
   "TidyEndpoint", "ContextualResource", "VerblessEndpoint",
-  "ConsistentEndpoint", "DescriptiveEndpoint", "HierarchicalEndpoint",
-  "PertinentEndpoint", "StandardEndpoint", "SingularizedEndpoint",
+  "ConsistentDoc", "DescriptiveEndpoint", "HierarchicalNodes",
+  "PertinentDoc", "StandardEndpoint", "SingularizedNodes",
   "VersionedEndpoint", "ParameterAdherence", "ConsistentArchetype", "IdentifierAnnotation", "StructuredEndpoint"
 )
 
 
 # calculate TAU for every questions
+# p  = pattern
+# ap = antipattern
 for (i in seq_along(patterns)) {
   p <- patterns[i]
   ap <- antipatterns[i]
@@ -99,7 +105,7 @@ for (i in seq_along(patterns)) {
     mutate("TAU_{{varAntipattern}}" := calculateTAU({{ varAntipattern }}, {{ varAntipatternTime }}, max({{ varPatternTime }}, {{ varAntipatternTime }}, na.rm = TRUE)))
 }
 
-print(data)
+#print(data)
 
 
 # --> data now has attributes TAU_<Pattern> and TAU_<Antipattern>
@@ -127,7 +133,7 @@ for (i in seq_along(patterns)) {
   ))
   
 }
-print(combinedUndDf)
+#print(combinedUndDf)
 
 # Shapiro-Wilk test for non-normal distribution of understandability (replace value with the patterns or antipatters, i.e., 1 to 14)
 p <- patterns[1]
@@ -170,12 +176,12 @@ print(combinedReadDf)
 
 
 ####################################################################################################
-# Calculations for RQ1 (Which patterns and antipatterns have an impact on the understandability of APIs?)
+# Calculations for RQ1 (Which linguistic design patterns and antipatterns have an impact on the understandability of Web APIs?)
 ####################################################################################################
 
 # descriptive statistics
 
-# calculate summary stats for all important performance metrics per individual rule
+# calculate summary stats for all important performance metrics per individual patterns and antipatterns
 descriptiveStats <- data.frame()
 
 for (i in seq_along(patterns)) {
@@ -212,7 +218,7 @@ for (i in seq_along(patterns)) {
 
 print(descriptiveStats)
 
-# calculate more detailed descriptive stats per individual rule (min, max, var)
+# calculate more detailed descriptive stats per individual patterns and antipatterns (min, max, var)
 descriptiveStatsDetails <- data.frame()
 
 
@@ -395,7 +401,7 @@ ggplot(barplotData, aes(x = reorder(rule, index), y = value, fill = treatment)) 
   coord_flip()
 
 # create 2 new data frames for multiple strip plots in one diagram
-# each with attributes `TAU`, `version` (1 = pattern or 2 = antipatter), and `patterns and antipattern pair group` (1 to 7)
+# each with attributes `TAU`, `version` (1 = pattern or 2 = antipattern), and `patterns and antipattern pair group` (1 to 7)
 
 # "Amorphous", "Contextless", "CRUDy", "Inconsistent", "NonDescriptive", "NonHierarchical", "NonPertinent"
 stripPlotData <- rbind(
@@ -411,22 +417,22 @@ stripPlotData <- rbind(
     mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_VerblessEndpoint),
   data %>% select(TAU_CRUDyEndpoint) %>% filter(!is.na(TAU_CRUDyEndpoint)) %>%
     mutate(version = 2, ruleGroup = 3) %>% rename(TAU = TAU_CRUDyEndpoint),
-  data %>% select(TAU_ConsistentEndpoint) %>% filter(!is.na(TAU_ConsistentEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_ConsistentEndpoint),
-  data %>% select(TAU_InconsistentEndpoint) %>% filter(!is.na(TAU_InconsistentEndpoint)) %>%
-    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_InconsistentEndpoint),
+  data %>% select(TAU_ConsistentDoc) %>% filter(!is.na(TAU_ConsistentDoc)) %>%
+    mutate(version = 1, ruleGroup = 4) %>% rename(TAU = TAU_ConsistentDoc),
+  data %>% select(TAU_InconsistentDoc) %>% filter(!is.na(TAU_InconsistentDoc)) %>%
+    mutate(version = 2, ruleGroup = 4) %>% rename(TAU = TAU_InconsistentDoc),
   data %>% select(TAU_DescriptiveEndpoint) %>% filter(!is.na(TAU_DescriptiveEndpoint)) %>%
     mutate(version = 1, ruleGroup = 5) %>% rename(TAU = TAU_DescriptiveEndpoint),
   data %>% select(TAU_NonDescriptiveEndpoint) %>% filter(!is.na(TAU_NonDescriptiveEndpoint)) %>%
     mutate(version = 2, ruleGroup = 5) %>% rename(TAU = TAU_NonDescriptiveEndpoint),
-  data %>% select(TAU_HierarchicalEndpoint) %>% filter(!is.na(TAU_HierarchicalEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_HierarchicalEndpoint),
-  data %>% select(TAU_NonHierarchicalEndpoint) %>% filter(!is.na(TAU_NonHierarchicalEndpoint)) %>%
-    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAU_NonHierarchicalEndpoint),
-  data %>% select(TAU_PertinentEndpoint) %>% filter(!is.na(TAU_PertinentEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 7) %>% rename(TAU = TAU_PertinentEndpoint),
-  data %>% select(TAU_NonPertinentEndpoint) %>% filter(!is.na(TAU_NonPertinentEndpoint)) %>%
-    mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_NonPertinentEndpoint)
+  data %>% select(TAU_HierarchicalNodes) %>% filter(!is.na(TAU_HierarchicalNodes)) %>%
+    mutate(version = 1, ruleGroup = 6) %>% rename(TAU = TAU_HierarchicalNodes),
+  data %>% select(TAU_NonHierarchicalNodes) %>% filter(!is.na(TAU_NonHierarchicalNodes)) %>%
+    mutate(version = 2, ruleGroup = 6) %>% rename(TAU = TAU_NonHierarchicalNodes),
+  data %>% select(TAU_PertinentDoc) %>% filter(!is.na(TAU_PertinentDoc)) %>%
+    mutate(version = 1, ruleGroup = 7) %>% rename(TAU = TAU_PertinentDoc),
+  data %>% select(TAU_NonPertinentDoc) %>% filter(!is.na(TAU_NonPertinentDoc)) %>%
+    mutate(version = 2, ruleGroup = 7) %>% rename(TAU = TAU_NonPertinentDoc)
 ) %>%
   mutate(version = factor(version, levels = c(1, 2), labels = c("P", "AP"))) %>%
   mutate(ruleGroup = factor(ruleGroup, levels = c(1:7), labels = c("#1: Tidy", "#2: Contextual", "#3: Verbless", "#4: Consistent", "#5: Descriptive", "#6: NonHierarchical", "#7: Pertinent")))
@@ -460,10 +466,10 @@ stripPlotData <- rbind(
     mutate(version = 1, ruleGroup = 1) %>% rename(TAU = TAU_StandardEndpoint),
   data %>% select(TAU_NonStandardEndpoint) %>% filter(!is.na(TAU_NonStandardEndpoint)) %>%
     mutate(version = 2, ruleGroup = 1) %>% rename(TAU = TAU_NonStandardEndpoint),
-  data %>% select(TAU_SingularizedEndpoint) %>% filter(!is.na(TAU_SingularizedEndpoint)) %>%
-    mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAU_SingularizedEndpoint),
-  data %>% select(TAU_PluralizedEndpoint) %>% filter(!is.na(TAU_PluralizedEndpoint)) %>%
-    mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAU_PluralizedEndpoint),
+  data %>% select(TAU_SingularizedNodes) %>% filter(!is.na(TAU_SingularizedNodes)) %>%
+    mutate(version = 1, ruleGroup = 2) %>% rename(TAU = TAU_SingularizedNodes),
+  data %>% select(TAU_PluralizedNodes) %>% filter(!is.na(TAU_PluralizedNodes)) %>%
+    mutate(version = 2, ruleGroup = 2) %>% rename(TAU = TAU_PluralizedNodes),
   data %>% select(TAU_VersionedEndpoint) %>% filter(!is.na(TAU_VersionedEndpoint)) %>%
     mutate(version = 1, ruleGroup = 3) %>% rename(TAU = TAU_VersionedEndpoint),
   data %>% select(TAU_UnversionedEndpoint) %>% filter(!is.na(TAU_UnversionedEndpoint)) %>%
@@ -609,7 +615,7 @@ coord_flip()
 
 
 ###################################################################################################################
-# Calculations for RQ2 (differences in perceived understandability and correlations with actual understandability)
+# Calculations for RQ2 (Do linguistic design patterns and antipatterns significantly influence software professionals' perceived difficulty in the understandability of Web APIs?)
 ###################################################################################################################
 
 # calculate descriptive statistics for perceived understandability ratings
@@ -620,8 +626,6 @@ for (i in seq_along(patterns)) {
   ap <- antipatterns[i]
   varTAUP <- as.name(paste("TAU", p, sep = "_"))
   varTAUAP <- as.name(paste("TAU", ap, sep = "_"))
-  #varP <- as.name(paste(varP, "", sep = ""))
-  #varAP <- as.name(paste(varAP, "", sep = ""))
   varP <- as.name(paste(p, "", sep = ""))
   varAP <- as.name(paste(ap, "", sep = ""))
   varP_rating <- as.name(paste(varP, "URating", sep = ""))
@@ -644,7 +648,7 @@ for (i in seq_along(patterns)) {
 
 print(descriptiveStats)
 
-# calculate more detailed descriptive stats per individual rule (min, max, var)
+# calculate more detailed descriptive stats per individual patterns and antipatterns (min, max, var)
 descriptiveStatsDetails <- data.frame()
 
 for (i in seq_along(patterns)) {
@@ -702,14 +706,14 @@ ratings_long$variable <- factor(
   labels = c("Very easy (pattern)", "Easy (pattern)", "Very easy (antipattern)", "Easy (antipattern)")
 )
 
-print(ratings_long)
+#print(ratings_long)
 
 # order according to categories
 ratings_long <- ratings_long %>%
   arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
 
-print(ratings_long)
+#print(ratings_long)
 
 # create break values to avoid negative numbers
 break_values <- append(pretty(ratings_long$value), c(30, 40, 50))
@@ -1015,7 +1019,7 @@ coord_flip()
 
 
 ###################################################################################################################
-# Calculations for RQ3 (differences in perceived readability and correlations with actual understandability)
+# Calculations for RQ3 (Do linguistic design patterns and antipatterns significantly influence software professionals' perceived difficulty in the readability of Web APIs?)
 ###################################################################################################################
 
 # calculate descriptive statistics for perceived readability ratings
@@ -1049,7 +1053,7 @@ for (i in seq_along(patterns)) {
 
 print(descriptiveStats)
 
-# calculate more detailed descriptive stats per individual rule (min, max, var)
+# calculate more detailed descriptive stats per individual patterns and antipatterns (min, max, var)
 descriptiveStatsDetails <- data.frame()
 
 for (i in seq_along(patterns)) {
@@ -1107,14 +1111,14 @@ ratings_long$variable <- factor(
   labels = c("Very easy (pattern)", "Easy (pattern)", "Very easy (antipattern)", "Easy (antipattern)")
 )
 
-print(ratings_long)
+#print(ratings_long)
 
 # order according to categories
 ratings_long <- ratings_long %>%
   arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
 
-print(ratings_long)
+#print(ratings_long)
 
 # create break values to avoid negative numbers
 break_values <- append(pretty(ratings_long$value), c(30, 40, 50))
@@ -1157,6 +1161,9 @@ ggplot(ratings_long, aes(x = reorder(rule, index), y = value, fill = variable)) 
   ) +
   # flip the chart horizontally
   coord_flip()
+
+
+
 
 # start hypothesis testing
 # due to multiple hypotheses, we will use the Holm-Bonferroni correction to adjust the computed p-values; the confidence level is therefore set to 0.05 here
@@ -1415,61 +1422,57 @@ ggplot(barplotData, aes(x = reorder(rule, AP_adjustedR2), y = AP_adjustedR2)) +
   coord_flip()
 
 #########################################################################################################
-# Calculations for RQ4 (How does REST related experience influence the results of RQ1, RQ2, and RQ3)
+# Calculations for RQ4 (How do participant demographics influence the understandability and readability of Web APIs?)
 #########################################################################################################
-# variable names for the antipatterns
 
 
 # aggregate mean values for TAU, perceived understandability, correctness, and time (needed for RQ4)
 correlationUndData <- data %>%
   rowwise() %>%
   mutate(
-    mean_TAU_P = ifelse(
-      mean(c(TAU_TidyEndpoint, TAU_ContextualResource, TAU_VerblessEndpoint, TAU_ConsistentEndpoint, TAU_DescriptiveEndpoint, TAU_HierarchicalEndpoint, TAU_PertinentEndpoint), na.rm = TRUE),
-      mean(c(TAU_StandardEndpoint, TAU_SingularizedEndpoint, TAU_VersionedEndpoint, TAU_ParameterAdherence, TAU_ConsistentArchetype, TAU_IdentifierAnnotation, TAU_StructuredEndpoint), na.rm = TRUE)
-    )
+    mean_TAU_P =
+      mean(c(TAU_TidyEndpoint, TAU_ContextualResource, TAU_VerblessEndpoint, TAU_ConsistentDoc, TAU_DescriptiveEndpoint, TAU_HierarchicalNodes, TAU_PertinentDoc), na.rm = TRUE),
+      mean(c(TAU_StandardEndpoint, TAU_SingularizedNodes, TAU_VersionedEndpoint, TAU_ParameterAdherence, TAU_ConsistentArchetype, TAU_IdentifierAnnotation, TAU_StructuredEndpoint), na.rm = TRUE)
   ) %>%
   mutate(
     mean_TAU_AP = 
-      mean(c(TAU_AmorphousEndpoint, TAU_ContextlessResource, TAU_CRUDyEndpoint, TAU_InconsistentEndpoint, TAU_NonDescriptiveEndpoint, TAU_NonHierarchicalEndpoint, TAU_NonPertinentEndpoint), na.rm = TRUE),
-      mean(c(TAU_NonStandardEndpoint, TAU_PluralizedEndpoint, TAU_UnversionedEndpoint, TAU_ParameterTunneling, TAU_InconsistentArchetype, TAU_IdentifierAmbiguity, TAU_FlatEndpoint), na.rm = TRUE)
+      mean(c(TAU_AmorphousEndpoint, TAU_ContextlessResource, TAU_CRUDyEndpoint, TAU_InconsistentDoc, TAU_NonDescriptiveEndpoint, TAU_NonHierarchicalNodes, TAU_NonPertinentDoc), na.rm = TRUE),
+      mean(c(TAU_NonStandardEndpoint, TAU_PluralizedNodes, TAU_UnversionedEndpoint, TAU_ParameterTunneling, TAU_InconsistentArchetype, TAU_IdentifierAmbiguity, TAU_FlatEndpoint), na.rm = TRUE)
   ) %>%
   mutate(
-    mean_perceivedUnderstandabilityDifficulty_P = ifelse(
-      mean(c(TidyEndpointURating, ContextualResourceURating, VerblessEndpointURating, ConsistentEndpointURating, DescriptiveEndpointURating, HierarchicalEndpointURating, PertinentEndpointURating), na.rm = TRUE),
-      mean(c(StandardEndpointURating, SingularizedEndpointURating, VersionedEndpointURating, ParameterAdherenceURating, ConsistentArchetypeURating, IdentifierAnnotationURating, StructuredEndpointURating), na.rm = TRUE)
-    )
+    mean_perceivedUnderstandabilityDifficulty_P = 
+      mean(c(TidyEndpointURating, ContextualResourceURating, VerblessEndpointURating, ConsistentDocURating, DescriptiveEndpointURating, HierarchicalNodesURating, PertinentDocURating), na.rm = TRUE),
+      mean(c(StandardEndpointURating, SingularizedNodesURating, VersionedEndpointURating, ParameterAdherenceURating, ConsistentArchetypeURating, IdentifierAnnotationURating, StructuredEndpointURating), na.rm = TRUE)
+    
   ) %>%
   mutate(
-    mean_perceivedUnderstandabilityDifficulty_AP = ifelse(
-      mean(c(AmorphousEndpointURating, ContextlessResourceURating, CRUDyEndpointURating, InconsistentEndpointURating, NonDescriptiveEndpointURating, NonHierarchicalEndpointURating, NonPertinentEndpointURating), na.rm = TRUE),
-      mean(c(NonStandardEndpointURating, PluralizedEndpointURating, UnversionedEndpointURating, ParameterTunnelingURating, InconsistentArchetypeURating, IdentifierAmbiguityURating, FlatEndpointURating), na.rm = TRUE)
-    )
+    mean_perceivedUnderstandabilityDifficulty_AP =
+      mean(c(AmorphousEndpointURating, ContextlessResourceURating, CRUDyEndpointURating, InconsistentDocURating, NonDescriptiveEndpointURating, NonHierarchicalNodesURating, NonPertinentDocURating), na.rm = TRUE),
+      mean(c(NonStandardEndpointURating, PluralizedNodesURating, UnversionedEndpointURating, ParameterTunnelingURating, InconsistentArchetypeURating, IdentifierAmbiguityURating, FlatEndpointURating), na.rm = TRUE)
   ) %>%
   mutate(
-    mean_Time_P = ifelse(
-      mean(c(TidyEndpointTime, ContextualResourceURating, VerblessEndpointTime, ConsistentEndpointTime, DescriptiveEndpointTime, HierarchicalEndpointTime, PertinentEndpointTime), na.rm = TRUE),
-      mean(c(StandardEndpointTime, SingularizedEndpointTime, VersionedEndpointTime, ParameterAdherenceTime, ConsistentArchetypeTime, IdentifierAnnotationTime, StructuredEndpointTime), na.rm = TRUE)
-    )
+    mean_Time_P = 
+      mean(c(TidyEndpointTime, ContextualResourceURating, VerblessEndpointTime, ConsistentDocTime, DescriptiveEndpointTime, HierarchicalNodesTime, PertinentDocTime), na.rm = TRUE),
+      mean(c(StandardEndpointTime, SingularizedNodesTime, VersionedEndpointTime, ParameterAdherenceTime, ConsistentArchetypeTime, IdentifierAnnotationTime, StructuredEndpointTime), na.rm = TRUE)
   ) %>%
   mutate(
     mean_Time_AP = 
-      mean(c(AmorphousEndpointTime, ContextlessResourceTime, CRUDyEndpointTime, InconsistentEndpointTime, NonDescriptiveEndpointTime, NonHierarchicalEndpointTime, NonPertinentEndpointTime), na.rm = TRUE),
-      mean(c(NonStandardEndpointTime, PluralizedEndpointTime, VersionedEndpointTime, ParameterTunnelingTime, InconsistentArchetypeTime, IdentifierAmbiguityTime, FlatEndpointTime), na.rm = TRUE)
+      mean(c(AmorphousEndpointTime, ContextlessResourceTime, CRUDyEndpointTime, InconsistentDocTime, NonDescriptiveEndpointTime, NonHierarchicalNodesTime, NonPertinentDocTime), na.rm = TRUE),
+      mean(c(NonStandardEndpointTime, PluralizedNodesTime, VersionedEndpointTime, ParameterTunnelingTime, InconsistentArchetypeTime, IdentifierAmbiguityTime, FlatEndpointTime), na.rm = TRUE)
     
   ) %>%
   mutate(
-    mean_Corr_P = ifelse(
-      mean(c(TidyEndpoint, ContextualResource, VerblessEndpoint, ConsistentEndpoint, DescriptiveEndpoint, HierarchicalEndpoint, PertinentEndpoint), na.rm = TRUE),
-      mean(c(StandardEndpoint, SingularizedEndpoint, VersionedEndpoint, ParameterAdherence, ConsistentArchetype, IdentifierAnnotation, StructuredEndpoint), na.rm = TRUE)
-    )
+    mean_Corr_P = 
+      mean(c(TidyEndpoint, ContextualResource, VerblessEndpoint, ConsistentDoc, DescriptiveEndpoint, HierarchicalNodes, PertinentDoc), na.rm = TRUE),
+      mean(c(StandardEndpoint, SingularizedNodes, VersionedEndpoint, ParameterAdherence, ConsistentArchetype, IdentifierAnnotation, StructuredEndpoint), na.rm = TRUE)
   ) %>%
   mutate(
     mean_Corr_AP = 
-      mean(c(AmorphousEndpoint, ContextlessResource, CRUDyEndpoint, InconsistentEndpoint, NonDescriptiveEndpoint, NonHierarchicalEndpoint, NonPertinentEndpoint), na.rm = TRUE),
-      mean(c(NonStandardEndpoint, PluralizedEndpoint, UnversionedEndpoint, ParameterTunneling, InconsistentArchetype, IdentifierAmbiguity, FlatEndpoint), na.rm = TRUE)
+      mean(c(AmorphousEndpoint, ContextlessResource, CRUDyEndpoint, InconsistentDoc, NonDescriptiveEndpoint, NonHierarchicalNodes, NonPertinentDoc), na.rm = TRUE),
+      mean(c(NonStandardEndpoint, PluralizedNodes, UnversionedEndpoint, ParameterTunneling, InconsistentArchetype, IdentifierAmbiguity, FlatEndpoint), na.rm = TRUE)
     
   )
+
 print(correlationUndData)
 
 
@@ -1490,14 +1493,14 @@ corrMatrix <-
   as.matrix() %>%
   rcorr(type = corrMthd)
 
-#print(corrMatrix)
-#print(dim(corrMatrix$r))  # Dimensions of the correlation matrix
-#print(dim(corrMatrix$P))  # Dimensions of the p-value matrix
+
+print(corrMatrix)
+
+
 
 # plot a correlation matrix
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
-#print(correlationUndData)
 
 # caculate separate correlations
 corrMthd <- "kendall"
@@ -1523,6 +1526,7 @@ for (d in demographics) {
   )
 }
 print(df)
+
 # adjust p-values with Holm-Bonferroni and format them
 df %>%
   mutate(p.value = format.pval(
@@ -1563,52 +1567,48 @@ summary(lrAP)
 correlationReadData <- data %>%
   rowwise() %>%
   mutate(
-    mean_TAU_P = ifelse(
-      mean(c(TAU_TidyEndpoint, TAU_ContextualResource, TAU_VerblessEndpoint, TAU_ConsistentEndpoint, TAU_DescriptiveEndpoint, TAU_HierarchicalEndpoint, TAU_PertinentEndpoint), na.rm = TRUE),
-      mean(c(TAU_StandardEndpoint, TAU_SingularizedEndpoint, TAU_VersionedEndpoint, TAU_ParameterAdherence, TAU_ConsistentArchetype, TAU_IdentifierAnnotation, TAU_StructuredEndpoint), na.rm = TRUE)
-    )
+    mean_TAU_P = 
+      mean(c(TAU_TidyEndpoint, TAU_ContextualResource, TAU_VerblessEndpoint, TAU_ConsistentDoc, TAU_DescriptiveEndpoint, TAU_HierarchicalNodes, TAU_PertinentDoc), na.rm = TRUE),
+      mean(c(TAU_StandardEndpoint, TAU_SingularizedNodes, TAU_VersionedEndpoint, TAU_ParameterAdherence, TAU_ConsistentArchetype, TAU_IdentifierAnnotation, TAU_StructuredEndpoint), na.rm = TRUE)
   ) %>%
   mutate(
     mean_TAU_AP = 
-      mean(c(TAU_AmorphousEndpoint, TAU_ContextlessResource, TAU_CRUDyEndpoint, TAU_InconsistentEndpoint, TAU_NonDescriptiveEndpoint, TAU_NonHierarchicalEndpoint, TAU_NonPertinentEndpoint), na.rm = TRUE),
-    mean(c(TAU_NonStandardEndpoint, TAU_PluralizedEndpoint, TAU_UnversionedEndpoint, TAU_ParameterTunneling, TAU_InconsistentArchetype, TAU_IdentifierAmbiguity, TAU_FlatEndpoint), na.rm = TRUE)
+      mean(c(TAU_AmorphousEndpoint, TAU_ContextlessResource, TAU_CRUDyEndpoint, TAU_InconsistentDoc, TAU_NonDescriptiveEndpoint, TAU_NonHierarchicalNodes, TAU_NonPertinentDoc), na.rm = TRUE),
+    mean(c(TAU_NonStandardEndpoint, TAU_PluralizedNodes, TAU_UnversionedEndpoint, TAU_ParameterTunneling, TAU_InconsistentArchetype, TAU_IdentifierAmbiguity, TAU_FlatEndpoint), na.rm = TRUE)
   ) %>%
   mutate(
-    mean_perceivedReadabilityDifficulty_P = ifelse(
-      mean(c(TidyEndpointRRating, ContextualResourceRRating, VerblessEndpointRRating, ConsistentEndpointRRating, DescriptiveEndpointRRating, HierarchicalEndpointRRating, PertinentEndpointRRating), na.rm = TRUE),
-      mean(c(StandardEndpointRRating, SingularizedEndpointRRating, VersionedEndpointRRating, ParameterAdherenceRRating, ConsistentArchetypeRRating, IdentifierAnnotationRRating, StructuredEndpointRRating), na.rm = TRUE)
-    )
+    mean_perceivedReadabilityDifficulty_P = 
+      mean(c(TidyEndpointRRating, ContextualResourceRRating, VerblessEndpointRRating, ConsistentDocRRating, DescriptiveEndpointRRating, HierarchicalNodesRRating, PertinentDocRRating), na.rm = TRUE),
+      mean(c(StandardEndpointRRating, SingularizedNodesRRating, VersionedEndpointRRating, ParameterAdherenceRRating, ConsistentArchetypeRRating, IdentifierAnnotationRRating, StructuredEndpointRRating), na.rm = TRUE)
   ) %>%
   mutate(
-    mean_perceivedReadabilityDifficulty_AP = ifelse(
-      mean(c(AmorphousEndpointRRating, ContextlessResourceRRating, CRUDyEndpointRRating, InconsistentEndpointRRating, NonDescriptiveEndpointRRating, NonHierarchicalEndpointRRating, NonPertinentEndpointRRating), na.rm = TRUE),
-      mean(c(NonStandardEndpointRRating, PluralizedEndpointRRating, UnversionedEndpointRRating, ParameterTunnelingRRating, InconsistentArchetypeRRating, IdentifierAmbiguityRRating, FlatEndpointRRating), na.rm = TRUE)
-    )
+    mean_perceivedReadabilityDifficulty_AP = 
+      mean(c(AmorphousEndpointRRating, ContextlessResourceRRating, CRUDyEndpointRRating, InconsistentDocRRating, NonDescriptiveEndpointRRating, NonHierarchicalNodesRRating, NonPertinentDocRRating), na.rm = TRUE),
+      mean(c(NonStandardEndpointRRating, PluralizedNodesRRating, UnversionedEndpointRRating, ParameterTunnelingRRating, InconsistentArchetypeRRating, IdentifierAmbiguityRRating, FlatEndpointRRating), na.rm = TRUE)
   ) %>%
   mutate(
-    mean_Time_P = ifelse(
-      mean(c(TidyEndpointTime, ContextualResourceURating, VerblessEndpointTime, ConsistentEndpointTime, DescriptiveEndpointTime, HierarchicalEndpointTime, PertinentEndpointTime), na.rm = TRUE),
-      mean(c(StandardEndpointTime, SingularizedEndpointTime, VersionedEndpointTime, ParameterAdherenceTime, ConsistentArchetypeTime, IdentifierAnnotationTime, StructuredEndpointTime), na.rm = TRUE)
-    )
+    mean_Time_P = 
+      mean(c(TidyEndpointTime, ContextualResourceURating, VerblessEndpointTime, ConsistentDocTime, DescriptiveEndpointTime, HierarchicalNodesTime, PertinentDocTime), na.rm = TRUE),
+      mean(c(StandardEndpointTime, SingularizedNodesTime, VersionedEndpointTime, ParameterAdherenceTime, ConsistentArchetypeTime, IdentifierAnnotationTime, StructuredEndpointTime), na.rm = TRUE)
   ) %>%
   mutate(
     mean_Time_AP = 
-      mean(c(AmorphousEndpointTime, ContextlessResourceTime, CRUDyEndpointTime, InconsistentEndpointTime, NonDescriptiveEndpointTime, NonHierarchicalEndpointTime, NonPertinentEndpointTime), na.rm = TRUE),
-    mean(c(NonStandardEndpointTime, PluralizedEndpointTime, VersionedEndpointTime, ParameterTunnelingTime, InconsistentArchetypeTime, IdentifierAmbiguityTime, FlatEndpointTime), na.rm = TRUE)
+      mean(c(AmorphousEndpointTime, ContextlessResourceTime, CRUDyEndpointTime, InconsistentDocTime, NonDescriptiveEndpointTime, NonHierarchicalNodesTime, NonPertinentDocTime), na.rm = TRUE),
+    mean(c(NonStandardEndpointTime, PluralizedNodesTime, VersionedEndpointTime, ParameterTunnelingTime, InconsistentArchetypeTime, IdentifierAmbiguityTime, FlatEndpointTime), na.rm = TRUE)
     
   ) %>%
   mutate(
-    mean_Corr_P = ifelse(
-      mean(c(TidyEndpoint, ContextualResource, VerblessEndpoint, ConsistentEndpoint, DescriptiveEndpoint, HierarchicalEndpoint, PertinentEndpoint), na.rm = TRUE),
-      mean(c(StandardEndpoint, SingularizedEndpoint, VersionedEndpoint, ParameterAdherence, ConsistentArchetype, IdentifierAnnotation, StructuredEndpoint), na.rm = TRUE)
-    )
+    mean_Corr_P =
+      mean(c(TidyEndpoint, ContextualResource, VerblessEndpoint, ConsistentDoc, DescriptiveEndpoint, HierarchicalNodes, PertinentDoc), na.rm = TRUE),
+      mean(c(StandardEndpoint, SingularizedNodes, VersionedEndpoint, ParameterAdherence, ConsistentArchetype, IdentifierAnnotation, StructuredEndpoint), na.rm = TRUE)
   ) %>%
   mutate(
     mean_Corr_AP = 
-      mean(c(AmorphousEndpoint, ContextlessResource, CRUDyEndpoint, InconsistentEndpoint, NonDescriptiveEndpoint, NonHierarchicalEndpoint, NonPertinentEndpoint), na.rm = TRUE),
-    mean(c(NonStandardEndpoint, PluralizedEndpoint, UnversionedEndpoint, ParameterTunneling, InconsistentArchetype, IdentifierAmbiguity, FlatEndpoint), na.rm = TRUE)
+      mean(c(AmorphousEndpoint, ContextlessResource, CRUDyEndpoint, InconsistentDoc, NonDescriptiveEndpoint, NonHierarchicalNodes, NonPertinentDoc), na.rm = TRUE),
+    mean(c(NonStandardEndpoint, PluralizedNodes, UnversionedEndpoint, ParameterTunneling, InconsistentArchetype, IdentifierAmbiguity, FlatEndpoint), na.rm = TRUE)
     
   )
+
 print(correlationReadData)
 
 # Correlation matrix for exploration
@@ -1628,11 +1628,11 @@ corrMatrix <-
   as.matrix() %>%
   rcorr(type = corrMthd)
 
-print(corrMatrix)
+#print(corrMatrix)
 # plot a correlation matrix
 corrplot(corrMatrix$r, p.mat = corrMatrix$P, method = "circle", type = "lower")
 
-print(correlationReadData)
+#print(correlationReadData)
 
 
 # caculate separate correlations
@@ -1659,6 +1659,7 @@ for (d in demographics) {
   )
 }
 print(df)
+
 # adjust p-values with Holm-Bonferroni and format them
 df %>%
   mutate(p.value = format.pval(
@@ -1669,3 +1670,29 @@ df %>%
   arrange(p.value) %>%
   print
 
+
+
+# create 2 linear regression models for predicting TAU (one for following patterns and one for followng antipatterns)
+# LM for rule:
+lrP <- lm(
+  mean_TAU_P ~
+    is_Student
+  + is_Academia
+  + is_Canada
+  + YearsOfExperience
+  + MaturityLevel,
+  data = correlationReadData
+)
+summary(lrP)
+
+# LM for violation:
+lrAP <- lm(
+  mean_TAU_AP ~
+    is_Student
+  + is_Academia
+  + is_Canada
+  + YearsOfExperience
+  + MaturityLevel,
+  data = correlationReadData
+)
+summary(lrAP)
