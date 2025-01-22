@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.4">
+  <diagram name="Page-1" id="SU60sq1JpARpPboAShl4">
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MPG2LtDlFFUvsX0TWPEw-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Step 1&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Purposive Sampling&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;container=0;fontStyle=0;fontFamily=Times New Roman;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="80" y="200" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Step 2&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Data&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Collection&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-API Documentations&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-Survey&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;container=0;fontStyle=0;fontFamily=Times New Roman;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="360" y="200" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;&quot;&gt;Step 3&lt;/span&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Initial&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Coding&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;-Coding&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;-Patterns and Antipatterns Category Identification&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;container=0;fontStyle=1;fontFamily=Times New Roman;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-4" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;&quot;&gt;Step 4&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;Intermediate&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Coding&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;-Selecting Core Category&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;-Data Saturation&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;container=0;fontStyle=1;fontFamily=Times New Roman;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="720" y="360" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-5" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;&quot;&gt;Step 5&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Advanced&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Coding&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;-Identify New Patterns and&amp;nbsp; Antipatterns.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;-Identify Detection Methods&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;container=0;fontStyle=1;fontFamily=Times New Roman;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="720" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-6" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;&quot;&gt;Step 6&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Grounded&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Theory&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-weight: normal;&quot;&gt;-Define New Patterns and Antipatterns&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-weight: normal;&quot;&gt;-Define Detection Heuristics&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;container=0;fontStyle=1;fontFamily=Times New Roman;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="360" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" target="lQT1piTSVn4L2tEJI0oU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="250" as="sourcePoint" />
+            <mxPoint x="610" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" target="lQT1piTSVn4L2tEJI0oU-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="300" as="sourcePoint" />
+            <mxPoint x="870" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" target="lQT1piTSVn4L2tEJI0oU-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="460" as="sourcePoint" />
+            <mxPoint x="870" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="lQT1piTSVn4L2tEJI0oU-5" target="lQT1piTSVn4L2tEJI0oU-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="450" as="sourcePoint" />
+            <mxPoint x="580" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lQT1piTSVn4L2tEJI0oU-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" target="lQT1piTSVn4L2tEJI0oU-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="250" as="sourcePoint" />
+            <mxPoint x="290" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -32,9 +32,9 @@ analyzer_obj.detect_amorphous_uri()
 print("\nFinished Detection of AmorphousURI.\n")
 
 
-print("Detection of NonStandardURI:")
-analyzer_obj.detect_non_standard_uri()
-print("\nFinished Detection of NonStandardURI:\n")
+# print("Detection of NonStandardURI:")
+# analyzer_obj.detect_non_standard_uri()
+# print("\nFinished Detection of NonStandardURI:\n")
 
 
 
@@ -88,9 +88,9 @@ print("\nFinished Detection of NonStandardURI:\n")
 
 
 
-# print("Detection of InconsistentResoruceArchetype:")
-# analyzer_obj.detect_incosistent_resource_archetype()
-# print("\nFinished Detection of InconsistentResoruceArchetype:\n")
+print("Detection of InconsistentResoruceArchetype:")
+analyzer_obj.detect_incosistent_resource_archetype()
+print("\nFinished Detection of InconsistentResoruceArchetype:\n")
 
 
 # print("Detection of IndentifierAmbiguity:")

@@ -42,7 +42,7 @@ calculateTAU <- function(effectiveness, efficiency, maxEfficiency) {
 # read data ------------
 data <- read.csv("results-survey.csv", na.strings = c("", "NA"), fileEncoding = "UTF-8-BOM")
 
-#print(data)
+print(data)
 
 # demographic data
 # distribution of professions
@@ -706,14 +706,14 @@ ratings_long$variable <- factor(
   labels = c("Very easy (pattern)", "Easy (pattern)", "Very easy (antipattern)", "Easy (antipattern)")
 )
 
-#print(ratings_long)
+print(ratings_long)
 
 # order according to categories
 ratings_long <- ratings_long %>%
   arrange(factor(rule, levels = rev(p))) %>%
   mutate(index = row_number())
 
-#print(ratings_long)
+print(ratings_long)
 
 # create break values to avoid negative numbers
 break_values <- append(pretty(ratings_long$value), c(30, 40, 50))
@@ -730,7 +730,7 @@ theme(
 labs(x = "", y = "# of understandability ratings per difficulty level", fill = "") +
 # set absolute numbers to avoid negatives and stretch axis the same in both directions
 scale_y_continuous(
-  limits = c(-51, 51),
+  limits = c(-75, 75),
   breaks = break_values,
   labels = abs(break_values)
 ) +
@@ -1135,7 +1135,7 @@ ggplot(ratings_long, aes(x = reorder(rule, index), y = value, fill = variable)) 
   labs(x = "", y = "# of readability ratings per difficulty level", fill = "") +
   # set absolute numbers to avoid negatives and stretch axis the same in both directions
   scale_y_continuous(
-    limits = c(-51, 51),
+    limits = c(-75, 75),
     breaks = break_values,
     labels = abs(break_values)
   ) +

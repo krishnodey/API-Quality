@@ -12,9 +12,9 @@ def run(selected, api_type):
     print("\nFinished Detection of AmorphousURI.\n")
 
 
-    print("Detection of NonStandardURI:")
-    analyzer_obj.detect_non_standard_uri()
-    print("\nFinished Detection of NonStandardURI:\n")
+    # print("Detection of NonStandardURI:")
+    # analyzer_obj.detect_non_standard_uri()
+    # print("\nFinished Detection of NonStandardURI:\n")
 
 
 
@@ -47,15 +47,15 @@ def run(selected, api_type):
     # print("\nFinished Detection of InconsistantDocumentation:\n")
 
 
-    # print("Detection of ContextlessResource:")
-    # analyzer_obj.detect_contextless()
-    # print("\nFinished Detection of ContextlessResource:\n")
+    #print("Detection of ContextlessResource:")
+    #analyzer_obj.detect_contextless()
+    #print("\nFinished Detection of ContextlessResource:\n")
 
 
 
-    # print("Detection of LessCohisiveDocumentation:")
-    # analyzer_obj.detect_less_cohesive_documentation()
-    # print("\nFinished Detection of LessCohisiveDocumentation:\n")
+    #print("Detection of LessCohisiveDocumentation:")
+    #analyzer_obj.detect_less_cohesive_documentation()
+    #print("\nFinished Detection of LessCohisiveDocumentation:\n")
 
     # # print("Detection of Non_FilteringEndpoint:")
     # # analyzer_obj.detect_non_filtering_endpoint()
@@ -68,9 +68,9 @@ def run(selected, api_type):
 
 
 
-    # print("Detection of InconsistentResoruceArchetype:")
-    # analyzer_obj.detect_incosistent_resource_archetype()
-    # print("\nFinished Detection of InconsistentResoruceArchetype:\n")
+    print("Detection of InconsistentResoruceArchetype:")
+    analyzer_obj.detect_incosistent_resource_archetype()
+    print("\nFinished Detection of InconsistentResoruceArchetype:\n")
 
 
     # print("Detection of IndentifierAmbiguity:")
