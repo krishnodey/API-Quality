@@ -375,27 +375,38 @@ print(set_public_private("BroadCom", "REST"))'''
 # print(obj.get_uri_nodes(node))
 
 
-import json
-import csv
+# import json
+# import csv
 
-# Function to convert JSONL to CSV
-def jsonl_to_csv(jsonl_file, csv_file):
-    with open(jsonl_file, 'r', encoding='utf-8') as f_jsonl, open(csv_file, 'w', newline='', encoding='utf-8') as f_csv:
-        csv_writer = None
-        for line in f_jsonl:
-            # Load each line as a JSON object
-            json_obj = json.loads(line.strip())
+# # Function to convert JSONL to CSV
+# def jsonl_to_csv(jsonl_file, csv_file):
+#     with open(jsonl_file, 'r', encoding='utf-8') as f_jsonl, open(csv_file, 'w', newline='', encoding='utf-8') as f_csv:
+#         csv_writer = None
+#         for line in f_jsonl:
+#             # Load each line as a JSON object
+#             json_obj = json.loads(line.strip())
             
-            # If this is the first line, create CSV headers
-            if csv_writer is None:
-                headers = json_obj.keys()
-                csv_writer = csv.DictWriter(f_csv, fieldnames=headers)
-                csv_writer.writeheader()
+#             # If this is the first line, create CSV headers
+#             if csv_writer is None:
+#                 headers = json_obj.keys()
+#                 csv_writer = csv.DictWriter(f_csv, fieldnames=headers)
+#                 csv_writer.writeheader()
             
-            # Write each JSON object as a row in the CSV
-            csv_writer.writerow(json_obj)
+#             # Write each JSON object as a row in the CSV
+#             csv_writer.writerow(json_obj)
 
-# Usage
-jsonl_file = 'All-Data\\temp\REST\Validation_Data.jsonl'  # Your input JSONL file
-csv_file = 'All-Data\\temp\REST\Validation_Data.csv'     # Your output CSV file
-jsonl_to_csv(jsonl_file, csv_file)
+# # Usage
+# jsonl_file = 'All-Data/temp/REST/Validation_Data.jsonl'  # Your input JSONL file
+# csv_file = 'All-Data/temp/REST/Validation_Data.csv'     # Your output CSV file
+# jsonl_to_csv(jsonl_file, csv_file)
+
+
+
+print("hello there")
+
+file_path = "GraphQL-APIs/AniList/AniList.txt"
+data = []
+with open(file_path, 'r', encoding="latin-1") as file:
+    for line in file:
+        data.append(line)
+print(data)

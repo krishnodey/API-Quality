@@ -2,7 +2,7 @@ from file_handler import FileReadWrite
 import json
 
 
-output_file = 'All-Data\\output_data.jsonl'
+output_file = 'All-Data/output_data.jsonl'
 
 base_path = ["REST-APIs", "GraphQL-APIs"]
 i = 1
@@ -14,7 +14,7 @@ with open(output_file, 'w', encoding='utf-8') as outfile:
         name_list = content.split('\n')
         api_type = 'REST' if 'REST-APIs' in api else 'GraphQL'
         for api_name in name_list:
-            file = f"All-Data\\temp\\{api_type}\\{api_name}.jsonl"
+            file = f"All-Data/temp/{api_type}/{api_name}.jsonl"
             print(f"Merging ---------{file}")
             with open(file, 'r') as infile:
                 for line in infile:

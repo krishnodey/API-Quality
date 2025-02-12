@@ -1,18 +1,19 @@
 from uri_cleaning import UriCleaning
 #from hierarchical_metrics import HierarchicalMetrics
 import re
-#import nltk
+# import nltk
 from nltk.stem import WordNetLemmatizer #for pluralized nodes
 from nltk.corpus import wordnet as wn #for nondescritive URI
-#nltk.download('wordnet')  # Download WordNet data if not downloaded
-#nltk.download('stopwords')
-#nltk.download('punkt')
-#import gensim
+# nltk.download('wordnet')  # Download WordNet data if not downloaded
+# nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('omw-1.4')
+# import gensim
 from gensim import corpora
 from gensim.models import LdaModel
 #from gensim.models.coherencemodel import CoherenceModel
-#from nltk.tokenize import word_tokenize
-#from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 import spacy
 #from collections import defaultdict
@@ -46,47 +47,60 @@ class ApiAnalyzer:
         self.clean = UriCleaning()
 
 
-        input_file = f"{api_type}-APIs\{api}\{api}.txt"
-        process_file = f"{api_type}-APIs\{api}\Processed_{api}.txt"
+        input_file = f"{api_type}-APIs/{api}/{api}.txt"
+        process_file = f"{api_type}-APIs/{api}/Processed_{api}.txt"
 
         if os.path.exists(process_file):
             print("opening process file")
-            with open(process_file, "r") as file:
-                lines = file.read().strip().split("\n")
-                #print(lines)
-                for line in lines:
-                    row = json.loads(line)
-                    #print(row['http_verb'])
-                    self.http_verb.append(row['http_verb'])
-                    self.uris.append(row['uri'])
-                    self.processed_nodes.append(row['processed_uri'])
-                    self.descriptions.append(row['description'])
-                    self.parameters.append(row['parameter'])
-                    self.processed_des.append(row['processed_des_para'])
-        else:     
-            with open(input_file, "r") as file, open(process_file, "w") as pro_file:
-                for line in file:
-                    #print(line)
-                    line  = line.split(">>")
-                    if len(line) == 4:
-                        verb, uri, des, para = line[0].strip(), line[1].strip(), line[2].strip(), line[3].strip()
-                    else:
-                        verb, uri, des, para = line[0].strip(), line[1].strip(), line[2].strip(), ''
+            encodings = ['utf-8', 'ISO-8859-1', 'cp1252']
+            for encod in encodings:
+                try:
+                    with open(process_file, "r", encoding=encod) as file:
+                        lines = file.read().strip().split("\n")
+                        #print(lines)
+                        for line in lines:
+                            row = json.loads(line)
+                            # print(row['http_verb'])
+                            self.http_verb.append(row['http_verb'])
+                            self.uris.append(row['uri'])
+                            self.processed_nodes.append(row['processed_uri'])
+                            self.descriptions.append(row['description'])
+                            self.parameters.append(row['parameter'])
+                            self.processed_des.append(row['processed_des_para'])
+                        break
+                except UnicodeDecodeError:
+                    print("Error in Reading File")
+        else:
+            encodings = ['utf-8', 'ISO-8859-1', 'cp1252']
+            for encod in encodings:
+                try:   
+                    with open(input_file, "r") as file, open(process_file, "w", encoding=encod) as pro_file:
+                        for line in file:
+                            # print(line)
+                            line  = line.split(">>")
+                            if len(line) == 4:
+                                verb, uri, des, para = line[0].strip(), line[1].strip(), line[2].strip(), line[3].strip()
+                            else:
+                                verb, uri, des, para = line[0].strip(), line[1].strip(), line[2].strip(), ''
 
-                    self.http_verb.append(verb.strip())
-                    self.uris.append(uri.strip())
-                    self.descriptions.append(des.strip())
-                    self.parameters.append(para.strip())
+                            self.http_verb.append(verb.strip())
+                            self.uris.append(uri.strip())
+                            self.descriptions.append(des.strip())
+                            self.parameters.append(para.strip())
 
-                    pro_nodes = self.clean.get_uri_nodes(uri.strip())
-                    pro_des = self.clean.preprocess_documentation(f"{des.strip()} {para.strip()}")
-                    self.processed_nodes.append(pro_nodes)
-                    self.processed_des.append(pro_des)
+                            pro_nodes = self.clean.get_uri_nodes(uri.strip())
+                            pro_des = self.clean.preprocess_documentation(f"{des.strip()} {para.strip()}")
+                            self.processed_nodes.append(pro_nodes)
+                            self.processed_des.append(pro_des)
 
-                    line_dict = {"http_verb": verb.strip(), "uri": uri.strip(), "processed_uri" : pro_nodes, "description": des.strip(), "parameter": para.strip(), "processed_des_para": pro_des}
-                    json_string=json.dumps(line_dict,ensure_ascii=False)
-                    pro_file.write(json_string+"\n")        
-                
+                            line_dict = {"http_verb": verb.strip(), "uri": uri.strip(), "processed_uri" : pro_nodes, "description": des.strip(), "parameter": para.strip(), "processed_des_para": pro_des}
+                            json_string=json.dumps(line_dict,ensure_ascii=False)
+                            pro_file.write(json_string+"\n")
+                        break
+                except UnicodeDecodeError:
+                    print("Error in Reading File")
+                      
+                        
         
 
 
@@ -115,7 +129,7 @@ class ApiAnalyzer:
                 flag = 'True'
             return flag
         
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'w') as file:
             i = 1
             for verb, uri, des, para in zip(self.http_verb, self.uris, self.descriptions, self.parameters):
@@ -218,7 +232,7 @@ class ApiAnalyzer:
         #unknown_characters = ['!', '@', '#', '$', '~', '^', '*', '>', '<', '|', '%', '&', '+', '=', '`', '?', ',', ';', ':', '.']
 
         
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -272,7 +286,7 @@ class ApiAnalyzer:
         AP = "CRUDy End-point"
         crudyWords = ["create", "make", "write", "read", "search", "show", "take", "delete", "destroy", "cancel", "remove", "update", "copy", "move", "upgrade", "notify"]
 
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -312,7 +326,7 @@ class ApiAnalyzer:
     
 
     def detect_unversioned_uris(self):
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -357,7 +371,7 @@ class ApiAnalyzer:
         #print(is_plural("sources"))
 
         #for method, uris, nodes, doc in zip(self.http_method, self.nodes, self.processed_nodes, self.description):
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -371,23 +385,23 @@ class ApiAnalyzer:
 
                 if len(nodes) < 1:
                     row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment5})
-                    continue
-                last_node = nodes[-1]
-
-                if method.strip() == "POST":
-                    if is_plural(last_node):
-                        row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment2})
-                    else:
-                        row.update({"pluralized_nodes": 1, "singularized_nodes": 0, "pluralized_comment": comment1})
-                        
-
-                elif method.strip() == "DELETE" or method.strip() == "PUT":
-                    if is_plural(last_node):
-                        row.update({"pluralized_nodes": 1, "singularized_nodes": 0, "pluralized_comment": comment3})
-                    else:
-                        row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment4})
                 else:
-                    row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment5})  
+                    last_node = nodes[-1]
+
+                    if method.strip() == "POST":
+                        if is_plural(last_node):
+                            row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment2})
+                        else:
+                            row.update({"pluralized_nodes": 1, "singularized_nodes": 0, "pluralized_comment": comment1})
+                            
+
+                    elif method.strip() == "DELETE" or method.strip() == "PUT":
+                        if is_plural(last_node):
+                            row.update({"pluralized_nodes": 1, "singularized_nodes": 0, "pluralized_comment": comment3})
+                        else:
+                            row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment4})
+                    else:
+                        row.update({"pluralized_nodes": 0, "singularized_nodes": 1, "pluralized_comment": comment5})  
                     
                 print("->", end=" ")
                 
@@ -400,7 +414,7 @@ class ApiAnalyzer:
         P = "Self-descriptive End-point"
         AP = "Non-descriptive End-point"
     
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -474,52 +488,54 @@ class ApiAnalyzer:
             return similarity_scores
 
        
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             for line, uris, combined_node in zip(lines, self.uris, self.processed_nodes):
                 row = json.loads(line)
-        
+                # print(row)
                 if len(combined_node) < 1:
                     row.update({"contextless_resource": 0, "contextual_resouce": 1, "contextless_comment": P})
+                    # print("executed")
+                    #continue
+                else: 
+
+                    # Calculate similarity for each individual node
+                    node_word_similarity = {}
+                    topic_avg = []
+                    for node in combined_node:
+                        node_word_similarity[node] = calculate_similarity(node, topic_words)
                     
-                    continue
-                # Calculate similarity for each individual node
-                node_word_similarity = {}
-                topic_avg = []
-                for node in combined_node:
-                    node_word_similarity[node] = calculate_similarity(node, topic_words)
-                
-                # Print the results with combined URI format and individual nodes
-                #print(f"Node: {combined_node}")
-                
-                # Iterate through topics and print scores vertically
-                for topic_idx in range(len(topic_words)):
-                    topic_name = f"Topic {topic_idx + 1}"
-                    #print(f"  {topic_name}:")
-                    tmp = 0
-                    for node, word_scores in node_word_similarity.items():
-                        score = word_scores.get(topic_name, {})
-                        #print(f"    {node}: {score}")  # Print scores for each node under the topic
-                        max_key = max(score, key = score.get)
-                        max_val = score[max_key]
-                        #print(max_val)
-                        tmp += max_val
-                    avg_tmp = tmp / len(node_word_similarity)
-                    topic_avg.append(avg_tmp)
-                
-                    #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
-                
-                #print(f"Total Average for All Topics: {topic_avg}\n")
-                #for avg in topic_avg:
-                
-                #print(max(topic_avg))
-                if round(max(topic_avg),1) >= 0.5:
-                    #print("contextual")
-                    row.update({"contextless_resource": 0, "contextual_resouce": 1, "contextless_comment": P})
-                else:
-                    row.update({"contextless_resource": 1, "contextual_resouce": 0, "contextless_comment": AP})
+                    # Print the results with combined URI format and individual nodes
+                    #print(f"Node: {combined_node}")
+                    
+                    # Iterate through topics and print scores vertically
+                    for topic_idx in range(len(topic_words)):
+                        topic_name = f"Topic {topic_idx + 1}"
+                        #print(f"  {topic_name}:")
+                        tmp = 0
+                        for node, word_scores in node_word_similarity.items():
+                            score = word_scores.get(topic_name, {})
+                            #print(f"    {node}: {score}")  # Print scores for each node under the topic
+                            max_key = max(score, key = score.get)
+                            max_val = score[max_key]
+                            #print(max_val)
+                            tmp += max_val
+                        avg_tmp = tmp / len(node_word_similarity)
+                        topic_avg.append(avg_tmp)
+                    
+                        #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                    
+                    #print(f"Total Average for All Topics: {topic_avg}\n")
+                    #for avg in topic_avg:
+                    
+                    #print(max(topic_avg))
+                    if round(max(topic_avg),1) >= 0.5:
+                        #print("contextual")
+                        row.update({"contextless_resource": 0, "contextual_resouce": 1, "contextless_comment": P})
+                    else:
+                        row.update({"contextless_resource": 1, "contextual_resouce": 0, "contextless_comment": AP})
         
                 print("->", end=" ")
             
@@ -576,7 +592,7 @@ class ApiAnalyzer:
         P = "Hierarchical Nodes"
         AP = "Non-hierarchical Nodes"
 
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -661,7 +677,7 @@ class ApiAnalyzer:
             return similarity_scores
 
         
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -674,63 +690,63 @@ class ApiAnalyzer:
                 #print(documentation)
                 if len(documentation)<1 or len(combined_node) < 1 :
                     row.update({"less_cohesive_doc": 0, "cohesive_doc": 1, "less_cohesive_comment": AP})
-                    continue
-                    
-                # Create a dictionary and corpus for LDA modeling
-                dictionary = corpora.Dictionary([documentation])
-                corpus = [dictionary.doc2bow(text) for text in [documentation]]
-
-                # Train LDA model
-                lda_model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=topics, random_state=42)
-
-                # Get topic words from the model
-                topic_words = []
-                for topic_id in range(lda_model.num_topics):
-                    topic_words.append([word for word, _ in lda_model.show_topic(topic_id)])
-                #print(topic_words)
-
-                # Display topic words horizontally
-                '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
-                print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
-
-
-                node_word_similarity = {}
-                topic_avg = []
-                for node in combined_node:
-                    node_word_similarity[node] = calculate_similarity(node, topic_words)
-                    
-                
-                # Print the results with combined URI format and individual nodes
-                #print(f"Node: {combined_node}")
-                
-                # Iterate through topics and print scores vertically
-                for topic_idx in range(len(topic_words)):
-                    topic_name = f"Topic {topic_idx + 1}"
-                    #print(f"  {topic_name}:")
-                    tmp = 0
-                    for node, word_scores in node_word_similarity.items():
-                        score = word_scores.get(topic_name, {})
-                        #print(f"    {node}: {score}")  # Print scores for each node under the topic
-                        #tmp1 = simi_average(score)
-                        #print(tmp1)
-                        max_value_key = max(score, key=score.get)
-                        max_value = score[max_value_key]
-                        #print(max_value)
-                        tmp += max_value
-                    avg_tmp = tmp / len(node_word_similarity)
-                    topic_avg.append(avg_tmp)
-                    #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
-                    
-                
-                #print(f"Total Average for All Topics: {topic_avg}\n")
-                #for avg in topic_avg:
-                #print(max(topic_avg))
-                if round(max(topic_avg), 1) >= 0.5:
-                    row.update({"less_cohesive_doc": 0, "cohesive_doc": 1, "less_cohesive_comment": P})
-                    #print("cohisive")
                 else:
-                    row.update({"less_cohesive_doc": 1, "cohesive_doc": 0, "less_cohesive_comment": AP})
-                    #print("less_cohisive")
+                        
+                    # Create a dictionary and corpus for LDA modeling
+                    dictionary = corpora.Dictionary([documentation])
+                    corpus = [dictionary.doc2bow(text) for text in [documentation]]
+
+                    # Train LDA model
+                    lda_model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=topics, random_state=42)
+
+                    # Get topic words from the model
+                    topic_words = []
+                    for topic_id in range(lda_model.num_topics):
+                        topic_words.append([word for word, _ in lda_model.show_topic(topic_id)])
+                    #print(topic_words)
+
+                    # Display topic words horizontally
+                    '''table = [["Topic " + str(i+1)] + words for i, words in enumerate(topic_words)]
+                    print(tabulate(table, headers="firstrow", tablefmt="grid"))'''
+
+
+                    node_word_similarity = {}
+                    topic_avg = []
+                    for node in combined_node:
+                        node_word_similarity[node] = calculate_similarity(node, topic_words)
+                        
+                    
+                    # Print the results with combined URI format and individual nodes
+                    #print(f"Node: {combined_node}")
+                    
+                    # Iterate through topics and print scores vertically
+                    for topic_idx in range(len(topic_words)):
+                        topic_name = f"Topic {topic_idx + 1}"
+                        #print(f"  {topic_name}:")
+                        tmp = 0
+                        for node, word_scores in node_word_similarity.items():
+                            score = word_scores.get(topic_name, {})
+                            #print(f"    {node}: {score}")  # Print scores for each node under the topic
+                            #tmp1 = simi_average(score)
+                            #print(tmp1)
+                            max_value_key = max(score, key=score.get)
+                            max_value = score[max_value_key]
+                            #print(max_value)
+                            tmp += max_value
+                        avg_tmp = tmp / len(node_word_similarity)
+                        topic_avg.append(avg_tmp)
+                        #print(f"  Average Similarity for {topic_name}: {avg_tmp}\n")
+                        
+                    
+                    #print(f"Total Average for All Topics: {topic_avg}\n")
+                    #for avg in topic_avg:
+                    #print(max(topic_avg))
+                    if round(max(topic_avg), 1) >= 0.5:
+                        row.update({"less_cohesive_doc": 0, "cohesive_doc": 1, "less_cohesive_comment": P})
+                        #print("cohisive")
+                    else:
+                        row.update({"less_cohesive_doc": 1, "cohesive_doc": 0, "less_cohesive_comment": AP})
+                        #print("less_cohisive")
                 print("->", end=" ")
             
                 json_string = json.dumps(row, ensure_ascii=False)
@@ -759,7 +775,7 @@ class ApiAnalyzer:
         P = "Consistent Documentation"
         AP = "Inconsistent Documentation"
 
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -898,13 +914,20 @@ class ApiAnalyzer:
     def detect_parameters_tunneling(self):
         P = "Parameter Adherence"
         AP = "Parameter Tunneling"
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
+        # print(f"Reading ---- {path}")
+        #line_num = 0
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
             file.truncate()
             for line, method, uri in zip(lines, self.http_verb, self.uris):
                 row = json.loads(line)
+                #print(line)
+                # print(row)
+                #print(uri)
+                #line_num = line_num + 1
+                #print(line_num)
                 query_param = '?' in uri
                 path_param = ('{' in uri and '}' in uri) or ('<' in uri and '>' in uri) or ':' in uri
 
@@ -919,6 +942,7 @@ class ApiAnalyzer:
                 print("->", end=" ")
                 json_string = json.dumps(row, ensure_ascii=False)
                 file.write(json_string+"\n")
+                
 
 
 
@@ -954,6 +978,7 @@ class ApiAnalyzer:
                     part = re.sub(r'[^a-zA-Z_-]', '', part)  # Keep letters, _, and -
                     
                     # Split by underscore, hyphen, or camelCase
+                    
                     last_part = re.split(r'_|-|(?<!^)(?=[A-Z])', part)
                     
                     # Add the last part if there are multiple segments
@@ -967,7 +992,7 @@ class ApiAnalyzer:
             return clean_nodes
 
         
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -1028,7 +1053,7 @@ class ApiAnalyzer:
         P2 = "[Regular Endpoints]"
         AP = "[Identifier is Not Enclosed in {} or <> or does not Start with :]"
         
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)
@@ -1069,7 +1094,7 @@ class ApiAnalyzer:
 
         P = "Structed Endpoint"
         AP = "Complex Words Present in Endpoint"
-        path = f"All-Data\\temp\\{self.api_type}\\{self.api_name}.jsonl"
+        path = f"All-Data/temp/{self.api_type}/{self.api_name}.jsonl"
         with open(path, 'r+') as file:
             lines = file.read().strip().split("\n")
             file.seek(0)

@@ -133,7 +133,7 @@ for (i in seq_along(patterns)) {
   ))
   
 }
-#print(combinedUndDf)
+print(combinedUndDf)
 
 # Shapiro-Wilk test for non-normal distribution of understandability (replace value with the patterns or antipatters, i.e., 1 to 14)
 p <- patterns[1]
@@ -730,7 +730,7 @@ theme(
 labs(x = "", y = "# of understandability ratings per difficulty level", fill = "") +
 # set absolute numbers to avoid negatives and stretch axis the same in both directions
 scale_y_continuous(
-  limits = c(-75, 75),
+  limits = c(-95, 95),
   breaks = break_values,
   labels = abs(break_values)
 ) +
@@ -1135,7 +1135,7 @@ ggplot(ratings_long, aes(x = reorder(rule, index), y = value, fill = variable)) 
   labs(x = "", y = "# of readability ratings per difficulty level", fill = "") +
   # set absolute numbers to avoid negatives and stretch axis the same in both directions
   scale_y_continuous(
-    limits = c(-75, 75),
+    limits = c(-95, 95),
     breaks = break_values,
     labels = abs(break_values)
   ) +
