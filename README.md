@@ -223,6 +223,8 @@ This is an example of how you may give instructions on setting up your project l
 
 ### File Structure
 
+
+```
 API-Quality/
 ├── REST/
 │   ├── APIs
@@ -260,7 +262,7 @@ API-Quality/
 │   ├── test.py
 │   ├── uri_cleaning.py
 │   ├── acronyms.txt
- 
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
