@@ -209,19 +209,17 @@ This is an example of how you may give instructions on setting up your project l
    ```
 4. Required downloads
   ```sh
-  nltk.download('wordnet')
-  nltk.download('stopwords')
-  nltk.download('punkt')
-  nltk.download('omw-1.4')
+   nltk.download('wordnet')
+   nltk.download('stopwords')
+   nltk.download('punkt')
+   nltk.download('omw-1.4')
   ```
 4. Run the test.py script
   ```sh
-  python3 test.py (test for individual APIs)
-  python3 run_all.py (test for all APIs)
+   python3 test.py (test individual APIs)
+   python3 run_all.py (test all APIs)
   ```
 
-
-### File Structues
 API-Quality/
 ├── REST/
 │   ├── APIs
@@ -258,7 +256,7 @@ API-Quality/
 │   ├── run-all.py
 │   ├── test.py
 │   ├── uri_cleaning.py
-└── acronyms.txt
+│   ├── acronyms.txt
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
