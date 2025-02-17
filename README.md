@@ -88,25 +88,25 @@
 <!-- Patterns and Anti-Patterns -->
 ## Common Patterns and Anti-Pattens in API Design
 
-**Tidy vs. Amorphous End-point:** End-points in REST should be tidy and easy to read. A Tidy End-point has an appropriate lower-case resource naming, no extensions, underscores, or trailing slashes. Amorphous End-point occurs when an end-point contains symbols or capital letters that make them difficult to read and use. An end-point is amorphous if it contains: (1) upper-case letter, (2) file extensions, (3) underscores, and, (4) a final trailing-slash. For example: The end-point /NEWCustomer/image01.tiff/ is an Amorphous End-point while the end-point /customers/1234 is a Tidy End-point.
+**1. Tidy vs. Amorphous End-point:** End-points in REST should be tidy and easy to read. A Tidy End-point has an appropriate lower-case resource naming, no extensions, underscores, or trailing slashes. Amorphous End-point occurs when an end-point contains symbols or capital letters that make them difficult to read and use. An end-point is amorphous if it contains: (1) upper-case letter, (2) file extensions, (3) underscores, and, (4) a final trailing-slash. For example: The end-point /NEWCustomer/image01.tiff/ is an Amorphous End-point while the end-point /customers/1234 is a Tidy End-point.
 
-* **Contextualized vs. Contextless:** Resource names in End-points should be contextual, i.e., nodes in end-points should be semantically-related. Contextless Resource Names antipattern appears when endpoints are composed of nodes that do not belong to the same semantic context. In contrast, if the nodes in an end-point belong to same semantic context this is known as Contextual Resource Names pattern. For example: The endpoint /newspapers/planet/players?id=123 is Contextless Resource while the end-point /soccer/team/ players?id=123 is Contextual Resource. 
+**2. Contextualized vs. Contextless:** Resource names in End-points should be contextual, i.e., nodes in end-points should be semantically-related. Contextless Resource Names antipattern appears when endpoints are composed of nodes that do not belong to the same semantic context. In contrast, if the nodes in an end-point belong to same semantic context this is known as Contextual Resource Names pattern. For example: The endpoint /newspapers/planet/players?id=123 is Contextless Resource while the end-point /soccer/team/ players?id=123 is Contextual Resource. 
 
-**Verbless vs. CRUDy Endpoint:** Appropriate HTTP methods, e.g., GET, POST, PUT, or DELETE, should be used to perform an action. The use of CRUDy terms (e.g., create, read, update, delete, or their synonyms) as part of the end-point design is inappropriate and known as CRUDy Endpoint. In contrast, an endpoint without any CRUDy term in its resource name is known as Verbless End-point pattern. For example: The endpoint /update/players/age?id=123 is a CRUDy Endpoint while the end-point /players/age?id=123 is a Verbless End-point. 
+**3. Verbless vs. CRUDy Endpoint:** Appropriate HTTP methods, e.g., GET, POST, PUT, or DELETE, should be used to perform an action. The use of CRUDy terms (e.g., create, read, update, delete, or their synonyms) as part of the end-point design is inappropriate and known as CRUDy Endpoint. In contrast, an endpoint without any CRUDy term in its resource name is known as Verbless End-point pattern. For example: The endpoint /update/players/age?id=123 is a CRUDy Endpoint while the end-point /players/age?id=123 is a Verbless End-point. 
 
-**Consistent vs. Inconsistent Documentation:** The Inconsistent Documentation antipattern occurs when an endpoint (together with the HTTP method) is in contradiction with its documentation. When the endpoint and HTTP method aligns with its documentation, this is known as Consistent Documentation pattern. For example: The POST method with the endpoint /bulk/devices/ remove is in contradiction with its documentation 'Delete multiple devices. Delete multiple devices, each request can contain a maximum of 512kB', thus, is an Inconsistent Documentation. In contranst, the endpoint /bulk/devices/remove with the documentation 'Remove multiple devices. Remove multiple devices, each request can contain a maximum of 512kB', would be identified as Consistent Documentation. 
+**4. Consistent vs. Inconsistent Documentation:** The Inconsistent Documentation antipattern occurs when an endpoint (together with the HTTP method) is in contradiction with its documentation. When the endpoint and HTTP method aligns with its documentation, this is known as Consistent Documentation pattern. For example: The POST method with the endpoint /bulk/devices/ remove is in contradiction with its documentation 'Delete multiple devices. Delete multiple devices, each request can contain a maximum of 512kB', thus, is an Inconsistent Documentation. In contranst, the endpoint /bulk/devices/remove with the documentation 'Remove multiple devices. Remove multiple devices, each request can contain a maximum of 512kB', would be identified as Consistent Documentation. 
 
-**Standard vs. Non-standard Endpoint:** An Endpoint design should not include resources with non-standard identification, which hinders the reusability and understandability of APIs. Non-standard Endpoint Antipattern occurs when (1) characters like ´e, ˚a, ¨o, etc. (2) blank spaces , (3) double hyphens, and (4) unknown characters (e.g., !, @, #, $, %, ˆ, &, *, etc.) are present in endpoints. In contrast, an standard endpoint non-standard characters. For example: The end-point /museum/louvre/r´eception/ is an example of Non-standard URI Design. While, the end-point /museum/louvre/reception/ represents Standard endpoint Design. 
+**5. Standard vs. Non-standard Endpoint:** An Endpoint design should not include resources with non-standard identification, which hinders the reusability and understandability of APIs. Non-standard Endpoint Antipattern occurs when (1) characters like ´e, ˚a, ¨o, etc. (2) blank spaces , (3) double hyphens, and (4) unknown characters (e.g., !, @, #, $, %, ˆ, &, *, etc.) are present in endpoints. In contrast, an standard endpoint non-standard characters. For example: The end-point /museum/louvre/r´eception/ is an example of Non-standard URI Design. While, the end-point /museum/louvre/reception/ represents Standard endpoint Design. 
 
-**Pertinent vs. Non-pertinent Documentation:** The Non-pertinent Documentation antipattern occurs when the documentation of an endpoint is not cohesive to the design of the endpoint itself. In contrast, a well-documented endpoint clearly describe its purpose using semantically related terms can be considered as Pertinent Documentation pattern . For example: The endpoint and documentation pair from Twitter: api.twitter.com/1.1/favorites/list – ‘Returns the 20 most recent Tweets liked by the authenticating or specified user’ is considered as a Non-pertinent Documentation. In contrast, this endpoint and documentation pair from Instagram: instagram.com/ media/media-id/comments – ‘Gets a list of recent comments on a media object. The public content permission scope is required to get comments for a media that does not belong to the owner of the access token.’ is considered as a Pertinent Documentation. 
+**6. Pertinent vs. Non-pertinent Documentation:** The Non-pertinent Documentation antipattern occurs when the documentation of an endpoint is not cohesive to the design of the endpoint itself. In contrast, a well-documented endpoint clearly describe its purpose using semantically related terms can be considered as Pertinent Documentation pattern . For example: The endpoint and documentation pair from Twitter: api.twitter.com/1.1/favorites/list – ‘Returns the 20 most recent Tweets liked by the authenticating or specified user’ is considered as a Non-pertinent Documentation. In contrast, this endpoint and documentation pair from Instagram: instagram.com/ media/media-id/comments – ‘Gets a list of recent comments on a media object. The public content permission scope is required to get comments for a media that does not belong to the owner of the access token.’ is considered as a Pertinent Documentation. 
 
-***Hierarchical vs. Non-hierarchical Nodes:** Nodes in an endpoint should be hierarchically related to its neighbor nodes. Non-hierarchical Nodes is an antipattern that appears when at least one node in an endpoint is not hierarchically related to its neighbor nodes. When all the nodes in an end-point are in a hierarchical relationship, this is known as Hierarchical Nodes pattern. For example: The end-point /professors/faculty/university is an example of Non-hierarchical Nodes while the end-point /university/faculty/professors is an example of Hierarchical Nodes. 
+**7. Hierarchical vs. Non-hierarchical Nodes:** Nodes in an endpoint should be hierarchically related to its neighbor nodes. Non-hierarchical Nodes is an antipattern that appears when at least one node in an endpoint is not hierarchically related to its neighbor nodes. When all the nodes in an end-point are in a hierarchical relationship, this is known as Hierarchical Nodes pattern. For example: The end-point /professors/faculty/university is an example of Non-hierarchical Nodes while the end-point /university/faculty/professors is an example of Hierarchical Nodes. 
 
-**Singularized vs. Pluralized Nodes:** Endpoints should use singular/plural nouns consistently for resources naming. When clients send PUT or DELETE requests, the last node of the request endpoint should be singular. In contrast, for POST requests, the last node should be plural. Therefore, the Pluralized Nodes antipattern appears when plural names are used for PUT/DELETE requests or singular names are used for POST requests, otherwise it can be considered as Singularized Nodes pattern . For example: The POST method with the endpoint /team/player is a Pluralized Nodes while the POST method with the endpoint /team/players is a Singularized Nodes. 
+**8. Singularized vs. Pluralized Nodes:** Endpoints should use singular/plural nouns consistently for resources naming. When clients send PUT or DELETE requests, the last node of the request endpoint should be singular. In contrast, for POST requests, the last node should be plural. Therefore, the Pluralized Nodes antipattern appears when plural names are used for PUT/DELETE requests or singular names are used for POST requests, otherwise it can be considered as Singularized Nodes pattern . For example: The POST method with the endpoint /team/player is a Pluralized Nodes while the POST method with the endpoint /team/players is a Singularized Nodes. 
 
-**Self-descriptive vs. Non-descriptive End-point:** Endpoints should be short and precise, i.e., as few characters as possible while still maintaining usability. Non-descriptive endpoint antipattern occurs when the endpoint design has encoded nodes, e.g., simple resource names not used, which hinder its understandability. In contrast, a Self-descriptive End-point has clear and concise resource identifiers. For example: The end-point /auth/token/from oauth is a Nondescriptive while the end-point /account/set profile photo is a Self-descriptive.
+**9. Self-descriptive vs. Non-descriptive End-point:** Endpoints should be short and precise, i.e., as few characters as possible while still maintaining usability. Non-descriptive endpoint antipattern occurs when the endpoint design has encoded nodes, e.g., simple resource names not used, which hinder its understandability. In contrast, a Self-descriptive End-point has clear and concise resource identifiers. For example: The end-point /auth/token/from oauth is a Nondescriptive while the end-point /account/set profile photo is a Self-descriptive.
 
-**Non-Filerting-URI vs Filerting Endpoints:** 
+**10. Non-Filerting-URI vs Filerting Endpoints:** 
 Endpoints should always incorporate SPF (Sorting, Pagination, and Filtering) factors. Users often try to fetch large amounts of data, and SPF helps limit the number of collections that can be retrieved from a list of resources. Further, SPF allows API consumers to filter collections according to their needs. This reduces data loading time, makes responses easier to handle, and reduces network traffic. An endpoint that incorporates SPF factors is known as a Filtering-Endpoint pattern, while an endpoint that does not incorporate SPF factors is known as a Non-Filtering-Endpoint antipattern.
 
 Pattern: (from Cisco Flare)
@@ -117,7 +117,7 @@ Pattern: (from Cisco Flare)
 Anti-pattern:
 /environments List environments. Gets a list of all environments.
 
-**Parameter Tunneling vs  Parameter Adherence**
+**11. Parameter Tunneling vs  Parameter Adherence**
 Web APIs often have path parameters and query parameters to file specific resources. Path parameters (e.g., /api/books/{id})  are used to identify or retrieve a specific resource, while query parameters (e.g., /api/books?category=fiction) are used for sorting, filtering, and pagination of the request data. Path parameters should be used to identify resources (e.g. delete, update, create, etc). In contrast, query parameters should be used for sorting, filtering, and pagination of resources. Parameter Tunneling antipattern occurs if path parameters are used for sorting, filtering, and pagination, or query parameters are used for identifying resources. Consistent use of path and query parameters would result in a Parameter Adherence pattern.
 
 **Pattern:**
@@ -127,7 +127,7 @@ Web APIs often have path parameters and query parameters to file specific resour
 **Anti-Pattern:**
 /desserts?page=5&pageSize=25 Update the resource desserts
 
-**Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names**
+**12. Consistent Resource Archetype Names vs Inconsistent Resource Archetype Names**
 Resource archetypes are the basic building blocks of API endpoints. Two of the most commonly used resource archetypes are Document and Collection. The Document archetype usually includes fields filled with values that describe a resource, while a Collection resource is a list of document resources. To maintain clarity, singular nouns should be used for naming Documents, while plural nouns should be used for naming Collections. Adhering to these rules results in the Consistent Resource Archetype Names pattern. In contrast, the Inconsistent Resource Archetype Names antipattern occurs if plural nouns are used for naming documents or singular nouns are used for naming collections.
 
 **Pattern:**
@@ -136,7 +136,7 @@ GET /recipes/desserts/apple-pie
 **Anti-Pattern:**
 GET /recipe/dessert/apple-pies
 
-**Identifier Annotation vs Identifier Ambiguity**
+**13. Identifier Annotation vs Identifier Ambiguity**
 Path parameters or resource identifiers used in endpoints should be enclosed in curly braces, angle brackets, or followed by a colon sign. Using such symbols in endpoint design is referred to as Identifier Annotation pattern, which improves endpoint readability and understandability. In contrast, the absence of curly braces, angle brackets, or colon to represent resource identifiers would result in an Identifier Ambiguity antipattern.
 
 **Pattern:**
@@ -149,7 +149,7 @@ Path parameters or resource identifiers used in endpoints should be enclosed in 
 /idFromLegacyId
 
 
-**Flat vs Structured Endpoint**
+**14. Flat vs Structured Endpoint**
 Forward slash (/) must be used to separate nodes of an endpoint and indicate a hierarchical relationship. A structured Endpoint pattern occurs when forward slashes are used to break down complex resource names to improve the readability and understandability of the endpoint. In contrast, a Flat Endpoint antipattern occurs when complex or large resource names are not broken down with forward slashes.
 
 **Pattern:**
@@ -185,17 +185,11 @@ Forward slash (/) must be used to separate nodes of an endpoint and indicate a h
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
 
 
 ### Prerequisites and Installation
-
-
-
 
 1. Clone the repo
    ```sh
@@ -228,7 +222,43 @@ To get a local copy up and running follow these simple example steps.
 
 
 ### File Structues
-
+API-Quality/
+├── REST/
+│   ├── APIs
+│   │   ├── API_Name.txt
+├── GraphQL/
+│   ├── APIs
+│   │   ├── API_Name.txt
+├── All-Data/
+│   ├── output_data.jsonl
+│   ├── result_summary.csv
+├── Journal Resources/
+│   ├── Images/
+│   │   ├── Detection/
+│   │       ├── image.pdf*
+│   │   ├── Impact/
+│   │       ├── image.pdf*
+│   ├── Detection-Result/
+│   │    ├── Validation Result.xlsx
+│   │    ├── RQ Analysis.xlsx
+│   │    ├── result_summary.csv
+│   ├── Impact-Survey/
+│   │    ├── results-survey.csv
+│   │    ├── survey-analysis.R
+│   │    ├── Impact-Survey-Design.pdf
+│   │    ├── patterns.yaml
+│   │    ├── antipatterns.yaml
+│   │    ├── data-cleaning-protocol.md
+│   │    ├── dataset-description.md
+│   ├── api_analyzer.py
+│   ├── data-count.py
+│   ├── display_options.py
+│   ├── file_handler.py
+│   ├── result_summary.py
+│   ├── run-all.py
+│   ├── test.py
+│   ├── uri_cleaning.py
+└── acronyms.txt
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
