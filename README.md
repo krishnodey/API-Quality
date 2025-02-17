@@ -181,7 +181,8 @@ Forward slash (/) must be used to separate nodes of an endpoint and indicate a h
 * LDA Topic Model
 * NLTK
 * SPacy
-* SPacy Similarity (Cosie)
+* SPacy Similarity (Cosine)
+* Inflect
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,11 +205,31 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   pip install 
+   git clone [url] 
    ```
 2. Downloads
    ```sh
-   npm install
+   npm install [url]
+   ```
+3. Install all the libraires
+   ```sh
+   pip install nltk
+   pip install spacy
+   pip install gensim
+   pip install inflect
+   pip install sklearn
+   ```
+4. Required downloads
+   ```sh
+  nltk.download('wordnet')
+  nltk.download('stopwords')
+  nltk.download('punkt')
+  nltk.download('omw-1.4')
+   ```
+4. Run the test.py script
+   ```sh
+  python3 test.py (test for individual APIs)
+  python3 run_all.py (test for all APIs)
    ```
 
  
