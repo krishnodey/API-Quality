@@ -220,6 +220,9 @@ This is an example of how you may give instructions on setting up your project l
    python3 run_all.py (test all APIs)
   ```
 
+
+### File Structure
+
 API-Quality/
 ├── REST/
 │   ├── APIs
