@@ -93,7 +93,7 @@
 Linguistic patterns and antipatterns studied in this are availabele <a href="/Journal-Resources/Detection-Heuristics/Linguistic-patterns-antiopatterns.pdf"> here </a>. Additionally, the detailed detection reuslt, analysis, and findings can be accessed <a href="/Journal-Resources/Detection/"> here </a>.
 
 
-![detction-method](/Journal-Resources/Images/Detection/detection-method.jpg.jpg)
+![detction-method](/Journal-Resources/Images/Detection/detection-method.jpg)
 
 
 
@@ -130,7 +130,11 @@ This is an example of how you may give instructions on setting up your project l
 
 
 
-### Prerequisites and Installation
+### Prerequisites
+1. <a href="https://www.python.org/downloads/"> Python </a> 3.6 or higher
+2. <a href="https://www.r-project.org/"> R </a> and <a href="https://posit.co/download/rstudio-desktop/"> R Studio </a>
+
+### Installation
 
 1. Clone the repo
    ```sh
@@ -154,10 +158,14 @@ This is an example of how you may give instructions on setting up your project l
    nltk.download('stopwords')
    nltk.download('punkt')
    nltk.download('omw-1.4')
-5. Run the test.py script
+5. Run the python script
    ```sh
    python3 test.py
    python run_all.py
+   ```
+6. Run the R script
+   ```sh
+   survey-analysis.R
    ```
   
 
@@ -179,9 +187,9 @@ API-Quality/
 ├── Journal Resources/
 │   ├── Images/
 │   │   ├── Detection/
-│   │       ├── image.pdf*
+│   │       ├── {image}.pdf
 │   │   ├── Impact/
-│   │       ├── image.pdf*
+│   │       ├── {image}.pdf
 │   ├── Detection-Result/
 │   │    ├── Validation Result.xlsx
 │   │    ├── RQ Analysis.xlsx
