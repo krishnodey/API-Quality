@@ -93,7 +93,7 @@
 Linguistic patterns and antipatterns studied in this are availabele <a href="/Journal-Resources/Detection-Heuristics/Linguistic-patterns-antiopatterns.pdf"> here </a>. Additionally, the detailed detection reuslt, analysis, and findings can be accessed <a href="/Journal-Resources/Detection/"> here </a>.
 
 
-![detction-method](/Journal-Resources/Images/overall-method.jpg)
+![detction-method](/Journal-Resources/Images/Detection/detection-method.jpg.jpg)
 
 
 
@@ -101,7 +101,7 @@ Linguistic patterns and antipatterns studied in this are availabele <a href="/Jo
 The impact survey, which assesses the effects of linguistic patterns and antipatterns on API understandability and readability, is available for review <a href="/Journal-Resources/Impact-Survey/Impact-Survey-Design.pdf"> here </a>. Additionally, the collected survey data and detailed analysis, including statistical insights and findings, can be accessed <a href="/Journal-Resources/Impact-Survey/"> here </a>.
 
 
-![impact-study-method](/Journal-Resources/Images/overall-method.jpg)
+![impact-study-method](/Journal-Resources/Images/Impact/impact-study.jpg)
 
 
 
