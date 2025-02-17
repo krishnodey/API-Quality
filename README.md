@@ -86,21 +86,24 @@
 
 ## Methodology
 
+![overall-method](/Journal-Resources/Images/overall-method.jpg)
+
 <!-- Patterns and Anti-Patterns -->
 ## Linguistic Patterns
-![method](https://github.com/krishnodey/API-Quality/tree/master/Journal-Resources/Images/overall-method.pdf)
-![over](/Journal-Resources/Images/overall-method.pdf)
-<p align="center">
-  <img src="/Journal-Resources/Images/overall-method.pdf" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
-</p>
-![overall-mtehod](/blob/master/Journal-Resources/Images/overall-method.pdf)
+Linguistic patterns and antipatterns studied in this are availabele <a href="/Journal-Resources/Detection-Heuristics/Linguistic-patterns-antiopatterns.pdf"> here </a>. Additionally, the detailed detection reuslt, analysis, and findings can be accessed <a href="/Journal-Resources/Detection/"> here </a>.
 
-## Linguistic Patterns
+
+![detction-method](/Journal-Resources/Images/overall-method.jpg)
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Impact Survey
+The impact survey, which assesses the effects of linguistic patterns and antipatterns on API understandability and readability, is available for review <a href="/Journal-Resources/Impact-Survey/Impact-Survey-Design.pdf"> here </a>. Additionally, the collected survey data and detailed analysis, including statistical insights and findings, can be accessed <a href="/Journal-Resources/Impact-Survey/"> here </a>.
+
+
+![impact-study-method](/Journal-Resources/Images/overall-method.jpg)
+
+
 
 
 
@@ -146,17 +149,17 @@ This is an example of how you may give instructions on setting up your project l
    pip install sklearn
    ```
 4. Required downloads
-  ```sh
+   ```sh
    nltk.download('wordnet')
    nltk.download('stopwords')
    nltk.download('punkt')
    nltk.download('omw-1.4')
-  ```
 5. Run the test.py script
-  ```sh
-   python3 test.py (test individual APIs)
-   python3 run_all.py (test all APIs)
-  ```
+   ```sh
+   python3 test.py
+   python run_all.py
+   ```
+  
 
 
 ### File Structure
@@ -202,24 +205,26 @@ API-Quality/
 │   ├── acronyms.txt
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 
 <!-- LICENSE -->
-## License
+## License and Copyright
+Copyright (c) 2025 [SE+AI Lab]
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Permission is granted to use, copy, modify, and distribute this project with credit to SE+AI Lab.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+THE PROJECT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+
+
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@krishnodey_](https://twitter.com/krishnodey_) -dey.krishno25@egmail.com
+[SE+AI Lab](https://seai-researchlab.github.io/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
