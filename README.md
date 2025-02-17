@@ -90,7 +90,10 @@
 ## Linguistic Patterns
 ![method](https://github.com/krishnodey/API-Quality/tree/master/Journal-Resources/Images/overall-method.pdf)
 ![over](/Journal-Resources/Images/overall-method.pdf)
-
+<p align="center">
+  <img src="/Journal-Resources/Images/overall-method.pdf" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 
 ## Linguistic Patterns
 
