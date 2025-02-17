@@ -94,7 +94,7 @@
   <img src="/Journal-Resources/Images/overall-method.pdf" width="350" title="hover text">
   <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
 </p>
-![alt text](image.png)
+![overall-mtehod](https://github.com/krishnodey/API-Quality/blob/master/Journal-Resources/Images/overall-method.pdf)
 
 ## Linguistic Patterns
 
